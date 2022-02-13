@@ -1,0 +1,48 @@
+name: Process compat.json into readable patch.yml
+
+on:
+  push:
+    paths:
+      - '.github/workflows/compat2patch.yml'
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      old_runs: 2000
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Check for update
+        run: |
+          compatibility_json=compatibility.json
+          original_sha256=$(jq -r .sha256 $compatibility_json)
+          curl -sSfLo $compatibility_json "https://rpcs3.net/compatibility?patch&api=v1&v=1.2"
+          min_size_bytes=10240
+          if [ $(stat -c %s $compatibility_json) -le $min_size_bytes ]; then 
+            echo "::error::$compatibility_json is too small."
+            exit 1
+          fi
+          if [ $original_sha256 != $(jq -r .sha256 $compatibility_json) ]; then
+            patch_yml=patch.yml
+            jq -r .patch $compatibility_json > $patch_yml
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git add $patch_yml $compatibility_json
+            time=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
+            msg="Update patch from remote - \`${time}\`"
+            echo "$msg"
+            git commit -vvm "$msg"
+            git push -v origin
+          else
+            echo "Up-to-date!"
+          fi
+      - name: Clear older ${{ env.old_runs }} runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # https://github.com/NoName-exe/revanced/blob/cfb4138313c8900781447b905b868792de6175c0/.github/workflows/ci.yml#L36
+          gh run list -L${{ env.old_runs }} --json databaseId -q '.[].databaseId' | tail -n+2 | xargs -IID gh api "repos/$GITHUB_REPOSITORY/actions/runs/ID" -X DELETE || :
