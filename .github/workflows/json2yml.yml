@@ -1,0 +1,50 @@
+name: "Process compat.json into readable patch.yml"
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYYMMDD-HH
+          utcOffset: "-06:00"
+      - name: Use current time
+        env:
+          TIME: "${{ steps.current-time.outputs.time }}"
+          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
+          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+          YEAR: "${{ steps.current-time.outputs.year }}"
+          DAY: "${{ steps.current-time.outputs.day }}"
+        run: echo time="$F_TIME" >> $GITHUB_ENV
+
+      - name: Download raw json file
+        run: wget "https://rpcs3.net/compatibility?patch&api=v1&v=1.2" -O compatibility.json
+
+      - name: Process json file to yml
+        run: |
+          jq -r '.patch' compatibility.json > patch.yml
+
+      - name: Push patch artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: patch.yml
+          path: patch.yml
+
+      - name: Push update
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add patch.yml
+          git commit -m "Update patch from remote - $time"
+          git push origin
+
