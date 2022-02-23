@@ -2094,6 +2094,88 @@ Anchors:
     - [ be32, 0x0005f914, 0x389b0070 ] # addiparam_2,r27,0x70
     - [ be32, 0x0005f918, 0x4e800020 ] # blr
 
+  tlou111_devmenu: &tlou111_devmenu
+    - [ be16, 0x0003b2a0, 0x419e ]
+    - [ byte, 0x0003b2c3, 0x01   ]
+    - [ be16, 0x009acbde, 0x2db6 ]
+    - [ be16, 0x009acbe6, 0x2db6 ]
+    # str lookup
+    - [ utf8, 0x011b4145, "shiv                           " ]
+    - [ utf8, 0x011b4165, "pistol-uber-t1                 " ]
+    - [ utf8, 0x011b4185, "baseball-bat                   " ]
+    - [ utf8, 0x011b41a5, "hatchet                        " ]
+    - [ utf8, 0x011b41c5, "NO_ART_GROUP                   " ]
+    - [ utf8, 0x011b41e5, "nail-bomb                      " ]
+    - [ utf8, 0x011b4205, "two-by-four                    " ]
+    - [ utf8, 0x011b4225, "nail-bomb                      " ]
+    - [ utf8, 0x011b4245, "turret-sniper                  " ]
+    - [ utf8, 0x011b4265, "rifle-lever-action             " ]
+    - [ utf8, 0x011b4285, "pistol-uber-t1                 " ]
+    - [ utf8, 0x011b42a5, "shiv                           " ]
+    - [ utf8, 0x011b42c5, "radio                          " ]
+    - [ utf8, 0x011b42e5, "molotov                        " ]
+    - [ utf8, 0x011b4305, "bandage-apply                  " ]
+    - [ utf8, 0x011b4325, "mp-parcel                      " ]
+    - [ utf8, 0x011b4345, "gren-launcher-improvised       " ]
+    - [ utf8, 0x011b4365, "shotgun-dbl-barrel             " ]
+    - [ utf8, 0x011b4385, "machete-blade                  " ]
+    - [ utf8, 0x011b43a5, "bow-dark                       " ]
+    - [ utf8, 0x011b43c5, "rifle-variable                 " ]
+    - [ utf8, 0x011b43e5, "mini-14-rifle                  " ]
+    - [ utf8, 0x011b4405, "two-by-four                    " ]
+    - [ utf8, 0x011b4425, "pistol-shotgun                 " ]
+    - [ utf8, 0x011b4445, "rifle-improvised-fullauto      " ]
+    - [ utf8, 0x011b4465, "super-soaker                   " ]
+    - [ utf8, 0x011b4485, "NO_ART_GROUP                   " ]
+    - [ utf8, 0x011b44a5, "beer-bottle                    " ]
+    - [ utf8, 0x011b44c5, "crossbow-dlc                   " ]
+    - [ utf8, 0x011b44e5, "lead-pipe                      " ]
+    - [ utf8, 0x011b4505, "lead-pipe                      " ]
+    - [ utf8, 0x011b4525, "flamethrower                   " ]
+    - [ utf8, 0x011b4545, "desert-eagle-t1                " ]
+    - [ utf8, 0x011b4565, "flashlight                     " ]
+    - [ utf8, 0x011b4585, "rifle-sniper                   " ]
+    - [ utf8, 0x011b45a5, "m4-rifle-t1                    " ]
+    - [ utf8, 0x011b45c5, "smoke-bomb                     " ]
+    - [ utf8, 0x011b45e5, "throw-brick                    " ]
+    - [ utf8, 0x011b4605, "shotgun-pump-stock             " ]
+    - [ utf8, 0x011b4625, "silenced-galil-rifle           " ]
+    - [ utf8, 0x011b4645, "NO_ART_GROUP                   " ]
+    - [ utf8, 0x011b4665, "bloater-pustule                " ]
+    - [ utf8, 0x011b4685, "taurus-66b4-revolver           " ]
+    - [ utf8, 0x011b46a5, "nail-bomb                      " ]
+    - [ utf8, 0x011b46c5, "rifle-improvised-assault       " ]
+    - [ utf8, 0x011b46e5, "throwing-knife                 " ]
+    - [ utf8, 0x011b4705, "rifle-bolt                     " ]
+    - [ utf8, 0x011b4725, "beretta-jaguar-pistol          " ]
+    - [ utf8, 0x011b4745, "bow                            " ]
+    - [ utf8, 0x011b4765, "molotov                        " ]
+    - [ utf8, 0x011b4785, "bill-knife                     " ]
+    - [ utf8, 0x011b47a5, "baseball-bat                   " ]
+    - [ utf8, 0x011b47c5, "mini-14-rifle                  " ]
+    - [ utf8, 0x011b47e5, "pistol-glock-burst             " ]
+    - [ utf8, 0x011b4805, "pistol-9mm                     " ]
+    - [ utf8, 0x011b4825, "shotgun-tactical               " ]
+    - [ utf8, 0x011b4845, "mal-gas-can                    " ]
+    - [ utf8, 0x011b4865, "machete-blade                  " ]
+    - [ utf8, 0x011b4885, "none                           " ]
+    - [ utf8, 0x011b48a5, "rifle-improvised-assault       " ]
+    - [ utf8, 0x011b48c5, "binoculars                     " ]
+    - [ utf8, 0x011b48e5, "switchblade                    " ]
+    - [ utf8, 0x011b4905, "rifle-improvised-fullauto      " ]
+    # write str to menu init
+    - [ be32, 0x004f1690, 0x39ef0020 ] #     addi       r15,r15,0x20 
+    - [ be32, 0x004f1694, 0x489c5b99 ] #     bl         SUB_00eb722c
+    - [ be32, 0x00eb722c, 0x3c80011b ] #     lis        r4,0x11b
+    - [ be32, 0x00eb7230, 0x60844125 ] #     ori        r4,r4,0x4125
+    - [ be32, 0x00eb7234, 0x7c847a14 ] #     add        r4,r4,r15
+    - [ be32, 0x00eb7238, 0x4e800020 ] #     blr
+    # wrtie ptr for pak arg
+    - [ be32, 0x004f2a0c, 0x489b08bc ] #     b          LAB_00ea32c8
+    - [ be32, 0x00ea32c8, 0x90be82e4 ] #     stw        r5,-0x7d1c(r30) store pointer to null
+    - [ be32, 0x00ea32cc, 0x88050000 ] #     lbz        r0,0x0(r5) og
+    - [ be32, 0x00ea32d0, 0x4b64f740 ] #     b          LAB_004f2a10
+
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
 
   debugmenunotes: &debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
@@ -2319,15 +2401,11 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ load, *tlou111_speed ]
   Debug Menu:
     Games: *tlou111_title
-    Author: dron_3, HdHereidme, illusion, ZEROx
+    Author: illusion, ZEROx, dron_3, HdHereidme
     Notes: *debugmenunotes
-    Patch Version: 1.01
+    Patch Version: 1.2
     Patch:
-      - [ be16, 0x0003bf9c, 0x419e ]
-      - [ byte, 0x0003bfbf, 1 ]
-      - [ be16, 0x009da99a, 0x2db6 ]
-      - [ be16, 0x009da9a2, 0x2db6 ]
-      - [ be32, 0x00a1a200, 0x60000000 ] #Remove "!" model render
+      - [ load, *tlou111_devmenu ]
   Infinite flashlight battery:
     Games: *tlou111_title
     Author: bungholio, ZEROx
@@ -3444,103 +3522,72 @@ Anchors:
     - [ byte, 0x00042837, 0x1 ]
     - [ be32, 0x0083028c, 0x60000000 ] #Don't pause on Select button
     - [ be32, 0x0095b720, 0x60000000 ] #Remove "!" model render
-    # string list, may not be 100% accurate, list from hereisme?
-    - [ utf8, 0x00de4cc8, "GMAL (SP&MP)   " ] # 16 characters only!
-    - [ utf8, 0x00de4cd8, "NO_ART_GROUP   " ] # 16 characters only!
-    - [ utf8, 0x00de4ce8, "Mag 5 (SP&MP)  " ] # 16 characters only!
-    - [ utf8, 0x00de4cf8, "C4 (SP&MP)     " ] # 16 characters only!
-    - [ utf8, 0x00de4d08, "Shotgun(SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4d18, "Suicide(SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4d28, "Grenade(SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4d38, "Elicopt Freeze " ] # 16 characters only!
-    - [ utf8, 0x00de4d48, "SAS 12 (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4d58, "X3 (SP & MP)   " ] # 16 characters only!
-    - [ utf8, 0x00de4d68, "Hammer (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4d78, "SemiAutoRifle  " ] # 16 characters only!
-    - [ utf8, 0x00de4d88, "ClusterBomb    " ] # 16 characters only!
-    - [ utf8, 0x00de4d98, "shade-weapon   " ] # 16 characters only!
-    - [ utf8, 0x00de4da8, "Staff (SP)     " ] # 16 characters only!
-    - [ utf8, 0x00de4db8, "Temple Map     " ] # 16 characters only!
-    - [ utf8, 0x00de4dc8, "Temple Map     " ] # 16 characters only!
-    - [ utf8, 0x00de4dd8, "Silencer(SP)   " ] # 16 characters only!
-    - [ utf8, 0x00de4de8, "Defender Chloe " ] # 16 characters only!
-    - [ utf8, 0x00de4df8, "Grenade(SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4e08, "Pistole(SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4e18, "Para 9 (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4e28, "Map (SP)       " ] # 16 characters only!
-    - [ utf8, 0x00de4e38, "T-Bolt (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4e48, "Flashbang(SP)  " ] # 16 characters only!
-    - [ utf8, 0x00de4e58, "RPG (SP & MP)  " ] # 16 characters only!
-    - [ utf8, 0x00de4e68, "ak-74-a        " ] # 16 characters only!
-    - [ utf8, 0x00de4e78, "Defender(SP)   " ] # 16 characters only!
-    - [ utf8, 0x00de4e88, "PAK80 (SP&MP)  " ] # 16 characters only!
-    - [ utf8, 0x00de4e98, "GAU-19         " ] # 16 characters only!
-    - [ utf8, 0x00de4ea8, "Shield (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4eb8, "Mega Bomb SP&MP" ] # 16 characters only!
-    - [ utf8, 0x00de4ec8, "Sniper (SP&MP) " ] # 16 characters only!
-    - [ utf8, 0x00de4ed8, "NO_ART_GROUP   " ] # 16 characters only!
-    - [ utf8, 0x00de4ee8, "Unknown        " ] # 16 characters only!
-    - [ utf8, 0x00de4ef8, "Revolver SP&MP " ] # 16 characters only!
-    - [ utf8, 0x00de4f08, "Not Work       " ] # 16 characters only!
-    - [ utf8, 0x00de4f18, "9mm            " ] # 16 characters only!
-    - [ utf8, 0x00de4f28, "Kal-7          " ] # 16 characters only!
-    - [ utf8, 0x00de4f38, "Freeze         " ] # 16 characters only!
-    - [ utf8, 0x00de4f48, "Elicopt Freeze " ] # 16 characters only!
-    - [ utf8, 0x00de4f58, "Map (SP)       " ] # 16 characters only!
-    - [ utf8, 0x00de4f68, "Not Work       " ] # 16 characters only!
-    - [ utf8, 0x00de4f78, "Ak-47          " ] # 16 characters only!
-    - [ utf8, 0x00de4f88, "FAL-SS         " ] # 16 characters only!
-    - [ utf8, 0x00de4f98, "M9             " ] # 16 characters only!
-    - [ utf8, 0x00de4fa8, "Arm Micro      " ] # 16 characters only!
-    - [ utf8, 0x00de4fb8, "Tau            " ] # 16 characters only!
-    - [ utf8, 0x00de4fc8, "Raffica        " ] # 16 characters only!
-    - [ utf8, 0x00de4fd8, "Not Work       " ] # 16 characters only!
-    - [ utf8, 0x00de4fe8, "Shield (MP)    " ] # 16 characters only!
-    - [ utf8, 0x00de4ff8, "Granate        " ] # 16 characters only!
-    - [ utf8, 0x00de5008, "RPG (SP)       " ] # 16 characters only!
-    - [ utf8, 0x00de5018, "Elicopt Freeze " ] # 16 characters only!
-    - [ utf8, 0x00de5028, "ELicopt Freeze " ] # 16 characters only!
-    - [ utf8, 0x00de5038, "Not Work       " ] # 16 characters only!
-    - [ utf8, 0x00de5048, "ELicopt Freeze " ] # 16 characters only!
-    - [ utf8, 0x00de5058, "Elicopt Freeze " ] # 16 characters only!
-    # end of string list
-    - [ be32, 0x00a63088, 0x48371ce5 ] #     bl         SUB_00dd4d6c
-    # begin of main()
-    - [ be32, 0x00de5068, 0x4003afbf ] #    "Give player Weapon" menu
-    - [ be32, 0x00dd4d6c, 0x813e8008 ] #    lwz        r9,-0x7ff8(r30)
-    - [ be32, 0x00dd4d70, 0x8aa90539 ] #    lbz        r21,0x539(r9)
-    - [ be32, 0x00dd4d74, 0x2d950000 ] #    cmpwi      cr3,r21,0x0
-    - [ be32, 0x00dd4d78, 0x408e0064 ] #    bne        cr3,LAB_00dd4ddc
-    - [ be32, 0x00dd4d7c, 0x3e4000de ] #    lis        r18,0xde
-    - [ be32, 0x00dd4d80, 0x3a524cc7 ] #    addi       r18,r18,0x4cc7
-    - [ be32, 0x00dd4d84, 0x807203a1 ] #    lwz        r3,0x3a1(r18)=>DAT_00de5068                      = 4003AFBFh
-    - [ be32, 0x00dd4d88, 0x80030001 ] #    lwz        r0,0x1(r3)=>DAT_4003afc0
-    - [ be32, 0x00dd4d8c, 0x89f203a5 ] #    lbz        r15,0x3a5(r18)=>DAT_00de506c
-    - [ be32, 0x00dd4d90, 0x2f8f0000 ] #    cmpwi      cr7,r15,0x0
-    - [ be32, 0x00dd4d94, 0x409e0010 ] #    bne        cr7,LAB_00dd4da4
-    - [ be32, 0x00dd4d98, 0x2f800000 ] #    cmpwi      cr7,r0,0x0
-    - [ be32, 0x00dd4d9c, 0x419e000c ] #    beq        cr7,LAB_00dd4da8
-    - [ be32, 0x00dd4da0, 0x4800003c ] #    b          LAB_00dd4ddc
-    - [ be32, 0x00dd4da4, 0x84030050 ] #    lwzu       r0,0x50(r3)=>DAT_4003b00f
-    # StringParser()
-    - [ be32, 0x00dd4da8, 0x8c120001 ] #    lbzu       r0,0x1(r18)=>DAT_00de4cc8                        = "MAL (SP&MP)   "
-    - [ be32, 0x00dd4dac, 0x2f800000 ] #    cmpwi      cr7,r0,0x0
-    - [ be32, 0x00dd4db0, 0x419e0024 ] #    beq        cr7,LAB_00dd4dd4
-    - [ be32, 0x00dd4db4, 0x48000008 ] #    b          LAB_00dd4dbc
-    - [ be32, 0x00dd4db8, 0x8c120001 ] #    lbzu       r0,0x1(r18)=>s_MAL_(SP&MP)_00de4cc9              = "MAL (SP&MP)   "
-    - [ be32, 0x00dd4dbc, 0x9c030001 ] #    stbu       r0,0x1(r3)=>DAT_4003afc0
-    - [ be32, 0x00dd4dc0, 0x2f800000 ] #    cmpwi      cr7,r0,0x0
-    - [ be32, 0x00dd4dc4, 0x409efff4 ] #    bne        cr7,LAB_00dd4db8
-    - [ be32, 0x00dd4dc8, 0x6063000f ] #    ori        r3,r3,0xf
-    - [ be32, 0x00dd4dcc, 0x38630060 ] #    addi       r3,r3,0x60
-    - [ be32, 0x00dd4dd0, 0x4bffffd8 ] #    b          LAB_00dd4da8
-    - [ be32, 0x00dd4dd4, 0x3a600001 ] #    li         r19,0x1 // ret 1;
-    - [ be32, 0x00dd4dd8, 0x9a690539 ] #    stb        r19,0x539(r9)
-    - [ be32, 0x00dd4ddc, 0x4e800020 ] #    blr
-    # end of main()
+    - [ utf8, 0x010d8cf0, "galil-rifle            " ]
+    - [ utf8, 0x010d8d08, "NO_ART_GROUP           " ]
+    - [ utf8, 0x010d8d20, "uber-pistol            " ]
+    - [ utf8, 0x010d8d38, "dig-explosive-pack     " ]
+    - [ utf8, 0x010d8d50, "shotgun-sawedoff       " ]
+    - [ utf8, 0x010d8d68, "m32-grenade-launcher   " ]
+    - [ utf8, 0x010d8d80, "baseball-grenade       " ]
+    - [ utf8, 0x010d8d98, "t62-tank-mg-turret     " ]
+    - [ utf8, 0x010d8db0, "spas12-shotgun         " ]
+    - [ utf8, 0x010d8dc8, "baseball-grenade       " ]
+    - [ utf8, 0x010d8de0, "m32-grenade-launcher   " ]
+    - [ utf8, 0x010d8df8, "semi-auto-rifle        " ]
+    - [ utf8, 0x010d8e10, "baseball-grenade       " ]
+    - [ utf8, 0x010d8e28, "shade-weapon           " ]
+    - [ utf8, 0x010d8e40, "statue-puzzle-torch    " ]
+    - [ utf8, 0x010d8e58, "temple-cistern-map-2   " ]
+    - [ utf8, 0x010d8e70, "shade-weapon           " ]
+    - [ utf8, 0x010d8e88, "beretta-silenced       " ]
+    - [ utf8, 0x010d8ea0, "chloe-pistol           " ]
+    - [ utf8, 0x010d8eb8, "baseball-grenade       " ]
+    - [ utf8, 0x010d8ed0, "shotgun-pistol         " ]
+    - [ utf8, 0x010d8ee8, "p99-pistol             " ]
+    - [ utf8, 0x010d8f00, "temple-cistern-map     " ]
+    - [ utf8, 0x010d8f18, "tkiv-sniper-rifle      " ]
+    - [ utf8, 0x010d8f30, "stun-grenade           " ]
+    - [ utf8, 0x010d8f48, "rpg                    " ]
+    - [ utf8, 0x010d8f60, "ak-74-a                " ]
+    - [ utf8, 0x010d8f78, "walther-p5             " ]
+    - [ utf8, 0x010d8f90, "pkm-rifle              " ]
+    - [ utf8, 0x010d8fa8, "heavy-gau19            " ]
+    - [ utf8, 0x010d8fc0, "pirate-shield          " ]
+    - [ utf8, 0x010d8fd8, "baseball-grenade       " ]
+    - [ utf8, 0x010d8ff0, "dragunov-rifle         " ]
+    - [ utf8, 0x010d9008, "NO_ART_GROUP           " ]
+    - [ utf8, 0x010d9020, "NO_ART_GROUP           " ]
+    - [ utf8, 0x010d9038, "sw629-revolver         " ]
+    - [ utf8, 0x010d9050, "NO_ART_GROUP           " ]
+    - [ utf8, 0x010d9068, "colt-defender-pistol   " ]
+    - [ utf8, 0x010d9080, "ak-74-b                " ]
+    - [ utf8, 0x010d9098, "sight-scope            " ]
+    - [ utf8, 0x010d90b0, "t62-tank-mg-turret     " ]
+    - [ utf8, 0x010d90c8, "shade-weapon           " ]
+    - [ utf8, 0x010d90e0, "yt-cistern-map-rolled  " ]
+    - [ utf8, 0x010d90f8, "machine-gun            " ]
+    - [ utf8, 0x010d9110, "fn-fal-rifle           " ]
+    - [ utf8, 0x010d9128, "hk416                  " ]
+    - [ utf8, 0x010d9140, "mpa930                 " ]
+    - [ utf8, 0x010d9158, "taurus-sniper-pistol   " ]
+    - [ utf8, 0x010d9170, "beretta-burst-pistol   " ]
+    - [ utf8, 0x010d9188, "NO_ART_GROUP           " ]
+    - [ utf8, 0x010d91a0, "riot-shield-hvk        " ]
+    - [ utf8, 0x010d91b8, "baseball-grenade       " ]
+    - [ utf8, 0x010d91d0, "rpg_rocket             " ]
+    - [ utf8, 0x010d91e8, "t62-tank-mg-turret     " ]
+    - [ utf8, 0x010d9200, "t62-tank-mg-turret     " ]
+    - [ utf8, 0x010d9218, "grenade-pistol         " ]
+    - [ utf8, 0x010d9230, "t62-tank-mg-turret     " ]
+    - [ utf8, 0x010d9248, "t62-tank-mg-turret     " ]
+    - [ be32, 0x004de820, 0x39ce0018 ] #    addi       r14,r14,0x18
+    - [ be32, 0x004de828, 0x488e3b21 ] #    bl         SUB_00dc2348
+    - [ be32, 0x00dc2348, 0x3de0010d ] #    lis        r15,0x10d
+    - [ be32, 0x00dc234c, 0x61ef8cd8 ] #    ori        r15,r15,0x8cd8
+    - [ be32, 0x00dc2350, 0x7c8f7214 ] #    add        r4,r15,r14
+    - [ be32, 0x00dc2354, 0x4e800020 ] #    blr
 
   uc3_119_devplus: &uc3_119_devplus
-    - [ byte, 0x00de506c, 0x1 ]
     - [ be16, 0x00d9ea48, 0x202b ] # _+
     - [ be32, 0x0112cb94, 0x01381D1E ] # base ptr
     - [ be32, 0x0112cb90, 0x00df5880 ] # str
@@ -4000,14 +4047,14 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
       - [ load, *uc3_119_db ]
   Debug Menu:
     Games: *uc3_119title
-    Author: dron_3, HdHereidme, illusion, ZEROx
+    Author: dron_3, HdHereidme, illusion, ZEROx, Skye
     Notes: *debugmenunotesUC3
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_devmenu ]
   Dev Menu Plus:
     Games: *uc3_119title
-    Author: illusion, Skye Modz
+    Author: illusion, Skye
     Notes: "Last modified: December 14 2020\nReplaces audio options with various debug features."
     Patch Version: 1.0
     Patch:
@@ -4048,10 +4095,10 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
     Author: illusion
-    Notes: Improves performance when there are no videos hosted on the server.
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00229217, 0x0 ]
+      - [ be16, 0x00700f42, 0x0000 ] # ret 0
+      - [ be16, 0x00700f50, 0x4800 ] # dont spawn video threads
   Unlock Main Menu:
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
@@ -5009,6 +5056,18 @@ PPU-530aadd4c93166a0ca0d3acbe963a09f7926b878:
     Patch:
       - [ be32, 0x7b3c40, 0x51756179 ]
       - [ be32, 0x7b3c44, 0x32360000 ]
+
+PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
+  Force Pitch Black Out Venue:
+    Games:
+      "DJ Hero 2 Demo":
+        NPEB90275: [ 01.00 ]
+    Author: shockdude
+    Notes: Replaces the demo's "London" venue with the "Pitch Black Out" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs.
+    Patch Version: 1.00
+    Patch:
+      - [ be32, 0x7b37cc, 0x51756179 ]
+      - [ be32, 0x7b37d0, 0x32360000 ]
 
 Anchors:
   crabnotes: &crabnotes "Set Framelimt to 60FPS as going above this will speed up.\nIn-Game Cinematics animations and camera are only interpolated at 30FPS."
@@ -8227,6 +8286,7 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
         NPUA80959: [ All ]
         NPJA00098: [ All ]
         NPHA80250: [ All ]
+        NPEA90125: [ All ]
     Author: Whatcookie
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
@@ -9489,6 +9549,7 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
     Games:
       "The Elder Scrolls V: Skyrim":
         BLES01885: [ 01.00 ]
+        BLUS31202: [ 01.00 ]
     Author: "illusion"
     Notes: Camera speeds up while having 60+ FPS.
     Patch Version: 1.0
@@ -9505,3 +9566,4 @@ PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x001CFA4D, 0x6a ]
+
