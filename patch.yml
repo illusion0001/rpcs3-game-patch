@@ -4082,7 +4082,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
       - [ be32, 0x00043e2c, 0x480000dc ]
 
 PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
-  "Bug Fix: Crash on Entering MP Menu":
+  "Bug Fix: Crash on Entering LAN MP Menu":
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
@@ -4097,6 +4097,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
         NPUA70153: [ 01.00 ]
         BCET70034: [ 01.00 ]
     Author: illusion
+    Notes: "Fixes significant slowdown because the video is no longer hosted on server"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00700f42, 0x0000 ] # ret 0
@@ -4133,7 +4134,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
       - [ be32, 0x00cea32c, 0x4e800020 ]
 
 PPU-9584776e7fca409ed410f8a713832267020d8ac3:
-  "Bug Fix: Crash on Entering Lan MP Menu":
+  "Bug Fix: Crash on Entering LAN MP Menu":
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.04 ]
@@ -4148,7 +4149,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
         NPUA70153: [ 01.04 ]
         BCET70034: [ 01.04 ]
     Author: illusion
-    Notes: Fixes crash after entering MP menu due to API offline
+    Notes: "Fixes crash after entering MP menu due to offline video streaming API"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0070194e, 0x0000 ] # ret 0
@@ -9097,7 +9098,7 @@ PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
       - [ be16, 0x3560A, 0x0500 ]
 
 PPU-9a236f0c373b911ef99d3f1c404bc12733fb4507:
-  "Jak II: 1280x720":
+  "Jak II: 1280x720 Resolution":
     Games:
       Jak and Daxter Collection:
         BCUS98281: [ 01.00 ]
@@ -9108,7 +9109,7 @@ PPU-9a236f0c373b911ef99d3f1c404bc12733fb4507:
       - [ be16, 0x3E556, 0x0500 ]
 
 PPU-6dae0339c1958f8b3158a0780d29db619a6f8b6f:
-  "Jak III: 1280x720":
+  "Jak III: 1280x720 Resolution":
     Games:
       Jak and Daxter Collection:
         BCUS98281: [ 01.00 ]
