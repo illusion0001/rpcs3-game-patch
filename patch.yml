@@ -4081,21 +4081,27 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Patch:
       - [ be32, 0x00043e2c, 0x480000dc ]
 
-PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
-  "Bug Fix: Crash on Entering LAN MP Menu":
-    Games:
+Anchors:
+
+  uc3beta100_title: &uc3beta100_title
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
         BCET70034: [ 01.00 ]
+
+  uc3beta104_title: &uc3beta104_title
+      "Uncharted 3: Drake's Deception Multiplayer Beta":
+        NPUA70153: [ 01.04 ]
+        BCET70034: [ 01.04 ]
+
+PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
+  "Bug Fix: Crash on Entering LAN MP Menu":
+    Games: *uc3beta100_title
     Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0003e6c3, 0x0 ]
   Disable Uncharted TV:
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer Beta":
-        NPUA70153: [ 01.00 ]
-        BCET70034: [ 01.00 ]
+    Games: *uc3beta100_title
     Author: illusion
     Notes: "Fixes significant slowdown because the video is no longer hosted on server"
     Patch Version: 1.0
@@ -4103,10 +4109,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
       - [ be16, 0x00700f42, 0x0000 ] # ret 0
       - [ be16, 0x00700f50, 0x4800 ] # dont spawn video threads
   Unlock Main Menu:
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer Beta":
-        NPUA70153: [ 01.00 ]
-        BCET70034: [ 01.00 ]
+    Games: *uc3beta100_title
     Author: illusion, Skye
     Patch Version: 1.0
     Patch:
@@ -4135,19 +4138,13 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
 
 PPU-9584776e7fca409ed410f8a713832267020d8ac3:
   "Bug Fix: Crash on Entering LAN MP Menu":
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer Beta":
-        NPUA70153: [ 01.04 ]
-        BCET70034: [ 01.04 ]
+    Games: *uc3beta104_title
     Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0003e563, 0x0 ]
   Disable Uncharted TV:
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer Beta":
-        NPUA70153: [ 01.04 ]
-        BCET70034: [ 01.04 ]
+    Games: *uc3beta104_title
     Author: illusion
     Notes: "Fixes crash after entering MP menu due to offline video streaming API"
     Patch Version: 1.0
@@ -4155,10 +4152,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
       - [ be16, 0x0070194e, 0x0000 ] # ret 0
       - [ be16, 0x0070195c, 0x4800 ] # dont spawn video threads
   Unlock Main Menu:
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer Beta":
-        NPUA70153: [ 01.04 ]
-        BCET70034: [ 01.04 ]
+    Games: *uc3beta104_title
     Author: "illusion"
     Patch Version: 1.0
     Patch:
