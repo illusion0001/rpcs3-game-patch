@@ -27,8 +27,9 @@ jobs:
           utcOffset: "-06:00"
       - name: Use current time
         env:
+          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
           F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-        run: echo time="$F_TIME" >> $GITHUB_ENV
+        run: echo time="$R_TIME" >> $GITHUB_ENV
 
       - name: Push patch artifact
         uses: actions/upload-artifact@v2
