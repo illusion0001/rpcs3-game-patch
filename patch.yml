@@ -2095,10 +2095,10 @@ Anchors:
     - [ be32, 0x0005f918, 0x4e800020 ] # blr
 
   tlou111_devmenu: &tlou111_devmenu
-    - [ be16, 0x0003b2a0, 0x419e ]
-    - [ byte, 0x0003b2c3, 0x01   ]
-    - [ be16, 0x009acbde, 0x2db6 ]
-    - [ be16, 0x009acbe6, 0x2db6 ]
+    - [ be16, 0x0003bfa0, 0x9b3f ]
+    - [ be16, 0x009da99a, 0x2db6 ]
+    - [ be16, 0x009da9a2, 0x2db6 ]
+    - [ be32, 0x00a1a200, 0x60000000 ] #Remove "!" model render
     # str lookup
     - [ utf8, 0x011b4145, "shiv                           " ]
     - [ utf8, 0x011b4165, "pistol-uber-t1                 " ]
