@@ -4086,6 +4086,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
+        BCET70034: [ 01.00 ]
     Author: "illusion"
     Patch Version: 1.0
     Patch:
@@ -4094,6 +4095,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
+        BCET70034: [ 01.00 ]
     Author: illusion
     Patch Version: 1.0
     Patch:
@@ -4103,6 +4105,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
     Games:
       "Uncharted 3: Drake's Deception Multiplayer Beta":
         NPUA70153: [ 01.00 ]
+        BCET70034: [ 01.00 ]
     Author: illusion, Skye
     Patch Version: 1.0
     Patch:
@@ -4128,6 +4131,58 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
       - [ be32, 0x00cea324, 0x92840000 ]
       - [ be32, 0x00cea328, 0x88090078 ]
       - [ be32, 0x00cea32c, 0x4e800020 ]
+
+PPU-9584776e7fca409ed410f8a713832267020d8ac3:
+  "Bug Fix: Crash on Entering Lan MP Menu":
+    Games:
+      "Uncharted 3: Drake's Deception Multiplayer Beta":
+        NPUA70153: [ 01.04 ]
+        BCET70034: [ 01.04 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x0003e563, 0x0 ]
+  Disable Uncharted TV:
+    Games:
+      "Uncharted 3: Drake's Deception Multiplayer Beta":
+        NPUA70153: [ 01.04 ]
+        BCET70034: [ 01.04 ]
+    Author: illusion
+    Notes: Fixes crash after entering MP menu due to API offline
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0070194e, 0x0000 ] # ret 0
+      - [ be16, 0x0070195c, 0x4800 ] # dont spawn video threads
+  Unlock Main Menu:
+    Games:
+      "Uncharted 3: Drake's Deception Multiplayer Beta":
+        NPUA70153: [ 01.04 ]
+        BCET70034: [ 01.04 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x00d1e414, 0x000009298aab4a4b ]
+      - [ be32, 0x007f9f20, 0x4852449d ] #     bl         SUB_00d1e3bc
+      - [ be32, 0x00d1e3bc, 0x81c90320 ] #     lwz        r14,0x320(r9)
+      - [ be32, 0x00d1e3c0, 0x2c8e0000 ] #     cmpwi      cr1,r14,0x0
+      - [ be32, 0x00d1e3c4, 0x4086002c ] #     bne        cr1,LAB_00d1e3f0
+      - [ be32, 0x00d1e3c8, 0x3e0000d1 ] #     lis        r16,0xd1
+      - [ be32, 0x00d1e3cc, 0x6210e40c ] #     ori        r16,r16,0xe40c
+      - [ be32, 0x00d1e3d0, 0x3de00110 ] #     lis        r15,0x110
+      - [ be32, 0x00d1e3d4, 0x61efb828 ] #     ori        r15,r15,0xb828
+      - [ be32, 0x00d1e3d8, 0xea300008 ] #     ld         r17,0x8(r16)=>DAT_00d1e414
+      - [ be32, 0x00d1e3dc, 0x1e510008 ] #     mulli      r18,r17,0x8
+      - [ be32, 0x00d1e3e0, 0xfa4f0000 ] #     std        r18,0x0(r15)=>LAB_0011b828
+      - [ be32, 0x00d1e3e4, 0x3a800001 ] #     li         r20,0x1
+      - [ be32, 0x00d1e3e8, 0x92890320 ] #     stw        r20,0x320(r9)
+      - [ be32, 0x00d1e3ec, 0x9aaf0008 ] #     stb        r21,0x8(r15)=>LAB_0011b830
+      - [ be32, 0x00d1e3f0, 0xea6f0000 ] #     ld         r19,0x0(r15)=>LAB_0011b828
+      - [ be32, 0x00d1e3f4, 0x7eb29800 ] #     cmpd       cr5,r18,r19
+      - [ be32, 0x00d1e3f8, 0x4196000c ] #     beq        cr5,LAB_00d1e404
+      - [ be32, 0x00d1e3fc, 0x4bf993b5 ] #     bl         FUN_00cb77b0
+      - [ be32, 0x00d1e400, 0x92840000 ] #     stw        r20,0x0(r4)
+      - [ be32, 0x00d1e404, 0x88090078 ] #     lbz        r0,0x78(r9)
+      - [ be32, 0x00d1e408, 0x4e800020 ] #     blr
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes "Cutscenes rendered in the game's engine speed up"
