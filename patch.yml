@@ -4199,6 +4199,62 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
       - [ be32, 0x00d1e400, 0x92840000 ] #     stw        r20,0x0(r4)
       - [ be32, 0x00d1e404, 0x88090078 ] #     lbz        r0,0x78(r9)
       - [ be32, 0x00d1e408, 0x4e800020 ] #     blr
+  Disable Post on SPU:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Notes: "Slight overbloom in some areas, needs correction."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00897644, 0x9b43 ] # post on spu         = 0
+  Disable Motion Blur:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x008975f8, 0x9b43 ] # mb                  = 0
+  Disable Mesh Trimming:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x006b1cc0, 0x9949 ] # mesh trim           = 0
+  Disable SSAO:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00897578, 0x9b43 ] # ssao                = 0
+  Disable Depth of Field:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00897604, 0x9b43 ] # dof                 = 0
+  Performance (WCB):
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Notes: Enable this patch if you are using "Write Color Buffers" to restore performance.
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00897620, 0x9b83 ] # reload depth buffer = 0
+  Depth Buffer Viewport:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00897880, 0x9b63 ] # depth viewport      = 1
+  Depth Border Fix:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x008978c0, 0x9b83 ] # depth border        = 0
+  Enable GPU Lighting:
+    Games: *uc3beta104_title
+    Author: illusion, ZEROx
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x008978cc, 0x9103 ] # spu lighting        = 2
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes "Cutscenes rendered in the game's engine speed up"
