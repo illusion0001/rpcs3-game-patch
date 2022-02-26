@@ -4108,6 +4108,15 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
     Patch:
       - [ be16, 0x00700f42, 0x0000 ] # ret 0
       - [ be16, 0x00700f50, 0x4800 ] # dont spawn video threads
+  Disable Camera Sprint:
+    Games:
+      "Uncharted 3: Drake's Deception Multiplayer Beta":
+        NPUA70153: [ 01.00 ]
+        BCET70034: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0019e450, 0x98c30178 ]
   Unlock Main Menu:
     Games: *uc3beta100_title
     Author: illusion, Skye
