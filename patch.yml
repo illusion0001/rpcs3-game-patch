@@ -4068,7 +4068,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
       - [ be16, 0x008242cc, 0x3800 ]
   Enable Lan Mode:
     Games: *uc3_119title
-    Author: illusion, ZEROx, Skye Modz
+    Author: "illusion, ZEROx, Skye"
     Notes: 
     Patch Version: 1.0
     Patch:
@@ -4119,7 +4119,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
       - [ be32, 0x0019e450, 0x98c30178 ]
   Unlock Main Menu:
     Games: *uc3beta100_title
-    Author: illusion, Skye
+    Author: "illusion, ZEROx, Skye"
     Patch Version: 1.0
     Patch:
       - [ be64, 0x00cea3d0, 0x000009298aab4a4b ]
@@ -4174,7 +4174,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
       - [ be32, 0x0076e440, 0x38000001 ]
   Unlock Main Menu:
     Games: *uc3beta104_title
-    Author: "illusion"
+    Author: "illusion, ZEROx"
     Patch Version: 1.0
     Patch:
       - [ be64, 0x00d1e414, 0x000009298aab4a4b ]
