@@ -9160,35 +9160,27 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
 PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
   "Jak I: 1280x720 Resolution":
     Games:
-      Jak and Daxter Collection:
+      "Jak and Daxter Collection":
         BCUS98281: [ 01.00 ]
-    Author: Margen67
-    Notes: Native resolution is 1024x720.
+      "The Jak and Daxter Trilogy":
+        BCES01325: [ 01.00 ]
+    Author: "Margen67"
+    Notes: "Original resolution is 1024x720."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x3560A, 0x0500 ]
 
-PPU-9a236f0c373b911ef99d3f1c404bc12733fb4507:
-  "Jak II: 1280x720 Resolution":
+PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
+  "1280x720 Resolution":
     Games:
-      Jak and Daxter Collection:
-        BCUS98281: [ 01.00 ]
-    Author: Margen67
-    Notes: Native resolution is 1024x720.
+      "Jak and Daxter: The Precursor Legacy":
+        NPEA00338: [ 01.00 ]
+        NPUA80706: [ 01.00 ]
+    Author: "Margen67"
     Patch Version: 1.0
+    Notes: "Original resolution is 1024x720."
     Patch:
-      - [ be16, 0x3E556, 0x0500 ]
-
-PPU-6dae0339c1958f8b3158a0780d29db619a6f8b6f:
-  "Jak III: 1280x720 Resolution":
-    Games:
-      Jak and Daxter Collection:
-        BCUS98281: [ 01.00 ]
-    Author: Margen67
-    Notes: Native resolution is 1024x720.
-    Patch Version: 1.0
-    Patch:
-      - [ be16, 0x45742, 0x0500 ]
+      - [ be16, 0x3569E, 0x0500 ]
 
 PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
   Infinite Ammo:
@@ -9482,6 +9474,17 @@ PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
     Patch:
       - [ be16, 0x01487934, 0x98bf ]
       - [ be16, 0x01487938, 0x98bf ]
+
+PPU-2845afa9e4dc56df06a61f2e51463468e9a557c7:
+  60 FPS:
+    Games:
+      "Final Fantasy XIII":
+        MRTC00003: [ 01.00 ]
+    Author: illusion
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008d2e94, 0x38800001 ] # vsync flip rate 60hz // unlimited freeze at SE screen
 
 PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
   "1280x720 Resolution":
