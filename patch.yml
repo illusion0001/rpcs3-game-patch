@@ -4740,9 +4740,21 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
-      - [ be32, 0x00045dd4, 0x38800000 ] # li r4 0x0
+      - [ be32, 0x004e224c, 0x00000000 ] # 0 int32
       - [ be32, 0x00477d74, 0x40800003 ] # il r3 0x0
       - [ be32, 0x0047801c, 0x40800017 ] # il r23 0x0
+  "Restore debug printf (Warning: Log Spam!)":
+    Games:
+      "ICO":
+        BCES01097: [ 01.01 ]
+        BCES01115: [ 01.01 ]
+        BCUS98259: [ 01.01 ]
+        NPEA00279: [ 01.01 ]
+        NPUA80676: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.00
+    Patch:
+      - [ be32, 0x00015e50, 0x480ecd20 ] # b 0x00102b70
 # Memory Patches
   Disable Blur:
     Games:
