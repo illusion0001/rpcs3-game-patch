@@ -1030,7 +1030,7 @@ Anchors:
         BCAS25003: [ 01.03 ]
         BCKS15003: [ 01.03 ]
 
-PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962:
+PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
@@ -1090,7 +1090,7 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962:
     Patch:
       - [ be16, 0x001e559c, 0x4800 ]
 
-PPU-4d5c51503a81a327c2a99427390a395b8dcb3767:
+PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
   Disable MLAA:
     Games: *gow3-100-title
     Author: illusion, ZEROx
@@ -1098,21 +1098,21 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767:
     Patch Version: 3.0
     Patch:
       - [ byte, 0x52BF2F, 0 ]
-      - [ be32, 0x0023137c, 0x60000000 ]
+      - [ be32, 0x00231248, 0x60000000 ]
   Disable Depth of Field:
     Games: *gow3-100-title
     Author: ZEROx
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001c14ac, 0x38000000 ]
+      - [ be32, 0x001c13c8, 0x38000000 ]
   Disable Motion Blur:
     Games: *gow3-100-title
     Author: ZEROx
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001c57e4, 0x38000000 ]
+      - [ be32, 0x001c5700 0x38000000 ]
   Disable Color Grading (Speedboost):
     Games: *gow3-100-title
     Author: illusion
@@ -1126,8 +1126,8 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767:
     Notes: *gow3fog
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00296a90, 0x38000000 ] #Disable Layered fog
-      - [ be32, 0x00296bd4, 0x38000000 ] #On pause
+      - [ be32, 0x00296994, 0x38000000 ] #Disable Layered fog
+      - [ be32, 0x00296ad8, 0x38000000 ] #On pause
   Disable Bloom:
     Games: *gow3-100-title
     Author: illusion
@@ -1135,13 +1135,20 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00231288, 0x60000000 ]
+  Disable Camera sway:
+    Games: *gow3-100-title
+    Author: ZEROx
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0015d1b8, 0x38000000 ] #Camera sway
   Skip intro:
     Games: *gow3-100-title
     Author: illusion
     Notes: *gow3skipintro
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x001e559c, 0x4800 ]
+      - [ be16, 0x001e5468, 0x4800 ]
 
 Anchors:
   Y1HD_ModSupport: &Y1HD_ModSupport
@@ -3690,7 +3697,6 @@ Anchors:
         NPEA00422: [ 01.19 ]
         NPUA80858: [ 01.19 ]
         BCUS99086: [ 01.19 ]
-        NPEA00422: [ 01.19 ]
 
   uc3_110title: &uc3_110title
       "Uncharted 3: Drake's Deception":
@@ -9743,6 +9749,27 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
+
+PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
+  "Fix pad initialization":
+    Games:
+      "The Simpsons Game":
+        BLES00142: [ 01.00 ]
+        BLUS30065: [ 01.00 ]
+    Author: "nastys"
+    Patch Version: 1.0
+    Notes: "Fixes pad initialization when using the keyboard handler."
+    Patch:
+      - [ be32, 0x0044eba0, 0x60000000 ]
+  60 FPS:
+    Games:
+      "The Simpsons Game":
+        BLES00142: [ 01.00 ]
+        BLUS30065: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x005b4ebf, 1 ]
 
 PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
   Disable Depth of Field:
