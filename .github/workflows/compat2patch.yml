@@ -16,7 +16,7 @@ jobs:
       - name: Download raw json file
         run: wget "https://rpcs3.net/compatibility?patch&api=v1&v=1.2" -O compatibility.json
       - name: Process json file to yml
-        run: jq -r '.patch' compatibility.json > patch.yml
+        run: jq -r '.patch' compatibility.json > patch.yml && cat patch.yml
 
       - name: Get current time
         uses: josStorer/get-current-time@v2
