@@ -7889,6 +7889,47 @@ Anchors:
     - [ be32, 0x005BA9DC, 0x38800001 ] #vfps
     - [ be32, 0x005BA514, 0x60000000 ] #target fps
 
+  ms3100dsr: &ms3100dsr
+    - [ be32, 0x004760F0, 0x38600000 ] # li r3 0x0
+
+  ms3100mb: &ms3100mb
+    - [ be32, 0x00476124, 0x38600000 ] # li r3 0x0
+
+  ms3100ssao: &ms3100ssao
+    - [ be32, 0x004761FC, 0x38600000 ] # li r3 0x0
+
+  ms3100mlaa: &ms3100mlaa
+    - [ be32, 0x00456C94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+
+  ms3100fps: &ms3100fps
+    - [ be32, 0x005EE690, 0x38800001 ] #vfps
+    - [ be32, 0x005EE42C, 0x60000000 ] #target fps
+
+  ms3100intro: &ms3100intro
+    - [ be32, 0x007fb744, 0x3084345f ]
+
+  ms3100dev: &ms3100dev
+    - [ utf8, 0x010f3460, "\x00" ]
+
+  ms3106dsr: &ms3106dsr
+    - [ be32, 0x00469E90, 0x38600000 ] # li r3 0x0
+
+  ms3106mb: &ms3106mb
+    - [ be32, 0x00469EC4, 0x38600000 ] # li r3 0x0
+
+  ms3106ssao: &ms3106ssao
+    - [ be32, 0x00469F9C, 0x38600000 ] # li r3 0x0
+
+  ms3106mlaa: &ms3106mlaa
+    - [ be32, 0x0044CCB4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+
+  ms3106fps: &ms3106fps
+    - [ be32, 0x005BC2AC, 0x38800001 ]
+    - [ be32, 0x005BBDE4, 0x60000000 ]
+
+  ms3106intro: &ms3106intro
+    - [ utf8, 0x00f965d4, "\x00"]
+
   ms3mlaanotes: &ms3mlaanotes "Allows for the use of Resolution Scaling in the title.\nMust be used with Disable Dynamic Resolution Scale patch for proper upscaling and improved performance.\nSet Resolution Scale Threshold to 256x256 Partially fixes screen pattern on bloom when using Resolution Scaling."
 
   ms3fpsnotes: &ms3fpsnotes "Updated with a new version that has correct game speed above 15FPS.\nIncrease Vblank above 60Hz to go above 60FPS.\nSome UI elements are still tied to target FPS."
@@ -7898,6 +7939,22 @@ Anchors:
   ms3drsnotes: &ms3drsnotes "Must be used with the MLAA patch for proper upscaling and improved performance."
 
 PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
+  "Skip Intro":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES00484: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100intro ]
+  "Enable Dev Menu":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES00484: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100dev ]
   Unlock FPS:
     Games:
       "Motorstorm: Apocalypse":
@@ -7906,8 +7963,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005EE690, 0x38800001 ] #vfps
-      - [ be32, 0x005EE42C, 0x60000000 ] #target fps
+      - [ load, *ms3100fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -7916,7 +7972,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004760F0, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -7925,7 +7981,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004761FC, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -7934,7 +7990,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00476124, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -7943,9 +7999,25 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00456C94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+      - [ load, *ms3100mlaa ]
       
 PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
+  "Skip Intro":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES01104: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100intro ]
+  "Enable Dev Menu":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES01104: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100dev ]
   Unlock FPS:
     Games:
       "Motorstorm: Apocalypse":
@@ -7954,8 +8026,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005EE690, 0x38800001 ] #vfps
-      - [ be32, 0x005EE42C, 0x60000000 ] #target fps
+      - [ load, *ms3100fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -7964,7 +8035,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004760F0, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -7973,7 +8044,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004761FC, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -7982,7 +8053,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00476124, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -7991,9 +8062,25 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00456C94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+      - [ load, *ms3100mlaa ]
 
 PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
+  "Skip Intro":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCUS98242: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100intro ]
+  "Enable Dev Menu":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCUS98242: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3100dev ]
   Unlock FPS:
     Games:
       "Motorstorm: Apocalypse":
@@ -8002,8 +8089,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005EE690, 0x38800001 ] #vfps
-      - [ be32, 0x005EE42C, 0x60000000 ] #target fps
+      - [ load, *ms3100fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -8012,7 +8098,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004760F0, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -8021,7 +8107,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004761FC, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -8030,7 +8116,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00476124, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3100mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -8039,7 +8125,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00456C94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+      - [ load, *ms3100mlaa ]
 
 PPU-41644f9f5fda72efc62e7146620db9679969bff6:
   Unlock FPS:
@@ -8050,8 +8136,7 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005BC2AC, 0x38800001 ]
-      - [ be32, 0x005BBDE4, 0x60000000 ]
+      - [ load, *ms3106fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -8060,7 +8145,7 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469E90, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -8069,7 +8154,7 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469F9C, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -8078,7 +8163,7 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469EC4, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -8087,8 +8172,17 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0044CCB4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
-      
+      - [ load, *ms3106mlaa ]
+  Skip Intro:
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES00484: [ 01.06 ]
+    Author: illusion
+    Notes: *ms3mlaanotes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3106intro ]
+
 PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
   Unlock FPS:
     Games:
@@ -8098,8 +8192,7 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005BC2AC, 0x38800001 ]
-      - [ be32, 0x005BBDE4, 0x60000000 ]
+      - [ load, *ms3106fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -8108,7 +8201,7 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469E90, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -8117,7 +8210,7 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469F9C, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -8126,7 +8219,7 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469EC4, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -8135,7 +8228,16 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0044CCB4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+      - [ load, *ms3106mlaa ]
+  Skip Intro:
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES01104: [ 01.06 ]
+    Author: illusion
+    Notes: *ms3mlaanotes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3106intro ]
 
 PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
   Unlock FPS:
@@ -8146,8 +8248,7 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005BC2AC, 0x38800001 ]
-      - [ be32, 0x005BBDE4, 0x60000000 ]
+      - [ load, *ms3106fps ]
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm: Apocalypse":
@@ -8156,7 +8257,7 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes: *ms3drsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469E90, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106dsr ]
   Disable SSAO:
     Games:
       "Motorstorm: Apocalypse":
@@ -8165,7 +8266,7 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes: *ms3ssaonotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469F9C, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106ssao ]
   Disable Motion blur:
     Games:
       "Motorstorm: Apocalypse":
@@ -8174,7 +8275,7 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00469EC4, 0x38600000 ] # li r3 0x0
+      - [ load, *ms3106mb ]
   Disable MLAA:
     Games:
       "Motorstorm: Apocalypse":
@@ -8183,7 +8284,16 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes: *ms3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0044CCB4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
+      - [ load, *ms3106mlaa ]
+  Skip Intro:
+    Games:
+      "Motorstorm: Apocalypse":
+        BCUS98242: [ 01.06 ]
+    Author: illusion
+    Notes: *ms3mlaanotes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ms3106intro ]
 
 PPU-507b9d34380cff4bc03d7c64ce6342180779c84b:
   Unlock FPS:
@@ -9668,6 +9778,45 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x00099d94, 0xfc000028 ]
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
+
+Anchors:
+PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
+  Disable MLAA:
+    Games:
+      "Motorstorm: RC":
+        NPUA80678: [ 01.02 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001991cc, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
+  Unlock FPS:
+    Games:
+      "Motorstorm: RC":
+        NPUA80678: [ 01.02 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000bda78, 0x38800001 ] # li r4,0x1 // deltatime
+      - [ be32, 0x000bda98, 0x38800000 ] # li r4,0x0 // flipmode
+
+PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
+  Disable MLAA:
+    Games:
+      "Motorstorm: RC":
+        NPEA00333: [ 01.02 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001990ac, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
+  Unlock FPS:
+    Games:
+      "Motorstorm: RC":
+        NPEA00333: [ 01.02 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000bd9d8, 0x38800001 ] # li r4,0x1 // deltatime
+      - [ be32, 0x000bd9f8, 0x38800000 ] # li r4,0x0 // flipmode
 
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   Unlock FPS:
