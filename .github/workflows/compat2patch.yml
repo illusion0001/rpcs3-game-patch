@@ -3,7 +3,7 @@ name: "Process compat.json into readable patch.yml"
 on:
   push:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
