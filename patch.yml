@@ -9779,7 +9779,6 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
-Anchors:
 PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
   Disable MLAA:
     Games:
