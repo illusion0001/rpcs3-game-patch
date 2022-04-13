@@ -1312,6 +1312,32 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
     Patch:
       - [ be32, 0x00457ff0, 0x480001a0 ]
 
+PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
+  "Unlock FPS":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "Whatcookie, illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0025f98c, 0x386003e8 ]
+  "Skip Intro":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00458300, 0x480001a0 ] # b 0x004584a0 // intro
+  "Disable Motion Blur":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004cc078, 0x38600000 ] # li r3,0x0 // mb
+
 PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
   Infinite Ammo:
     Games:
@@ -1333,6 +1359,16 @@ PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00930E48, 0x60000000 ]
+  Skip Intro:
+    Games:
+      "Red Dead Redemption":
+        BLUS30418: [ 01.00 ]
+        BLES00680: [ 01.00 ]
+    Author: Aphelion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00444de0, 0x480001a0 ]
 
 Anchors:
   62fpsnotes: &62fpsnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62FPS."
