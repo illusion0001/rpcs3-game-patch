@@ -16,19 +16,10 @@ jobs:
       - name: Download raw json file
         run: wget "https://rpcs3.net/compatibility?patch&api=v1&v=1.2" -O compatibility.json
       - name: Process json file to yml
-        run: jq -r '.patch' compatibility.json > patch.yml && cat patch.yml
+        run: jq -r '.patch' compatibility.json > patch.yml
 
-      - name: Get current time
-        uses: josStorer/get-current-time@v2
-        id: current-time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "-06:00"
       - name: Use current time
-        env:
-          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
-          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-        run: echo time="$R_TIME" >> $GITHUB_ENV
+        run: echo time=current=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'` >> $GITHUB_ENV
 
       - name: Push patch artifact
         uses: actions/upload-artifact@v3
@@ -41,5 +32,5 @@ jobs:
           git config --local user.name  "github-actions[bot]"
           git add patch.yml
           git commit -m "Update patch from remote - $time" || true
-          git push origin || true
+          #git push origin || true
 
