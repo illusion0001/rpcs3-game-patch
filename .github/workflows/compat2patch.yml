@@ -19,7 +19,7 @@ jobs:
         run: jq -r '.patch' compatibility.json > patch.yml
 
       - name: Use current time
-        run: echo time=current=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'` >> $GITHUB_ENV
+        run: echo time=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'` >> $GITHUB_ENV
 
       - name: Push patch artifact
         uses: actions/upload-artifact@v3
