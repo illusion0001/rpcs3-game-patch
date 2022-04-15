@@ -5844,14 +5844,33 @@ PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
   Unlock FPS:
     Games:
       "Motorstorm":
-        BCES00006: [ All ] # needs all tag otherwise patch doesn't get applied even though game version is the same in param.sfo
+        BCES00006: [ All ]
     Author: illusion, ZEROx
     Notes: *msnotes
     Patch Version: 2.0
     Patch:
-      - [ be16, 0x00605e80, 0x937d ] #variable framerate
-      - [ be16, 0x00605e90, 0x937d ] #gameplay // may not be needed
-      - [ be32, 0x0075c864, 0x39000001 ] #car selection
+      - [ be32, 0x00013030, 0x38c00001 ] # li r6,0x1
+      - [ be32, 0x00013034, 0x39000001 ] # li r8,0x1
+      - [ be32, 0x0075c864, 0x39000001 ] # car selection
+  Disable Dynamic Resolution Scaling:
+    Games:
+      "Motorstorm":
+        BCES00006: [ All ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x002650f4, 0x4800 ] # scale callers
+  Disable Motion Blur:
+    Games:
+      "Motorstorm":
+        BCES00006: [ All ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003dcc28, 0x4bf47530 ] # b 0x00324158
+      - [ be32, 0x00324158, 0xfb7d00b4 ] # std r27,0xb4(r29)
+      - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
+      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
 
 PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
   Unlock FPS:
@@ -5911,9 +5930,28 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
     Notes: *msnotes
     Patch Version: 2.0
     Patch:
-      - [ be16, 0x00605e80, 0x937d ] #variable framerate
-      - [ be16, 0x00605e90, 0x937d ] #gameplay // may not be needed
-      - [ be32, 0x0075c864, 0x39000001 ] #car selection
+      - [ be32, 0x00013030, 0x38c00001 ] # li r6,0x1
+      - [ be32, 0x00013034, 0x39000001 ] # li r8,0x1
+      - [ be32, 0x0075c864, 0x39000001 ] # car selection
+  Disable Dynamic Resolution Scaling:
+    Games:
+      "Motorstorm":
+        BCUS98137: [ All ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x002650f4, 0x4800 ] # scale callers
+  Disable Motion Blur:
+    Games:
+      "Motorstorm":
+        BCUS98137: [ All ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003dcc28, 0x4bf47530 ] # b 0x00324158
+      - [ be32, 0x00324158, 0xfb7d00b4 ] # std r27,0xb4(r29)
+      - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
+      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
 
 Anchors:
   ms2notes: &ms2notes         "No need for additional settings change.\nNeeds a stable and locked 60FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed."
