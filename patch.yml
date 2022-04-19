@@ -1088,7 +1088,7 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
     Notes: *gow3skipintro
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x001e559c, 0x4800 ]
+      - [ byte, 0x00588e50, 0x1 ]
 
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
   Disable MLAA:
