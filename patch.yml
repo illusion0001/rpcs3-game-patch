@@ -1031,21 +1031,21 @@ Anchors:
         BCKS15003: [ 01.03 ]
 
 PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
-  "240 FPS":
+  "Unlock FPS":
     Games: *gow3-103-title
     Author: ZEROx, illusion
-    Notes: "Raises the maximum framerate to 240fps. Increase vblank accordingly."
+    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00528560, 240  ]
-      - [ bef32, 0x005284b8, 1600 ]
+      - [ bef32, 0x00528560, 1000.00 ]
+      - [ bef32, 0x005284b8, 15151.5 ]
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
     Notes: *gow3resnotes
     Patch Version: 3.0
     Patch:
-      - [ byte, 0x52BF2F, 0 ]
+      - [ be32, 0x0052bf2c, 0x00000000 ]
       - [ be32, 0x0023137c, 0x60000000 ]
   Disable Depth of Field:
     Games: *gow3-103-title
