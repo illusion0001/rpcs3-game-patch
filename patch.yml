@@ -1031,6 +1031,14 @@ Anchors:
         BCKS15003: [ 01.03 ]
 
 PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
+  "240 FPS":
+    Games: *gow3-103-title
+    Author: ZEROx, illusion
+    Notes: "Raises the maximum framerate to 240fps. Increase vblank accordingly."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00528560, 240  ]
+      - [ bef32, 0x005284b8, 1600 ]
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
