@@ -1034,11 +1034,11 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
   "Unlock FPS":
     Games: *gow3-103-title
     Author: ZEROx, illusion
-    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate."
+    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60FPS and above."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00528560, 1000.00 ]
-      - [ bef32, 0x005284b8, 15151.5 ]
+      - [ bef32, 0x00528560, 1000 ]
+      - [ bef32, 0x005284b8, 6600 ]
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
