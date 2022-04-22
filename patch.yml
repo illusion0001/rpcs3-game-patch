@@ -1039,12 +1039,13 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
     Patch:
       - [ bef32, 0x00528560, 1000 ]
       - [ bef32, 0x005284b8, 6667 ]
+      - [ be16, 0x000c7b0a, 0xccc8 ] #chainswing fix
   "Skip any videos with X button":
     Games: *gow3-103-title
     Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0026fe14, 0x901f0f5c ]
+      - [ be16, 0x0026fe14, 0x901f ]
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
@@ -1105,6 +1106,21 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
       - [ byte, 0x00588e50, 0x1 ]
 
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
+  "Unlock FPS":
+    Games: *gow3-100-title
+    Author: ZEROx, illusion
+    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60FPS and above."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00528548, 1000 ]
+      - [ bef32, 0x005284a4, 6667 ]
+      - [ be16, 0x000c7b0a, 0xccb0 ] #chainswing fix
+  "Skip any videos with X button":
+    Games: *gow3-100-title
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0026fd18, 0x901f ]
   Disable MLAA:
     Games: *gow3-100-title
     Author: illusion, ZEROx
