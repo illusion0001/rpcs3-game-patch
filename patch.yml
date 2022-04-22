@@ -1039,6 +1039,12 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
     Patch:
       - [ bef32, 0x00528560, 1000 ]
       - [ bef32, 0x005284b8, 6667 ]
+  "Skip any videos with X button":
+    Games: *gow3-103-title
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0026fe14, 0x901f0f5c ]
   Disable MLAA:
     Games: *gow3-103-title
     Author: illusion, ZEROx
