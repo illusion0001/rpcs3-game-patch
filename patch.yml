@@ -1038,8 +1038,9 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00528560, 1000 ]
-      - [ bef32, 0x005284b8, 6667 ]
+      - [ bef32, 0x005284b8, 8333 ]
       - [ be16, 0x000c7b0a, 0xccc8 ] #chainswing fix
+      - [ be16, 0x000ea0fe, 0xccc8 ] #water freeze fix
   "Skip any videos with X button":
     Games: *gow3-103-title
     Author: illusion
@@ -1113,8 +1114,9 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00528548, 1000 ]
-      - [ bef32, 0x005284a4, 6667 ]
+      - [ bef32, 0x005284a4, 8333 ]
       - [ be16, 0x000c7b0a, 0xccb0 ] #chainswing fix
+      - [ be16, 0x000ea0ee, 0xccc8 ] #water freeze fix
   "Skip any videos with X button":
     Games: *gow3-100-title
     Author: illusion
