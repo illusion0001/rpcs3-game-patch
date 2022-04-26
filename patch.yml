@@ -1111,12 +1111,20 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
     Games: *gow3-100-title
     Author: ZEROx, illusion
     Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60FPS and above."
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
-      - [ bef32, 0x00528548, 1000 ]
-      - [ bef32, 0x005284a4, 8333 ]
-      - [ be16, 0x000c7b0a, 0xccb0 ] #chainswing fix
-      - [ be16, 0x000ea0ee, 0xccc8 ] #water freeze fix
+      - [ bef32, 0x00528560, 1000 ]
+      - [ bef32, 0x005284b8, 100000 ]
+      - [ be32, 0x0026b528, 0x60000000 ] #don't write to target fps
+      - [ bef32, 0x0052bee4, 60.0 ] #target fps # read max of 60 for physics stuff
+      - [ be16, 0x0026b6e6, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b74a, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b75e, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b84a, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b896, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b97a, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x001e51b6, 0xe7a8 ] #1000.0f gameplay speed scaling
+      - [ be16, 0x002710f6, 0xe7a8 ] #1000.0f video player speed scaling
   "Skip any videos with X button":
     Games: *gow3-100-title
     Author: illusion
@@ -1266,6 +1274,7 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
     Patch:
       - [ be32, 0x004c5220, 0x60000000 ]
       - [ be32, 0x004c5240, 0x48000084 ]
+      - [ be32, 0x004c3f0c, 0x386003e8 ]
 
 PPU-d5041972c3464b734ed27f0b94b505a2a14471c8:
   Unlock FPS:
