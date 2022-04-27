@@ -1778,10 +1778,16 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         NPUA80918: [ 01.04 ]
     Author: "ZEROx, illusion"
     Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate."
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ bef32, 0x0039e284, 1000 ]
-      - [ bef32, 0x002cae2c, 6667 ]
+      - [ bef32, 0x002cae2c, 10000 ] #timestamp
+      - [ bef32, 0x0083b2cc, 60 ] #target fps, main float
+      - [ be32, 0x002cadd8, 0x60000000 ]
+      - [ be16, 0x002c537e, 0x93cc ] #1000.0f gameplay speed scaling
+      - [ be16, 0x002caec6, 0x93cc ] #1000.0f sync
+      - [ be16, 0x002caf6e, 0x93cc ] #1000.0f sync
+      - [ be16, 0x003ef71a, 0x93cc ] #1000.0f video playback speed scaling
 
 PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: #GOWA.SELF 1.12
   Disable MLAA:
