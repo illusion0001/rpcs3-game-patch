@@ -1010,7 +1010,7 @@ Anchors:
 
   gow3camerasway: &gow3camerasway "Stops the ingame camera from swaying and shaking"
 
-  gow3skipintro: &gow3skipintro "Skips SCE intros up to the first video"
+  gow3skipintro: &gow3skipintro "Skips SCE intros up to the first video.\n2.0 Skips first two intro videos"
 
   gow3-100-title: &gow3-100-title
       "God of War 3 (God of War III)":
@@ -1100,11 +1100,26 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
       - [ be32, 0x0015d29c, 0x38000000 ] #Disable Camera Sway
   Skip intro:
     Games: *gow3-103-title
-    Author: illusion
+    Author: illusion, ZEROx
     Notes: *gow3skipintro
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
-      - [ byte, 0x00588e50, 0x1 ]
+      - [ byte, 0x00588e50, 0x1 ]        #Skip SCEA logos
+      - [ be32, 0x002712c8, 0x4816ce89 ] #Call (video looks for x button here)
+      - [ be32, 0x003de150, 0x3d200055 ] #lis r9,0x55
+      - [ be32, 0x003de154, 0x8009fcc5 ] #r0 - 4bytes of video name
+      - [ be32, 0x003de158, 0x3d206f00 ] #r9 - SMLogo
+      - [ be32, 0x003de15c, 0x7f804800 ] #cmpw r0 to r9
+      - [ be32, 0x003de160, 0x419e0020 ] #beq 0x1e55a4
+      - [ be32, 0x003de164, 0x3d206e67 ] #lis r9,0x6e67
+      - [ be32, 0x003de168, 0x39294372 ] #addi r9 - openingCredits
+      - [ be32, 0x003de16c, 0x7f804800 ] #cmpw r0 to r9
+      - [ be32, 0x003de170, 0x419e0010 ] #beq 0x1e55a4
+      - [ be32, 0x003de174, 0x8122af00 ] #lwz r9,-0x5100(r2)
+      - [ be32, 0x003de178, 0x8009008c ] #Usual button data load
+      - [ be32, 0x003de17c, 0x48000008 ] #cmpw r0 to r9
+      - [ be32, 0x003de180, 0x38000040 ] #X button
+      - [ be32, 0x003de184, 0x4e800020 ] #Ret
 
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
   "Unlock FPS":
@@ -1764,10 +1779,21 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
     Author: Illusion, ZEROx
-    Notes: "Skips SCE intros up to first video"
-    Patch Version: 1.0
+    Notes: "Skips SCE intros up to first video\n2.0 Skips intro video"
+    Patch Version: 2.0
     Patch:
-      - [ be16, 0x00411ff4, 0x4800 ]
+      - [ byte, 0x00204d5b, 1 ] #Skip intro vid on first run
+      - [ be16, 0x00411ff4, 0x4800 ] #Skip intro logo
+      - [ be32, 0x003efa04, 0x480225f5 ] #func call
+      - [ be32, 0x00411ff8, 0x3c60009e ] #lis r3,0x9e
+      - [ be32, 0x00411ffc, 0xa063c1d0 ] #Current video 2 bytes
+      - [ be32, 0x00412000, 0x2f836f70 ] #cmpwi cr7,r3,0x6f70
+      - [ be32, 0x00412004, 0x419e0010 ] #beq
+      - [ be32, 0x00412008, 0x3c600094 ] #lis r3,0x94
+      - [ be32, 0x0041200c, 0x80630e94 ] #r3 = Button data
+      - [ be32, 0x00412010, 0x48000008 ] #b
+      - [ be32, 0x00412014, 0x38600040 ] #X button
+      - [ be32, 0x00412018, 0x4e800020 ] #Return
   Unlock FPS:
     Games:
       "God of War: Ascension":
