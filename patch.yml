@@ -1649,6 +1649,15 @@ PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x855048, 0.001 ]
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: Quest for Booty":
+        BCES00301: [ All ]
+    Author: Aphelion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0034E658, 0xD03D0008 ]
 
 PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
   Unlock FPS:
@@ -1673,6 +1682,37 @@ PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
       - [ bef32, 0x00CA2448, 0.001 ] # max fps
       - [ bef32, 0x00CA40B8, 0.001 ] # min gamespeed
       - [ bef32, 0x00C942FC, 0.001 ] # min gamespeed
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: A Crack In Time":
+        BCUS98124: [ 01.00 ]
+    Author: bungholio
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00467A48 , 0xD03D0008 ]
+
+PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank Future: A Crack In Time":
+        BCUS98124: [ 01.20 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00CA2398, 0.001 ] # max fps
+      - [ bef32, 0x00CA4008, 0.001 ] # min gamespeed
+      - [ bef32, 0x00C941FC, 0.001 ] # min gamespeed
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: A Crack In Time":
+        BCUS98124: [ 01.20 ]
+    Author: Aphelion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00467D90 , 0xD03D0008 ]
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   Unlock FPS:
