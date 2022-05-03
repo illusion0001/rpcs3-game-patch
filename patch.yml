@@ -1136,9 +1136,6 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
       - [ be16, 0x0026b6e6, 0xe7a8 ] #1000.0f sync stuff
       - [ be16, 0x0026b74a, 0xe7a8 ] #1000.0f sync stuff
       - [ be16, 0x0026b75e, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x0026b84a, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x0026b896, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x0026b97a, 0xe7a8 ] #1000.0f sync stuff
       - [ be16, 0x001e51b6, 0xe7a8 ] #1000.0f gameplay speed scaling
       - [ be16, 0x002710f6, 0xe7a8 ] #1000.0f video player speed scaling
   "Skip any videos with X button":
