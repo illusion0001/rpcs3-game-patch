@@ -369,6 +369,23 @@ PPU-f2f7f7ea0444353884bb715152147c3a29f4e790:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0091b69c, *DOD3_Camera_H_Sens_Multiplier]
+  Disable low-res Depth-of-Field:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BLUS31197: [ 01.01 ]
+    Author: emoose
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xa5455c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
+  Unprotect game files:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BLUS31197: [ 01.01 ]
+    Author: emoose
+    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_fra.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_fra.xxx"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x8c50b8, 0x30840000 ]
 
 PPU-b18834a8f21cd29a091b287a66656a279ccba507:
   Unlock FPS:
@@ -391,6 +408,32 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ececc, 0.12500000 ] # 240 max FPS
+  Increase Horizontal Camera Sensitivity:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPUB31251: [ 01.01 ]
+    Author: RagingCactus
+    Notes: *DOD3_Camera_H_Sens_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0091a99c, *DOD3_Camera_H_Sens_Multiplier]
+  Disable low-res Depth-of-Field:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPUB31251: [ 01.01 ]
+    Author: emoose
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xa5385c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
+  Unprotect game files:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPUB31251: [ 01.01 ]
+    Author: emoose
+    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_fra.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_fra.xxx"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x8c4398, 0x30840000 ]
 
 PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
   Unlock FPS:
@@ -435,6 +478,32 @@ PPU-c09c496514f6dc591434575b04eb7c003826c11d:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ed62c, 0.12500000 ] # 240 max FPS
+  Increase Horizontal Camera Sensitivity:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BLJM61043: [ 01.04 ]
+    Author: RagingCactus
+    Notes: *DOD3_Camera_H_Sens_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x91988c, *DOD3_Camera_H_Sens_Multiplier]
+  Disable low-res Depth-of-Field:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BLJM61043: [ 01.04 ]
+    Author: emoose
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xa4e854, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
+  Unprotect game files:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BLJM61043: [ 01.04 ]
+    Author: emoose
+    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_jpn.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_jpn.xxx"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x8c5310, 0x30840000 ]
 
 PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
   Unlock FPS:
@@ -446,6 +515,32 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008edc5c, 0.12500000 ] # 240 max FPS
+  Increase Horizontal Camera Sensitivity:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BCAS20311: [ 01.02 ]
+    Author: RagingCactus
+    Notes: *DOD3_Camera_H_Sens_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x91ad64, *DOD3_Camera_H_Sens_Multiplier]
+  Disable low-res Depth-of-Field:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BCAS20311: [ 01.02 ]
+    Author: emoose
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xa5245c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
+  Unprotect game files:
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        BCAS20311: [ 01.02 ]
+    Author: emoose
+    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_chn.bin, coalesced_cze.bin, coalesced_deu.bin, coalesced_esm.bin, coalesced_esn.bin, coalesced_fra.bin, coalesced_hun.bin, coalesced_ita.bin, coalesced_jpn.bin, coalesced_kor.bin, coalesced_pol.bin, coalesced_ptb.bin, coalesced_rus.bin, coalesced_slo.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x8c5178, 0x30840000 ]
 
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   21:9 Aspect Ratio:
