@@ -4763,6 +4763,30 @@ PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
     Patch:
       - [ load, *tox2_hp ]
 
+PPU-c5d2fd31933f88313956774b84346d242979eba6:
+  "Disable Fisheye":
+    Games:
+      "Skate 2":
+        BLUS30253: [ 01.02 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
+      - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+
+PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
+  "Disable Fisheye":
+    Games:
+      "Skate 2":
+        BLES00461: [ 01.02 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
+      - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+
 PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
   Unlock FPS:
     Games:
