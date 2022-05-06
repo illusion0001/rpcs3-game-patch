@@ -10312,6 +10312,7 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
     Games:
       "The Simpsons Game":
         BLES00142: [ 01.00 ]
+        BLES00146: [ 01.00 ]
         BLUS30065: [ 01.00 ]
     Author: "nastys"
     Patch Version: 1.0
@@ -10322,6 +10323,7 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
     Games:
       "The Simpsons Game":
         BLES00142: [ 01.00 ]
+        BLES00146: [ 01.00 ]
         BLUS30065: [ 01.00 ]
     Author: illusion
     Patch Version: 1.0
