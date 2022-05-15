@@ -6164,7 +6164,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
     Patch:
       - [ be32, 0x0001852c, 0x38c00001 ] # li r6,0x1
       - [ be32, 0x00018530, 0x39000001 ] # li r8,0x1
-      - [ be32, 0x0087f3a0, 0x39000001 ] #car selection
+      - [ be32, 0x0087f3a0, 0x39000001 ] # car selection
   Disable Dynamic Resolution Scaling:
     Games:
       "Motorstorm Update 3.1 (Complete Edition)":
@@ -6173,8 +6173,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
     Author: illusion
     Patch Version: 1.0
     Patch:
-      #- [ be32, 0x0027b190, 0x60000000 ] # res caller
-      - [ be16, 0x0026f73c, 0x4800 ]     # scale callers
+      - [ be16, 0x0026f73c, 0x4800 ] # scale callers
   Disable Motion Blur:
     Games:
       "Motorstorm Update 3.1 (Complete Edition)":
@@ -6216,9 +6215,9 @@ PPU-ac5d994a6742a717d530cdcf095e880533465b66: # NPEA80017
     Notes: *msnotes
     Patch Version: 2.0
     Patch:
-      - [ be16, 0x00607e10, 0x937d ] #variable framerate
-      - [ be16, 0x00607e20, 0x937d ] #gameplay // may not be needed
-      - [ be32, 0x0075e7f4, 0x39000001 ] #car selection
+      - [ be16, 0x00607e10, 0x937d ] # variable framerate
+      - [ be16, 0x00607e20, 0x937d ] # gameplay // may not be needed
+      - [ be32, 0x0075e7f4, 0x39000001 ] # car selection
 
 PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
   Unlock FPS:
