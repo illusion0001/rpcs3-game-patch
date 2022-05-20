@@ -1770,7 +1770,7 @@ PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
 PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: A Crack In Time":
+      "Ratchet & Clank Future: A Crack in Time":
         BCUS98124: [ 01.00 ]
     Author: illusion
     Notes:
@@ -1781,7 +1781,7 @@ PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
       - [ bef32, 0x00C942FC, 0.001 ] # min gamespeed
   Infinite Ammo:
     Games:
-      "Ratchet & Clank Future: A Crack In Time":
+      "Ratchet & Clank Future: A Crack in Time":
         BCUS98124: [ 01.00 ]
     Author: bungholio
     Notes:
@@ -1792,7 +1792,7 @@ PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
 PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: A Crack In Time":
+      "Ratchet & Clank Future: A Crack in Time":
         BCUS98124: [ 01.20 ]
     Author: illusion
     Notes:
@@ -1803,7 +1803,7 @@ PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
       - [ bef32, 0x00C941FC, 0.001 ] # min gamespeed
   Infinite Ammo:
     Games:
-      "Ratchet & Clank Future: A Crack In Time":
+      "Ratchet & Clank Future: A Crack in Time":
         BCUS98124: [ 01.20 ]
     Author: Aphelion
     Notes:
@@ -1814,7 +1814,7 @@ PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: A Crack In Time":
+      "Ratchet & Clank Future: A Crack in Time":
         NPUA80966: [ 01.20 ]
     Author: illusion
     Notes:
@@ -1827,7 +1827,7 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
 PPU-1155df736bedc95424c866d84a20766a4115774d:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: Into the Nexus":
+      "Ratchet & Clank: Into the Nexus":
         NPUA80908: [ 01.00 ]
     Author: illusion
     Notes: Maximum framerate with the patch is half the Vblank frequency.
@@ -1840,7 +1840,7 @@ PPU-1155df736bedc95424c866d84a20766a4115774d:
 PPU-ed460e668a491f5e39f6547f3a24c2f20e2cb39b:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: Into the Nexus":
+      "Ratchet & Clank: Into the Nexus":
         BCES01908: [ 01.00 ]
         BCES01949: [ 01.00 ]
     Author: illusion
@@ -1854,7 +1854,7 @@ PPU-ed460e668a491f5e39f6547f3a24c2f20e2cb39b:
 PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: All 4 One":
+      "Ratchet & Clank: All 4 One":
         NPUA80695: [ 01.00 ]
     Author: illusion
     Notes: Maximum framerate with the patch is half the Vblank frequency.
@@ -10231,7 +10231,7 @@ PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   Unlock FPS:
     Games:
-      "Ratchet & Clank Future: Full Frontal Assault/QForce":
+      "Ratchet & Clank: Full Frontal Assault":
         NPUA80642: [ 01.00 ]
     Author: illusion
     Notes: Maximum framerate with the patch is half the Vblank frequency.
