@@ -1485,6 +1485,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       "Red Dead Redemption":
         BLES01294: [ 01.00 ]
     Author: "Whatcookie, illusion"
+    Notes: Allows the framerate to exceed 65 (still need to set vblank to unlock framerate)
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025f98c, 0x386003e8 ]
