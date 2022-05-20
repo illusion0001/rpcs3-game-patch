@@ -6252,9 +6252,9 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
 
 Anchors:
-  ms2notes: &ms2notes         "No need for additional settings change.\nNeeds a stable and locked 60FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed."
+  ms2notes: &ms2notes         "No need for additional settings change.\nNeeds a stable and locked 60FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
 
-  ms2vfpsnotes: &ms2vfpsnotes "Allows for variable fps and correct game speed above 15FPS.\nThe camera will shake when using PPU recompiler.\nThis patch will be kept in separate entry until the issue resolved."
+  ms2vfpsnotes: &ms2vfpsnotes "Allows for variable fps and correct game speed above 15FPS.\n\nKnown issues:\nSlower movement through water, especially over 60FPS\nCamera shakes when using PPU recompiler (patch will be kept separate until resolved)."
 
 PPU-34984cacd60f2ee2a380157a009122698d470056:
   60 FPS:
