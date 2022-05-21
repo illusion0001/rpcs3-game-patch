@@ -1480,6 +1480,17 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
       - [ be32, 0x00457ff0, 0x480001a0 ]
 
 PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
+  "21:9 Aspect Ratio + HUD fix":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "vStar925"
+    Patch Version: 1.0
+    Group:
+    Notes:
+    Patch:
+      - [ be32, 0x95F18, 0x4017B9AA ] # 21:9
+      - [ be32, 0x475234, 0x4017B9AA ] # 21:9 hud
   "Unlock FPS":
     Games:
       "Red Dead Redemption":
