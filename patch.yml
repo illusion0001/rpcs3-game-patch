@@ -613,6 +613,7 @@ PPU-e8e29268437430a42b01ccbdea814560150bc037:
   "Skip any videos with X button":
     Games:
       "God of War: HD":
+        BCES00791: [ 01.01 ]
         NPEA00255: [ 01.01 ]
     Author: illusion
     Patch Version: 1.0
@@ -623,6 +624,7 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
   "Skip any videos with X button":
     Games:
       "God of War: II HD":
+        BCES00791: [ 01.01 ]
         NPEA00256: [ 01.01 ]
     Author: illusion
     Patch Version: 1.0
