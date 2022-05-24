@@ -542,6 +542,93 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
     Patch:
       - [ be32, 0x8c5178, 0x30840000 ]
 
+Anchors:
+  GoWHD43notes: &GoWHD43notes "Restores original viewport size from PS2 releases. The remastered versions of the first two games handled a 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. Must enable Stretch to Display Area in GPU configuration."
+
+PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
+  4:3 Aspect Ratio:
+    Games:
+      "God of War: HD":
+        NPUA80490: [ 01.00 ]
+    Author: boma
+    Notes: *GoWHD43notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x004ff9ec, 1.333333334 ]
+
+PPU-31e32090ea333902dbf322c24487bab7e8c8d0d1:
+  4:3 Aspect Ratio:
+    Games:
+      "God of War: II HD":
+        NPUA80491: [ 01.00 ]
+    Author: boma
+    Notes: *GoWHD43notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0053ee4c, 1.333333334 ]
+
+PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
+  4:3 Aspect Ratio:
+    Games:
+      "God of War: HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80490: [ 01.01 ]
+    Author: boma
+    Notes: *GoWHD43notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x004ffa44, 1.333333334 ]
+  "Skip any videos with X button":
+    Games:
+      "God of War: HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80490: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0002970c, 0x38600001 ]
+
+PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
+  4:3 Aspect Ratio:
+    Games:
+      "God of War: II HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80491: [ 01.01 ]
+    Author: boma
+    Notes: *GoWHD43notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0053eecc, 1.333333334 ]
+  "Skip any videos with X button":
+    Games:
+      "God of War: II HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80491: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0002c7e4, 0x38600001 ]
+
+PPU-e8e29268437430a42b01ccbdea814560150bc037:
+  "Skip any videos with X button":
+    Games:
+      "God of War: HD":
+        NPEA00255: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00029700, 0x38600001 ]
+
+PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
+  "Skip any videos with X button":
+    Games:
+      "God of War: II HD":
+        NPEA00256: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0002c7e4, 0x38600001 ]
+
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   21:9 Aspect Ratio:
     Games:
