@@ -586,7 +586,7 @@ PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
     Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0002970c, 0x38600001 ]
+      - [ be32, 0x001c67f0, 0x38000001 ]
 
 PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
   4:3 Aspect Ratio:
@@ -607,7 +607,7 @@ PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
     Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0002c7e4, 0x38600001 ]
+      - [ be32, 0x002c1a88, 0x38000001 ]
 
 PPU-e8e29268437430a42b01ccbdea814560150bc037:
   "Skip any videos with X button":
@@ -617,7 +617,7 @@ PPU-e8e29268437430a42b01ccbdea814560150bc037:
     Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00029700, 0x38600001 ]
+      - [ be32, 0x001c84d8, 0x38000001 ]
 
 PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
   "Skip any videos with X button":
@@ -627,7 +627,7 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
     Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0002c7e4, 0x38600001 ]
+      - [ be32, 0x002c2b14, 0x38000001 ]
 
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   21:9 Aspect Ratio:
