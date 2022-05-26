@@ -96,6 +96,54 @@ Anchors:
   # constants
     - [ be32, 0x016c9fa4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c9fa8, 0.05000000 ] # maximum timestep size (50ms or 20FPS)
+  
+  BCAS20071_FpsUnlock: &BCAS20071_FpsUnlock
+  # Set 60FPS with no frameskip
+  # by Gibbed, KokutouKiritsugu port to BCAS20071
+    - [ be16, 0x24148, 0x981f ]
+  
+  # delta time
+  # by Whatcookie
+    - [ be32, 0x00019794, 0x496af37d ] # jump to code cave
+  
+  # get mftb
+    - [ be32, 0x016c8b10, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
+  
+  # get mftb delta
+    - [ be32, 0x016c8b14, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
+    - [ be32, 0x016c8b18, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
+    - [ be32, 0x016c8b1c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
+    - [ be32, 0x016c8b20, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
+    - [ be32, 0x016c8b24, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
+  
+  # mftb delta to float
+    - [ be32, 0x016c8b28, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
+    - [ be32, 0x016c8b2c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
+    - [ be32, 0x016c8b30, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
+    - [ be32, 0x016c8b34, 0xffc0f018 ] # frsp f30,f30          // round to single precision
+  
+  # mftb delta to seconds
+    - [ be32, 0x016c8b38, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
+    - [ be32, 0x016c8b3c, 0x62528b10 ] # ori r18,r18,0x8b10   // load low bits of constants pointer
+    - [ be32, 0x016c8b40, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
+    - [ be32, 0x016c8b44, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
+    - [ be32, 0x016c8b48, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
+  
+  # check timestep size
+    - [ be32, 0x016c8b4c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
+    - [ be32, 0x016c8b50, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
+  
+  # set maximum timestep
+    - [ be32, 0x016c8b54, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
+  
+  # cleanup
+    - [ be32, 0x016c8b58, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
+    - [ be32, 0x016c8b5c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
+    - [ be32, 0x016c8b60, 0x4e800020 ] # blr                   // return
+  
+  # constants
+    - [ be32, 0x016c8b64, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x016c8b68, 0.05000000 ] # maximum timestep size (50ms or 20FPS)
 
   DeS_FPS_Notes: &DeS_FPS_Notes "Patch version 2.0 and above is not compatible with the settings used for the previous patch. Clocks scale and Vblank rate must be set to the defaults. Vblank rate can be modified to increase the framelimit beyond 60FPS, however it's not recommended as users may encounter physics issues."
 
@@ -224,6 +272,67 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00218d04, 0x41 ]
+
+PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
+  Unlock FPS:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: Whatcookie, Gibbed, KokutouKiritsugu port to BCAS20071
+    Notes: *DeS_FPS_Notes
+    Patch Version: 2.1
+    Patch:
+      - [ load, *BCAS20071_FpsUnlock ]
+  Disable Dynamic Exposure:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: Whatcookie, KokutouKiritsugu port to BCAS20071
+    Notes: *DeS_DDE_Notes
+    Patch Version: 1.0.1
+    Patch:
+      - [ be16, 0x0002414c, 0x981f ]
+  Skip Intro Videos:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: GalCiv, KokutouKiritsugu port to BCAS20071
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008efecc, 0x38000003 ] # Intro logos skip
+      - [ be32, 0x008efed0, 0x901c0100 ]
+  21:9 Aspect Ratio:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: Whatcookie, KokutouKiritsugu port to BCAS20071
+    Notes: *DeS_AR_Notes
+    Patch Version: 1.0
+    Group: AR
+    Patch:
+      - [ be32, 0x018Cee14, 0x4017b9aa ] # 21:9 aspect ratio
+      - [ be32, 0x0190430c, 0x4017b9aa ]
+  32:9 Aspect Ratio:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: Whatcookie, KokutouKiritsugu port to BCAS20071
+    Notes: *DeS_AR_Notes
+    Patch Version: 1.0
+    Group: AR
+    Patch:
+      - [ bef32, 0x018Cee14, 3.5555556 ] # 32:9 aspect ratio
+      - [ bef32, 0x0190430c, 3.5555556 ]
+  Disable Motion Blur:
+    Games:
+      "Demon's Souls":
+        BCAS20071: [ 01.04 ]
+    Author: illusion, KokutouKiritsugu port to BCAS20071
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00215f54, 0x41 ]
 
 Anchors:
   kh15_ar_219: &kh15_ar_219
@@ -5862,6 +5971,23 @@ PPU-890a336132e35e8bfb7cbe430ea9b09114915346:
     Patch Version: 1.0
     Patch:
       - [be32, 0x66F9B4, 0x00000718]
+  "Unlock all songs and modules":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater":
+        NPJB00047: [ 01.01 ]
+    Author: nastys
+    Notes: "Unlocks everything. No save data required. Module achievement percentage is not changed."
+    Patch Version: 1.1
+    Patch:
+      # unlock song menu
+      - [be32, 0x3a0b14, 0x38600001]
+      - [be32, 0x3a0b18, 0x4e800020]
+      # unlock songs and modules
+      - [be32, 0x2ed4fc, 0x38600001]
+      - [be32, 0x2ed500, 0x39200001]
+      - [be32, 0x2ed508, 0x42800040]
+      # unlock PV mode
+      - [be32, 0x2ecda8, 0x38000001]
   Full resolution:
     Games:
       "Hatsune Miku: Project DIVA Dreamy Theater":
@@ -5876,6 +6002,27 @@ PPU-890a336132e35e8bfb7cbe430ea9b09114915346:
       - [be32, 0x22F3B8, 0x2F8802D0]
       - [be32, 0x22F3C4, 0x39200500]
       - [be32, 0x22F3CC, 0x380002D0]
+  "Remove watermark":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater":
+        NPJB00047: [ 01.01 ]
+    Author: nastys
+    Notes: "Removes the PV watermark."
+    Patch Version: 1.0
+    Patch:
+      # pv_mark
+      - [byte, 0x7ed618, 0x00]
+  "Skip save data CRC-32 check":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater":
+        NPJB00047: [ 01.01 ]
+    Author: nastys
+    Notes: "For easy save data modding."
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x3d7780, 0x4280000c]
+      - [be32, 0x3d7874, 0x4280001c]
+      - [be32, 0x3d784c, 0x60000000]
 
 Anchors:
   HMPDF_FPS_USEU: &HMPDF_FPS_USEU
@@ -10340,6 +10487,23 @@ PPU-e608f6e3e55eda4850e835698d7121caa97b7fa5:
       - [ be32, 0x001E1490, 0x38800000 ]
 
 PPU-2d23777ede9d83e1f1dd3fa4fd61a993fa8d9fea:
+  "Unlock all songs and modules":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater Extend":
+        NPJB00201: [ 01.01 ]
+    Author: nastys
+    Notes: "Unlocks everything. No save data required."
+    Patch Version: 1.1
+    Patch:
+      # unlock song menu
+      - [be32, 0x3837cc, 0x38600001]
+      - [be32, 0x3837d0, 0x4e800020]
+      # unlock songs and modules
+      - [be32, 0x2dea18, 0x38600001]
+      - [be32, 0x2dea1c, 0x39200001]
+      - [be32, 0x2dea24, 0x42800040]
+      # unlock PV mode
+      - [be32, 0x2e1968, 0x38000001]
   Full resolution:
     Games:
       "Hatsune Miku: Project DIVA Dreamy Theater Extend":
@@ -10354,8 +10518,46 @@ PPU-2d23777ede9d83e1f1dd3fa4fd61a993fa8d9fea:
       - [be32, 0x3A6FD0, 0x2F8802D0]
       - [be32, 0x3A6FDC, 0x39200500]
       - [be32, 0x3A6FE4, 0x380002D0]
+  "Remove watermark":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater Extend":
+        NPJB00201: [ 01.01 ]
+    Author: nastys
+    Notes: "Removes the PV watermark."
+    Patch Version: 1.0
+    Patch:
+      # pv_mark
+      - [byte, 0x833e08, 0x00]
+  "Skip save data CRC-32 check":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater Extend":
+        NPJB00201: [ 01.01 ]
+    Author: nastys
+    Notes: "For easy save data modding."
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x3b5d60, 0x4280000c]
+      - [be32, 0x3b5d34, 0x42800020]
+      - [be32, 0x3b5d0c, 0x60000000]
 
 PPU-f0a175f8e0fe7f939223d821dc05fc646ca22a14:
+  "Unlock all songs and modules":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater 2nd":
+        NPJB00134: [ 01.01 ]
+    Author: nastys
+    Notes: "Unlocks everything. No save data required."
+    Patch Version: 1.1
+    Patch:
+      # unlock song menu
+      - [be32, 0x38fe00, 0x38600001]
+      - [be32, 0x38fe04, 0x4e800020]
+      # unlock songs and modules
+      - [be32, 0x2ca200, 0x38600001]
+      - [be32, 0x2ca204, 0x39200001]
+      - [be32, 0x2ca20c, 0x42800040]
+      # unlock PV mode
+      - [be32, 0x2cc8ec, 0x38000001]
   Full resolution:
     Games:
       "Hatsune Miku: Project DIVA Dreamy Theater 2nd":
@@ -10370,6 +10572,27 @@ PPU-f0a175f8e0fe7f939223d821dc05fc646ca22a14:
       - [be32, 0x21E76C, 0x2F8802D0]
       - [be32, 0x21E778, 0x39200500]
       - [be32, 0x21E780, 0x380002D0]
+  "Remove watermark":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater 2nd":
+        NPJB00134: [ 01.01 ]
+    Author: nastys
+    Notes: "Removes the PV watermark."
+    Patch Version: 1.0
+    Patch:
+      # pv_mark
+      - [byte, 0x826790, 0x00]
+  "Skip save data CRC-32 check":
+    Games:
+      "Hatsune Miku: Project DIVA Dreamy Theater 2nd":
+        NPJB00134: [ 01.01 ]
+    Author: nastys
+    Notes: "For easy save data modding."
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x3c2054, 0x4280000c]
+      - [be32, 0x3c2148, 0x4280001c]
+      - [be32, 0x3c2120, 0x60000000]
 
 PPU-3c5e08635d6768c273395b9c19e099b25050927b:
   Unlock FPS:
