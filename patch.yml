@@ -10646,6 +10646,16 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
+  "60 FPS":
+    Games:
+      "Harry Potter and the Order of the Phoenix":
+        BLES00070: [ 01.01 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0066b764, 0x38800001 ]
+
 PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
   Disable MLAA:
     Games:
