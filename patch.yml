@@ -1969,6 +1969,17 @@ PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
     Patch:
       - [ bef32, 0x8AA558, 0.001 ]
 
+PPU-ec77eaf73a4f55d1c4ece532c3be6db0011e49ca:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction":
+        NPEA00452: [ All ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x008c68d0, 0.001 ]
+
 PPU-16506d9d5bf692d615645accd24bca1ee1f8f9a6:
   Unlock FPS:
     Games:
@@ -2088,7 +2099,7 @@ PPU-1155df736bedc95424c866d84a20766a4115774d:
 PPU-ed460e668a491f5e39f6547f3a24c2f20e2cb39b:
   Unlock FPS:
     Games:
-      "Ratchet & Clank: Into the Nexus":
+      "Ratchet & Clank: Nexus":
         BCES01908: [ 01.00 ]
         BCES01949: [ 01.00 ]
     Author: illusion
@@ -2098,6 +2109,58 @@ PPU-ed460e668a491f5e39f6547f3a24c2f20e2cb39b:
       - [ be16,  0x0032F002, 0x3A83 ] # level load (low bits)
       - [ be16,  0x0032F00E, 0x126F ] # level load (high bits)
       - [ bef64, 0x0069FDB8, 0.001  ] # init/level load
+
+PPU-d9c555a5fea145a24920bc4e63056bf35e1c6a14:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: Nexus":
+        NPEA00457: [ 01.00 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0032efc2, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0032efce, 0x126F ] # level load (high bits)
+      - [ bef64, 0x0069fdb8, 0.001  ] # init/level load
+
+PPU-fadb0af6fb7bd0113e88fb9af3eb78fe3be05d08:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: Nexus":
+        NPEA00457: [ 01.01 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0032ff02, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0032ff0e, 0x126F ] # level load (high bits)
+      - [ bef64, 0x006a1938, 0.001  ] # init/level load
+
+PPU-6b996df3949d05b2e6dc23b1dfdf9dd6d01d8c38:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: All 4 One":
+        NPEA00356: [ 01.00 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0031105a, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x00311066, 0x126F ] # level load (high bits)
+      - [ bef64, 0x0072c140, 0.001  ] # init/level load
+
+PPU-5fd631b4c6903c20ef2dedae06469beb880935d3:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: All 4 One":
+        NPEA00356: [ 01.03 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0031a186, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0031a192, 0x126F ] # level load (high bits)
+      - [ bef64, 0x00744dc0, 0.001  ] # init/level load
 
 PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
   Unlock FPS:
@@ -10722,6 +10785,45 @@ PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
       - [ be16,  0x003252b2, 0x3A83 ] # level load (low bits)
       - [ be16,  0x003252be, 0x126F ] # level load (high bits)
       - [ bef64, 0x007943d8, 0.001  ] # init/level load
+
+PPU-e45e4660a1cc27abac589853f026680900bec54c:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: QForce":
+        NPEA00378: [ 01.00 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x00325362, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0032536e, 0x126F ] # level load (high bits)
+      - [ bef64, 0x007948d8, 0.001  ] # init/level load
+
+PPU-fcbff915be00510f154438ad4ddf5f2aff1cbb44:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: QForce":
+        NPEA00378: [ 01.04 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0032b02e, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0032b03a, 0x126F ] # level load (high bits)
+      - [ bef64, 0x007a20b0, 0.001  ] # init/level load
+
+PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank: QForce":
+        NPEA00378: [ 01.05 ]
+    Author: illusion
+    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Patch Version: 1.0
+    Patch:
+      - [ be16,  0x0032bca6, 0x3A83 ] # level load (low bits)
+      - [ be16,  0x0032bcb2, 0x126F ] # level load (high bits)
+      - [ bef64, 0x007a53b0, 0.001  ] # init/level load
 
 PPU-5b1fe8f0b8eab817078b6db007de327653bc65dc: # BIOHAZARD CODE: Veronica 完全版 (JP)
   Remove Door Animations:
