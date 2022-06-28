@@ -11,27 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Download raw json file
         run: wget -S "https://rpcs3.net/compatibility?patch&api=v1&v=1.2" -O compatibility.json
+
       - name: Process json file to yml
         run: jq -r '.patch' compatibility.json > patch.yml
 
       - name: Use current time
         run: echo time=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'` >> $GITHUB_ENV
 
-      - name: Push patch artifact
-        uses: actions/upload-artifact@v3
-        with:
-          path: patch.yml
-
       - name: Push update
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
           git add patch.yml compatibility.json
-          stat compatibility.json
           git commit -m "Update patch from remote - $time" || true
           git push origin || true
 
