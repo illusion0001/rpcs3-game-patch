@@ -1247,6 +1247,17 @@ PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
       - [ be32, 0x001622dc, 0x60000000 ] #No reset
       - [ be32, 0x0016349c, 0x60000000 ] #Pause fix
 
+PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
+  21:9 Aspect Ratio:
+    Games:
+      "Skate":
+        BLES00124: [ 01.00 ]
+    Author: tuukkas
+    Notes: Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work. HUD will be stretched.
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x010A34D4, 0x4002F1BD ]
+
 PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
   21:9 Aspect Ratio:
     Games:
@@ -1257,7 +1268,7 @@ PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
     Notes: Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work. HUD will be stretched.
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x01840636, 0xC4504003 ]
+      - [ be32, 0x01840638, 0x4002F1BD ]
   60 FPS:
     Games:
       "Skate 3":
@@ -1970,6 +1981,15 @@ PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
       - [ bef32, 0x8AA558, 0.001 ]
 
 PPU-ec77eaf73a4f55d1c4ece532c3be6db0011e49ca:
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction":
+        NPEA00452: [ All ]
+    Author: Bungholio
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x0049a720, 0xd03d0008 ]
   Unlock FPS:
     Games:
       "Ratchet & Clank Future: Tools of Destruction":
@@ -2026,6 +2046,28 @@ PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
     Patch:
       - [ bef32, 0x00855040, 0.001 ]
 
+PPU-a3ed375ea1044d5abe734a4aa3a740f7673a4274:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00748: [ 01.00 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00ca2500, 0.001 ] # max fps
+      - [ bef32, 0x00ca4170, 0.001 ] # min gamespeed
+      - [ bef32, 0x00c9438c, 0.001 ] # min gamespeed
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00748: [ 01.00 ]
+    Author: Bungholio
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x00467ed0, 0xd03d0008 ]
+
 PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
   Unlock FPS:
     Games:
@@ -2069,6 +2111,28 @@ PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00467D90 , 0xD03D0008 ]
+
+PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
+  Infinite Ammo:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        NPEA00453: [ 01.20 ]
+    Author: Bungholio
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004684bc, 0xd03d0008 ]
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        NPEA00453: [ 01.20 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00ca2378, 0.001 ] # max fps
+      - [ bef32, 0x00ca3ff8, 0.001 ] # min gamespeed
+      - [ bef32, 0x00c9420c, 0.001 ] # min gamespeed
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   Unlock FPS:
@@ -2126,9 +2190,13 @@ PPU-d9c555a5fea145a24920bc4e63056bf35e1c6a14:
 PPU-fadb0af6fb7bd0113e88fb9af3eb78fe3be05d08:
   Unlock FPS:
     Games:
-      "Ratchet & Clank: Nexus":
-        NPEA00457: [ 01.01 ]
+      "Ratchet & Clank: Into the Nexus":
+        BCUS99245: [ 01.01 ]
         NPUA80908: [ 01.01 ]
+      "Ratchet & Clank: Nexus":
+        BCES01908: [ 01.01 ]
+        BCES01949: [ 01.01 ]
+        NPEA00457: [ 01.01 ]
     Author: illusion
     Notes: Maximum framerate with the patch is half the Vblank frequency.
     Patch Version: 1.0
@@ -4412,6 +4480,7 @@ Anchors:
         NPEA00422: [ 01.19 ]
         NPUA80858: [ 01.19 ]
         BCUS99086: [ 01.19 ]
+        BCAS25014: [ 01.19 ]
 
   uc3_110title: &uc3_110title
       "Uncharted 3: Drake's Deception":
@@ -5287,7 +5356,16 @@ PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
       - [ load, *tox2_hp ]
 
 PPU-c5d2fd31933f88313956774b84346d242979eba6:
-  "Disable Fisheye":
+  21:9 Aspect Ratio:
+    Games:
+      "Skate 2":
+        BLUS30253: [ 01.02 ]
+    Author: tuukkas
+    Notes: Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01311760, 0x4002F1BD ]
+  Disable Fisheye:
     Games:
       "Skate 2":
         BLUS30253: [ 01.02 ]
@@ -5299,7 +5377,16 @@ PPU-c5d2fd31933f88313956774b84346d242979eba6:
       - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
 
 PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
-  "Disable Fisheye":
+  21:9 Aspect Ratio:
+    Games:
+      "Skate 2":
+        BLES00461: [ 01.02 ]
+    Author: tuukkas
+    Notes: Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01311760, 0x4002F1BD ]
+  Disable Fisheye:
     Games:
       "Skate 2":
         BLES00461: [ 01.02 ]
@@ -6462,6 +6549,16 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00A5A7CC, 0x8a840089 ]
+  Skip Intro:
+    Games:
+      "Killzone 2":
+        BCAS20066: [ 01.29 ]
+        BCES00081: [ 01.29 ]
+        BCUS98116: [ 01.29 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f07460, 0x00bfab10 ]
 
 Anchors:
   kz3mlaanotes: &kz3mlaanotes "Allows for the use of Resolution Scaling in the title and improved performance.\nSome screen effects will be lost.\nWrite Color Buffers is no longer required."
@@ -6538,6 +6635,30 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
     Patch:
       - [ be32, 0x00753018, 0x60000000 ]
       - [ be32, 0x006C5250, 0x60000000 ]
+  "Skip Intro":
+    Games:
+      "Killzone 3":
+        BCES01007: [ 01.14 ]
+        BCUS98234: [ 01.14 ]
+    Author: "illusion, ZEROx"
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00fb1208, "open(file:///mainmenu.gum)     " ]
+      - [ utf8, 0x00fb1228, "epil" ]
+      - [ utf8, 0x00fb1230, "heal" ]
+      - [ be32, 0x00016630, 0x48f9ac31 ]
+      - [ be32, 0x00fb1260, 0x3ca000fb ]
+      - [ be32, 0x00fb1264, 0x60a51208 ]
+      - [ be32, 0x00fb126c, 0x8064000d ]
+      - [ be32, 0x00fb1268, 0x83c50020 ]
+      - [ be32, 0x00fb1270, 0x7c83f000 ]
+      - [ be32, 0x00fb1274, 0x41860010 ]
+      - [ be32, 0x00fb1278, 0x83c50028 ]
+      - [ be32, 0x00fb127c, 0x7c83f000 ]
+      - [ be32, 0x00fb1280, 0x40860008 ]
+      - [ be32, 0x00fb1284, 0x7ca42b78 ]
+      - [ be32, 0x00fb1288, 0x38a00000 ]
+      - [ be32, 0x00fb128c, 0x4e800020 ]
 
 PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
   Extended FOV:
@@ -10711,6 +10832,20 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
+  "HTTPS Bypass":
+    Games:
+      "Destiny":
+        BLES01857: [01.24]
+        BLUS31181: [01.24]
+        BCJS35001: [01.24]
+    Author: "cohaereo"
+    Patch Version: 0.1
+    Group: "V4NGRD"
+    Notes: "Necessary for the game to connect to unofficial signon servers"
+    Patch:
+      - [utf8, 0x012e6328, "http://www%d.%s/%s "]
+
 PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
   "60 FPS":
     Games:
@@ -10788,19 +10923,6 @@ PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
       - [ be16,  0x003252be, 0x126F ] # level load (high bits)
       - [ bef64, 0x007943d8, 0.001  ] # init/level load
 
-PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
-  Unlock FPS:
-    Games:
-      "Ratchet & Clank: Full Frontal Assault":
-        NPUA80642: [ 01.05 ]
-    Author: illusion
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
-    Patch Version: 1.0
-    Patch:
-      - [ be16,  0x0032bca6, 0x3A83 ] # level load (low bits)
-      - [ be16,  0x0032bcb2, 0x126F ] # level load (high bits)
-      - [ bef64, 0x007a53b0, 0.001  ] # init/level load
-
 PPU-e45e4660a1cc27abac589853f026680900bec54c:
   Unlock FPS:
     Games:
@@ -10830,7 +10952,11 @@ PPU-fcbff915be00510f154438ad4ddf5f2aff1cbb44:
 PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
   Unlock FPS:
     Games:
+      "Ratchet & Clank: Full Frontal Assault":
+        BCUS98380: [ 01.05 ]
+        NPUA80642: [ 01.05 ]
       "Ratchet & Clank: QForce":
+        BCES01594: [ 01.05 ]
         NPEA00378: [ 01.05 ]
     Author: illusion
     Notes: Maximum framerate with the patch is half the Vblank frequency.
@@ -10907,6 +11033,42 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
+  "Infinite Shout":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
+    Author: "Medo"
+    Patch Version: 1.2
+    Notes: "Allows you to shout without a resting period"
+    Patch:
+      - [ be32, 0x08EA00, 0x60000000 ]
+  "Can Always Level Up At Trainers":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
+    Author: "Medo"
+    Patch Version: 1.2
+    Notes: "Removes annoying 5 per level limit"
+    Patch:
+      - [ be32, 0x308D30, 0x60000000 ]
+  "Carry Weight Never Increases":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
+    Author: "Medo"
+    Patch Version: 1.2
+    Notes: "Or decreases, apply this patch while you can still run. Unless you prefer being over-encumbered."
+    Patch:
+      - [ be32, 0x414FCC, 0x60000000 ]
+  "Quick Main Level Up":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
+    Author: "Medo"
+    Patch Version: 1.2
+    Notes: "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
+    Patch:
+      - [ be32, 0x1D8E9C, 0xC0230004 ]
 
 PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
   "Fix pad initialization":
