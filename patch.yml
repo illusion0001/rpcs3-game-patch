@@ -1257,6 +1257,15 @@ PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x010A34D4, 0x4002F1BD ]
+  Disable Motion Blur:
+    Games:
+      "Skate":
+        BLES00124: [ 01.00 ]
+    Author: tuukkas
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x010A3774, 0 ]
 
 PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
   21:9 Aspect Ratio:
@@ -6733,7 +6742,16 @@ PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
       - [ be32, 0x003dcc28, 0x4bf47530 ] # b 0x00324158
       - [ be32, 0x00324158, 0xfb7d00b4 ] # std r27,0xb4(r29)
       - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
-      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
+      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c  
+  Vehicle class select for every event:
+    Games: 
+      "Motorstorm":
+        BCES00006: [ All ]
+    Author: Scirvir
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004fab54, 0x2fa3FFFF ]      
 
 PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
   Unlock FPS:
@@ -6769,6 +6787,15 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
       - [ be32, 0x0040d394, 0xfb7d00b4 ] # std r27,0xb4(r29)
       - [ be32, 0x0040d398, 0xfb7d00bc ] # std r27,0xbc(r29)
       - [ be32, 0x0040d39c, 0x480bde0c ] # b 0x004cb1a8
+  Vehicle class select for every event:
+    Games: 
+      "Motorstorm Update 3.1 (Complete Edition)":
+        BCES00006: [ All ]
+    Author: Scirvir
+    Notes: Campaign only. Doesn't work on DLC or online
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005ff654, 0x2fa3FFFF ]
 
 PPU-1658c7e4b1bfe52d6ec02443f8feed9b295ff9dc: # NPEA80017
   Unlock FPS:
@@ -6833,6 +6860,15 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       - [ be32, 0x00324158, 0xfb7d00b4 ] # std r27,0xb4(r29)
       - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
       - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
+  Vehicle class select for every event:
+    Games: 
+      "Motorstorm":
+        BCUS98137: [ All ]
+    Author: Scirvir
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004fb330, 0x2fa3FFFF ]
 
 Anchors:
   ms2notes: &ms2notes         "No need for additional settings change.\nNeeds a stable and locked 60FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
