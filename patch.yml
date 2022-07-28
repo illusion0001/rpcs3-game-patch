@@ -11087,6 +11087,22 @@ PPU-df822d7d47de09c5672201db8cc633009037f54f: # RESIDENT EVIL CODE: Veronica X (
     Patch:
       - [ be32, 0x1AFCCC, 0x38600000 ]
 
+PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
+  "60 FPS":
+    Games:
+      "Silent Hill: Homecoming":
+        BLES00460: [ 01.00 ]
+    Author: "illusion"
+    Patch:
+      - [ be32, 0x0005a6bc, 0x38000001 ]
+  "No Film Grain":
+    Games:
+      "Silent Hill: Homecoming":
+        BLES00460: [ 01.00 ]
+    Author: "illusion"
+    Patch:
+      - [ be32, 0x00a4220c, 0x38600001 ]
+
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
     Games:
