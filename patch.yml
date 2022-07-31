@@ -147,7 +147,7 @@ Anchors:
 
   DeS_FPS_Notes: &DeS_FPS_Notes "Patch version 2.0 and above is not compatible with the settings used for the previous patch. Clocks scale and Vblank rate must be set to the defaults. Vblank rate can be modified to increase the framelimit beyond 60FPS, however it's not recommended as users may encounter physics issues."
 
-  DeS_DDE_Notes: &DeS_DDE_Notes "Can disable Write Color Buffers for 20% faster performance. Enable this patch if you experience flickering."
+  DeS_DDE_Notes: &DeS_DDE_Notes "Can disable Write Color Buffers for 20% faster performance. Please note this patch gives a slightly darker tone to the game."
 
   DeS_AR_Notes: &DeS_AR_Notes "UI Elements will be stretched"
 
