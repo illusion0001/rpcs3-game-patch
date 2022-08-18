@@ -2497,6 +2497,15 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
       - [ bef32, 0x00ca2370, 0.001 ] # max fps
       - [ bef32, 0x00ca3fe0, 0.001 ] # min gamespeed
       - [ bef32, 0x00c9420c, 0.001 ] # min gamespeed
+  Skip Intro Logos:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        NPUA80966: [ 01.20 ]
+    Author: illusion
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004c8f50, 0x38600006 ]
 
 PPU-1155df736bedc95424c866d84a20766a4115774d:
   Unlock FPS:
@@ -3323,6 +3332,10 @@ Anchors:
     - [ be32, 0x00ea32c8, 0x90be82e4 ] #     stw        r5,-0x7d1c(r30) store pointer to null
     - [ be32, 0x00ea32cc, 0x88050000 ] #     lbz        r0,0x0(r5) og
     - [ be32, 0x00ea32d0, 0x4b64f740 ] #     b          LAB_004f2a10
+    - [ be32, 0x00574e3c, 0x38600064 ]
+    - [ be32, 0x00574e40, 0x907c0000 ]
+    - [ be32, 0x00574e44, 0x807c0000 ]
+    - [ be32, 0x00574e48, 0x60000000 ]
 
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
@@ -3637,16 +3650,6 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch Version: 1.0
     Patch:
     - [ load, *tlou111_nailbombsoftlockfix ]
-  "Bug Fix: Low Health on Dev Menu Respawns":
-    Games: *tlou111_title
-    Author: illusion
-    Notes: 
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00574e3c, 0x38600064 ] # can this be optimized further?
-      - [ be32, 0x00574e40, 0x907c0000 ]
-      - [ be32, 0x00574e44, 0x807c0000 ]
-      - [ be32, 0x00574e48, 0x60000000 ]
   Skip Intro:
     Games: *tlou111_title
     Author: illusion
