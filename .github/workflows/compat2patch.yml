@@ -2,8 +2,10 @@ name: "Process compat.json into readable patch.yml"
 
 on:
   push:
+    paths-ignore:
+      - "**/*.md"
   schedule:
-    - cron: "0 * * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
