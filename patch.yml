@@ -6840,11 +6840,12 @@ PPU-70ad975e7fbb5bb57bb2159a16ec895cbccd3b4e:
         NPEA00418: [ 01.00 ]
         BCES01743: [ 01.00 ]
     Author: ZEROx, illusion
-    Notes: "Set clock scale to 200% for 60FPS Gameplay.\nVideo playback breaks with 200% clock scale, skip when possible."
+    Notes: "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002125a4, 0x3ca03f00 ] # load 3f 00 into memory, this uses same method as asasega patch for pcsx2
+      - [ be32, 0x002125a4, 0x3ca03f00 ] # same method as asasega patch
       - [ be32, 0x002192f8, 0x3ca03f00 ]
+      - [ bef64, 0x0021c0a0, 0.06 ]
 
 PPU-0bb16b9f48bfea44a892110beec812664e84539f:
   Extended FOV:
@@ -6856,6 +6857,17 @@ PPU-0bb16b9f48bfea44a892110beec812664e84539f:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x5E7F6C, 0.65 ] # static float in memory
+  60 FPS:
+    Games:
+      "Killzone":
+        NPUA80856: [ 01.00 ]
+    Author: ZEROx, illusion
+    Notes: "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002125f4, 0x3ca03f00 ] # same method as asasega patch
+      - [ be32, 0x00219348, 0x3ca03f00 ]
+      - [ bef64, 0x0021c0f0, 0.06 ]
 
 Anchors:
   kz2demofov: &kz2demofov
