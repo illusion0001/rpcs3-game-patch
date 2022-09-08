@@ -2421,6 +2421,19 @@ PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
     Patch:
       - [ bef32, 0x00855040, 0.001 ]
 
+PPU-301488b15ab0e31e7c5b284da437c5047eabd025:
+  Unlock FPS:
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00511: [ 01.00 ]
+    Author: illusion & Juhn
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ bef32, 0x00ca2500, 0.001 ] # max fps
+      - [ bef32, 0x00ca4170, 0.001 ] # min gamespeed
+      - [ bef32, 0x00c9438c, 0.001 ] # min gamespeed
+
 PPU-a3ed375ea1044d5abe734a4aa3a740f7673a4274:
   Unlock FPS:
     Games:
