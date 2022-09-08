@@ -11380,6 +11380,17 @@ PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
     Patch:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
+PPU-6bb3fcddb5a54466743452c64407c76739955825:
+  60 FPS:
+    Games:
+      "Puppeteer: Demo version":
+        NPEA90125: [ 01.00 ]
+    Author: ZEROx
+    Notes: "Set VBlank to 120 for 60FPS"
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00083f78, 1 ] #Avoid double game speed
+
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   Unlock FPS:
     Games:
