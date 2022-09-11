@@ -25,9 +25,10 @@ jobs:
         run: |
           time=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'`
           msg="Update patch from remote - \`$time\`"
+          echo $msg
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
           git add patch.yml compatibility.json
-          git commit -m $msg || true
+          git commit -m "$msg" || true
           git push origin || true
 
