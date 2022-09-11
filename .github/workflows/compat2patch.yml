@@ -28,6 +28,6 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
           git add patch.yml compatibility.json
-          git commit -m "Update patch from remote - $time" || true
+          git commit -m "Update patch from remote - \`$time\`" || true
           git push origin || true
 
