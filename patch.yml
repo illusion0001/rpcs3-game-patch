@@ -2243,6 +2243,25 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
     Patch:
       - [ byte, 0x01698260, 0x0 ]
 
+PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
+  "60 FPS":
+    Games:
+      "Grand Theft Auto V":
+        BLES01807: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Notes: "Max FPS is half vblank rate"
+    Patch:
+      - [ be16, 0x004367fc, 0x4800 ]
+  "Skip Intro Video":
+    Games:
+      "Grand Theft Auto V":
+        BLES01807: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x016808e0, 0x0 ]
+
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
   Infinite Ammo:
     Games:
