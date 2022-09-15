@@ -1317,11 +1317,19 @@ Anchors:
     - [ be32, 0x00932f8c, 0x60000000 ]
     - [ be32, 0x00932f90, 0x60000000 ]
 
-  LC_PPX: &LC_PPX
-    - [ be32, 0x006F6E2C, 0x38800000 ]
-    - [ be32, 0x006F9244, 0x60000000 ]
-    - [ be32, 0x006FBBDC, 0x38A00000 ]
-    - [ be32, 0x006F9784, 0x38A00000 ]
+  LC_GRAIN: &LC_GRAIN
+    - [ be32, 0x00408690, 0x4800007C ] # b 0x40870C
+
+  LC_DOF: &LC_DOF
+    - [ be32, 0x0016C1B4, 0x38A00000 ] # li r5 0
+    - [ be32, 0x00326F6C, 0x38A00000 ] # li r5 0
+    - [ be32, 0x00408498, 0x38A00000 ] # li r5 0
+
+  LC_DOFnotes: &LC_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
+
+  LC_BLOOM: &LC_BLOOM
+    - [ be32, 0x0016C1A8, 0x38C00000 ] # li r6 0
+    - [ be32, 0x0040848C, 0x38C00000 ] # li r6 0
 
 PPU-df6f6701742921b9cbb2554983bb4568aae8d659:
   Unlock FPS:
@@ -1338,10 +1346,28 @@ PPU-df6f6701742921b9cbb2554983bb4568aae8d659:
       "Lollipop Chainsaw":
         BLUS30917: [ All ]
     Author: boma
-    Notes: Prevents post-processing render pass from loading EnginePostProcessVolume class properties. This cleans up the image, reducing overall noise by disabling film grain, DoF, and vignette. Other post-processing is unaffected.
+    Notes:
+    Patch Version: 2.0
+    Patch:
+      - [ load, *LC_GRAIN ]
+  Disable Low-Resolution Depth of Field:
+    Games:
+      "Lollipop Chainsaw":
+        BLUS30917: [ All ]
+    Author: boma
+    Notes: *LC_DOFnotes
     Patch Version: 1.0
     Patch:
-      - [ load, *LC_PPX ]
+      - [ load, *LC_DOF ]
+  Disable Bloom:
+    Games:
+      "Lollipop Chainsaw":
+        BLUS30917: [ All ]
+    Author: boma
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *LC_BLOOM ]
 
 PPU-6f69ee207208d55faacb75a3aac6a9ce2aa290b7:
   Unlock FPS:
@@ -1358,10 +1384,28 @@ PPU-6f69ee207208d55faacb75a3aac6a9ce2aa290b7:
       "Lollipop Chainsaw":
         BLES01525: [ All ]
     Author: boma
-    Notes: Prevents post-processing render pass from loading EnginePostProcessVolume class properties. This cleans up the image, reducing overall noise by disabling film grain, DoF, and vignette. Other post-processing is unaffected.
+    Notes:
+    Patch Version: 2.0
+    Patch:
+      - [ load, *LC_GRAIN ]
+  Disable Low-Resolution Depth of Field:
+    Games:
+      "Lollipop Chainsaw":
+        BLES01525: [ All ]
+    Author: boma
+    Notes: *LC_DOFnotes
     Patch Version: 1.0
     Patch:
-      - [ load, *LC_PPX ]
+      - [ load, *LC_DOF ]
+  Disable Bloom:
+    Games:
+      "Lollipop Chainsaw":
+        BLES01525: [ All ]
+    Author: boma
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *LC_BLOOM ]
 
 PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   "Disable Color Correction":
@@ -1534,6 +1578,18 @@ PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_JP_Net ]
+
+PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
+  Disable Motion Blur & DoF:
+    Games:
+      "50 Cent: Blood on The Sand":
+        BLUS30256: [ All ]
+        BLES00472: [ All ]
+    Author: boma
+    Notes: This patch eliminates the post-processing render pass, which fixes the green screen artifacts caused by upscaling. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues.
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x001740e8, 0x4800 ]
 
 PPU-97355e97c701cea87a0ed08bce085cac4949dade:
   Unlock FPS:
@@ -8743,13 +8799,18 @@ Anchors:
     - [ be32, 0x009E0CE4, 0x60000000 ] # nop
     - [ be32, 0x009E0D64, 0x60000000 ] # nop
   
-  SHADOWS_PPXnotes: &SHADOWS_PPXnotes "Removes post-processing render pass from SceneRenderer. This patch will disable all post-processing effects, including motion blur, DoF, FXAA, image grain, vignette, color grading, and also provides a moderate performance boost."
-  
-  SHADOWS_PPX: &SHADOWS_PPX
-    - [ be32, 0x007DF6A0, 0x38A00000 ] # li r5 0
-    - [ be32, 0x007DFFD4, 0x38A00001 ] # li r5 1
-    - [ be32, 0x007E014C, 0x38A00000 ] # li r5 0
-    - [ be32, 0x007E75AC, 0x60000000 ] # nop
+  SHADOWS_DOFnotes: &SHADOWS_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
+
+  SHADOWS_DOF: &SHADOWS_DOF
+    - [ be32, 0x00126960, 0x38A00000 ] # li r5 0
+    - [ be32, 0x00325488, 0x38A00000 ] # li r5 0
+    - [ be32, 0x003E3050, 0x38A00000 ] # li r5 0
+
+  SHADOWS_GRAIN: &SHADOWS_GRAIN
+    - [ be16, 0x003E3398, 0x4800 ] # b 0x3E3410
+
+  SHADOWS_BLUR: &SHADOWS_BLUR
+    - [ be32, 0x003E3998, 0x38600000 ] # li r3 0
 
 PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
   Unlock FPS:
@@ -8761,15 +8822,33 @@ PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_FPS ]
-  Disable Image Grain and other Post-Processing:
+  Disable Image Grain:
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
     Author: boma
-    Notes: *SHADOWS_PPXnotes
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_PPX ]
+      - [ load, *SHADOWS_GRAIN ]
+  Disable Low-Resolution Depth of Field:
+    Games:
+      "Shadows of the Damned":
+        BLUS30653: [ All ]
+    Author: boma
+    Notes: *SHADOWS_DOFnotes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *SHADOWS_DOF ]
+  Disable Motion Blur:
+    Games:
+      "Shadows of the Damned":
+        BLUS30653: [ All ]
+    Author: boma
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *SHADOWS_BLUR ]
 
 PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
   Unlock FPS:
@@ -8781,15 +8860,33 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_FPS ]
-  Disable Image Grain and other Post-Processing:
+  Disable Image Grain:
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
     Author: boma
-    Notes: *SHADOWS_PPXnotes
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_PPX ]
+      - [ load, *SHADOWS_GRAIN ]
+  Disable Low-Resolution Depth of Field:
+    Games:
+      "Shadows of the Damned":
+        BLES01276: [ All ]
+    Author: boma
+    Notes: *SHADOWS_DOFnotes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *SHADOWS_DOF ]
+  Disable Motion Blur:
+    Games:
+      "Shadows of the Damned":
+        BLES01276: [ All ]
+    Author: boma
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *SHADOWS_BLUR ]
 
 Anchors:
   sly4mlaaEU: &sly4mlaaEU
