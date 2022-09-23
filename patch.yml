@@ -1082,6 +1082,65 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
     Patch:
       - [ be32, 0x002c2b14, 0x38000001 ]
 
+Anchors:
+  GoW169notes: &GoW169notes "Just like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9"
+
+PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
+  True widescreen:
+    Games:
+      "God of War: HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80490: [ 01.01 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x001958D0, 0x38800000FFC00890 ]
+      - [ be64, 0x001958D8, 0xFC20F89048092135 ]
+      - [ be64, 0x001958E0, 0xC002DAA4EC210032 ]
+
+PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
+  True widescreen:
+    Games:
+      "God of War: II HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80491: [ 01.01 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000593E4, 0xFCA00890 ]
+      - [ be64, 0x000593E8, 0xFCC0E890807F000C ]
+      - [ be32, 0x001958F0, 0xFC20F890 ]
+
+PPU-e8e29268437430a42b01ccbdea814560150bc037:
+  True widescreen:
+    Games:
+      "God of War: HD":
+        BCES00791: [ 01.01 ]
+        NPEA00255: [ 01.01 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00197164, 0x38800000 ]
+      - [ be64, 0x00197168, 0xFFC00890FC20F890 ]
+      - [ be32, 0x00197170, 0x48091AD9 ]
+      - [ be64, 0x00197174, 0xC002DAB8EC210032 ]
+
+PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
+  True widescreen:
+    Games:
+      "God of War: II HD":
+        BCES00791: [ 01.01 ]
+        NPEA00256: [ 01.01 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x00059600, 0xFCA00890FCC0E890 ]
+      - [ be64, 0x00059608, 0x807F000CFC20F890 ]
+
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   21:9 Aspect Ratio:
     Games:
