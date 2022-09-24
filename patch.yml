@@ -11475,6 +11475,19 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-d8edc43468f59e453ec1404094e810e487591bfd:
+  Dev Menu:
+    Games:
+      "Call of Juarez: The Cartel":
+        BLUS30795: [ 01.01 ]
+    Author: FlexBy
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+          - [ be32, 0x00614E70, 0x38800001 ]
+          - [ be32, 0x00614E74, 0x98830AAD ]
+          - [ be32, 0x00614E78, 0x60000000 ]
+
 PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
   "HTTPS Bypass":
     Games:
