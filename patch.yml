@@ -996,6 +996,8 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
 Anchors:
   GoWHD43notes: &GoWHD43notes "Restores original viewport size from PS2 releases. The remastered versions of the first two games handled a 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. Must enable Stretch to Display Area in GPU configuration."
 
+  GoW169notes: &GoW169notes "Just like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9"
+
 PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
   4:3 Aspect Ratio:
     Games:
@@ -1081,10 +1083,6 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002c2b14, 0x38000001 ]
-
-Anchors:
-  GoW169notes: &GoW169notes "Just like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9"
-
 PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
   True widescreen:
     Games:
@@ -10053,6 +10051,31 @@ PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002A1250, 0x60000000 ]
+  Disable Low-Resolution Depth of Field:
+    Games:
+      "Silent Hill Downpour":
+        BLES01446: [ 01.01 ]
+        BLUS30565: [ 01.01 ]
+    Author: boma
+    Notes: "Disables the DoF effect which doesn't correctly scale when using resolution upscaling. This patch may slightly affect color-grading and will reduce bloom intensity because those effects share the same shader pipeline with DoF. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000fa828, 0x38A00000 ] # li r5, 0x0
+      - [ be32, 0x00270c60, 0x38A00000 ] # li r5, 0x0
+      - [ be32, 0x00310b28, 0x38A00000 ] # li r5, 0x0
+  Disable MLAA & FXAA:
+    Games:
+      "Silent Hill Downpour":
+        BLES01446: [ 01.01 ]
+        BLUS30565: [ 01.01 ]
+    Author: boma
+    Notes: "Removes both Morphological Anti-Aliasing (MLAA) and Fast Approximate Anti-Aliasing (FXAA), post-process AA solutions that significantly impact image definition and sharpness. Particularly useful when using resolution upscaling."
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00771673, 0x64 ] # cmpwi r3 0x64
+      - [ byte, 0x00771674, 0x41 ] # beq
+      - [ be32, 0x0077167C, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
+      - [ be32, 0x0076EFB4, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
 
 Anchors:
   SPU_MLAA_01: &SPU_MLAA_01
@@ -11830,7 +11853,6 @@ PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
     Patch:
       - [ byte, 0x001CFA4D, 0x6a ]
 
-Version: 1.2
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   60 FPS:
     Games:
