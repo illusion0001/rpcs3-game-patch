@@ -2222,6 +2222,43 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004cc078, 0x38600000 ]
+  "Infinite Ammo":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "Hiei-YYH"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001E533C, 0x60000000]
+  "Infinite Health":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "Hiei-YYH"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0005996C, 0x3C6047C3]
+      - [ be32, 0x00059970, 0x907C0010]
+      - [ be32, 0x00059974, 0x907C0014]
+      - [ be32, 0x00059978, 0x4800004C]
+  "Infinite Dead Eye":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "Hiei-YYH"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0005A284, 0xC0260394]
+      - [ be32, 0x0005A288, 0xD0260390]
+  "Infinite Horse Stamina":
+    Games:
+      "Red Dead Redemption":
+        BLES01294: [ 01.00 ]
+    Author: "Hiei-YYH"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00950AB8, 0xC3DF0014]
+      - [ be32, 0x00950ABC, 0xD3DF0010]
 
 PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
   "Unlock FPS":
