@@ -11489,6 +11489,17 @@ PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
     Patch:
       - [utf8, 0x012e6328, "http://www%d.%s/%s "]
 
+PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
+  Infinite Health:
+    Games:
+      "Dragon's Dogma: Dark Arisen":
+        BLES01794: [ 01.00 ]
+    Author: FlexBy
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00956BC0, 0x40820010 ]
+
 PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
   "60 FPS":
     Games:
