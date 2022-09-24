@@ -11866,10 +11866,15 @@ PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
     Patch:
       - [ byte, 0x001CFA4D, 0x6a ]
 
+Version: 1.2
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   60 FPS:
     Games:
       "The GodFather: The Don's Edition":
+        BLES00043: [ 01.01 ]
+        BLES00044: [ 01.01 ]
+        BLES00045: [ 01.01 ]
+        BLES00046: [ 01.01 ]
         BLES00047: [ 01.01 ]
     Author: ZEROx
     Notes:
