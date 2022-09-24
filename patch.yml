@@ -11877,4 +11877,15 @@ PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
     Patch:
       - [ byte, 0x0002343b, 0x1 ] #fps mode 1
       - [ bef32, 0x10060170, 60 ] #max fps
+PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
+  60 FPS:
+    Games:
+      "The GodFather: The Don's Edition":
+        BLUS30023: [ 01.00 ]
+    Author: ZEROx
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x0002343b, 0x1 ] #fps mode 1
+      - [ bef32, 0x10060170, 60 ] #max fps
 
