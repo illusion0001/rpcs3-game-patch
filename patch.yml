@@ -11611,6 +11611,51 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
 
+PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
+  Unlock All Chapters:
+    Games:
+      "Moon Diver":
+        NPEB00375: [ 01.00 ]
+        NPUB30345: [ 01.00 ]
+        NPJB00100: [ 01.00 ]
+        NPEB90290: [ 01.00 ]
+        NPUB90511: [ 01.00 ]
+        NPJB90309: [ 01.00 ]
+    Author: GuitarMan, FlexBy
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00043E24, 0x7C831B78 ]
+  Unlock All Characters:
+    Games:
+      "Moon Diver":
+        NPEB00375: [ 01.00 ]
+        NPUB30345: [ 01.00 ]
+        NPJB00100: [ 01.00 ]
+        NPEB90290: [ 01.00 ]
+        NPUB90511: [ 01.00 ]
+        NPJB90309: [ 01.00 ]
+    Author: GuitarMan, FlexBy
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000A2968, 0x30630000 ]
+  Unlock All Skills:
+    Games:
+      "Moon Diver":
+        NPEB00375: [ 01.00 ]
+        NPUB30345: [ 01.00 ]
+        NPJB00100: [ 01.00 ]
+        NPEB90290: [ 01.00 ]
+        NPUB90511: [ 01.00 ]
+        NPJB90309: [ 01.00 ]
+    Author: GuitarMan, FlexBy
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000A3DD4, 0x7C842B78 ]
+      - [ be32, 0x0009E704, 0x7C831B78 ]
+
 PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
   Disable MLAA:
     Games:
