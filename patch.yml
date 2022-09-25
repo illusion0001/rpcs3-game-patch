@@ -1715,6 +1715,18 @@ PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
       - [ be32, 0x001622dc, 0x60000000 ] #No reset
       - [ be32, 0x0016349c, 0x60000000 ] #Pause fix
 
+PPU-b711c520e0295b480e4163e473886122cd033329:
+  Debug Menu:
+    Games:
+      "DmC Devil May Cry":
+        BLES01698: [ 01.01 ]
+        NPEB01020: [ 01.01 ]
+    Author: dron_3
+    Notes: "SELECT+START = Brings menu.\nUsing the menu makes screen red until a new map will be loaded."
+    Patch Version: 
+    Patch:
+      - [ be32, 0x0116CB84, 0x38600000 ]
+
 PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
   21:9 Aspect Ratio:
     Games:
