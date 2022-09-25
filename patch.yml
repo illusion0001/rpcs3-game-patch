@@ -11525,6 +11525,17 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-55575baa2f88d9600f705434bd5de9aea92042da:
+  Dev Menu:
+    Games:
+      "Call of Juarez: Gunslinger":
+        NPUB31079: [ 01.02 ]
+    Author: dron_3
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00E73718, 0x9BE39C8D ]
+
 PPU-d8edc43468f59e453ec1404094e810e487591bfd:
   Dev Menu:
     Games:
