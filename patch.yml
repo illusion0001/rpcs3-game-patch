@@ -11861,6 +11861,18 @@ PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
     Patch:
       - [ be32, 0x00a4220c, 0x38600001 ]
 
+PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
+  Dev Menu:
+    Games:
+      "Sniper: Ghost Warrior":
+        BLES01286: [ 01.01 ]
+    Author: dron_3
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00ACAD10, 0x38000001 ]
+      - [ be32, 0x00ACAD14, 0x98090000 ]
+
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
     Games:
