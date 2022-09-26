@@ -2437,6 +2437,27 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
     Patch:
       - [ byte, 0x016808e0, 0x0 ]
 
+PPU-342cfff6572ba74b4f4a55b454fa07e172577aa9:
+  Debug Menu:
+    Games:
+      "Batman Arkham City GOTY":
+        BLES01587: [ 01.00 ]
+    Author: dron_3
+    Notes: Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00E36504, 0x38600000 ]
+
+PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
+  Debug Menu:
+    Games:
+      "Batman Arkham Origins":
+        BLES01784: [ 01.06 ]
+    Author: dron_3
+    Notes: Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)
+    Patch:
+      - [ be32, 0x00F249F0, 0x38600000 ]
+
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
   Infinite Ammo:
     Games:
@@ -11562,10 +11583,11 @@ PPU-d8edc43468f59e453ec1404094e810e487591bfd:
           - [ be32, 0x00614E78, 0x60000000 ]
 
 PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
-  Dev Menu:
+  Developer Menu:
     Games:
       "Dead Island":
         NPEB00721: [ 01.00 ]
+        BLES00749: [ 01.04 ]
     Author: dron_3
     Notes: 
     Patch Version: 1.0
@@ -11573,6 +11595,16 @@ PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
       - [ be32, 0x00FF135C, 0x38800001 ]
       - [ be32, 0x00FF1360, 0x988351FD ]
       - [ be32, 0x00FF1364, 0x38600001 ]
+
+PPU-29daccad6db847d9790068762add8ea1de083cde:
+  Developer Menu:
+    Games:
+      "Dead Island Riptide":
+        BLES01739: [ 01.01 ]
+    Author: dron_3
+    Notes: 
+    Patch:
+      - [ be32, 0x01027FC4, 0x9BE3CA81 ]
 
 PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
   "HTTPS Bypass":
