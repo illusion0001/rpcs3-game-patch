@@ -1139,6 +1139,34 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
       - [ be64, 0x00059600, 0xFCA00890FCC0E890 ]
       - [ be64, 0x00059608, 0x807F000CFC20F890 ]
 
+PPU-a991fd08acbc0262bfc4cca1a60619d758620565:
+  True widescreen:
+    Games:
+      "God of War: HD":
+        BCUS98229: [ 01.00 ]
+        NPUA80490: [ 01.00 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001A27D4, 0x38800000 ]
+      - [ be64, 0x001A27D8, 0xFFC00890FC20F890 ]
+      - [ be64, 0x001A27E0, 0x480913D9C002DAC8 ]
+      - [ be32, 0x001A27E8, 0xEC210032 ]
+
+PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
+  True widescreen:
+    Games:
+      "God of War: II HD":
+        BCUS98229: [ 01.00 ]
+        NPUA80491: [ 01.00 ]
+    Author: Garasuhato
+    Notes: *GoW169notes
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x000593B8, 0xFCA00890FCC0E890 ]
+      - [ be64, 0x000593C0, 0x807F000CFC20F890 ]
+
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   21:9 Aspect Ratio:
     Games:
@@ -10524,6 +10552,7 @@ PPU-4050da6fa9d7eed65e7d748b03a6ba89023b90c3:
     Games:
       "Batman: Arkham Asylum GOTY":
         BLUS30515: [ 01.00 ]
+        BLES00827: [ 01.00 ]
     Author: dron_3
     Notes: Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)
     Patch Version: 1.0
@@ -11574,6 +11603,8 @@ PPU-d8edc43468f59e453ec1404094e810e487591bfd:
     Games:
       "Call of Juarez: The Cartel":
         BLUS30795: [ 01.01 ]
+        BLES01352: [ 01.00 ]
+        BLES01352: [ 01.01 ]
     Author: dron_3
     Notes: 
     Patch Version: 1.0
