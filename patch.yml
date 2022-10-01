@@ -3974,6 +3974,199 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch:
       - [ be16, 0x0003dd9c, 0x4800 ]
 
+PPU-9712144d93487f0b62e39f55e175af783b58af72:
+  "Disable shadows":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 01.00 ]
+    Author: TriggerHappy
+    Notes: "Disabling shadows can give a significant performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x1358B8, 0x4E800020 ]
+
+PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
+  "Disable shadows":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Disabling shadows can give a significant performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x132354, 0x4E800020 ]
+  "Remove fog":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Does not provide any performance benefit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xEAA08, 0x4E800020 ]
+  "Reduce stage quality":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xFA7EC, 0x4E800020 ]
+      - [ be32, 0x10FAEC, 0x4E800020 ]
+  "Disable HUD":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xF0410, 0x60000000 ]
+  "Disable spawned effects":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x12BCFC, 0x2B8A0004 ]
+  "Unlock FPS":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xDB720, 0x4E800020 ]
+
+PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
+  "Disable shadows":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Disabling shadows can give a significant performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x130BF4, 0x4E800020 ]
+  "Remove fog":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Does not provide any performance benefit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xE92C8, 0x4E800020 ]
+  "Reduce stage quality":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xF90AC, 0x4E800020 ]
+      - [ be32, 0x10E3AC, 0x4E800020 ]
+  "Disable HUD":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xEECD0, 0x60000000 ]
+  "Disable spawned effects":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x12A59C, 0x2B8A0004 ]
+  "Unlock FPS":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000d9fe0, 0x4E800020 ]
+
+PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
+  "Disable shadows":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Disabling shadows can give a significant performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x132354, 0x4E800020 ]
+  "Remove fog":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Does not provide any performance benefit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xEAA08, 0x4E800020 ]
+  "Reduce stage quality":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xFA7EC, 0x4E800020 ]
+      - [ be32, 0x10FAEC, 0x4E800020 ]
+  "Disable HUD":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xF0410, 0x60000000 ]
+  "Disable spawned effects":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x12BCFC, 0x2B8A0004 ]
+  "Unlock FPS":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xDB720, 0x4E800020 ]
+
+OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
+  "Disable snow effect":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes  the heavy snow effect on the shadow moses stage."
+    Patch Version: 1.0
+    Patch:
+          - [ be32, 0x302A1400, 0x4E800020 ]
+
 Anchors:
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   # Since we only change store reg, no need to patch the rest.
