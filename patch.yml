@@ -2273,7 +2273,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
 PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
   "21:9 Aspect Ratio + HUD fix":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "vStar925"
@@ -2285,7 +2285,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x475234, 0x4017B9AA ] # 21:9 hud
   "Unlock FPS":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "Whatcookie, illusion"
@@ -2295,7 +2295,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x0025f98c, 0x386003e8 ]
   "Skip Intro":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "illusion"
@@ -2304,7 +2304,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x00458300, 0x480001a0 ]
   "Disable Motion Blur":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "illusion"
@@ -2313,7 +2313,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x004cc078, 0x38600000 ]
   "Infinite Ammo":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
     Author: "Hiei-YYH"
     Patch Version: 1.0
@@ -2321,7 +2321,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x001E533C, 0x60000000]
   "Infinite Health":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
     Author: "Hiei-YYH"
     Patch Version: 1.0
@@ -2332,7 +2332,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x00059978, 0x4800004C]
   "Infinite Dead Eye":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
     Author: "Hiei-YYH"
     Patch Version: 1.0
@@ -2341,7 +2341,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x0005A288, 0xD0260390]
   "Infinite Horse Stamina":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
     Author: "Hiei-YYH"
     Patch Version: 1.0
@@ -2352,7 +2352,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
 PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
   "Unlock FPS":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.01 ]
         BLUS30758: [ 01.01 ]
     Author: "Whatcookie, illusion"
@@ -2362,7 +2362,7 @@ PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
       - [ be32, 0x00260b3c, 0x386003e8 ]
   "Disable Motion Blur":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.01 ]
         BLUS30758: [ 01.01 ]
     Author: "illusion"
@@ -2371,7 +2371,7 @@ PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
       - [ be32, 0x004a7ed8, 0x38600000 ]
   "Skip Intro":
     Games:
-      "Red Dead Redemption":
+      "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.01 ]
         BLUS30758: [ 01.01 ]
     Author: "illusion"
