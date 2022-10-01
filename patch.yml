@@ -10614,6 +10614,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
     Author: illusion
     Patch Version: 1.0
     Patch:
+      - [ be32, 0x016DE8F0, 0x98bf0186 ] # duplicate from mlaa patch in case of using without mlaa patch
       - [ be32, 0x016DE8FC, 0x98bf0183 ] # bloom/bubble blur, this won't crash anymore. requires 86 to be loaded with 0!
   Speedup:
     Games:
@@ -10636,6 +10637,16 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732a60, 0x991f ]
+  Green artefacts fix:
+    Games:
+      "Army of TWO The Devil's Cartel Demo":
+        NPEB90470: [ 01.00 ]
+        NPUB90862: [ 01.00 ]
+    Author: ZEROx
+    Notes: Fixes annoying non-working effect
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x01732be8, 0x995f ]
   Disable Dynamic Lights:
     Games:
       "Army of TWO The Devil's Cartel Demo":
