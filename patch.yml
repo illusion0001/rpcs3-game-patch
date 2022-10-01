@@ -9178,38 +9178,6 @@ PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
     Patch:
       - [ load, *SA_169 ]
 
-PPU-5fa63817d4349e8b47e6ddd2425fadfd2914a1fa:
-  Custom Time Scale (ingame, menus, FMVs):
-    Games:
-      "Sonic the Hedgehog (Sonic '06)":
-        BLES00028: [ All ]
-    Notes: Increasing the Clock Scale setting increases performance but breaks the Red Gem.
-    Patch:
-      - [ bef32, 0x16917E0, 0.016666667 ] # 0.03333333 for 30 fps, 0.008333333 for 120 fps, etc. (1/TargetFPS)
-  Custom Time Scale (cutscenes):
-    Games:
-      "Sonic the Hedgehog (Sonic '06)":
-        BLES00028: [ All ]
-    Notes: Cutscene framerate is capped at half Vblank frequency. Increasing the Clock Scale setting increases performance but breaks the Red Gem.
-    Patch:
-      - [ bef32, 0x16920D0, 0.03333333 ] # 0.016666667 for 60 fps, 0.008333333 for 120 fps, etc. (1/TargetFPS)
-
-PPU-4b46d0161ca657ab16b0a779d9062810ea5ea2dd:
-  Custom Time Scale (ingame, menus, FMVs):
-    Games:
-      "Sonic the Hedgehog (Sonic '06)":
-        BLUS30008: [ All ]
-    Notes: Increasing the Clock Scale setting increases performance but breaks the Red Gem.
-    Patch:
-      - [ bef32, 0x16917B0, 0.016666667 ] # 0.03333333 for 30 fps, 0.008333333 for 120 fps, etc. (1/TargetFPS)
-  Custom Time Scale (cutscenes):
-    Games:
-      "Sonic the Hedgehog (Sonic '06)":
-        BLUS30008: [ All ]
-    Notes: Cutscene framerate is capped at half Vblank frequency. Increasing the Clock Scale setting increases performance but breaks the Red Gem.
-    Patch:
-      - [ bef32, 0x16920A0, 0.03333333 ] # 0.016666667 for 60 fps, 0.008333333 for 120 fps, etc. (1/TargetFPS)
-
 Anchors:
   su1280x720_Digital: &su1280x720_Digital
   # Main backbuffer (880x720)
