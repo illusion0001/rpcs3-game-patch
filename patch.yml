@@ -11870,6 +11870,23 @@ PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
     Patch:
       - [ be32, 0x00956BC0, 0x40820010 ]
 
+PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
+  "Variable FPS":
+    Games:
+      "Fuse":
+        NPUB30874: [ 01.00 ]
+        BLES01724: [ 01.00 ]
+        BLES01724: [ 01.00 ]
+    Author: "illusion"
+    Notes: "Allows for up to 1000FPS\nwithout affecting game speed"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005e4c28, 0x38800001 ]
+      - [ be32, 0x005e4c30, 0x38600001 ]
+      - [ be32, 0x00615944, 0xc024000c ] # store as double
+      - [ be32, 0x005e4b54, 0x3cc03a83 ]
+      - [ be32, 0x005e4b58, 0x60c6126f ]
+
 PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
   "60 FPS":
     Games:
