@@ -11935,6 +11935,17 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
 
+PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
+  Unlock FPS:
+    Games:
+      "Marvel Ultimate Alliance":
+        BLUS30010: [ 01.00 ]
+    Author: Jao
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013300, 0x60000000 ]
+
 PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
   Unlock All Chapters:
     Games:
