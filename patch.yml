@@ -11956,7 +11956,7 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
 
-PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
+PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
     Games:
       "Just Cause 2":
