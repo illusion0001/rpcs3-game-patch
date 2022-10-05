@@ -11956,6 +11956,15 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
 
+PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
+  "60 FPS":
+    Games:
+      "Just Cause 2":
+        NPUB30606: [ 01.02 ]
+    Author: "illusion"
+    Patch:
+      - [ be32, 0x004087a8, 0x38600000 ]
+
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   Unlock FPS:
     Games:
