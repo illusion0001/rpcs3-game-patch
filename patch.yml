@@ -12297,6 +12297,18 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
     Patch:
       - [ byte, 0x005b4ebf, 1 ]
 
+PPU-e219c746e09c57aa7acd83172537d367c62ae928:
+  Unlock FPS:
+    Games:
+      "Tom Clancy's Splinter Cell Chaos Theory":
+        NPEB00557: [ 01.02 ]
+        BLUS30761: [ 01.01 ]
+    Author: Jao
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00107F4, 0x4800006C ]
+
 PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
   60 FPS:
     Games:
