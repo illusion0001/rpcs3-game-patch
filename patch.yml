@@ -12378,6 +12378,18 @@ PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
     Patch:
       - [ byte, 0x001CFA4D, 0x6a ]
 
+PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
+  "60 FPS":
+    Games:
+      "Wangan Midnight":
+        BLJM60028: [ 01.02 ]
+    Author: illusion
+    Notes: "Videos will play at double speed."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007a91d0, 0x3c888889 ]
+      - [ be32, 0x002142d4, 0x38000001 ]
+
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   60 FPS:
     Games:
