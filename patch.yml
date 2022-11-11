@@ -12105,6 +12105,27 @@ PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
     Patch:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
+PPU-d8fe04c58a5a46feda0b6f2192613064ec996584:
+  Unlock FPS:
+    Games:
+      "Prince of Persia: Warrior Within":
+        BLUS30754: [ 01.00 ]
+    Author: Jao
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00824e10, 0x60000000 ]
+PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
+  Unlock FPS:
+    Games:
+      "Prince of Persia: The Two Thrones":
+        BLUS30754: [ 01.00 ]
+    Author: Jao
+    Notes: 
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x0009381c, 0x60000000 ]
+
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
   60 FPS:
     Games:
