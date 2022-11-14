@@ -3729,6 +3729,7 @@ Anchors:
       BCAS20270: [ 01.11 ]
       NPEA00435: [ 01.11 ]
       NPUA80960: [ 01.11 ]
+      NPHA80243: [ 01.11 ]
 
 PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   Disable in-built MLAA:
