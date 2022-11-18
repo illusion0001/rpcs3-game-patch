@@ -12289,7 +12289,7 @@ PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
-      
+
 PPU-ce80647b91654477032788d990641cde6412a74f:
   "60 FPS":
     Games:
