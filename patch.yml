@@ -12283,6 +12283,7 @@ PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
       "The Elder Scrolls V: Skyrim":
         BLUS30778: [ 01.09 ]
         BLES01329: [ 02.09 ]
+        BLES01330: [ 02.09 ]
     Author: "illusion"
     Notes: Camera speeds up while having 60+ FPS.
     Patch Version: 1.0
