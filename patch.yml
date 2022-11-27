@@ -6411,6 +6411,36 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
     Patch:
       - [ bef32, 0x72E544, 0.6 ]
 
+PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
+    21:9 Aspect Ratio Fix:
+      Games:
+        "WipEout HD":
+          NPUA80105: [ 02.51 ]
+          NPEA00057: [ 02.51 ]
+      Author: Lex6s
+      Notes: Fixes 21:9 stretching and occlusion culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Patch Version: 1.0
+      Patch:
+        - [ bef32, 0x732808, 2.370707035] # 21:9 Stretch Fix
+        - [ bef32, 0x73303C, 2.462 ] # Flame Trail Fix
+        - [ bef32, 0x720058, 2.654 ] # Render FOV Fix
+        - [ bef32, 0x72E544, 0.96 ] # Slightly Extended FOV
+
+PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
+    32:9 Aspect Ratio Fix:
+      Games:
+        "WipEout HD":
+          NPUA80105: [ 02.51 ]
+          NPEA00057: [ 02.51 ]
+      Author: Lex6s
+      Notes: Fixes 32:9 stretching and occlusion culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Patch Version: 1.0
+      Patch:
+        - [ bef32, 0x732808, 3.555555582 ] # 32:9 Stretch Fix
+        - [ bef32, 0x73303C, 3.555555582 ] # Flame Trail Fix
+        - [ bef32, 0x720058, 3.555555582 ] # Render FOV Fix
+        - [ bef32, 0x72E544, 0.96 ] # Slightly Extended FOV
+
 Anchors:
   iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
 
