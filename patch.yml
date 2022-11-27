@@ -6116,6 +6116,17 @@ PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
     #  - [ be32, 0x9C34C8, 0x00000001 ] # Menu HUD scale (never use this)
       - [ be32, 0x9BA57C, 0x00000000 ]
 
+PPU-faf46906b362bc8d484de5b91f593bef2e5e0110:
+  Unlock FPS:
+    Games:
+      "Worms Ultimate Mayhem":
+        NPEB00505: [ 01.01 ]
+    Author: Jao
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000f6364, 0x60000000 ]
+
 PPU-545c1abbf1c562d60fca7435401f020beab76b53:
   Create Mode:
     Games:
