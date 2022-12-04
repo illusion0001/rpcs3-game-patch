@@ -10902,16 +10902,6 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732a60, 0x991f ]
-  Green artefacts fix:
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
-    Author: ZEROx
-    Notes: Fixes annoying non-working effect
-    Patch Version: 1.0
-    Patch:
-      - [ be16, 0x01732be8, 0x995f ]
   Disable Dynamic Lights:
     Games:
       "Army of TWO The Devil's Cartel Demo":
@@ -12380,17 +12370,6 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
       - [ be32, 0x1D8E9C, 0xC0230004 ]
 
 PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
-  "Fix pad initialization":
-    Games:
-      "The Simpsons Game":
-        BLES00142: [ 01.00 ]
-        BLES00146: [ 01.00 ]
-        BLUS30065: [ 01.00 ]
-    Author: "nastys"
-    Patch Version: 1.0
-    Notes: "Fixes pad initialization when using the keyboard handler."
-    Patch:
-      - [ be32, 0x0044eba0, 0x60000000 ]
   60 FPS:
     Games:
       "The Simpsons Game":
