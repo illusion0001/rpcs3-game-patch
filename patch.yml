@@ -775,6 +775,17 @@ PPU-6da0d4551c59eb596a1e04a5355e98163badf246: # BBS.self
     Patch:
       - [ be32, 0x00015aa4, 0x38600000 ] # li r3, 0x0
 
+PPU-QoiFRPF8j00N996aQMthtWqEUG0Y:
+  P1 Infinite Health:
+   Games:
+     "Marvel vs. Capcom 2":
+       NPUB30068: [ All ]
+   Author: Petareo
+   Notes: You will never lose health when attacked
+   Patch Version: 1.0
+   Patch:
+     - [ be32, 0x0064768D, 0x006481D5 ]
+
 Anchors:
   DOD3_FPS_Notes: &DOD3_FPS_Notes "Need to also change Vblank frequency to 120Hz for 60FPS or 240Hz for 120FPS. Going over 120FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
   # Min frametime is this value / 30
@@ -2493,43 +2504,141 @@ PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
     Patch:
       - [ load, *MirrorsEdgeUnlockFPSPSN ]
 
-PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
-  "60 FPS":
+Anchors:
+  unlock60FpsNotes: &unlock60FpsNotes
+    "Allows the game to run at 60 FPS when the VBlank frequency is set to 120 Hz.\n\n※ While this patch does set the frame limit to be half of the VBlank frequency, the game will not actually run any higher than 62 FPS except during the legal/copyright notice screen that is shown at boot."
+  skipRockstarBootLogoNotes: &skipRockstarBootLogoNotes
+    "Skips the Rockstar boot logo, like the PS5 version.\n\n※ Does not skip the legal/copyright notice screen."
+
+PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
+  "Unlock Framerate to 60 FPS":
     Games:
-      "Grand Theft Auto V":
-        NPUB31154: [ 01.00 ]
-        BLUS31156: [ 01.00 ]
-    Author: "illusion"
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLJM61019: [ 02.24 ]
+        NPJB00516: [ 01.23 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
     Patch Version: 1.0
-    Notes: "Max FPS is half vblank rate"
+    Notes: *unlock60FpsNotes
+    Patch:
+      - [ be16, 0x004a0dc4, 0x4800 ]
+  "Skip Rockstar Boot Logo":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLJM61019: [ 02.24 ]
+        NPJB00516: [ 01.23 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
+    Patch:
+      - [ byte, 0x0180f830, 0x0 ]
+
+PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
+  "Unlock Framerate to 60 FPS":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLJM61019: [ 01.00 ]
+        NPJB00516: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *unlock60FpsNotes
+    Patch:
+      - [ be16, 0x0043678c, 0x4800 ]
+  "Skip Rockstar Boot Logo":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLJM61019: [ 01.00 ]
+        NPJB00516: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
+    Patch:
+      - [ byte, 0x01680860, 0x0 ]
+
+PPU-33546066628b10ec09f08a3c29c15611f9e65493:
+  "Unlock Framerate to 60 FPS":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLUS31156: [ 01.27 ]
+        NPUB31154: [ 01.27 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *unlock60FpsNotes
+    Patch:
+      - [ be16, 0x004a7394, 0x4800 ]
+  "Skip Rockstar Boot Logo":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLUS31156: [ 01.27 ]
+        NPUB31154: [ 01.27 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
+    Patch:
+      - [ byte, 0x0182a4b0, 0x0 ]
+
+PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
+  "Unlock Framerate to 60 FPS":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLUS31156: [ 01.00 ]
+        NPUB31154: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *unlock60FpsNotes
     Patch:
       - [ be16, 0x0043b7dc, 0x4800 ]
-  "Skip Intro Video":
+  "Skip Rockstar Boot Logo":
     Games:
-      "Grand Theft Auto V":
-        NPUB31154: [ 01.00 ]
+      "Grand Theft Auto V (Grand Theft Auto 5)":
         BLUS31156: [ 01.00 ]
-    Author: "illusion"
+        NPUB31154: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
     Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
     Patch:
       - [ byte, 0x01698260, 0x0 ]
 
-PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
-  "60 FPS":
+PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
+  "Unlock Framerate to 60 FPS":
     Games:
-      "Grand Theft Auto V":
-        BLES01807: [ 01.00 ]
-    Author: "illusion"
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLES01807: [ 01.27 ]
+        NPEB01283: [ 01.27 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
     Patch Version: 1.0
-    Notes: "Max FPS is half vblank rate"
+    Notes: *unlock60FpsNotes
+    Patch:
+      - [ be16, 0x004a0e34, 0x4800 ]
+  "Skip Rockstar Boot Logo":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLES01807: [ 01.27 ]
+        NPEB01283: [ 01.27 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
+    Patch:
+      - [ byte, 0x0180f7b0, 0x0 ]
+
+PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
+  "Unlock Framerate to 60 FPS":
+    Games:
+      "Grand Theft Auto V (Grand Theft Auto 5)":
+        BLES01807: [ 01.00 ]
+        NPEB01283: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
+    Patch Version: 1.0
+    Notes: *unlock60FpsNotes
     Patch:
       - [ be16, 0x004367fc, 0x4800 ]
-  "Skip Intro Video":
+  "Skip Rockstar Boot Logo":
     Games:
-      "Grand Theft Auto V":
+      "Grand Theft Auto V (Grand Theft Auto 5)":
         BLES01807: [ 01.00 ]
-    Author: "illusion"
+        NPEB01283: [ 01.00 ]
+    Author: "illusion, Karen/あけみ (akemin_dayo)"
     Patch Version: 1.0
+    Notes: *skipRockstarBootLogoNotes
     Patch:
       - [ byte, 0x016808e0, 0x0 ]
 
@@ -6418,7 +6527,7 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
           NPUA80105: [ 02.51 ]
           NPEA00057: [ 02.51 ]
       Author: Lex6s
-      Notes: Fixes 21:9 stretching and occlusion culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Notes: Fixes 21:9 stretching and frustum culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
       Patch Version: 1.0
       Patch:
         - [ bef32, 0x732808, 2.370707035] # 21:9 Stretch Fix
@@ -6433,13 +6542,41 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
           NPUA80105: [ 02.51 ]
           NPEA00057: [ 02.51 ]
       Author: Lex6s
-      Notes: Fixes 32:9 stretching and occlusion culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Notes: Fixes 32:9 stretching and frustum culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
       Patch Version: 1.0
       Patch:
         - [ bef32, 0x732808, 3.555555582 ] # 32:9 Stretch Fix
         - [ bef32, 0x73303C, 3.555555582 ] # Flame Trail Fix
         - [ bef32, 0x720058, 3.555555582 ] # Render FOV Fix
         - [ bef32, 0x72E544, 0.96 ] # Slightly Extended FOV
+
+PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
+    21:9 Aspect Ratio Fix:
+      Games:
+        "WipEout HD Fury":
+          BCES00664: [ 02.51 ]
+      Author: Lex6s
+      Notes: Fixes 21:9 stretching and frustum culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Patch Version: 1.0
+      Patch:
+        - [ bef32, 0x732878, 2.370707035] # 21:9 Stretch Fix
+        - [ bef32, 0x7330AC, 2.462] # Flame Trail Fix 2
+        - [ bef32, 0x7200F8, 2.654] # Render FOV Fix
+        - [ bef32, 0x72E5E4, 0.95 ] # Slightly Extended FOV
+
+PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
+    32:9 Aspect Ratio Fix:
+      Games:
+        "WipEout HD Fury":
+          BCES00664: [ 02.51 ]
+      Author: Lex6s
+      Notes: Fixes 32:9 stretching and frustum culling. Need to enable "Stretch To Display Area" in GPU > "Additional Settings". HUD still stretched.
+      Patch Version: 1.0
+      Patch:
+        - [ bef32, 0x732878, 3.555555582] # 32:9 Stretch Fix
+        - [ bef32, 0x7330AC, 3.555555582] # Flame Trail Fix
+        - [ bef32, 0x7200F8, 3.555555582] # Render FOV Fix
+        - [ bef32, 0x72E5E4, 0.95 ] # Slightly Extended FOV
 
 Anchors:
   iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
