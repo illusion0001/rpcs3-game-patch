@@ -4134,6 +4134,10 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch:
       - [ be16, 0x0003dd9c, 0x4800 ]
 
+Anchors:
+  MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes "Enable \"Stretch to Display Area\" option to take advantage of this patch. The interface will be stretched and cutscenes will use the standard field of view."
+  MGS4_Widescreen_NotesEx: &MGS4_Widescreen_NotesEx "Enable \"Stretch to Display Area\" option to take advantage of this patch. The interface will be stretched and cutscenes will use the increased of view which may cause visual bugs."
+
 PPU-9712144d93487f0b62e39f55e175af783b58af72:
   "Disable shadows":
     Games:
@@ -4146,6 +4150,56 @@ PPU-9712144d93487f0b62e39f55e175af783b58af72:
       - [ be32, 0x1358B8, 0x4E800020 ]
 
 PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
+  "21:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
+      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3FA3126F ]
+  "21:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
+      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3FA3126F ]
+  "32:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x4039999A ]
+      - [ be32, 0x3D4274, 0xC039999A ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3F52B021 ]
+  "32:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x4039999A ]
+      - [ be32, 0x3D4274, 0xC039999A ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3F52B021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
@@ -4203,6 +4257,56 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
       - [ be32, 0xDB720, 0x4E800020 ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
+  "21:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3C3EDC, 0x3FF0A3D7 ]
+      - [ be32, 0x3C3EE4, 0xBFF0A3D7 ]
+      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
+      - [ be32, 0x3C3C90, 0x3FA3126F ]
+  "21:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3C3EDC, 0x3FF0A3D7 ]
+      - [ be32, 0x3C3EE4, 0xBFF0A3D7 ]
+      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
+      - [ be32, 0x0F042C, 0xC1BE8040 ]
+      - [ be32, 0x3C3C90, 0x3FA3126F ]
+  "32:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3C3EDC, 0x4039999A ]
+      - [ be32, 0x3C3EE4, 0xC039999A ]
+      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
+      - [ be32, 0x3C3C90, 0x3F52B021 ]
+  "32:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3C3EDC, 0x4039999A ]
+      - [ be32, 0x3C3EE4, 0xC039999A ]
+      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
+      - [ be32, 0x0F042C, 0xC1BE8040 ]
+      - [ be32, 0x3C3C90, 0x3F52B021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
@@ -4260,6 +4364,56 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000d9fe0, 0x4E800020 ]
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
+  "21:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
+      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3FA3126F ]
+  "21:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
+      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3FA3126F ]
+  "32:9 Aspect Ratio":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x4039999A ]
+      - [ be32, 0x3D4274, 0xC039999A ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3F52B021 ]
+  "32:9 Aspect Ratio (Cutscenes)":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: *MGS4_Widescreen_NotesEx
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x3D426C, 0x4039999A ]
+      - [ be32, 0x3D4274, 0xC039999A ]
+      - [ be32, 0x0F1230, 0xC1BE8040 ]
+      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
+      - [ be32, 0x3D4020, 0x3F52B021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
@@ -7042,6 +7196,108 @@ Anchors:
     - [ be32, 0x01586c24, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x01586c28, 0.05000000 ] # maximum timestep size (50ms or 20fps)
 
+  DS1_BLES01396_FPS: &DS1_BLES01396_FPS
+  # offset by Lilium
+
+  # 60fps noskip; addresses offset by +0x108
+    - [ be32, 0x00146f48, 0x38800002 ] # li r4 0x2
+    - [ be32, 0x00146f4c, 0x989f070c ]
+    - [ be32, 0x00146f50, 0x989f070d ]
+
+  # delta time; address offset by +0x108, jump target offset by +0x18
+    - [ be32, 0x001424f0, 0x49444801 ] # jump to code cave
+
+  # the following addresses are offset by +0x120
+  # get mftb
+    - [ be32, 0x01586cf0, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
+
+  # get mftb delta
+    - [ be32, 0x01586cf4, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
+    - [ be32, 0x01586cf8, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
+    - [ be32, 0x01586cfc, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
+    - [ be32, 0x01586d00, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
+    - [ be32, 0x01586d04, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
+
+  # mftb delta to float
+    - [ be32, 0x01586d08, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
+    - [ be32, 0x01586d0c, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
+    - [ be32, 0x01586d10, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
+    - [ be32, 0x01586d14, 0xffc0f018 ] # frsp f30,f30          // round to single precision
+
+  # mftb delta to seconds
+    - [ be32, 0x01586d18, 0x3e400158 ] # r18,0x0158            // load high bits constants pointer
+    - [ be32, 0x01586d1c, 0x62526cf0 ] # ori r18,r18,0x6cf0    // load low bits of constants pointer (offset by +0x120)
+    - [ be32, 0x01586d20, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
+    - [ be32, 0x01586d24, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
+    - [ be32, 0x01586d28, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
+
+  # check timestep size
+    - [ be32, 0x01586d2c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
+    - [ be32, 0x01586d30, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
+
+  # set maximum timestep
+    - [ be32, 0x01586d34, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
+
+  # cleanup
+    - [ be32, 0x01586d38, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
+    - [ be32, 0x01586d3c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
+    - [ be32, 0x01586d40, 0x4e800020 ] # blr                   // return
+
+  # constants
+    - [ be32, 0x01586d44, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x01586d48, 0.05000000 ] # maximum timestep size (50ms or 20fps)
+
+  DS1_BLES01402_FPS: &DS1_BLES01402_FPS
+  # offset by Lilium
+
+  # 60fps noskip; addresses offset by -0x770
+    - [ be32, 0x001466d0, 0x38800002 ] # li r4 0x2
+    - [ be32, 0x001466d4, 0x989f070c ]
+    - [ be32, 0x001466d8, 0x989f070d ]
+
+  # delta time; address offset by -0x770, jump target offset by +0x10
+    - [ be32, 0x00141c78, 0x494447f9 ] # jump to code cave
+
+  # the following addresses are offset by -0x760
+  # get mftb
+    - [ be32, 0x01586470, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
+              
+  # get mftb delta
+    - [ be32, 0x01586474, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
+    - [ be32, 0x01586478, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
+    - [ be32, 0x0158647c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
+    - [ be32, 0x01586480, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
+    - [ be32, 0x01586484, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
+              
+  # mftb delta to float
+    - [ be32, 0x01586488, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
+    - [ be32, 0x0158648c, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
+    - [ be32, 0x01586490, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
+    - [ be32, 0x01586494, 0xffc0f018 ] # frsp f30,f30          // round to single precision
+              
+  # mftb delta to seconds
+    - [ be32, 0x01586498, 0x3e400158 ] # r18,0x0158            // load high bits constants pointer
+    - [ be32, 0x0158649c, 0x62526470 ] # ori r18,r18,0x6470    // load low bits of constants pointer (offset by -0x760)
+    - [ be32, 0x015864a0, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
+    - [ be32, 0x015864a4, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
+    - [ be32, 0x015864a8, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
+              
+  # check timestep size
+    - [ be32, 0x015864ac, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
+    - [ be32, 0x015864b0, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
+              
+  # set maximum timestep
+    - [ be32, 0x015864b4, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
+              
+  # cleanup   
+    - [ be32, 0x015864b8, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
+    - [ be32, 0x015864bc, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
+    - [ be32, 0x015864c0, 0x4e800020 ] # blr                   // return
+              
+  # constants 
+    - [ be32, 0x015864c4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x015864c8, 0.05000000 ] # maximum timestep size (50ms or 20fps)
+
 PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
   Unlock FPS:
     Games:
@@ -7052,6 +7308,28 @@ PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
     Patch Version: 1.0
     Patch:
       - [ load, *DS1_US_FPS ]
+
+PPU-451f1a767110d8ac166c5de50b67e057120644f5:
+  Unlock FPS:
+    Games:
+      "Dark Souls":
+        BLES01396: [ 01.00 ]
+    Author: Whatcookie offset by Lilium
+    Notes: For people who would like to play the unpatched version of dark souls at decent framerates (unpatched PC version is equivalent to 1.06 on consoles!)
+    Patch Version: 1.0
+    Patch:
+      - [ load, *DS1_BLES01396_FPS ]
+
+PPU-23d264a90e9ff8077c6d2e9418d6ae7ccd9bb0a0:
+  Unlock FPS:
+    Games:
+      "Dark Souls":
+        BLES01402: [ 01.00 ]
+    Author: Whatcookie offset by Lilium
+    Notes: For people who would like to play the unpatched version of dark souls at decent framerates (unpatched PC version is equivalent to 1.06 on consoles!)
+    Patch Version: 1.0
+    Patch:
+      - [ load, *DS1_BLES01402_FPS ]
 
 PPU-65078c652115190ecb64b7ff52bbf1c68696deb6:
   Unlock FPS:
