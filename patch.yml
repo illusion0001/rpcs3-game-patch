@@ -8138,22 +8138,7 @@ Anchors:
     - [ be32, 0x00B44AB0, 0x60000000 ] # nop
     - [ be32, 0x00B44AB4, 0x48114CE6 ] # ba     0x114CA4 + 0x40
     - [ be32, 0x00B44AB8, 0x60000000 ] # nop
-  
-  p5_4K_Author: &p5_4K_Author rexis
-  p5_4K_Notes: &p5_4K_Notes "A special patch that scales down some UI elements, rexis's 4K Mod requires this patch. Don't enable it if you don't use the 4K Mod"
-  p5_4K_PatVer: &p5_4K_PatVer 1.0
-  p5_4K: &p5_4K
-    - [ be32, 0x1cffb0, 0x48b45007 ] # bustups A
-    - [ be32, 0x1d027C, 0x48b45007 ]
-    - [ be32, 0x1d039C, 0x48b45007 ]
-    - [ be32, 0x1cffd4, 0x48b45007 ]
-    - [ be32, 0x1d02a0, 0x48b45007 ]
-    - [ be32, 0x1d03c0, 0x48b45007 ]
-  
-    - [ be32, 0xb45004, 0x38a00003 ] # li     r5,0x3
-    - [ be32, 0xb45008, 0x7c632bd2 ] # divd   r3,r3,r5
-    - [ be32, 0xb4500c, 0x4e800020 ] # blr
-  
+    
   p5_SkipIntro_Author: &p5_SkipIntro_Author TGEnigma
   p5_SkipIntro_PatVer: &p5_SkipIntro_PatVer 1.0
   p5_SkipIntro: &p5_SkipIntro
@@ -8881,13 +8866,6 @@ PPU-e72e715d646a94770d1902364bc66fe33b1b6606:
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  4K Mod Patch:
-    Games: *p5_Title_US
-    Author: *p5_4K_Author
-    Notes: *p5_4K_Notes
-    Patch Version: *p5_4K_PatVer
-    Patch:
-      - [ load, *p5_4K ]
   Skip Intro Videos:
     Games: *p5_Title_US
     Author: *p5_SkipIntro_Author
@@ -9004,13 +8982,6 @@ PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  4K Mod Patch:
-    Games: *p5_Title_EU
-    Author: *p5_4K_Author
-    Notes: *p5_4K_Notes
-    Patch Version: *p5_4K_PatVer
-    Patch:
-      - [ load, *p5_4K ]
   Skip Intro Videos:
     Games: *p5_Title_EU
     Author: *p5_SkipIntro_Author
@@ -9127,13 +9098,6 @@ PPU-3b394da7912181d308bf08505009b3578521c756:
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  4K Mod Patch:
-    Games: *p5_Title_JP_100
-    Author: *p5_4K_Author
-    Notes: *p5_4K_Notes
-    Patch Version: *p5_4K_PatVer
-    Patch:
-      - [ load, *p5_4K ]
   Skip Intro Videos:
     Games: *p5_Title_JP_100
     Author: *p5_SkipIntro_Author
@@ -9250,13 +9214,6 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  4K Mod Patch:
-    Games: *p5_Title_JP_103
-    Author: *p5_4K_Author
-    Notes: *p5_4K_Notes
-    Patch Version: *p5_4K_PatVer
-    Patch:
-      - [ load, *p5_4K ]
   Skip Intro Videos:
     Games: *p5_Title_JP_103
     Author: *p5_SkipIntro_Author
