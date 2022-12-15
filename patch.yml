@@ -12807,17 +12807,6 @@ PPU-93a03e014f798af85c849023f1307eaa9aa573fd:
     Patch:
       - [ be16, 0x0063342c, 0x9383 ]
 
-PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
-  Disable Depth of Field:
-    Games:
-      "Megamind":
-        BLES00867: [ 01.00 ]
-    Author: illusion
-    Notes: 
-    Patch Version: 1.0
-    Patch:
-      - [ byte, 0x001CFA4D, 0x6a ]
-
 PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
   "60 FPS":
     Games:
