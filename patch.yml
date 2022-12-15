@@ -7112,6 +7112,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
       "Uncharted: Drake's Fortune":
         NPEA00363: [ All ]
         NPUA80697: [ All ]
+        NPHA80193: [ All ]
     Author: illusion
     Notes: "Last modified: 02 June 2020"
     Patch Version: 1.0
@@ -7122,6 +7123,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
       "Uncharted: Drake's Fortune":
         NPEA00363: [ All ]
         NPUA80697: [ All ]
+        NPHA80193: [ All ]
     Author: illusion
     Notes: "Last modified: 02 June 2020"
     Patch Version: 1.0
@@ -7132,6 +7134,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
       "Uncharted: Drake's Fortune":
         NPEA00363: [ All ]
         NPUA80697: [ All ]
+        NPHA80193: [ All ]
     Author: dron_3, HdHereidme, illusion
     Notes: *debugmenunotesUC1
     Patch Version: 1.0
@@ -7142,6 +7145,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
       "Uncharted: Drake's Fortune":
         NPEA00363: [ All ]
         NPUA80697: [ All ]
+        NPHA80193: [ All ]
     Author: illusion
     Patch Version: 1.0
     Patch: 
