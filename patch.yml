@@ -12779,7 +12779,7 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
         BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
     Author: "Medo"
     Patch Version: 1.2
-    Notes: "Allows you to shout without a resting period"
+    Notes: "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
     Patch:
       - [ be32, 0x08EA00, 0x60000000 ]
   "Can Always Level Up At Trainers":
@@ -12788,7 +12788,7 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
         BLUS31202 : [ 01.00 ] #Possible to work on other IDs and versions. Try it
     Author: "Medo"
     Patch Version: 1.2
-    Notes: "Removes annoying 5 per level limit"
+    Notes: "Removes annoying 5 per level limit."
     Patch:
       - [ be32, 0x308D30, 0x60000000 ]
   "Carry Weight Never Increases":
