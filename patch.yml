@@ -12887,6 +12887,16 @@ PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
       - [ be32, 0x007a91d0, 0x3c888889 ]
       - [ be32, 0x002142d4, 0x38000001 ]
 
+PPU-cf8528c5a94d26438e19d8e4272b85cd1671088c:
+  "Disable MLAA":
+    Games:
+      "PlayStation: Home":
+        NPIA00010: [ 01.86 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005c59f4, 0x38000000 ]
+
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   60 FPS:
     Games:
