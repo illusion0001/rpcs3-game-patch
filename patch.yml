@@ -7215,6 +7215,36 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch: 
       - [ be16, 0x0004b5d4, 0x409e ] # todo: port to other versions
 
+PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
+  Debug Menu:
+    Games:
+      "Uncharted: Drake's Fortune":
+        TEST12345: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0005bc88, 0x39200001 ]
+
+PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
+  Debug Menu:
+    Games:
+      "Uncharted: Drake's Fortune":
+        TEST12345: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0005bc88, 0x39200001 ]
+
+PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
+  Debug Menu:
+    Games:
+      "Uncharted: Drake's Fortune":
+        TEST12345: [ 01.00 ]
+    Author: illusion
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0004db48, 0x9811 ]
+
 Anchors:
   DS1_US_FPS: &DS1_US_FPS
   # 60fps noskip
