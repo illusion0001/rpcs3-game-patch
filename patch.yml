@@ -7088,7 +7088,7 @@ PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
       - [ be32, 0xDEE1B0, 0x3F100001 ] # INGAME 21:9 AR
 
 Anchors:
-  debugmenunotesUC1: &debugmenunotesUC1 "Last modified: 24 November 2020\n\nEnable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+  debugmenunotesUC1: &debugmenunotesUC1 "Enable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   Disable Motion Blur:
@@ -7223,7 +7223,20 @@ PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
     Author: illusion
     Patch Version: 1.0
     Patch:
+      - [ be32, 0x0005bc84, 0x38000000 ]
       - [ be32, 0x0005bc88, 0x39200001 ]
+
+PPU-e6416a6e08fff80e71a78ac2b265bce980cedcb4:
+  Debug Menu:
+    Games:
+      "Uncharted: Drake's Fortune":
+        TEST12345: [ 01.00 ]
+    Author: illusion
+    Notes: *debugmenunotesUC1
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00024dd0, 0x38000000 ]
+      - [ be32, 0x00024dd4, 0x39200001 ]
 
 PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
   Debug Menu:
@@ -7231,9 +7244,11 @@ PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
       "Uncharted: Drake's Fortune":
         TEST12345: [ 01.00 ]
     Author: illusion
+    Notes: *debugmenunotesUC1
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004db48, 0x9811 ]
+      - [ be16, 0x0004db4c, 0x9bf1 ]
 
 Anchors:
   DS1_US_FPS: &DS1_US_FPS
