@@ -7221,6 +7221,7 @@ PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
       "Uncharted: Drake's Fortune":
         TEST12345: [ 01.00 ]
     Author: illusion
+    Notes: *debugmenunotesUC1
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0005bc84, 0x38000000 ]
