@@ -3829,6 +3829,32 @@ Anchors:
     - [ be32, 0x00574e40, 0x907c0000 ]
     - [ be32, 0x00574e44, 0x807c0000 ]
     - [ be32, 0x00574e48, 0x60000000 ]
+    # msgout to msgcon
+    # start
+    # force mode 1 (msgcon)
+    - [ be32, 0x00a521ac, 0x38600001 ]
+    - [ be32, 0x00a521b0, 0x4848a010 ]
+    - [ be32, 0x00edc1c0, 0xfbc1fff0 ]
+    - [ be32, 0x00edc1c4, 0x83c29230 ]
+    - [ be32, 0x00edc1c8, 0x813e8014 ]
+    - [ be32, 0x00edc1cc, 0xebc1fff0 ]
+    - [ be32, 0x00edc1d0, 0x90690000 ]
+    - [ be32, 0x00edc1d4, 0x4e800020 ]
+    # reused
+    - [ be32, 0x00035b84, 0x60000000 ]
+    - [ be32, 0x0084bd18, 0x60000000 ]
+    - [ be32, 0x0084bd24, 0x60000000 ]
+    - [ be32, 0x0084bd2c, 0x48000090 ]
+    - [ be32, 0x0084bdc4, 0x88092db6 ]
+    # msgcon buff
+    - [ be32, 0x012b758c, 0x013f1340 ]
+    # clear buffer
+    - [ be32, 0x0084be24, 0x3c60013f ]
+    - [ be32, 0x0084be28, 0x60631340 ] # msgcon buf
+    - [ be32, 0x0084be2c, 0x38800000 ] # data
+    - [ be32, 0x0084be30, 0x38a01000 ] # size (4096)
+    - [ be32, 0x0084be34, 0x4862f90d ] # memset
+    - [ be32, 0x0084be38, 0x48000064 ] # return
 
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
