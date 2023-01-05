@@ -5636,6 +5636,36 @@ Anchors:
     - [ be32, 0x00dc234c, 0x61ef8cd8 ] #    ori        r15,r15,0x8cd8
     - [ be32, 0x00dc2350, 0x7c8f7214 ] #    add        r4,r15,r14
     - [ be32, 0x00dc2354, 0x4e800020 ] #    blr
+    # taskmgr
+    # active task
+    # text
+    - [ be32, 0x00a082c8, 0x484001e0 ]
+    - [ be32, 0x00e084a8, 0x3c60011d ]
+    - [ be32, 0x00e084ac, 0x6063f410 ]
+    - [ be32, 0x00e084b0, 0x4bbffe1c ]
+    # drawing
+    # todo: link with active task bool
+    - [ be32, 0x00737ed0, 0x486d05f4 ]
+    - [ be32, 0x00e084c4, 0x3ca0013b ]
+    - [ be32, 0x00e084c8, 0x60a5e594 ]
+    - [ be32, 0x00e084cc, 0x8bc50000 ]
+    - [ be32, 0x00e084d0, 0x2f9e0001 ]
+    - [ be32, 0x00e084d4, 0x419e003c ]
+    - [ be32, 0x00e084d8, 0x3ca0011d ]
+    - [ be32, 0x00e084dc, 0x60a5f3f8 ]
+    - [ be32, 0x00e084e0, 0x7fdef278 ]
+    - [ be32, 0x00e084e4, 0x3fc04248 ]
+    - [ be32, 0x00e084e8, 0x93c50000 ]
+    - [ be32, 0x00e084ec, 0x3fc04422 ]
+    - [ be32, 0x00e084f0, 0x63de8000 ]
+    - [ be32, 0x00e084f4, 0x93c50004 ]
+    - [ be32, 0x00e084f8, 0xc0250000 ]
+    - [ be32, 0x00e084fc, 0xc0450004 ]
+    - [ be32, 0x00e08500, 0x38a0ffff ]
+    - [ be32, 0x00e08504, 0x3cc0011d ]
+    - [ be32, 0x00e08508, 0x60c6f410 ]
+    - [ be32, 0x00e0850c, 0x4bb9de3d ]
+    - [ be32, 0x00e08510, 0x4b92f9c4 ]
 
   uc3_119_devplus: &uc3_119_devplus
     - [ be16, 0x00d9ea48, 0x202b ] # _+
