@@ -674,7 +674,78 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
     Group:
     Notes: *FreeCam_Notes
     Patch:
-      - [ load, *BCAS20071_FreeCam ]
+      - [ load, *BCAS20071_FreeCam ] 
+
+PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
+  Unlock FPS:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: Whatcookie, Gibbed
+    Notes: *DeS_FPS_Notes
+    Patch Version: 2.1
+    Patch:
+      - [ load, *BLUS30443_FpsUnlock ]
+  Disable Dynamic Exposure:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: Whatcookie
+    Notes: *DeS_DDE_Notes
+    Patch Version: 1.0.1
+    Patch:
+      - [ be16, 0x00025edc, 0x981f ]
+  Skip Intro Videos:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: GalCiv
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008eef78, 0x38000003 ] # Intro logos skip
+      - [ be32, 0x008eef7c, 0x901c0100 ]
+  21:9 Aspect Ratio:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: Whatcookie
+    Notes: *DeS_AR_Notes
+    Patch Version: 1.0
+    Group: AR
+    Patch:
+      - [ be32, 0x018cefbc, 0x4017b9aa ] # 21:9 aspect ratio
+      - [ be32, 0x0190433c, 0x4017b9aa ]
+  32:9 Aspect Ratio:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: Whatcookie
+    Notes: *DeS_AR_Notes
+    Patch Version: 1.0
+    Group: AR
+    Patch:
+      - [ bef32, 0x018cefbc, 3.5555556 ] # 32:9 aspect ratio
+      - [ bef32, 0x0190433c, 3.5555556 ]
+  Disable Motion Blur:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: illusion
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00217e7c, 0x41 ]
+  Enable FreeCam:
+    Games:
+      "Demon's Souls Trade Demo":
+        BLUD80018: [ 01.01 ]
+    Author: horkrux
+    Patch Version: 1.0
+    Group:
+    Notes: *FreeCam_Notes
+    Patch:
+      - [ load, *BLUS30443_FreeCam ]
 
 Anchors:
   kh15_ar_219: &kh15_ar_219
