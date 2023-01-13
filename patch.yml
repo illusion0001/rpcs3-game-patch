@@ -7601,6 +7601,81 @@ PPU-23d264a90e9ff8077c6d2e9418d6ae7ccd9bb0a0:
     Patch:
       - [ load, *DS1_BLES01402_FPS ]
 
+
+PPU-61606645abb9cc39f48072166c04df8da629fb99:
+  Unlock FPS:
+    Games:
+      "Dark Souls":
+        BLUS30782: [ 01.09 ]
+    Author: Jao
+    Notes: Based on Whatcookie's & Gibbed's work
+    Patch Version: 1.2
+    Patch:
+    - [ be32, 0x00149324, 0x38800002 ]
+    - [ be32, 0x00149328, 0x989f071d ]
+    - [ be32, 0x0014932c, 0x989f071e ]
+    - [ be32, 0x00145368, 0x494a71d9 ]
+    - [ be32, 0x015ec540, 0x7eac42e6 ]  	  
+    - [ be32, 0x015ec544, 0x3ec00184 ]
+    - [ be32, 0x015ec548, 0x62d60db4 ]
+    - [ be32, 0x015ec54c, 0x7e96a02a ]
+    - [ be32, 0x015ec550, 0xfab60000 ]
+    - [ be32, 0x015ec554, 0x7e74a850 ]
+    - [ be32, 0x015ec558, 0xfa7600e0 ]
+    - [ be32, 0x015ec55c, 0xcbd600e0 ]
+    - [ be32, 0x015ec560, 0xffc0f69c ]
+    - [ be32, 0x015ec564, 0xffc0f018 ]
+    - [ be32, 0x015ec568, 0x3e40015e ]
+    - [ be32, 0x015ec56c, 0x6252c540 ]
+    - [ be32, 0x015ec570, 0xc3b20054 ]
+    - [ be32, 0x015ec574, 0xc3920058 ]
+    - [ be32, 0x015ec578, 0xfffee824 ]
+    - [ be32, 0x015ec57c, 0xff9fe000 ]
+    - [ be32, 0x015ec580, 0x419c0008 ]
+    - [ be32, 0x015ec584, 0xffe0e090 ]
+    - [ be32, 0x015ec588, 0x7e94a278 ]
+    - [ be32, 0x015ec58c, 0x7e739a78 ]
+    - [ be32, 0x015ec590, 0x4e800020 ]
+    - [ be32, 0x015ec594, 0x4c989680 ]
+    - [ bef32, 0x015ec598, 0.05000000 ]
+
+PPU-03679186107dbc5525c9527efdab0f4818d3a5b4:
+  Unlock FPS:
+    Games:
+      "Dark Souls Prepare To Die Edition":
+        BLES01765: [ 01.09 ]
+    Author: Jao
+    Notes: Based on Whatcookie's & Gibbed's work
+    Patch Version: 1.2
+    Patch:
+    - [ be32, 0x00149414, 0x38800002 ]
+    - [ be32, 0x00149418, 0x989f071d ]
+    - [ be32, 0x0014941c, 0x989f071e ]
+    - [ be32, 0x00145458, 0x494a70c9 ]
+    - [ be32, 0x015ec520, 0x7eac42e6 ]
+    - [ be32, 0x015ec524, 0x3ec00184 ]
+    - [ be32, 0x015ec528, 0x62d60db4 ]
+    - [ be32, 0x015ec52c, 0x7e96a02a ]
+    - [ be32, 0x015ec530, 0xfab60000 ]
+    - [ be32, 0x015ec534, 0x7e74a850 ]
+    - [ be32, 0x015ec538, 0xfa7600e0 ]
+    - [ be32, 0x015ec53c, 0xcbd600e0 ]
+    - [ be32, 0x015ec540, 0xffc0f69c ]
+    - [ be32, 0x015ec544, 0xffc0f018 ]
+    - [ be32, 0x015ec548, 0x3e40015e ]
+    - [ be32, 0x015ec54c, 0x6252c520 ]
+    - [ be32, 0x015ec550, 0xc3b20054 ]
+    - [ be32, 0x015ec554, 0xc3920058 ]
+    - [ be32, 0x015ec558, 0xfffee824 ]
+    - [ be32, 0x015ec55c, 0xff9fe000 ]
+    - [ be32, 0x015ec560, 0x419c0008 ]
+    - [ be32, 0x015ec564, 0xffe0e090 ]
+    - [ be32, 0x015ec568, 0x7e94a278 ]
+    - [ be32, 0x015ec56c, 0x7e739a78 ]
+    - [ be32, 0x015ec570, 0x4e800020 ]
+    - [ be32, 0x015ec574, 0x4c989680 ]
+    - [ bef32, 0x015ec578, 0.05000000 ]
+
 PPU-65078c652115190ecb64b7ff52bbf1c68696deb6:
   Unlock FPS:
     Games:
