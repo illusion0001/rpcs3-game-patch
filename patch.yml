@@ -4288,6 +4288,15 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0003dd9c, 0x4800 ]
+  "Enable Local Multiplayer":
+    Games: *tlou111_title
+    Author: icemesh, illusion
+    Notes: "Not tested with more than one system."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0036ad6c, 0x3be00001 ] # (icemesh)
+      - [ be32, 0x0036baa4, 0x4800002c ] # (illusion)
+      - [ be32, 0x0129a01c, 0x01363538 ] # (illusion)
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes "Enable \"Stretch to Display Area\" option to take advantage of this patch. The interface will be stretched and cutscenes will use the standard field of view."
