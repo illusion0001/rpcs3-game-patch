@@ -3512,6 +3512,15 @@ Anchors:
     - [ utf8, 0x011803c5, "hatchet                        \x00" ]
     - [ utf8, 0x011803e5, "NO_ART_GROUP                   \x00" ]
     - [ utf8, 0x01180405, "flamethrower                   \x00" ]
+    # debug draw renderer
+    - [ be32, 0x005f8b48, 0x7fa3eb78 ]
+    - [ be32, 0x005f8b4c, 0x4bd551dd ]
+    - [ be32, 0x005f8b50, 0x7fa3eb78 ]
+    - [ be32, 0x005f8b54, 0x4844df29 ]
+    - [ be32, 0x005f8b58, 0x7fa3eb78 ]
+    - [ be32, 0x005f8b5c, 0x484b2695 ]
+    - [ be32, 0x00033c5c, 0x60000000 ]
+
   tlou111_mlaa: &tlou111_mlaa
   #  - [ be16, 0x00aaa040, 0x9b83 ]     # store 0
     - [ be16, 0x00a80350, 0x4800 ]     # unconditonally branch to disable MLAA
