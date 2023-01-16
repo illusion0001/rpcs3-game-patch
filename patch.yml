@@ -4297,6 +4297,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x0036ad6c, 0x3be00001 ] # (icemesh)
       - [ be32, 0x0036baa4, 0x4800002c ] # (illusion)
       - [ be32, 0x0129a01c, 0x01363538 ] # (illusion)
+      - [ be32, 0x00a3f320, 0x38600000 ] # (illusion)
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes "Enable \"Stretch to Display Area\" option to take advantage of this patch. The interface will be stretched and cutscenes will use the standard field of view."
