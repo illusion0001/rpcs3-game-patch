@@ -3448,6 +3448,70 @@ Anchors:
   tlou100_speed: &tlou100_speed
     - [ be16, 0x00a7a6b8, 0x9383 ]     # Speedboost                               (mem address: 0x14c7e5f)
 
+  tlou100_devmenu: &tlou100_devmenu
+    # debug menu
+    - [ be32, 0x000399c8, 0x39c00001 ]
+    - [ be16, 0x009acbde, 0x2db6 ]
+    - [ be16, 0x009acbe6, 0x2db6 ]
+    # pak arg
+    - [ be32, 0x004ea8ac, 0x4897451c ]
+    - [ be32, 0x00e5edc8, 0x90be82e4 ]
+    - [ be32, 0x00e5edcc, 0x88050000 ]
+    - [ be32, 0x00e5edd0, 0x4b68bae0 ]
+    # menu start
+    - [ be32, 0x004e94f8, 0x39ef0020 ]
+    - [ be32, 0x004e94fc, 0x48c96f34 ]
+    - [ be32, 0x01180430, 0x3c800117 ]
+    - [ be32, 0x01180434, 0x6084fe25 ]
+    - [ be32, 0x01180438, 0x7c847a14 ]
+    - [ be32, 0x0118043c, 0x4b3690c4 ]
+    - [ utf8, 0x0117fe45, "shiv                           \x00" ]
+    - [ utf8, 0x0117fe65, "pistol-uber-t1                 \x00" ]
+    - [ utf8, 0x0117fe85, "NO_ART_GROUP                   \x00" ]
+    - [ utf8, 0x0117fea5, "nail-bomb                      \x00" ]
+    - [ utf8, 0x0117fec5, "two-by-four                    \x00" ]
+    - [ utf8, 0x0117fee5, "nail-bomb                      \x00" ]
+    - [ utf8, 0x0117ff05, "turret-sniper                  \x00" ]
+    - [ utf8, 0x0117ff25, "pistol-uber-t1                 \x00" ]
+    - [ utf8, 0x0117ff45, "shiv                           \x00" ]
+    - [ utf8, 0x0117ff65, "radio                          \x00" ]
+    - [ utf8, 0x0117ff85, "molotov                        \x00" ]
+    - [ utf8, 0x0117ffa5, "bandage-apply                  \x00" ]
+    - [ utf8, 0x0117ffc5, "mp-parcel                      \x00" ]
+    - [ utf8, 0x0117ffe5, "machete-blade                  \x00" ]
+    - [ utf8, 0x01180005, "bow-dark                       \x00" ]
+    - [ utf8, 0x01180025, "mini-14-rifle                  \x00" ]
+    - [ utf8, 0x01180045, "two-by-four                    \x00" ]
+    - [ utf8, 0x01180065, "pistol-shotgun                 \x00" ]
+    - [ utf8, 0x01180085, "beer-bottle                    \x00" ]
+    - [ utf8, 0x011800a5, "lead-pipe                      \x00" ]
+    - [ utf8, 0x011800c5, "lead-pipe                      \x00" ]
+    - [ utf8, 0x011800e5, "flashlight                     \x00" ]
+    - [ utf8, 0x01180105, "rifle-sniper                   \x00" ]
+    - [ utf8, 0x01180125, "m4-rifle-t1                    \x00" ]
+    - [ utf8, 0x01180145, "smoke-bomb                     \x00" ]
+    - [ utf8, 0x01180165, "throw-brick                    \x00" ]
+    - [ utf8, 0x01180185, "shotgun-pump-stock             \x00" ]
+    - [ utf8, 0x011801a5, "NO_ART_GROUP                   \x00" ]
+    - [ utf8, 0x011801c5, "bloater-pustule                \x00" ]
+    - [ utf8, 0x011801e5, "taurus-66b4-revolver           \x00" ]
+    - [ utf8, 0x01180205, "nail-bomb                      \x00" ]
+    - [ utf8, 0x01180225, "throwing-knife                 \x00" ]
+    - [ utf8, 0x01180245, "rifle-bolt                     \x00" ]
+    - [ utf8, 0x01180265, "beretta-jaguar-pistol          \x00" ]
+    - [ utf8, 0x01180285, "bow                            \x00" ]
+    - [ utf8, 0x011802a5, "molotov                        \x00" ]
+    - [ utf8, 0x011802c5, "bill-knife                     \x00" ]
+    - [ utf8, 0x011802e5, "baseball-bat                   \x00" ]
+    - [ utf8, 0x01180305, "pistol-9mm                     \x00" ]
+    - [ utf8, 0x01180325, "machete-blade                  \x00" ]
+    - [ utf8, 0x01180345, "none                           \x00" ]
+    - [ utf8, 0x01180365, "rifle-improvised-assault       \x00" ]
+    - [ utf8, 0x01180385, "switchblade                    \x00" ]
+    - [ utf8, 0x011803a5, "baseball-bat                   \x00" ]
+    - [ utf8, 0x011803c5, "hatchet                        \x00" ]
+    - [ utf8, 0x011803e5, "NO_ART_GROUP                   \x00" ]
+    - [ utf8, 0x01180405, "flamethrower                   \x00" ]
   tlou111_mlaa: &tlou111_mlaa
   #  - [ be16, 0x00aaa040, 0x9b83 ]     # store 0
     - [ be16, 0x00a80350, 0x4800 ]     # unconditonally branch to disable MLAA
@@ -4073,9 +4137,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Notes: *debugmenunotes
     Patch Version: 1.01
     Patch:
-      - [ be32, 0x000399c8, 0x39c00001 ]
-      - [ be16, 0x009acbde, 0x2db6 ]
-      - [ be16, 0x009acbe6, 0x2db6 ]
+      - [ load, *tlou100_devmenu ]
   "Bug Fix: Infected Severed Head Crash":
     Games: *tlou100_title
     Author: illusion, ZEROx
