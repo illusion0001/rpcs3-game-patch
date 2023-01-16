@@ -3451,8 +3451,8 @@ Anchors:
   tlou100_devmenu: &tlou100_devmenu
     # debug menu
     - [ be32, 0x000399c8, 0x39c00001 ]
-    - [ be16, 0x009acbde, 0x2db6 ]
-    - [ be16, 0x009acbe6, 0x2db6 ]
+    - [ be16, 0x009ace36, 0x2db6 ]
+    - [ be16, 0x009ace3e, 0x2db6 ]
     # pak arg
     - [ be32, 0x004ea8ac, 0x4897451c ]
     - [ be32, 0x00e5edc8, 0x90be82e4 ]
