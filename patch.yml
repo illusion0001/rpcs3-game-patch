@@ -3817,7 +3817,7 @@ Anchors:
     - [ be32, 0x0005f918, 0x4e800020 ] # blr
 
   tlou111_devmenu: &tlou111_devmenu
-    - [ be16, 0x0003bfa0, 0x9b3f ]
+    - [ be32, 0x0003a69c, 0x39e00001 ]
     - [ be16, 0x009da99a, 0x2db6 ]
     - [ be16, 0x009da9a2, 0x2db6 ]
     - [ be32, 0x00a1a200, 0x60000000 ] # Remove "!" model render
@@ -4073,8 +4073,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Notes: *debugmenunotes
     Patch Version: 1.01
     Patch:
-      - [ be16, 0x0003b2a0, 0x419e ]
-      - [ byte, 0x0003b2c3, 1 ]
+      - [ be32, 0x000399c8, 0x39c00001 ]
       - [ be16, 0x009acbde, 0x2db6 ]
       - [ be16, 0x009acbe6, 0x2db6 ]
   "Bug Fix: Infected Severed Head Crash":
@@ -4119,6 +4118,15 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00966784, 0x997d ]
+  "Enable Local Multiplayer":
+    Games: *tlou100_title
+    Author: icemesh, illusion
+    Notes: "Matchmaking does not work."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00353e7c, 0x3b800001 ] # (icemesh)
+      - [ be32, 0x00a0fbc8, 0x38600000 ] # (illusion) # For RPCS3 only, bypass connecting screen
+      - [ be32, 0x01268210, 0x0132f628 ] # (illusion)
 
 PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   Disable in-built MLAA:
@@ -4291,7 +4299,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Enable Local Multiplayer":
     Games: *tlou111_title
     Author: icemesh, illusion
-    Notes: "Not tested with more than one system."
+    Notes: "Matchmaking does not work."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0036ad6c, 0x3be00001 ] # (icemesh)
