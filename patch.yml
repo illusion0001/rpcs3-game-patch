@@ -3890,8 +3890,8 @@ Anchors:
     - [ be32, 0x0005f918, 0x4e800020 ] # blr
 
   tlou111_devmenu: &tlou111_devmenu
-    # - [ be32, 0x0003a69c, 0x39e00001 ]
-    - [ be16, 0x0003bfa0, 0x9b3f ]
+    - [ be32, 0x0003a69c, 0x39e00001 ]
+    # - [ be16, 0x0003bfa0, 0x9b3f ]
     - [ be16, 0x009da99a, 0x2db6 ]
     - [ be16, 0x009da9a2, 0x2db6 ]
     - [ be32, 0x00a1a200, 0x60000000 ] # Remove "!" model render
@@ -4012,22 +4012,22 @@ Anchors:
     - [ be32, 0x00edc4dc, 0x90be8030 ] # store ptr
     - [ be32, 0x00edc4e0, 0x7c9e2378 ] # restore working register
     - [ be32, 0x00edc4e4, 0x4b470d6c ] # return
-    # task mgr
-    # active task
-    - [ be32, 0x0083e160, 0x38600001 ]
-    - [ be32, 0x0083e164, 0x48214049 ]
-    - [ be32, 0x0083e168, 0x386100b0 ]
-    - [ be32, 0x0083e16c, 0x48214095 ]
-    - [ be32, 0x0083e170, 0x4800185c ]
-    - [ be32, 0x0083f9c8, 0x4bffe798 ]
-    # time played
-    - [ be32, 0x0083e174, 0x38600001 ]
-    - [ be32, 0x0083e178, 0x48214035 ]
-    - [ be32, 0x0083e17c, 0x38610070 ]
-    - [ be32, 0x0083e180, 0x48214081 ]
-    - [ be32, 0x0083e184, 0x480018c0 ]
-    - [ be32, 0x0083fa40, 0x4bffe734 ]
-    - [ utf8, 0x00ed47c8, "%02i:%02i:%02i\n" ] # fix newline
+    # # task mgr
+    # # active task
+    # - [ be32, 0x0083e160, 0x38600001 ]
+    # - [ be32, 0x0083e164, 0x48214049 ]
+    # - [ be32, 0x0083e168, 0x386100b0 ]
+    # - [ be32, 0x0083e16c, 0x48214095 ]
+    # - [ be32, 0x0083e170, 0x4800185c ]
+    # - [ be32, 0x0083f9c8, 0x4bffe798 ]
+    # # time played
+    # - [ be32, 0x0083e174, 0x38600001 ]
+    # - [ be32, 0x0083e178, 0x48214035 ]
+    # - [ be32, 0x0083e17c, 0x38610070 ]
+    # - [ be32, 0x0083e180, 0x48214081 ]
+    # - [ be32, 0x0083e184, 0x480018c0 ]
+    # - [ be32, 0x0083fa40, 0x4bffe734 ]
+    # - [ utf8, 0x00ed47c8, "%02i:%02i:%02i\n" ] # fix newline
     # script print
     # Gameplay Menu bool
     - [ utf8, 0x00e902d8, "SS Printout to Msgcon\x00" ]
