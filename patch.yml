@@ -3890,7 +3890,8 @@ Anchors:
     - [ be32, 0x0005f918, 0x4e800020 ] # blr
 
   tlou111_devmenu: &tlou111_devmenu
-    - [ be32, 0x0003a69c, 0x39e00001 ]
+    # - [ be32, 0x0003a69c, 0x39e00001 ]
+    - [ be16, 0x0003bfa0, 0x9b3f ]
     - [ be16, 0x009da99a, 0x2db6 ]
     - [ be16, 0x009da9a2, 0x2db6 ]
     - [ be32, 0x00a1a200, 0x60000000 ] # Remove "!" model render
