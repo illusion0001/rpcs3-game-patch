@@ -3891,7 +3891,6 @@ Anchors:
 
   tlou111_devmenu: &tlou111_devmenu
     - [ be32, 0x0003a69c, 0x39e00001 ]
-    # - [ be16, 0x0003bfa0, 0x9b3f ]
     - [ be16, 0x009da99a, 0x2db6 ]
     - [ be16, 0x009da9a2, 0x2db6 ]
     - [ be32, 0x00a1a200, 0x60000000 ] # Remove "!" model render
@@ -3976,32 +3975,6 @@ Anchors:
     - [ be32, 0x00574e40, 0x907c0000 ]
     - [ be32, 0x00574e44, 0x807c0000 ]
     - [ be32, 0x00574e48, 0x60000000 ]
-    # msgout to msgcon
-    # start
-    # force mode 1 (msgcon)
-    # - [ be32, 0x00a521ac, 0x38600001 ]
-    # - [ be32, 0x00a521b0, 0x4848a010 ]
-    # - [ be32, 0x00edc1c0, 0xfbc1fff0 ]
-    # - [ be32, 0x00edc1c4, 0x83c29230 ]
-    # - [ be32, 0x00edc1c8, 0x813e8014 ]
-    # - [ be32, 0x00edc1cc, 0xebc1fff0 ]
-    # - [ be32, 0x00edc1d0, 0x90690000 ]
-    # - [ be32, 0x00edc1d4, 0x4e800020 ]
-    # reused
-    - [ be32, 0x00035b84, 0x60000000 ]
-    - [ be32, 0x0084bd18, 0x60000000 ]
-    - [ be32, 0x0084bd24, 0x60000000 ]
-    - [ be32, 0x0084bd2c, 0x48000090 ]
-    - [ be32, 0x0084bdc4, 0x88092db6 ]
-      # msgcon buff
-    - [ be32, 0x012b758c, 0x013f1340 ]
-      # clear buffer
-    - [ be32, 0x0084be24, 0x3c60013f ]
-    - [ be32, 0x0084be28, 0x60631340 ] # msgcon buf
-    - [ be32, 0x0084be2c, 0x38800000 ] # data
-    - [ be32, 0x0084be30, 0x38a01000 ] # size (4096)
-    - [ be32, 0x0084be34, 0x4862f90d ] # memset
-    - [ be32, 0x0084be38, 0x48000064 ] # return
       # control page
     - [ be32, 0x0034d24c, 0x48b8f27c ] # get page ptr (start)
     - [ be32, 0x00edc4c8, 0x2f890000 ] # check if page ptr is null
@@ -4012,22 +3985,6 @@ Anchors:
     - [ be32, 0x00edc4dc, 0x90be8030 ] # store ptr
     - [ be32, 0x00edc4e0, 0x7c9e2378 ] # restore working register
     - [ be32, 0x00edc4e4, 0x4b470d6c ] # return
-    # # task mgr
-    # # active task
-    # - [ be32, 0x0083e160, 0x38600001 ]
-    # - [ be32, 0x0083e164, 0x48214049 ]
-    # - [ be32, 0x0083e168, 0x386100b0 ]
-    # - [ be32, 0x0083e16c, 0x48214095 ]
-    # - [ be32, 0x0083e170, 0x4800185c ]
-    # - [ be32, 0x0083f9c8, 0x4bffe798 ]
-    # # time played
-    # - [ be32, 0x0083e174, 0x38600001 ]
-    # - [ be32, 0x0083e178, 0x48214035 ]
-    # - [ be32, 0x0083e17c, 0x38610070 ]
-    # - [ be32, 0x0083e180, 0x48214081 ]
-    # - [ be32, 0x0083e184, 0x480018c0 ]
-    # - [ be32, 0x0083fa40, 0x4bffe734 ]
-    # - [ utf8, 0x00ed47c8, "%02i:%02i:%02i\n" ] # fix newline
     # script print
     # Gameplay Menu bool
     - [ utf8, 0x00e902d8, "SS Printout to Msgcon\x00" ]
@@ -4040,6 +3997,54 @@ Anchors:
     - [ utf8, 0x00efc197, "%x" ] # branch in hex
     - [ utf8, 0x00efc19b, "%x" ] # branch in hex
     - [ utf8, 0x00efc7fe, "%x" ] # imm in hex
+    # debug renderer
+    - [ be32, 0x0061cf10, 0x7fa3eb78 ]
+    - [ be32, 0x0061cf14, 0x4bd47aad ]
+    - [ be32, 0x0061cf18, 0x7fa3eb78 ]
+    - [ be32, 0x0061cf1c, 0x484bb6b9 ]
+    - [ be32, 0x0061cf20, 0x7fa3eb78 ]
+    - [ be32, 0x0061cf24, 0x484756c9 ]
+    - [ be32, 0x00036a04, 0x60000000 ]
+    # msgcon buff
+    - [ be32, 0x012c6650, 0x013f1340 ]
+    - [ be32, 0x00a92720, 0x60000000 ]
+    # msgout to msgcon start
+    - [ be32, 0x00a92724, 0x3cc00135 ]
+    - [ be32, 0x00a92728, 0x60c67130 ]
+    - [ be32, 0x00a9272c, 0x3ce041b0 ]
+    - [ be32, 0x00a92730, 0x90e60000 ]
+    - [ be32, 0x00a92734, 0xc0060000 ]
+    - [ be32, 0x00a92738, 0xc0460000 ]
+    - [ be32, 0x00a9273c, 0x3ce04204 ]
+    - [ be32, 0x00a92740, 0x90e60000 ]
+    - [ be32, 0x00a92744, 0xc0260000 ]
+    - [ be32, 0x00a92748, 0x38c0ffff ]
+    - [ be32, 0x00a9274c, 0x80fe8098 ]
+    - [ be32, 0x00a92750, 0x48047821 ]
+    - [ be32, 0x00a92754, 0x807e8098 ]
+    - [ be32, 0x00a92758, 0x38800000 ]
+    - [ be32, 0x00a9275c, 0x38a01000 ]
+    - [ be32, 0x00a92760, 0x483e8fe1 ]
+    - [ be32, 0x00a92764, 0x3cc00135 ]
+    - [ be32, 0x00a92768, 0x60c67130 ]
+    - [ be32, 0x00a9276c, 0x3ce04248 ]
+    - [ be32, 0x00a92770, 0x90e60000 ]
+    - [ be32, 0x00a92774, 0xc0260000 ]
+    - [ be32, 0x00a92778, 0x3ce04422 ]
+    - [ be32, 0x00a9277c, 0x60e70080 ]
+    - [ be32, 0x00a92780, 0x90e60000 ]
+    - [ be32, 0x00a92784, 0xc0460000 ]
+    - [ be32, 0x00a92788, 0x3ce00135 ]
+    - [ be32, 0x00a9278c, 0x60e77148 ]
+    - [ be32, 0x00a92790, 0x38c0ffff ]
+    - [ be32, 0x00a92794, 0x480477dd ]
+    - [ be32, 0x00a92798, 0x48000064 ]
+    # taskmgr
+    - [ be32, 0x0083f9c0, 0x807eff84 ]
+    - [ be32, 0x012befe8, 0x01357148 ]
+    # display-msg
+    - [ be32, 0x008529f8, 0x60000000 ]
+    - [ be32, 0x00852a04, 0x60000000 ]
 
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
