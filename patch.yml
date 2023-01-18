@@ -3520,6 +3520,11 @@ Anchors:
     - [ be32, 0x005f8b58, 0x7fa3eb78 ]
     - [ be32, 0x005f8b5c, 0x484b2695 ]
     - [ be32, 0x00033c5c, 0x60000000 ]
+    # DC printing
+    - [ be32, 0x007f3de0, 0x60000000 ] # maybe not needed
+    - [ be32, 0x009f1f08, 0x4844dc24 ] # puts
+    - [ be32, 0x007f7370, 0x48002708 ] # native-printf
+    - [ be32, 0x007f7384, 0x480026f4 ] # native-print-string
 
   tlou111_mlaa: &tlou111_mlaa
   #  - [ be16, 0x00aaa040, 0x9b83 ]     # store 0
@@ -4045,6 +4050,11 @@ Anchors:
     # display-msg
     - [ be32, 0x008529f8, 0x60000000 ]
     - [ be32, 0x00852a04, 0x60000000 ]
+    # DC printing
+    - [ be32, 0x00818cd8, 0x60000000 ] # always
+    - [ be32, 0x00a2335c, 0x4844e6f8 ] # puts
+    - [ be32, 0x0081c060, 0x48002cbc ] # printf
+    - [ be32, 0x0081c074, 0x48002ca8 ] # print-string
 
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
