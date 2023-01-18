@@ -3525,6 +3525,7 @@ Anchors:
     - [ be32, 0x009f1f08, 0x4844dc24 ] # puts
     - [ be32, 0x007f7370, 0x48002708 ] # native-printf
     - [ be32, 0x007f7384, 0x480026f4 ] # native-print-string
+    # - [ be32, 0x0035360c, 0x60000000 ]
 
   tlou111_mlaa: &tlou111_mlaa
   #  - [ be16, 0x00aaa040, 0x9b83 ]     # store 0
