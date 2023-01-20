@@ -4286,6 +4286,34 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00038ea4, 0x38600001 ]
+  "DEBUG: Replace Task With Test Tasks":
+    Games: *tlou100_title
+    Author: illusion
+    Notes: "Only enable this patch if you know what you are doing!!"
+    Patch Version: 1.0
+    Patch:
+      # test-tasks begin!!
+      - [ be32, 0x009f9064, 0x484b023c ]
+      - [ be32, 0x00ea92a0, 0x81490000 ]
+      - [ be32, 0x00ea92a4, 0x3d006772 ]
+      - [ be32, 0x00ea92a8, 0x61083261 ]
+      - [ be32, 0x00ea92ac, 0x7f885000 ]
+      - [ be32, 0x00ea92b0, 0x409e0014 ]
+      - [ be32, 0x00ea92b4, 0x3d002203 ]
+      - [ be32, 0x00ea92b8, 0x6108c98c ]
+      - [ be32, 0x00ea92bc, 0x91090000 ]
+      - [ be32, 0x00ea92c0, 0x7d284b78 ]
+      - [ be32, 0x00ea92c4, 0x81490000 ]
+      - [ be32, 0x00ea92c8, 0x4bb4fda0 ]
+      # *test-task-graph*
+      - [ be16, 0x008203a2, 0xf0f3 ]
+      - [ be16, 0x008203aa, 0xd6c8 ]
+      - [ be16, 0x0081d2fa, 0xf0f3 ]
+      - [ be16, 0x0081d302, 0xd6c8 ]
+      # crash fix
+      - [ be32, 0x000390b0, 0x48000068 ]
+      # no artGroup assert
+      - [ be32, 0x0048731c, 0x60000000 ]
 
 PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   Disable in-built MLAA:
@@ -4465,6 +4493,33 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x0036baa4, 0x4800002c ] # (illusion)
       - [ be32, 0x0129a01c, 0x01363538 ] # (illusion)
       - [ be32, 0x00a3f320, 0x38600000 ] # (illusion)
+  "DEBUG: Replace Task With Test Tasks":
+    Games: *tlou111_title
+    Author: illusion
+    Notes: "Only enable this patch if you know what you are doing!!"
+    Patch Version: 1.0
+    Patch:
+      # test-tasks begin!!
+      - [ be32, 0x00a29fb0, 0x484b2038 ]
+      - [ be32, 0x00edbfe8, 0x81490000 ]
+      - [ be32, 0x00edbfec, 0x3d006772 ]
+      - [ be32, 0x00edbff0, 0x61083261 ]
+      - [ be32, 0x00edbff4, 0x7f885000 ]
+      - [ be32, 0x00edbff8, 0x409e0014 ]
+      - [ be32, 0x00edbffc, 0x3d002203 ]
+      - [ be32, 0x00edc000, 0x6108c98c ]
+      - [ be32, 0x00edc004, 0x91090000 ]
+      - [ be32, 0x00edc008, 0x7d284b78 ]
+      - [ be32, 0x00edc00c, 0x81490000 ]
+      - [ be32, 0x00edc010, 0x4bb4dfa4 ]
+      # *test-task-graph*
+      - [ be32, 0x008461a8, 0x3c80f0f3 ]
+      - [ be32, 0x008461b0, 0x6084d6c8 ]
+      - [ be32, 0x00841e64, 0x3ca0f0f3 ]
+      - [ be32, 0x00841e6c, 0x60a5d6c8 ]
+      # crash fix
+      - [ be32, 0x0003df68, 0x480000a0 ]
+      - [ be32, 0x0057cfe8, 0x60000000 ]
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes "Enable \"Stretch to Display Area\" option to take advantage of this patch. The interface will be stretched and cutscenes will use the standard field of view."
