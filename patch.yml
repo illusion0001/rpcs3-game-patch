@@ -3512,7 +3512,7 @@ Anchors:
     - [ utf8, 0x011803c5, "hatchet                        \x00" ]
     - [ utf8, 0x011803e5, "NO_ART_GROUP                   \x00" ]
     - [ utf8, 0x01180405, "flamethrower                   \x00" ]
-    # debug draw renderer
+    # debug draw renderer on 2d
     - [ be32, 0x005f8b48, 0x7fa3eb78 ]
     - [ be32, 0x005f8b4c, 0x4bd551dd ]
     - [ be32, 0x005f8b50, 0x7fa3eb78 ]
@@ -3521,11 +3521,41 @@ Anchors:
     - [ be32, 0x005f8b5c, 0x484b2695 ]
     - [ be32, 0x00033c5c, 0x60000000 ]
     # DC printing
-    - [ be32, 0x007f3de0, 0x60000000 ] # maybe not needed
-    - [ be32, 0x009f1f08, 0x4844dc24 ] # puts
+    - [ be32, 0x007681e8, 0x38600001 ]
+    - [ be32, 0x007681ec, 0x482b9de1 ]
+    - [ be32, 0x007681f0, 0x7fa3eb78 ]
+    - [ be32, 0x007681f4, 0x482b9e2d ]
+    - [ be32, 0x007681f8, 0x7fa3eb78 ]
+    - [ be32, 0x007681fc, 0x486de265 ]
+    - [ be32, 0x00768200, 0x48000010 ]
     - [ be32, 0x007f7370, 0x48002708 ] # native-printf
     - [ be32, 0x007f7384, 0x480026f4 ] # native-print-string
-    # - [ be32, 0x0035360c, 0x60000000 ]
+    # msgout to msgcon (debug text)
+    - [ be32, 0x01293838, 0x013bdab0 ] # msgcon buffer
+    # start
+    - [ be32, 0x00a46bb0, 0x60000000 ]
+    - [ be32, 0x00a46bb4, 0x3cc00132 ]
+    - [ be32, 0x00a46bb8, 0x60c63220 ]
+    - [ be32, 0x00a46bbc, 0x3ce041b0 ]
+    - [ be32, 0x00a46bc0, 0x90e60000 ]
+    - [ be32, 0x00a46bc4, 0xc0060000 ]
+    - [ be32, 0x00a46bc8, 0xc0460000 ]
+    - [ be32, 0x00a46bcc, 0x3ce04204 ]
+    - [ be32, 0x00a46bd0, 0x90e60000 ]
+    - [ be32, 0x00a46bd4, 0xc0260000 ]
+    - [ be32, 0x00a46bd8, 0x38c0ffff ]
+    - [ be32, 0x00a46bdc, 0x80fe8098 ]
+    - [ be32, 0x00a46be0, 0x480656a1 ]
+    - [ be32, 0x00a46be4, 0x807e8098 ]
+    - [ be32, 0x00a46be8, 0x38800000 ]
+    - [ be32, 0x00a46bec, 0x38a01000 ]
+    - [ be32, 0x00a46bf0, 0x48402c29 ]
+    - [ be32, 0x00a46bf4, 0x48000098 ]
+    # msgcon buffer in single area
+    - [ be32, 0x00a22c20, 0x4848b340 ]
+    - [ be32, 0x00eadf60, 0x3d20013b ]
+    - [ be32, 0x00eadf64, 0x6129dab0 ]
+    - [ be32, 0x00eadf68, 0x4bb74cbc ]
 
   tlou111_mlaa: &tlou111_mlaa
   #  - [ be16, 0x00aaa040, 0x9b83 ]     # store 0
@@ -4045,6 +4075,11 @@ Anchors:
     - [ be32, 0x00a92790, 0x38c0ffff ]
     - [ be32, 0x00a92794, 0x480477dd ]
     - [ be32, 0x00a92798, 0x48000064 ]
+    # msgcon buffer in single area
+    - [ be32, 0x00a519f8, 0x4848a738 ]
+    - [ be32, 0x00edc130, 0x3d20013f ]
+    - [ be32, 0x00edc134, 0x61291340 ]
+    - [ be32, 0x00edc138, 0x4bb758c4 ]
     # taskmgr
     - [ be32, 0x0083f9c0, 0x807eff84 ]
     - [ be32, 0x012befe8, 0x01357148 ]
@@ -4059,10 +4094,6 @@ Anchors:
     - [ be32, 0x0078c5ac, 0x7fa3eb78 ]
     - [ be32, 0x0078c5b0, 0x482c5c51 ]
     - [ be32, 0x0078c5b4, 0x48000018 ]
-    - [ be32, 0x00a519f8, 0x4848a738 ]
-    - [ be32, 0x00edc130, 0x3d20013f ]
-    - [ be32, 0x00edc134, 0x61291340 ]
-    - [ be32, 0x00edc138, 0x4bb758c4 ]
 
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
@@ -4222,6 +4253,13 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
       - [ be32, 0x00353e7c, 0x3b800001 ] # (icemesh)
       - [ be32, 0x00a0fbc8, 0x38600000 ] # (illusion) # For RPCS3 only, bypass connecting screen
       - [ be32, 0x01268210, 0x0132f628 ] # (illusion)
+  Skip Intro:
+    Games: *tlou100_title
+    Author: illusion
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00038ea4, 0x38600001 ]
 
 PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   Disable in-built MLAA:
