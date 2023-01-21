@@ -4261,7 +4261,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
       - [ be32, 0x00038ea4, 0x38600001 ]
   "DEBUG: Replace Task With Test Tasks":
     Games: *tlou100_title
-    Author: illusion
+    Author: "illusion, icemesh" # SID Utils
     Notes: "Only enable this patch if you know what you are doing!!"
     Patch Version: 1.0
     Patch:
@@ -4468,7 +4468,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x00a3f320, 0x38600000 ] # (illusion)
   "DEBUG: Replace Task With Test Tasks":
     Games: *tlou111_title
-    Author: illusion
+    Author: "illusion, icemesh" # SID Utils
     Notes: "Only enable this patch if you know what you are doing!!"
     Patch Version: 1.0
     Patch:
@@ -6438,6 +6438,32 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00043e2c, 0x480000dc ]
+  "DEBUG: Replace Task With Test Tasks":
+    Games: *uc3_119title
+    Author: "illusion, icemesh" # SID Utils
+    Notes: "Only enable this patch if you know what you are doing!!"
+    Patch Version: 1.0
+    Patch:
+      # *test-task-graph*
+      - [ be32, 0x00a0d014, 0x3c80f0f3 ]
+      - [ be32, 0x00a0d01c, 0x6084d6c8 ]
+      - [ be32, 0x00a0b2c4, 0x3ca0f0f3 ]
+      - [ be32, 0x00a0b2cc, 0x60a5d6c8 ]
+      - [ be16, 0x0004417c, 0x4800 ]
+      # test-tasks begin!!
+      # SID("tasks") -> SID("test-tasks") // under debug group
+      - [ be32, 0x009d0e84, 0x48421188 ]
+      - [ be32, 0x00df200c, 0x81490000 ]
+      - [ be32, 0x00df2010, 0x3d006772 ]
+      - [ be32, 0x00df2014, 0x61083261 ]
+      - [ be32, 0x00df2018, 0x7f885000 ]
+      - [ be32, 0x00df201c, 0x409e0014 ]
+      - [ be32, 0x00df2020, 0x3d002203 ]
+      - [ be32, 0x00df2024, 0x6108c98c ]
+      - [ be32, 0x00df2028, 0x91090000 ]
+      - [ be32, 0x00df202c, 0x7d284b78 ]
+      - [ be32, 0x00df2030, 0x81490000 ]
+      - [ be32, 0x00df2034, 0x4bbdee54 ]
 
 Anchors:
 
