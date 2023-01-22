@@ -2021,6 +2021,17 @@ Anchors:
         BCAS25003: [ 01.03 ]
         BCKS15003: [ 01.03 ]
 
+PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
+  "Unlock FPS":
+    Games: *gow3-103-title
+    Author: ZEROx, illusion
+    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60FPS and above."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00528560, 1000 ]
+      - [ bef32, 0x005284b8, 50000 ] # min fps of 2
+      - [ be16, 0x000c7b0a, 0xccc8 ] # chainswing fix
+      - [ be16, 0x000ea0fe, 0xccc8 ] # water freeze fix
   "Skip any videos with X button":
     Games: *gow3-103-title
     Author: illusion
@@ -2102,6 +2113,22 @@ Anchors:
       - [ be32, 0x003de184, 0x7d4803a6 ] # mtspr LR,r10
       - [ be32, 0x003de188, 0x4e800020 ] # blr
 
+PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
+  "Unlock FPS":
+    Games: *gow3-100-title
+    Author: ZEROx, illusion
+    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60FPS and above."
+    Patch Version: 2.0
+    Patch:
+      - [ bef32, 0x00528560, 1000 ]
+      - [ bef32, 0x005284b8, 100000 ]
+      - [ be32, 0x0026b528, 0x60000000 ] #don't write to target fps
+      - [ bef32, 0x0052bee4, 60.0 ] #target fps # read max of 60 for physics stuff
+      - [ be16, 0x0026b6e6, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b74a, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x0026b75e, 0xe7a8 ] #1000.0f sync stuff
+      - [ be16, 0x001e51b6, 0xe7a8 ] #1000.0f gameplay speed scaling
+      - [ be16, 0x002710f6, 0xe7a8 ] #1000.0f video player speed scaling
   "Skip any videos with X button":
     Games: *gow3-100-title
     Author: illusion
