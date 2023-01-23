@@ -4999,6 +4999,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: *uc260fpsnotes
     Patch Version: 1.2
@@ -5011,6 +5012,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
@@ -5023,6 +5025,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5034,6 +5037,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5045,6 +5049,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: *uc2spupostnotes
     Patch Version: 1.2
@@ -5056,6 +5061,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
@@ -5067,6 +5073,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5078,6 +5085,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5089,6 +5097,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5100,6 +5109,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: dron_3, HdHereidme, illusion
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
@@ -5112,6 +5122,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: ZEROx, illusion
     Notes: "Last modified: 16 Feb 2021\n\nFixed a rare bug when quitting to menu causes a game crash."
     Patch Version: 1.0
@@ -5129,6 +5140,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
+        BCJS30035: [ 01.00 ]
     Author: illusion, ZEROx
     Notes: 
     Patch Version: 1.0
@@ -5247,6 +5259,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: *uc260fpsnotes
     Patch Version: 1.2
@@ -5260,6 +5273,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
@@ -5273,6 +5287,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5285,6 +5300,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5297,6 +5313,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: *uc2spupostnotes
     Patch Version: 1.2
@@ -5309,6 +5326,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
@@ -5321,6 +5339,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5333,6 +5352,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5345,6 +5365,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: 
     Patch Version: 1.2
@@ -5357,6 +5378,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: dron_3, HdHereidme
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
@@ -5369,6 +5391,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: ZEROx, illusion
     Notes: "Last modified: 16 Feb 2021\n\nFixed a rare bug when quitting to menu causes a game crash."
     Patch Version: 1.0
@@ -5387,6 +5410,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00727: [ 01.09 ]
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
     Author: illusion, ZEROx
     Notes: 
     Patch Version: 1.0
