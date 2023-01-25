@@ -3182,6 +3182,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         BCUS98232: [ 01.04 ]
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
+        BCAS25003: [ 01.04 ]
     Author: illusion, ZEROx
     Notes: *gowamlaanotes
     Patch Version: 1.0
@@ -3197,6 +3198,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         BCUS98232: [ 01.04 ]
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
+        BCAS25003: [ 01.04 ]
     Author: ZEROx
     Notes:
     Patch Version: 1.0
@@ -3210,6 +3212,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         BCUS98232: [ 01.04 ]
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
+        BCAS25003: [ 01.04 ]
     Author: ZEROx
     Notes: 
     Patch Version: 1.0
@@ -3222,6 +3225,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         BCUS98232: [ 01.04 ]
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
+        BCAS25003: [ 01.04 ]
     Author: Illusion, ZEROx
     Notes: "Skips SCE intros up to first video\n2.0 Skips intro video"
     Patch Version: 2.0
@@ -3246,6 +3250,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         BCUS98232: [ 01.04 ]
         NPEA00445: [ 01.04 ]
         NPUA80918: [ 01.04 ]
+        BCAS25003: [ 01.04 ]
     Author: "ZEROx, illusion"
     Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate."
     Patch Version: 2.0
@@ -3268,6 +3273,7 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: #GOWA.SELF 1.12
         BCUS98232: [ 01.12 ]
         NPEA00445: [ 01.12 ]
         NPUA80918: [ 01.12 ]
+        BCAS25003: [ 01.12 ]
     Author: illusion, ZEROx
     Notes: *gowamlaanotes
     Patch Version: 1.0
@@ -3283,6 +3289,7 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: #GOWA.SELF 1.12
         BCUS98232: [ 01.12 ]
         NPEA00445: [ 01.12 ]
         NPUA80918: [ 01.12 ]
+        BCAS25003: [ 01.12 ]
     Author: ZEROx
     Notes:
     Patch Version: 1.0
@@ -3296,6 +3303,7 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: #GOWA.SELF 1.12
         BCUS98232: [ 01.12 ]
         NPEA00445: [ 01.12 ]
         NPUA80918: [ 01.12 ]
+        BCAS25003: [ 01.12 ]
     Author: ZEROx
     Notes:
     Patch Version: 1.0
