@@ -5,142 +5,142 @@ Anchors:
   # Set 60FPS with no frameskip
   # by Gibbed
     - [ be16, 0x25ed8, 0x981f ]
-  
+
   # delta time
   # by Whatcookie
     - [ be32, 0x0001b964, 0x496ac2cd ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x016c7c30, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x016c7c34, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c7c38, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c7c3c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c7c40, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c7c44, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x016c7c48, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c7c4c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c7c50, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c7c54, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x016c7c58, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c7c5c, 0x3a527c30 ] # addi r18,r18,0x7c30   // load low bits of constants pointer
     - [ be32, 0x016c7c60, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c7c64, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c7c68, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-  
+
   # check timestep size
     - [ be32, 0x016c7c6c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c7c70, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-  
+
   # set maximum timestep
     - [ be32, 0x016c7c74, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-  
+
   # cleanup
     - [ be32, 0x016c7c78, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c7c7c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c7c80, 0x4e800020 ] # blr                   // return
-  
+
   # constants
     - [ be32, 0x016c7c84, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c7c88, 0.05000000 ] # maximum timestep size (50ms or 20FPS)
-  
+
   BLES00932_FpsUnlock: &BLES00932_FpsUnlock
   # Set 60FPS with no frameskip
   # by Gibbed
     - [ be16, 0x26ac0, 0x981f ]
-  
+
   # delta time
   # by Whatcookie
     - [ be32, 0x0001c534, 0x496ada1d ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x016c9f50, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x016c9f54, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c9f58, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c9f5c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c9f60, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c9f64, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x016c9f68, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c9f6c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c9f70, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c9f74, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x016c9f78, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c9f7c, 0x62529f50 ] # ori r18,r18,0x9f50    // load low bits of constants pointer
     - [ be32, 0x016c9f80, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c9f84, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c9f88, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-  
+
   # check timestep size
     - [ be32, 0x016c9f8c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c9f90, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-  
+
   # set maximum timestep
     - [ be32, 0x016c9f94, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-  
+
   # cleanup
     - [ be32, 0x016c9f98, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c9f9c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c9fa0, 0x4e800020 ] # blr                   // return
-  
+
   # constants
     - [ be32, 0x016c9fa4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c9fa8, 0.05000000 ] # maximum timestep size (50ms or 20FPS)
-  
+
   BCAS20071_FpsUnlock: &BCAS20071_FpsUnlock
   # Set 60FPS with no frameskip
   # by Gibbed, KokutouKiritsugu port to BCAS20071
     - [ be16, 0x24148, 0x981f ]
-  
+
   # delta time
   # by Whatcookie
     - [ be32, 0x00019794, 0x496af37d ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x016c8b10, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x016c8b14, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c8b18, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c8b1c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c8b20, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c8b24, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x016c8b28, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c8b2c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c8b30, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c8b34, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x016c8b38, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c8b3c, 0x62528b10 ] # ori r18,r18,0x8b10   // load low bits of constants pointer
     - [ be32, 0x016c8b40, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c8b44, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c8b48, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-  
+
   # check timestep size
     - [ be32, 0x016c8b4c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c8b50, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-  
+
   # set maximum timestep
     - [ be32, 0x016c8b54, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-  
+
   # cleanup
     - [ be32, 0x016c8b58, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c8b5c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c8b60, 0x4e800020 ] # blr                   // return
-  
+
   # constants
     - [ be32, 0x016c8b64, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c8b68, 0.05000000 ] # maximum timestep size (50ms or 20FPS)
@@ -254,7 +254,7 @@ Anchors:
     - [ be32, 0x21F61C, 0x7C0803A6 ]
     - [ be32, 0x21F620, 0x382100A0 ]
     - [ be32, 0x21F624, 0x4E800020 ]
-    
+
   BLES00932_FreeCam: &BLES00932_FreeCam
     - [ be32, 0x1451F4, 0x480DB12D ] # branch to hork's cave
     - [ be32, 0x220320, 0xF821FF61 ]
@@ -357,7 +357,7 @@ Anchors:
     - [ be32, 0x2204A4, 0x7C0803A6 ]
     - [ be32, 0x2204A8, 0x382100A0 ]
     - [ be32, 0x2204AC, 0x4E800020 ]
-    
+
   BCAS20071_FreeCam: &BCAS20071_FreeCam
     - [ be32, 0x142304, 0x480DB26D ] # branch to hork's cave
     - [ be32, 0x21D570, 0xF821FF61 ]
@@ -532,7 +532,7 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
     Group:
     Notes: *FreeCam_Notes
     Patch:
-      - [ load, *BLUS30443_FreeCam ] 
+      - [ load, *BLUS30443_FreeCam ]
 
 PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
   Unlock FPS:
@@ -603,7 +603,7 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
     Group:
     Notes: *FreeCam_Notes
     Patch:
-      - [ load, *BLES00932_FreeCam ] 
+      - [ load, *BLES00932_FreeCam ]
 
 PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
   Unlock FPS:
@@ -674,7 +674,7 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
     Group:
     Notes: *FreeCam_Notes
     Patch:
-      - [ load, *BCAS20071_FreeCam ] 
+      - [ load, *BCAS20071_FreeCam ]
 
 PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
   Unlock FPS:
@@ -751,10 +751,10 @@ Anchors:
   kh15_ar_219: &kh15_ar_219
     - [ be32, 0xEB170, 0x3FAAAAAB ] # VERT+ (21.9)
     - [ be32, 0xEB16C, 0x3FC00000 ] # ZOOM+ (21.9)
-  
+
   kh15_60fps: &kh15_60fps
     - [ be32, 0x00036870, 0x38600000 ] # li r3, 0x0
-  
+
   kh15recom_60fps: &kh15recom_60fps
     - [ be32, 0x00012484, 0x38800000 ] # li r4, 0x0
 
@@ -885,7 +885,7 @@ Anchors:
 
   DOD3_Camera_H_Sens_Notes: &DOD3_Camera_H_Sens_Notes "When using the FPS unlock patch the horizontal camera sensitivity gets very low. This patch changes a multiplier so that the horizontal camera sensitivity slider in the game's settings does something meaningful again. The multiplier can be altered in the patch file."
   # Sensitivity formula is "SliderValue * (Multiplier + 1)"
-  # Where SliderValue is the setting (0-15) from the game settings and 
+  # Where SliderValue is the setting (0-15) from the game settings and
   # default Multiplier is 0.125, giving a default range of 0.125 - 2.
   # 0.35 seems good from my testing, feel free to change as you see fit.
   DOD3_Camera_H_Sens_Multiplier: &DOD3_Camera_H_Sens_Multiplier 0.35000000
@@ -1615,68 +1615,68 @@ Anchors:
   NieR_FPS_USEU: &NieR_FPS_USEU
   # "unlock" framerate
     - [ be32, 0x00f7c3b8, 0x386001f5 ] # li r3, 1f5
-  
+
     - [ be32, 0x00711b50, 0x489c3ef1 ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x010d5a40, 0x7ccc42e6 ] # mftb r6             // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x010d5a44, 0x3ca0010e ] # lis r5,0x010e       // load high bits of address (0x010e23c8)
     - [ be32, 0x010d5a48, 0x60a523c8 ] # ori r5,r5,0x23c8    // load low bits of address
     - [ be32, 0x010d5a4c, 0x7c85202a ] # ldx r4,r5,r4        // load previous frames mftb reading
     - [ be32, 0x010d5a50, 0xf8c50000 ] # std r6,0x0(r5)      // store this frames mftb reading
     - [ be32, 0x010d5a54, 0x7cc43050 ] # subf r6,r4,r6       // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x010d5a58, 0xf8c50080 ] # std r6,0x80(r5)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x010d5a5c, 0xcba50080 ] # lfd f29,0x80(r5)    // load mftb delta into FPR
     - [ be32, 0x010d5a60, 0xffa0ee9c ] # fcfid f29,f29       // convert integer to double
     - [ be32, 0x010d5a64, 0xffa0e818 ] # frsp f29,f29        // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x010d5a68, 0x3c80010d ] # r4,0x10d            // load high bits constants pointer
     - [ be32, 0x010d5a6c, 0x60845a40 ] # ori r4,r4,0x5a40    // load low bits of constants pointer
     - [ be32, 0x010d5a70, 0xc384003c ] # lfs f28,0x3c(r4)    // load timebase frequency
     - [ be32, 0x010d5a74, 0xec3de024 ] # fdivs f1,f29,f28    // divide timebase delta by timebase frequency
-  
+
   # return
     - [ be32, 0x010d5a78, 0x4e800020 ] # blr                 // return
-  
+
   # constants
     - [ be32, 0x010d5a7c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
   NieR_FPS_JP: &NieR_FPS_JP
   # "unlock" framerate
     - [ be32, 0x00f7cbcc, 0x386001f5 ] # li r3, 1f5
-  
+
     - [ be32, 0x00711d58, 0x489c48e9 ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x010d6640, 0x7ccc42e6 ] # mftb r6             // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x010d6644, 0x3ca0010e ] # lis r5,0x010e       // load high bits of address (0x010e23e8)
     - [ be32, 0x010d6648, 0x60a523e8 ] # ori r5,r5,0x23e8    // load low bits of address
     - [ be32, 0x010d664c, 0x7c85202a ] # ldx r4,r5,r4        // load previous frames mftb reading
     - [ be32, 0x010d6650, 0xf8c50000 ] # std r6,0x0(r5)      // store this frames mftb reading
     - [ be32, 0x010d6654, 0x7cc43050 ] # subf r6,r4,r6       // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x010d6658, 0xf8c50080 ] # std r6,0x80(r5)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x010d665c, 0xcba50080 ] # lfd f29,0x80(r5)    // load mftb delta into FPR
     - [ be32, 0x010d6660, 0xffa0ee9c ] # fcfid f29,f29       // convert integer to double
     - [ be32, 0x010d6664, 0xffa0e818 ] # frsp f29,f29        // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x010d6668, 0x3c80010d ] # r4,0x10d            // load high bits constants pointer
     - [ be32, 0x010d666c, 0x60846640 ] # ori r4,r4,0x6640    // load low bits of constants pointer
     - [ be32, 0x010d6670, 0xc384003c ] # lfs f28,0x3c(r4)    // load timebase frequency
     - [ be32, 0x010d6674, 0xec3de024 ] # fdivs f1,f29,f28    // divide timebase delta by timebase frequency
-  
+
   # return
     - [ be32, 0x010d6678, 0x4e800020 ] # blr                 // return
-  
+
   # constants
     - [ be32, 0x010d667c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
@@ -1779,7 +1779,7 @@ Anchors:
     - [be32, 0x019A8C10, 0x01A42FB8]
     - [be32, 0x019A8C14, 0x01A42B60]
     - [be32, 0x019A8C18, 0x01A42EC0]
-  
+
   DS2_JP_Net: &DS2_JP_Net
     - [be32, 0x01998B00, 0x01A32EC8]
     - [be32, 0x01998B04, 0x01A32EC0]
@@ -2780,7 +2780,7 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
     Author: Bungholio
     Notes: 
     Patch Version: 1.2
-    Patch:  
+    Patch:
       - [ be32, 0x0023D834, 0x90CB041C ]
   Infinite Raritanium:
     Games:
@@ -2789,7 +2789,7 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
     Author: Bungholio
     Notes:
     Patch Version: 1.2
-    Patch:  
+    Patch:
       - [ be32, 0x0023D864, 0x90CB0420 ]
   Instagib Mode:
     Games:
@@ -2836,7 +2836,7 @@ PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
     Author: Bungholio
     Notes: 
     Patch Version: 1.2
-    Patch:  
+    Patch:
       - [ be32, 0x0023D804, 0x90CB041C ]
   Infinite Raritanium:
     Games:
@@ -2845,7 +2845,7 @@ PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
     Author: Bungholio
     Notes:
     Patch Version: 1.2
-    Patch:  
+    Patch:
       - [ be32, 0x0023D834, 0x90CB0420 ]
   Instagib Mode:
     Games:
@@ -3400,7 +3400,7 @@ Anchors:
     - [ be32, 0x00a51b6c, 0xec000332 ] #f0=f0*f12
     - [ be32, 0x00a51b70, 0x4e800020 ] #Return
 
-  # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming 
+  # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming
   # address. Without them this patch wouldn't have been possible.
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
@@ -3409,42 +3409,42 @@ Anchors:
   #    3 = Tonemapping // reversed from orbis version confirmed this exists
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   tlou100_post: &tlou100_post
   #  - [ be32, 0x00a7991c, 0x38000003 ] # Post-processing modes                    (mem address: 0x14C79C7)
     - [ be32, 0x0093e300, 0xc0090990 ] # load e190 with 0
     - [ be32, 0x0093e30c, 0xc1890990 ] # load e198 with 0f
     - [ be32, 0x0093e394, 0xc0090990 ] # load e1a0 with 0f
-  
+
   tlou100_mesh: &tlou100_mesh
     - [ be16, 0x00923a94, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x142C584)
-  
+
   # Many settings below are enabled/disabled in sub_A7A340. In this subroutine,
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   tlou100_ssao: &tlou100_ssao
     - [ be16, 0x00a7a470, 0x9b83 ]     # Disable SSAO                (r27 => r28) (mem address: 0x14C7C0F)
-  
+
   tlou100_mb: &tlou100_mb
     - [ be16, 0x00a7a4d4, 0x9b83 ]     # Disable motion blur         (r27 => r28) (mem address: 0x14C7C2E)
-  
+
   tlou100_dof: &tlou100_dof
     - [ be16, 0x00a7a4e0, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x14C7C31)
-  
+
   tlou100_dbv: &tlou100_dbv
     - [ be16, 0x00a7a760, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x14C7E9D)
-  
+
   tlou100_dbf: &tlou100_dbf
     - [ be16, 0x00a7a7ac, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x14C7EC1)
-  
+
   tlou100_db: &tlou100_db
     - [ be16, 0x00a7a7b8, 0x90e3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x14C7F93)
     - [ be16, 0x00a516ec, 0x4800 ]     # Cabin resort crash fix
-  
+
   tlou100_speed: &tlou100_speed
     - [ be16, 0x00a7a6b8, 0x9383 ]     # Speedboost                               (mem address: 0x14c7e5f)
 
@@ -3664,8 +3664,8 @@ Anchors:
     - [ be32, 0x00a8042c, 0xedad0332 ] #f13=f13*f12
     - [ be32, 0x00a80430, 0xec000332 ] #f0=f0*f12
     - [ be32, 0x00a80434, 0x4e800020 ] #Return
-  
-  # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming 
+
+  # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming
   # address. Without them this patch wouldn't have been possible.
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
@@ -3674,35 +3674,35 @@ Anchors:
   #    3 = Tonemapping // reversed from orbis version confirmed this exists
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   tlou111_post: &tlou111_post
   #  - [ be32, 0x00aa944c, 0x38000003 ] # Post-processing modes                    (mem address: 0x1571867)
     - [ be32, 0x0096be4c, 0xc0090990 ] # load e190 with 0
     - [ be32, 0x0096BE58, 0xc1890990 ] # load e198 with 0
     - [ be32, 0x0096BEE0, 0xc0090990 ] # load e1a0 with 0
-  
+
   tlou111_mesh: &tlou111_mesh
     - [ be16, 0x009515d8, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x14A9604)
-  
+
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine,
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   tlou111_ssao: &tlou111_ssao
     - [ be16, 0x00aa9f9c, 0x9b83 ] #Disable SSAO
 
   tlou111_mb: &tlou111_mb
     - [ be32, 0x0096aa94, 0x480000e0 ] # Disable motion blur
-  
+
   tlou111_dof: &tlou111_dof
     - [ be16, 0x00aaa00c, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x1571AD1)
 
   tlou111_dbf: &tlou111_dbf
     - [ be16, 0x00aaa2d8, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x1571D65)
-  
+
   tlou111_db: &tlou111_db
     - [ be16, 0x00aaa2e4, 0x90c3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x1571E37)
     - [ be16, 0x00aaa290, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571D41)
@@ -3822,7 +3822,7 @@ Anchors:
     - [ be32, 0x00a800fc, 0x7c040378 ] #mr r4 = r0
     - [ be32, 0x00a80100, 0x419e000c ] #beq
     - [ be32, 0x00a80104, 0x38840006 ] #addi r4 = r4 + 6
-    - [ be32, 0x00a80108, 0x48000008 ] 
+    - [ be32, 0x00a80108, 0x48000008 ]
     - [ be32, 0x00a8010c, 0x3884fffa ] #subi r4 = r4 - 6
     - [ be32, 0x00a80110, 0xb0892052 ] #sth r4 Store new current result
     - [ be32, 0x00a80114, 0x4800000c ] #b to Store final result
@@ -3840,7 +3840,7 @@ Anchors:
     - [ be32, 0x00a80138, 0x80a92064 ] #Restore r5
     - [ be32, 0x00a8013c, 0x38920001 ] #Restore r4
     - [ be32, 0x00a80140, 0x4e800020 ] #Return
-  
+
   tlou111_speed: &tlou111_speed
     - [ be16, 0x00aaa1e8, 0x9383 ]     # Speedboost                               (mem address: 0x1571d03)
 
@@ -3893,7 +3893,7 @@ Anchors:
   # console exclusive code, we don't need this due to post on spu off
     - [ be32, 0x0129741c, 0x0157186e ] # ptr
   #  - [ be32, 0x00aa9444, 0x38600001 ] # remove branch and set r3 to 1
-  #  - [ be16, 0x00aa9464, 0x9869 ]     # load from r3 
+  #  - [ be16, 0x00aa9464, 0x9869 ]     # load from r3
 
   tlou111_cparts: &tlou111_cparts
     - [ be64, 0x0e8d600, 0x496E66696E697465 ] # str Infinite Everything (Ammo, Items, Skills, Parts)
@@ -4022,7 +4022,7 @@ Anchors:
     - [ utf8, 0x011b48e5, "switchblade                    " ]
     - [ utf8, 0x011b4905, "rifle-improvised-fullauto      " ]
     # write str to menu init
-    - [ be32, 0x004f1690, 0x39ef0020 ] #     addi       r15,r15,0x20 
+    - [ be32, 0x004f1690, 0x39ef0020 ] #     addi       r15,r15,0x20
     - [ be32, 0x004f1694, 0x489c5b99 ] #     bl         SUB_00eb722c
     - [ be32, 0x00eb722c, 0x3c80011b ] #     lis        r4,0x11b
     - [ be32, 0x00eb7230, 0x60844125 ] #     ori        r4,r4,0x4125
@@ -4124,11 +4124,11 @@ Anchors:
   gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
 
   debugmenunotes: &debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
-  
+
   fpsnotes: &fpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500FPS in loading screen."
-  
+
   tloumlaanotes: &tloumlaanotes "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
-  
+
   tlou100_title: &tlou100_title
     "The Last of Us":
       BCES01584: [ 01.00 ]
@@ -4138,7 +4138,7 @@ Anchors:
       BCAS20270: [ 01.00 ]
       NPEA00435: [ 01.00 ]
       NPUA80960: [ 01.00 ]
-  
+
   tlou111_title: &tlou111_title
     "The Last of Us":
       BCES01584: [ 01.11 ]
@@ -4467,7 +4467,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00082960, 0x38000005 ] # tools level load 
+      - [ be32, 0x00082960, 0x38000005 ] # tools level load
       - [ be32, 0x00082788, 0x60000000 ] # tools gain pickup, result will be
   "Bug Fix: University Nailbomb Softlock Fix":
     Games: *tlou111_title
@@ -4873,116 +4873,116 @@ Anchors:
   # Since we only change store reg, no need to patch the rest.
   uc2_Disc_100_60FPS: &uc2_Disc_100_60FPS
     - [ be16, 0x000c9250, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9B5FB)
-  
+
   uc2_Disc_100_UnlockFPS: &uc2_Disc_100_UnlockFPS
     - [ be16, 0x000c9250, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9B5FB)
-  
+
   uc2_Disc_100_ssao: &uc2_Disc_100_ssao
     - [ be16, 0x000c9370, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9B642)
-  
+
   uc2_Disc_100_dof: &uc2_Disc_100_dof
     - [ be16, 0x000c93c4, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9B651)
-  
+
   uc2_Disc_100_post: &uc2_Disc_100_post
     - [ be16, 0x000c93ec, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9B668)
-  
+
   uc2_Disc_100_light: &uc2_Disc_100_light
     - [ be16, 0x000c962c, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9B964)
     - [ be16, 0x000c9630, 0x9b63 ] # Enable stencil buffer for gpu lighting  (mem address: 0x0E9B965)
 
   uc2_Disc_100_mesh: &uc2_Disc_100_mesh
     - [ be16, 0x0072ec3c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F995D0)
-  
+
   uc2_Disc_100_mb: &uc2_Disc_100_mb
     - [ be16, 0x000c93c0, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9B64F)
-  
+
   uc2_Disc_100_vmb: &uc2_Disc_100_vmb
     - [ be16, 0x000c961c, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9B894)
-  
+
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_Disc_109_60FPS: &uc2_Disc_109_60FPS
     - [ be16, 0x000c26f0, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9C1FB)
-  
+
   uc2_Disc_109_UnlockFPS: &uc2_Disc_109_UnlockFPS
     - [ be16, 0x000c26f0, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9C1FB)
-  
+
   uc2_Disc_109_ssao: &uc2_Disc_109_ssao
     - [ be16, 0x000c2810, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9C242)
-  
+
   uc2_Disc_109_dof: &uc2_Disc_109_dof
     - [ be16, 0x000c2864, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9C251)
-  
+
   uc2_Disc_109_post: &uc2_Disc_109_post
     - [ be16, 0x000c288c, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9C268)
-  
+
   uc2_Disc_109_light: &uc2_Disc_109_light
     - [ be16, 0x000c2ad0, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9C564)
     - [ be16, 0x000c2ad4, 0x9b63 ] # Enable stencil buffer for gpu lighting  (mem address: 0x0E9C565)
 
   uc2_Disc_109_mesh: &uc2_Disc_109_mesh
     - [ be16, 0x0072d44c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F9BFD0)
-  
+
   uc2_Disc_109_mb: &uc2_Disc_109_mb
     - [ be16, 0x000c2860, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9C24F)
-  
+
   uc2_Disc_109_vmb: &uc2_Disc_109_vmb
     - [ be16, 0x000c2ac0, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9C494)
-  
+
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_PSN_60FPS: &uc2_PSN_60FPS
     - [ be16, 0x000c2bb8, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9C1FB)
-  
+
   uc2_PSN_UnlockFPS: &uc2_PSN_UnlockFPS
     - [ be16, 0x000c2bb8, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9C1FB)
-  
+
   uc2_PSN_ssao: &uc2_PSN_ssao
     - [ be16, 0x000c2cd8, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9C242)
-  
+
   uc2_PSN_dof: &uc2_PSN_dof
     - [ be16, 0x000c2d2c, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9C251)
-  
+
   uc2_PSN_post: &uc2_PSN_post
     - [ be16, 0x000c2d54, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9C268)
-  
+
   uc2_PSN_light: &uc2_PSN_light
     - [ be16, 0x000c2f98, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9C564)
     - [ be16, 0x000c2f9c, 0x9b63 ]  # Enable stencil buffer for gpu lighting (mem address: 0x0E9C565)
 
   uc2_PSN_mesh: &uc2_PSN_mesh
     - [ be16, 0x0072d394, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F9BFD0)
-  
+
   uc2_PSN_mb: &uc2_PSN_mb
     - [ be16, 0x000c2d28, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9C24F)
-  
+
   uc2_PSN_vmb: &uc2_PSN_vmb
     - [ be16, 0x000c2f88, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9C494)
-  
+
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_Demo_60FPS: &uc2_Demo_60FPS
     - [ be16, 0x000c94a0, 0x9163 ] # Framelock: 1 (60 FPS Limit)
-  
+
   uc2_Demo_UnlockFPS: &uc2_Demo_UnlockFPS
     - [ be16, 0x000c94a0, 0x9183 ] # Framelock: 0 (No FPS Limit)
-  
+
   uc2_Demo_ssao: &uc2_Demo_ssao
     - [ be16, 0x000c95c0, 0x9b83 ] # Disable SSAO
-  
+
   uc2_Demo_dof: &uc2_Demo_dof
     - [ be16, 0x000c9614, 0x9b83 ] # Disable depth of field
-  
+
   uc2_Demo_post: &uc2_Demo_post
     - [ be16, 0x000c963c, 0x9b83 ] # Disable Post on SPU
-  
+
   uc2_Demo_light: &uc2_Demo_light
     - [ be16, 0x000c987c, 0x9b83 ] # Disable Spu lighting
     - [ be16, 0x000c9880, 0x9b63 ] # Enable stencil buffer for gpu lighting
 
   uc2_Demo_mesh: &uc2_Demo_mesh
     - [ be16, 0x0030624c, 0x9949 ] # Disable mesh trimming
-  
+
   uc2_Demo_mb: &uc2_Demo_mb
     - [ be16, 0x000c9610, 0x9b83 ] # Motion blur
-  
+
   uc2_Demo_vmb: &uc2_Demo_vmb
     - [ be16, 0x000c986c, 0x9b83 ] # Velocity motion blur
 
@@ -5115,7 +5115,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00023c64, 0x419e ]
-      - [ be32, 0x00062e10, 0x60000000 ] #Don't pause on Select button 
+      - [ be32, 0x00062e10, 0x60000000 ] #Don't pause on Select button
   "Bug Fix: Quit to Menu Crash": # TODO: port to PSN ver
     Games:
       "Uncharted 2: Among Thieves":
@@ -5628,12 +5628,12 @@ Anchors:
   uc3_100_FPS: &uc3_100_FPS
     - [ be32, 0x0093b348, 0x90e30034 ] #FPS
     - [ be32, 0x0093b34c, 0x90e30038 ] #Unlock
-  
+
   uc3_100_mlaa: &uc3_100_mlaa
     - [ be32, 0x00635f90, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0093b46c, 0x9b83 ]     # store 0
    #- [ be32, 0x00720340, 0x480009ac ] # unconditonally branch to disable MLAA
-  
+
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
   #    1 = Bloom
@@ -5641,36 +5641,36 @@ Anchors:
   #    3 = ??? (Tonemapping)
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   uc3_100_post: &uc3_100_post
     - [ be32, 0x0093acd4, 0x39000003 ] # Post-processing modes  (mem address: 0x1346D47)
-  
+
   uc3_100_mesh: &uc3_100_mesh
     - [ be32, 0x0073f05c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12C3940)
-  
+
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine, // needs correction on subroutine
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   uc3_100_ssao: &uc3_100_ssao
     - [ be32, 0x00635f8c, 0x60000000 ] # nop byte write on 00 57
     - [ be32, 0x0093b3ac, 0x9b830057 ] # Disable SSAO           (mem address: 0x1346DBF)
-  
+
   uc3_100_dof: &uc3_100_dof
     - [ be32, 0x0093b430, 0x9b83007a ] # Disable Depth of Field (mem address: 0x1346DE2)
-  
+
   uc3_100_speed: &uc3_100_speed
     - [ be32, 0x0093b44c, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x1346DE9)
-  
+
   uc3_100_dbv: &uc3_100_dbv
     - [ be32, 0x0093b6b8, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1347061)
-  
+
   uc3_100_dbf: &uc3_100_dbf
     - [ be32, 0x0093b6f8, 0x9b83031d ] # Depth border fix       (mem address: 0x1347085)
-  
+
   uc3_100_db: &uc3_100_db
     - [ be32, 0x00635f88, 0x60000000 ] # nop byte write on 03 ec
     - [ be32, 0x0093b704, 0x90e303ec ] # Depth buffer           (mem address: 0x1347157)
@@ -5679,7 +5679,7 @@ Anchors:
     - [ be32, 0x00635fb8, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0093b494, 0x9b83 ]     # store 0
    #- [ be32, 0x00720368, 0x480009ac ] # unconditonally branch to disable MLAA
-  
+
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
   #    1 = Bloom
@@ -5687,36 +5687,36 @@ Anchors:
   #    3 = ??? (Tonemapping)
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   uc3_JP_100_post: &uc3_JP_100_post
     - [ be32, 0x0093acfc, 0x39000003 ] # Post-processing modes
-  
+
   uc3_JP_100_mesh: &uc3_JP_100_mesh
     - [ be32, 0x0073f084, 0x980b0004 ] # Disable mesh trimming
-  
+
   # Many settings below are enabled/disabled in sub_93B2C0. In this subroutine,
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   uc3_JP_100_ssao: &uc3_JP_100_ssao
     - [ be32, 0x00635fb4, 0x60000000 ] # nop byte write on 00 57
     - [ be32, 0x0093b3d4, 0x9b830057 ] # Disable SSAO
-  
+
   uc3_JP_100_dof: &uc3_JP_100_dof
     - [ be32, 0x0093b458, 0x9b83007a ] # Disable Depth of Field
-  
+
   uc3_JP_100_speed: &uc3_JP_100_speed
     - [ be32, 0x0093b474, 0x9b830081 ] # Speedup (WCB)
-  
+
   uc3_JP_100_dbv: &uc3_JP_100_dbv
     - [ be32, 0x0093b6e0, 0x9b6302f9 ] # Depth buffer viewport
-  
+
   uc3_JP_100_dbf: &uc3_JP_100_dbf
     - [ be32, 0x0093b720, 0x9b83031d ] # Depth border fix
-  
+
   uc3_JP_100_db: &uc3_JP_100_db
     - [ be32, 0x00635fb0, 0x60000000 ] # nop byte write on 03 ec
     - [ be32, 0x0093b72c, 0x90e303ec ] # Depth buffer = 2
@@ -5761,10 +5761,10 @@ Anchors:
     - [ be32, 0x00728d04, 0xc29e0068 ]
     - [ be32, 0x00728d08, 0xec630532 ]
     - [ be32, 0x00728d0c, 0x4e800020 ]
-  
+
   uc3_110_mb: &uc3_110_mb
     - [ be32, 0x0077aacc, 0x480000c4 ] # Disable motion blur
-  
+
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
   #    1 = Bloom
@@ -5772,36 +5772,36 @@ Anchors:
   #    3 = ??? (Tonemapping)
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   uc3_110_post: &uc3_110_post
     - [ be32, 0x0094d0b8, 0x39000003 ] # Post-processing modes  (mem address: 0x1376F77)
-  
+
   uc3_110_mesh: &uc3_110_mesh
     - [ be32, 0x00747b0c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12D5A70)
-  
+
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine, // needs correction on subroutine
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   uc3_110_ssao: &uc3_110_ssao
     - [ be32, 0x0063e010, 0x60000000 ] # nop byte write on 00 57
     - [ be32, 0x0094d790, 0x9b830057 ] # Disable SSAO           (mem address: 0x1376FEF)
-  
+
   uc3_110_dof: &uc3_110_dof
     - [ be32, 0x0094d814, 0x9b83007a ] # Disable Depth of Field (mem address: 0x1377012)
-  
+
   uc3_110_speed: &uc3_110_speed
     - [ be32, 0x0094d830, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x1377019)
-  
+
   uc3_110_dbv: &uc3_110_dbv
     - [ be32, 0x0094da9c, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1377291)
-  
+
   uc3_110_dbf: &uc3_110_dbf
     - [ be32, 0x0094dadc, 0x9b83031d ] # Depth border fix       (mem address: 0x13772B5)
-  
+
   uc3_110_db: &uc3_110_db
     - [ be32, 0x0063e00c, 0x60000000 ] # nop byte write on 03 ec
     - [ be32, 0x0094dae8, 0x90e303ec ] # Depth buffer = 2       (mem address: 0x1377387)
@@ -5809,7 +5809,7 @@ Anchors:
   uc3_119_FPS: &uc3_119_FPS
     - [ be32, 0x0096e980, 0x3b6000da ] #FPS
     - [ be32, 0x0096e97c, 0x48000040 ] #Unlock
-  
+
   uc3_119_mlaa: &uc3_119_mlaa
     - [ be32, 0x0064df28, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0096eaa0, 0x9b83 ]     # store 0
@@ -5850,10 +5850,10 @@ Anchors:
     - [ be32, 0x0073a230, 0xc29e2998 ]
     - [ be32, 0x0073a234, 0xec630532 ]
     - [ be32, 0x0073a238, 0x4e800020 ]
-  
+
   uc3_119_mb: &uc3_119_mb
     - [ be32, 0x0078b0e4, 0x480000c4 ] # Disable motion blur
-  
+
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
   #    1 = Bloom
@@ -5861,36 +5861,36 @@ Anchors:
   #    3 = ??? (Tonemapping)
   #    4 = Bloom & Depth of Field
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
-  
+
   uc3_119_post: &uc3_119_post
     - [ be32, 0x0096e308, 0x39000003 ] # Post-processing modes  (mem address: 0x1386547)
-  
+
   uc3_119_mesh: &uc3_119_mesh
     - [ be32, 0x0075811c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12E0DF0)
-  
+
   # Many settings below are enabled/disabled in sub_96E8CC. In this subroutine,
   #    r6  = 2
   #    r27 = 1
   #    r28 = 0
   # and these are stored into some memory blob to represent settings. Most values can be switched by just changing the
   # source register from one to the other, though some are words and some are bytes, so be careful.
-  
+
   uc3_119_ssao: &uc3_119_ssao
     - [ be32, 0x0064df24, 0x60000000 ] # nop byte write on 00 57
     - [ be32, 0x0096e9e0, 0x9b830057 ] # Disable SSAO           (mem address: 0x13865BF)
-  
+
   uc3_119_dof: &uc3_119_dof
     - [ be32, 0x0096ea64, 0x9b83007a ] # Disable Depth of Field (mem address: 0x13865E2)
-  
+
   uc3_119_speed: &uc3_119_speed
     - [ be32, 0x0096ea80, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x13865E9)
-  
+
   uc3_119_dbv: &uc3_119_dbv
     - [ be32, 0x0096ecec, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1386861)
-  
+
   uc3_119_dbf: &uc3_119_dbf
     - [ be32, 0x0096ed2c, 0x9b83031d ] # Depth border fix       (mem address: 0x1386885)
-  
+
   uc3_119_db: &uc3_119_db
     - [ be32, 0x0064df20, 0x60000000 ] # nop byte write on 03 ec
     - [ be32, 0x0096ed38, 0x90e303ec ] # Depth buffer = 2       (mem address: 0x1386957)
@@ -6030,7 +6030,7 @@ Anchors:
     - [ be64, 0x00da0530, 0x44697361626C6520 ]
     - [ be64, 0x00da0538, 0x446561746820436F ]
     - [ be64, 0x00da053f, 0x6C6C6973696F6E00 ]
-  # Disallow Npcs from Spawning  
+  # Disallow Npcs from Spawning
     - [ be64, 0x00da0548, 0x446973616C6C6F77 ]
     - [ be64, 0x00da0550, 0x204E706373206672 ]
     - [ be64, 0x00da0558, 0x6F6D20537061776E ]
@@ -6039,7 +6039,7 @@ Anchors:
     - [ be64, 0x00da0570, 0x4D616B6520496E76 ]
     - [ be64, 0x00da0578, 0x756C6E657261626C ]
     - [ be16, 0x00da0580, 0x6500 ]
-  # Enable Death Zone  
+  # Enable Death Zone
     - [ be64, 0x00da0590, 0x456E61626C652044 ]
     - [ be64, 0x00da0598, 0x65617468205A6F6E ]
     - [ be16, 0x00da05a0, 0x6500 ]
@@ -6966,7 +6966,7 @@ PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
     Author: Aphelion
     Notes:
     Patch Version: 1.1
-    Patch: 
+    Patch:
       - [ load, *tox_hp ]
 
 PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
@@ -7020,7 +7020,7 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
     Author: Aphelion
     Notes:
     Patch Version: 1.0
-    Patch: 
+    Patch:
       - [ load, *tox_hp ]
 
 Anchors:
@@ -7028,7 +7028,7 @@ Anchors:
     - [ be32, 0x00184934, 0x9BA70010 ]
     - [ be32, 0x0017A7E8, 0x3A10270E ]
 
-PPU-d96e838f10e9730d8ba21659e02663b44488670f: 
+PPU-d96e838f10e9730d8ba21659e02663b44488670f:
   60 FPS:
     Games:
       "Tales of Xillia 2":
@@ -7051,7 +7051,7 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
     Patch:
       - [ load, *tox2_hp ]
 
-PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0: 
+PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
   60 FPS:
     Games:
       "Tales of Xillia 2":
@@ -7168,7 +7168,7 @@ PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
       "Resistance 2":
         NPEA00431: [ 01.00 ]
     Author: Whatcookie, illusion
-    Patch Version: 1.0 
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0064816c, 0x60000000 ] # nop
       - [ be32, 0x00648178, 0x60000000 ] # nop
@@ -7245,8 +7245,8 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
       Author: Lex6s
       Notes:  Fixes ship-shield getting out of sync when playing above 60fps. The "120" value can be changed to match your display framerate.
       Patch Version: 1.0
-      Patch:        
-        - [ bef32, 0x72E034, 120 ] # Shield Framerate Fix   
+      Patch:
+        - [ bef32, 0x72E034, 120 ] # Shield Framerate Fix
 
 PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
     120fps Absorb Sync Fix:
@@ -7257,8 +7257,8 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
       Author: Lex6s
       Notes: Fixes absorb glow effect getting out of sync when playing above 60fps. The "120" value can be changed to match your display framerate.
       Patch Version: 1.0
-      Patch:        
-        - [ bef32, 0x73100C, 120 ] # Absorb Glow Framerate Fix 
+      Patch:
+        - [ bef32, 0x73100C, 120 ] # Absorb Glow Framerate Fix
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
     21:9 Aspect Ratio Fix:
@@ -7296,8 +7296,8 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       Author: Lex6s
       Notes: Fixes ship-shield getting out of sync when playing above 60fps. The "120" value can be changed to match your display framerate.
       Patch Version: 1.0
-      Patch:        
-        - [ bef32, 0x72E0D4, 120 ] # Shield Framerate Fix 
+      Patch:
+        - [ bef32, 0x72E0D4, 120 ] # Shield Framerate Fix
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
     120fps Absorb Sync Fix:
@@ -7307,7 +7307,7 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       Author: Lex6s
       Notes: Fixes absorb glow effect getting out of sync when playing above 60fps. The "120" value can be changed to match your display framerate.
       Patch Version: 1.0
-      Patch:        
+      Patch:
         - [ bef32, 0x72BF80, 120 ] # Absorb Glow Framerate Fix
 
 Anchors:
@@ -7480,7 +7480,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
     Author: illusion
-    Notes: Camera may zoom out during cinematic change. 
+    Notes: Camera may zoom out during cinematic change.
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x732894, 1.5 ]
@@ -7526,7 +7526,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
     Author: illusion
-    Notes: Camera may zoom out during cinematic change. 
+    Notes: Camera may zoom out during cinematic change.
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x7328C4, 1.5 ]
@@ -7584,7 +7584,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
     Author: illusion
-    Notes: Camera may zoom out during cinematic change. 
+    Notes: Camera may zoom out during cinematic change.
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x7328DC, 1.5 ]
@@ -7680,7 +7680,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
       - [ be16, 0x000703c0, 0x4800 ] # game
       - [ be16, 0x00070434, 0x4800 ] # inter background
       - [ be16, 0x000708d4, 0x4800 ] # phys
-      - [ be16, 0x00071af0, 0x4800 ] # 
+      - [ be16, 0x00071af0, 0x4800 ] #
       - [ be16, 0x00071ed0, 0x4800 ] # particles
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
@@ -7725,7 +7725,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
         NPHA80193: [ All ]
     Author: illusion
     Patch Version: 1.0
-    Patch: 
+    Patch:
       - [ be16, 0x0004b5d4, 0x409e ]
 
 PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
@@ -7770,45 +7770,45 @@ Anchors:
     - [be32, 0x00146e40, 0x38800002 ] # li r4 0x2
     - [be32, 0x00146e44, 0x989f070c ]
     - [be32, 0x00146e48, 0x989f070d ]
-  
+
   # delta time
     - [ be32, 0x001423e8, 0x494447e9 ] # jump to code cave
-  
+
   # get mftb
     - [ be32, 0x01586bd0, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-  
+
   # get mftb delta
     - [ be32, 0x01586bd4, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
     - [ be32, 0x01586bd8, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
     - [ be32, 0x01586bdc, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x01586be0, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x01586be4, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-  
+
   # mftb delta to float
     - [ be32, 0x01586be8, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x01586bec, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
     - [ be32, 0x01586bf0, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x01586bf4, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-  
+
   # mftb delta to seconds
     - [ be32, 0x01586bf8, 0x3e400158 ] # r18,0x158             // load high bits constants pointer
     - [ be32, 0x01586bfc, 0x62526bd0 ] # ori r18,r18,0x6bd0    // load low bits of constants pointer
     - [ be32, 0x01586c00, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x01586c04, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x01586c08, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
-  
+
   # check timestep size
     - [ be32, 0x01586c0c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x01586c10, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-  
+
   # set maximum timestep
     - [ be32, 0x01586c14, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-  
+
   # cleanup
     - [ be32, 0x01586c18, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x01586c1c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x01586c20, 0x4e800020 ] # blr                   // return
-  
+
   # constants
     - [ be32, 0x01586c24, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x01586c28, 0.05000000 ] # maximum timestep size (50ms or 20fps)
@@ -7878,40 +7878,40 @@ Anchors:
   # the following addresses are offset by -0x760
   # get mftb
     - [ be32, 0x01586470, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-              
+
   # get mftb delta
     - [ be32, 0x01586474, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
     - [ be32, 0x01586478, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
     - [ be32, 0x0158647c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x01586480, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x01586484, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-              
+
   # mftb delta to float
     - [ be32, 0x01586488, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x0158648c, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
     - [ be32, 0x01586490, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x01586494, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-              
+
   # mftb delta to seconds
     - [ be32, 0x01586498, 0x3e400158 ] # r18,0x0158            // load high bits constants pointer
     - [ be32, 0x0158649c, 0x62526470 ] # ori r18,r18,0x6470    // load low bits of constants pointer (offset by -0x760)
     - [ be32, 0x015864a0, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x015864a4, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x015864a8, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
-              
+
   # check timestep size
     - [ be32, 0x015864ac, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x015864b0, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-              
+
   # set maximum timestep
     - [ be32, 0x015864b4, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-              
-  # cleanup   
+
+  # cleanup
     - [ be32, 0x015864b8, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x015864bc, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x015864c0, 0x4e800020 ] # blr                   // return
-              
-  # constants 
+
+  # constants
     - [ be32, 0x015864c4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x015864c8, 0.05000000 ] # maximum timestep size (50ms or 20fps)
 
@@ -7962,7 +7962,7 @@ PPU-61606645abb9cc39f48072166c04df8da629fb99:
     - [ be32, 0x00149328, 0x989f071d ]
     - [ be32, 0x0014932c, 0x989f071e ]
     - [ be32, 0x00145368, 0x494a71d9 ]
-    - [ be32, 0x015ec540, 0x7eac42e6 ]  	  
+    - [ be32, 0x015ec540, 0x7eac42e6 ]
     - [ be32, 0x015ec544, 0x3ec00184 ]
     - [ be32, 0x015ec548, 0x62d60db4 ]
     - [ be32, 0x015ec54c, 0x7e96a02a ]
@@ -8232,14 +8232,14 @@ Anchors:
     - [ be16, 0x5894BA, 0x0001 ]
     - [ be16, 0x589802, 0x0001 ]
     - [ be16, 0x58982A, 0x0001 ]
-  
+
   HMPDF_FPS_JP: &HMPDF_FPS_JP
     - [ be32, 0xBF22FC, 0x3F800000 ]
     - [ be16, 0x586202, 0x0001 ]
     - [ be16, 0x586226, 0x0001 ]
     - [ be16, 0x58656E, 0x0001 ]
     - [ be16, 0x586596, 0x0001 ]
-  
+
   HMPDF_FPS_Notes: &HMPDF_FPS_Notes "Patch accelerates some game effects by 2x. Does not affect playability."
 
 PPU-f3227f57ec001582b253035fd90de77f05ead470:
@@ -8295,21 +8295,21 @@ Anchors:
     - [ be16, 0x6AF46E, 0x0001 ]
     - [ be16, 0x6AF492, 0x0001 ]
     - [ be16, 0x6AF4B6, 0x0001 ]
-  
+
   HMPDF2_FPS_AS: &HMPDF2_FPS_AS
     - [ be32, 0x042390, 0x3F800000 ]
     - [ be16, 0x6AF0B6, 0x0001 ]
     - [ be16, 0x6AF0D6, 0x0001 ]
     - [ be16, 0x6AF0FA, 0x0001 ]
     - [ be16, 0x6AF11E, 0x0001 ]
-  
+
   HMPDF2_FPS_JP: &HMPDF2_FPS_JP
     - [ be32, 0x041F40, 0x3F800000 ]
     - [ be16, 0x6A48F6, 0x0001 ]
     - [ be16, 0x6A4916, 0x0001 ]
     - [ be16, 0x6A493A, 0x0001 ]
     - [ be16, 0x6A495E, 0x0001 ]
-  
+
   HMPDF2_FPS_Notes: &HMPDF2_FPS_Notes "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability."
 
 PPU-092c43e2bcacccfe3cdc22b0ab8062b91d4e1cf9:
@@ -8536,7 +8536,7 @@ PPU-0bb16b9f48bfea44a892110beec812664e84539f:
     Games:
       "Killzone":
         NPUA80856: [ 01.00 ]
-    Author: illusion, Mew21 
+    Author: illusion, Mew21
     Notes: 
     Patch Version: 1.0
     Patch:
@@ -8807,16 +8807,16 @@ PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
       - [ be32, 0x003dcc28, 0x4bf47530 ] # b 0x00324158
       - [ be32, 0x00324158, 0xfb7d00b4 ] # std r27,0xb4(r29)
       - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
-      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c  
+      - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
   Vehicle class select for every event:
-    Games: 
+    Games:
       "Motorstorm":
         BCES00006: [ All ]
     Author: Scirvir
     Notes: 
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004fab54, 0x2fa3FFFF ]      
+      - [ be32, 0x004fab54, 0x2fa3FFFF ]
 
 PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
   Unlock FPS:
@@ -8853,7 +8853,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
       - [ be32, 0x0040d398, 0xfb7d00bc ] # std r27,0xbc(r29)
       - [ be32, 0x0040d39c, 0x480bde0c ] # b 0x004cb1a8
   Vehicle class select for every event:
-    Games: 
+    Games:
       "Motorstorm Update 3.1 (Complete Edition)":
         BCES00006: [ All ]
     Author: Scirvir
@@ -8926,7 +8926,7 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       - [ be32, 0x0032415c, 0xfb7d00bc ] # std r27,0xbc(r29)
       - [ be32, 0x00324160, 0x480b8acc ] # b 0x003dcc2c
   Vehicle class select for every event:
-    Games: 
+    Games:
       "Motorstorm":
         BCUS98137: [ All ]
     Author: Scirvir
@@ -9080,7 +9080,7 @@ Anchors:
     - [ be32, 0x00B4D638, 0x25732573 ]
     - [ be32, 0x00B4D63C, 0x2F6D6F64 ]
     - [ be32, 0x00B4D640, 0x2E63706B ]
-  
+
   # make mod.cpk file path
     - [ be32, 0x00114CA4, 0x3C6000B5 ] # lis    r3, cpkPathString@ha
     - [ be32, 0x00114CA8, 0x33E3D638 ] # addic  r31, r3, cpkPathString@l
@@ -9098,7 +9098,7 @@ Anchors:
     - [ be32, 0x00114CD8, 0x60000000 ] # nop
     - [ be32, 0x00114CDC, 0x48B44A9E ] # ba     branchOffset
     - [ be32, 0x00114CE0, 0x60000000 ] # nop
-  
+
   # trampoline
     - [ be32, 0x00B44A9C, 0x7FA3EB78 ] # mr     r3, r29
     - [ be32, 0x00B44AA0, 0x48114B77 ] # bla    criFsBindCpk
@@ -9108,12 +9108,12 @@ Anchors:
     - [ be32, 0x00B44AB0, 0x60000000 ] # nop
     - [ be32, 0x00B44AB4, 0x48114CE6 ] # ba     0x114CA4 + 0x40
     - [ be32, 0x00B44AB8, 0x60000000 ] # nop
-    
+
   p5_SkipIntro_Author: &p5_SkipIntro_Author TGEnigma
   p5_SkipIntro_PatVer: &p5_SkipIntro_PatVer 1.0
   p5_SkipIntro: &p5_SkipIntro
     - [ be32, 0x0055AC8C, 0x60000000 ]
-  
+
   p5_60FPS_Author: &p5_60FPS_Author TGEnigma, rexis
   p5_60FPS_Notes: &p5_60FPS_Notes "Patch may accelerate some game effects by 2x. Updated patch fixes subtitle cut-off in cutscenes."
   p5_60FPS_PatVer: &p5_60FPS_PatVer 1.1
@@ -9396,7 +9396,7 @@ Anchors:
   #  - [ bef32, 0x003b25cc, 0.1666667 ]
   #  - [ bef32, 0x003BC478, 0.1666667 ]
   #  - [ be32, 0x000a7e6c, 0x3d803c88 ]
-  
+
     - [ be32, 0x0026dca0, 0x3860001e ] # batting cages
     - [ be32, 0x0026de4c, 0x3860001e ]
     - [ be32, 0x0026e36c, 0x3860001e ]
@@ -9435,7 +9435,7 @@ Anchors:
     - [ be32, 0x0028eb3c, 0x3860001e ]
     - [ be32, 0x0028eb60, 0x3860001e ]
     - [ be32, 0x001cfe60, 0x3860001e ] # blink anim
-  
+
   # Removes framerate dependency for both script interpreters
     - [ be32, 0xb44e00, 0x38600001 ]  # li         r3,0x1
     - [ be32, 0xb44e04, 0x38dd0170 ]  # addi       r6,r29,0x170
@@ -9446,10 +9446,10 @@ Anchors:
     - [ be32, 0xb44e18, 0x7c844014 ]  # addc       r4,r4,r8
     - [ be32, 0xb44e1c, 0x7ca54014 ]  # addc       r5,r5,r8
     - [ be32, 0xb44e20, 0x481f2642 ]  # ba         0x1f2640
-  
+
     - [ be32, 0xb44e24, 0x3cc000d9 ]  # lis        r6,0xd9
     - [ be32, 0xb44e28, 0x60c6c6ec ]  # ori        r6,r6,0xc6ec
-  
+
     - [ be32, 0xb44e2c, 0x3ce000ff ]  # lis        r7,0xff
     - [ be32, 0xb44e30, 0x80e7fb50 ]  # lwz        r7,-0x4b0(r7)
     - [ be32, 0xb44e34, 0x81060000 ]  # lwz        r8,0(r6)
@@ -9460,23 +9460,23 @@ Anchors:
     - [ be32, 0xb44e48, 0x55080ffe ]  # rlwinm     r8,r8,0x1,0x1f,0x1f
     - [ be32, 0xb44e4c, 0x5509103a ]  # rlwinm     r9,r8,0x2,0x0,0x1d
     - [ be32, 0xb44e50, 0x4e800020 ]  # blr
-  
+
     - [ be32, 0x1f161c, 0x38600174 ]  # li         r3,0x174
     - [ be32, 0x1f1640, 0x38800174 ]  # li         r4,0x174
     - [ be32, 0x1f2634, 0x48b44e02 ]  # ba         0xb44e00
-  
+
     - [ be32, 0x575fb4, 0x48b44e27 ]  # bla        0xb44e24
     - [ be32, 0x576010, 0x48b44e27 ]  # bla        0xb44e24
     - [ be32, 0x576020, 0x7c892010 ]  # subfc      r4,r9,r4
     - [ be32, 0x57602c, 0x7c882010 ]  # subfc      r4,r8,r4
     - [ be32, 0x575fc4, 0x7c892010 ]  # subfc      r4,r9,r4
     - [ be32, 0x575fe0, 0x7c681810 ]  # subfc      r3,r8,r3
-  
+
   p5_DLC_Author: &p5_DLC_Author TGEnigma
   p5_DLC_PatVer: &p5_DLC_PatVer 1.0
   p5_DLC: &p5_DLC
     - [ be32, 0x197AE8, 0x4E800020 ]
-  
+
   p5_DisableBlur_Author: &p5_DisableBlur_Author TGEnigma, ruipin, kd-11
   p5_DisableBlur_PatVer: &p5_DisableBlur_PatVer 1.0
   p5_DisableBlur: &p5_DisableBlur
@@ -9488,7 +9488,7 @@ Anchors:
     - [ be32, 0x00FEE28E, 0xC800001D ]
     - [ be32, 0x00FEE292, 0x00000000 ]
     - [ be32, 0x00FEE296, 0x00000000 ]
-  
+
   p5_DisableDistortion_Author: &p5_DisableDistortion_Author TGEnigma, ruipin, kd-11
   p5_DisableDistortion_PatVer: &p5_DisableDistortion_PatVer 1.0
   p5_DisableDistortion: &p5_DisableDistortion
@@ -9500,7 +9500,7 @@ Anchors:
     - [ be32, 0x00FE2E3C, 0xC800001D ]
     - [ be32, 0x00FE2E40, 0x00000000 ]
     - [ be32, 0x00FE2E44, 0x00000000 ]
-  
+
   p5_Disable100PctDistortion_Author: &p5_Disable100PctDistortion_Author TGEnigma, ruipin, kd-11
   p5_Disable100PctDistortion_PatVer: &p5_Disable100PctDistortion_PatVer 1.0
   p5_Disable100PctDistortion: &p5_Disable100PctDistortion
@@ -9512,7 +9512,7 @@ Anchors:
     - [ be32, 0x00FE31E0, 0xC800001D ]
     - [ be32, 0x00FE31E4, 0x00000000 ]
     - [ be32, 0x00FE31E8, 0x00000000 ]
-  
+
   p5_NoHudLite_Author: &p5_NoHudLite_Author TGEnigma
   p5_NoHudLite_Notes: &p5_NoHudLite_Notes "Elements can disabled separately by adding/removing their respective lines from the patch."
   p5_NoHudLite_PatVer: &p5_NoHudLite_PatVer 1.0
@@ -9527,13 +9527,13 @@ Anchors:
     - [ be32, 0x28FBA4, 0x4E800020 ] # party panel
     - [ be32, 0xD6B48, 0x60000000 ] # mini map
     - [ be32, 0xD6490, 0x60000000 ] # mini map
-  
+
   p5_NoHud_Author: &p5_NoHud_Author TGEnigma
   p5_NoHud_Notes: &p5_NoHud_Notes "Disable HUD by disabling rendering of 2D elements entirely. Breaks things."
   p5_NoHud_PatVer: &p5_NoHud_PatVer 1.0
   p5_NoHud: &p5_NoHud
     - [ be32, 0x116934, 0x4E800020 ]
-  
+
   p5_BgmOrder_Author: &p5_BgmOrder_Author TGEnigma, lipsum
   p5_BgmOrder_Notes: &p5_BgmOrder_Notes "Plays encounter BGM in file order."
   p5_BgmOrder_PatVer: &p5_BgmOrder_PatVer 1.0
@@ -9541,43 +9541,43 @@ Anchors:
   # patch SoundManager__SetEquipBgm
   # branch to trampoline
     - [ be32, 0x0006CD68, 0x48B44B52 ] # ba 0x00B44B50
-  
+
   # trampoline
     - [ be32, 0x00B44B50, 0x3FDE3000 ] # addis  r30, r30, 0x3000 -> 0x30B49738
     - [ be32, 0x00B44B54, 0xA07E0000 ] # lhz    r3, 0x0(r30)
     - [ be32, 0x00B44B58, 0x38630001 ] # addi   r3, r3, 0x1
     - [ be32, 0x00B44B5C, 0x2803000B ] # cmplwi r3, 0xb (MaxBgm)
-  
+
     - [ be16, 0x00B44B5E, 11 ] # bgm_10 -> 11
-  
+
     - [ be32, 0x00B44B60, 0x41800008 ] # blt    +0x8
     - [ be32, 0x00B44B64, 0x38600000 ] # li     r3, 0x0
-  
+
   # patch music id
     - [ be32, 0x00B44B68, 0xB07E0000 ] # sth   r3, 0(r30)
-  
+
   # return
     - [ be32, 0x00B44B6C, 0x2C1E0000 ] # cmpwi r30, 0
     - [ be32, 0x00B44B70, 0x4806CD6E ] # ba    0x0006CD6C
-  
+
   # patch Btl__PlayBgm
   # branch to trampoline
     - [ be32, 0x0063ACE4, 0x48B44B87 ] # bla 0x00B44B84 (trampoline)
     - [ be32, 0x0063ACE8, 0x4806CCBB ] # bla 0x0006CCB8 (SoundManager__GetBgmId)
-  
+
   # trampoline
-  
+
   # check and return if not normal battle bgm
     - [ be32, 0x00B44B84, 0x2C1F012C ] # cmpwi r31, 300 # normal battle
     - [ be32, 0x00B44B88, 0x41820008 ] # beq   8        # return if not normal battle music
     - [ be32, 0x00B44B8C, 0x4E800020 ] # blr
-  
+
   # randomize sound bank
     - [ be32, 0x00B44B90, 0x4806CCCB ] # bla 0x0006CCC8 (SoundManager__SetEquipBgm)
-  
+
   # return
     - [ be32, 0x00B44B94, 0x4863ACEA ] # ba 0x0063ACE8
-  
+
   p5_BgmRandom_Author: &p5_BgmRandom_Author TGEnigma, lipsum
   p5_BgmRandom_Notes: &p5_BgmRandom_Notes "Plays encounter BGM in random order."
   p5_BgmRandom_PatVer: &p5_BgmRandom_PatVer 1.1
@@ -9585,54 +9585,54 @@ Anchors:
   # patch SoundManager__SetEquipBgm
   # branch to trampoline
     - [ be32, 0x0006CD68, 0x48B44B52 ] # ba 0x00B44B50
-  
+
   # trampoline
   # Rnd() % MaxBgm
     - [ be32, 0x00B44B50, 0x4891DA07 ] # bla   0x0091DA04 (Rnd)
     - [ be32, 0x00B44B54, 0x38C0000B ] # li    r6, 11 (MaxBgm)
-  
+
     - [ be16, 0x00B44B56, 11 ] # bgm_10 -> 11
-  
+
     - [ be32, 0x00B44B58, 0x30860001 ] # addic r4, r6, 1
     - [ be32, 0x00B44B5C, 0x7C832396 ] # divwu r4, r3, r4
     - [ be32, 0x00B44B60, 0x7CA431D6 ] # mullw r5, r4, r6
     - [ be32, 0x00B44B64, 0x7C852014 ] # addc  r4, r5, r4
     - [ be32, 0x00B44B68, 0x7C641810 ] # subfc r3, r4, r3
     - [ be32, 0x00B44B6C, 0x7C6307B4 ] # extsw r3, r3
-  
+
   # patch music id
     - [ be32, 0x00B44B70, 0x3FDE3000 ] # addis r30, r30, 0x3000 -> 0x30B49738
     - [ be32, 0x00B44B74, 0xB07E0000 ] # sth   r3, 0(r30)
-  
+
   # return
     - [ be32, 0x00B44B78, 0x2C1E0000 ] # cmpwi r30, 0
     - [ be32, 0x00B44B7C, 0x4806CD6E ] # ba    0x0006CD6C
-  
+
   # patch Btl__PlayBgm
   # branch to trampoline
     - [ be32, 0x0063ACE4, 0x48B44B87 ] # bla 0x00B44B84 (trampoline)
     - [ be32, 0x0063ACE8, 0x4806CCBB ] # bla 0x0006CCB8 (SoundManager__GetBgmId)
-  
+
   # trampoline
-  
+
   # check and return if not normal battle bgm
     - [ be32, 0x00B44B84, 0x2C1F012C ] # cmpwi r31, 300 # normal battle
     - [ be32, 0x00B44B88, 0x41820008 ] # beq   8        # return if not normal battle music
     - [ be32, 0x00B44B8C, 0x4E800020 ] # blr
-  
+
   # randomize sound bank
     - [ be32, 0x00B44B90, 0x4806CCCB ] # bla 0x0006CCC8 (SoundManager__SetEquipBgm)
-  
+
   # return
     - [ be32, 0x00B44B94, 0x4863ACEA ] # ba 0x0063ACE8
-  
+
   p5_NaviLines_Author: &p5_NaviLines_Author lipsum
   p5_NaviLines_Notes: &p5_NaviLines_Notes "Disables Navigator battle lines (voice and message popups)."
   p5_NaviLines_PatVer: &p5_NaviLines_PatVer 1.0
   p5_NaviLines: &p5_NaviLines
     - [ be32, 0x0074A3B4, 0x38A00000 ] # li r5, 0x0 # morgana
     - [ be32, 0x0074A424, 0x38A00000 ] # li r5, 0x0 # futaba
-  
+
   p5_MaxBullet_Author: &p5_MaxBullet_Author lipsum
   p5_MaxBullet_Notes: &p5_MaxBullet_Notes "To change the maximum bullet counts for each character, edit this patch and input your desired values. By default, this patch retains the game defaults until modified."
   p5_MaxBullet_PatVer: &p5_MaxBullet_PatVer 1.0
@@ -9657,7 +9657,7 @@ Anchors:
     - [ be16, 0x00D5C1AA, 12 ] # haru (12)
     - [ be16, 0x00D5C1AC, 0  ] # futaba (0)
     - [ be16, 0x00D5C1AE, 24 ] # goro (24)
-  
+
   p5_FileAccessLog_Author: &p5_FileAccessLog_Author TGEnigma
   p5_FileAccessLog_Notes: &p5_FileAccessLog_Notes "Prints file paths to the console's TTY Log as they are accessed."
   p5_FileAccessLog_PatVer: &p5_FileAccessLog_PatVer 1.0
@@ -9710,7 +9710,7 @@ Anchors:
     - [ be32, 0x00B44B44, 0xFB2100F8 ] # std    r25, 0xF8(r1)
     - [ be32, 0x00B44B48, 0xFAA100D8 ] # std    r21, 0xD8(r1)
     - [ be32, 0x00B44B4C, 0x4E800020 ] # blr
-  
+
   p5_FixScriptPrintingFunctions_Author: &p5_FixScriptPrintingFunctions_Author TGEnigma
   p5_FixScriptPrintingFunctions_Notes: &p5_FixScriptPrintingFunctions_Notes "Allows flowscripts to print strings to TTY Log."
   p5_FixScriptPrintingFunctions_PatVer: &p5_FixScriptPrintingFunctions_PatVer 1.0
@@ -9748,7 +9748,7 @@ Anchors:
     - [ be32, 0x00B44BEC, 0x30631820 ]
     - [ be32, 0x00B44BF0, 0x48AD546F ]
     - [ be32, 0x00B44BF4, 0x481E9D42 ]
-  
+
   p5_d0d0d0_Author: &p5_d0d0d0_Author Lipsum
   p5_d0d0d0_Notes: &p5_d0d0d0_Notes "Replaces the red color in the pause menu. Yellow by default."
   p5_d0d0d0_PatVer: &p5_d0d0d0_PatVer 1.0
@@ -9797,7 +9797,7 @@ Anchors:
     - [ be32, 0x004c5f18, 0x60842200 ] # ori param_2,param_2,0xd000
     - [ be32, 0x0052b1b0, 0x3ca0ffff ] # lis param_3,-0x2f30
     - [ be32, 0x0052b1c4, 0x60a52200 ] # ori param_3,param_3,0xd000
-  
+
   p5_StopPartyPanel_Author: &p5_StopPartyPanel_Author DeathChaos
   p5_StopPartyPanel_Notes: &p5_StopPartyPanel_Notes "Prevents in combat HP/SP Bar UI from loading for testing purposes."
   p5_StopPartyPanel_PatVer: &p5_StopPartyPanel_PatVer 1.0
@@ -9809,21 +9809,21 @@ Anchors:
     - [ be32, 0x28fc34, 0x60000000 ]
     - [ be32, 0x28fc40, 0x60000000 ]
     - [ be32, 0x28fc54, 0x60000000 ]
-  
+
   p5_Title_US: &p5_Title_US
     "Persona 5":
       BLUS31604: [ All ]
       NPUB31848: [ All ]
-  
+
   p5_Title_EU: &p5_Title_EU
     "Persona 5":
       BLES02247: [ All ]
       NPEB02436: [ All ]
-  
+
   p5_Title_JP_100: &p5_Title_JP_100
     "Persona 5":
       BLJM61346: [ 01.00 ]
-  
+
   p5_Title_JP_103: &p5_Title_JP_103
     "Persona 5":
       BLJM61346: [ 01.03 ]
@@ -10457,14 +10457,14 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
 Anchors:
   sly4mlaaEU: &sly4mlaaEU
   - [ be32, 0x00531CC0, 0x38800000 ] # li r4 0x0
-  sly4mlaaUK: &sly4mlaaUK 
+  sly4mlaaUK: &sly4mlaaUK
   - [ be32, 0x00531cb0, 0x38800000 ] # li r4 0x0
   sly4mlaaUS: &sly4mlaaUS
   - [ be32, 0x00531D40, 0x38800000 ] # li r4 0x0
 
   sly4mlaanotes: &sly4mlaanotes "Disables MLAA, allowing for the use of resolution scaling. Use in conjunction with the SPU MLAA patch for better performance."
 
-PPU-5c741b00514f07966c2820d67f395d945a88d79d: 
+PPU-5c741b00514f07966c2820d67f395d945a88d79d:
   Disable MLAA:
     Games:
       "Sly Cooper: Thieves in Time":
@@ -10486,7 +10486,7 @@ PPU-326bf99e707d7d2be160ec116bb6313ae2f42ebc:
     Patch:
       - [ load, *sly4mlaaUK ]
 
-PPU-69acb9900ff44f7d7a3b25b226b213966955aed4: 
+PPU-69acb9900ff44f7d7a3b25b226b213966955aed4:
   Disable MLAA:
     Games:
       "Sly Cooper: Thieves in Time":
@@ -10497,7 +10497,7 @@ PPU-69acb9900ff44f7d7a3b25b226b213966955aed4:
     Patch:
         - [ load, *sly4mlaaUS ]
 
-PPU-fb1e9e9160613b89047715ce62f2da97201118d1: 
+PPU-fb1e9e9160613b89047715ce62f2da97201118d1:
   Disable MLAA:
     Games:
       "Sly Cooper: Thieves in Time":
@@ -10506,9 +10506,9 @@ PPU-fb1e9e9160613b89047715ce62f2da97201118d1:
     Notes: *sly4mlaanotes
     Patch Version: 1.0
     Patch:
-        - [ load, *sly4mlaaEU ] 
+        - [ load, *sly4mlaaEU ]
 
-PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad: 
+PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
   Disable MLAA:
     Games:
       "Sly Cooper: Thieves in Time":
@@ -10544,68 +10544,68 @@ Anchors:
   su1280x720_Digital: &su1280x720_Digital
   # Main backbuffer (880x720)
     - [ be16, 0x013D197A, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x0144A53E, 1280 ]
     - [ be16, 0x0144A5F6, 1280 ]
     - [ be16, 0x0144A652, 1280 ]
-  
+
   su1280x720_USEUPhysical: &su1280x720_USEUPhysical
   # Main backbuffer (880x720)
     - [ be16, 0x00DD85B6, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x013608D6, 1280 ]
     - [ be16, 0x0136098E, 1280 ]
     - [ be16, 0x013609EA, 1280 ]
-  
+
   swa1280x720_BLJM60112: &swa1280x720_BLJM60112
   # Main backbuffer (880x720)
     - [ be16, 0x00DEC49E, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x013644FE, 1280 ]
     - [ be16, 0x013645B6, 1280 ]
     - [ be16, 0x01364612, 1280 ]
-  
+
   su1280x720_v102: &su1280x720_v102
   # Main backbuffer (880x720)
     - [ be16, 0x00DFD7C6, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x01371B8E, 1280 ]
     - [ be16, 0x01371C46, 1280 ]
     - [ be16, 0x01371CA2, 1280 ]
-  
+
   su1280x720_NPUB90194_Demo: &su1280x720_NPUB90194_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013C4B5A, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
     - [ be16, 0x0143913E, 1280 ]
     - [ be16, 0x0143919A, 1280 ]
-  
+
   su1280x720_NPEB90132_Demo: &su1280x720_NPEB90132_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013C4B62, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x0143908E, 1280 ]
     - [ be16, 0x01439146, 1280 ]
     - [ be16, 0x014391A2, 1280 ]
-  
+
   swa1280x720_NPJB90162_Demo: &swa1280x720_NPJB90162_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013C4B56, 1280 ]
-  
+
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
     - [ be16, 0x0143913E, 1280 ]
     - [ be16, 0x0143919A, 1280 ]
-  
+
   su1280x720_Notes: &su1280x720_Notes "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
-  
+
   suAspectRatio_v102: &suAspectRatio_v102
   # Aspect ratio. Divide width by height to get the float value.
     - [ bef32, 0x0275DB2C, 2.37037037 ]
@@ -11057,7 +11057,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100mlaa ]
-      
+
 PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
   "Skip Intro":
     Games:
@@ -11558,47 +11558,47 @@ Anchors:
   SPU_MLAA_01: &SPU_MLAA_01
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
   #  - [ be32, 0x0000349c, 0x40800017 ] # il r23 0 # causes blackscreen
-  
+
   SPU_MLAA_02: &SPU_MLAA_02
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
     - [ be32, 0x0000349c, 0x40800017 ] # il r23 0
-  
+
   SPU_MLAA_03: &SPU_MLAA_03
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
     - [ be32, 0x000034a4, 0x40800017 ] # il r23 0
-  
+
   SPU_MLAA_04: &SPU_MLAA_04
     - [ be32, 0x00005948, 0x40800094 ] # il r20 1
     - [ be32, 0x0000690c, 0x40800027 ] # il r39 0
-  
+
   SPU_MLAA_05: &SPU_MLAA_05
     - [ be32, 0x00004440, 0x40800002 ] # il r2 0
     - [ be32, 0x000056C4, 0x4080008a ] # il r10 0
-  
+
   SPU_MLAA_06: &SPU_MLAA_06
     - [ be32, 0x000033b0, 0x40800017 ] # il r23 0
     - [ be32, 0x0000373c, 0x4080001f ] # il r31 0
-  
+
   SPU_MLAA_07: &SPU_MLAA_07
     - [ be32, 0x0000325c, 0x40800003 ] # il r3 0
     - [ be32, 0x00004C00, 0x40800091 ] # il r17 1
-  
+
   SPU_MLAA_08: &SPU_MLAA_08
     - [ be32, 0x000036d4, 0x4080001d ] # il r29 0
     - [ be32, 0x000033d0, 0x40800005 ] # il r5 0
-  
+
   SPU_MLAA_09: &SPU_MLAA_09
     - [ be32, 0x00003744, 0x4080001e ] # il r30 0
     - [ be32, 0x00003430, 0x40800006 ] # il r6 0
-  
+
   SPU_MLAA_10: &SPU_MLAA_10
     - [ be32, 0x000036bc, 0x4080001c ] # il r28 0
     - [ be32, 0x000033c0, 0x40800005 ] # il r5 0
-  
+
   SPU_MLAA_11: &SPU_MLAA_11
     - [ be32, 0x00003344, 0x40800003 ] # il r3 0
     - [ be32, 0x000037b4, 0x4020007f ] # spu nop
-  
+
   SPU_MLAA_Notes: &SPU_MLAA_Notes "Removes Morphological Anti-Aliasing, known as \"MLAA\", a form of post process anti-aliasing which is done using the CELL's SPUs instead of the RSX for extra performance."
 
 SPU-5177cbc4bf45c8a0a6968c2a722da3a9e6cfb28b: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
@@ -12204,7 +12204,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Patch Version: 1.1
     Patch:
       - [ be32, 0x004140D8, 0x60000000 ]
-      - [ be32, 0x004134E8, 0x60000000 ] 
+      - [ be32, 0x004134E8, 0x60000000 ]
   Infinite Caps:
     Games:
       "Fallout 3 GOTY Edition":
@@ -12342,7 +12342,7 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007D3A18, 0x60000000 ]      
+      - [ be32, 0x007D3A18, 0x60000000 ]
   Max Cash:
     Games:
       "Borderlands 2":
@@ -12416,7 +12416,7 @@ PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00187A94, 0x79200FA4 ]
-      - [ be32, 0x00187A9C, 0x7800F846 ]     
+      - [ be32, 0x00187A9C, 0x7800F846 ]
   Infinite Ammo:
     Games:
       "Borderlands: The Pre-Sequel":
@@ -12425,7 +12425,7 @@ PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007B4E44, 0x60000000 ]      
+      - [ be32, 0x007B4E44, 0x60000000 ]
   Max Cash:
     Games:
       "Borderlands: The Pre-Sequel":
@@ -12726,7 +12726,7 @@ PPU-ae7633f0660f4386e11a3d727d54512d7990721b:
     Author: "illusion"
     Patch:
       - [ utf8, 0x00ea63d8, "true\x00" ]
-  Disable MLAA(Post-processing On SPU): 
+  Disable MLAA(Post-processing On SPU):
     Games:
       "Until Dawn (Beyond)":
         TEST70001: [ 01.00 ]
@@ -13057,7 +13057,7 @@ PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
 
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   All powers unlocked:
-    Games: 
+    Games:
       "inFamous":
         NPUA80480: [ All ]
         NPEA00252: [ All ]
@@ -13068,10 +13068,10 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x002d6448, 0x60000000 ]
       - [ byte, 0x002d6457, 0x7f ]
-   
+
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   All powers unlocked:
-    Games: 
+    Games:
       "inFamous":
         BCES00609: [ All ]
     Author: Scirvir
@@ -13083,7 +13083,7 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   All powers unlocked:
-    Games: 
+    Games:
       "inFamous":
         BCUS98119: [ All ]
     Author: Scirvir
@@ -13310,7 +13310,7 @@ PPU-5b1fe8f0b8eab817078b6db007de327653bc65dc: # BIOHAZARD CODE: Veronica 完全�
     Patch Version: 1.0
     Patch:
       - [ be32, 0x1AE304, 0x38600000 ]
-      
+
 PPU-37f854495138eeb5afdc2db9d4cf6a2d4918beb6: # BIOHAZARD CODE: Veronica 完全版 (JP)
   Remove Door Animations:
     Games:
@@ -13321,7 +13321,7 @@ PPU-37f854495138eeb5afdc2db9d4cf6a2d4918beb6: # BIOHAZARD CODE: Veronica 完全�
     Patch Version: 1.0
     Patch:
       - [ be32, 0x1AE304, 0x38600000 ]
-      
+
 PPU-b4b1ebe7a069782537a13d5bdbc15d6e900ceb25: # RESIDENT EVIL CODE: Veronica X (US)
   Remove Door Animations:
     Games:
@@ -13332,7 +13332,7 @@ PPU-b4b1ebe7a069782537a13d5bdbc15d6e900ceb25: # RESIDENT EVIL CODE: Veronica X (
     Patch Version: 1.0
     Patch:
       - [ be32, 0x1AE25C, 0x38600000 ]
-      
+
 PPU-df822d7d47de09c5672201db8cc633009037f54f: # RESIDENT EVIL CODE: Veronica X (EU)
   Remove Door Animations:
     Games:
