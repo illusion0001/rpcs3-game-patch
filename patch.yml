@@ -10399,11 +10399,11 @@ PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
 
 Anchors:
   SHADOWS_FPSnotes: &SHADOWS_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 31FPS."
-  
+
   SHADOWS_FPS: &SHADOWS_FPS
     - [ be32, 0x009E0CE4, 0x60000000 ] # nop
     - [ be32, 0x009E0D64, 0x60000000 ] # nop
-  
+
   SHADOWS_DOFnotes: &SHADOWS_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
 
   SHADOWS_DOF: &SHADOWS_DOF
