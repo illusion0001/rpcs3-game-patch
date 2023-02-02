@@ -4296,6 +4296,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
       - [ be32, 0x00353e7c, 0x3b800001 ] # (icemesh)
       - [ be32, 0x00a0fbc8, 0x38600000 ] # (illusion) # For RPCS3 only, bypass connecting screen
       - [ be32, 0x01268210, 0x0132f628 ] # (illusion)
+      - [ be32, 0x00356830, 0x38600000 ] # (illusion)
   Skip Intro:
     Games: *tlou100_title
     Author: illusion
@@ -4510,6 +4511,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x0036baa4, 0x4800002c ] # (illusion)
       - [ be32, 0x0129a01c, 0x01363538 ] # (illusion)
       - [ be32, 0x00a3f320, 0x38600000 ] # (illusion)
+      - [ be32, 0x0036dad0, 0x38600000 ] # (illusion)
   "DEBUG: Replace Task With Test Tasks":
     Games: *tlou111_title
     Author: "illusion, icemesh" # SID Utils
