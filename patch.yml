@@ -1601,7 +1601,7 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   # Author: Unknown
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004E8B9B, 0 ]
+      - [ byte, 0x004e8b9b, 0x00 ]
   "Enable Car Debug":
     Games:
       "Need for Speed: Carbon":
@@ -1772,22 +1772,22 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
 
 Anchors:
   DS2_USEU_Net: &DS2_USEU_Net
-    - [be32, 0x019A8C00, 0x01A43068]
-    - [be32, 0x019A8C04, 0x01A43060]
-    - [be32, 0x019A8C08, 0x01A42F18]
-    - [be32, 0x019A8C0C, 0x01A42F10]
-    - [be32, 0x019A8C10, 0x01A42FB8]
-    - [be32, 0x019A8C14, 0x01A42B60]
-    - [be32, 0x019A8C18, 0x01A42EC0]
+    - [ be32, 0x019a8c00, 0x01a43068 ]
+    - [ be32, 0x019a8c04, 0x01a43060 ]
+    - [ be32, 0x019a8c08, 0x01a42f18 ]
+    - [ be32, 0x019a8c0c, 0x01a42f10 ]
+    - [ be32, 0x019a8c10, 0x01a42fb8 ]
+    - [ be32, 0x019a8c14, 0x01a42b60 ]
+    - [ be32, 0x019a8c18, 0x01a42ec0 ]
 
   DS2_JP_Net: &DS2_JP_Net
-    - [be32, 0x01998B00, 0x01A32EC8]
-    - [be32, 0x01998B04, 0x01A32EC0]
-    - [be32, 0x01998B08, 0x01A32D78]
-    - [be32, 0x01998B0C, 0x01A32D70]
-    - [be32, 0x01998B10, 0x01A32E18]
-    - [be32, 0x01998B14, 0x01A329C8]
-    - [be32, 0x01998B18, 0x01A32D20]
+    - [ be32, 0x01998b00, 0x01a32ec8 ]
+    - [ be32, 0x01998b04, 0x01a32ec0 ]
+    - [ be32, 0x01998b08, 0x01a32d78 ]
+    - [ be32, 0x01998b0c, 0x01a32d70 ]
+    - [ be32, 0x01998b10, 0x01a32e18 ]
+    - [ be32, 0x01998b14, 0x01a329c8 ]
+    - [ be32, 0x01998b18, 0x01a32d20 ]
 
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   Bypass Network Requirement:
@@ -1926,24 +1926,24 @@ PPU-b711c520e0295b480e4163e473886122cd033329:
       - [ be32, 0x0116CB84, 0x38600000 ]
 
 PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Skate":
         BLES00124: [ 01.00 ]
-    Author: tuukkas
-    Notes: Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work. HUD will be stretched.
+    Author: "tuukkas"
+    Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work. HUD will be stretched."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x010A34D4, 0x4002F1BD ]
-  Disable Motion Blur:
+      - [ be32, 0x010a34d4, 0x4002f1bd ]
+  "Disable Motion Blur":
     Games:
       "Skate":
         BLES00124: [ 01.00 ]
-    Author: tuukkas
+    Author: "tuukkas"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x010A3774, 0 ]
+      - [ be32, 0x010a3774, 0x00000000 ]
 
 PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
   21:9 Aspect Ratio:
@@ -13552,42 +13552,42 @@ PPU-e219c746e09c57aa7acd83172537d367c62ae928:
       - [ be32, 0x00107F4, 0x4800006C ]
 
 PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
-  60 FPS:
+  "60 FPS":
     Games:
       "Twisted Metal":
         BCUS98106: [ 01.06 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0065dbac, 0x9383 ]
 
 PPU-513044b01c6672954bbeb1e09f74a1bc848da9e7:
-  60 FPS:
+  "60 FPS":
     Games:
       "Twisted Metal":
         NPUA80079: [ 01.06 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0065e16c, 0x9383 ]
 
 PPU-3918c0b580c357ac035694ab5035297d21cd096f:
-   60 fps:
+  "60 FPS":
     Games:
       "Twisted Metal":
         NPEA00362: [ 01.06 ]
-    Author: Illusion
+    Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0065dbac, 0x9383 ]
 
 PPU-93a03e014f798af85c849023f1307eaa9aa573fd:
-  60 FPS:
+  "60 FPS":
     Games:
       "Twisted Metal Demo":
         NPUA70192: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0063342c, 0x9383 ]
