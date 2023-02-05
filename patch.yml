@@ -865,15 +865,15 @@ PPU-3b68a1ecc7531d1ae170fb00e2db03d17bffcd44:
       - [ be32, 0x1fe7ec, 0x60000000 ]
 
 PPU-QoiFRPF8j00N996aQMthtWqEUG0Y:
-  P1 Infinite Health:
-   Games:
-     "Marvel vs. Capcom 2":
-       NPUB30068: [ All ]
-   Author: Petareo
-   Notes: You will never lose health when attacked
-   Patch Version: 1.0
-   Patch:
-     - [ be32, 0x0064768D, 0x006481D5 ]
+  "P1 Infinite Health":
+    Games:
+      "Marvel vs. Capcom 2":
+        NPUB30068: [ All ]
+    Author: "Petareo"
+    Notes: "You will never lose health when attacked."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0064768d, 0x006481d5 ]
 
 Anchors:
   DOD3_FPS_Notes: &DOD3_FPS_Notes "Need to also change Vblank frequency to 120Hz for 60FPS or 240Hz for 120FPS. Going over 120FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
@@ -6830,63 +6830,63 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ be32, 0x0085f804, 0x38800000 ] # unlock fps in menu
 
 PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
-    Author: illusion
+    Author: "illusion"
     Notes: "Enable \"Stretch to Display Area\" option to take advantage of this patch."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x9BAD04, 0x3F95C28F ]
-  Extended FOV:
+      - [ be32, 0x9bad04, 0x3f95c28f ]
+  "Extended FOV":
     Games:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
-    Author: illusion
-    Notes: Might work with other versions with adjustments.
+    Author: "illusion"
+    Notes: "Might work with other versions with adjustments."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x9BCCD4, 0.75 ] # tweak this number to your liking
-  No HUD:
+      - [ bef32, 0x9bccd4, 0.75 ] # tweak this number to your liking
+  "No HUD":
     Games:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
-    Author: illusion
-    Notes: Disable In Game HUD, needs further testing.
+    Author: "illusion"
+    Notes: "Disable In Game HUD, needs further testing."
     Patch Version: 1.0
     Patch:
-    #  - [ be32, 0x9C3488, 0x00000001 ] # Menu HUD scale (never use this)
-      - [ be32, 0x9BA544, 0x00000000 ]
+    #  - [ be32, 0x9c3488, 0x00000001 ] # Menu HUD scale (never use this)
+      - [ be32, 0x9ba544, 0x00000000 ]
 
 PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
     Notes: "Enable \"Stretch to Display Area\" option to take advantage of this patch."
     Patch Version: 1.0
     Patch:
-      - [be32, 0x9BAD3C, 0x3F95C28F]
-  Extended FOV:
+      - [ be32, 0x9bad3c, 0x3f95c28f ]
+  "Extended FOV":
     Games:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
-    Author: illusion
-    Notes: Might work with other versions with adjustments.
+    Author: "illusion"
+    Notes: "Might work with other versions with adjustments."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x9BCD0C, 0.75 ] # tweak this number to your liking
-  No HUD:
+      - [ bef32, 0x9bcd0c, 0.75 ] # tweak this number to your liking
+  "No HUD":
     Games:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
-    Author: illusion
-    Notes: Disable In Game HUD, needs further testing.
+    Author: "illusion"
+    Notes: "Disable In Game HUD, needs further testing."
     Patch Version: 1.0
     Patch:
-    #  - [ be32, 0x9C34C8, 0x00000001 ] # Menu HUD scale (never use this)
-      - [ be32, 0x9BA57C, 0x00000000 ]
+    #  - [ be32, 0x9c34c8, 0x00000001 ] # Menu HUD scale (never use this)
+      - [ be32, 0x9ba57c, 0x00000000 ]
 
 PPU-faf46906b362bc8d484de5b91f593bef2e5e0110:
   Unlock FPS:
@@ -11598,7 +11598,7 @@ PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
 Anchors:
   SPU_MLAA_01: &SPU_MLAA_01
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
-  #  - [ be32, 0x0000349c, 0x40800017 ] # il r23 0 # causes blackscreen
+  #  - [ be32, 0x0000349c, 0x40800017 ] # il r23 0 # Causes blackscreen
 
   SPU_MLAA_02: &SPU_MLAA_02
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
@@ -11647,14 +11647,14 @@ SPU-5177cbc4bf45c8a0a6968c2a722da3a9e6cfb28b: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nPrince of Persia: The Sands of Time\nPrince of Persia: Warrior Within\nPrince of Persia: The Two Thrones" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_01 ]
 
 SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
-  Disable SPU MLAA:
+  "Disable SPU MLAA":
     Games:
       "Puppeteer":
         BCES00935: [ All ]
@@ -11666,7 +11666,7 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
         NPJA00098: [ All ]
         NPHA80250: [ All ]
         NPEA90125: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
     Group: SPUMLAA
@@ -11676,7 +11676,7 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nBinary Domain\nJourney\nOddworld: Stranger's Wrath HD\nTokyo Jungle\nSoulCalibur Lost Swords\nSoulCalibur V\nYakuza Ishin\nYakuza 5\nFerrari Racing Legends\nPool Nation\nThe Ratchet & Clank Trilogy" ]
     Patch Version: 1.5
     Group: SPUMLAA
@@ -11688,7 +11688,7 @@ SPU-931132fd48a40bce0bec28e21f760b1fc6ca4364: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nCaptain America: Super Soldier\nYakuza Dead Souls\nNeed for Speed Shift 2 Unleashed" ]
     Patch Version: 1.5
     Patch:
@@ -11702,7 +11702,7 @@ SPU-7b5ea49122ec7f023d4a72452dc7a9208d9d6dbf: # SPUNAME: 'PS3_Release/edgepost-m
         BLUS30645: [ All ]
         NPEB00569: [ All ]
         NPUB30476: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
     Patch:
@@ -11713,7 +11713,7 @@ SPU-df5b1c3353cc36bb2f0fb59197d849bb99c3fecd: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMedieval Moves: Deadmund's Quest\nShadow of the Colossus\nSports Champions 2\n\nExtra note for Shadow of the Colossus:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
@@ -11726,7 +11726,7 @@ SPU-9c270732b4276ec71df9a5255d5d8a63267de645: # SPUNAME: 'PS3_Release/edgepost-m
         BLES01439: [ All ]
         BLUS30841: [ All ]
         BLJM60436: [ All ]
-    Author: Whatcookie, dio
+    Author: "Whatcookie, dio"
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
     Patch:
@@ -11737,7 +11737,7 @@ SPU-6932af7adf79f31116fc28d71aae3e5e165d7f63: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie, Satan
+    Author: "Whatcookie, Satan"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nWWE '13\nWWE 2K14" ]
     Patch Version: 1.5
     Patch:
@@ -11748,7 +11748,7 @@ SPU-ac189d7f87091160a94e69803ac0cff0a8bb7813: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nICO\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
@@ -11759,7 +11759,7 @@ SPU-794795c449beef176d076816284849d266f55f99: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMacross 30" ]
     Patch Version: 1.5
     Patch:
@@ -11770,14 +11770,14 @@ SPU-e3780fe1dc8953f849ac844ec9688ff4da3ca3ae: # SPUNAME: 'u:\bin_ps3_SNC\edgepos
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMetro Last Light" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_03 ]
 
 SPU-530c255936b07b25467a58e24ceff5fd4e2960b7: # SPUNAME: 'mlaascanline.PS3_Release/mlaasca'
-  Disable SPU MLAA:
+  "Disable SPU MLAA":
     Games:
       "God of War 3 (God of War III)":
         BCES00510: [ 01.00 ]
@@ -11786,14 +11786,14 @@ SPU-530c255936b07b25467a58e24ceff5fd4e2960b7: # SPUNAME: 'mlaascanline.PS3_Relea
         BCJS37001: [ 01.00 ]
         BCAS25003: [ 01.00 ]
         BCKS15003: [ 01.00 ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_04 ]
 
 SPU-2239af4827b17317522bd6323c646b45b34ebf14: # SPUNAME: 'mlaascanline.PS3_Release/mlaasca'
-  Disable SPU MLAA:
+  "Disable SPU MLAA":
     Games:
       "God of War 3 (God of War III)":
         BCES00510: [ 01.03 ]
@@ -11802,7 +11802,7 @@ SPU-2239af4827b17317522bd6323c646b45b34ebf14: # SPUNAME: 'mlaascanline.PS3_Relea
         BCJS37001: [ 01.03 ]
         BCAS25003: [ 01.03 ]
         BCKS15003: [ 01.03 ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
@@ -11813,7 +11813,7 @@ SPU-7cd211ff1cbd33163eb0711440dccbb3c1dbcf6c: # SPUNAME: 'z:/export/jenkins/work
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
     Patch Version: 1.5
     Patch:
@@ -11824,7 +11824,7 @@ SPU-1549476fe258150ff9f902229ffaed69a932a9c1: # SPUNAME: 'Z:/output/EURint6/SPUM
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
     Patch Version: 1.5
     Patch:
@@ -11835,7 +11835,7 @@ SPU-77ce25dab2a5ca1d96038cc3dc57c50c705ce38c: # SPUNAME: 'Z:/output/USint6/SPUML
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie, kd-11
+    Author: "Whatcookie, kd-11"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
     Patch Version: 1.5
     Patch:
@@ -11846,7 +11846,7 @@ SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami" ]
     Patch Version: 1.5
     Patch:
@@ -11857,7 +11857,7 @@ SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nTwisted Metal" ]
     Patch Version: 1.5
     Patch:
@@ -11868,7 +11868,7 @@ SPU-969cf3e9db75f52a6b41074ccbff74106b709854: # SPUNAME: 'objs/release/edgepost-
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nRed Faction: Armageddon\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
@@ -11879,7 +11879,7 @@ SPU-976d2128f08c362731413b75c934101b76c3d73b: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2 (early versions)" ]
     Patch Version: 1.5
     Patch:
@@ -11890,7 +11890,7 @@ SPU-a129a01a270246c85df18eee0e959ef4263b6510: # SPUNAME: 'C:\dev\CW_br2_move_fin
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2 (other early versions)" ]
     Patch Version: 1.5
     Patch:
@@ -11901,7 +11901,7 @@ SPU-702d0205a89d445d15dc0f96548546c4e2e7a59f: # SPUNAME: 'PS3_Release/edgepost-m
     Games:
       All:
         All: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2\nLittleBigPlanet 3" ]
     Patch Version: 1.5
     Patch:
@@ -11915,7 +11915,7 @@ SPU-191fe1c92c8360992b3240348e70ea37d50812d4: # SPUNAME: 'E:\Alice2\Development\
         BLUS30607: [ All ]
         NPEB00625: [ All ]
         NPUB30545: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
     Patch Version: 1.5
     Patch:
