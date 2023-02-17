@@ -11847,7 +11847,7 @@ SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-m
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nKillAllZombies" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nKillAllZombies\nWWE 2k17" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_06 ]
@@ -11869,7 +11869,7 @@ SPU-969cf3e9db75f52a6b41074ccbff74106b709854: # SPUNAME: 'objs/release/edgepost-
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nRed Faction: Armageddon\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nCarnival Island\nRed Faction: Armageddon\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_07 ]
