@@ -11677,7 +11677,7 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nBinary Domain\nJourney\nOddworld: Stranger's Wrath HD\nTokyo Jungle\nSoulCalibur Lost Swords\nSoulCalibur V\nYakuza Ishin\nYakuza 5\nFerrari Racing Legends\nPool Nation\nThe Ratchet & Clank Trilogy" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nBinary Domain\nJourney\nOddworld: Stranger's Wrath HD\nTokyo Jungle\nSoulCalibur Lost Swords\nSoulCalibur V\nYakuza Ishin\nYakuza 5\nFerrari Racing Legends\nPool Nation\nPortal 2\nThe Ratchet & Clank Trilogy" ]
     Patch Version: 1.5
     Group: SPUMLAA
     Patch:
@@ -11689,7 +11689,7 @@ SPU-931132fd48a40bce0bec28e21f760b1fc6ca4364: # SPUNAME: 'PS3_Release/edgepost-m
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nCaptain America: Super Soldier\nYakuza Dead Souls\nNeed for Speed Shift 2 Unleashed" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nCaptain America: Super Soldier\nYakuza Dead Souls\nNeed for Speed Shift 2 Unleashed\nTransformers Dark of The Moon" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_02 ]
@@ -11847,7 +11847,7 @@ SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-m
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nKillAllZombies" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_06 ]
@@ -11869,7 +11869,7 @@ SPU-969cf3e9db75f52a6b41074ccbff74106b709854: # SPUNAME: 'objs/release/edgepost-
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nRed Faction: Armageddon\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nRed Faction: Armageddon\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_07 ]
