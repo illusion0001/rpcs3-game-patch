@@ -10364,36 +10364,36 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
       - [ load, *p5_StopPartyPanel ]
 
 Anchors:
-  r1fpsnotes: &r1fpsnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 33FPS or 60FPS depending on the scene."
+  r1fpsnotes: &r1fpsnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 33 FPS or 60 FPS depending on the scene."
 
 PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance: Fall of Man":
         BCUS98107: [ 01.00 ]
         BCES00001: [ 01.00 ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *r1fpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001e5db0, 0x60000000 ]
-      - [ bef32, 0x00678ed0, 0.00416666  ] # set minimum timestep size
-  Extended FOV:
+      - [ bef32, 0x00678ed0, 0.00416666 ] # set minimum timestep size
+  "Extended FOV":
     Games:
       "Resistance: Fall of Man":
         BCUS98107: [ 01.00 ]
         BCES00001: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x06b6390, 0.7  ]
+      - [ bef32, 0x006b6390, 0.7 ]
 
 PPU-82555e0b1aaaa6c62ae8f23057e38d1006b7c19c: # game.self
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance: Fall of Man":
         NPEA00430: [ 01.00 ]
-    Author: Whatcookie, illusion
+    Author: "Whatcookie, illusion"
     Notes: *r1fpsnotes
     Patch Version: 1.0
     Patch:
@@ -10403,19 +10403,19 @@ PPU-82555e0b1aaaa6c62ae8f23057e38d1006b7c19c: # game.self
     Games:
       "Resistance: Fall of Man":
         NPEA00430: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: "Avoid recompiling unused PPU modules."
     Patch Version: 1.0
     Patch:
       - [ byte, 0x000334d7, 0x2c ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance: Fall of Man":
         NPEA00430: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x007B0494, 0.7 ]
+      - [ bef32, 0x007b0494, 0.7 ]
 
 PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
   Unlock FPS:
