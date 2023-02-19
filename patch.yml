@@ -1289,37 +1289,37 @@ Anchors:
   Folklore_FPS_Notes: &Folklore_FPS_Notes "Totally unlocks FPS during gameplay. Sadly the cloth physics goes nuts at 60 FPS, despite the gameplay working perfectly. You can set the framelimit to 50 and the cloth physics will work perfectly!"
 
 PPU-eb05d70d23d075ef6d9c81f7e7cf9bffc98c404c:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Folklore":
         BCUS98147: [ 01.00 ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *Folklore_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0181354, 0x60000000 ]
+      - [ be32, 0x00181354, 0x60000000 ]
 
 PPU-9b16663fa1aa1dd62c2c6bfee4f333242dde4171:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Folklore":
         BCUS98147: [ 01.10 ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *Folklore_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x01823c0, 0x60000000 ]
+      - [ be32, 0x001823c0, 0x60000000 ]
 
 PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Folklore":
         BCES00050: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *Folklore_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0181118, 0x60000000 ]
+      - [ be32, 0x00181118, 0x60000000 ]
 
 Anchors:
   ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60FPS if you are good at button mashing, but 120FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57FPS."
