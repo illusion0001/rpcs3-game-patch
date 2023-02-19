@@ -1320,7 +1320,8 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
       - [ be32, 0x00181118, 0x60000000 ]
 
 Anchors:
-  ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60FPS if you are good at button mashing, but 120FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57FPS."
+  ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60 FPS if you are good at button mashing, but 120FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+  ASURA_DEVnotes: &ASURA_DEVnotes "Press D-pad Left at any time to access the Developer Menu."
 
   ASURA_FPS: &ASURA_FPS
     - [ be32, 0x008bbd04, 0x60000000 ] # nop
@@ -1328,138 +1329,138 @@ Anchors:
     - [ be32, 0x008bbd68, 0x60000000 ] # nop
 
   ASURA_DEV: &ASURA_DEV
-    - [ be32, 0x014D69EC, 0x38600000 ] # li r3, 0
+    - [ be32, 0x014d69ec, 0x38600000 ] # li r3, 0
     - [ be32, 0x01166744, 0x38600001 ] # li r3, 1
-    - [ be32, 0x0167E460, 0x00500053 ] # ren string "BCGTOC.ini" to "PS3TOC.txt"
-    - [ be32, 0x0167E464, 0x00330054 ]
-    - [ be32, 0x0167E468, 0x004F0043 ]
-    - [ be32, 0x0167E46C, 0x002E0054 ]
-    - [ be32, 0x0167E470, 0x00580054 ]
+    - [ be32, 0x0167e460, 0x00500053 ] # ren string "BCGTOC.ini" to "PS3TOC.txt"
+    - [ be32, 0x0167e464, 0x00330054 ]
+    - [ be32, 0x0167e468, 0x004f0043 ]
+    - [ be32, 0x0167e46c, 0x002e0054 ]
+    - [ be32, 0x0167e470, 0x00580054 ]
 
   ASURA_AO: &ASURA_AO
-    - [ be32, 0x00686DCC, 0x38600000 ] # li r3, 0
+    - [ be32, 0x00686dcc, 0x38600000 ] # li r3, 0
 
   ASURA_BLOOM: &ASURA_BLOOM
-    - [ be32, 0x0011AE5C, 0x38C00000 ] # li r6, 0
-    - [ be32, 0x003BA264, 0x38C00000 ] # li r6, 0
+    - [ be32, 0x0011ae5c, 0x38c00000 ] # li r6, 0
+    - [ be32, 0x003ba264, 0x38c00000 ] # li r6, 0
 
   ASURA_MB: &ASURA_MB
     - [ be32, 0x0067a908, 0x60000000 ] # nop - disables radial blur
     - [ be32, 0x0067a940, 0x38600000 ] # li r3, 0 - disables camera-based blur
 
   ASURA_DoF: &ASURA_DoF
-    - [ be32, 0x0031CB10, 0x38A00000 ] # li r5, 0
-    - [ be32, 0x0011AE68, 0x38A00000 ] # li r5, 0
-    - [ be32, 0x003BA270, 0x38A00000 ] # li r5, 0
+    - [ be32, 0x0031cb10, 0x38a00000 ] # li r5, 0
+    - [ be32, 0x0011ae68, 0x38a00000 ] # li r5, 0
+    - [ be32, 0x003ba270, 0x38a00000 ] # li r5, 0
 
 PPU-83096111daff850cc92b637aec1780c4079e1c58:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *ASURA_FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
-  Developer Menu:
+  "Developer Menu":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: dron_3
-    Notes: Press D-pad Left at any time to access the Developer Menu
+    Author: "dron_3"
+    Notes: *ASURA_DEVnotes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
-  Disable Ambient Occlusion:
+  "Disable Ambient Occlusion":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_AO ]
-  Disable Bloom:
+  "Disable Bloom":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_BLOOM ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DoF ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Asura's Wrath":
         BLUS30721: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_MB ]
 
 PPU-69f53b470d81ea961c1c2ff264ade6ab8077d2a1:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: Whatcookie, Mew21
+    Author: "Whatcookie, Mew21"
     Notes: *ASURA_FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
-  Developer Menu:
+  "Developer Menu":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: dron_3
-    Notes: Press D-pad Left at any time to access the Developer Menu
+    Author: "dron_3"
+    Notes: *ASURA_DEVnotes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
-  Disable Ambient Occlusion:
+  "Disable Ambient Occlusion":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_AO ]
-  Disable Bloom:
+  "Disable Bloom":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_BLOOM ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DoF ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Asura's Wrath":
         BLES01227: [ All ]
-    Author: boma
-    Notes: 
+    Author: "boma"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_MB ]
