@@ -8708,78 +8708,78 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
 Anchors:
   kz3mlaanotes: &kz3mlaanotes "Allows for the use of Resolution Scaling in the title and improved performance.\nSome screen effects will be lost.\nWrite Color Buffers is no longer required."
   kz3demofov: &kz3demofov
-    - [ bef32, 0x1327DA0, 0.85 ] # static float in memory // viewmodel
-    - [ bef32, 0x1327E74, 0.85 ] # static float in memory // camera
+    - [ bef32, 0x01327da0, 0.85 ] # static float in memory // viewmodel
+    - [ bef32, 0x01327e74, 0.85 ] # static float in memory // camera
   kz3demomlaa: &kz3demomlaa
-    - [ be32, 0x001BDED8, 0x38A00000 ] # li r5 0x0
+    - [ be32, 0x001bded8, 0x38a00000 ] # li r5 0x0
 
 PPU-ae204e2198c9a051a44a69913c48f6591b811082:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 3":
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x1327E54, 0.85 ] # static float in memory
-  Disable MLAA(Post-processing On SPU): # Gfx.Post.MLAA PostMLAASPU
+      - [ bef32, 0x01327e54, 0.85 ] # static float in memory
+  "Disable MLAA(Post-processing On SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3":
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *kz3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001BE008, 0x38A00000 ] # li r5 0x0
-  Infinite Ammo:
+      - [ be32, 0x001be008, 0x38a00000 ] # li r5 0x0
+  "Infinite Ammo":
     Games:
       "Killzone 3":
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
-    Author: Aphelion
-    Notes: Infinite ammo and grenades
+    Author: "Aphelion"
+    Notes: "Infinite ammo and grenades."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0073D598, 0x60000000 ]
-      - [ be32, 0x006B0110, 0x60000000 ]
+      - [ be32, 0x0073d598, 0x60000000 ]
+      - [ be32, 0x006b0110, 0x60000000 ]
 
 PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 3":
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x139BDF0, 0.85 ] # static float in memory // viewmodel
-      - [ bef32, 0x139BEEC, 0.85  ] # static float in memory // camera
+      - [ bef32, 0x0139bdf0, 0.85 ] # static float in memory // viewmodel
+      - [ bef32, 0x0139beec, 0.85 ] # static float in memory // camera
   Disable MLAA (Post-processing on SPU): # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3":
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *kz3mlaanotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001C95A8, 0x38A00000 ] # li r5 0x0
+      - [ be32, 0x001c95a8, 0x38a00000 ] # li r5 0x0
       - [ be16, 0x00202128, 0x4800 ]
-  Infinite Ammo:
+  "Infinite Ammo":
     Games:
       "Killzone 3":
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
-    Author: Aphelion
-    Notes: Infinite ammo and grenades
+    Author: "Aphelion"
+    Notes: "Infinite ammo and grenades."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00753018, 0x60000000 ]
-      - [ be32, 0x006C5250, 0x60000000 ]
+      - [ be32, 0x006c5250, 0x60000000 ]
   "Skip Intro":
     Games:
       "Killzone 3":
@@ -8806,12 +8806,12 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ be32, 0x00fb128c, 0x4e800020 ]
 
 PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 3 Demo":
         NPEA90084: [ 01.00 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
       - [ load, *kz3demofov ]
@@ -8819,27 +8819,27 @@ PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
     Games:
       "Killzone 3 Demo":
         NPEA90084: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *kz3mlaanotes
     Patch Version: 1.0
     Patch:
       - [ load, *kz3demomlaa ]
 
 PPU-c28a92c751f6c6ffae0f354c7329ee599912baac:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 3 Demo":
         NPUA70133: [ 01.00 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
       - [ load, *kz3demofov ]
-  Disable MLAA (Post-processing on SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3 Demo":
         NPUA70133: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *kz3mlaanotes
     Patch Version: 1.0
     Patch:
