@@ -1892,30 +1892,30 @@ PPU-ba038bf4525e23b82c34247afc42f3ca2d2c473f:
       - [ be32, 0x00f8908, 0x60000000 ]
 
 PPU-93aed31e80e0a91e11fdcff1b83d42c235bc3548:
-  60 FPS Patch:
+  "60 FPS":
     Games:
       "Dragon Ball Z: Burst Limit":
         BLUS30117: [ All ]
-    Author: illusion, ZEROx
+    Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 1 ]          #60 fps
-      - [ be32, 0x00162228, 0x60000000 ] #No reset
-      - [ be32, 0x001633e8, 0x60000000 ] #Pause fix
+      - [ byte, 0x004c4383, 0x01 ]       # 60 fps
+      - [ be32, 0x00162228, 0x60000000 ] # No reset
+      - [ be32, 0x001633e8, 0x60000000 ] # Pause fix
 
 PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
-  60 FPS Patch:
+  "60 FPS":
     Games:
       "Dragon Ball Z: Burst Limit":
         BLES00231: [ All ]
-    Author: illusion
+    Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 1 ]          #60 fps
-      - [ be32, 0x001622dc, 0x60000000 ] #No reset
-      - [ be32, 0x0016349c, 0x60000000 ] #Pause fix
+      - [ byte, 0x004c4383, 0x01 ]       # 60 fps
+      - [ be32, 0x001622dc, 0x60000000 ] # No reset
+      - [ be32, 0x0016349c, 0x60000000 ] # Pause fix
 
 PPU-b711c520e0295b480e4163e473886122cd033329:
   "Debug Menu":
