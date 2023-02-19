@@ -7385,12 +7385,12 @@ Anchors:
   iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
 
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "ICO":
         NPEA00279: [ 01.00 ]
         NPUA80676: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
@@ -7398,34 +7398,34 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
       - [ be32, 0x00476af4, 0x40800003 ] # il r3 0x0
       - [ be32, 0x00476d9c, 0x40800017 ] # il r23 0x0
 # Memory Patches
-  Disable Blur:
+  "Disable Blur":
     Games:
       "ICO":
         NPEA00279: [ 01.00 ]
         NPUA80676: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes:
     Patch Version: 1.00
     Patch:
-      - [  byte, 0x4D20CB, 0 ]
-  Disable All Post-processing:
+      - [ byte, 0x004d20cb, 0x00 ]
+  "Disable All Post-processing":
     Games:
       "ICO":
         NPEA00279: [ 01.00 ]
         NPUA80676: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes:
     Patch Version: 1.00
     Patch:
-      - [  byte, 0x4D20BF, 0 ]
+      - [ byte, 0x004d20bf, 0x00 ]
 
 PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "ICO":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
@@ -7433,29 +7433,29 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
       - [ be32, 0x00475f74, 0x40800003 ] # il r3 0x0
       - [ be32, 0x0047621c, 0x40800017 ] # il r23 0x0
 # Memory Patches
-  Disable Blur:
+  "Disable Blur":
     Games:
       "ICO":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ byte, 0x4D203B, 0 ]
-  Disable All Post-processing:
+      - [ byte, 0x004d203b, 0x00 ]
+  "Disable All Post-processing":
     Games:
       "ICO":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ byte, 0x4D202F, 0 ]
+      - [ byte, 0x004d202f, 0x00 ]
 
 PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "ICO":
         BCES01097: [ 01.01 ]
@@ -7463,14 +7463,14 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00279: [ 01.01 ]
         NPUA80676: [ 01.01 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x004e224c, 0x00000000 ] # 0 int32
       - [ be32, 0x00477d74, 0x40800003 ] # il r3 0x0
       - [ be32, 0x0047801c, 0x40800017 ] # il r23 0x0
-  "Restore debug printf (Warning: Log Spam!)":
+  "Restore debug printf":
     Games:
       "ICO":
         BCES01097: [ 01.01 ]
@@ -7478,12 +7478,13 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00279: [ 01.01 ]
         NPUA80676: [ 01.01 ]
-    Author: illusion
+    Author: "illusion"
+    Notes: "Warning: Log Spam!"
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00015e50, 0x480ecd20 ] # b 0x00102b70
 # Memory Patches
-  Disable Blur:
+  "Disable Blur":
     Games:
       "ICO":
         BCES01097: [ 01.01 ]
@@ -7491,12 +7492,12 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00279: [ 01.01 ]
         NPUA80676: [ 01.01 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ byte, 0x4E215B, 0 ]
-  Disable All Post-processing:
+      - [ byte, 0x004e215b, 0x00 ]
+  "Disable All Post-processing":
     Games:
       "ICO":
         BCES01097: [ 01.01 ]
@@ -7504,40 +7505,40 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00279: [ 01.01 ]
         NPUA80676: [ 01.01 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ byte, 0x4E214F, 0 ]
+      - [ byte, 0x004e214f, 0x00 ]
 
 PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
-  Disable Bloom:
+  "Disable Bloom":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00209d88, 0x38000000 ] # li r0 0x0
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ be32, 0x0021951C, 0x38000000 ] # li r0 0x0
+      - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219360, 0x38000000 ] # li r0 0x0
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
@@ -7545,45 +7546,45 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
       - [ be32, 0x006f8374, 0x40800003 ] # il r3 0x0
       - [ be32, 0x006f861c, 0x40800017 ] # il r23 0x0
 # Memory Patches
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
-    Author: illusion
-    Notes: Camera may zoom out during cinematic change.
+    Author: "illusion"
+    Notes: "Camera may zoom out during cinematic change."
     Patch Version: 1.00
     Patch:
-      - [ bef32, 0x732894, 1.5 ]
+      - [ bef32, 0x00732894, 1.5 ]
 
 PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
-  Disable Bloom:
+  "Disable Bloom":
     Games:
       "Shadow of the Colossus":
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
       - [ be32, 0x0020a338, 0x38000000 ] # li r0 0x0
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Shadow of the Colossus":
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ be32, 0x0021951C, 0x38000000 ] # li r0 0x0
+      - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219910, 0x38000000 ] # li r0 0x0
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "Shadow of the Colossus":
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
@@ -7591,19 +7592,19 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
       - [ be32, 0x006f8af4, 0x40800003 ] # il r3 0
       - [ be32, 0x006f8d9c, 0x40800017 ] # il r23 0
 # Memory Patches
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Shadow of the Colossus":
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
-    Author: illusion
-    Notes: Camera may zoom out during cinematic change.
+    Author: "illusion"
+    Notes: "Camera may zoom out during cinematic change."
     Patch Version: 1.00
     Patch:
-      - [ bef32, 0x7328C4, 1.5 ]
+      - [ bef32, 0x007328c4, 1.5 ]
 
 PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
-  Disable Bloom:
+  "Disable Bloom":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.01 ]
@@ -7611,12 +7612,12 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
       - [ be32, 0x0020ab50, 0x38000000 ] # li r0 0x0
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.01 ]
@@ -7624,13 +7625,13 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.00
     Patch:
-      - [ be32, 0x0021A2E4, 0x38000000 ] # li r0 0x0
-      - [ be32, 0x0021A128, 0x38000000 ] # li r0 0x0
-  Disable MLAA:
+      - [ be32, 0x0021a2e4, 0x38000000 ] # li r0 0x0
+      - [ be32, 0x0021a128, 0x38000000 ] # li r0 0x0
+  "Disable MLAA":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.01 ]
@@ -7638,15 +7639,15 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *iconotes
     Patch Version: 1.00
     Patch:
-      - [ be32, 0x00201A14, 0x38000000 ] # li r0 0x0
+      - [ be32, 0x00201a14, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f96f4, 0x40800003 ] # il r3 0x0
       - [ be32, 0x006f999c, 0x40800017 ] # il r23 0x0
 # Memory Patches
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Shadow of the Colossus":
         BCES01097: [ 01.01 ]
@@ -7654,11 +7655,11 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         BCUS98259: [ 01.01 ]
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
-    Author: illusion
-    Notes: Camera may zoom out during cinematic change.
+    Author: "illusion"
+    Notes: "Camera may zoom out during cinematic change."
     Patch Version: 1.00
     Patch:
-      - [ bef32, 0x7328DC, 1.5 ]
+      - [ bef32, 0x007328dc, 1.5 ]
 
 PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
   21:9 Aspect Ratio:
