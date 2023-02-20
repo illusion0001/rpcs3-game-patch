@@ -6956,139 +6956,139 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
 
 Anchors:
   tox_aspect_ratio_21_9: &tox_aspect_ratio_21_9
-    - [ be32, 0x00C14ADC, 0x44D20000 ] # HUD / GUI (Width)
-    - [ be32, 0x00C14AE4, 0x4017B426 ] # Display: Aspect Ratio
-    - [ be32, 0x00C14AE8, 0x00000348 ] # HUD: "Start" Menu - Background (Width)
-    - [ be32, 0x00C14AF0, 0x44520000 ] # HUD: "Pause" Menu - Background (Width)
-    - [ be32, 0x00C14B10, 0xC4520000 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ be32, 0x00C14B14, 0x44520000 ] # HUD: Movie / Map / Skit - Background - Right
-    - [ be32, 0x00E15574, 0x3F71A36E ] # Display: vFOV
-    - [ be32, 0x00E15578, 0x3EFAC711 ] # Display: hFOV
+    - [ be32, 0x00c14adc, 0x44d20000 ] # HUD / GUI (Width)
+    - [ be32, 0x00c14ae4, 0x4017b426 ] # Display: Aspect Ratio
+    - [ be32, 0x00c14ae8, 0x00000348 ] # HUD: "Start" Menu - Background (Width)
+    - [ be32, 0x00c14af0, 0x44520000 ] # HUD: "Pause" Menu - Background (Width)
+    - [ be32, 0x00c14b10, 0xc4520000 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ be32, 0x00c14b14, 0x44520000 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e15574, 0x3f71a36e ] # Display: vFOV
+    - [ be32, 0x00e15578, 0x3efac711 ] # Display: hFOV
 
   tox_aspect_ratio_32_9: &tox_aspect_ratio_32_9
-    - [ be32, 0x00C14ADC, 0x45200000 ] # HUD / GUI (Width)
-    - [ be32, 0x00C14AE4, 0x40638E39 ] # Display: Aspect Ratio
-    - [ be32, 0x00C14AE8, 0x00000500 ] # HUD: "Start" Menu - Background (Width)
-    - [ be32, 0x00C14AF0, 0x44A00000 ] # HUD: "Pause" Menu - Background (Width)
-    - [ be32, 0x00C14B10, 0xC4A00000 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ be32, 0x00C14B14, 0x44A00000 ] # HUD: Movie / Map / Skit - Background - Right
-    - [ be32, 0x00E15574, 0x3F9542C4 ] # Display: vFOV
-    - [ be32, 0x00E15578, 0x4243EB85 ] # Display: hFOV
+    - [ be32, 0x00c14adc, 0x45200000 ] # HUD / GUI (Width)
+    - [ be32, 0x00c14ae4, 0x40638e39 ] # Display: Aspect Ratio
+    - [ be32, 0x00c14ae8, 0x00000500 ] # HUD: "Start" Menu - Background (Width)
+    - [ be32, 0x00c14af0, 0x44a00000 ] # HUD: "Pause" Menu - Background (Width)
+    - [ be32, 0x00c14b10, 0xc4a00000 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ be32, 0x00c14b14, 0x44a00000 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e15574, 0x3f9542c4 ] # Display: vFOV
+    - [ be32, 0x00e15578, 0x4243eb85 ] # Display: hFOV
 
   tox_gald: &tox_gald
-    - [ be32, 0x0020337C, 0x80690FEF ]
+    - [ be32, 0x0020337c, 0x80690fef ]
 
   tox_hp: &tox_hp
-    - [ be32, 0x0018A210, 0x9BDD000C ]
-    - [ be32, 0x00187A60, 0x3A30270F ]
+    - [ be32, 0x0018a210, 0x9bdd000c ]
+    - [ be32, 0x00187a60, 0x3a30270f ]
 
   tox_fps: &tox_fps
     - [ be32, 0x00710694, 0x38600002 ]
-    - [ be32, 0x0023F114, 0x3A900001 ]
+    - [ be32, 0x0023f114, 0x3a900001 ]
 
 PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
         NPUB31136: [ All ]
         BLUS31006: [ All ]
-    Author: NeXoGone
-    Notes: HUD Elements will be stretched. Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Group: AR
     Patch:
       - [ load, *tox_aspect_ratio_21_9 ]
-  32:9 Aspect Ratio:
+  "32:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
         NPUB31136: [ All ]
         BLUS31006: [ All ]
-    Author: NeXoGone
-    Notes: HUD Elements will be stretched. Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Group: AR
     Patch:
       - [ load, *tox_aspect_ratio_32_9 ]
-  60 FPS:
+  "60 FPS":
     Games:
       "Tales of Xillia":
         NPUB31136: [ All ]
         BLUS31006: [ All ]
-    Author: Aphelion, illusion
-    Notes: Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60.
+    Author: "Aphelion, illusion"
+    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
     Patch Version: 1.1
     Patch:
       - [ load, *tox_fps ]
-  Infinite Gald:
+  "Infinite Gald":
     Games:
       "Tales of Xillia":
         NPUB31136: [ All ]
         BLUS31006: [ All ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *tox_gald ]
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Tales of Xillia":
         NPUB31136: [ All ]
         BLUS31006: [ All ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.1
     Patch:
       - [ load, *tox_hp ]
 
 PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
         BLES01815: [ All ]
         NPEB01310: [ All ]
-    Author: NeXoGone
-    Notes: HUD Elements will be stretched. Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Group: AR
     Patch:
       - [ load, *tox_aspect_ratio_21_9 ]
-  32:9 Aspect Ratio:
+  "32:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
         BLES01815: [ All ]
         NPEB01310: [ All ]
-    Author: NeXoGone
-    Notes: HUD Elements will be stretched. Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Group: AR
     Patch:
       - [ load, *tox_aspect_ratio_32_9 ]
-  60 FPS:
+  "60 FPS":
     Games:
       "Tales of Xillia":
         BLES01815: [ All ]
         NPEB01310: [ All ]
-    Author: Aphelion, illusion
-    Notes: Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60.
+    Author: "Aphelion, illusion"
+    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
     Patch Version: 1.0
     Patch:
       - [ load, *tox_fps ]
-  Infinite Gald:
+  "Infinite Gald":
     Games:
       "Tales of Xillia":
         BLES01815: [ All ]
         NPEB01310: [ All ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *tox_gald ]
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Tales of Xillia":
         BLES01815: [ All ]
         NPEB01310: [ All ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
