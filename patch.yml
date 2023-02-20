@@ -8478,15 +8478,15 @@ PPU-311fcd98af6adc5e64e6a833eb959f43b0976193:
       - [ be16, 0x006ab37e, 0x0001 ]
 
 PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Infamous 2 Demo":
         NPEA90095: [ All ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x96DE14, 0.65 ] # the floats are static but game settings will need "li" instead.
+      - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 Anchors:
   hazefps: &hazefps
@@ -8559,24 +8559,24 @@ PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
       - [ load, *hazehp ]
 
 PPU-ec7c75bef42758b1823ce0b2835935992ae72e8f:
-  60 FPS:
+  "60 FPS":
     Games:
       "Iron Man":
         BLUS30134: [ 01.02 ]
-    Author: HyperSpider
-    Notes: You MUST set the Vblank Frequency to 120Hz for this patch to work. Also note that the game's actual speed may slow down below 30FPS.
+    Author: "HyperSpider"
+    Notes: "You must set the Vblank Frequency to 120Hz for this patch to work. Also note that the game's actual speed may slow down below 30 FPS."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0xCD01AC, 0.01666667 ]
-  120 FPS:
+      - [ bef32, 0x00cd01ac, 0.01666667 ]
+  "120 FPS":
     Games:
       "Iron Man":
         BLUS30134: [ 01.02 ]
-    Author: HyperSpider
-    Notes: You MUST set the Vblank Frequency to 240Hz for this patch to work. Also note that the game's actual speed may slow down below 60FPS.
+    Author: "HyperSpider"
+    Notes: "You must set the Vblank Frequency to 240Hz for this patch to work. Also note that the game's actual speed may slow down below 60 FPS."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0xCD01AC, 0.00833334 ]
+      - [ bef32, 0x00cd01ac, 0.00833334 ]
 
 PPU-70ad975e7fbb5bb57bb2159a16ec895cbccd3b4e:
   Extended FOV:
