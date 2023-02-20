@@ -1484,19 +1484,19 @@ PPU-18cf9a4e8196684ed9ee816f82649561fd1bf182:
 
 Anchors:
   JoJoASB_FPS: &JoJoASB_FPS
-    - [ bef32, 0xFF5A08, 0.5 ] # Match timer rate
-    - [ bef32, 0xFDB724, 0.5 ] # Animation speed
-    - [ bef32, 0xFF8F70, 0.5 ]
-    - [ bef32, 0xFEE2F8, 0.5 ] # UI speed
+    - [ bef32, 0x00ff5a08, 0.5 ] # Match timer rate
+    - [ bef32, 0x00fdb724, 0.5 ] # Animation speed
+    - [ bef32, 0x00ff8f70, 0.5 ]
+    - [ bef32, 0x00fee2f8, 0.5 ] # UI speed
 
 PPU-6875682ab309df32307c5305c43bb132c4e261fa:
-  60 FPS:
+  "60 FPS":
     Games:
       "JoJo's Bizarre Adventure: All Star Battle":
         BLUS31405: [ All ]
         NPUB31391: [ All ]
-    Author: SutandoTsukai181 # User from our Discord server
-    Notes: This patch fixes issues when running the game at 60FPS but you still need to set Vblank frequency to 120Hz in order to play at 60FPS. You may face issues such as halved input windows, few UI elements not at normal speed, intro quotes stop half-way, projectiles speed is doubled and few graphical glitches (Jotaro not appearing during DIO's GHA).
+    Author: "SutandoTsukai181" # User from our Discord server
+    Notes: "This patch fixes issues when running the game at 60 FPS but you still need to set Vblank frequency to 120Hz in order to play at 60 FPS. You may face issues such as halved input windows, few UI elements not at normal speed, intro quotes stop half-way, projectiles speed is doubled and few graphical glitches (Jotaro not appearing during DIO's GHA)."
     Patch Version: 1.0
     Patch:
       - [ load, *JoJoASB_FPS ]
