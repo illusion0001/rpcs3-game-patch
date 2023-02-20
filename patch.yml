@@ -8361,121 +8361,121 @@ PPU-1105af0a4d6a4a1481930c6f3090c476cde06c4c:
 
 Anchors:
   HMPDF2_FPS_USEU: &HMPDF2_FPS_USEU
-    - [ be32, 0x0423C8, 0x3F800000 ]
-    - [ be16, 0x6AF44E, 0x0001 ]
-    - [ be16, 0x6AF46E, 0x0001 ]
-    - [ be16, 0x6AF492, 0x0001 ]
-    - [ be16, 0x6AF4B6, 0x0001 ]
+    - [ be32, 0x000423c8, 0x3f800000 ]
+    - [ be16, 0x006af44e, 0x0001 ]
+    - [ be16, 0x006af46e, 0x0001 ]
+    - [ be16, 0x006af492, 0x0001 ]
+    - [ be16, 0x006af4b6, 0x0001 ]
 
   HMPDF2_FPS_AS: &HMPDF2_FPS_AS
-    - [ be32, 0x042390, 0x3F800000 ]
-    - [ be16, 0x6AF0B6, 0x0001 ]
-    - [ be16, 0x6AF0D6, 0x0001 ]
-    - [ be16, 0x6AF0FA, 0x0001 ]
-    - [ be16, 0x6AF11E, 0x0001 ]
+    - [ be32, 0x00042390, 0x3f800000 ]
+    - [ be16, 0x006af0b6, 0x0001 ]
+    - [ be16, 0x006af0d6, 0x0001 ]
+    - [ be16, 0x006af0fa, 0x0001 ]
+    - [ be16, 0x006af11e, 0x0001 ]
 
   HMPDF2_FPS_JP: &HMPDF2_FPS_JP
-    - [ be32, 0x041F40, 0x3F800000 ]
-    - [ be16, 0x6A48F6, 0x0001 ]
-    - [ be16, 0x6A4916, 0x0001 ]
-    - [ be16, 0x6A493A, 0x0001 ]
-    - [ be16, 0x6A495E, 0x0001 ]
+    - [ be32, 0x00041f40, 0x3f800000 ]
+    - [ be16, 0x006a48f6, 0x0001 ]
+    - [ be16, 0x006a4916, 0x0001 ]
+    - [ be16, 0x006a493a, 0x0001 ]
+    - [ be16, 0x006a495e, 0x0001 ]
 
   HMPDF2_FPS_Notes: &HMPDF2_FPS_Notes "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability."
 
 PPU-092c43e2bcacccfe3cdc22b0ab8062b91d4e1cf9:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         BLUS31431: [ All ]
         NPUB31488: [ All ]
-    Author: Brolijah
-    Notes: Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with NPUB31488 as well.
+    Author: "Brolijah"
+    Notes: "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with NPUB31488 as well."
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
 
 PPU-67e0e7c9b2a7a340c914a0d078e25aac1047e4d4:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         NPEB02013: [ All ]
-    Author: Brolijah
-    Notes: Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with BLES02029 as well.
+    Author: "Brolijah"
+    Notes: "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with BLES02029 as well."
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
 
 PPU-51d336edfa3774f2db83ed030611f462c097c40b:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         BLAS50723: [ All ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_AS ]
 
 PPU-c70b15d3f6694af74fa329dd4fc25fe28a59e9cc:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         NPHB00671: [ All ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_AS ]
 
 PPU-c3291f5919ca147ac854de10f7436f4ad494233f:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         BLJM61079: [ 01.00 ]
         NPJB00435: [ 01.00 ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_JP ]
 
 PPU-058cf39c07fd13f100c1f6dc40a0ead9bf3ad51b:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         BLJM61079: [ 01.01 ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_JP ]
 
 PPU-8fc9f26ed77cc9237db0e6348dcf9d6c451b6220:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         BLJM61079: [ 01.02 ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_JP ]
 
 PPU-311fcd98af6adc5e64e6a833eb959f43b0976193:
-  60 FPS:
+  "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         NPJB00435: [ 01.02 ]
-    Author: Brolijah
+    Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x041F78, 0x3F800000 ]
-      - [ be16, 0x6AB316, 0x0001 ]
-      - [ be16, 0x6AB336, 0x0001 ]
-      - [ be16, 0x6AB35A, 0x0001 ]
-      - [ be16, 0x6AB37E, 0x0001 ]
+      - [ be32, 0x00041f78, 0x3f800000 ]
+      - [ be16, 0x006ab316, 0x0001 ]
+      - [ be16, 0x006ab336, 0x0001 ]
+      - [ be16, 0x006ab35a, 0x0001 ]
+      - [ be16, 0x006ab37e, 0x0001 ]
 
 PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
   Extended FOV:
