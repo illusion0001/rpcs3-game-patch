@@ -4566,343 +4566,343 @@ PPU-9712144d93487f0b62e39f55e175af783b58af72:
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 01.00 ]
-    Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
+    Author: "TriggerHappy"
+    Notes: "Can give a significant performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x1358B8, 0x4E800020 ]
+      - [ be32, 0x001358b8, 0x4e800020 ]
 
 PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
   "21:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
-      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3FA3126F ]
+      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+      - [ be32, 0x003d4274, 0xbff0a3d7 ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3fa3126f ]
   "21:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
-      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3FA3126F ]
+      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+      - [ be32, 0x003d4274, 0xbff0a3d7 ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x000f1b6c, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3fa3126f ]
   "32:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x4039999A ]
-      - [ be32, 0x3D4274, 0xC039999A ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3F52B021 ]
+      - [ be32, 0x003d426c, 0x4039999a ]
+      - [ be32, 0x003d4274, 0xc039999a ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3f52b021 ]
   "32:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x4039999A ]
-      - [ be32, 0x3D4274, 0xC039999A ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3F52B021 ]
+      - [ be32, 0x003d426c, 0x4039999a ]
+      - [ be32, 0x003d4274, 0xc039999a ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x000f1b6c, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3f52b021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
+    Author: "TriggerHappy"
+    Notes: "Can give a significant performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x132354, 0x4E800020 ]
+      - [ be32, 0x00132354, 0x4e800020 ]
   "Remove fog":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Does not provide any performance benefit."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xEAA08, 0x4E800020 ]
+      - [ be32, 0x000eaa08, 0x4e800020 ]
   "Reduce stage quality":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xFA7EC, 0x4E800020 ]
-      - [ be32, 0x10FAEC, 0x4E800020 ]
+      - [ be32, 0x000fa7ec, 0x4e800020 ]
+      - [ be32, 0x0010faec, 0x4e800020 ]
   "Disable HUD":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes the ingame HUD. Useful for videos and screenshots."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xF0410, 0x60000000 ]
+      - [ be32, 0x000f0410, 0x60000000 ]
   "Disable spawned effects":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x12BCFC, 0x2B8A0004 ]
+      - [ be32, 0x0012bcfc, 0x2b8a0004 ]
   "Unlock FPS":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Author: "TriggerHappy"
+    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xDB720, 0x4E800020 ]
+      - [ be32, 0x000db720, 0x4e800020 ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3C3EDC, 0x3FF0A3D7 ]
-      - [ be32, 0x3C3EE4, 0xBFF0A3D7 ]
-      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
-      - [ be32, 0x3C3C90, 0x3FA3126F ]
+      - [ be32, 0x003c3edc, 0x3ff0a3d7 ]
+      - [ be32, 0x003c3ee4, 0xbff0a3d7 ]
+      - [ be32, 0x000efaf0, 0xc1be8040 ]
+      - [ be32, 0x003c3c90, 0x3fa3126f ]
   "21:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3C3EDC, 0x3FF0A3D7 ]
-      - [ be32, 0x3C3EE4, 0xBFF0A3D7 ]
-      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
-      - [ be32, 0x0F042C, 0xC1BE8040 ]
-      - [ be32, 0x3C3C90, 0x3FA3126F ]
+      - [ be32, 0x003c3edc, 0x3ff0a3d7 ]
+      - [ be32, 0x003c3ee4, 0xbff0a3d7 ]
+      - [ be32, 0x000efaf0, 0xc1be8040 ]
+      - [ be32, 0x000f042c, 0xc1be8040 ]
+      - [ be32, 0x003c3c90, 0x3fa3126f ]
   "32:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3C3EDC, 0x4039999A ]
-      - [ be32, 0x3C3EE4, 0xC039999A ]
-      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
-      - [ be32, 0x3C3C90, 0x3F52B021 ]
+      - [ be32, 0x003c3edc, 0x4039999a ]
+      - [ be32, 0x003c3ee4, 0xc039999a ]
+      - [ be32, 0x000efaf0, 0xc1be8040 ]
+      - [ be32, 0x003c3c90, 0x3f52b021 ]
   "32:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3C3EDC, 0x4039999A ]
-      - [ be32, 0x3C3EE4, 0xC039999A ]
-      - [ be32, 0x0EFAF0, 0xC1BE8040 ]
-      - [ be32, 0x0F042C, 0xC1BE8040 ]
-      - [ be32, 0x3C3C90, 0x3F52B021 ]
+      - [ be32, 0x003c3edc, 0x4039999a ]
+      - [ be32, 0x003c3ee4, 0xc039999a ]
+      - [ be32, 0x000efaf0, 0xc1be8040 ]
+      - [ be32, 0x000f042c, 0xc1be8040 ]
+      - [ be32, 0x003c3c90, 0x3f52b021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Disabling shadows can give a significant performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x130BF4, 0x4E800020 ]
+      - [ be32, 0x00130bf4, 0x4e800020 ]
   "Remove fog":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Does not provide any performance benefit."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xE92C8, 0x4E800020 ]
+      - [ be32, 0x000e92c8, 0x4e800020 ]
   "Reduce stage quality":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xF90AC, 0x4E800020 ]
-      - [ be32, 0x10E3AC, 0x4E800020 ]
+      - [ be32, 0x000f90ac, 0x4e800020 ]
+      - [ be32, 0x0010e3ac, 0x4e800020 ]
   "Disable HUD":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes the ingame HUD. Useful for videos and screenshots."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xEECD0, 0x60000000 ]
+      - [ be32, 0x000eecd0, 0x60000000 ]
   "Disable spawned effects":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x12A59C, 0x2B8A0004 ]
+      - [ be32, 0x0012a59c, 0x2b8a0004 ]
   "Unlock FPS":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Author: "TriggerHappy"
+    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000d9fe0, 0x4E800020 ]
+      - [ be32, 0x000d9fe0, 0x4e800020 ]
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
   "21:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
-      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3FA3126F ]
+      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+      - [ be32, 0x003d4274, 0xbff0a3d7 ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3fa3126f ]
   "21:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x3FF0A3D7 ]
-      - [ be32, 0x3D4274, 0xBFF0A3D7 ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3FA3126F ]
+      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+      - [ be32, 0x003d4274, 0xbff0a3d7 ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x000f1b6c, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3fa3126f ]
   "32:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x4039999A ]
-      - [ be32, 0x3D4274, 0xC039999A ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3F52B021 ]
+      - [ be32, 0x003d426c, 0x4039999a ]
+      - [ be32, 0x003d4274, 0xc039999a ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3f52b021 ]
   "32:9 Aspect Ratio (Cutscenes)":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x3D426C, 0x4039999A ]
-      - [ be32, 0x3D4274, 0xC039999A ]
-      - [ be32, 0x0F1230, 0xC1BE8040 ]
-      - [ be32, 0x0F1B6C, 0xC1BE8040 ]
-      - [ be32, 0x3D4020, 0x3F52B021 ]
+      - [ be32, 0x003d426c, 0x4039999a ]
+      - [ be32, 0x003d4274, 0xc039999a ]
+      - [ be32, 0x000f1230, 0xc1be8040 ]
+      - [ be32, 0x000f1b6c, 0xc1be8040 ]
+      - [ be32, 0x003d4020, 0x3f52b021 ]
   "Disable shadows":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Disabling shadows can give a significant performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x132354, 0x4E800020 ]
+      - [ be32, 0x00132354, 0x4e800020 ]
   "Remove fog":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Does not provide any performance benefit."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xEAA08, 0x4E800020 ]
+      - [ be32, 0x000eaa08, 0x4e800020 ]
   "Reduce stage quality":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xFA7EC, 0x4E800020 ]
-      - [ be32, 0x10FAEC, 0x4E800020 ]
+      - [ be32, 0x000fa7ec, 0x4e800020 ]
+      - [ be32, 0x0010faec, 0x4e800020 ]
   "Disable HUD":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes the ingame HUD. Useful for videos and screenshots."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xF0410, 0x60000000 ]
+      - [ be32, 0x000f0410, 0x60000000 ]
   "Disable spawned effects":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x12BCFC, 0x2B8A0004 ]
+      - [ be32, 0x0012bcfc, 0x2b8a0004 ]
   "Unlock FPS":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Allows you to play the game at 60fps or higher without modyfing the vblank frequency."
+    Author: "TriggerHappy"
+    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xDB720, 0x4E800020 ]
+      - [ be32, 0x000db720, 0x4e800020 ]
 
 OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
   "Disable snow effect":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes  the heavy snow effect on the shadow moses stage."
+    Author: "TriggerHappy"
+    Notes: "Removes the heavy snow effect on the shadow moses stage."
     Patch Version: 1.0
     Patch:
-          - [ be32, 0x302A1400, 0x4E800020 ]
+      - [ be32, 0x302a1400, 0x4e800020 ]
 
 Anchors:
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
