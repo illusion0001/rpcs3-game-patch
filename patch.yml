@@ -8180,34 +8180,34 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
       - [ be32, 0x007b37d0, 0x32360000 ]
 
 Anchors:
-  crabnotes: &crabnotes "Set Framelimt to 60FPS as going above this will speed up.\nIn-Game Cinematics animations and camera are only interpolated at 30FPS."
+  crabnotes: &crabnotes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
 
 PPU-4aeb132cdf86d9c4ab20e48ae70cc823e455e05d:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Genji: Days of the Blade":
         BCES00002: [ 01.00 ]
-    Author: Esppiral
-    Notes: 
+    Author: "Esppiral"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x100FA8B0, 0x4017B9AA ] # 21:9
-  60 FPS:
+      - [ be32, 0x100fa8b0, 0x4017b9aa ] # 21:9
+  "60 FPS":
     Games:
       "Genji: Days of the Blade":
         BCES00002: [ 01.00 ]
-    Author: Esppiral, illusion
+    Author: "Esppiral, illusion"
     Notes: *crabnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x004D0178, 0x38000000 ] # li r0 0x0
+      - [ be32, 0x004d0178, 0x38000000 ] # li r0 0x0
 
 PPU-d99d403214a204b9fe8a5c23079dab8ddf4c0654:
-  60 FPS:
+  "60 FPS":
     Games:
       "Genji: Days of the Blade":
         BCAS20002: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *crabnotes
     Patch Version: 1.0
     Patch:
