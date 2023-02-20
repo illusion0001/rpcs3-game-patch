@@ -2762,14 +2762,14 @@ PPU-342cfff6572ba74b4f4a55b454fa07e172577aa9:
       - [ be32, 0x00e36504, 0x38600000 ]
 
 PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Batman Arkham Origins":
         BLES01784: [ 01.06 ]
-    Author: dron_3
-    Notes: Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)
+    Author: "dron_3"
+    Notes: "Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)"
     Patch:
-      - [ be32, 0x00F249F0, 0x38600000 ]
+      - [ be32, 0x00f249f0, 0x38600000 ]
 
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
   "Infinite Ammo":
@@ -3712,8 +3712,8 @@ Anchors:
   tlou111_post: &tlou111_post
   #  - [ be32, 0x00aa944c, 0x38000003 ] # Post-processing modes                    (mem address: 0x1571867)
     - [ be32, 0x0096be4c, 0xc0090990 ] # load e190 with 0
-    - [ be32, 0x0096BE58, 0xc1890990 ] # load e198 with 0
-    - [ be32, 0x0096BEE0, 0xc0090990 ] # load e1a0 with 0
+    - [ be32, 0x0096be58, 0xc1890990 ] # load e198 with 0
+    - [ be32, 0x0096bee0, 0xc0090990 ] # load e1a0 with 0
 
   tlou111_mesh: &tlou111_mesh
     - [ be16, 0x009515d8, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x14A9604)
@@ -3930,40 +3930,40 @@ Anchors:
   #  - [ be16, 0x00aa9464, 0x9869 ]     # load from r3
 
   tlou111_cparts: &tlou111_cparts
-    - [ be64, 0x0e8d600, 0x496E66696E697465 ] # str Infinite Everything (Ammo, Items, Skills, Parts)
-    - [ be64, 0x0e8d608, 0x2045766572797468 ]
-    - [ be64, 0x0e8d610, 0x696E672028416D6D ]
-    - [ be64, 0x0e8d618, 0x6F2C204974656D73 ]
-    - [ be64, 0x0e8d620, 0x2C20536B696C6C73 ]
-    - [ be64, 0x0e8d628, 0x2C20506172747329 ]
+    - [ be64, 0x00e8d600, 0x496e66696e697465 ] # str Infinite Everything (Ammo, Items, Skills, Parts)
+    - [ be64, 0x00e8d608, 0x2045766572797468 ]
+    - [ be64, 0x00e8d610, 0x696e672028416d6d ]
+    - [ be64, 0x00e8d618, 0x6f2c204974656d73 ]
+    - [ be64, 0x00e8d620, 0x2c20536b696c6c73 ]
+    - [ be64, 0x00e8d628, 0x2c20506172747329 ]
     - [ be32, 0x01286780, 0x00e8d600 ] # point addr to e8e490
     - [ be32, 0x01286784, 0x014f3412 ] # point addr to 014f3412
 # add
-    - [ be32, 0x003495c, 0x48e58c35 ] # bl 00e8d590
-    - [ be32, 0x0e8d590, 0x3fa0014f ] # r29 14f0000
-    - [ be32, 0x0e8d594, 0x881d3412 ] # lbz r0, 0x3412, (r29)
-    - [ be32, 0x0e8d598, 0x2f800000 ] # cmp r0, 0x0
-    - [ be32, 0x0e8d59c, 0x409e0008 ] # bne 0xe8d5a4
-    - [ be32, 0x0e8d5a0, 0x7f7fd22e ] # og lhzx
-    - [ be32, 0x0e8d5a4, 0x4e800020 ] # ret
-    - [ be32, 0x0034968, 0x2f9d096f ] # r29 to 512
-    - [ be32, 0x0034970, 0x3ba0096f ] # li r29 512
+    - [ be32, 0x0003495c, 0x48e58c35 ] # bl 00e8d590
+    - [ be32, 0x00e8d590, 0x3fa0014f ] # r29 14f0000
+    - [ be32, 0x00e8d594, 0x881d3412 ] # lbz r0, 0x3412, (r29)
+    - [ be32, 0x00e8d598, 0x2f800000 ] # cmp r0, 0x0
+    - [ be32, 0x00e8d59c, 0x409e0008 ] # bne 0xe8d5a4
+    - [ be32, 0x00e8d5a0, 0x7f7fd22e ] # og lhzx
+    - [ be32, 0x00e8d5a4, 0x4e800020 ] # ret
+    - [ be32, 0x00034968, 0x2f9d096f ] # r29 to 512
+    - [ be32, 0x00034970, 0x3ba0096f ] # li r29 512
 # sub
-    - [ be32, 0x00336c0, 0x7e2802a6 ] # mflr r17,LR
-    - [ be32, 0x00336c4, 0x48e59f01 ] # call 3
-    - [ be32, 0x00336c8, 0x7e2803a6 ] # mtlr LR,r17
-    - [ be32, 0x00336cc, 0x3a200000 ] # r17 = 0
-    - [ be32, 0x0e8d5c4, 0x7c0b4a2e ] # og lhzx
-    - [ be32, 0x0e8d5c8, 0x5408043e ] # og rlwinm
-    - [ be32, 0x0e8d5cc, 0x3e00014f ] # r16 = 14f0000
-    - [ be32, 0x0e8d5d0, 0x89f03412 ] # lbz r15,0x3412,r16
-    - [ be32, 0x0e8d5d4, 0x2f8f0000 ] # r15 vs 0
-    - [ be32, 0x0e8d5d8, 0x409e0008 ] # bne
-    - [ be32, 0x0e8d5dc, 0x7c050050 ] # og sub
-    - [ be32, 0x0e8d5e0, 0x7f882800 ] # og cmpw
-    - [ be32, 0x0e8d5e4, 0x39e00000 ] # r15 = 0
-    - [ be32, 0x0e8d5e8, 0x3a000000 ] # r16 = 0
-    - [ be32, 0x0e8d5ec, 0x4e800020 ] # ret
+    - [ be32, 0x000336c0, 0x7e2802a6 ] # mflr r17,LR
+    - [ be32, 0x000336c4, 0x48e59f01 ] # call 3
+    - [ be32, 0x000336c8, 0x7e2803a6 ] # mtlr LR,r17
+    - [ be32, 0x000336cc, 0x3a200000 ] # r17 = 0
+    - [ be32, 0x00e8d5c4, 0x7c0b4a2e ] # og lhzx
+    - [ be32, 0x00e8d5c8, 0x5408043e ] # og rlwinm
+    - [ be32, 0x00e8d5cc, 0x3e00014f ] # r16 = 14f0000
+    - [ be32, 0x00e8d5d0, 0x89f03412 ] # lbz r15,0x3412,r16
+    - [ be32, 0x00e8d5d4, 0x2f8f0000 ] # r15 vs 0
+    - [ be32, 0x00e8d5d8, 0x409e0008 ] # bne
+    - [ be32, 0x00e8d5dc, 0x7c050050 ] # og sub
+    - [ be32, 0x00e8d5e0, 0x7f882800 ] # og cmpw
+    - [ be32, 0x00e8d5e4, 0x39e00000 ] # r15 = 0
+    - [ be32, 0x00e8d5e8, 0x3a000000 ] # r16 = 0
+    - [ be32, 0x00e8d5ec, 0x4e800020 ] # ret
 
   tlou111_nailbombsoftlockfix: &tlou111_nailbombsoftlockfix
     - [ be32, 0x0069f7ac, 0x4b9c012d ] # bl SUB_0005f8d8
@@ -4280,16 +4280,16 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000325B8, 0x60000000 ] # nop write for ar float
-      - [ be32, 0x14AEBD0,  0x3ED70A3D ] # ar float
-      - [ be32, 0x128F2F4,  0x3F400000 ]
+      - [ be32, 0x000325b8, 0x60000000 ] # nop write for ar float
+      - [ be32, 0x014aebd0, 0x3ed70a3d ] # ar float
+      - [ be32, 0x0128f2f4, 0x3f400000 ]
   "Unlock FPS":
     Games: *tlou100_title
     Author: "illusion"
     Notes: *fpsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00036AB8, 0x38A00000 ]
+      - [ be32, 0x00036ab8, 0x38a00000 ]
   "Infinite flashlight battery":
     Games: *tlou100_title
     Author: "bungholio, ZEROx"
@@ -4446,16 +4446,16 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0003556C, 0x60000000 ] # nop write for ar float
-      - [ be32, 0x1558A50,  0x3ED70A3D ] # ar float
-      - [ be32, 0x12C1964,  0x3F400000 ]
+      - [ be32, 0x0003556c, 0x60000000 ] # nop write for ar float
+      - [ be32, 0x01558a50, 0x3ed70a3d ] # ar float
+      - [ be32, 0x012c1964, 0x3f400000 ]
   "Unlock FPS":
     Games: *tlou111_title
     Author: "illusion"
     Notes: *fpsnotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00039D08, 0x38A00000 ]
+      - [ be32, 0x00039d08, 0x38a00000 ]
   "Dev Menu Plus":
     Games: *tlou111_title
     Author: "illusion, Freako, Smasher248"
@@ -4476,12 +4476,12 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x012850f8, 0x0148AE18 ] # ptr
+      - [ be32, 0x012850f8, 0x0148ae18 ] # ptr
       - [ be16, 0x0135dcac, 0x3f80 ] # avoid assertion
-      - [ be64, 0x00e8c418, 0x4E5043204D6F6465 ] # string replace
-      - [ be32, 0x00e8c420, 0x6C205363 ]
-      - [ be16, 0x00e8c424, 0x616C ]
-      - [ be64, 0x00e8c426, 0x653A000000000000 ] # 1 byte overlap
+      - [ be64, 0x00e8c418, 0x4e5043204d6f6465 ] # string replace
+      - [ be32, 0x00e8c420, 0x6c205363 ]
+      - [ be16, 0x00e8c424, 0x616c ]
+      - [ be64, 0x00e8c426, 0x653a000000000000 ] # 1 byte overlap
   "Disable Camera Shake":
     Games: *tlou111_title
     Author: "illusion"
