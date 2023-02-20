@@ -6943,16 +6943,16 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
       - [ be32, 0x0001877c, 0x38e00001 ]
 
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
-  Create Mode:
+  "Create Mode":
     Games:
       "LittleBigPlanet 3":
         NPUA81116: [ 01.26 ]
         BCUS98362: [ 01.26 ]
-    Author: Zhaxxy
-    Notes: "Permanently be in create mode until unchecked (Flying in the pod will cause sackboy to go far away from the pod, teleport yourself into the pod via a player teleporter then stop flying)."
+    Author: "Zhaxxy"
+    Notes: "Permanently be in create mode until unchecked.\nFlying in the pod will cause sackboy to go far away from the pod. Teleport yourself into the pod via a player teleporter, then stop flying."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001ED2AC, 0x41E00001 ]
+      - [ be32, 0x001ed2ac, 0x41e00001 ]
 
 Anchors:
   tox_aspect_ratio_21_9: &tox_aspect_ratio_21_9
