@@ -9144,332 +9144,332 @@ PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
       - [ be32, 0x0038561C, 0x38600000 ] # li r3 0x0
 
 Anchors:
-  p5_ModSupport_Author: &p5_ModSupport_Author TGEnigma
+  p5_ModSupport_Author: &p5_ModSupport_Author "TGEnigma"
   p5_ModSupport_Notes: &p5_ModSupport_Notes "Enable support for adding mod files (through mod.cpk) to the game. This feature is required to fix the dialog portraits when using resolution scaling."
   p5_ModSupport_PatVer: &p5_ModSupport_PatVer 1.0
   p5_ModSupport: &p5_ModSupport
   # make %s/hdd.cpk -> %s%s/mod.cpk
-    - [ be32, 0x00B4D638, 0x25732573 ]
-    - [ be32, 0x00B4D63C, 0x2F6D6F64 ]
-    - [ be32, 0x00B4D640, 0x2E63706B ]
+    - [ be32, 0x00b4d638, 0x25732573 ]
+    - [ be32, 0x00b4d63c, 0x2f6d6f64 ]
+    - [ be32, 0x00b4d640, 0x2e63706b ]
 
   # make mod.cpk file path
-    - [ be32, 0x00114CA4, 0x3C6000B5 ] # lis    r3, cpkPathString@ha
-    - [ be32, 0x00114CA8, 0x33E3D638 ] # addic  r31, r3, cpkPathString@l
-    - [ be32, 0x00114CAC, 0x48968BEB ] # bla    getInstallPath
-    - [ be32, 0x00114CB0, 0x60000000 ] # nop
-    - [ be32, 0x00114CB4, 0x7C7E1B78 ] # mr     r30, r3
-    - [ be32, 0x00114CB8, 0x48968BF7 ] # bla    getInstallPath2
-    - [ be32, 0x00114CBC, 0x60000000 ] # nop
-    - [ be32, 0x00114CC0, 0x33A10070 ] # addic  r29, r1, 0x70
-    - [ be32, 0x00114CC4, 0x7C661B78 ] # mr     r6, r3
-    - [ be32, 0x00114CC8, 0x7FA3EB78 ] # mr     r3, r29
-    - [ be32, 0x00114CCC, 0x7FE4FB78 ] # mr     r4, r31
-    - [ be32, 0x00114CD0, 0x7FC5F378 ] # mr     r5, r30
-    - [ be32, 0x00114CD4, 0x48AD567F ] # bla    sprintf
-    - [ be32, 0x00114CD8, 0x60000000 ] # nop
-    - [ be32, 0x00114CDC, 0x48B44A9E ] # ba     branchOffset
-    - [ be32, 0x00114CE0, 0x60000000 ] # nop
+    - [ be32, 0x00114ca4, 0x3c6000b5 ] # lis    r3, cpkPathString@ha
+    - [ be32, 0x00114ca8, 0x33e3d638 ] # addic  r31, r3, cpkPathString@l
+    - [ be32, 0x00114cac, 0x48968beb ] # bla    getInstallPath
+    - [ be32, 0x00114cb0, 0x60000000 ] # nop
+    - [ be32, 0x00114cb4, 0x7c7e1b78 ] # mr     r30, r3
+    - [ be32, 0x00114cb8, 0x48968bf7 ] # bla    getInstallPath2
+    - [ be32, 0x00114cbc, 0x60000000 ] # nop
+    - [ be32, 0x00114cc0, 0x33a10070 ] # addic  r29, r1, 0x70
+    - [ be32, 0x00114cc4, 0x7c661b78 ] # mr     r6, r3
+    - [ be32, 0x00114cc8, 0x7fa3eb78 ] # mr     r3, r29
+    - [ be32, 0x00114ccc, 0x7fe4fb78 ] # mr     r4, r31
+    - [ be32, 0x00114cd0, 0x7fc5f378 ] # mr     r5, r30
+    - [ be32, 0x00114cd4, 0x48ad567f ] # bla    sprintf
+    - [ be32, 0x00114cd8, 0x60000000 ] # nop
+    - [ be32, 0x00114cdc, 0x48b44a9e ] # ba     branchOffset
+    - [ be32, 0x00114ce0, 0x60000000 ] # nop
 
   # trampoline
-    - [ be32, 0x00B44A9C, 0x7FA3EB78 ] # mr     r3, r29
-    - [ be32, 0x00B44AA0, 0x48114B77 ] # bla    criFsBindCpk
-    - [ be32, 0x00B44AA4, 0x60000000 ] # nop
-    - [ be32, 0x00B44AA8, 0x3880000A ] # li     r4, 0xA
-    - [ be32, 0x00B44AAC, 0x48AB8ED7 ] # bla    criFsBindPatch
-    - [ be32, 0x00B44AB0, 0x60000000 ] # nop
-    - [ be32, 0x00B44AB4, 0x48114CE6 ] # ba     0x114CA4 + 0x40
-    - [ be32, 0x00B44AB8, 0x60000000 ] # nop
+    - [ be32, 0x00b44a9c, 0x7fa3eb78 ] # mr     r3, r29
+    - [ be32, 0x00b44aa0, 0x48114b77 ] # bla    criFsBindCpk
+    - [ be32, 0x00b44aa4, 0x60000000 ] # nop
+    - [ be32, 0x00b44aa8, 0x3880000a ] # li     r4, 0xa
+    - [ be32, 0x00b44aac, 0x48ab8ed7 ] # bla    criFsBindPatch
+    - [ be32, 0x00b44ab0, 0x60000000 ] # nop
+    - [ be32, 0x00b44ab4, 0x48114ce6 ] # ba     0x114ca4 + 0x40
+    - [ be32, 0x00b44ab8, 0x60000000 ] # nop
 
-  p5_SkipIntro_Author: &p5_SkipIntro_Author TGEnigma
+  p5_SkipIntro_Author: &p5_SkipIntro_Author "TGEnigma"
   p5_SkipIntro_PatVer: &p5_SkipIntro_PatVer 1.0
   p5_SkipIntro: &p5_SkipIntro
-    - [ be32, 0x0055AC8C, 0x60000000 ]
+    - [ be32, 0x0055ac8c, 0x60000000 ]
 
-  p5_60FPS_Author: &p5_60FPS_Author TGEnigma, rexis
+  p5_60FPS_Author: &p5_60FPS_Author "TGEnigma, rexis"
   p5_60FPS_Notes: &p5_60FPS_Notes "Patch may accelerate some game effects by 2x. Updated patch fixes subtitle cut-off in cutscenes."
   p5_60FPS_PatVer: &p5_60FPS_PatVer 1.1
   p5_60FPS: &p5_60FPS
-    - [ be32, 0x00010268, 0x9061009C ] # set update rate to 60 -> r3, 0xE0+var_44(r1)
-  #  - [ be32, 0x008FC864, 0x60000000 ] # nop cellGcmSetSecondVFrequency
+    - [ be32, 0x00010268, 0x9061009c ] # Set update rate to 60 -> r3, 0xe0+var_44(r1)
+  #  - [ be32, 0x008fc864, 0x60000000 ] # nop cellGcmSetSecondVFrequency
     - [ bef32, 0x00012484, 0.01666667 ]
     - [ bef32, 0x00045678, 0.01666667 ]
-    - [ bef32, 0x000616F0, 0.01666667 ]
-    - [ bef32, 0x00073F20, 0.01666667 ]
-  #  - [ bef32, 0x000753A0, 0.01666667 ] # Doubles camera speed
-    - [ bef32, 0x00077E54, 0.01666667 ]
-    - [ bef32, 0x00078A70, 0.01666667 ]
-    - [ bef32, 0x0007A238, 0.01666667 ]
+    - [ bef32, 0x000616f0, 0.01666667 ]
+    - [ bef32, 0x00073f20, 0.01666667 ]
+  #  - [ bef32, 0x000753a0, 0.01666667 ] # Doubles camera speed
+    - [ bef32, 0x00077e54, 0.01666667 ]
+    - [ bef32, 0x00078a70, 0.01666667 ]
+    - [ bef32, 0x0007a238, 0.01666667 ]
     - [ bef32, 0x00081864, 0.01666667 ]
-    - [ bef32, 0x000885C8, 0.01666667 ]
-    - [ bef32, 0x0008C550, 0.01666667 ]
-    - [ bef32, 0x0008D6D0, 0.01666667 ]
-    - [ bef32, 0x000D058C, 0.01666667 ]
-    - [ bef32, 0x000D0B4C, 0.01666667 ]
-    - [ bef32, 0x000E4754, 0.01666667 ]
-    - [ bef32, 0x000E50F0, 0.01666667 ]
-  #  - [ bef32, 0x000E8190, 0.01666667 ] # Breaks crumpled paper animation
-    - [ bef32, 0x000F8B78, 0.01666667 ]
-    - [ bef32, 0x00101CE8, 0.01666667 ]
-    - [ bef32, 0x001E7344, 0.01666667 ]
-    - [ bef32, 0x001EB0D4, 0.01666667 ]
-    - [ bef32, 0x001EB328, 0.01666667 ]
-    - [ bef32, 0x001EB814, 0.01666667 ]
-    - [ bef32, 0x001EB940, 0.01666667 ]
-    - [ bef32, 0x001EBA04, 0.01666667 ]
-    - [ bef32, 0x001EBBA0, 0.01666667 ]
-    - [ bef32, 0x001EBCD0, 0.01666667 ]
-    - [ bef32, 0x001ECCA0, 0.01666667 ]
-    - [ bef32, 0x00234C64, 0.01666667 ]
-    - [ bef32, 0x0023F4BC, 0.01666667 ]
-    - [ bef32, 0x002400BC, 0.01666667 ]
-    - [ bef32, 0x00240BB0, 0.01666667 ]
-    - [ bef32, 0x0029231C, 0.01666667 ]
-    - [ bef32, 0x00294A70, 0.01666667 ]
-    - [ bef32, 0x002952F8, 0.01666667 ]
-  #  - [ bef32, 0x002B027C, 0.01666667 ] # Makes it impossible to run < 60FPS
-    - [ bef32, 0x002B0688, 0.01666667 ]
-    - [ bef32, 0x002B6154, 0.01666667 ]
-    - [ bef32, 0x002B71F8, 0.01666667 ]
-    - [ bef32, 0x002B82C8, 0.01666667 ]
-    - [ bef32, 0x002B98F8, 0.01666667 ]
-    - [ bef32, 0x002B9F8C, 0.01666667 ]
-    - [ bef32, 0x002BA614, 0.01666667 ]
-    - [ bef32, 0x002BC84C, 0.01666667 ]
-    - [ bef32, 0x002BCD2C, 0.01666667 ]
-    - [ bef32, 0x002C550C, 0.01666667 ]
-    - [ bef32, 0x002D1328, 0.01666667 ]
-  #  - [ bef32, 0x002D230C, 0.01666667 ] # Doubles movement speed
-    - [ bef32, 0x002D2DDC, 0.01666667 ]
-    - [ bef32, 0x002D8A10, 0.01666667 ]
-    - [ bef32, 0x002D8A18, 0.01666667 ]
-    - [ bef32, 0x002DA46C, 0.01666667 ]
-    - [ bef32, 0x002FBB00, 0.01666667 ]
-    - [ bef32, 0x0030E258, 0.01666667 ]
-    - [ bef32, 0x003181D4, 0.01666667 ]
-    - [ bef32, 0x0031CE24, 0.01666667 ]
-    - [ bef32, 0x0031DBE0, 0.01666667 ]
-    - [ bef32, 0x0033DBD0, 0.01666667 ]
+    - [ bef32, 0x000885c8, 0.01666667 ]
+    - [ bef32, 0x0008c550, 0.01666667 ]
+    - [ bef32, 0x0008d6d0, 0.01666667 ]
+    - [ bef32, 0x000d058c, 0.01666667 ]
+    - [ bef32, 0x000d0b4c, 0.01666667 ]
+    - [ bef32, 0x000e4754, 0.01666667 ]
+    - [ bef32, 0x000e50f0, 0.01666667 ]
+  #  - [ bef32, 0x000e8190, 0.01666667 ] # Breaks crumpled paper animation
+    - [ bef32, 0x000f8b78, 0.01666667 ]
+    - [ bef32, 0x00101ce8, 0.01666667 ]
+    - [ bef32, 0x001e7344, 0.01666667 ]
+    - [ bef32, 0x001eb0d4, 0.01666667 ]
+    - [ bef32, 0x001eb328, 0.01666667 ]
+    - [ bef32, 0x001eb814, 0.01666667 ]
+    - [ bef32, 0x001eb940, 0.01666667 ]
+    - [ bef32, 0x001eba04, 0.01666667 ]
+    - [ bef32, 0x001ebba0, 0.01666667 ]
+    - [ bef32, 0x001ebcd0, 0.01666667 ]
+    - [ bef32, 0x001ecca0, 0.01666667 ]
+    - [ bef32, 0x00234c64, 0.01666667 ]
+    - [ bef32, 0x0023f4bc, 0.01666667 ]
+    - [ bef32, 0x002400bc, 0.01666667 ]
+    - [ bef32, 0x00240bb0, 0.01666667 ]
+    - [ bef32, 0x0029231c, 0.01666667 ]
+    - [ bef32, 0x00294a70, 0.01666667 ]
+    - [ bef32, 0x002952f8, 0.01666667 ]
+  #  - [ bef32, 0x002b027c, 0.01666667 ] # Makes it impossible to run < 60 FPS
+    - [ bef32, 0x002b0688, 0.01666667 ]
+    - [ bef32, 0x002b6154, 0.01666667 ]
+    - [ bef32, 0x002b71f8, 0.01666667 ]
+    - [ bef32, 0x002b82c8, 0.01666667 ]
+    - [ bef32, 0x002b98f8, 0.01666667 ]
+    - [ bef32, 0x002b9f8c, 0.01666667 ]
+    - [ bef32, 0x002ba614, 0.01666667 ]
+    - [ bef32, 0x002bc84c, 0.01666667 ]
+    - [ bef32, 0x002bcd2c, 0.01666667 ]
+    - [ bef32, 0x002c550c, 0.01666667 ]
+    - [ bef32, 0x002d1328, 0.01666667 ]
+  #  - [ bef32, 0x002d230c, 0.01666667 ] # Doubles movement speed
+    - [ bef32, 0x002d2ddc, 0.01666667 ]
+    - [ bef32, 0x002d8a10, 0.01666667 ]
+    - [ bef32, 0x002d8a18, 0.01666667 ]
+    - [ bef32, 0x002da46c, 0.01666667 ]
+    - [ bef32, 0x002fbb00, 0.01666667 ]
+    - [ bef32, 0x0030e258, 0.01666667 ]
+    - [ bef32, 0x003181d4, 0.01666667 ]
+    - [ bef32, 0x0031ce24, 0.01666667 ]
+    - [ bef32, 0x0031dbe0, 0.01666667 ]
+    - [ bef32, 0x0033dbd0, 0.01666667 ]
     - [ bef32, 0x00358664, 0.01666667 ]
     - [ bef32, 0x00359020, 0.01666667 ]
-    - [ bef32, 0x0035AD10, 0.01666667 ]
-    - [ bef32, 0x00364A98, 0.01666667 ]
-    - [ bef32, 0x0037429C, 0.01666667 ]
-    - [ bef32, 0x00376E7C, 0.01666667 ]
-    - [ bef32, 0x00379B08, 0.01666667 ]
-    - [ bef32, 0x0037AAAC, 0.01666667 ]
-    - [ bef32, 0x0037CF54, 0.01666667 ]
-    - [ bef32, 0x0037DB7C, 0.01666667 ]
-    - [ bef32, 0x003803F4, 0.01666667 ]
-    - [ bef32, 0x00387A80, 0.01666667 ]
+    - [ bef32, 0x0035ad10, 0.01666667 ]
+    - [ bef32, 0x00364a98, 0.01666667 ]
+    - [ bef32, 0x0037429c, 0.01666667 ]
+    - [ bef32, 0x00376e7c, 0.01666667 ]
+    - [ bef32, 0x00379b08, 0.01666667 ]
+    - [ bef32, 0x0037aaac, 0.01666667 ]
+    - [ bef32, 0x0037cf54, 0.01666667 ]
+    - [ bef32, 0x0037db7c, 0.01666667 ]
+    - [ bef32, 0x003803f4, 0.01666667 ]
+    - [ bef32, 0x00387a80, 0.01666667 ]
     - [ bef32, 0x00388684, 0.01666667 ]
-  #  - [ bef32, 0x003ACBC0, 0.01666667 ] # kaleidoscope speedup
-    - [ bef32, 0x003BDDD0, 0.01666667 ]
-    - [ bef32, 0x003E944C, 0.01666667 ]
-    - [ bef32, 0x003F35EC, 0.01666667 ]
-    - [ bef32, 0x003F6FF4, 0.01666667 ]
-    - [ bef32, 0x0058CE18, 0.01666667 ]
-    - [ bef32, 0x0058DE64, 0.01666667 ]
-    - [ bef32, 0x0058E82C, 0.01666667 ]
-    - [ bef32, 0x0058E958, 0.01666667 ]
-    - [ bef32, 0x0058F47C, 0.01666667 ]
-    - [ bef32, 0x0058FA00, 0.01666667 ]
-    - [ bef32, 0x0058FAB4, 0.01666667 ]
-    - [ bef32, 0x0058FBE4, 0.01666667 ]
-    - [ bef32, 0x0058FD2C, 0.01666667 ]
-    - [ bef32, 0x0058FE6C, 0.01666667 ]
-    - [ bef32, 0x00590A04, 0.01666667 ]
-    - [ bef32, 0x005B6914, 0.01666667 ]
-    - [ bef32, 0x005F1C6C, 0.01666667 ]
-    - [ bef32, 0x0062076C, 0.01666667 ] # battle related stuff
-    - [ bef32, 0x007072BC, 0.01666667 ]
-    - [ bef32, 0x00722D7C, 0.01666667 ]
-    - [ bef32, 0x0073C840, 0.01666667 ]
-    - [ bef32, 0x00772E50, 0.01666667 ]
-    - [ bef32, 0x0087B338, 0.01666667 ]
-    - [ bef32, 0x00B10110, 0.01666667 ]
-    - [ bef32, 0x00B6AA14, 0.01666667 ]
-    - [ bef32, 0x00B6AA38, 0.01666667 ]
-    - [ bef32, 0x00B70B48, 0.01666667 ]
-    - [ bef32, 0x00B70BC8, 0.01666667 ]
-    - [ bef32, 0x00B71CF4, 0.01666667 ]
-    - [ bef32, 0x00B72F38, 0.01666667 ]
-    - [ bef32, 0x00CFF46C, 0.01666667 ]
+  #  - [ bef32, 0x003acbc0, 0.01666667 ] # Kaleidoscope speedup
+    - [ bef32, 0x003bddd0, 0.01666667 ]
+    - [ bef32, 0x003e944c, 0.01666667 ]
+    - [ bef32, 0x003f35ec, 0.01666667 ]
+    - [ bef32, 0x003f6ff4, 0.01666667 ]
+    - [ bef32, 0x0058ce18, 0.01666667 ]
+    - [ bef32, 0x0058de64, 0.01666667 ]
+    - [ bef32, 0x0058e82c, 0.01666667 ]
+    - [ bef32, 0x0058e958, 0.01666667 ]
+    - [ bef32, 0x0058f47c, 0.01666667 ]
+    - [ bef32, 0x0058fa00, 0.01666667 ]
+    - [ bef32, 0x0058fab4, 0.01666667 ]
+    - [ bef32, 0x0058fbe4, 0.01666667 ]
+    - [ bef32, 0x0058fd2c, 0.01666667 ]
+    - [ bef32, 0x0058fe6c, 0.01666667 ]
+    - [ bef32, 0x00590a04, 0.01666667 ]
+    - [ bef32, 0x005b6914, 0.01666667 ]
+    - [ bef32, 0x005f1c6c, 0.01666667 ]
+    - [ bef32, 0x0062076c, 0.01666667 ] # Battle related stuff
+    - [ bef32, 0x007072bc, 0.01666667 ]
+    - [ bef32, 0x00722d7c, 0.01666667 ]
+    - [ bef32, 0x0073c840, 0.01666667 ]
+    - [ bef32, 0x00772e50, 0.01666667 ]
+    - [ bef32, 0x0087b338, 0.01666667 ]
+    - [ bef32, 0x00b10110, 0.01666667 ]
+    - [ bef32, 0x00b6aa14, 0.01666667 ]
+    - [ bef32, 0x00b6aa38, 0.01666667 ]
+    - [ bef32, 0x00b70b48, 0.01666667 ]
+    - [ bef32, 0x00b70bc8, 0.01666667 ]
+    - [ bef32, 0x00b71cf4, 0.01666667 ]
+    - [ bef32, 0x00b72f38, 0.01666667 ]
+    - [ bef32, 0x00cff46c, 0.01666667 ]
     - [ bef32, 0x00061700, 0.1666667 ]
-    - [ bef32, 0x00069AA4, 0.1666667 ]
-    - [ bef32, 0x0007A1EC, 0.1666667 ]
+    - [ bef32, 0x00069aa4, 0.1666667 ]
+    - [ bef32, 0x0007a1ec, 0.1666667 ]
     - [ bef32, 0x00081880, 0.1666667 ]
-    - [ bef32, 0x000C8258, 0.1666667 ]
-    - [ bef32, 0x000C991C, 0.1666667 ]
-    - [ bef32, 0x00101CCC, 0.1666667 ]
-    - [ bef32, 0x001E2C44, 0.1666667 ]
-    - [ bef32, 0x001E61E8, 0.1666667 ]
-    - [ bef32, 0x001E7338, 0.1666667 ]
-    - [ bef32, 0x00250C50, 0.1666667 ]
-    - [ bef32, 0x00256B20, 0.1666667 ]
+    - [ bef32, 0x000c8258, 0.1666667 ]
+    - [ bef32, 0x000c991c, 0.1666667 ]
+    - [ bef32, 0x00101ccc, 0.1666667 ]
+    - [ bef32, 0x001e2c44, 0.1666667 ]
+    - [ bef32, 0x001e61e8, 0.1666667 ]
+    - [ bef32, 0x001e7338, 0.1666667 ]
+    - [ bef32, 0x00250c50, 0.1666667 ]
+    - [ bef32, 0x00256b20, 0.1666667 ]
     - [ bef32, 0x00292100, 0.1666667 ]
-    - [ bef32, 0x00294A60, 0.1666667 ]
-    - [ bef32, 0x002952E4, 0.1666667 ]
-    - [ bef32, 0x0029FD98, 0.1666667 ]
-    - [ bef32, 0x002A1BB8, 0.1666667 ]
-    - [ bef32, 0x002A41D0, 0.1666667 ]
-    - [ bef32, 0x002A6124, 0.1666667 ]
-    - [ bef32, 0x002B4FF0, 0.1666667 ]
-    - [ bef32, 0x002B60DC, 0.1666667 ]
-    - [ bef32, 0x002B7174, 0.1666667 ]
-    - [ bef32, 0x002B82F4, 0.1666667 ]
-    - [ bef32, 0x002B8E74, 0.1666667 ]
-    - [ bef32, 0x002BA600, 0.1666667 ]
-    - [ bef32, 0x002BAB30, 0.1666667 ]
-    - [ bef32, 0x002BB4E0, 0.1666667 ]
-    - [ bef32, 0x002BB808, 0.1666667 ]
-    - [ bef32, 0x002BC368, 0.1666667 ]
-    - [ bef32, 0x002BC844, 0.1666667 ]
-    - [ bef32, 0x002BD414, 0.1666667 ]
-    - [ bef32, 0x002C4F54, 0.1666667 ]
-    - [ bef32, 0x002C4FF0, 0.1666667 ]
-    - [ bef32, 0x002C69E4, 0.1666667 ]
-    - [ bef32, 0x002D4378, 0.1666667 ]
-    - [ bef32, 0x002DD968, 0.1666667 ]
-    - [ bef32, 0x002DE538, 0.1666667 ]
-    - [ bef32, 0x002DEA04, 0.1666667 ]
-    - [ bef32, 0x0030D7A0, 0.1666667 ]
-    - [ bef32, 0x0030E6BC, 0.1666667 ]
-    - [ bef32, 0x003181B8, 0.1666667 ]
-    - [ bef32, 0x0031AFE0, 0.1666667 ]
-    - [ bef32, 0x0031CE38, 0.1666667 ]
-    - [ bef32, 0x0031DBF0, 0.1666667 ]
-    - [ bef32, 0x0031EC74, 0.1666667 ]
-    - [ bef32, 0x00322FB4, 0.1666667 ]
+    - [ bef32, 0x00294a60, 0.1666667 ]
+    - [ bef32, 0x002952e4, 0.1666667 ]
+    - [ bef32, 0x0029fd98, 0.1666667 ]
+    - [ bef32, 0x002a1bb8, 0.1666667 ]
+    - [ bef32, 0x002a41d0, 0.1666667 ]
+    - [ bef32, 0x002a6124, 0.1666667 ]
+    - [ bef32, 0x002b4ff0, 0.1666667 ]
+    - [ bef32, 0x002b60dc, 0.1666667 ]
+    - [ bef32, 0x002b7174, 0.1666667 ]
+    - [ bef32, 0x002b82f4, 0.1666667 ]
+    - [ bef32, 0x002b8e74, 0.1666667 ]
+    - [ bef32, 0x002ba600, 0.1666667 ]
+    - [ bef32, 0x002bab30, 0.1666667 ]
+    - [ bef32, 0x002bb4e0, 0.1666667 ]
+    - [ bef32, 0x002bb808, 0.1666667 ]
+    - [ bef32, 0x002bc368, 0.1666667 ]
+    - [ bef32, 0x002bc844, 0.1666667 ]
+    - [ bef32, 0x002bd414, 0.1666667 ]
+    - [ bef32, 0x002c4f54, 0.1666667 ]
+    - [ bef32, 0x002c4ff0, 0.1666667 ]
+    - [ bef32, 0x002c69e4, 0.1666667 ]
+    - [ bef32, 0x002d4378, 0.1666667 ]
+    - [ bef32, 0x002dd968, 0.1666667 ]
+    - [ bef32, 0x002de538, 0.1666667 ]
+    - [ bef32, 0x002dea04, 0.1666667 ]
+    - [ bef32, 0x0030d7a0, 0.1666667 ]
+    - [ bef32, 0x0030e6bc, 0.1666667 ]
+    - [ bef32, 0x003181b8, 0.1666667 ]
+    - [ bef32, 0x0031afe0, 0.1666667 ]
+    - [ bef32, 0x0031ce38, 0.1666667 ]
+    - [ bef32, 0x0031dbf0, 0.1666667 ]
+    - [ bef32, 0x0031ec74, 0.1666667 ]
+    - [ bef32, 0x00322fb4, 0.1666667 ]
     - [ bef32, 0x00356560, 0.1666667 ]
-    - [ bef32, 0x003586BC, 0.1666667 ]
-    - [ bef32, 0x00358F90, 0.1666667 ]
-    - [ bef32, 0x0035A380, 0.1666667 ]
-    - [ bef32, 0x0035AA3C, 0.1666667 ]
-    - [ bef32, 0x00364A9C, 0.1666667 ]
-    - [ bef32, 0x003688C8, 0.1666667 ]
-    - [ bef32, 0x00368A88, 0.1666667 ]
-    - [ bef32, 0x00368E30, 0.1666667 ]
-    - [ bef32, 0x00376FD0, 0.1666667 ]
+    - [ bef32, 0x003586bc, 0.1666667 ]
+    - [ bef32, 0x00358f90, 0.1666667 ]
+    - [ bef32, 0x0035a380, 0.1666667 ]
+    - [ bef32, 0x0035aa3c, 0.1666667 ]
+    - [ bef32, 0x00364a9c, 0.1666667 ]
+    - [ bef32, 0x003688c8, 0.1666667 ]
+    - [ bef32, 0x00368a88, 0.1666667 ]
+    - [ bef32, 0x00368e30, 0.1666667 ]
+    - [ bef32, 0x00376fd0, 0.1666667 ]
     - [ bef32, 0x00377538, 0.1666667 ]
-    - [ bef32, 0x00377CD8, 0.1666667 ]
-    - [ bef32, 0x0037C2B0, 0.1666667 ]
-    - [ bef32, 0x0037D310, 0.1666667 ]
-    - [ bef32, 0x0037D418, 0.1666667 ]
-    - [ bef32, 0x0037D5B4, 0.1666667 ]
-    - [ bef32, 0x0037DD08, 0.1666667 ]
-    - [ bef32, 0x0037DE10, 0.1666667 ]
-    - [ bef32, 0x0037DF78, 0.1666667 ]
-    - [ bef32, 0x00382F38, 0.1666667 ]
-    - [ bef32, 0x003845F0, 0.1666667 ]
-    - [ bef32, 0x00387A6C, 0.1666667 ]
+    - [ bef32, 0x00377cd8, 0.1666667 ]
+    - [ bef32, 0x0037c2b0, 0.1666667 ]
+    - [ bef32, 0x0037d310, 0.1666667 ]
+    - [ bef32, 0x0037d418, 0.1666667 ]
+    - [ bef32, 0x0037d5b4, 0.1666667 ]
+    - [ bef32, 0x0037dd08, 0.1666667 ]
+    - [ bef32, 0x0037de10, 0.1666667 ]
+    - [ bef32, 0x0037df78, 0.1666667 ]
+    - [ bef32, 0x00382f38, 0.1666667 ]
+    - [ bef32, 0x003845f0, 0.1666667 ]
+    - [ bef32, 0x00387a6c, 0.1666667 ]
     - [ bef32, 0x00398208, 0.1666667 ]
     - [ bef32, 0x00398460, 0.1666667 ]
-    - [ bef32, 0x003999F8, 0.1666667 ]
-    - [ bef32, 0x003A7C64, 0.1666667 ]
-    - [ bef32, 0x003AA418, 0.1666667 ]
-    - [ bef32, 0x003AE0E4, 0.1666667 ]
-    - [ bef32, 0x003AE3A0, 0.1666667 ]
-    - [ bef32, 0x003B25D8, 0.1666667 ]
-    - [ bef32, 0x003BC448, 0.1666667 ]
-    - [ bef32, 0x003C58C0, 0.1666667 ]
-    - [ bef32, 0x003C67B0, 0.1666667 ]
-    - [ bef32, 0x003C6D6C, 0.1666667 ]
-    - [ bef32, 0x003EBC20, 0.1666667 ]
-    - [ bef32, 0x003EE5F0, 0.1666667 ]
-    - [ bef32, 0x003F1FE0, 0.1666667 ]
-    - [ bef32, 0x003F6FC0, 0.1666667 ]
-    - [ bef32, 0x004EB808, 0.1666667 ]
-    - [ bef32, 0x0055251C, 0.1666667 ]
-    - [ bef32, 0x0055EC48, 0.1666667 ]
-    - [ bef32, 0x0055F4A8, 0.1666667 ]
-    - [ bef32, 0x0057DC08, 0.1666667 ]
-    - [ bef32, 0x0057E498, 0.1666667 ]
-    - [ bef32, 0x005C5364, 0.1666667 ]
+    - [ bef32, 0x003999f8, 0.1666667 ]
+    - [ bef32, 0x003a7c64, 0.1666667 ]
+    - [ bef32, 0x003aa418, 0.1666667 ]
+    - [ bef32, 0x003ae0e4, 0.1666667 ]
+    - [ bef32, 0x003ae3a0, 0.1666667 ]
+    - [ bef32, 0x003b25d8, 0.1666667 ]
+    - [ bef32, 0x003bc448, 0.1666667 ]
+    - [ bef32, 0x003c58c0, 0.1666667 ]
+    - [ bef32, 0x003c67b0, 0.1666667 ]
+    - [ bef32, 0x003c6d6c, 0.1666667 ]
+    - [ bef32, 0x003ebc20, 0.1666667 ]
+    - [ bef32, 0x003ee5f0, 0.1666667 ]
+    - [ bef32, 0x003f1fe0, 0.1666667 ]
+    - [ bef32, 0x003f6fc0, 0.1666667 ]
+    - [ bef32, 0x004eb808, 0.1666667 ]
+    - [ bef32, 0x0055251c, 0.1666667 ]
+    - [ bef32, 0x0055ec48, 0.1666667 ]
+    - [ bef32, 0x0055f4a8, 0.1666667 ]
+    - [ bef32, 0x0057dc08, 0.1666667 ]
+    - [ bef32, 0x0057e498, 0.1666667 ]
+    - [ bef32, 0x005c5364, 0.1666667 ]
     - [ bef32, 0x00620714, 0.1666667 ]
-    - [ bef32, 0x00635CB4, 0.1666667 ]
-    - [ bef32, 0x00642B98, 0.1666667 ]
-    - [ bef32, 0x00654EE8, 0.1666667 ]
-    - [ bef32, 0x00662B04, 0.1666667 ]
-    - [ bef32, 0x006AFF98, 0.1666667 ]
-    - [ bef32, 0x006CAA44, 0.1666667 ]
-    - [ bef32, 0x006E0224, 0.1666667 ]
-    - [ bef32, 0x006E31A0, 0.1666667 ]
-    - [ bef32, 0x006FCD3C, 0.1666667 ]
-    - [ bef32, 0x00772E54, 0.1666667 ]
+    - [ bef32, 0x00635cb4, 0.1666667 ]
+    - [ bef32, 0x00642b98, 0.1666667 ]
+    - [ bef32, 0x00654ee8, 0.1666667 ]
+    - [ bef32, 0x00662b04, 0.1666667 ]
+    - [ bef32, 0x006aff98, 0.1666667 ]
+    - [ bef32, 0x006caa44, 0.1666667 ]
+    - [ bef32, 0x006e0224, 0.1666667 ]
+    - [ bef32, 0x006e31a0, 0.1666667 ]
+    - [ bef32, 0x006fcd3c, 0.1666667 ]
+    - [ bef32, 0x00772e54, 0.1666667 ]
     - [ bef32, 0x00797508, 0.1666667 ]
-    - [ bef32, 0x00B52E3C, 0.1666667 ]
-    - [ bef32, 0x00B6AD00, 0.1666667 ]
-    - [ bef32, 0x00B6B71C, 0.1666667 ]
-    - [ bef32, 0x00B6E478, 0.1666667 ]
-    - [ bef32, 0x00B6E880, 0.1666667 ]
-    - [ bef32, 0x00B6E8B8, 0.1666667 ]
-    - [ bef32, 0x00B6E8F0, 0.1666667 ]
-    - [ bef32, 0x00B6E928, 0.1666667 ]
-    - [ bef32, 0x00B6E960, 0.1666667 ]
-    - [ bef32, 0x00B6E998, 0.1666667 ]
-    - [ bef32, 0x00B6E9D0, 0.1666667 ]
-    - [ bef32, 0x00B6EA08, 0.1666667 ]
-    - [ bef32, 0x00B6EA40, 0.1666667 ]
-    - [ bef32, 0x00B6EA78, 0.1666667 ]
-    - [ bef32, 0x00B6EAB0, 0.1666667 ]
-    - [ bef32, 0x00B6EAE8, 0.1666667 ]
-    - [ bef32, 0x00B6EB20, 0.1666667 ]
-    - [ bef32, 0x00B6EB58, 0.1666667 ]
-    - [ bef32, 0x00B6EB90, 0.1666667 ]
-    - [ bef32, 0x00B6EBC8, 0.1666667 ]
-    - [ bef32, 0x00B6EC00, 0.1666667 ]
-    - [ bef32, 0x00B6EC38, 0.1666667 ]
-    - [ bef32, 0x00B6EC70, 0.1666667 ]
-    - [ bef32, 0x00B6ECA8, 0.1666667 ]
-    - [ bef32, 0x00B70A54, 0.1666667 ]
-    - [ bef32, 0x00B70AF0, 0.1666667 ]
-    - [ bef32, 0x00B70AF8, 0.1666667 ]
-    - [ bef32, 0x00B70B00, 0.1666667 ]
-    - [ bef32, 0x00B70B08, 0.1666667 ]
-    - [ bef32, 0x00B70B10, 0.1666667 ]
-    - [ bef32, 0x00B70B20, 0.1666667 ]
-    - [ bef32, 0x00B70B78, 0.1666667 ]
-    - [ bef32, 0x00B70B88, 0.1666667 ]
-    - [ bef32, 0x00B70BB4, 0.1666667 ]
-    - [ bef32, 0x00B70BC4, 0.1666667 ]
-    - [ bef32, 0x00B70F60, 0.1666667 ]
-    - [ bef32, 0x00B71BAC, 0.1666667 ]
-    - [ bef32, 0x00B71BBC, 0.1666667 ]
-    - [ bef32, 0x00B9BD30, 0.1666667 ]
-    - [ bef32, 0x00CF96AC, 0.1666667 ]
-    - [ bef32, 0x00CFA1E8, 0.1666667 ]
-    - [ bef32, 0x00CFA20C, 0.1666667 ]
-    - [ bef32, 0x00CFB210, 0.1666667 ]
-    - [ bef32, 0x00CFB778, 0.1666667 ]
-    - [ bef32, 0x00CFBC30, 0.1666667 ]
-    - [ bef32, 0x00CFBCA8, 0.1666667 ]
-    - [ bef32, 0x00CFBFD4, 0.1666667 ]
-    - [ bef32, 0x00CFC0A8, 0.1666667 ]
-    - [ bef32, 0x00CFF3CC, 0.1666667 ]
-    - [ bef32, 0x00CFF3D4, 0.1666667 ]
-    - [ bef32, 0x00CFF470, 0.1666667 ]
-    - [ bef32, 0x00CFF478, 0.1666667 ]
-    - [ bef32, 0x00CFF480, 0.1666667 ]
-    - [ bef32, 0x00D06840, 0.1666667 ]
-    - [ bef32, 0x00D06848, 0.1666667 ]
-    - [ be32, 0x000FB71C, 0x3C603C88 ]
-    - [ be32, 0x00109B14, 0x3C603C88 ]
-    - [ be32, 0x0023FBDC, 0x3CA03C88 ]
-    - [ be32, 0x00240620, 0x3CA03C88 ]
-    - [ be32, 0x00241258, 0x3C803C88 ]
-    - [ be32, 0x003CA4BC, 0x3C603C88 ]
-    - [ be32, 0x0087B448, 0x3C603C88 ]
+    - [ bef32, 0x00b52e3c, 0.1666667 ]
+    - [ bef32, 0x00b6ad00, 0.1666667 ]
+    - [ bef32, 0x00b6b71c, 0.1666667 ]
+    - [ bef32, 0x00b6e478, 0.1666667 ]
+    - [ bef32, 0x00b6e880, 0.1666667 ]
+    - [ bef32, 0x00b6e8b8, 0.1666667 ]
+    - [ bef32, 0x00b6e8f0, 0.1666667 ]
+    - [ bef32, 0x00b6e928, 0.1666667 ]
+    - [ bef32, 0x00b6e960, 0.1666667 ]
+    - [ bef32, 0x00b6e998, 0.1666667 ]
+    - [ bef32, 0x00b6e9d0, 0.1666667 ]
+    - [ bef32, 0x00b6ea08, 0.1666667 ]
+    - [ bef32, 0x00b6ea40, 0.1666667 ]
+    - [ bef32, 0x00b6ea78, 0.1666667 ]
+    - [ bef32, 0x00b6eab0, 0.1666667 ]
+    - [ bef32, 0x00b6eae8, 0.1666667 ]
+    - [ bef32, 0x00b6eb20, 0.1666667 ]
+    - [ bef32, 0x00b6eb58, 0.1666667 ]
+    - [ bef32, 0x00b6eb90, 0.1666667 ]
+    - [ bef32, 0x00b6ebc8, 0.1666667 ]
+    - [ bef32, 0x00b6ec00, 0.1666667 ]
+    - [ bef32, 0x00b6ec38, 0.1666667 ]
+    - [ bef32, 0x00b6ec70, 0.1666667 ]
+    - [ bef32, 0x00b6eca8, 0.1666667 ]
+    - [ bef32, 0x00b70a54, 0.1666667 ]
+    - [ bef32, 0x00b70af0, 0.1666667 ]
+    - [ bef32, 0x00b70af8, 0.1666667 ]
+    - [ bef32, 0x00b70b00, 0.1666667 ]
+    - [ bef32, 0x00b70b08, 0.1666667 ]
+    - [ bef32, 0x00b70b10, 0.1666667 ]
+    - [ bef32, 0x00b70b20, 0.1666667 ]
+    - [ bef32, 0x00b70b78, 0.1666667 ]
+    - [ bef32, 0x00b70b88, 0.1666667 ]
+    - [ bef32, 0x00b70bb4, 0.1666667 ]
+    - [ bef32, 0x00b70bc4, 0.1666667 ]
+    - [ bef32, 0x00b70f60, 0.1666667 ]
+    - [ bef32, 0x00b71bac, 0.1666667 ]
+    - [ bef32, 0x00b71bbc, 0.1666667 ]
+    - [ bef32, 0x00b9bd30, 0.1666667 ]
+    - [ bef32, 0x00cf96ac, 0.1666667 ]
+    - [ bef32, 0x00cfa1e8, 0.1666667 ]
+    - [ bef32, 0x00cfa20c, 0.1666667 ]
+    - [ bef32, 0x00cfb210, 0.1666667 ]
+    - [ bef32, 0x00cfb778, 0.1666667 ]
+    - [ bef32, 0x00cfbc30, 0.1666667 ]
+    - [ bef32, 0x00cfbca8, 0.1666667 ]
+    - [ bef32, 0x00cfbfd4, 0.1666667 ]
+    - [ bef32, 0x00cfc0a8, 0.1666667 ]
+    - [ bef32, 0x00cff3cc, 0.1666667 ]
+    - [ bef32, 0x00cff3d4, 0.1666667 ]
+    - [ bef32, 0x00cff470, 0.1666667 ]
+    - [ bef32, 0x00cff478, 0.1666667 ]
+    - [ bef32, 0x00cff480, 0.1666667 ]
+    - [ bef32, 0x00d06840, 0.1666667 ]
+    - [ bef32, 0x00d06848, 0.1666667 ]
+    - [ be32, 0x000fb71c, 0x3c603c88 ]
+    - [ be32, 0x00109b14, 0x3c603c88 ]
+    - [ be32, 0x0023fbdc, 0x3ca03c88 ]
+    - [ be32, 0x00240620, 0x3ca03c88 ]
+    - [ be32, 0x00241258, 0x3c803c88 ]
+    - [ be32, 0x003ca4bc, 0x3c603c88 ]
+    - [ be32, 0x0087b448, 0x3c603c88 ]
   #  - [ bef32, 0x0009eb60, 0.01666667 ]
   #  - [ bef32, 0x002cb9e8, 0.01666667 ]
-  #  - [ bef32, 0x00331FF0, 0.1666667 ]
-  #  - [ bef32, 0x003B0520, 0.1666667 ]
-  #  - [ bef32, 0x003B05E8, 0.1666667 ]
+  #  - [ bef32, 0x00331ff0, 0.1666667 ]
+  #  - [ bef32, 0x003b0520, 0.1666667 ]
+  #  - [ bef32, 0x003b05e8, 0.1666667 ]
   #  - [ bef32, 0x003b25cc, 0.1666667 ]
-  #  - [ bef32, 0x003BC478, 0.1666667 ]
+  #  - [ bef32, 0x003bc478, 0.1666667 ]
   #  - [ be32, 0x000a7e6c, 0x3d803c88 ]
 
-    - [ be32, 0x0026dca0, 0x3860001e ] # batting cages
+    - [ be32, 0x0026dca0, 0x3860001e ] # Batting cages
     - [ be32, 0x0026de4c, 0x3860001e ]
     - [ be32, 0x0026e36c, 0x3860001e ]
     - [ be32, 0x0026fb10, 0x3860001e ]
@@ -9486,7 +9486,7 @@ Anchors:
     - [ be32, 0x0026fedc, 0x3860001e ]
     - [ be32, 0x002700e4, 0x3860001e ]
     - [ be32, 0x00270304, 0x3860001e ]
-    - [ be32, 0x00288b04, 0x3860001e ] # party panel
+    - [ be32, 0x00288b04, 0x3860001e ] # Party panel
     - [ be32, 0x00288b4c, 0x3860001e ]
     - [ be32, 0x00288b70, 0x3860001e ]
     - [ be32, 0x00288bb0, 0x3860001e ]
@@ -9506,322 +9506,322 @@ Anchors:
     - [ be32, 0x0028eafc, 0x3860001e ]
     - [ be32, 0x0028eb3c, 0x3860001e ]
     - [ be32, 0x0028eb60, 0x3860001e ]
-    - [ be32, 0x001cfe60, 0x3860001e ] # blink anim
+    - [ be32, 0x001cfe60, 0x3860001e ] # Blink anim
 
   # Removes framerate dependency for both script interpreters
-    - [ be32, 0xb44e00, 0x38600001 ]  # li         r3,0x1
-    - [ be32, 0xb44e04, 0x38dd0170 ]  # addi       r6,r29,0x170
-    - [ be32, 0xb44e08, 0x48b44e2f ]  # bla        0xb44e2c
-    - [ be32, 0xb44e0c, 0x2c040000 ]  # cmpwi      r4,0x0
-    - [ be32, 0xb44e10, 0x40820008 ]  # bne        +0x8
-    - [ be32, 0xb44e14, 0x481f263a ]  # ba         0x1f2638
-    - [ be32, 0xb44e18, 0x7c844014 ]  # addc       r4,r4,r8
-    - [ be32, 0xb44e1c, 0x7ca54014 ]  # addc       r5,r5,r8
-    - [ be32, 0xb44e20, 0x481f2642 ]  # ba         0x1f2640
+    - [ be32, 0x00b44e00, 0x38600001 ] # li         r3,0x1
+    - [ be32, 0x00b44e04, 0x38dd0170 ] # addi       r6,r29,0x170
+    - [ be32, 0x00b44e08, 0x48b44e2f ] # bla        0xb44e2c
+    - [ be32, 0x00b44e0c, 0x2c040000 ] # cmpwi      r4,0x0
+    - [ be32, 0x00b44e10, 0x40820008 ] # bne        +0x8
+    - [ be32, 0x00b44e14, 0x481f263a ] # ba         0x1f2638
+    - [ be32, 0x00b44e18, 0x7c844014 ] # addc       r4,r4,r8
+    - [ be32, 0x00b44e1c, 0x7ca54014 ] # addc       r5,r5,r8
+    - [ be32, 0x00b44e20, 0x481f2642 ] # ba         0x1f2640
 
-    - [ be32, 0xb44e24, 0x3cc000d9 ]  # lis        r6,0xd9
-    - [ be32, 0xb44e28, 0x60c6c6ec ]  # ori        r6,r6,0xc6ec
+    - [ be32, 0x00b44e24, 0x3cc000d9 ] # lis        r6,0xd9
+    - [ be32, 0x00b44e28, 0x60c6c6ec ] # ori        r6,r6,0xc6ec
 
-    - [ be32, 0xb44e2c, 0x3ce000ff ]  # lis        r7,0xff
-    - [ be32, 0xb44e30, 0x80e7fb50 ]  # lwz        r7,-0x4b0(r7)
-    - [ be32, 0xb44e34, 0x81060000 ]  # lwz        r8,0(r6)
-    - [ be32, 0xb44e38, 0x90e60000 ]  # stw        r7,0(r6)
-    - [ be32, 0xb44e3c, 0x7d083850 ]  # subf       r8,r8,r7
-    - [ be32, 0xb44e40, 0x7d09fe70 ]  # srawi      r9,r8,0x1f
-    - [ be32, 0xb44e44, 0x7d084850 ]  # subf       r8,r8,r9
-    - [ be32, 0xb44e48, 0x55080ffe ]  # rlwinm     r8,r8,0x1,0x1f,0x1f
-    - [ be32, 0xb44e4c, 0x5509103a ]  # rlwinm     r9,r8,0x2,0x0,0x1d
-    - [ be32, 0xb44e50, 0x4e800020 ]  # blr
+    - [ be32, 0x00b44e2c, 0x3ce000ff ] # lis        r7,0xff
+    - [ be32, 0x00b44e30, 0x80e7fb50 ] # lwz        r7,-0x4b0(r7)
+    - [ be32, 0x00b44e34, 0x81060000 ] # lwz        r8,0(r6)
+    - [ be32, 0x00b44e38, 0x90e60000 ] # stw        r7,0(r6)
+    - [ be32, 0x00b44e3c, 0x7d083850 ] # subf       r8,r8,r7
+    - [ be32, 0x00b44e40, 0x7d09fe70 ] # srawi      r9,r8,0x1f
+    - [ be32, 0x00b44e44, 0x7d084850 ] # subf       r8,r8,r9
+    - [ be32, 0x00b44e48, 0x55080ffe ] # rlwinm     r8,r8,0x1,0x1f,0x1f
+    - [ be32, 0x00b44e4c, 0x5509103a ] # rlwinm     r9,r8,0x2,0x0,0x1d
+    - [ be32, 0x00b44e50, 0x4e800020 ] # blr
 
-    - [ be32, 0x1f161c, 0x38600174 ]  # li         r3,0x174
-    - [ be32, 0x1f1640, 0x38800174 ]  # li         r4,0x174
-    - [ be32, 0x1f2634, 0x48b44e02 ]  # ba         0xb44e00
+    - [ be32, 0x001f161c, 0x38600174 ] # li         r3,0x174
+    - [ be32, 0x001f1640, 0x38800174 ] # li         r4,0x174
+    - [ be32, 0x001f2634, 0x48b44e02 ] # ba         0xb44e00
 
-    - [ be32, 0x575fb4, 0x48b44e27 ]  # bla        0xb44e24
-    - [ be32, 0x576010, 0x48b44e27 ]  # bla        0xb44e24
-    - [ be32, 0x576020, 0x7c892010 ]  # subfc      r4,r9,r4
-    - [ be32, 0x57602c, 0x7c882010 ]  # subfc      r4,r8,r4
-    - [ be32, 0x575fc4, 0x7c892010 ]  # subfc      r4,r9,r4
-    - [ be32, 0x575fe0, 0x7c681810 ]  # subfc      r3,r8,r3
+    - [ be32, 0x00575fb4, 0x48b44e27 ] # bla        0xb44e24
+    - [ be32, 0x00576010, 0x48b44e27 ] # bla        0xb44e24
+    - [ be32, 0x00576020, 0x7c892010 ] # subfc      r4,r9,r4
+    - [ be32, 0x0057602c, 0x7c882010 ] # subfc      r4,r8,r4
+    - [ be32, 0x00575fc4, 0x7c892010 ] # subfc      r4,r9,r4
+    - [ be32, 0x00575fe0, 0x7c681810 ] # subfc      r3,r8,r3
 
-  p5_DLC_Author: &p5_DLC_Author TGEnigma
+  p5_DLC_Author: &p5_DLC_Author "TGEnigma"
   p5_DLC_PatVer: &p5_DLC_PatVer 1.0
   p5_DLC: &p5_DLC
-    - [ be32, 0x197AE8, 0x4E800020 ]
+    - [ be32, 0x00197ae8, 0x4e800020 ]
 
-  p5_DisableBlur_Author: &p5_DisableBlur_Author TGEnigma, ruipin, kd-11
+  p5_DisableBlur_Author: &p5_DisableBlur_Author "TGEnigma, ruipin, kd-11"
   p5_DisableBlur_PatVer: &p5_DisableBlur_PatVer 1.0
   p5_DisableBlur: &p5_DisableBlur
-    - [ be32, 0x00FEE27A, 0x9E001700 ]
-    - [ be32, 0x00FEE27E, 0xC801001D ]
-    - [ be32, 0x00FEE282, 0x00000000 ]
-    - [ be32, 0x00FEE286, 0x00000000 ]
-    - [ be32, 0x00FEE28A, 0x1E810100 ]
-    - [ be32, 0x00FEE28E, 0xC800001D ]
-    - [ be32, 0x00FEE292, 0x00000000 ]
-    - [ be32, 0x00FEE296, 0x00000000 ]
+    - [ be32, 0x00fee27a, 0x9e001700 ]
+    - [ be32, 0x00fee27e, 0xc801001d ]
+    - [ be32, 0x00fee282, 0x00000000 ]
+    - [ be32, 0x00fee286, 0x00000000 ]
+    - [ be32, 0x00fee28a, 0x1e810100 ]
+    - [ be32, 0x00fee28e, 0xc800001d ]
+    - [ be32, 0x00fee292, 0x00000000 ]
+    - [ be32, 0x00fee296, 0x00000000 ]
 
-  p5_DisableDistortion_Author: &p5_DisableDistortion_Author TGEnigma, ruipin, kd-11
+  p5_DisableDistortion_Author: &p5_DisableDistortion_Author "TGEnigma, ruipin, kd-11"
   p5_DisableDistortion_PatVer: &p5_DisableDistortion_PatVer 1.0
   p5_DisableDistortion: &p5_DisableDistortion
-    - [ be32, 0x00FE2E28, 0x9E001700 ]
-    - [ be32, 0x00FE2E2C, 0xC801001D ]
-    - [ be32, 0x00FE2E30, 0x00000000 ]
-    - [ be32, 0x00FE2E34, 0x00000000 ]
-    - [ be32, 0x00FE2E38, 0x1E810100 ]
-    - [ be32, 0x00FE2E3C, 0xC800001D ]
-    - [ be32, 0x00FE2E40, 0x00000000 ]
-    - [ be32, 0x00FE2E44, 0x00000000 ]
+    - [ be32, 0x00fe2e28, 0x9e001700 ]
+    - [ be32, 0x00fe2e2c, 0xc801001d ]
+    - [ be32, 0x00fe2e30, 0x00000000 ]
+    - [ be32, 0x00fe2e34, 0x00000000 ]
+    - [ be32, 0x00fe2e38, 0x1e810100 ]
+    - [ be32, 0x00fe2e3c, 0xc800001d ]
+    - [ be32, 0x00fe2e40, 0x00000000 ]
+    - [ be32, 0x00fe2e44, 0x00000000 ]
 
-  p5_Disable100PctDistortion_Author: &p5_Disable100PctDistortion_Author TGEnigma, ruipin, kd-11
+  p5_Disable100PctDistortion_Author: &p5_Disable100PctDistortion_Author "TGEnigma, ruipin, kd-11"
   p5_Disable100PctDistortion_PatVer: &p5_Disable100PctDistortion_PatVer 1.0
   p5_Disable100PctDistortion: &p5_Disable100PctDistortion
-    - [ be32, 0x00FE31CC, 0x9E001700 ]
-    - [ be32, 0x00FE31D0, 0xC801001D ]
-    - [ be32, 0x00FE31D4, 0x00000000 ]
-    - [ be32, 0x00FE31D8, 0x00000000 ]
-    - [ be32, 0x00FE31DC, 0x1E810100 ]
-    - [ be32, 0x00FE31E0, 0xC800001D ]
-    - [ be32, 0x00FE31E4, 0x00000000 ]
-    - [ be32, 0x00FE31E8, 0x00000000 ]
+    - [ be32, 0x00fe31cc, 0x9e001700 ]
+    - [ be32, 0x00fe31d0, 0xc801001d ]
+    - [ be32, 0x00fe31d4, 0x00000000 ]
+    - [ be32, 0x00fe31d8, 0x00000000 ]
+    - [ be32, 0x00fe31dc, 0x1e810100 ]
+    - [ be32, 0x00fe31e0, 0xc800001d ]
+    - [ be32, 0x00fe31e4, 0x00000000 ]
+    - [ be32, 0x00fe31e8, 0x00000000 ]
 
-  p5_NoHudLite_Author: &p5_NoHudLite_Author TGEnigma
+  p5_NoHudLite_Author: &p5_NoHudLite_Author "TGEnigma"
   p5_NoHudLite_Notes: &p5_NoHudLite_Notes "Elements can disabled separately by adding/removing their respective lines from the patch."
   p5_NoHudLite_PatVer: &p5_NoHudLite_PatVer 1.0
   p5_NoHudLite: &p5_NoHudLite
-    - [ be32, 0xDE4EC, 0x60000000 ] # mission list
-    - [ be32, 0xE83F4, 0x60000000 ] # place pict
-    - [ be32, 0xE5920, 0x60000000 ] # check
-    - [ be32, 0x69CC4, 0x38600001 ] # alert
-    - [ be32, 0x5F678, 0x60000000 ] # date
-    - [ be32, 0x38A0D0, 0x4838A186 ] # misc field hud
-    - [ be32, 0x28FBA0, 0x38600000 ] # party panel
-    - [ be32, 0x28FBA4, 0x4E800020 ] # party panel
-    - [ be32, 0xD6B48, 0x60000000 ] # mini map
-    - [ be32, 0xD6490, 0x60000000 ] # mini map
+    - [ be32, 0x000de4ec, 0x60000000 ] # mission list
+    - [ be32, 0x000e83f4, 0x60000000 ] # place pict
+    - [ be32, 0x000e5920, 0x60000000 ] # check
+    - [ be32, 0x00069cc4, 0x38600001 ] # alert
+    - [ be32, 0x0005f678, 0x60000000 ] # date
+    - [ be32, 0x0038a0d0, 0x4838a186 ] # misc field hud
+    - [ be32, 0x0028fba0, 0x38600000 ] # party panel
+    - [ be32, 0x0028fba4, 0x4e800020 ] # party panel
+    - [ be32, 0x000d6b48, 0x60000000 ] # mini map
+    - [ be32, 0x000d6490, 0x60000000 ] # mini map
 
-  p5_NoHud_Author: &p5_NoHud_Author TGEnigma
+  p5_NoHud_Author: &p5_NoHud_Author "TGEnigma"
   p5_NoHud_Notes: &p5_NoHud_Notes "Disable HUD by disabling rendering of 2D elements entirely. Breaks things."
   p5_NoHud_PatVer: &p5_NoHud_PatVer 1.0
   p5_NoHud: &p5_NoHud
-    - [ be32, 0x116934, 0x4E800020 ]
+    - [ be32, 0x00116934, 0x4e800020 ]
 
-  p5_BgmOrder_Author: &p5_BgmOrder_Author TGEnigma, lipsum
+  p5_BgmOrder_Author: &p5_BgmOrder_Author "TGEnigma, lipsum"
   p5_BgmOrder_Notes: &p5_BgmOrder_Notes "Plays encounter BGM in file order."
   p5_BgmOrder_PatVer: &p5_BgmOrder_PatVer 1.0
   p5_BgmOrder: &p5_BgmOrder
   # patch SoundManager__SetEquipBgm
   # branch to trampoline
-    - [ be32, 0x0006CD68, 0x48B44B52 ] # ba 0x00B44B50
+    - [ be32, 0x0006cd68, 0x48b44b52 ] # ba 0x00b44b50
 
   # trampoline
-    - [ be32, 0x00B44B50, 0x3FDE3000 ] # addis  r30, r30, 0x3000 -> 0x30B49738
-    - [ be32, 0x00B44B54, 0xA07E0000 ] # lhz    r3, 0x0(r30)
-    - [ be32, 0x00B44B58, 0x38630001 ] # addi   r3, r3, 0x1
-    - [ be32, 0x00B44B5C, 0x2803000B ] # cmplwi r3, 0xb (MaxBgm)
+    - [ be32, 0x00b44b50, 0x3fde3000 ] # addis  r30, r30, 0x3000 -> 0x30b49738
+    - [ be32, 0x00b44b54, 0xa07e0000 ] # lhz    r3, 0x0(r30)
+    - [ be32, 0x00b44b58, 0x38630001 ] # addi   r3, r3, 0x1
+    - [ be32, 0x00b44b5c, 0x2803000b ] # cmplwi r3, 0xb (MaxBgm)
 
-    - [ be16, 0x00B44B5E, 11 ] # bgm_10 -> 11
+    - [ be16, 0x00b44b5e, 11 ] # bgm_10 -> 11
 
-    - [ be32, 0x00B44B60, 0x41800008 ] # blt    +0x8
-    - [ be32, 0x00B44B64, 0x38600000 ] # li     r3, 0x0
+    - [ be32, 0x00b44b60, 0x41800008 ] # blt    +0x8
+    - [ be32, 0x00b44b64, 0x38600000 ] # li     r3, 0x0
 
   # patch music id
-    - [ be32, 0x00B44B68, 0xB07E0000 ] # sth   r3, 0(r30)
+    - [ be32, 0x00b44b68, 0xb07e0000 ] # sth   r3, 0(r30)
 
   # return
-    - [ be32, 0x00B44B6C, 0x2C1E0000 ] # cmpwi r30, 0
-    - [ be32, 0x00B44B70, 0x4806CD6E ] # ba    0x0006CD6C
+    - [ be32, 0x00b44b6c, 0x2c1e0000 ] # cmpwi r30, 0
+    - [ be32, 0x00b44b70, 0x4806cd6e ] # ba    0x0006cd6c
 
   # patch Btl__PlayBgm
   # branch to trampoline
-    - [ be32, 0x0063ACE4, 0x48B44B87 ] # bla 0x00B44B84 (trampoline)
-    - [ be32, 0x0063ACE8, 0x4806CCBB ] # bla 0x0006CCB8 (SoundManager__GetBgmId)
+    - [ be32, 0x0063ace4, 0x48b44b87 ] # bla 0x00b44b84 (trampoline)
+    - [ be32, 0x0063ace8, 0x4806ccbb ] # bla 0x0006ccb8 (SoundManager__GetBgmId)
 
   # trampoline
 
   # check and return if not normal battle bgm
-    - [ be32, 0x00B44B84, 0x2C1F012C ] # cmpwi r31, 300 # normal battle
-    - [ be32, 0x00B44B88, 0x41820008 ] # beq   8        # return if not normal battle music
-    - [ be32, 0x00B44B8C, 0x4E800020 ] # blr
+    - [ be32, 0x00b44b84, 0x2c1f012c ] # cmpwi r31, 300 # normal battle
+    - [ be32, 0x00b44b88, 0x41820008 ] # beq   8        # return if not normal battle music
+    - [ be32, 0x00b44b8c, 0x4e800020 ] # blr
 
   # randomize sound bank
-    - [ be32, 0x00B44B90, 0x4806CCCB ] # bla 0x0006CCC8 (SoundManager__SetEquipBgm)
+    - [ be32, 0x00b44b90, 0x4806cccb ] # bla 0x0006ccc8 (SoundManager__SetEquipBgm)
 
   # return
-    - [ be32, 0x00B44B94, 0x4863ACEA ] # ba 0x0063ACE8
+    - [ be32, 0x00b44b94, 0x4863acea ] # ba 0x0063ace8
 
-  p5_BgmRandom_Author: &p5_BgmRandom_Author TGEnigma, lipsum
+  p5_BgmRandom_Author: &p5_BgmRandom_Author "TGEnigma, lipsum"
   p5_BgmRandom_Notes: &p5_BgmRandom_Notes "Plays encounter BGM in random order."
   p5_BgmRandom_PatVer: &p5_BgmRandom_PatVer 1.1
   p5_BgmRandom: &p5_BgmRandom
   # patch SoundManager__SetEquipBgm
   # branch to trampoline
-    - [ be32, 0x0006CD68, 0x48B44B52 ] # ba 0x00B44B50
+    - [ be32, 0x0006cd68, 0x48b44b52 ] # ba 0x00b44b50
 
   # trampoline
   # Rnd() % MaxBgm
-    - [ be32, 0x00B44B50, 0x4891DA07 ] # bla   0x0091DA04 (Rnd)
-    - [ be32, 0x00B44B54, 0x38C0000B ] # li    r6, 11 (MaxBgm)
+    - [ be32, 0x00b44b50, 0x4891da07 ] # bla   0x0091da04 (Rnd)
+    - [ be32, 0x00b44b54, 0x38c0000b ] # li    r6, 11 (MaxBgm)
 
-    - [ be16, 0x00B44B56, 11 ] # bgm_10 -> 11
+    - [ be16, 0x00b44b56, 11 ] # bgm_10 -> 11
 
-    - [ be32, 0x00B44B58, 0x30860001 ] # addic r4, r6, 1
-    - [ be32, 0x00B44B5C, 0x7C832396 ] # divwu r4, r3, r4
-    - [ be32, 0x00B44B60, 0x7CA431D6 ] # mullw r5, r4, r6
-    - [ be32, 0x00B44B64, 0x7C852014 ] # addc  r4, r5, r4
-    - [ be32, 0x00B44B68, 0x7C641810 ] # subfc r3, r4, r3
-    - [ be32, 0x00B44B6C, 0x7C6307B4 ] # extsw r3, r3
+    - [ be32, 0x00b44b58, 0x30860001 ] # addic r4, r6, 1
+    - [ be32, 0x00b44b5c, 0x7c832396 ] # divwu r4, r3, r4
+    - [ be32, 0x00b44b60, 0x7ca431d6 ] # mullw r5, r4, r6
+    - [ be32, 0x00b44b64, 0x7c852014 ] # addc  r4, r5, r4
+    - [ be32, 0x00b44b68, 0x7c641810 ] # subfc r3, r4, r3
+    - [ be32, 0x00b44b6c, 0x7c6307b4 ] # extsw r3, r3
 
   # patch music id
-    - [ be32, 0x00B44B70, 0x3FDE3000 ] # addis r30, r30, 0x3000 -> 0x30B49738
-    - [ be32, 0x00B44B74, 0xB07E0000 ] # sth   r3, 0(r30)
+    - [ be32, 0x00b44b70, 0x3fde3000 ] # addis r30, r30, 0x3000 -> 0x30b49738
+    - [ be32, 0x00b44b74, 0xb07e0000 ] # sth   r3, 0(r30)
 
   # return
-    - [ be32, 0x00B44B78, 0x2C1E0000 ] # cmpwi r30, 0
-    - [ be32, 0x00B44B7C, 0x4806CD6E ] # ba    0x0006CD6C
+    - [ be32, 0x00b44b78, 0x2c1e0000 ] # cmpwi r30, 0
+    - [ be32, 0x00b44b7c, 0x4806cd6e ] # ba    0x0006cd6c
 
   # patch Btl__PlayBgm
   # branch to trampoline
-    - [ be32, 0x0063ACE4, 0x48B44B87 ] # bla 0x00B44B84 (trampoline)
-    - [ be32, 0x0063ACE8, 0x4806CCBB ] # bla 0x0006CCB8 (SoundManager__GetBgmId)
+    - [ be32, 0x0063ace4, 0x48b44b87 ] # bla 0x00b44b84 (trampoline)
+    - [ be32, 0x0063ace8, 0x4806ccbb ] # bla 0x0006ccb8 (SoundManager__GetBgmId)
 
   # trampoline
 
   # check and return if not normal battle bgm
-    - [ be32, 0x00B44B84, 0x2C1F012C ] # cmpwi r31, 300 # normal battle
-    - [ be32, 0x00B44B88, 0x41820008 ] # beq   8        # return if not normal battle music
-    - [ be32, 0x00B44B8C, 0x4E800020 ] # blr
+    - [ be32, 0x00b44b84, 0x2c1f012c ] # cmpwi r31, 300 # normal battle
+    - [ be32, 0x00b44b88, 0x41820008 ] # beq   8        # return if not normal battle music
+    - [ be32, 0x00b44b8c, 0x4e800020 ] # blr
 
   # randomize sound bank
-    - [ be32, 0x00B44B90, 0x4806CCCB ] # bla 0x0006CCC8 (SoundManager__SetEquipBgm)
+    - [ be32, 0x00b44b90, 0x4806cccb ] # bla 0x0006ccc8 (SoundManager__SetEquipBgm)
 
   # return
-    - [ be32, 0x00B44B94, 0x4863ACEA ] # ba 0x0063ACE8
+    - [ be32, 0x00b44b94, 0x4863acea ] # ba 0x0063ace8
 
-  p5_NaviLines_Author: &p5_NaviLines_Author lipsum
+  p5_NaviLines_Author: &p5_NaviLines_Author "lipsum"
   p5_NaviLines_Notes: &p5_NaviLines_Notes "Disables Navigator battle lines (voice and message popups)."
   p5_NaviLines_PatVer: &p5_NaviLines_PatVer 1.0
   p5_NaviLines: &p5_NaviLines
-    - [ be32, 0x0074A3B4, 0x38A00000 ] # li r5, 0x0 # morgana
-    - [ be32, 0x0074A424, 0x38A00000 ] # li r5, 0x0 # futaba
+    - [ be32, 0x0074a3b4, 0x38a00000 ] # li r5, 0x0 # morgana
+    - [ be32, 0x0074a424, 0x38a00000 ] # li r5, 0x0 # futaba
 
-  p5_MaxBullet_Author: &p5_MaxBullet_Author lipsum
+  p5_MaxBullet_Author: &p5_MaxBullet_Author "lipsum"
   p5_MaxBullet_Notes: &p5_MaxBullet_Notes "To change the maximum bullet counts for each character, edit this patch and input your desired values. By default, this patch retains the game defaults until modified."
   p5_MaxBullet_PatVer: &p5_MaxBullet_PatVer 1.0
   p5_MaxBullet: &p5_MaxBullet
-    - [ be16, 0x00D5C188, 0  ] # empty - base start
-    - [ be16, 0x00D5C18A, 16 ] # joker (16)
-    - [ be16, 0x00D5C18C, 8  ] # ryuji (8)
-    - [ be16, 0x00D5C18E, 15 ] # morgana (15)
-    - [ be16, 0x00D5C190, 36 ] # ann (36)
-    - [ be16, 0x00D5C192, 24 ] # yusuke (24)
-    - [ be16, 0x00D5C194, 12 ] # makoto (12)
-    - [ be16, 0x00D5C196, 6  ] # haru (6)
-    - [ be16, 0x00D5C198, 0  ] # futaba (0)
-    - [ be16, 0x00D5C19A, 12 ] # goro (12)
-    - [ be16, 0x00D5C19C, 0  ] # empty - tower rank 5 start
-    - [ be16, 0x00D5C19E, 32 ] # joker (32)
-    - [ be16, 0x00D5C1A0, 16 ] # ryuji (16)
-    - [ be16, 0x00D5C1A2, 25 ] # morgana (25)
-    - [ be16, 0x00D5C1A4, 60 ] # ann (60)
-    - [ be16, 0x00D5C1A6, 48 ] # yusuke (48)
-    - [ be16, 0x00D5C1A8, 24 ] # makoto (24)
-    - [ be16, 0x00D5C1AA, 12 ] # haru (12)
-    - [ be16, 0x00D5C1AC, 0  ] # futaba (0)
-    - [ be16, 0x00D5C1AE, 24 ] # goro (24)
+    - [ be16, 0x00d5c188, 0  ] # empty   - base start
+    - [ be16, 0x00d5c18a, 16 ] # joker   -- 16
+    - [ be16, 0x00d5c18c, 8  ] # ryuji   -- 8
+    - [ be16, 0x00d5c18e, 15 ] # morgana -- 15
+    - [ be16, 0x00d5c190, 36 ] # ann     -- 36
+    - [ be16, 0x00d5c192, 24 ] # yusuke  -- 24
+    - [ be16, 0x00d5c194, 12 ] # makoto  -- 12
+    - [ be16, 0x00d5c196, 6  ] # haru    -- 6
+    - [ be16, 0x00d5c198, 0  ] # futaba  -- 0
+    - [ be16, 0x00d5c19a, 12 ] # goro    -- 12
+    - [ be16, 0x00d5c19c, 0  ] # empty   - tower rank 5 start
+    - [ be16, 0x00d5c19e, 32 ] # joker   -- 32
+    - [ be16, 0x00d5c1a0, 16 ] # ryuji   -- 16
+    - [ be16, 0x00d5c1a2, 25 ] # morgana -- 25
+    - [ be16, 0x00d5c1a4, 60 ] # ann     -- 60
+    - [ be16, 0x00d5c1a6, 48 ] # yusuke  -- 48
+    - [ be16, 0x00d5c1a8, 24 ] # makoto  -- 24
+    - [ be16, 0x00d5c1aa, 12 ] # haru    -- 12
+    - [ be16, 0x00d5c1ac, 0  ] # futaba  -- 0
+    - [ be16, 0x00d5c1ae, 24 ] # goro    -- 24
 
-  p5_FileAccessLog_Author: &p5_FileAccessLog_Author TGEnigma
+  p5_FileAccessLog_Author: &p5_FileAccessLog_Author "TGEnigma"
   p5_FileAccessLog_Notes: &p5_FileAccessLog_Notes "Prints file paths to the console's TTY Log as they are accessed."
   p5_FileAccessLog_PatVer: &p5_FileAccessLog_PatVer 1.0
   p5_FileAccessLog: &p5_FileAccessLog
   # branch to trampoline
-    - [ be32, 0x00AC0A78, 0x48B44ABF ] # bla 0xB44ABC
-    - [ be32, 0x00AC0A7C, 0x60000000 ] # nop
+    - [ be32, 0x00ac0a78, 0x48b44abf ] # bla 0xb44abc
+    - [ be32, 0x00ac0a7c, 0x60000000 ] # nop
   # trampoline
   # prologue
-    - [ be32, 0x00B44ABC, 0xF821FF41 ] # stdu    r1, -STACK_SIZE(r1)
-    - [ be32, 0x00B44AC0, 0x7C0802A6 ] # mflr    r0
-    - [ be32, 0x00B44AC4, 0xF80100D0 ] # std     r0, STACK_SIZE + 0x10(r1)
+    - [ be32, 0x00b44abc, 0xf821ff41 ] # stdu    r1, -STACK_SIZE(r1)
+    - [ be32, 0x00b44ac0, 0x7c0802a6 ] # mflr    r0
+    - [ be32, 0x00b44ac4, 0xf80100d0 ] # std     r0, STACK_SIZE + 0x10(r1)
   # save volatile regs
-    - [ be32, 0x00B44AC8, 0xF86100B8 ] # std     r3, STACK_SIZE - 0x08(r1)
-    - [ be32, 0x00B44ACC, 0xF88100B0 ] # std     r4, STACK_SIZE - 0x10(r1)
-    - [ be32, 0x00B44AD0, 0xF8A100A8 ] # std     r5, STACK_SIZE - 0x18(r1)
-    - [ be32, 0x00B44AD4, 0xF8C100A0 ] # std     r6, STACK_SIZE - 0x20(r1)
-    - [ be32, 0x00B44AD8, 0xF8E10098 ] # std     r7, STACK_SIZE - 0x28(r1)
-    - [ be32, 0x00B44ADC, 0xF9010090 ] # std     r8, STACK_SIZE - 0x30(r1)
-    - [ be32, 0x00B44AE0, 0xF9210088 ] # std     r9, STACK_SIZE - 0x38(r1)
-    - [ be32, 0x00B44AE4, 0xF9410080 ] # std     r10, STACK_SIZE - 0x40(r1)
-    - [ be32, 0x00B44AE8, 0xF9610078 ] # std     r11, STACK_SIZE - 0x48(r1)
-    - [ be32, 0x00B44AEC, 0xF9810070 ] # std     r12, STACK_SIZE - 0x50(r1)
+    - [ be32, 0x00b44ac8, 0xf86100b8 ] # std     r3, STACK_SIZE - 0x08(r1)
+    - [ be32, 0x00b44acc, 0xf88100b0 ] # std     r4, STACK_SIZE - 0x10(r1)
+    - [ be32, 0x00b44ad0, 0xf8a100a8 ] # std     r5, STACK_SIZE - 0x18(r1)
+    - [ be32, 0x00b44ad4, 0xf8c100a0 ] # std     r6, STACK_SIZE - 0x20(r1)
+    - [ be32, 0x00b44ad8, 0xf8e10098 ] # std     r7, STACK_SIZE - 0x28(r1)
+    - [ be32, 0x00b44adc, 0xf9010090 ] # std     r8, STACK_SIZE - 0x30(r1)
+    - [ be32, 0x00b44ae0, 0xf9210088 ] # std     r9, STACK_SIZE - 0x38(r1)
+    - [ be32, 0x00b44ae4, 0xf9410080 ] # std     r10, STACK_SIZE - 0x40(r1)
+    - [ be32, 0x00b44ae8, 0xf9610078 ] # std     r11, STACK_SIZE - 0x48(r1)
+    - [ be32, 0x00b44aec, 0xf9810070 ] # std     r12, STACK_SIZE - 0x50(r1)
   # print file name
-    - [ be32, 0x00B44AF0, 0x80630004 ] # lwz     r3, 0x04(r3)
-    - [ be32, 0x00B44AF4, 0x7C6307B4 ] # extsw   r3, r3
-    - [ be32, 0x00B44AF8, 0x48AD546F ] # bla     PTR_PRINTF
-    - [ be32, 0x00B44AFC, 0x60000000 ] # nop
+    - [ be32, 0x00b44af0, 0x80630004 ] # lwz     r3, 0x04(r3)
+    - [ be32, 0x00b44af4, 0x7c6307b4 ] # extsw   r3, r3
+    - [ be32, 0x00b44af8, 0x48ad546f ] # bla     PTR_PRINTF
+    - [ be32, 0x00b44afc, 0x60000000 ] # nop
   # print newline
-    - [ be32, 0x00B44B00, 0x3C6000B9 ] # lis    r3, PTR_NEWLINECHAR@ha
-    - [ be32, 0x00B44B04, 0x30631820 ] # addic  r3, r3, PTR_NEWLINECHAR@l
-    - [ be32, 0x00B44B08, 0x48AD546F ] # bla    PTR_PRINTF
-    - [ be32, 0x00B44B0C, 0x60000000 ] # nop
+    - [ be32, 0x00b44b00, 0x3c6000b9 ] # lis    r3, PTR_NEWLINECHAR@ha
+    - [ be32, 0x00b44b04, 0x30631820 ] # addic  r3, r3, PTR_NEWLINECHAR@l
+    - [ be32, 0x00b44b08, 0x48ad546f ] # bla    PTR_PRINTF
+    - [ be32, 0x00b44b0c, 0x60000000 ] # nop
   # restore volatile regs
-    - [ be32, 0x00B44B10, 0xE86100B8 ] # ld     r3, STACK_SIZE - 0x08(r1)
-    - [ be32, 0x00B44B14, 0xE88100B0 ] # ld     r4, STACK_SIZE - 0x10(r1)
-    - [ be32, 0x00B44B18, 0xE8A100A8 ] # ld     r5, STACK_SIZE - 0x18(r1)
-    - [ be32, 0x00B44B1C, 0xE8C100A0 ] # ld     r6, STACK_SIZE - 0x20(r1)
-    - [ be32, 0x00B44B20, 0xE8E10098 ] # ld     r7, STACK_SIZE - 0x28(r1)
-    - [ be32, 0x00B44B24, 0xE9010090 ] # ld     r8, STACK_SIZE - 0x30(r1)
-    - [ be32, 0x00B44B28, 0xE9210088 ] # ld     r9, STACK_SIZE - 0x38(r1)
-    - [ be32, 0x00B44B2C, 0xE9410080 ] # ld     r10, STACK_SIZE - 0x40(r1)
-    - [ be32, 0x00B44B30, 0xE9610078 ] # ld     r11, STACK_SIZE - 0x48(r1)
-    - [ be32, 0x00B44B34, 0xE9810070 ] # ld     r12, STACK_SIZE - 0x50(r1)
+    - [ be32, 0x00b44b10, 0xe86100b8 ] # ld     r3, STACK_SIZE - 0x08(r1)
+    - [ be32, 0x00b44b14, 0xe88100b0 ] # ld     r4, STACK_SIZE - 0x10(r1)
+    - [ be32, 0x00b44b18, 0xe8a100a8 ] # ld     r5, STACK_SIZE - 0x18(r1)
+    - [ be32, 0x00b44b1c, 0xe8c100a0 ] # ld     r6, STACK_SIZE - 0x20(r1)
+    - [ be32, 0x00b44b20, 0xe8e10098 ] # ld     r7, STACK_SIZE - 0x28(r1)
+    - [ be32, 0x00b44b24, 0xe9010090 ] # ld     r8, STACK_SIZE - 0x30(r1)
+    - [ be32, 0x00b44b28, 0xe9210088 ] # ld     r9, STACK_SIZE - 0x38(r1)
+    - [ be32, 0x00b44b2c, 0xe9410080 ] # ld     r10, STACK_SIZE - 0x40(r1)
+    - [ be32, 0x00b44b30, 0xe9610078 ] # ld     r11, STACK_SIZE - 0x48(r1)
+    - [ be32, 0x00b44b34, 0xe9810070 ] # ld     r12, STACK_SIZE - 0x50(r1)
   # destroy stack frame
-    - [ be32, 0x00B44B38, 0xE80100D0 ] # ld     r0, STACK_SIZE + 0x10(r1)
-    - [ be32, 0x00B44B3C, 0x7C0803A6 ] # mtlr   r0
-    - [ be32, 0x00B44B40, 0x382100C0 ] # addi   r1, r1, STACK_SIZE
+    - [ be32, 0x00b44b38, 0xe80100d0 ] # ld     r0, STACK_SIZE + 0x10(r1)
+    - [ be32, 0x00b44b3c, 0x7c0803a6 ] # mtlr   r0
+    - [ be32, 0x00b44b40, 0x382100c0 ] # addi   r1, r1, STACK_SIZE
   # return
-    - [ be32, 0x00B44B44, 0xFB2100F8 ] # std    r25, 0xF8(r1)
-    - [ be32, 0x00B44B48, 0xFAA100D8 ] # std    r21, 0xD8(r1)
-    - [ be32, 0x00B44B4C, 0x4E800020 ] # blr
+    - [ be32, 0x00b44b44, 0xfb2100f8 ] # std    r25, 0xf8(r1)
+    - [ be32, 0x00b44b48, 0xfaa100d8 ] # std    r21, 0xd8(r1)
+    - [ be32, 0x00b44b4c, 0x4e800020 ] # blr
 
-  p5_FixScriptPrintingFunctions_Author: &p5_FixScriptPrintingFunctions_Author TGEnigma
+  p5_FixScriptPrintingFunctions_Author: &p5_FixScriptPrintingFunctions_Author "TGEnigma"
   p5_FixScriptPrintingFunctions_Notes: &p5_FixScriptPrintingFunctions_Notes "Allows flowscripts to print strings to TTY Log."
   p5_FixScriptPrintingFunctions_PatVer: &p5_FixScriptPrintingFunctions_PatVer 1.0
   p5_FixScriptPrintingFunctions: &p5_FixScriptPrintingFunctions
   # ScriptInterpreter_Comm_PUT_Hook
-    - [ be32, 0x001E9D10, 0x48B44B9A ]
+    - [ be32, 0x001e9d10, 0x48b44b9a ]
   # PutInt
-    - [ be32, 0x00B44B98, 0x7C641B78 ]
-    - [ be32, 0x00B44B9C, 0x3C6000B6 ]
-    - [ be32, 0x00B44BA0, 0x3063394C ]
-    - [ be32, 0x00B44BA4, 0x48AD546F ]
-    - [ be32, 0x00B44BA8, 0x3C6000B9 ]
-    - [ be32, 0x00B44BAC, 0x30631820 ]
-    - [ be32, 0x00B44BB0, 0x48AD546F ]
-    - [ be32, 0x00B44BB4, 0x481E9D16 ]
+    - [ be32, 0x00b44b98, 0x7c641b78 ]
+    - [ be32, 0x00b44b9c, 0x3c6000b6 ]
+    - [ be32, 0x00b44ba0, 0x3063394c ]
+    - [ be32, 0x00b44ba4, 0x48ad546f ]
+    - [ be32, 0x00b44ba8, 0x3c6000b9 ]
+    - [ be32, 0x00b44bac, 0x30631820 ]
+    - [ be32, 0x00b44bb0, 0x48ad546f ]
+    - [ be32, 0x00b44bb4, 0x481e9d16 ]
   # ScriptInterpreter_Comm_PUTF_Hook
-    - [ be32, 0x001E9D68, 0x48B44BBA ]
+    - [ be32, 0x001e9d68, 0x48b44bba ]
   # PutFloat
-    - [ be32, 0xB44BB8, 0xFC400890 ]
-    - [ be32, 0xB44BBC, 0x3C6000B6 ]
-    - [ be32, 0xB44BC0, 0x3063397C ]
-    - [ be32, 0xB44BC4, 0x48AD546F ]
-    - [ be32, 0xB44BC8, 0x3C6000B9 ]
-    - [ be32, 0xB44BCC, 0x30631820 ]
-    - [ be32, 0xB44BD0, 0x48AD546F ]
-    - [ be32, 0xB44BD4, 0x481E9D6E ]
+    - [ be32, 0x00b44bb8, 0xfc400890 ]
+    - [ be32, 0x00b44bbc, 0x3c6000b6 ]
+    - [ be32, 0x00b44bc0, 0x3063397c ]
+    - [ be32, 0x00b44bc4, 0x48ad546f ]
+    - [ be32, 0x00b44bc8, 0x3c6000b9 ]
+    - [ be32, 0x00b44bcc, 0x30631820 ]
+    - [ be32, 0x00b44bd0, 0x48ad546f ]
+    - [ be32, 0x00b44bd4, 0x481e9d6e ]
   # ScriptInterpreter_Comm_PUTS_Hook
-    - [ be32, 0x001E9D3C, 0x48B44BDA ]
+    - [ be32, 0x001e9d3c, 0x48b44bda ]
   # PutString
-    - [ be32, 0x00B44BD8, 0x7C641B78 ]
-    - [ be32, 0x00B44BDC, 0x3C6000B6 ]
-    - [ be32, 0x00B44BE0, 0x30633994 ]
-    - [ be32, 0x00B44BE4, 0x48AD546F ]
-    - [ be32, 0x00B44BE8, 0x3C6000B9 ]
-    - [ be32, 0x00B44BEC, 0x30631820 ]
-    - [ be32, 0x00B44BF0, 0x48AD546F ]
-    - [ be32, 0x00B44BF4, 0x481E9D42 ]
+    - [ be32, 0x00b44bd8, 0x7c641b78 ]
+    - [ be32, 0x00b44bdc, 0x3c6000b6 ]
+    - [ be32, 0x00b44be0, 0x30633994 ]
+    - [ be32, 0x00b44be4, 0x48ad546f ]
+    - [ be32, 0x00b44be8, 0x3c6000b9 ]
+    - [ be32, 0x00b44bec, 0x30631820 ]
+    - [ be32, 0x00b44bf0, 0x48ad546f ]
+    - [ be32, 0x00b44bf4, 0x481e9d42 ]
 
-  p5_d0d0d0_Author: &p5_d0d0d0_Author Lipsum
+  p5_d0d0d0_Author: &p5_d0d0d0_Author "Lipsum"
   p5_d0d0d0_Notes: &p5_d0d0d0_Notes "Replaces the red color in the pause menu. Yellow by default."
   p5_d0d0d0_PatVer: &p5_d0d0d0_PatVer 1.0
   p5_d0d0d0: &p5_d0d0d0
@@ -9870,17 +9870,17 @@ Anchors:
     - [ be32, 0x0052b1b0, 0x3ca0ffff ] # lis param_3,-0x2f30
     - [ be32, 0x0052b1c4, 0x60a52200 ] # ori param_3,param_3,0xd000
 
-  p5_StopPartyPanel_Author: &p5_StopPartyPanel_Author DeathChaos
+  p5_StopPartyPanel_Author: &p5_StopPartyPanel_Author "DeathChaos"
   p5_StopPartyPanel_Notes: &p5_StopPartyPanel_Notes "Prevents in combat HP/SP Bar UI from loading for testing purposes."
   p5_StopPartyPanel_PatVer: &p5_StopPartyPanel_PatVer 1.0
   p5_StopPartyPanel: &p5_StopPartyPanel
   # Prevent party_panel from being loaded
-    - [ be32, 0x28fc14, 0x60000000 ]
-    - [ be32, 0x28fc1c, 0x60000000 ]
-    - [ be32, 0x28fc20, 0x60000000 ]
-    - [ be32, 0x28fc34, 0x60000000 ]
-    - [ be32, 0x28fc40, 0x60000000 ]
-    - [ be32, 0x28fc54, 0x60000000 ]
+    - [ be32, 0x0028fc14, 0x60000000 ]
+    - [ be32, 0x0028fc1c, 0x60000000 ]
+    - [ be32, 0x0028fc20, 0x60000000 ]
+    - [ be32, 0x0028fc34, 0x60000000 ]
+    - [ be32, 0x0028fc40, 0x60000000 ]
+    - [ be32, 0x0028fc54, 0x60000000 ]
 
   p5_Title_US: &p5_Title_US
     "Persona 5":
@@ -9901,114 +9901,114 @@ Anchors:
       BLJM61346: [ 01.03 ]
 
 PPU-e72e715d646a94770d1902364bc66fe33b1b6606:
-  Enable Mod Support:
+  "Enable Mod Support":
     Games: *p5_Title_US
     Author: *p5_ModSupport_Author
     Notes: *p5_ModSupport_Notes
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  Skip Intro Videos:
+  "Skip Intro Videos":
     Games: *p5_Title_US
     Author: *p5_SkipIntro_Author
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
-  60 FPS:
+  "60 FPS":
     Games: *p5_Title_US
     Author: *p5_60FPS_Author
     Notes: *p5_60FPS_Notes
     Patch Version: *p5_60FPS_PatVer
     Patch:
       - [ load, *p5_60FPS ]
-  Disable DLC Unlock Messages:
+  "Disable DLC Unlock Messages":
     Games: *p5_Title_US
     Author: *p5_DLC_Author
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
-  Disable Blur Filter:
+  "Disable Blur Filter":
     Games: *p5_Title_US
     Author: *p5_DisableBlur_Author
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
-  Disable Normal Distortion Filter (<=99% Alert & Velvet Room):
+  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_US
     Author: *p5_DisableDistortion_Author
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
-  Disable Angry Distortion Filter (100% Alert):
+  "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_US
     Author: *p5_Disable100PctDistortion_Author
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
-  Disable HUD Elements:
+  "Disable HUD Elements":
     Games: *p5_Title_US
     Author: *p5_NoHudLite_Author
     Notes: *p5_NoHudLite_Notes
     Patch Version: *p5_NoHudLite_PatVer
     Patch:
       - [ load, *p5_NoHudLite ]
-  Disable HUD Elements (Aggressive):
+  "Disable HUD Elements (Aggressive)":
     Games: *p5_Title_US
     Author: *p5_NoHud_Author
     Notes: *p5_NoHud_Notes
     Patch Version: *p5_NoHud_PatVer
     Patch:
       - [ load, *p5_NoHud ]
-  Encounter BGM In Order:
+  "Encounter BGM In Order":
     Games: *p5_Title_US
     Author: *p5_BgmOrder_Author
     Notes: *p5_BgmOrder_Notes
     Patch Version: *p5_BgmOrder_PatVer
     Patch:
       - [ load, *p5_BgmOrder ]
-  Encounter BGM Random Order:
+  "Encounter BGM Random Order":
     Games: *p5_Title_US
     Author: *p5_BgmRandom_Author
     Notes: *p5_BgmRandom_Notes
     Patch Version: *p5_BgmRandom_PatVer
     Patch:
       - [ load, *p5_BgmRandom ]
-  Disable Navigator Battle Messages:
+  "Disable Navigator Battle Messages":
     Games: *p5_Title_US
     Author: *p5_NaviLines_Author
     Notes: *p5_NaviLines_Notes
     Patch Version: *p5_NaviLines_PatVer
     Patch:
       - [ load, *p5_NaviLines ]
-  Custom Maximum Bullet Count:
+  "Custom Maximum Bullet Count":
     Games: *p5_Title_US
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
       - [ load, *p5_MaxBullet ]
-  File Access Log:
+  "File Access Log":
     Games: *p5_Title_US
     Author: *p5_FileAccessLog_Author
     Notes: *p5_FileAccessLog_Notes
     Patch Version: *p5_FileAccessLog_PatVer
     Patch:
       - [ load, *p5_FileAccessLog ]
-  Fix Script Printing Functions:
+  "Fix Script Printing Functions":
     Games: *p5_Title_US
     Author: *p5_FixScriptPrintingFunctions_Author
     Notes: *p5_FixScriptPrintingFunctions_Notes
     Patch Version: *p5_FixScriptPrintingFunctions_PatVer
     Patch:
       - [ load, *p5_FixScriptPrintingFunctions ]
-  Replace Color d0d0d0:
+  "Replace Color d0d0d0":
     Games: *p5_Title_US
     Author: *p5_d0d0d0_Author
     Notes: *p5_d0d0d0_Notes
     Patch Version: *p5_d0d0d0_PatVer
     Patch:
       - [ load, *p5_d0d0d0 ]
-  Prevent Party Panel From Loading:
+  "Prevent Party Panel From Loading":
     Games: *p5_Title_US
     Author: *p5_StopPartyPanel_Author
     Notes: *p5_StopPartyPanel_Notes
@@ -10017,114 +10017,114 @@ PPU-e72e715d646a94770d1902364bc66fe33b1b6606:
       - [ load, *p5_StopPartyPanel ]
 
 PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
-  Enable Mod Support:
+  "Enable Mod Support":
     Games: *p5_Title_EU
     Author: *p5_ModSupport_Author
     Notes: *p5_ModSupport_Notes
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  Skip Intro Videos:
+  "Skip Intro Videos":
     Games: *p5_Title_EU
     Author: *p5_SkipIntro_Author
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
-  60 FPS:
+  "60 FPS":
     Games: *p5_Title_EU
     Author: *p5_60FPS_Author
     Notes: *p5_60FPS_Notes
     Patch Version: *p5_60FPS_PatVer
     Patch:
       - [ load, *p5_60FPS ]
-  Disable DLC Unlock Messages:
+  "Disable DLC Unlock Messages":
     Games: *p5_Title_EU
     Author: *p5_DLC_Author
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
-  Disable Blur Filter:
+  "Disable Blur Filter":
     Games: *p5_Title_EU
     Author: *p5_DisableBlur_Author
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
-  Disable Normal Distortion Filter (<=99% Alert & Velvet Room):
+  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_EU
     Author: *p5_DisableDistortion_Author
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
-  Disable Angry Distortion Filter (100% Alert):
+  "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_EU
     Author: *p5_Disable100PctDistortion_Author
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
-  Disable HUD Elements:
+  "Disable HUD Elements":
     Games: *p5_Title_EU
     Author: *p5_NoHudLite_Author
     Notes: *p5_NoHudLite_Notes
     Patch Version: *p5_NoHudLite_PatVer
     Patch:
       - [ load, *p5_NoHudLite ]
-  Disable HUD Elements (Aggressive):
+  "Disable HUD Elements (Aggressive)":
     Games: *p5_Title_EU
     Author: *p5_NoHud_Author
     Notes: *p5_NoHud_Notes
     Patch Version: *p5_NoHud_PatVer
     Patch:
       - [ load, *p5_NoHud ]
-  Encounter BGM In Order:
+  "Encounter BGM In Order":
     Games: *p5_Title_EU
     Author: *p5_BgmOrder_Author
     Notes: *p5_BgmOrder_Notes
     Patch Version: *p5_BgmOrder_PatVer
     Patch:
       - [ load, *p5_BgmOrder ]
-  Encounter BGM Random Order:
+  "Encounter BGM Random Order":
     Games: *p5_Title_EU
     Author: *p5_BgmRandom_Author
     Notes: *p5_BgmRandom_Notes
     Patch Version: *p5_BgmRandom_PatVer
     Patch:
       - [ load, *p5_BgmRandom ]
-  Disable Navigator Battle Messages:
+  "Disable Navigator Battle Messages":
     Games: *p5_Title_EU
     Author: *p5_NaviLines_Author
     Notes: *p5_NaviLines_Notes
     Patch Version: *p5_NaviLines_PatVer
     Patch:
       - [ load, *p5_NaviLines ]
-  Custom Maximum Bullet Count:
+  "Custom Maximum Bullet Count":
     Games: *p5_Title_EU
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
       - [ load, *p5_MaxBullet ]
-  File Access Log:
+  "File Access Log":
     Games: *p5_Title_EU
     Author: *p5_FileAccessLog_Author
     Notes: *p5_FileAccessLog_Notes
     Patch Version: *p5_FileAccessLog_PatVer
     Patch:
       - [ load, *p5_FileAccessLog ]
-  Fix Script Printing Functions:
+  "Fix Script Printing Functions":
     Games: *p5_Title_EU
     Author: *p5_FixScriptPrintingFunctions_Author
     Notes: *p5_FixScriptPrintingFunctions_Notes
     Patch Version: *p5_FixScriptPrintingFunctions_PatVer
     Patch:
       - [ load, *p5_FixScriptPrintingFunctions ]
-  Replace Color d0d0d0:
+  "Replace Color d0d0d0":
     Games: *p5_Title_EU
     Author: *p5_d0d0d0_Author
     Notes: *p5_d0d0d0_Notes
     Patch Version: *p5_d0d0d0_PatVer
     Patch:
       - [ load, *p5_d0d0d0 ]
-  Prevent Party Panel From Loading:
+  "Prevent Party Panel From Loading":
     Games: *p5_Title_EU
     Author: *p5_StopPartyPanel_Author
     Notes: *p5_StopPartyPanel_Notes
@@ -10133,114 +10133,114 @@ PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
       - [ load, *p5_StopPartyPanel ]
 
 PPU-3b394da7912181d308bf08505009b3578521c756:
-  Enable Mod Support:
+  "Enable Mod Support":
     Games: *p5_Title_JP_100
     Author: *p5_ModSupport_Author
     Notes: *p5_ModSupport_Notes
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  Skip Intro Videos:
+  "Skip Intro Videos":
     Games: *p5_Title_JP_100
     Author: *p5_SkipIntro_Author
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
-  60 FPS:
+  "60 FPS":
     Games: *p5_Title_JP_100
     Author: *p5_60FPS_Author
     Notes: *p5_60FPS_Notes
     Patch Version: *p5_60FPS_PatVer
     Patch:
       - [ load, *p5_60FPS ]
-  Disable DLC Unlock Messages:
+  "Disable DLC Unlock Messages":
     Games: *p5_Title_JP_100
     Author: *p5_DLC_Author
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
-  Disable Blur Filter:
+  "Disable Blur Filter":
     Games: *p5_Title_JP_100
     Author: *p5_DisableBlur_Author
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
-  Disable Normal Distortion Filter (<=99% Alert & Velvet Room):
+  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_JP_100
     Author: *p5_DisableDistortion_Author
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
-  Disable Angry Distortion Filter (100% Alert):
+  "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_JP_100
     Author: *p5_Disable100PctDistortion_Author
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
-  Disable HUD Elements:
+  "Disable HUD Elements":
     Games: *p5_Title_JP_100
     Author: *p5_NoHudLite_Author
     Notes: *p5_NoHudLite_Notes
     Patch Version: *p5_NoHudLite_PatVer
     Patch:
       - [ load, *p5_NoHudLite ]
-  Disable HUD Elements (Aggressive):
+  "Disable HUD Elements (Aggressive)":
     Games: *p5_Title_JP_100
     Author: *p5_NoHud_Author
     Notes: *p5_NoHud_Notes
     Patch Version: *p5_NoHud_PatVer
     Patch:
       - [ load, *p5_NoHud ]
-  Encounter BGM In Order:
+  "Encounter BGM In Order":
     Games: *p5_Title_JP_100
     Author: *p5_BgmOrder_Author
     Notes: *p5_BgmOrder_Notes
     Patch Version: *p5_BgmOrder_PatVer
     Patch:
       - [ load, *p5_BgmOrder ]
-  Encounter BGM Random Order:
+  "Encounter BGM Random Order":
     Games: *p5_Title_JP_100
     Author: *p5_BgmRandom_Author
     Notes: *p5_BgmRandom_Notes
     Patch Version: *p5_BgmRandom_PatVer
     Patch:
       - [ load, *p5_BgmRandom ]
-  Disable Navigator Battle Messages:
+  "Disable Navigator Battle Messages":
     Games: *p5_Title_JP_100
     Author: *p5_NaviLines_Author
     Notes: *p5_NaviLines_Notes
     Patch Version: *p5_NaviLines_PatVer
     Patch:
       - [ load, *p5_NaviLines ]
-  Custom Maximum Bullet Count:
+  "Custom Maximum Bullet Count":
     Games: *p5_Title_JP_100
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
       - [ load, *p5_MaxBullet ]
-  File Access Log:
+  "File Access Log":
     Games: *p5_Title_JP_100
     Author: *p5_FileAccessLog_Author
     Notes: *p5_FileAccessLog_Notes
     Patch Version: *p5_FileAccessLog_PatVer
     Patch:
       - [ load, *p5_FileAccessLog ]
-  Fix Script Printing Functions:
+  "Fix Script Printing Functions":
     Games: *p5_Title_JP_100
     Author: *p5_FixScriptPrintingFunctions_Author
     Notes: *p5_FixScriptPrintingFunctions_Notes
     Patch Version: *p5_FixScriptPrintingFunctions_PatVer
     Patch:
       - [ load, *p5_FixScriptPrintingFunctions ]
-  Replace Color d0d0d0:
+  "Replace Color d0d0d0":
     Games: *p5_Title_JP_100
     Author: *p5_d0d0d0_Author
     Notes: *p5_d0d0d0_Notes
     Patch Version: *p5_d0d0d0_PatVer
     Patch:
       - [ load, *p5_d0d0d0 ]
-  Prevent Party Panel From Loading:
+  "Prevent Party Panel From Loading":
     Games: *p5_Title_JP_100
     Author: *p5_StopPartyPanel_Author
     Notes: *p5_StopPartyPanel_Notes
@@ -10249,114 +10249,114 @@ PPU-3b394da7912181d308bf08505009b3578521c756:
       - [ load, *p5_StopPartyPanel ]
 
 PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
-  Enable Mod Support:
+  "Enable Mod Support":
     Games: *p5_Title_JP_103
     Author: *p5_ModSupport_Author
     Notes: *p5_ModSupport_Notes
     Patch Version: *p5_ModSupport_PatVer
     Patch:
       - [ load, *p5_ModSupport ]
-  Skip Intro Videos:
+  "Skip Intro Videos":
     Games: *p5_Title_JP_103
     Author: *p5_SkipIntro_Author
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
-  60 FPS:
+  "60 FPS":
     Games: *p5_Title_JP_103
     Author: *p5_60FPS_Author
     Notes: *p5_60FPS_Notes
     Patch Version: *p5_60FPS_PatVer
     Patch:
       - [ load, *p5_60FPS ]
-  Disable DLC Unlock Messages:
+  "Disable DLC Unlock Messages":
     Games: *p5_Title_JP_103
     Author: *p5_DLC_Author
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
-  Disable Blur Filter:
+  "Disable Blur Filter":
     Games: *p5_Title_JP_103
     Author: *p5_DisableBlur_Author
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
-  Disable Normal Distortion Filter (<=99% Alert & Velvet Room):
+  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_JP_103
     Author: *p5_DisableDistortion_Author
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
-  Disable Angry Distortion Filter (100% Alert):
+  "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_JP_103
     Author: *p5_Disable100PctDistortion_Author
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
-  Disable HUD Elements:
+  "Disable HUD Elements":
     Games: *p5_Title_JP_103
     Author: *p5_NoHudLite_Author
     Notes: *p5_NoHudLite_Notes
     Patch Version: *p5_NoHudLite_PatVer
     Patch:
       - [ load, *p5_NoHudLite ]
-  Disable HUD Elements (Aggressive):
+  "Disable HUD Elements (Aggressive)":
     Games: *p5_Title_JP_103
     Author: *p5_NoHud_Author
     Notes: *p5_NoHud_Notes
     Patch Version: *p5_NoHud_PatVer
     Patch:
       - [ load, *p5_NoHud ]
-  Encounter BGM In Order:
+  "Encounter BGM In Order":
     Games: *p5_Title_JP_103
     Author: *p5_BgmOrder_Author
     Notes: *p5_BgmOrder_Notes
     Patch Version: *p5_BgmOrder_PatVer
     Patch:
       - [ load, *p5_BgmOrder ]
-  Encounter BGM Random Order:
+  "Encounter BGM Random Order":
     Games: *p5_Title_JP_103
     Author: *p5_BgmRandom_Author
     Notes: *p5_BgmRandom_Notes
     Patch Version: *p5_BgmRandom_PatVer
     Patch:
       - [ load, *p5_BgmRandom ]
-  Disable Navigator Battle Messages:
+  "Disable Navigator Battle Messages":
     Games: *p5_Title_JP_103
     Author: *p5_NaviLines_Author
     Notes: *p5_NaviLines_Notes
     Patch Version: *p5_NaviLines_PatVer
     Patch:
       - [ load, *p5_NaviLines ]
-  Custom Maximum Bullet Count:
+  "Custom Maximum Bullet Count":
     Games: *p5_Title_JP_103
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
       - [ load, *p5_MaxBullet ]
-  File Access Log:
+  "File Access Log":
     Games: *p5_Title_JP_103
     Author: *p5_FileAccessLog_Author
     Notes: *p5_FileAccessLog_Notes
     Patch Version: *p5_FileAccessLog_PatVer
     Patch:
       - [ load, *p5_FileAccessLog ]
-  Fix Script Printing Functions:
+  "Fix Script Printing Functions":
     Games: *p5_Title_JP_103
     Author: *p5_FixScriptPrintingFunctions_Author
     Notes: *p5_FixScriptPrintingFunctions_Notes
     Patch Version: *p5_FixScriptPrintingFunctions_PatVer
     Patch:
       - [ load, *p5_FixScriptPrintingFunctions ]
-  Replace Color d0d0d0:
+  "Replace Color d0d0d0":
     Games: *p5_Title_JP_103
     Author: *p5_d0d0d0_Author
     Notes: *p5_d0d0d0_Notes
     Patch Version: *p5_d0d0d0_PatVer
     Patch:
       - [ load, *p5_d0d0d0 ]
-  Prevent Party Panel From Loading:
+  "Prevent Party Panel From Loading":
     Games: *p5_Title_JP_103
     Author: *p5_StopPartyPanel_Author
     Notes: *p5_StopPartyPanel_Notes
