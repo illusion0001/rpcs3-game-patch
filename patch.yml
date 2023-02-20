@@ -7663,15 +7663,15 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
       - [ bef32, 0x007328dc, 1.5 ]
 
 PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Metal Gear Solid 2: Sons of Liberty - HD Edition":
         NPEB00685: [ All ]
-    Author: Esppiral
-    Notes: 
+    Author: "Esppiral"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xDEE1B0, 0x3F100001 ] # INGAME 21:9 AR
+      - [ be32, 0x00dee1b0, 0x3f100001 ] # Ingame 21:9 AR
 
 Anchors:
   debugmenunotesUC1: &debugmenunotesUC1 "Enable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
