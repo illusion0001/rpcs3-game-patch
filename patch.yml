@@ -3148,44 +3148,44 @@ PPU-fadb0af6fb7bd0113e88fb9af3eb78fe3be05d08:
       - [ bef64, 0x006a1938, 0.001 ] # init/level load
 
 PPU-6b996df3949d05b2e6dc23b1dfdf9dd6d01d8c38:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Ratchet & Clank: All 4 One":
         NPEA00356: [ 01.00 ]
-    Author: illusion
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Author: "illusion"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be16,  0x0031105a, 0x3A83 ] # level load (low bits)
-      - [ be16,  0x00311066, 0x126F ] # level load (high bits)
-      - [ bef64, 0x0072c140, 0.001  ] # init/level load
+      - [ be16, 0x0031105a, 0x3a83 ] # level load (low bits)
+      - [ be16, 0x00311066, 0x126f ] # level load (high bits)
+      - [ bef64, 0x0072c140, 0.001 ] # init/level load
 
 PPU-5fd631b4c6903c20ef2dedae06469beb880935d3:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Ratchet & Clank: All 4 One":
         NPEA00356: [ 01.03 ]
         NPUA80695: [ 01.03 ]
-    Author: illusion
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Author: "illusion"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be16,  0x0031a186, 0x3A83 ] # level load (low bits)
-      - [ be16,  0x0031a192, 0x126F ] # level load (high bits)
-      - [ bef64, 0x00744dc0, 0.001  ] # init/level load
+      - [ be16, 0x0031a186, 0x3a83 ] # level load (low bits)
+      - [ be16, 0x0031a192, 0x126f ] # level load (high bits)
+      - [ bef64, 0x00744dc0, 0.001 ] # init/level load
 
 PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Ratchet & Clank: All 4 One":
         NPUA80695: [ 01.00 ]
-    Author: illusion
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Author: "illusion"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be16,  0x0031105a, 0x3A83 ] # level load (low bits)
-      - [ be16,  0x00311066, 0x126F ] # level load (high bits)
-      - [ bef64, 0x0072c140, 0.001  ] # init/level load
+      - [ be16, 0x0031105a, 0x3a83 ] # level load (low bits)
+      - [ be16, 0x00311066, 0x126f ] # level load (high bits)
+      - [ bef64, 0x0072c140, 0.001 ] # init/level load
 
 Anchors:
   gowamlaanotes: &gowamlaanotes "Allows for the use of Resolution Scaling in the title.\n\nSet Resolution Scale Threshold to 1x1 for proper scaling of effects."
