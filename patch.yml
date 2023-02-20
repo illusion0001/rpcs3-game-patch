@@ -4908,90 +4908,90 @@ Anchors:
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   # Since we only change store reg, no need to patch the rest.
   uc2_Disc_100_60FPS: &uc2_Disc_100_60FPS
-    - [ be16, 0x000c9250, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9B5FB)
+    - [ be16, 0x000c9250, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0e9b5fb)
 
   uc2_Disc_100_UnlockFPS: &uc2_Disc_100_UnlockFPS
-    - [ be16, 0x000c9250, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9B5FB)
+    - [ be16, 0x000c9250, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0e9b5fb)
 
   uc2_Disc_100_ssao: &uc2_Disc_100_ssao
-    - [ be16, 0x000c9370, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9B642)
+    - [ be16, 0x000c9370, 0x9b83 ] # Disable SSAO                            (mem address: 0x0e9b642)
 
   uc2_Disc_100_dof: &uc2_Disc_100_dof
-    - [ be16, 0x000c93c4, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9B651)
+    - [ be16, 0x000c93c4, 0x9b83 ] # Disable depth of field                  (mem address: 0x0e9b651)
 
   uc2_Disc_100_post: &uc2_Disc_100_post
-    - [ be16, 0x000c93ec, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9B668)
+    - [ be16, 0x000c93ec, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9b668)
 
   uc2_Disc_100_light: &uc2_Disc_100_light
-    - [ be16, 0x000c962c, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9B964)
-    - [ be16, 0x000c9630, 0x9b63 ] # Enable stencil buffer for gpu lighting  (mem address: 0x0E9B965)
+    - [ be16, 0x000c962c, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9b964)
+    - [ be16, 0x000c9630, 0x9b63 ] # Enable stencil buffer for GPU lighting  (mem address: 0x0e9b965)
 
   uc2_Disc_100_mesh: &uc2_Disc_100_mesh
-    - [ be16, 0x0072ec3c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F995D0)
+    - [ be16, 0x0072ec3c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f995d0)
 
   uc2_Disc_100_mb: &uc2_Disc_100_mb
-    - [ be16, 0x000c93c0, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9B64F)
+    - [ be16, 0x000c93c0, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9b64f)
 
   uc2_Disc_100_vmb: &uc2_Disc_100_vmb
-    - [ be16, 0x000c961c, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9B894)
+    - [ be16, 0x000c961c, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9b894)
 
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_Disc_109_60FPS: &uc2_Disc_109_60FPS
-    - [ be16, 0x000c26f0, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9C1FB)
+    - [ be16, 0x000c26f0, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0e9c1fb)
 
   uc2_Disc_109_UnlockFPS: &uc2_Disc_109_UnlockFPS
-    - [ be16, 0x000c26f0, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9C1FB)
+    - [ be16, 0x000c26f0, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0e9c1fb)
 
   uc2_Disc_109_ssao: &uc2_Disc_109_ssao
-    - [ be16, 0x000c2810, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9C242)
+    - [ be16, 0x000c2810, 0x9b83 ] # Disable SSAO                            (mem address: 0x0e9c242)
 
   uc2_Disc_109_dof: &uc2_Disc_109_dof
-    - [ be16, 0x000c2864, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9C251)
+    - [ be16, 0x000c2864, 0x9b83 ] # Disable depth of field                  (mem address: 0x0e9c251)
 
   uc2_Disc_109_post: &uc2_Disc_109_post
-    - [ be16, 0x000c288c, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9C268)
+    - [ be16, 0x000c288c, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9c268)
 
   uc2_Disc_109_light: &uc2_Disc_109_light
-    - [ be16, 0x000c2ad0, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9C564)
-    - [ be16, 0x000c2ad4, 0x9b63 ] # Enable stencil buffer for gpu lighting  (mem address: 0x0E9C565)
+    - [ be16, 0x000c2ad0, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9c564)
+    - [ be16, 0x000c2ad4, 0x9b63 ] # Enable stencil buffer for GPU lighting  (mem address: 0x0e9c565)
 
   uc2_Disc_109_mesh: &uc2_Disc_109_mesh
-    - [ be16, 0x0072d44c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F9BFD0)
+    - [ be16, 0x0072d44c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f9bfd0)
 
   uc2_Disc_109_mb: &uc2_Disc_109_mb
-    - [ be16, 0x000c2860, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9C24F)
+    - [ be16, 0x000c2860, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9c24f)
 
   uc2_Disc_109_vmb: &uc2_Disc_109_vmb
-    - [ be16, 0x000c2ac0, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9C494)
+    - [ be16, 0x000c2ac0, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9c494)
 
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_PSN_60FPS: &uc2_PSN_60FPS
-    - [ be16, 0x000c2bb8, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0E9C1FB)
+    - [ be16, 0x000c2bb8, 0x9163 ] # Framelock: 1 (60 FPS Limit)             (mem address: 0x0e9c1fb)
 
   uc2_PSN_UnlockFPS: &uc2_PSN_UnlockFPS
-    - [ be16, 0x000c2bb8, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0E9C1FB)
+    - [ be16, 0x000c2bb8, 0x9183 ] # Framelock: 0 (No FPS Limit)             (mem address: 0x0e9c1fb)
 
   uc2_PSN_ssao: &uc2_PSN_ssao
-    - [ be16, 0x000c2cd8, 0x9b83 ] # Disable SSAO                            (mem address: 0x0E9C242)
+    - [ be16, 0x000c2cd8, 0x9b83 ] # Disable SSAO                            (mem address: 0x0e9c242)
 
   uc2_PSN_dof: &uc2_PSN_dof
-    - [ be16, 0x000c2d2c, 0x9b83 ] # Disable depth of field                  (mem address: 0x0E9C251)
+    - [ be16, 0x000c2d2c, 0x9b83 ] # Disable depth of field                  (mem address: 0x0e9c251)
 
   uc2_PSN_post: &uc2_PSN_post
-    - [ be16, 0x000c2d54, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0E9C268)
+    - [ be16, 0x000c2d54, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9c268)
 
   uc2_PSN_light: &uc2_PSN_light
-    - [ be16, 0x000c2f98, 0x9b83 ] # Disable Spu lighting                    (mem address: 0x0E9C564)
-    - [ be16, 0x000c2f9c, 0x9b63 ]  # Enable stencil buffer for gpu lighting (mem address: 0x0E9C565)
+    - [ be16, 0x000c2f98, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9c564)
+    - [ be16, 0x000c2f9c, 0x9b63 ] # Enable stencil buffer for GPU lighting  (mem address: 0x0e9c565)
 
   uc2_PSN_mesh: &uc2_PSN_mesh
-    - [ be16, 0x0072d394, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0F9BFD0)
+    - [ be16, 0x0072d394, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f9bfd0)
 
   uc2_PSN_mb: &uc2_PSN_mb
-    - [ be16, 0x000c2d28, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0E9C24F)
+    - [ be16, 0x000c2d28, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9c24f)
 
   uc2_PSN_vmb: &uc2_PSN_vmb
-    - [ be16, 0x000c2f88, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0E9C494)
+    - [ be16, 0x000c2f88, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9c494)
 
   # Note: Unlike Uncharted 3 and TLoU, Uncharted 2 doesn't change the initial address.
   uc2_Demo_60FPS: &uc2_Demo_60FPS
@@ -5010,8 +5010,8 @@ Anchors:
     - [ be16, 0x000c963c, 0x9b83 ] # Disable Post on SPU
 
   uc2_Demo_light: &uc2_Demo_light
-    - [ be16, 0x000c987c, 0x9b83 ] # Disable Spu lighting
-    - [ be16, 0x000c9880, 0x9b63 ] # Enable stencil buffer for gpu lighting
+    - [ be16, 0x000c987c, 0x9b83 ] # Disable SPU lighting
+    - [ be16, 0x000c9880, 0x9b63 ] # Enable stencil buffer for GPU lighting
 
   uc2_Demo_mesh: &uc2_Demo_mesh
     - [ be16, 0x0030624c, 0x9949 ] # Disable mesh trimming
@@ -5023,135 +5023,135 @@ Anchors:
     - [ be16, 0x000c986c, 0x9b83 ] # Velocity motion blur
 
   debugmenunotesUC2: &debugmenunotesUC2 "Enable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
-  uc2spupostnotes: &uc2spupostnotes "Fixes green graphics when using Resolution Scaling"
-  uc260fpsnotes: &uc260fpsnotes "Allows framerates of up to 60 FPS"
-  uc2unlockedfpsnotes: &uc2unlockedfpsnotes "Completely unlocks Uncharted 2's framerate"
-  uc2spulightingnotes: &uc2spulightingnotes "Improves performance slightly by using GPU path for lighting.\nFixes lighting issues in Chapter 9 when shining the beams of light onto the statues"
+  uc2spupostnotes: &uc2spupostnotes "Fixes green graphics when using Resolution Scaling."
+  uc260fpsnotes: &uc260fpsnotes "Allows framerates of up to 60 FPS."
+  uc2unlockedfpsnotes: &uc2unlockedfpsnotes "Completely unlocks Uncharted 2's framerate."
+  uc2spulightingnotes: &uc2spulightingnotes "Improves performance slightly by using GPU path for lighting.\nFixes lighting issues in Chapter 9 when shining the beams of light onto the statues."
 
 PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
-  60 FPS:
+  "60 FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_100_60FPS ]
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_100_UnlockFPS ]
-  Disable SSAO:
+  "Disable SSAO":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_ssao ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_dof ]
-  Disable SPU Post-processing:
+  "Disable SPU Post-processing":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spupostnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_post ]
-  Enable GPU Lighting:
+  "Enable GPU Lighting":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_light ]
-  Disable Mesh Trimming:
+  "Disable Mesh Trimming":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mesh ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mb ]
-  Disable Velocity Motion Blur:
+  "Disable Velocity Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_vmb ]
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: dron_3, HdHereidme, illusion
+    Author: "dron_3, HdHereidme, illusion"
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00023c64, 0x419e ]
-      - [ be32, 0x00062e10, 0x60000000 ] #Don't pause on Select button
+      - [ be32, 0x00062e10, 0x60000000 ] # Don't pause on Select button
   "Bug Fix: Quit to Menu Crash": # TODO: port to PSN ver
     Games:
       "Uncharted 2: Among Thieves":
@@ -5159,136 +5159,135 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: "Last modified: 16 Feb 2021\n\nFixed a rare bug when quitting to menu causes a game crash."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00270834, 0x4850e8e9 ] #Call
-      - [ be32, 0x0077f11c, 0x2f9c0000 ] #Compare r28 to 0
-      - [ be32, 0x0077f120, 0x409e000c ] #Skip to lhz if !=0
-      - [ be32, 0x0077f124, 0x38000001 ] #r0 = 1
-      - [ be32, 0x0077f128, 0x48000008 ] #Go to return
-      - [ be32, 0x0077f12c, 0xa01c04b4 ] #Default lhz
-      - [ be32, 0x0077f130, 0x4e800020 ] #Return
-  Skip Intro:
+      - [ be32, 0x00270834, 0x4850e8e9 ] # Call
+      - [ be32, 0x0077f11c, 0x2f9c0000 ] # Compare r28 to 0
+      - [ be32, 0x0077f120, 0x409e000c ] # Skip to lhz if !=0
+      - [ be32, 0x0077f124, 0x38000001 ] # r0 = 1
+      - [ be32, 0x0077f128, 0x48000008 ] # Go to return
+      - [ be32, 0x0077f12c, 0xa01c04b4 ] # Default lhz
+      - [ be32, 0x0077f130, 0x4e800020 ] # Return
+  "Skip Intro":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
         BCES00727: [ 01.00 ]
         BCES00757: [ 01.00 ]
         BCJS30035: [ 01.00 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00026dc4, 0x48000e50 ]
 
 PPU-9fe364d48b610e4b0a1c41d526bec9b1b2039c07:
-  60 FPS:
+  "60 FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_100_60FPS ]
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_100_UnlockFPS ]
-  Disable SSAO:
+  "Disable SSAO":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_ssao ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_dof ]
-  Disable SPU Post-processing:
+  "Disable SPU Post-processing":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spupostnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_post ]
-  Enable GPU Lighting:
+  "Enable GPU Lighting":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_light ]
-  Disable Mesh Trimming:
+  "Disable Mesh Trimming":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
-      - [ be16, 0x072ec54, 0x9949 ]
-  Disable Motion Blur:
+      - [ be16, 0x0072ec54, 0x9949 ]
+  "Disable Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mb ]
-  Disable Velocity Motion Blur:
+  "Disable Velocity Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_vmb ]
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: dron_3, HdHereidme, illusion
+    Author: "dron_3, HdHereidme, illusion"
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00023c64, 0x419e ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00026dc4, 0x48000e50 ]
 
-
 PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
-  60 FPS:
+  "60 FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5296,13 +5295,13 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_109_60FPS ]
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5310,13 +5309,13 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Disc_109_UnlockFPS ]
-  Disable SSAO:
+  "Disable SSAO":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5324,12 +5323,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_ssao ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5337,12 +5336,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_dof ]
-  Disable SPU Post-processing:
+  "Disable SPU Post-processing":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5350,12 +5349,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spupostnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_post ]
-  Enable GPU Lighting:
+  "Enable GPU Lighting":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5363,12 +5362,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_light ]
-  Disable Mesh Trimming:
+  "Disable Mesh Trimming":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5376,12 +5375,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_mesh ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5389,12 +5388,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_mb ]
-  Disable Velocity Motion Blur:
+  "Disable Velocity Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5402,12 +5401,12 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_vmb ]
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5415,7 +5414,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: dron_3, HdHereidme
+    Author: "dron_3, HdHereidme"
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
@@ -5428,18 +5427,18 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: "Last modified: 16 Feb 2021\n\nFixed a rare bug when quitting to menu causes a game crash."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00262e04, 0x488ce301 ] #Call
-      - [ be32, 0x00b31104, 0x2f9c0000 ] #Compare r28 to 0
-      - [ be32, 0x00b31108, 0x409e000c ] #Skip to lhz if !=0
-      - [ be32, 0x00b3110c, 0x38000001 ] #r0 = 1
-      - [ be32, 0x00b31110, 0x48000008 ] #Go to return
-      - [ be32, 0x00b31114, 0xa01c04b4 ] #Default lhz
-      - [ be32, 0x00b31118, 0x4e800020 ] #Return
-  Skip Intro:
+      - [ be32, 0x00262e04, 0x488ce301 ] # Call
+      - [ be32, 0x00b31104, 0x2f9c0000 ] # Compare r28 to 0
+      - [ be32, 0x00b31108, 0x409e000c ] # Skip to lhz if !=0
+      - [ be32, 0x00b3110c, 0x38000001 ] # r0 = 1
+      - [ be32, 0x00b31110, 0x48000008 ] # Go to return
+      - [ be32, 0x00b31114, 0xa01c04b4 ] # Default lhz
+      - [ be32, 0x00b31118, 0x4e800020 ] # Return
+  "Skip Intro":
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.09 ]
@@ -5447,153 +5446,153 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCES00757: [ 01.09 ]
         BCUS98123: [ 01.09 ]
         BCJS30035: [ 01.09 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00026e08, 0x48000e40 ]
 
 PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
-  60 FPS:
+  "60 FPS":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_PSN_60FPS ]
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_PSN_UnlockFPS ]
-  Disable SSAO:
+  "Disable SSAO":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_ssao ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_dof ]
-  Disable SPU Post-processing:
+  "Disable SPU Post-processing":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spupostnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_post ]
-  Enable GPU Lighting:
+  "Enable GPU Lighting":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_light ]
-  Disable Mesh Trimming:
+  "Disable Mesh Trimming":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_mesh ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_mb ]
-  Disable Velocity Motion Blur:
+  "Disable Velocity Motion Blur":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_vmb ]
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: dron_3, HdHereidme, illusion
+    Author: "dron_3, HdHereidme, illusion"
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000244e0, 0x419e ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Uncharted 2: Among Thieves":
         NPEA00364: [ 01.10 ]
         NPEA00365: [ 01.10 ]
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
-    Author: illusion, ZEROx
+    Author: "illusion, ZEROx"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00094a50, 0x98e3 ]
 
 PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
-  60 FPS:
+  "60 FPS":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
     Patch Version: 1.2
     Group: FPS
@@ -5603,80 +5602,80 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
     Patch Version: 1.2
     Group: FPS
     Patch:
       - [ load, *uc2_Demo_UnlockFPS ]
-  Disable SSAO:
+  "Disable SSAO":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_ssao ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_dof ]
-  Disable SPU Post-processing:
+  "Disable SPU Post-processing":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_post ]
-  Enable GPU Lighting:
+  "Enable GPU Lighting":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *uc2spulightingnotes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_light ]
-  Disable Mesh Trimming:
+  "Disable Mesh Trimming":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_mesh ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_mb ]
-  Disable Velocity Motion Blur:
+  "Disable Velocity Motion Blur":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: ZEROx, illusion
-    Notes: 
+    Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_vmb ]
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
-    Author: dron_3, HdHereidme, illusion
+    Author: "dron_3, HdHereidme, illusion"
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
