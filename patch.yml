@@ -7096,51 +7096,51 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
 
 Anchors:
   tox2_hp: &tox2_hp
-    - [ be32, 0x00184934, 0x9BA70010 ]
-    - [ be32, 0x0017A7E8, 0x3A10270E ]
+    - [ be32, 0x00184934, 0x9ba70010 ]
+    - [ be32, 0x0017a7e8, 0x3a10270e ]
 
 PPU-d96e838f10e9730d8ba21659e02663b44488670f:
-  60 FPS:
+  "60 FPS":
     Games:
       "Tales of Xillia 2":
         NPUB31443: [ All ]
         BLUS31397: [ All ]
-    Author: Aphelion
-    Notes: Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60.
+    Author: "Aphelion"
+    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
     Patch Version: 1.1
     Patch:
       - [ be32, 0x00846290, 0x38600002 ]
-      - [ be32, 0x00282AF4, 0x3A900001 ]
-  Infinite Health:
+      - [ be32, 0x00282af4, 0x3a900001 ]
+  "Infinite Health":
     Games:
       "Tales of Xillia 2":
         NPUB31443: [ All ]
         BLUS31397: [ All ]
-    Author: Aphelion
-    Notes: In-game menu is a little ugly, but it works.
+    Author: "Aphelion"
+    Notes: "In-game menu is a little ugly, but it works."
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_hp ]
 
 PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
-  60 FPS:
+  "60 FPS":
     Games:
       "Tales of Xillia 2":
         NPEB01858: [ All ]
         BLES01962: [ All ]
-    Author: Aphelion
-    Notes: Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60.
+    Author: "Aphelion"
+    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
     Patch Version: 1.1
     Patch:
       - [ be32, 0x00846310, 0x38600002 ]
-      - [ be32, 0x00282B2C, 0x3A900001 ]
-  Infinite Health:
+      - [ be32, 0x00282b2c, 0x3a900001 ]
+  "Infinite Health":
     Games:
       "Tales of Xillia 2":
         NPEB01858: [ All ]
         BLES01962: [ All ]
-    Author: Aphelion
-    Notes: In-game menu is a little ugly, but it works.
+    Author: "Aphelion"
+    Notes: "In-game menu is a little ugly, but it works."
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_hp ]
