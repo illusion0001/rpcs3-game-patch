@@ -8579,22 +8579,22 @@ PPU-ec7c75bef42758b1823ce0b2835935992ae72e8f:
       - [ bef32, 0x00cd01ac, 0.00833334 ]
 
 PPU-70ad975e7fbb5bb57bb2159a16ec895cbccd3b4e:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone":
         NPEA00418: [ 01.00 ]
         BCES01743: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x5E7F6C, 0.65 ] # static float in memory
-  60 FPS:
+      - [ bef32, 0x005e7f6c, 0.65 ] # static float in memory
+  "60 FPS":
     Games:
       "Killzone":
         NPEA00418: [ 01.00 ]
         BCES01743: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
     Patch Version: 2.0
     Patch:
@@ -8603,21 +8603,21 @@ PPU-70ad975e7fbb5bb57bb2159a16ec895cbccd3b4e:
       - [ bef64, 0x0021c0a0, 0.06 ]
 
 PPU-0bb16b9f48bfea44a892110beec812664e84539f:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone":
         NPUA80856: [ 01.00 ]
-    Author: illusion, Mew21
-    Notes: 
+    Author: "illusion, Mew21"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x5E7F6C, 0.65 ] # static float in memory
-  60 FPS:
+      - [ bef32, 0x005e7f6c, 0.65 ] # static float in memory
+  "60 FPS":
     Games:
       "Killzone":
         NPUA80856: [ 01.00 ]
-    Author: ZEROx, illusion
-    Notes: "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
+    Author: "ZEROx, illusion"
+    Notes: "Version 2.0 no longer requires 200% clock scale. Reset to default before using this updated patch."
     Patch Version: 2.0
     Patch:
       - [ be32, 0x002125f4, 0x3ca03f00 ] # same method as asasega patch
