@@ -10905,16 +10905,16 @@ PPU-8bc924308cd72132d78bae70fb9a1fa82af03c19:
       - [ load, *swa1280x720_NPJB90162_Demo ]
 
 PPU-2f6778a8e97be84833e47ef273ff10cc2bd6809e:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Space Channel 5: Part 2":
         NPUB30353: [ All ]
-    Author: Esppiral
-    Notes: 
+    Author: "Esppiral"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x5839D4, 0x3F99999A ] # ZOOM+ (21.9)
-      - [ be32, 0x57EF84, 0x3F400000 ] # VERT+ (21.9)
+      - [ be32, 0x005839d4, 0x3f99999a ] # Zoom+ (21:9)
+      - [ be32, 0x0057ef84, 0x3f400000 ] # Vert+ (21:9)
 
 PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
   "Unlock FPS":
@@ -10957,15 +10957,15 @@ PPU-a14d9bfcebd7226221bc81c9885dab16d688ae5c:
       - [ load, *UT3_FPS ]
 
 PPU-9c0d4079af9107fa762bbcba4d2c69478f5484a6: # cod_ps3f.elf
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Call of Duty 3":
-        BLES00016: [ All ] # needs all tag otherwise patch doesn't get applied even though game version is the same in param.sfo
-    Author: illusion
-    Notes: Needs testing on other versions
+        BLES00016: [ All ] # Needs all tag otherwise patch doesn't get applied even though game version is the same in param.sfo
+    Author: "illusion"
+    Notes: "Needs testing on other versions."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x12248E8, 0.64 ]
+      - [ bef32, 0x012248e8, 0.64 ]
 
 PPU-7bf98dfa97ff84d8db49fcf198e2ecb9d9975ac6: # bin\s4_g.self
   60 FPS:
