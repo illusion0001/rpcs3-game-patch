@@ -8626,81 +8626,81 @@ PPU-0bb16b9f48bfea44a892110beec812664e84539f:
 
 Anchors:
   kz2demofov: &kz2demofov
-    - [ bef32, 0xEB0174, 0.65 ] # static float in memory
+    - [ bef32, 0x00eb0174, 0.65 ] # Static float in memory
   kz2demospu: &kz2demospu
-    - [ be32, 0x00A42A3C, 0x8a840089 ]
+    - [ be32, 0x00a42a3c, 0x8a840089 ]
   kz2spunotes: &kz2spunotes "No longer requires Write Color Buffers."
 
 PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 2 Demo":
         NPEA90034: [ 01.00 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demofov ]
-  Disable Post Processing on SPU:
+  "Disable Post Processing on SPU":
     Games:
       "Killzone 2 Demo":
         NPEA90034: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *kz2spunotes
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demospu ]
 
 PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 2 Demo":
         NPUA70034: [ 01.00 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demofov ]
-  Disable Post Processing on SPU:
+  "Disable Post Processing on SPU":
     Games:
       "Killzone 2 Demo":
         NPUA70034: [ 01.00 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *kz2spunotes
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demospu ]
 
 PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Killzone 2":
         BCAS20066: [ 01.29 ]
         BCES00081: [ 01.29 ]
         BCUS98116: [ 01.29 ]
-    Author: illusion
-    Notes: Bound to cause issues, needs further testing.
+    Author: "illusion"
+    Notes: "Bound to cause issues, needs further testing."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0xEC096C, 0.65 ] # static float in memory
-  Disable Post Processing on SPU:
+      - [ bef32, 0x00ec096c, 0.65 ] # Static float in memory
+  "Disable Post Processing on SPU":
     Games:
       "Killzone 2":
         BCAS20066: [ 01.29 ]
         BCES00081: [ 01.29 ]
         BCUS98116: [ 01.29 ]
-    Author: ZEROx, illusion
+    Author: "ZEROx, illusion"
     Notes: *kz2spunotes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00A5A7CC, 0x8a840089 ]
-  Skip Intro:
+      - [ be32, 0x00a5a7cc, 0x8a840089 ]
+  "Skip Intro":
     Games:
       "Killzone 2":
         BCAS20066: [ 01.29 ]
         BCES00081: [ 01.29 ]
         BCUS98116: [ 01.29 ]
-    Author: illusion
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f07460, 0x00bfab10 ]
@@ -10968,37 +10968,37 @@ PPU-9c0d4079af9107fa762bbcba4d2c69478f5484a6: # cod_ps3f.elf
       - [ bef32, 0x012248e8, 0.64 ]
 
 PPU-7bf98dfa97ff84d8db49fcf198e2ecb9d9975ac6: # bin\s4_g.self
-  60 FPS:
+  "60 FPS":
     Games:
       "SOCOM 4: U.S. Navy SEALs (Special Forces)":
         BCES00938: [ 01.00 ]
         BCUS98135: [ 01.00 ]
-    Author: illusion
-    Notes: "Set Clock scale to 200% for 60FPS\nIGC might still be double speed."
+    Author: "illusion"
+    Notes: "Set Clock scale to 200% for 60 FPS.\nIGC might still be double speed."
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x16F2ECC, 0x3F00 ]
-  Extended FOV:
+      - [ be16, 0x016f2ecc, 0x3f00 ]
+  "Extended FOV":
     Games:
       "SOCOM 4: U.S. Navy SEALs (Special Forces)":
         BCES00938: [ 01.00 ]
         BCUS98135: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x16EFE34, 0.65 ]
-  Disable MLAA:
+      - [ bef32, 0x016efe34, 0.65 ]
+  "Disable MLAA":
     Games:
       "SOCOM 4: U.S. Navy SEALs (Special Forces)":
         BCES00938: [ 01.00 ]
         BCUS98135: [ 01.00 ]
-    Author: illusion
-    Notes: "Allows for the use of resolution scaling.\nSome effects like fire, smoke, muzzle flashes and possibly more will be missing due to the particle rendering system being tied into mlaa function." # ugh, who thought this would be a good idea
+    Author: "illusion"
+    Notes: "Allows for the use of resolution scaling.\nSome effects like fire, smoke, muzzle flashes and possibly more will be missing due to the particle rendering system being tied into MLAA." # ugh, who thought this would be a good idea
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ec268, 0x38600000 ] # EdgeMlaa3d
-      - [ be32, 0x001EC298, 0x38C00000 ]
+      - [ be32, 0x001ec298, 0x38c00000 ]
 
 Anchors:
   ms3psndsr: &ms3psndsr
@@ -11952,37 +11952,37 @@ SPU-191fe1c92c8360992b3240348e70ea37d50812d4: # SPUNAME: 'E:\Alice2\Development\
       - [ load, *SPU_MLAA_11 ]
 
 PPU-7a8b0571c168093a30c04ad706040370a17c21b0:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "The Darkness Demo":
         NPEB90006: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x10AEB44, 1.25 ]
+      - [ bef32, 0x010aeb44, 1.25 ]
 
 PPU-eb133a3b9430baa45d39e9e00ba8cf9cea89154c:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "The Darkness":
         BLES00058: [ 01.03 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x10AEAEC, 1.25 ]
+      - [ bef32, 0x010aeaec, 1.25 ]
 
 PPU-9ef94f24f84f5923f9c88557e33c2ffab380fb7b:
-  Extended FOV:
+  "Extended FOV":
     Games:
       "The Darkness":
         BLUS30035: [ 01.03 ]
-    Author: illusion, Aphelion
-    Notes: 
+    Author: "illusion, Aphelion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x10AEAA4, 1.25 ]
+      - [ bef32, 0x010aeaa4, 1.25 ]
 
 PPU-4050da6fa9d7eed65e7d748b03a6ba89023b90c3:
   Debug Menu:
@@ -13205,15 +13205,15 @@ PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
       - [ be32, 0x004087a8, 0x38600000 ]
 
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Marvel Ultimate Alliance":
         BLUS30010: [ 01.00 ]
-    Author: Jao
+    Author: "Jao"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0013300, 0x60000000 ]
+      - [ be32, 0x00013300, 0x60000000 ]
 
 PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
   Unlock All Chapters:
