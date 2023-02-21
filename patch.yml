@@ -13117,14 +13117,15 @@ PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
       - [ be32, 0x00ff1364, 0x38600001 ]
 
 PPU-29daccad6db847d9790068762add8ea1de083cde:
-  Developer Menu:
+  "Developer Menu":
     Games:
       "Dead Island Riptide":
         BLES01739: [ 01.01 ]
-    Author: dron_3
-    Notes: 
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
     Patch:
-      - [ be32, 0x01027FC4, 0x9BE3CA81 ]
+      - [ be32, 0x01027fc4, 0x9be3ca81 ]
 
 PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
   "HTTPS Bypass":
@@ -13140,15 +13141,15 @@ PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
       - [ utf8, 0x012e6328, "http://www%d.%s/%s\0" ]
 
 PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Dragon's Dogma: Dark Arisen":
         BLES01794: [ 01.00 ]
-    Author: xtatu
-    Notes: 
+    Author: "xtatu"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00956BC0, 0x40820010 ]
+      - [ be32, 0x00956bc0, 0x40820010 ]
 
 PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
   "Variable FPS":
