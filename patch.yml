@@ -13077,44 +13077,44 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
-  Dev Menu:
+  "Dev Menu":
     Games:
       "Call of Juarez: Gunslinger":
         NPUB31079: [ 01.02 ]
-    Author: dron_3
-    Notes: 
+    Author: "dron_3"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00E73718, 0x9BE39C8D ]
+      - [ be32, 0x00e73718, 0x9be39c8d ]
 
 PPU-d8edc43468f59e453ec1404094e810e487591bfd:
-  Dev Menu:
+  "Dev Menu":
     Games:
       "Call of Juarez: The Cartel":
         BLUS30795: [ 01.01 ]
         BLES01352: [ 01.00 ]
         BLES01352: [ 01.01 ]
-    Author: dron_3
-    Notes: 
+    Author: "dron_3"
+    Notes:
     Patch Version: 1.0
     Patch:
-          - [ be32, 0x00614E70, 0x38800001 ]
-          - [ be32, 0x00614E74, 0x98830AAD ]
-          - [ be32, 0x00614E78, 0x60000000 ]
+      - [ be32, 0x00614e70, 0x38800001 ]
+      - [ be32, 0x00614e74, 0x98830aad ]
+      - [ be32, 0x00614e78, 0x60000000 ]
 
 PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
-  Developer Menu:
+  "Developer Menu":
     Games:
       "Dead Island":
         NPEB00721: [ 01.00 ]
         BLES00749: [ 01.04 ]
-    Author: dron_3
-    Notes: 
+    Author: "dron_3"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00FF135C, 0x38800001 ]
-      - [ be32, 0x00FF1360, 0x988351FD ]
-      - [ be32, 0x00FF1364, 0x38600001 ]
+      - [ be32, 0x00ff135c, 0x38800001 ]
+      - [ be32, 0x00ff1360, 0x988351fd ]
+      - [ be32, 0x00ff1364, 0x38600001 ]
 
 PPU-29daccad6db847d9790068762add8ea1de083cde:
   Developer Menu:
