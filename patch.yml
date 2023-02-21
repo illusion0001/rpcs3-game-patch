@@ -12528,89 +12528,93 @@ PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
 Anchors:
   R3FPSnotes: &R3FPSnotes "Maximum framerate with the patch is directly proportionate to Vblank frequency. More than 60 Vblank is not recommended since framerates above 75 can cause issues with left analog-stick input detection that are caused by inherent limitations in the game engine. Some in-game actions, namely ladder climbing, may require several attempts to register a proper interaction."
   R3FPS_v100: &R3FPS_v100
-    - [ be32, 0x007EEAC8, 0xC0228DCC ]
-    - [ be32, 0x00F02AD4, 0x38D1B717 ]
-    - [ be32, 0x00736C44, 0x60000000 ]
+    - [ be32, 0x007eeac8, 0xc0228dcc ]
+    - [ be32, 0x00f02ad4, 0x38d1b717 ]
+    - [ be32, 0x00736c44, 0x60000000 ]
   R3FPS_v105: &R3FPS_v105
-    - [ be32, 0x00817D48, 0xC0228DD4 ]
-    - [ be32, 0x00F330FC, 0x38D1B717 ]
-    - [ be32, 0x0075FA54, 0x60000000 ]
+    - [ be32, 0x00817d48, 0xc0228dd4 ]
+    - [ be32, 0x00f330fc, 0x38d1b717 ]
+    - [ be32, 0x0075fa54, 0x60000000 ]
 
 PPU-2701cf372814d59f26e771dc9394323d4f799682:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 3":
         BCES01118: [ 01.00 ]
-    Author: Whatcookie, boma
+    Author: "Whatcookie, boma"
     Notes: *R3FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *R3FPS_v100 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 3":
         BCES01118: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00F0608C, 0.7 ]
+      - [ bef32, 0x00f0608c, 0.7 ]
 
 PPU-cd72aa19da7e24a00802932d06460034c7d94fc6:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 3":
         BCES01118: [ 01.05 ]
-    Author: Whatcookie, boma
+    Author: "Whatcookie, boma"
     Notes: *R3FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *R3FPS_v105 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 3":
         BCES01118: [ 01.05 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00F3668C, 0.7 ]
+      - [ bef32, 0x00f3668c, 0.7 ]
 
 PPU-502feb2351d2b637a2704d5a50cb44bc1b781532:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 3":
         BCUS98176: [ 01.00 ]
-    Author: Whatcookie, boma
+    Author: "Whatcookie, boma"
     Notes: *R3FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *R3FPS_v100 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 3":
         BCUS98176: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00F0608C, 0.7 ]
+      - [ bef32, 0x00f0608c, 0.7 ]
 
 PPU-4aa1887bfdd285e3026e6a97d65ed617ddcf4789:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 3":
         BCUS98176: [ 01.05 ]
-    Author: Whatcookie, boma
+    Author: "Whatcookie, boma"
     Notes: *R3FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *R3FPS_v105 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 3":
         BCUS98176: [ 01.05 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00F3668C, 0.7 ]
+      - [ bef32, 0x00f3668c, 0.7 ]
 
 PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
   Unlock FPS:
