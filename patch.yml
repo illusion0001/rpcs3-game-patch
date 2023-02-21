@@ -12677,13 +12677,13 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
       - [ be32, 0x000170cc, 0x60000000 ]
 
 PPU-46bf3c2b3292d77f10d82e3a8729625ab0d3d6c2:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Dante's Inferno":
         BLUS30405: [ 01.00 ]
         BLES00713: [ 01.00 ]
-    Author: boma
-    Notes: HUD will be stretched. Users need to enable the "Stretch to Display Area" option in GPU settings.
+    Author: "boma"
+    Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f5283c, 0x401851ec ]
@@ -12691,13 +12691,13 @@ PPU-46bf3c2b3292d77f10d82e3a8729625ab0d3d6c2:
       - [ be32, 0x00f63128, 0x401851ec ]
 
 PPU-539a6d42763b06228b136fa70f42070b34d30529:
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Dante's Inferno":
         BLUS30405: [ 01.04 ]
         BLES00713: [ 01.04 ]
-    Author: boma
-    Notes: HUD will be stretched. Users need to enable the "Stretch to Display Area" option in GPU settings.
+    Author: "boma"
+    Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x011bfa38, 0x401851ec ]
@@ -12773,12 +12773,12 @@ PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
       - [ be16, 0x01487938, 0x98bf ]
 
 PPU-2845afa9e4dc56df06a61f2e51463468e9a557c7:
-  60 FPS:
+  "60 FPS":
     Games:
       "Final Fantasy XIII":
         MRTC00003: [ 01.00 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008d2e94, 0x38800001 ] # vsync flip rate 60hz // unlimited freeze at SE screen
@@ -13175,7 +13175,8 @@ PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
     Games:
       "Harry Potter and the Order of the Phoenix":
         BLES00070: [ 01.01 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0066b764, 0x38800001 ]
