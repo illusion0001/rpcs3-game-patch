@@ -8102,12 +8102,12 @@ PPU-03679186107dbc5525c9527efdab0f4818d3a5b4:
       - [ bef32, 0x015ec578, 0.05000000 ]
 
 PPU-65078c652115190ecb64b7ff52bbf1c68696deb6:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Destroy All Humans! Path of the Furon":
         BLES00467: [ All ]
-    Author: Whatcookie
-    Notes: Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the maximum framerate.
+    Author: "Whatcookie"
+    Notes: "Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the maximum framerate."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x010b9e68, 0x60000000 ]
