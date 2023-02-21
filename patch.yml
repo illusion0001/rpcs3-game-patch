@@ -8495,70 +8495,70 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
 
 Anchors:
   hazefps: &hazefps
-  - [ be32, 0x0068D0E8, 0x38000000 ] # li r0 0x0
+  - [ be32, 0x0068d0e8, 0x38000000 ] # li r0 0x0
 
   hazeammo: &hazeammo
-  - [ be32, 0x0033854C, 0x60000000 ] # infinite clip capacity
+  - [ be32, 0x0033854c, 0x60000000 ] # infinite clip capacity
   - [ be32, 0x00395884, 0x60000000 ] # infinite ammo
 
   hazehp: &hazehp
-  - [ be32, 0x0005328C, 0x60000000 ]
+  - [ be32, 0x0005328c, 0x60000000 ]
 
 PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Haze":
         BLUS30094: [ 01.36 ]
-    Author: illusion
-    Notes: Needs testing above 60FPS
+    Author: "illusion"
+    Notes: "Needs testing above 60 FPS."
     Patch Version: 1.0
     Patch:
       - [ load, *hazefps ]
-  Infinite Ammo:
+  "Infinite Ammo":
     Games:
       "Haze":
         BLUS30094: [ 01.36 ]
-    Author: Aphelion
-    Notes: Unlimited ammo, grenades, etc. with no reloading.
+    Author: "Aphelion"
+    Notes: "Unlimited ammo, grenades, etc. with no reloading."
     Patch Version: 1.0
     Patch:
       - [ load, *hazeammo ]
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Haze":
         BLUS30094: [ 01.36 ]
-    Author: Aphelion
-    Notes: 
+    Author: "Aphelion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *hazehp ]
 
 PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Haze":
         BLES00157: [ 01.36 ]
-    Author: illusion
-    Notes: Needs testing above 60FPS
+    Author: "illusion"
+    Notes: "Needs testing above 60 FPS."
     Patch Version: 1.0
     Patch:
       - [ load, *hazefps ]
 PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
-  Infinite Ammo:
+  "Infinite Ammo":
     Games:
       "Haze":
         BLES00157: [ 01.36 ]
-    Author: Aphelion
-    Notes: Unlimited ammo, grenades, etc. with no reloading.
+    Author: "Aphelion"
+    Notes: "Unlimited ammo, grenades, etc. with no reloading."
     Patch Version: 1.0
     Patch:
       - [ load, *hazeammo ]
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Haze":
         BLES00157: [ 01.36 ]
-    Author: Aphelion
-    Notes: 
+    Author: "Aphelion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *hazehp ]
