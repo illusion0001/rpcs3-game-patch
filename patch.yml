@@ -1602,7 +1602,8 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
     Games:
       "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
-  # Author: Unknown
+#    Author: "Unknown"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x004e8b9b, 0x00 ]
@@ -1610,7 +1611,8 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
     Games:
       "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
-  # Author: Unknown
+#    Author: "Unknown"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00663680, 0x60000000 ]
@@ -1685,34 +1687,34 @@ Anchors:
     - [ be32, 0x010d667c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
 PPU-13950b2e29e05a115fe317815d3da9d2b2baee65:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "NieR (Nier Replicant)":
         BLUS30481: [ All ]
         BLES00826: [ All ]
-    Author: Whatcookie
-    Notes: Updated with a new version that has correct game speed at any framerate, you no longer need to set the Framelimiter to 30 or 60.
+    Author: "Whatcookie"
+    Notes: "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
     Patch Version: 2.1
     Patch:
       - [ load, *NieR_FPS_USEU ]
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "NieR (Nier Replicant)":
         BLUS30481: [ All ]
         BLES00826: [ All ]
-    Author: dio
-    Notes: HUD Elements will be stretched and misplaced. Users need to enable the "Stretch to Display Area" option in RPCS3 for this patch to work.
+    Author: "dio"
+    Notes: "HUD Elements will be stretched and misplaced. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x01120398, 2.3703704 ] # HUD elements will look wrong & needs stretch to display area
 
 PPU-f098ee8410599c81c89f90d698340a078dc69a90:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "NieR (Nier Replicant)":
         BLJM60223: [ All ]
-    Author: Whatcookie
-    Notes: Updated with a new version that has correct game speed at any framerate, you no longer need to set the Framelimiter to 30 or 60.
+    Author: "Whatcookie"
+    Notes: "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
     Patch Version: 2.1
     Patch:
       - [ load, *NieR_FPS_JP ]
@@ -1794,33 +1796,33 @@ Anchors:
     - [ be32, 0x01998b18, 0x01a32d20 ]
 
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
-  Bypass Network Requirement:
+  "Bypass Network Requirement":
     Games:
       "Dark Souls II":
         BLET50006: [ All ]
-    Author: DriftItem
+    Author: "DriftItem"
     Notes: "Fully restores the functionality of network test client."
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
-  Bypass Network Requirement:
+  "Bypass Network Requirement":
     Games:
       "Dark Souls II":
         NPUB90979: [ All ]
-    Author: DriftItem
+    Author: "DriftItem"
     Notes: "Fully restores the functionality of network test client."
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
 
 PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
-  Bypass Network Requirement:
+  "Bypass Network Requirement":
     Games:
       "Dark Souls II":
         NPJB90625: [ All ]
-    Author: DriftItem
+    Author: "DriftItem"
     Notes: "Fully restores the functionality of network test client."
     Patch Version: 1.0
     Patch:
@@ -12739,31 +12741,31 @@ PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
 
 Anchors:
   bf4120_title: &bf4120_title
-      "Battlefield 4":
-        BLES01832: [ 01.20 ]
-        BLUS31162: [ 01.20 ]
-        NPUB31148: [ 01.20 ]
-        NPEB01303: [ 01.20 ]
+    "Battlefield 4":
+      BLES01832: [ 01.20 ]
+      BLUS31162: [ 01.20 ]
+      NPUB31148: [ 01.20 ]
+      NPEB01303: [ 01.20 ]
 
 PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
-  Disable MLAA:
+  "Disable MLAA":
     Games: *bf4120_title
-    Author: illusion
+    Author: "illusion"
     Notes: "Last modified: 09 October 2020"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0094EC04, 0x38600000 ]
-  Disable Dynamic Lights:
+      - [ be32, 0x0094ec04, 0x38600000 ]
+  "Disable Dynamic Lights":
     Games: *bf4120_title
-    Author: illusion
-    Notes: "Last modified: 14 October 2020\n\nCompromise visuals for extra performance."
+    Author: "illusion"
+    Notes: "Last modified: 14 October 2020\n\nCompromises visuals for extra performance."
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x01499AB8, 0x98bf ]
-      - [ be16, 0x01499ABC, 0x98bf ]
-  Disable Bloom:
+      - [ be16, 0x01499ab8, 0x98bf ]
+      - [ be16, 0x01499abc, 0x98bf ]
+  "Disable Bloom":
     Games: *bf4120_title
-    Author: illusion
+    Author: "illusion"
     Notes: "Last modified: 14 October 2020"
     Patch Version: 1.0
     Patch:
