@@ -1,9 +1,9 @@
-name: "Process compat.json into readable patch.yml"
+name: Process compat.json into readable patch.yml
 
 on:
   push:
-    paths-ignore:
-      - "**/*.md"
+    paths:
+      - ".github/workflows/compat2patch.yml"
   schedule:
     - cron: "* * * * *"
   workflow_dispatch:
@@ -11,24 +11,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Process json file to yml
+      - name: Check for update
         run: |
-          wget "https://rpcs3.net/compatibility?patch&api=v1&v=1.2" -O compatibility.json
-          jq -r '.patch' compatibility.json > patch.yml
-
-      - name: Push update
-        run: |
-          time=`date '+%Y-%m-%d %H:%M:%S %A (%Z %z)'`
-          msg="Update patch from remote - \`$time\`"
-          echo $msg
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name  "github-actions[bot]"
-          git add patch.yml compatibility.json
-          git commit -m "$msg" || true
-          git push origin || true
-
+          original_sha256=$(jq -r .sha256 compatibility.json)
+          curl -sSfLo compatibility.json "https://rpcs3.net/compatibility?patch&api=v1&v=1.2"
+          if [ $original_sha256 != $(jq -r .sha256 compatibility.json) ]; then
+            jq -r .patch compatibility.json > patch.yml
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git add patch.yml compatibility.json
+            time=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
+            msg="Update patch from remote - \`${time}\`"
+            echo "$msg"
+            git commit -vvm "$msg"
+            git push -v origin
+          else
+            echo "Up-to-date!"
+          fi
