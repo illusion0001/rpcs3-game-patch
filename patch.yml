@@ -10937,26 +10937,26 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
 
 Anchors:
   UT3_FPS: &UT3_FPS
-    - [ be32, 0x0057B760, 0x60000000 ]
+    - [ be32, 0x0057b760, 0x60000000 ]
 
 PPU-d4452078fad5d1d71a6ccb30d8349259749f38e7:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Unreal Tournament 3":
         BLES00200: [ 02.00 ]
-    Author: Whatcookie, illusion
-    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58FPS."
+    Author: "Whatcookie, illusion"
+    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
     Patch Version: 1.1
     Patch:
       - [ load, *UT3_FPS ]
 
 PPU-a14d9bfcebd7226221bc81c9885dab16d688ae5c:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Unreal Tournament 3":
         BLUS30086: [ 02.00 ]
-    Author: Whatcookie, illusion
-    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58FPS."
+    Author: "Whatcookie, illusion"
+    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
     Patch Version: 1.1
     Patch:
       - [ load, *UT3_FPS ]
@@ -11649,7 +11649,7 @@ Anchors:
 
   SPU_MLAA_05: &SPU_MLAA_05
     - [ be32, 0x00004440, 0x40800002 ] # il r2 0
-    - [ be32, 0x000056C4, 0x4080008a ] # il r10 0
+    - [ be32, 0x000056c4, 0x4080008a ] # il r10 0
 
   SPU_MLAA_06: &SPU_MLAA_06
     - [ be32, 0x000033b0, 0x40800017 ] # il r23 0
@@ -11657,7 +11657,7 @@ Anchors:
 
   SPU_MLAA_07: &SPU_MLAA_07
     - [ be32, 0x0000325c, 0x40800003 ] # il r3 0
-    - [ be32, 0x00004C00, 0x40800091 ] # il r17 1
+    - [ be32, 0x00004c00, 0x40800091 ] # il r17 1
 
   SPU_MLAA_08: &SPU_MLAA_08
     - [ be32, 0x000036d4, 0x4080001d ] # il r29 0
@@ -11730,7 +11730,7 @@ SPU-931132fd48a40bce0bec28e21f760b1fc6ca4364: # SPUNAME: 'PS3_Release/edgepost-m
       - [ load, *SPU_MLAA_02 ]
 
 SPU-7b5ea49122ec7f023d4a72452dc7a9208d9d6dbf: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
-  Disable SPU MLAA:
+  "Disable SPU MLAA":
     Games:
       "Dragon Age 2 (Dragon Age II)":
         BLES01084: [ All ]
