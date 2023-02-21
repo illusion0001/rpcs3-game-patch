@@ -1829,25 +1829,25 @@ PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
       - [ load, *DS2_JP_Net ]
 
 PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
-  Disable Motion Blur & DoF:
+  "Disable Motion Blur & DoF":
     Games:
       "50 Cent: Blood on The Sand":
         BLUS30256: [ All ]
         BLES00472: [ All ]
-    Author: boma
-    Notes: This patch eliminates the post-processing render pass, which fixes the green screen artifacts caused by upscaling. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues.
+    Author: "boma"
+    Notes: "This patch eliminates the post-processing render pass, which fixes the green screen artifacts caused by upscaling. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001740e8, 0x4800 ]
 
 PPU-97355e97c701cea87a0ed08bce085cac4949dade:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Army of TWO: The 40th Day":
         BLUS30408: [ 01.00 ]
         BLES00659: [ 01.00 ]
-    Author: Whatcookie
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Author: "Whatcookie"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x003c5f9c, 0x60000000 ]
@@ -1855,13 +1855,13 @@ PPU-97355e97c701cea87a0ed08bce085cac4949dade:
       - [ be32, 0x003c6010, 0x60000000 ]
 
 PPU-66e68ab81cb8c107687e708170fd7f13cfdd641e:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Army of TWO: The 40th Day":
         BLUS30408: [ 01.03 ]
         BLES00659: [ 01.02 ]
-    Author: Whatcookie
-    Notes: Maximum framerate with the patch is half the Vblank frequency.
+    Author: "Whatcookie"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x003cc00c, 0x60000000 ]
