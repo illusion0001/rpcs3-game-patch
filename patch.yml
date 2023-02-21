@@ -12393,57 +12393,57 @@ PPU-3760b7d673fc130e13295fa5071164537880adad:
       - [ be32, 0x006a3fd4, 0xec210072 ]
 
 PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
-  God Mode:
+  "God Mode":
     Games:
       "Borderlands 2":
         BLUS30982: [ 01.15 ]
         BLES01684: [ 01.15 ]
         NPEB01144: [ 01.15 ]
         NPUB30898: [ 01.15 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001AFA04, 0x79200FA4 ]
-      - [ be32, 0x001AFA0C, 0x7800F846 ]
-  Infinite Ammo:
+      - [ be32, 0x001afa04, 0x79200fa4 ]
+      - [ be32, 0x001afa0c, 0x7800f846 ]
+  "Infinite Ammo":
     Games:
       "Borderlands 2":
         BLUS30982: [ 01.15 ]
         BLES01684: [ 01.15 ]
         NPEB01144: [ 01.15 ]
         NPUB30898: [ 01.15 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007D3A18, 0x60000000 ]
-  Max Cash:
+      - [ be32, 0x007d3a18, 0x60000000 ]
+  "Max Cash":
     Games:
       "Borderlands 2":
         BLUS30982: [ 01.15 ]
         BLES01684: [ 01.15 ]
         NPEB01144: [ 01.15 ]
         NPUB30898: [ 01.15 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00678504, 0x7D6B4A14 ]
-      - [ be32, 0x00678508, 0x3C600600 ]
-      - [ be32, 0x0067850C, 0x906B0014 ]
-  Max Experience on Gain:
+      - [ be32, 0x00678504, 0x7d6b4a14 ]
+      - [ be32, 0x00678508, 0x3c600600 ]
+      - [ be32, 0x0067850c, 0x906b0014 ]
+  "Max Experience on Gain":
     Games:
       "Borderlands 2":
         BLUS30982: [ 01.15 ]
         BLES01684: [ 01.15 ]
         NPEB01144: [ 01.15 ]
         NPUB30898: [ 01.15 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006A1348, 0x3C007000 ]
+      - [ be32, 0x006a1348, 0x3c007000 ]
 
 Anchors:
   Jak1_Resolution_Notes: &Jak1_Resolution_Notes "Native resolution is 1024x720."
@@ -12474,56 +12474,56 @@ PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
       - [ be16, 0x0003569e, 0x0500 ]
 
 PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
-  Infinite Ammo:
+  "Infinite Ammo":
     Games:
       "Armored Core 4":
         BLUS30027: [ 01.01 ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00AA1C20, 0x60000000 ]
+      - [ be32, 0x00aa1c20, 0x60000000 ]
 
 PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
-  God Mode:
+  "God Mode":
     Games:
       "Borderlands: The Pre-Sequel":
         BLUS31445: [ 01.07 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00187A94, 0x79200FA4 ]
-      - [ be32, 0x00187A9C, 0x7800F846 ]
-  Infinite Ammo:
+      - [ be32, 0x00187a94, 0x79200fa4 ]
+      - [ be32, 0x00187a9c, 0x7800f846 ]
+  "Infinite Ammo":
     Games:
       "Borderlands: The Pre-Sequel":
         BLUS31445: [ 01.07 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007B4E44, 0x60000000 ]
-  Max Cash:
+      - [ be32, 0x007b4e44, 0x60000000 ]
+  "Max Cash":
     Games:
       "Borderlands: The Pre-Sequel":
         BLUS31445: [ 01.07 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0063A6C0, 0x7D6B4A14 ]
-      - [ be32, 0x0063A6C4, 0x3C600600 ]
-      - [ be32, 0x0063A6C8, 0x906B0010 ]
-  Max Experience on Gain:
+      - [ be32, 0x0063a6c0, 0x7d6b4a14 ]
+      - [ be32, 0x0063a6c4, 0x3c600600 ]
+      - [ be32, 0x0063a6c8, 0x906b0010 ]
+  "Max Experience on Gain":
     Games:
       "Borderlands: The Pre-Sequel":
         BLUS31445: [ 01.07 ]
-    Author: dron_3
+    Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0065FE4C, 0x3C007000 ]
+      - [ be32, 0x0065fe4c, 0x3c007000 ]
 
 Anchors:
   R3FPSnotes: &R3FPSnotes "Maximum framerate with the patch is directly proportionate to Vblank frequency. More than 60 Vblank is not recommended since framerates above 75 can cause issues with left analog-stick input detection that are caused by inherent limitations in the game engine. Some in-game actions, namely ladder climbing, may require several attempts to register a proper interaction."
