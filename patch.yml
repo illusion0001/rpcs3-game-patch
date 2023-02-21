@@ -10619,291 +10619,291 @@ PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
 Anchors:
   su1280x720_Digital: &su1280x720_Digital
   # Main backbuffer (880x720)
-    - [ be16, 0x013D197A, 1280 ]
+    - [ be16, 0x013d197a, 1280 ]
 
   # Other buffers
-    - [ be16, 0x0144A53E, 1280 ]
-    - [ be16, 0x0144A5F6, 1280 ]
-    - [ be16, 0x0144A652, 1280 ]
+    - [ be16, 0x0144a53e, 1280 ]
+    - [ be16, 0x0144a5f6, 1280 ]
+    - [ be16, 0x0144a652, 1280 ]
 
   su1280x720_USEUPhysical: &su1280x720_USEUPhysical
   # Main backbuffer (880x720)
-    - [ be16, 0x00DD85B6, 1280 ]
+    - [ be16, 0x00dd85b6, 1280 ]
 
   # Other buffers
-    - [ be16, 0x013608D6, 1280 ]
-    - [ be16, 0x0136098E, 1280 ]
-    - [ be16, 0x013609EA, 1280 ]
+    - [ be16, 0x013608d6, 1280 ]
+    - [ be16, 0x0136098e, 1280 ]
+    - [ be16, 0x013609ea, 1280 ]
 
   swa1280x720_BLJM60112: &swa1280x720_BLJM60112
   # Main backbuffer (880x720)
-    - [ be16, 0x00DEC49E, 1280 ]
+    - [ be16, 0x00dec49e, 1280 ]
 
   # Other buffers
-    - [ be16, 0x013644FE, 1280 ]
-    - [ be16, 0x013645B6, 1280 ]
+    - [ be16, 0x013644fe, 1280 ]
+    - [ be16, 0x013645b6, 1280 ]
     - [ be16, 0x01364612, 1280 ]
 
   su1280x720_v102: &su1280x720_v102
   # Main backbuffer (880x720)
-    - [ be16, 0x00DFD7C6, 1280 ]
+    - [ be16, 0x00dfd7c6, 1280 ]
 
   # Other buffers
-    - [ be16, 0x01371B8E, 1280 ]
-    - [ be16, 0x01371C46, 1280 ]
-    - [ be16, 0x01371CA2, 1280 ]
+    - [ be16, 0x01371b8e, 1280 ]
+    - [ be16, 0x01371c46, 1280 ]
+    - [ be16, 0x01371ca2, 1280 ]
 
   su1280x720_NPUB90194_Demo: &su1280x720_NPUB90194_Demo
   # Main backbuffer (880x720)
-    - [ be16, 0x013C4B5A, 1280 ]
+    - [ be16, 0x013c4b5a, 1280 ]
 
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
-    - [ be16, 0x0143913E, 1280 ]
-    - [ be16, 0x0143919A, 1280 ]
+    - [ be16, 0x0143913e, 1280 ]
+    - [ be16, 0x0143919a, 1280 ]
 
   su1280x720_NPEB90132_Demo: &su1280x720_NPEB90132_Demo
   # Main backbuffer (880x720)
-    - [ be16, 0x013C4B62, 1280 ]
+    - [ be16, 0x013c4b62, 1280 ]
 
   # Other buffers
-    - [ be16, 0x0143908E, 1280 ]
+    - [ be16, 0x0143908e, 1280 ]
     - [ be16, 0x01439146, 1280 ]
-    - [ be16, 0x014391A2, 1280 ]
+    - [ be16, 0x014391a2, 1280 ]
 
   swa1280x720_NPJB90162_Demo: &swa1280x720_NPJB90162_Demo
   # Main backbuffer (880x720)
-    - [ be16, 0x013C4B56, 1280 ]
+    - [ be16, 0x013c4b56, 1280 ]
 
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
-    - [ be16, 0x0143913E, 1280 ]
-    - [ be16, 0x0143919A, 1280 ]
+    - [ be16, 0x0143913e, 1280 ]
+    - [ be16, 0x0143919a, 1280 ]
 
   su1280x720_Notes: &su1280x720_Notes "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
 
   suAspectRatio_v102: &suAspectRatio_v102
   # Aspect ratio. Divide width by height to get the float value.
-    - [ bef32, 0x0275DB2C, 2.37037037 ]
+    - [ bef32, 0x0275db2c, 2.37037037 ]
 
   suAspectRatio_Notes: &suAspectRatio_Notes "Enables 21:9 aspect ratio support. Users must enable \"Stretch to Display Area\" option to take advantage of this patch."
 
   su102mb: &su102mb
-    - [ be32, 0x00E234E8, 0x38000000 ]
+    - [ be32, 0x00e234e8, 0x38000000 ]
   su102dof: &su102dof
-    - [ be32, 0x00E5D7C4, 0x38000000 ]
+    - [ be32, 0x00e5d7c4, 0x38000000 ]
   su102ds: &su102ds
-    - [ be32, 0x00E0464C, 0x38000000 ]
+    - [ be32, 0x00e0464c, 0x38000000 ]
   su102re: &su102re
-    - [ be32, 0x00E1EEF0, 0x38000000 ]
+    - [ be32, 0x00e1eef0, 0x38000000 ]
 
   suborkednotes: &suborkednotes "Improves performance at the cost of graphics quality."
 
 PPU-6ebcaf71dc08cd612acb82f8e32738a8693d9347:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.00 ]
         BLES00425: [ 01.00 ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_USEUPhysical ]
 
 PPU-c2911b4248ca2090819299f90d1a2d37f50fd5a8:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_v102 ]
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: slashiee
+    Author: "slashiee"
     Notes: *suAspectRatio_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *suAspectRatio_v102 ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *su102dof ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *su102mb ]
-  Disable Dynamic Shadows:
+  "Disable Dynamic Shadows":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *suborkednotes
     Patch Version: 1.0
     Patch:
       - [ load, *su102ds ]
-  Disable Real-time Reflections:
+  "Disable Real-time Reflections":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *suborkednotes
     Patch Version: 1.0
     Patch:
       - [ load, *su102re ]
 
 PPU-dfe27b6a57f3fd01f310e402e97a297836b46ceb:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_v102 ]
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: slashiee
+    Author: "slashiee"
     Notes: *suAspectRatio_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *suAspectRatio_v102 ]
-  Disable Depth of Field:
+  "Disable Depth of Field":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *su102dof ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: illusion
-    Notes: 
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *su102mb ]
-  Disable Dynamic Shadows:
+  "Disable Dynamic Shadows":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *suborkednotes
     Patch Version: 1.0
     Patch:
       - [ load, *su102ds ]
-  Disable Real-time Reflections:
+  "Disable Real-time Reflections":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *suborkednotes
     Patch Version: 1.0
     Patch:
       - [ load, *su102re ]
 
 PPU-fbb2149d0f9ad51398eed59cbd26db5367d6376e:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.00 ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *swa1280x720_BLJM60112 ]
 
 PPU-4b48caf21e1f10d47aa9a20acce8ecd8c055755e:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.02 ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_v102 ]
-  21:9 Aspect Ratio:
+  "21:9 Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.02 ]
-    Author: slashiee
+    Author: "slashiee"
     Notes: *suAspectRatio_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *suAspectRatio_v102 ]
 
 PPU-88b57d524597bbee38df3a452eb0e86c5e789f73:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB31204: [ All ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_Digital ]
 
 PPU-d0bf7a33f1763725609feaa87e0e4d18ab9e8acd:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB01347: [ All ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_Digital ]
 
 PPU-bd76a566ab62386b90443711206c3f5063b5ab38:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB90194: [ All ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_NPUB90194_Demo ]
 
 PPU-7d9105cac7fb9c8ebbbd791693c27986b12c98ad:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB90132: [ All ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
       - [ load, *su1280x720_NPEB90132_Demo ]
 
 PPU-8bc924308cd72132d78bae70fb9a1fa82af03c19:
-  1280x720 Resolution:
+  "1280x720 Resolution":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         NPJB90162: [ All ]
-    Author: TGEnigma, slashiee
+    Author: "TGEnigma, slashiee"
     Notes: *su1280x720_Notes
     Patch Version: 1.3
     Patch:
