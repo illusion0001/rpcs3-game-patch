@@ -12617,62 +12617,62 @@ PPU-4aa1887bfdd285e3026e6a97d65ed617ddcf4789:
       - [ bef32, 0x00f3668c, 0.7 ]
 
 PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
-    Notes: Set the framelimiter to 60, as things will break over 60 FPS.
+    Author: "Aphelion"
+    Notes: "Set the framelimiter to 60, as things will break over 60 FPS."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0097504C, 0x60000000 ]
-  Infinite Ammo & Consumables:
+      - [ be32, 0x0097504c, 0x60000000 ]
+  "Infinite Ammo & Consumables":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
-    Notes: <b>Picking up some objects such as blueprints will freeze the game. Best used temporarily to duplicate the items you want.</b><br><br>Affects many items in the game, not just ammo and consumables. While this patch is enabled, affected items can't be removed from your inventory, and dropping them will duplicate them. Items can be sold for caps, but they do not leave your inventory.
+    Author: "Aphelion"
+    Notes: "<b>Picking up some objects such as blueprints will freeze the game. Best used temporarily to duplicate the items you want.</b><br><br>Affects many items in the game, not just ammo and consumables. While this patch is enabled, affected items can't be removed from your inventory, and dropping them will duplicate them. Items can be sold for caps, but they do not leave your inventory."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0045BB6C, 0x60000000 ]
-      - [ be32, 0x0045BA88, 0x60000000 ]
-      - [ be32, 0x0045C578, 0x60000000 ]
-  Infinite Carry Weight:
+      - [ be32, 0x0045bb6c, 0x60000000 ]
+      - [ be32, 0x0045ba88, 0x60000000 ]
+      - [ be32, 0x0045c578, 0x60000000 ]
+  "Infinite Carry Weight":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00469658, 0x90330008 ]
-  Infinite Caps:
+  "Infinite Caps":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
-    Notes: Essentially permanent if you save with this patch enabled - adds over 1 billion caps to your inventory which will remain after the patch is disabled.
+    Author: "Aphelion"
+    Notes: "Essentially permanent if you save with this patch enabled - adds over 1 billion caps to your inventory which will remain after the patch is disabled."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00466CD8, 0x90630004 ]
-  No Weapon Degradation:
+      - [ be32, 0x00466cd8, 0x90630004 ]
+  "No Weapon Degradation":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
-    Notes: Using weapons and armor does not affect their condition. Repairing items brings them to perfect condition.
+    Author: "Aphelion"
+    Notes: "Using weapons and armor does not affect their condition. Repairing items brings them to perfect condition."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003D6528, 0x60000000 ]
-  Infinite Health:
+      - [ be32, 0x003d6528, 0x60000000 ]
+  "Infinite Health":
     Games:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000170CC, 0x60000000 ]
+      - [ be32, 0x000170cc, 0x60000000 ]
 
 PPU-46bf3c2b3292d77f10d82e3a8729625ab0d3d6c2:
   21:9 Aspect Ratio:
@@ -12703,39 +12703,39 @@ PPU-539a6d42763b06228b136fa70f42070b34d30529:
       - [ be32, 0x011b0ae0, 0x401851ec ]
 
 PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
-  Infinite Health:
+  "Infinite Health":
     Games:
       "Final Fantasy X HD Remaster":
         NPUB31247: [ 01.00 ]
-    Author: Aphelion
-    Notes: Causes a softlock during a fairly easy boss battle about 1/3 of the way through the game. Enemy health will show as 9999/xxxx in battle if you have the Sensor ability.
+    Author: "Aphelion"
+    Notes: "Causes a softlock during a fairly easy boss battle about 1/3 of the way through the game. Enemy health will show as 9999/xxxx in battle if you have the Sensor ability."
     Patch Version: 1.1
     Patch:
-      - [ be32, 0x002633A0, 0x988305D0 ]
-      - [ be32, 0x00268FA0, 0x3860270F ]
-      - [ be32, 0x003839E4, 0x3860270F ]
-      - [ be32, 0x00383A54, 0x3860270F ]
-  Infinite Mana:
+      - [ be32, 0x002633a0, 0x988305d0 ]
+      - [ be32, 0x00268fa0, 0x3860270f ]
+      - [ be32, 0x003839e4, 0x3860270f ]
+      - [ be32, 0x00383a54, 0x3860270f ]
+  "Infinite Mana":
     Games:
       "Final Fantasy X HD Remaster":
         NPUB31247: [ 01.00 ]
-    Author: Aphelion
-    Notes: 
-    Patch Version: 1.1
-    Patch:
-      - [ be32, 0x00241EFC, 0x909B05D4 ]
-      - [ be32, 0x00268FC8, 0x3860270F ]
-      - [ be32, 0x00383AD0, 0x3860270F ]
-      - [ be32, 0x00383B30, 0x3860270F ]
-  Infinite Gil:
-    Games:
-      "Final Fantasy X HD Remaster":
-        NPUB31247: [ 01.00 ]
-    Author: Aphelion
+    Author: "Aphelion"
     Notes:
     Patch Version: 1.1
     Patch:
-      - [ be32, 0x0026F6B4, 0x90833D48 ]
+      - [ be32, 0x00241efc, 0x909b05d4 ]
+      - [ be32, 0x00268fc8, 0x3860270f ]
+      - [ be32, 0x00383ad0, 0x3860270f ]
+      - [ be32, 0x00383b30, 0x3860270f ]
+  "Infinite Gil":
+    Games:
+      "Final Fantasy X HD Remaster":
+        NPUB31247: [ 01.00 ]
+    Author: "Aphelion"
+    Notes:
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x0026f6b4, 0x90833d48 ]
 
 Anchors:
   bf4120_title: &bf4120_title
