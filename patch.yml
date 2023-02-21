@@ -10435,96 +10435,96 @@ PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
       - [ be32, 0x00e23178, 0x60000000 ] # nop
 
 Anchors:
-  SHADOWS_FPSnotes: &SHADOWS_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 31FPS."
+  SHADOWS_FPSnotes: &SHADOWS_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 31 FPS."
 
   SHADOWS_FPS: &SHADOWS_FPS
-    - [ be32, 0x009E0CE4, 0x60000000 ] # nop
-    - [ be32, 0x009E0D64, 0x60000000 ] # nop
+    - [ be32, 0x009e0ce4, 0x60000000 ] # nop
+    - [ be32, 0x009e0d64, 0x60000000 ] # nop
 
   SHADOWS_DOFnotes: &SHADOWS_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
 
   SHADOWS_DOF: &SHADOWS_DOF
-    - [ be32, 0x00126960, 0x38A00000 ] # li r5 0
-    - [ be32, 0x00325488, 0x38A00000 ] # li r5 0
-    - [ be32, 0x003E3050, 0x38A00000 ] # li r5 0
+    - [ be32, 0x00126960, 0x38a00000 ] # li r5 0
+    - [ be32, 0x00325488, 0x38a00000 ] # li r5 0
+    - [ be32, 0x003e3050, 0x38a00000 ] # li r5 0
 
   SHADOWS_GRAIN: &SHADOWS_GRAIN
-    - [ be16, 0x003E3398, 0x4800 ] # b 0x3E3410
+    - [ be16, 0x003e3398, 0x4800 ] # b 0x3e3410
 
   SHADOWS_BLUR: &SHADOWS_BLUR
-    - [ be32, 0x003E3998, 0x38600000 ] # li r3 0
+    - [ be32, 0x003e3998, 0x38600000 ] # li r3 0
 
 PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
-    Author: Whatcookie
+    Author: "Whatcookie"
     Notes: *SHADOWS_FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_FPS ]
-  Disable Image Grain:
+  "Disable Image Grain":
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
-    Author: boma
+    Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_GRAIN ]
-  Disable Low-Resolution Depth of Field:
+  "Disable Low-Resolution Depth of Field":
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
-    Author: boma
+    Author: "boma"
     Notes: *SHADOWS_DOFnotes
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_DOF ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
-    Author: boma
+    Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_BLUR ]
 
 PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
-    Author: Whatcookie, Dante3732
+    Author: "Whatcookie, Dante3732"
     Notes: *SHADOWS_FPSnotes
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_FPS ]
-  Disable Image Grain:
+  "Disable Image Grain":
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
-    Author: boma
+    Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_GRAIN ]
-  Disable Low-Resolution Depth of Field:
+  "Disable Low-Resolution Depth of Field":
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
-    Author: boma
+    Author: "boma"
     Notes: *SHADOWS_DOFnotes
     Patch Version: 1.0
     Patch:
       - [ load, *SHADOWS_DOF ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
-    Author: boma
+    Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
@@ -10597,21 +10597,21 @@ PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
 
 Anchors:
   SA_169: &SA_169
-    - [ be32, 0x05043F18, 0x3F400000 ]
-    - [ be32, 0x00909260, 0x009B1604 ]
-    - [ be32, 0x0090E5B0, 0x40A00000 ]
+    - [ be32, 0x05043f18, 0x3f400000 ]
+    - [ be32, 0x00909260, 0x009b1604 ]
+    - [ be32, 0x0090e5b0, 0x40a00000 ]
     - [ be32, 0x00909270, 0x40400000 ]
-    - [ be32, 0x00909274, 0xC0400000 ]
-    - [ be32, 0x00909278, 0xBF400000 ]
+    - [ be32, 0x00909274, 0xc0400000 ]
+    - [ be32, 0x00909278, 0xbf400000 ]
 
 PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
-  16:9 Aspect Ratio:
+  "16:9 Aspect Ratio":
     Games:
       "Sonic Adventure":
         NPUB30249: [ All ]
         NPEB00304: [ All ]
-    Author: Esppiral
-    Notes: This game originally rendered at 11:9 aspect ratio (880x720). With this patch, it will render at a resolution of 16:9 aspect ratio (1280x720).
+    Author: "Esppiral"
+    Notes: "This game originally rendered at 11:9 aspect ratio (880x720). With this patch it will render at a resolution of 16:9 aspect ratio (1280x720)."
     Patch Version: 1.0
     Patch:
       - [ load, *SA_169 ]
