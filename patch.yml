@@ -5600,7 +5600,7 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
     Group: FPS
     Patch:
       - [ load, *uc2_Demo_60FPS ]
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
@@ -8765,7 +8765,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
     Patch:
       - [ bef32, 0x0139bdf0, 0.85 ] # static float in memory // viewmodel
       - [ bef32, 0x0139beec, 0.85 ] # static float in memory // camera
-  Disable MLAA (Post-processing on SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3":
         BCES01007: [ 01.14 ]
@@ -8822,7 +8822,7 @@ PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
     Patch Version: 1.0
     Patch:
       - [ load, *kz3demofov ]
-  Disable MLAA (Post-processing on SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3 Demo":
         NPEA90084: [ 01.00 ]
@@ -11308,7 +11308,7 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3106mlaa ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
@@ -11364,7 +11364,7 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3106mlaa ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
@@ -11420,7 +11420,7 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3106mlaa ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
