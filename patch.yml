@@ -13285,90 +13285,96 @@ PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
       - [ be32, 0x0009e704, 0x7c831b78 ]
 
 PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "Motorstorm: RC":
         NPUA80678: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001991cc, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Motorstorm: RC":
         NPUA80678: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000bda78, 0x38800001 ] # li r4,0x1 // deltatime
       - [ be32, 0x000bda98, 0x38800000 ] # li r4,0x0 // flipmode
-  Disable Dynamic Resolution Scaling:
+  "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: RC":
         NPUA80678: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001aa470, 0x4e800020 ] # blr
 
 PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
-  Disable MLAA:
+  "Disable MLAA":
     Games:
       "Motorstorm: RC":
         NPEA00333: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001990ac, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Motorstorm: RC":
         NPEA00333: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000bd9d8, 0x38800001 ] # li r4,0x1 // deltatime
       - [ be32, 0x000bd9f8, 0x38800000 ] # li r4,0x0 // flipmode
-  Disable Dynamic Resolution Scaling:
+  "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: RC":
         NPEA00333: [ 01.02 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
 PPU-d8fe04c58a5a46feda0b6f2192613064ec996584:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Prince of Persia: Warrior Within":
         BLUS30754: [ 01.00 ]
-    Author: Jao
-    Notes: 
+    Author: "Jao"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00824e10, 0x60000000 ]
 PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Prince of Persia: The Two Thrones":
         BLUS30754: [ 01.00 ]
-    Author: Jao
-    Notes: 
+    Author: "Jao"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ be32, 0x0009381c, 0x60000000 ]
 
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
-  60 FPS:
+  "60 FPS":
     Games:
       "Puppeteer: Demo version":
         NPEA90125: [ 01.00 ]
-    Author: ZEROx
-    Notes: "Set VBlank to 120 for 60FPS"
+    Author: "ZEROx"
+    Notes: "Set VBlank to 120 for 60 FPS."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00083f78, 1 ] #Avoid double game speed
+      - [ bef32, 0x00083f78, 1 ] # Avoid double game speed
 
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   "Unlock FPS":
