@@ -12828,6 +12828,8 @@ PPU-ae7633f0660f4386e11a3d727d54512d7990721b:
       "Until Dawn (Beyond)":
         TEST70001: [ 01.00 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00bdbfb8, 0x38600001 ]
   "Enable Debug Menu":
@@ -12835,62 +12837,71 @@ PPU-ae7633f0660f4386e11a3d727d54512d7990721b:
       "Until Dawn (Beyond)":
         TEST70001: [ 01.00 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ utf8, 0x00ea63d8, "true\x00" ]
-  Disable MLAA(Post-processing On SPU):
+  "Disable MLAA(Post-processing On SPU)":
     Games:
       "Until Dawn (Beyond)":
         TEST70001: [ 01.00 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x001c7e90, 0x9b7f009d ]
 
 PPU-1151d488c9033962082b3e65ac64a9b83df10015:
-  Skip Exception handler:
+  "Skip Exception handler":
     Games:
       "Until Dawn":
         TEST70001: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00071708, 0x4800 ] # Todo: provide aob for use on realhw
-  Disable MLAA(Post-processing On SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA(Post-processing On SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Until Dawn":
         TEST70001: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x001D4428, 0x937f ]
+      - [ be16, 0x001d4428, 0x937f ]
 
 PPU-fe4eb5ec50711d92f4d693625147e9a6690ffc09:
-  Disable MLAA(Post-processing On SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA(Post-processing On SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Until Dawn":
         TEST70006: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001E22F0, 0x38800000 ]
-  Extended FOV:
+      - [ be32, 0x001e22f0, 0x38800000 ]
+  "Extended FOV":
     Games:
       "Until Dawn":
         TEST70006: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x0152B930, 0.6 ]
-      - [ bef32, 0x0152BA84, 0.6 ]
+      - [ bef32, 0x0152b930, 0.6 ]
+      - [ bef32, 0x0152ba84, 0.6 ]
 
 PPU-e608f6e3e55eda4850e835698d7121caa97b7fa5:
-  Disable MLAA(Post-processing On SPU): # Gfx.Post.MLAA PostMLAASPU
+  "Disable MLAA(Post-processing On SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Until Dawn":
         BCES01556: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001E1490, 0x38800000 ]
+      - [ be32, 0x001e1490, 0x38800000 ]
 
 PPU-2d23777ede9d83e1f1dd3fa4fd61a993fa8d9fea:
   "Unlock all songs and modules":
