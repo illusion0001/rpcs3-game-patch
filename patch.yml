@@ -9012,90 +9012,90 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       - [ be32, 0x004fb330, 0x2fa3ffff ]
 
 Anchors:
-  ms2notes: &ms2notes         "No need for additional settings change.\nNeeds a stable and locked 60FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
+  ms2notes: &ms2notes "No need for additional settings change.\nNeeds a stable and locked 60 FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
 
-  ms2vfpsnotes: &ms2vfpsnotes "Allows for variable fps and correct game speed above 15FPS.\n\nKnown issues:\nSlower movement through water, especially over 60FPS\nCamera shakes when using PPU recompiler (patch will be kept separate until resolved)."
+  ms2vfpsnotes: &ms2vfpsnotes "Allows for variable FPS and correct game speed above 15 FPS.\n\nKnown issues:\nSlower movement through water, especially over 60 FPS\nCamera shakes when using PPU recompiler (patch will be kept separate until resolved)."
 
 PPU-34984cacd60f2ee2a380157a009122698d470056:
-  60 FPS:
+  "60 FPS":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *ms2notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00435d1c, 0x60000000 ]
-  Variable FPS:
+  "Variable FPS":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
-    Author: illusion, ZEROx
+    Author: "illusion, ZEROx"
     Notes: *ms2vfpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00435f9c, 0x38c00001 ]
-  Disable Dynamic Resolution Scaling:
+  "Disable Dynamic Resolution Scaling":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00360590, 0x38600000 ] # li r3 0x0
-  Disable Motion blur:
+  "Disable Motion blur":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0035FDEC, 0x38600000 ] # li r3 0x0
+      - [ be32, 0x0035fdec, 0x38600000 ] # li r3 0x0
 
 PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
-  60 FPS:
+  "60 FPS":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
-    Author: illusion
+    Author: "illusion"
     Notes: *ms2notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00407b44, 0x60000000 ]
-  Variable FPS:
+  "Variable FPS":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
-    Author: illusion, ZEROx
+    Author: "illusion, ZEROx"
     Notes: *ms2vfpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00407d8c, 0x38c00001 ]
-  Disable Dynamic Resolution Scaling:
+  "Disable Dynamic Resolution Scaling":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00347830, 0x38600000 ] # li r3 0x0
-  Disable Motion blur:
+  "Disable Motion blur":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0034708C, 0x38600000 ] # li r3 0x0
-  Bypass SVO:
+      - [ be32, 0x0034708c, 0x38600000 ] # li r3 0x0
+  "Bypass SVO":
     Games:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.03 ]
@@ -9103,49 +9103,49 @@ PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
       "MotorStorm 2":
         BCJS30027: [ 01.03 ]
         BCAS20044: [ 01.03 ]
-    Author: regal.
-    Notes: Patches out SVO, meaning you no longer need to quit the game after every online race on PSORG (https://discord.gg/GdX4V44CJd), nor must you delete the SVO chunk from your save file/delete your save data.
+    Author: "regal."
+    Notes: "Patches out SVO, meaning you no longer need to quit the game after every online race on PSORG (https://discord.gg/GdX4V44CJd), nor must you delete the SVO chunk from your save file/delete your save data."
     Patch Version: 1.1
     Patch:
-      - [ byte, 0x00d410bb, 0 ]
+      - [ byte, 0x00d410bb, 0x00 ]
 
 PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
-  60 FPS:
+  "60 FPS":
     Games:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
-    Author: illusion
+    Author: "illusion"
     Notes: *ms2notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0045C7B4, 0x60000000 ]
-  Variable FPS:
+      - [ be32, 0x0045c7b4, 0x60000000 ]
+  "Variable FPS":
     Games:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
-    Author: illusion, ZEROx
+    Author: "illusion, ZEROx"
     Notes: *ms2vfpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0045ca34, 0x38c00001 ]
-  Disable Dynamic Resolution Scaling:
+  "Disable Dynamic Resolution Scaling":
     Games:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00385DC0, 0x38600000 ] # li r3 0x0
-  Disable Motion blur:
+      - [ be32, 0x00385dc0, 0x38600000 ] # li r3 0x0
+  "Disable Motion blur":
     Games:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
-    Author: illusion, ZEROx
-    Notes: 
+    Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0038561C, 0x38600000 ] # li r3 0x0
+      - [ be32, 0x0038561c, 0x38600000 ] # li r3 0x0
 
 Anchors:
   p5_ModSupport_Author: &p5_ModSupport_Author "TGEnigma"
