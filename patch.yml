@@ -8497,14 +8497,14 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
 
 Anchors:
   hazefps: &hazefps
-  - [ be32, 0x0068d0e8, 0x38000000 ] # li r0 0x0
+    - [ be32, 0x0068d0e8, 0x38000000 ] # li r0 0x0
 
   hazeammo: &hazeammo
-  - [ be32, 0x0033854c, 0x60000000 ] # infinite clip capacity
-  - [ be32, 0x00395884, 0x60000000 ] # infinite ammo
+    - [ be32, 0x0033854c, 0x60000000 ] # infinite clip capacity
+    - [ be32, 0x00395884, 0x60000000 ] # infinite ammo
 
   hazehp: &hazehp
-  - [ be32, 0x0005328c, 0x60000000 ]
+    - [ be32, 0x0005328c, 0x60000000 ]
 
 PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
   "Unlock FPS":
@@ -10534,11 +10534,11 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
 
 Anchors:
   sly4mlaaEU: &sly4mlaaEU
-  - [ be32, 0x00531cc0, 0x38800000 ] # li r4 0x0
+    - [ be32, 0x00531cc0, 0x38800000 ] # li r4 0x0
   sly4mlaaUK: &sly4mlaaUK
-  - [ be32, 0x00531cb0, 0x38800000 ] # li r4 0x0
+    - [ be32, 0x00531cb0, 0x38800000 ] # li r4 0x0
   sly4mlaaUS: &sly4mlaaUS
-  - [ be32, 0x00531d40, 0x38800000 ] # li r4 0x0
+    - [ be32, 0x00531d40, 0x38800000 ] # li r4 0x0
 
   sly4mlaanotes: &sly4mlaanotes "Disables MLAA, allowing for the use of resolution scaling. Use in conjunction with the SPU MLAA patch for better performance."
 
