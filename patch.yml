@@ -11571,64 +11571,64 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
       - [ be32, 0x004528e4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
 PPU-7b13f30153c465c62995ff4710961f3ae7d2e378:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Life is Strange":
         NPEB02197: [ 01.07 ]
         NPUB31636: [ 01.08 ]
-    Author: illusion
-    Notes: "Removes 62FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Author: "illusion"
+    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0042C4FC, 0x60000000 ]
+      - [ be32, 0x0042c4fc, 0x60000000 ]
 
 PPU-9940a863ed7bf977c5a15cff5eec8d0649a8552f:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Life is Strange":
         NPJB00789: [ 01.00 ]
-    Author: illusion
-    Notes: "Removes 62FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Author: "illusion"
+    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0042C1EC, 0x60000000 ]
+      - [ be32, 0x0042c1ec, 0x60000000 ]
 
 PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Silent Hill Downpour":
         BLES01446: [ 01.01 ]
         BLUS30565: [ 01.01 ]
-    Author: illusion
-    Notes: "Removes 62FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Author: "illusion"
+    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002A1250, 0x60000000 ]
-  Disable Low-Resolution Depth of Field:
+      - [ be32, 0x002a1250, 0x60000000 ]
+  "Disable Low-Resolution Depth of Field":
     Games:
       "Silent Hill Downpour":
         BLES01446: [ 01.01 ]
         BLUS30565: [ 01.01 ]
-    Author: boma
-    Notes: "Disables the DoF effect which doesn't correctly scale when using resolution upscaling. This patch may slightly affect color-grading and will reduce bloom intensity because those effects share the same shader pipeline with DoF. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
+    Author: "boma"
+    Notes: "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect color-grading and will reduce bloom intensity because those effects share the same shader pipeline with DoF. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000fa828, 0x38A00000 ] # li r5, 0x0
-      - [ be32, 0x00270c60, 0x38A00000 ] # li r5, 0x0
-      - [ be32, 0x00310b28, 0x38A00000 ] # li r5, 0x0
-  Disable MLAA & FXAA:
+      - [ be32, 0x000fa828, 0x38a00000 ] # li r5, 0x0
+      - [ be32, 0x00270c60, 0x38a00000 ] # li r5, 0x0
+      - [ be32, 0x00310b28, 0x38a00000 ] # li r5, 0x0
+  "Disable MLAA & FXAA":
     Games:
       "Silent Hill Downpour":
         BLES01446: [ 01.01 ]
         BLUS30565: [ 01.01 ]
-    Author: boma
+    Author: "boma"
     Notes: "Removes both Morphological Anti-Aliasing (MLAA) and Fast Approximate Anti-Aliasing (FXAA), post-process AA solutions that significantly impact image definition and sharpness. Particularly useful when using resolution upscaling."
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00771673, 0x64 ] # cmpwi r3 0x64
       - [ byte, 0x00771674, 0x41 ] # beq
-      - [ be32, 0x0077167C, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
-      - [ be32, 0x0076EFB4, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
+      - [ be32, 0x0077167c, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
+      - [ be32, 0x0076efb4, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
 
 Anchors:
   SPU_MLAA_01: &SPU_MLAA_01
@@ -11990,16 +11990,16 @@ PPU-9ef94f24f84f5923f9c88557e33c2ffab380fb7b:
       - [ bef32, 0x010aeaa4, 1.25 ]
 
 PPU-4050da6fa9d7eed65e7d748b03a6ba89023b90c3:
-  Debug Menu:
+  "Debug Menu":
     Games:
       "Batman: Arkham Asylum GOTY":
         BLUS30515: [ 01.00 ]
         BLES00827: [ 01.00 ]
-    Author: dron_3
-    Notes: Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)
+    Author: "dron_3"
+    Notes: "Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0121DBAC, 0x38600000 ]
+      - [ be32, 0x0121dbac, 0x38600000 ]
 
 PPU-17a273d69dad20980377e405809f7d888b6c6dce:
   Disable MLAA:
