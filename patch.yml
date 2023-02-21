@@ -7285,108 +7285,108 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
       - [ bef32, 0x0072e544, 0.6 ]
 
 PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-    "21:9 Aspect Ratio Fix":
-      Games:
-        "WipEout HD":
-          NPUA80105: [ 02.51 ]
-          NPEA00057: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x00732808, 2.380000114 ] # 21:9 Stretch Fix
-        - [ bef32, 0x0073303c, 2.462 ] # Flame Trail Fix
-        - [ bef32, 0x00720058, 2.654 ] # Render FOV Fix
-        - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
+  "21:9 Aspect Ratio Fix":
+    Games:
+      "WipEout HD":
+        NPUA80105: [ 02.51 ]
+        NPEA00057: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00732808, 2.380000114 ] # 21:9 Stretch Fix
+      - [ bef32, 0x0073303c, 2.462 ] # Flame Trail Fix
+      - [ bef32, 0x00720058, 2.654 ] # Render FOV Fix
+      - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
 
 PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-    "32:9 Aspect Ratio Fix":
-      Games:
-        "WipEout HD":
-          NPUA80105: [ 02.51 ]
-          NPEA00057: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x00732808, 3.555555582 ] # 32:9 Stretch Fix
-        - [ bef32, 0x0073303c, 3.555555582 ] # Flame Trail Fix
-        - [ bef32, 0x00720058, 3.555555582 ] # Render FOV Fix
-        - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
+  "32:9 Aspect Ratio Fix":
+    Games:
+      "WipEout HD":
+        NPUA80105: [ 02.51 ]
+        NPEA00057: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00732808, 3.555555582 ] # 32:9 Stretch Fix
+      - [ bef32, 0x0073303c, 3.555555582 ] # Flame Trail Fix
+      - [ bef32, 0x00720058, 3.555555582 ] # Render FOV Fix
+      - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
 
 PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-    "120 FPS Shield Sync Fix":
-      Games:
-        "WipEout HD":
-          NPUA80105: [ 02.51 ]
-          NPEA00057: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x0072e034, 120 ] # Shield Framerate Fix
+  "120 FPS Shield Sync Fix":
+    Games:
+      "WipEout HD":
+        NPUA80105: [ 02.51 ]
+        NPEA00057: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0072e034, 120 ] # Shield Framerate Fix
 
 PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-    "120 FPS Absorb Sync Fix":
-      Games:
-        "WipEout HD":
-          NPUA80105: [ 02.51 ]
-          NPEA00057: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x0073100c, 120 ] # Absorb Glow Framerate Fix
+  "120 FPS Absorb Sync Fix":
+    Games:
+      "WipEout HD":
+        NPUA80105: [ 02.51 ]
+        NPEA00057: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0073100c, 120 ] # Absorb Glow Framerate Fix
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-    "21:9 Aspect Ratio Fix":
-      Games:
-        "WipEout HD Fury":
-          BCES00664: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x00732878, 2.380000114 ] # 21:9 Stretch Fix
-        - [ bef32, 0x007330ac, 2.462 ] # Flame Trail Fix
-        - [ bef32, 0x007200f8, 2.654 ] # Render FOV Fix
-        - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
+  "21:9 Aspect Ratio Fix":
+    Games:
+      "WipEout HD Fury":
+        BCES00664: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00732878, 2.380000114 ] # 21:9 Stretch Fix
+      - [ bef32, 0x007330ac, 2.462 ] # Flame Trail Fix
+      - [ bef32, 0x007200f8, 2.654 ] # Render FOV Fix
+      - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-    "32:9 Aspect Ratio Fix":
-      Games:
-        "WipEout HD Fury":
-          BCES00664: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x00732878, 3.555555582 ] # 32:9 Stretch Fix
-        - [ bef32, 0x007330ac, 3.555555582 ] # Flame Trail Fix
-        - [ bef32, 0x007200f8, 3.555555582 ] # Render FOV Fix
-        - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
+  "32:9 Aspect Ratio Fix":
+    Games:
+      "WipEout HD Fury":
+        BCES00664: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00732878, 3.555555582 ] # 32:9 Stretch Fix
+      - [ bef32, 0x007330ac, 3.555555582 ] # Flame Trail Fix
+      - [ bef32, 0x007200f8, 3.555555582 ] # Render FOV Fix
+      - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-    "120 FPS Shield Sync Fix":
-      Games:
-        "WipEout HD Fury":
-          BCES00664: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x0072e0d4, 120 ] # Shield Framerate Fix
+  "120 FPS Shield Sync Fix":
+    Games:
+      "WipEout HD Fury":
+        BCES00664: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0072e0d4, 120 ] # Shield Framerate Fix
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-    "120 FPS Absorb Sync Fix":
-      Games:
-        "WipEout HD Fury":
-          BCES00664: [ 02.51 ]
-      Author: "Lex6s"
-      Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-      Patch Version: 1.0
-      Patch:
-        - [ bef32, 0x0072bf80, 120 ] # Absorb Glow Framerate Fix
+  "120 FPS Absorb Sync Fix":
+    Games:
+      "WipEout HD Fury":
+        BCES00664: [ 02.51 ]
+    Author: "Lex6s"
+    Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0072bf80, 120 ] # Absorb Glow Framerate Fix
 
 Anchors:
   iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
