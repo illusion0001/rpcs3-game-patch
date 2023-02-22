@@ -13392,6 +13392,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Author: "illusion"
     Patch Version: 1.0
     Patch:
+      - [ be16, 0x00050c84, 0x9107 ]
       - [ be16, 0x00050d20, 0x9907 ]
 
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
