@@ -13389,7 +13389,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Games:
       "Puppeteer":
         NPUA80959: [ 01.00 ]
-    Author: "ZEROx, illusion"
+    Author: "illusion"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00050d20, 0x9907 ]
