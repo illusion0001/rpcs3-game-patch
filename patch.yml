@@ -13171,7 +13171,7 @@ PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
         BLUS31040: [ 01.00 ]
         BLES01724: [ 01.00 ]
     Author: "illusion"
-    Notes: "Allows up to 1000FPS\nwithout affecting game speed.\nChange vblank to match your monitor refresh rate if you are going above 60FPS."
+    Notes: "Allows up to 1000 FPS\nwithout affecting game speed.\nChange vblank to match your monitor refresh rate if you are going above 60 FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005e4c28, 0x38800001 ]
