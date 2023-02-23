@@ -13191,6 +13191,30 @@ PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
     Patch:
       - [ be32, 0x0066b764, 0x38800001 ]
 
+Anchors:
+  debugmenunotesHR: &debugmenunotesHR "L3 = Brings Debug Menu\nL1/R1 = Change pages"
+
+PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
+  "Playable Demo Mode":
+    Games:
+      "Heavy Rain":
+        BCUS98164: [ 01.00 ]
+    Author: "bungholio"
+    Notes: *debugmenunotesHR
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00547B6C, 0x38600001 ]
+  "Debug Menu":
+    Games:
+      "Heavy Rain":
+        BCUS98164: [ 01.00 ]
+    Author: "bungholio"
+    Notes: *debugmenunotesHR
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000C7F98, 0x38000001 ]
+      - [ be32, 0x000C7FA0, 0x98090000 ]
+
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "All powers unlocked":
     Games:
