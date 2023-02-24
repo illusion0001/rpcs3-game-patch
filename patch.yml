@@ -13490,6 +13490,16 @@ PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
     Patch:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
+PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0:
+  "Disable MLAA":
+    Games:
+      "Portal 2":
+        NPUB31077: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00008234, 0x30a50060 ]
+
 PPU-d8fe04c58a5a46feda0b6f2192613064ec996584:
   "Unlock FPS":
     Games:
