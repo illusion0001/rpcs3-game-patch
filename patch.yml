@@ -8711,6 +8711,15 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f07460, 0x00bfab10 ]
+  "Debug Menu":
+    Games:
+      "Killzone 2":
+        BCES00081: [ 01.29 ]
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00B336F4, 0x38600001 ]
 
 Anchors:
   kz3mlaanotes: &kz3mlaanotes "Allows for the use of Resolution Scaling in the title and improved performance.\nSome screen effects will be lost.\nWrite Color Buffers is no longer required."
