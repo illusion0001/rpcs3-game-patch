@@ -1501,6 +1501,26 @@ PPU-6875682ab309df32307c5305c43bb132c4e261fa:
     Patch:
       - [ load, *JoJoASB_FPS ]
 
+LegoCompleteSaga_titleID: &LegoCompleteSaga_titleID
+    "LEGO Star Wars: The Complete Saga":
+      BLUS30079: [ 02.00 ]
+      BLES00121: [ 02.00 ]
+
+PPU-023ff768c205b6a7b819005c6eccf5c099ca3e04:
+  "No Blur":
+    Games: *LegoCompleteSaga_titleID
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0023dabc, 0x38000000 ]
+  "1280x720 Resolution":
+    Games: *LegoCompleteSaga_titleID
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x004a75f2, 1280 ]
+      - [ be16, 0x004a75f6, 720  ]
+
 Anchors:
   LC_FPS: &LC_FPS
     - [ be32, 0x00932f2c, 0x60000000 ]
