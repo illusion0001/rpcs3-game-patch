@@ -7170,7 +7170,7 @@ PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
 PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
   "Disable MLAA":
     Games:
-      "Soul Calibur V":
+      "SoulCalibur V":
         NPUB31195: [ 01.00 ]
         NPEB01363: [ 01.00 ]
     Author: "illusion"
@@ -7181,7 +7181,7 @@ PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
 PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
   "Disable MLAA":
     Games:
-      "Soul Calibur V":
+      "SoulCalibur V":
         BLUS30736: [ 01.03 ]
         BLES01250: [ 01.03 ]
     Author: "illusion"
