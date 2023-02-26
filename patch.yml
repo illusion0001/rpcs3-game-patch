@@ -8781,6 +8781,17 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
     Patch:
       - [ be32, 0x0073d598, 0x60000000 ]
       - [ be32, 0x006b0110, 0x60000000 ]
+  "Debug Menu":
+    Games:
+      "Killzone 3":
+        BCES01007: [ 01.00 ]
+        BCUS98234: [ 01.00 ]
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e61018, 0x74727565 ]
+      - [ be32, 0x00e6101c, 0x00000000 ]
 
 PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
   "Extended FOV":
@@ -8840,6 +8851,17 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ be32, 0x00fb1284, 0x7ca42b78 ]
       - [ be32, 0x00fb1288, 0x38a00000 ]
       - [ be32, 0x00fb128c, 0x4e800020 ]
+  "Debug Menu":
+    Games:
+      "Killzone 3":
+        BCES01007: [ 01.14 ]
+        BCUS98234: [ 01.14 ]
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00edcb80, 0x74727565 ]
+      - [ be32, 0x00edcb84, 0x00000000 ]
 
 PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
   "Extended FOV":
