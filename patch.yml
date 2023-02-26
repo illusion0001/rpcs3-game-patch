@@ -7171,6 +7171,7 @@ PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
   "Disable MLAA":
     Games:
       "Soul Calibur V":
+        NPUB31195: [ 01.00 ]
         NPEB01363: [ 01.00 ]
     Author: "illusion"
     Patch Version: 1.0
