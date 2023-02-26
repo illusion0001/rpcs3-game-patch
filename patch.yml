@@ -47,7 +47,7 @@ Anchors:
 
   # constants
     - [ be32, 0x016c7c84, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c7c88, 0.05000000 ] # maximum timestep size (50ms or 20 FPS)
+    - [ bef32, 0x016c7c88, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   BLES00932_FpsUnlock: &BLES00932_FpsUnlock
   # Set 60 FPS with no frameskip
@@ -95,7 +95,7 @@ Anchors:
 
   # constants
     - [ be32, 0x016c9fa4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c9fa8, 0.05000000 ] # maximum timestep size (50ms or 20 FPS)
+    - [ bef32, 0x016c9fa8, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   BCAS20071_FpsUnlock: &BCAS20071_FpsUnlock
   # Set 60 FPS with no frameskip
@@ -143,7 +143,7 @@ Anchors:
 
   # constants
     - [ be32, 0x016c8b64, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c8b68, 0.05000000 ] # maximum timestep size (50ms or 20 FPS)
+    - [ bef32, 0x016c8b68, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   DeS_FPS_Notes: &DeS_FPS_Notes "Patch version 2.0 and above is not compatible with the settings used for the previous patch. Clocks scale and Vblank rate must be set to the defaults. Vblank rate can be modified to increase the framelimit beyond 60 FPS. However, it's not recommended as users may encounter physics issues."
 
@@ -498,8 +498,8 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
         BLUS30443: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x018cefbc, 0x4017b9aa ] # 21:9 aspect ratio
       - [ be32, 0x0190433c, 0x4017b9aa ]
@@ -509,8 +509,8 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
         BLUS30443: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x018cefbc, 3.5555556 ] # 32:9 aspect ratio
       - [ bef32, 0x0190433c, 3.5555556 ]
@@ -528,9 +528,9 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
       "Demon's Souls":
         BLUS30443: [ 01.00 ]
     Author: "horkrux"
-    Patch Version: 1.0
-    Group:
     Notes: *FreeCam_Notes
+    Group:
+    Patch Version: 1.0
     Patch:
       - [ load, *BLUS30443_FreeCam ]
 
@@ -569,8 +569,8 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
         BLES00932: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x018cf13c, 0x4017b9aa ] # 21:9 aspect ratio
       - [ be32, 0x01904494, 0x4017b9aa ]
@@ -580,8 +580,8 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
         BLES00932: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x018cf13c, 3.5555556 ] # 32:9 aspect ratio
       - [ bef32, 0x01904494, 3.5555556 ]
@@ -640,8 +640,8 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
         BCAS20071: [ 01.04 ]
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x018cee14, 0x4017b9aa ] # 21:9 aspect ratio
       - [ be32, 0x0190430c, 0x4017b9aa ]
@@ -651,8 +651,8 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
         BCAS20071: [ 01.04 ]
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x018cee14, 3.5555556 ] # 32:9 aspect ratio
       - [ bef32, 0x0190430c, 3.5555556 ]
@@ -670,9 +670,9 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
       "Demon's Souls":
         BCAS20071: [ 01.04 ]
     Author: "horkrux"
-    Patch Version: 1.0
-    Group:
     Notes: *FreeCam_Notes
+    Group:
+    Patch Version: 1.0
     Patch:
       - [ load, *BCAS20071_FreeCam ]
 
@@ -711,8 +711,8 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
         BLUD80018: [ 01.01 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x018cefbc, 0x4017b9aa ] # 21:9 aspect ratio
       - [ be32, 0x0190433c, 0x4017b9aa ]
@@ -722,8 +722,8 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
         BLUD80018: [ 01.01 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x018cefbc, 3.5555556 ] # 32:9 aspect ratio
       - [ bef32, 0x0190433c, 3.5555556 ]
@@ -741,9 +741,9 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
       "Demon's Souls Trade Demo":
         BLUD80018: [ 01.01 ]
     Author: "horkrux"
-    Patch Version: 1.0
-    Group:
     Notes: *FreeCam_Notes
+    Group:
+    Patch Version: 1.0
     Patch:
       - [ load, *BLUS30443_FreeCam ]
 
@@ -903,7 +903,7 @@ PPU-2b393f064786e5895d5a576621deb4c9107a8f0b:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008edc5c, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008edc5c, 0.125 ] # 240 max FPS
 
 PPU-f2f7f7ea0444353884bb715152147c3a29f4e790:
   "Unlock FPS":
@@ -914,7 +914,7 @@ PPU-f2f7f7ea0444353884bb715152147c3a29f4e790:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008edbcc, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008edbcc, 0.125 ] # 240 max FPS
   "Increase Horizontal Camera Sensitivity":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
@@ -951,7 +951,7 @@ PPU-b18834a8f21cd29a091b287a66656a279ccba507:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008ecf2c, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008ecf2c, 0.125 ] # 240 max FPS
 
 PPU-9c04f427625a0064282432e4edfefe9e0956c303:
   "Unlock FPS":
@@ -962,7 +962,7 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008ececc, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008ececc, 0.125 ] # 240 max FPS
   "Increase Horizontal Camera Sensitivity":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
@@ -999,7 +999,7 @@ PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008eceec, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008eceec, 0.125 ] # 240 max FPS
 
 PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
   "Unlock FPS (For Delisted Ver)":
@@ -1010,7 +1010,7 @@ PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
     Notes: "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\", so the patch can't be separated. Need to also change Vblank frequency to 120Hz for 60FPS or 240Hz for 120FPS. Going over 120FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008ecf1c, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008ecf1c, 0.125 ] # 240 max FPS
 
 PPU-a017576369165f3746730724c8ae762ed9bc64d8:
   "Unlock FPS":
@@ -1021,7 +1021,7 @@ PPU-a017576369165f3746730724c8ae762ed9bc64d8:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00939a14, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x00939a14, 0.125 ] # 240 max FPS
 
 PPU-c09c496514f6dc591434575b04eb7c003826c11d:
   "Unlock FPS":
@@ -1032,7 +1032,7 @@ PPU-c09c496514f6dc591434575b04eb7c003826c11d:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008ed62c, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008ed62c, 0.125 ] # 240 max FPS
   "Increase Horizontal Camera Sensitivity":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
@@ -1069,7 +1069,7 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
     Notes: *DOD3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008edc5c, 0.12500000 ] # 240 max FPS
+      - [ bef32, 0x008edc5c, 0.125 ] # 240 max FPS
   "Increase Horizontal Camera Sensitivity":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
@@ -7910,7 +7910,7 @@ Anchors:
 
   # constants
     - [ be32, 0x01586c24, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x01586c28, 0.05000000 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x01586c28, 0.05 ] # maximum timestep size (50ms or 20fps)
 
   DS1_BLES01396_FPS: &DS1_BLES01396_FPS
   # offset by Lilium
@@ -7961,7 +7961,7 @@ Anchors:
 
   # constants
     - [ be32, 0x01586d44, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x01586d48, 0.05000000 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x01586d48, 0.05 ] # maximum timestep size (50ms or 20fps)
 
   DS1_BLES01402_FPS: &DS1_BLES01402_FPS
   # offset by Lilium
@@ -8012,7 +8012,7 @@ Anchors:
 
   # constants
     - [ be32, 0x015864c4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x015864c8, 0.05000000 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x015864c8, 0.05 ] # maximum timestep size (50ms or 20fps)
 
 PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
   "Unlock FPS":
@@ -8082,7 +8082,7 @@ PPU-61606645abb9cc39f48072166c04df8da629fb99:
       - [ be32, 0x015ec58c, 0x7e739a78 ]
       - [ be32, 0x015ec590, 0x4e800020 ]
       - [ be32, 0x015ec594, 0x4c989680 ]
-      - [ bef32, 0x015ec598, 0.05000000 ]
+      - [ bef32, 0x015ec598, 0.05 ]
 
 PPU-03679186107dbc5525c9527efdab0f4818d3a5b4:
   "Unlock FPS":
@@ -8119,7 +8119,7 @@ PPU-03679186107dbc5525c9527efdab0f4818d3a5b4:
       - [ be32, 0x015ec56c, 0x7e739a78 ]
       - [ be32, 0x015ec570, 0x4e800020 ]
       - [ be32, 0x015ec574, 0x4c989680 ]
-      - [ bef32, 0x015ec578, 0.05000000 ]
+      - [ bef32, 0x015ec578, 0.05 ]
 
 PPU-65078c652115190ecb64b7ff52bbf1c68696deb6:
   "Unlock FPS":
