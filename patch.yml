@@ -7167,6 +7167,27 @@ PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
     Patch:
       - [ load, *tox2_hp ]
 
+PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
+  "Disable MLAA":
+    Games:
+      "Soul Calibur V":
+        NPEB01363: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0031a804, 0x38000001 ]
+
+PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
+  "Disable MLAA":
+    Games:
+      "Soul Calibur V":
+        BLUS30736: [ 01.03 ]
+        BLES01250: [ 01.03 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0031dff0, 0x38000001 ]
+
 PPU-c5d2fd31933f88313956774b84346d242979eba6:
   "21:9 Aspect Ratio":
     Games:
