@@ -13773,7 +13773,7 @@ PPU-5b1fe8f0b8eab817078b6db007de327653bc65dc: # BIOHAZARD CODE: Veronica 完全�
       "BIOHAZARD CODE: Veronica 完全版":
         NPJB00135: [ 01.00 ]
     Author: "Kapdap"
-    Notes: "Remove door animations patch for the JP release."
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ae304, 0x38600000 ]
@@ -13784,7 +13784,7 @@ PPU-37f854495138eeb5afdc2db9d4cf6a2d4918beb6: # BIOHAZARD CODE: Veronica 完全�
       "BIOHAZARD CODE: Veronica 完全版":
         NPJB00135: [ 01.00 ]
     Author: "Kapdap"
-    Notes: "Remove door animations patch for the JP release."
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ae304, 0x38600000 ]
@@ -13795,7 +13795,7 @@ PPU-b4b1ebe7a069782537a13d5bdbc15d6e900ceb25: # RESIDENT EVIL CODE: Veronica X (
       "RESIDENT EVIL CODE: Veronica X":
         NPUB30467: [ 01.00 ]
     Author: "Kapdap"
-    Notes: "Remove door animations patch for the US release."
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ae25c, 0x38600000 ]
@@ -13806,7 +13806,7 @@ PPU-df822d7d47de09c5672201db8cc633009037f54f: # RESIDENT EVIL CODE: Veronica X (
       "RESIDENT EVIL CODE: Veronica X":
         NPEB00553: [ 01.00 ]
     Author: "Kapdap"
-    Notes: "Remove door animations patch for the EU release."
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001afccc, 0x38600000 ]
@@ -13817,6 +13817,8 @@ PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
       "Silent Hill: Homecoming":
         BLES00460: [ 01.00 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0005a6bc, 0x38000001 ]
   "No Film Grain":
@@ -13824,6 +13826,8 @@ PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
       "Silent Hill: Homecoming":
         BLES00460: [ 01.00 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00a4220c, 0x38600001 ]
 
@@ -13999,6 +14003,7 @@ PPU-c96c9d2780b5482e91b3cdc190f289431cc1acb6:
       "Tokyo Jungle":
         BCAS20233: [ 01.02 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *TokyoJungleMLAADisc ]
@@ -14009,6 +14014,7 @@ PPU-8e5a991fb9548d762b192aa27ee598e3b75cc13c:
       "Tokyo Jungle":
         BCJS30069: [ 01.02 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *TokyoJungleMLAADisc ]
@@ -14019,6 +14025,7 @@ PPU-9a6d7c2cba6d2966f2f0425ff6851588e86c15a9:
       "Tokyo Jungle":
         NPUA80523: [ 01.01 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *TokyoJungleMLAAPSN ]
@@ -14029,6 +14036,7 @@ PPU-7463d188a1c5a87560e8e4aa29a3f723a09ec29a:
       "Tokyo Jungle":
         NPJA00075: [ 01.02 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *TokyoJungleMLAAPSN ]
@@ -14039,6 +14047,7 @@ PPU-93fde720a66a93fb46990b32b51beb8c2960cea8:
       "Tokyo Jungle":
         NPUA80523: [ 01.01 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *TokyoJungleMLAAPSN ]
@@ -14061,6 +14070,7 @@ PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
       "Twisted Metal":
         BCUS98106: [ 01.06 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0065dbac, 0x9383 ]
@@ -14071,6 +14081,7 @@ PPU-513044b01c6672954bbeb1e09f74a1bc848da9e7:
       "Twisted Metal":
         NPUA80079: [ 01.06 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0065e16c, 0x9383 ]
@@ -14092,6 +14103,7 @@ PPU-93a03e014f798af85c849023f1307eaa9aa573fd:
       "Twisted Metal Demo":
         NPUA70192: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0063342c, 0x9383 ]
@@ -14126,6 +14138,7 @@ PPU-93a03e014f798af85c849023f1307eaa9aa573fd:
       "Twisted Metal Demo":
         NPUA70192: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00968f34, 0x4bfeab94 ]
@@ -14149,6 +14162,7 @@ PPU-cf8528c5a94d26438e19d8e4272b85cd1671088c:
       "PlayStation: Home":
         NPIA00010: [ 01.86 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005c59f4, 0x38000000 ]
@@ -14159,6 +14173,7 @@ PPU-8aaf3d8c1d18650967013d128f848327a91b5fe0:
       "PlayStation: Home":
         NPIA00005: [ 01.87 ]
     Author: "Knight"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0003bcb0, 0x38000000 ]
