@@ -3322,18 +3322,18 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
     Notes: "Skips SCE intros up to first video\n2.0 Skips intro video."
     Patch Version: 2.0
     Patch:
-      - [ byte, 0x00204d5b, 0x01 ] #Skip intro vid on first run
-      - [ be16, 0x00411ff4, 0x4800 ] #Skip intro logo
-      - [ be32, 0x003efa04, 0x480225f5 ] #func call
-      - [ be32, 0x00411ff8, 0x3c60009e ] #lis r3,0x9e
-      - [ be32, 0x00411ffc, 0xa063c1d0 ] #Current video 2 bytes
-      - [ be32, 0x00412000, 0x2f836f70 ] #cmpwi cr7,r3,0x6f70
-      - [ be32, 0x00412004, 0x419e0010 ] #beq
-      - [ be32, 0x00412008, 0x3c600094 ] #lis r3,0x94
-      - [ be32, 0x0041200c, 0x80630e94 ] #r3 = Button data
-      - [ be32, 0x00412010, 0x48000008 ] #b
-      - [ be32, 0x00412014, 0x38600040 ] #X button
-      - [ be32, 0x00412018, 0x4e800020 ] #Return
+      - [ byte, 0x00204d5b, 0x01 ] # Skip intro vid on first run
+      - [ be16, 0x00411ff4, 0x4800 ] # Skip intro logo
+      - [ be32, 0x003efa04, 0x480225f5 ] # func call
+      - [ be32, 0x00411ff8, 0x3c60009e ] # lis r3,0x9e
+      - [ be32, 0x00411ffc, 0xa063c1d0 ] # Current video 2 bytes
+      - [ be32, 0x00412000, 0x2f836f70 ] # cmpwi cr7,r3,0x6f70
+      - [ be32, 0x00412004, 0x419e0010 ] # beq
+      - [ be32, 0x00412008, 0x3c600094 ] # lis r3,0x94
+      - [ be32, 0x0041200c, 0x80630e94 ] # r3 = Button data
+      - [ be32, 0x00412010, 0x48000008 ] # b
+      - [ be32, 0x00412014, 0x38600040 ] # X button
+      - [ be32, 0x00412018, 0x4e800020 ] # Return
   "Unlock FPS":
     Games:
       "God of War: Ascension":
@@ -3357,7 +3357,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
       - [ be16, 0x002caf6e, 0x93cc ] # 1000.0f sync
       - [ be16, 0x003ef71a, 0x93cc ] # 1000.0f video playback speed scaling
 
-PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: #GOWA.SELF 1.12
+PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
   "Disable MLAA":
     Games:
       "God of War: Ascension":
