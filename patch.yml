@@ -12140,6 +12140,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00512f94, 0x38600000 ] # Ps3EdgeMlaaEnable
@@ -12150,6 +12151,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x016de8f0, 0x98bf0186 ] # duplicate from mlaa patch in case of using without mlaa patch
@@ -12161,6 +12163,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPUB90862: [ 01.00 ]
     Notes: "Compromises visuals for extra performance."
     Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b48, 0x991f ]
@@ -12205,6 +12208,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004e51a4, 0x38600000 ] # Ps3EdgeMlaaEnable
@@ -12217,6 +12221,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x01701bfc, 0x98bf0183 ] # bloom/bubble blur, this won't crash anymore. requires 86 to be loaded with 0!
@@ -12241,6 +12246,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755ae0, 0x991f ]
