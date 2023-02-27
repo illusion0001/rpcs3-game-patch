@@ -13324,7 +13324,7 @@ PPU-1f2c7d41f5e0e842fe9ce2bba536f5f2306e5a5c:
     Notes: *debugmenunotesEOTTW
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x014FBF54, 0x38600000 ]
+      - [ be32, 0x014fbf54, 0x38600000 ]
 
 PPU-8109b840ad2f8e171be946ed6a79e308b9c733f1:
   "Debug Menu":
@@ -13335,7 +13335,7 @@ PPU-8109b840ad2f8e171be946ed6a79e308b9c733f1:
     Notes: *debugmenunotesEOTTW
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0150BB34, 0x38600000 ]
+      - [ be32, 0x0150bb34, 0x38600000 ]
 
 PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
   "Variable FPS":
@@ -13377,7 +13377,7 @@ PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
     Notes: *debugmenunotesHR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00547B6C, 0x38600001 ]
+      - [ be32, 0x00547b6c, 0x38600001 ]
   "Debug Menu":
     Games:
       "Heavy Rain":
@@ -13386,8 +13386,8 @@ PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
     Notes: *debugmenunotesHR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000C7F98, 0x38000001 ]
-      - [ be32, 0x000C7FA0, 0x98090000 ]
+      - [ be32, 0x000c7f98, 0x38000001 ]
+      - [ be32, 0x000c7fa0, 0x98090000 ]
 
 PPU-98cd3afcfa5471523c8840f583c60017696fb998:
   "Level Browser Menu":
@@ -13399,7 +13399,7 @@ PPU-98cd3afcfa5471523c8840f583c60017696fb998:
     Notes: "Unlocks Map and Episode Browser in Pause Menu.\nNot sure if it does anything else."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00915B6C, 0x60000000 ]
+      - [ be32, 0x00915b6c, 0x60000000 ]
 
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "All powers unlocked":
