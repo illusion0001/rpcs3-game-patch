@@ -10051,6 +10051,7 @@ PPU-e72e715d646a94770d1902364bc66fe33b1b6606:
   "Skip Intro Videos":
     Games: *p5_Title_US
     Author: *p5_SkipIntro_Author
+    Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
@@ -10064,24 +10065,28 @@ PPU-e72e715d646a94770d1902364bc66fe33b1b6606:
   "Disable DLC Unlock Messages":
     Games: *p5_Title_US
     Author: *p5_DLC_Author
+    Notes:
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
   "Disable Blur Filter":
     Games: *p5_Title_US
     Author: *p5_DisableBlur_Author
+    Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
   "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_US
     Author: *p5_DisableDistortion_Author
+    Notes:
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
   "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_US
     Author: *p5_Disable100PctDistortion_Author
+    Notes:
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
@@ -10167,6 +10172,7 @@ PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
   "Skip Intro Videos":
     Games: *p5_Title_EU
     Author: *p5_SkipIntro_Author
+    Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
@@ -10180,24 +10186,28 @@ PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
   "Disable DLC Unlock Messages":
     Games: *p5_Title_EU
     Author: *p5_DLC_Author
+    Notes:
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
   "Disable Blur Filter":
     Games: *p5_Title_EU
     Author: *p5_DisableBlur_Author
+    Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
   "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_EU
     Author: *p5_DisableDistortion_Author
+    Notes:
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
   "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_EU
     Author: *p5_Disable100PctDistortion_Author
+    Notes:
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
@@ -10283,6 +10293,7 @@ PPU-3b394da7912181d308bf08505009b3578521c756:
   "Skip Intro Videos":
     Games: *p5_Title_JP_100
     Author: *p5_SkipIntro_Author
+    Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
@@ -10296,24 +10307,28 @@ PPU-3b394da7912181d308bf08505009b3578521c756:
   "Disable DLC Unlock Messages":
     Games: *p5_Title_JP_100
     Author: *p5_DLC_Author
+    Notes:
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
   "Disable Blur Filter":
     Games: *p5_Title_JP_100
     Author: *p5_DisableBlur_Author
+    Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
   "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_JP_100
     Author: *p5_DisableDistortion_Author
+    Notes:
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
   "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_JP_100
     Author: *p5_Disable100PctDistortion_Author
+    Notes:
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
@@ -10399,6 +10414,7 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
   "Skip Intro Videos":
     Games: *p5_Title_JP_103
     Author: *p5_SkipIntro_Author
+    Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
       - [ load, *p5_SkipIntro ]
@@ -10412,24 +10428,28 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
   "Disable DLC Unlock Messages":
     Games: *p5_Title_JP_103
     Author: *p5_DLC_Author
+    Notes:
     Patch Version: *p5_DLC_PatVer
     Patch:
       - [ load, *p5_DLC ]
   "Disable Blur Filter":
     Games: *p5_Title_JP_103
     Author: *p5_DisableBlur_Author
+    Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
       - [ load, *p5_DisableBlur ]
   "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
     Games: *p5_Title_JP_103
     Author: *p5_DisableDistortion_Author
+    Notes:
     Patch Version: *p5_DisableDistortion_PatVer
     Patch:
       - [ load, *p5_DisableDistortion ]
   "Disable Angry Distortion Filter (100% Alert)":
     Games: *p5_Title_JP_103
     Author: *p5_Disable100PctDistortion_Author
+    Notes:
     Patch Version: *p5_Disable100PctDistortion_PatVer
     Patch:
       - [ load, *p5_Disable100PctDistortion ]
