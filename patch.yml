@@ -13650,11 +13650,20 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
     Games:
       "Puppeteer: Demo version":
         NPEA90125: [ 01.00 ]
-    Author: "ZEROx"
-    Notes: "Set VBlank to 120 for 60 FPS."
+    Author: "ZEROx, illusion"
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00083f78, 1 ] # Avoid double game speed
+      - [ be32, 0x00042f9c, 0x38800001 ] # 60 FPS
+      - [ bef32, 0x00083f78, 1 ]         # Avoid double game speed
+  "Disable MLAA":
+    Games:
+      "Puppeteer: Demo version":
+        NPEA90125: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00050cb4, 0x9107 ]
+      - [ be16, 0x00050d50, 0x9907 ]
 
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   "Unlock FPS":
