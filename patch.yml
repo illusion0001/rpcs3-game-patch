@@ -13286,7 +13286,7 @@ PPU-e21ab816c8b67f90260b63caccbb2e3a81c68606:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0078B384, 0x3BA00001 ]
+      - [ be32, 0x0078b384, 0x3ba00001 ]
 
 PPU-f693265f620e64208e76cc2388d10df1d7b60c95:
   "Debug Menu":
@@ -13299,7 +13299,7 @@ PPU-f693265f620e64208e76cc2388d10df1d7b60c95:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00732B94, 0x3BA00001 ]
+      - [ be32, 0x00732b94, 0x3ba00001 ]
 
 PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
   "Infinite Health":
@@ -13804,15 +13804,25 @@ PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
       - [ be32, 0x00acad14, 0x98090000 ]
 
 PPU-c081cd32886db63ae77928063579c7b0601835e1:
-  "Start with nostalgia instead of smooth":
+  "Start with nostalgia filter":
     Games:
       "SONIC CD Trial":
         NPUB30624: [ 01.00 ]
     Author: "Margen67"
-    Notes: "Game normally starts with smooth."
+    Notes: "Game normally starts with smooth filter."
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00023c6f, 2 ]
+PPU-ed6f26aa6f0b494a9af4f67261fc27b2343da9e1:
+  "Start with nostalgia filter":
+    Games:
+      "SONIC CD Trial":
+        NPEB00787: [ 01.00 ]
+    Author: "Margen67"
+    Notes: "Game normally starts with smooth filter."
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00023c37, 2 ]
 
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
