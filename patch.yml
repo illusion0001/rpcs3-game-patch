@@ -11203,6 +11203,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100intro ]
@@ -11211,6 +11212,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100dev ]
@@ -11266,6 +11268,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100intro ]
@@ -11274,6 +11277,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100dev ]
@@ -11329,6 +11333,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100intro ]
@@ -11337,6 +11342,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3100dev ]
