@@ -13593,7 +13593,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Author: "ZEROx, illusion"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
+      - [ be32,  0x000431dc, 0x38800001 ] # 60 FPS
       - [ bef32, 0x000846c0, 1 ]         # Avoid double game speed
   "Disable MLAA":
     Games:
@@ -13604,6 +13604,26 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Patch:
       - [ be16, 0x00050c84, 0x9107 ]
       - [ be16, 0x00050d20, 0x9907 ]
+
+PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
+  "60 FPS":
+    Games:
+      "Puppeteer":
+        BCES00935: [ 01.00 ]
+    Author: "ZEROx, illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32,  0x00042a2c, 0x38800001 ] # 60 FPS
+      - [ bef32, 0x00083e28, 1 ]         # Avoid double game speed
+  "Disable MLAA":
+    Games:
+      "Puppeteer":
+        BCES00935: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000504d4, 0x9107 ]
+      - [ be16, 0x00050570, 0x9907 ]
 
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
   "60 FPS":
