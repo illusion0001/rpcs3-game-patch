@@ -2826,6 +2826,7 @@ PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
         BLES01784: [ 01.06 ]
     Author: "dron_3"
     Notes: "Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00f249f0, 0x38600000 ]
 
@@ -12193,9 +12194,8 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
       "Army of TWO The Devil's Cartel Demo":
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
-    Notes: "Compromises visuals for extra performance."
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: "Compromises visuals for extra performance."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b48, 0x991f ]
