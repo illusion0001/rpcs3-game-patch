@@ -13871,6 +13871,62 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
     Patch:
       - [ byte, 0x005b4ebf, 0x01 ]
 
+Anchors:
+  TokyoJungleMLAAPSN: &TokyoJungleMLAAPSN
+    - [ be32, 0x00018d64, 0x60000000 ]
+  TokyoJungleMLAADisc: &TokyoJungleMLAADisc
+    - [ be32, 0x00018d70, 0x60000000 ]
+
+PPU-c96c9d2780b5482e91b3cdc190f289431cc1acb6:
+  "Disable MLAA":
+    Games:
+      "Tokyo Jungle":
+        BCAS20233: [ 01.02 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *TokyoJungleMLAADisc ]
+
+PPU-8e5a991fb9548d762b192aa27ee598e3b75cc13c:
+  "Disable MLAA":
+    Games:
+      "Tokyo Jungle":
+        BCJS30069: [ 01.02 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *TokyoJungleMLAADisc ]
+
+PPU-9a6d7c2cba6d2966f2f0425ff6851588e86c15a9:
+  "Disable MLAA":
+    Games:
+      "Tokyo Jungle":
+        NPUA80523: [ 01.01 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *TokyoJungleMLAAPSN ]
+
+PPU-7463d188a1c5a87560e8e4aa29a3f723a09ec29a:
+  "Disable MLAA":
+    Games:
+      "Tokyo Jungle":
+        NPJA00075: [ 01.02 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *TokyoJungleMLAAPSN ]
+
+PPU-93fde720a66a93fb46990b32b51beb8c2960cea8:
+  "Disable MLAA":
+    Games:
+      "Tokyo Jungle":
+        NPUA80523: [ 01.01 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *TokyoJungleMLAAPSN ]
+
 PPU-e219c746e09c57aa7acd83172537d367c62ae928:
   "Unlock FPS":
     Games:
