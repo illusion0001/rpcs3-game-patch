@@ -13803,6 +13803,17 @@ PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
       - [ be32, 0x00acad10, 0x38000001 ]
       - [ be32, 0x00acad14, 0x98090000 ]
 
+PPU-c081cd32886db63ae77928063579c7b0601835e1:
+  "Start with nostalgia instead of smooth":
+    Games:
+      "SONIC CD Trial":
+        NPUB30624: [ 01.00 ]
+    Author: "Margen67"
+    Notes: "Game normally starts with smooth."
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00023c6f, 2 ]
+
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
     Games:
