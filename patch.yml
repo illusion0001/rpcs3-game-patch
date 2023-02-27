@@ -3082,6 +3082,16 @@ PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
       - [ bef32, 0x00c9420c, 0.001 ] # min gamespeed
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
+  "1280x720 Resolution":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        NPUA80966: [ 01.20 ]
+    Author: "Margen67"
+    Notes: "Original resolution is 960x704. Game still requires Anti Aliasing set to Auto. Some things are still rendered at half resolution."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0032a622, 1280 ]
+      - [ be16, 0x0032a652, 720 ]
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: A Crack in Time":
