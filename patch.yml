@@ -13297,8 +13297,8 @@ PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
         BLUS31181: [ 01.24 ]
         BCJS35001: [ 01.24 ]
     Author: "cohaereo"
-    Patch Version: 0.1
     Notes: "Necessary for the game to connect to unofficial signon servers."
+    Patch Version: 0.1
     Patch:
       - [ utf8, 0x012e6328, "http://www%d.%s/%s\0" ]
 
