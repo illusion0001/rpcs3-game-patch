@@ -14064,6 +14064,15 @@ PPU-93a03e014f798af85c849023f1307eaa9aa573fd:
       # - [ be32, 0x00646918, 0x60000000 ]
       # - [ be32, 0x006468a4, 0x480000c0 ]
       # - [ be32, 0x00646918, 0x60000000 ]
+  "DEBUG: Restore Debug Printout":
+    Games:
+      "Twisted Metal Demo":
+        NPUA70192: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00968f34, 0x4bfeab94 ]
+      - [ be32, 0x009690a0, 0x4bca92a0 ]
 
 PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
   "60 FPS":
