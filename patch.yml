@@ -5754,13 +5754,13 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
 
 Anchors:
   uc3_100_FPS: &uc3_100_FPS
-    - [ be32, 0x0093b348, 0x90e30034 ] #FPS
-    - [ be32, 0x0093b34c, 0x90e30038 ] #Unlock
+    - [ be32, 0x0093b348, 0x90e30034 ] # FPS
+    - [ be32, 0x0093b34c, 0x90e30038 ] # Unlock
 
   uc3_100_mlaa: &uc3_100_mlaa
     - [ be32, 0x00635f90, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0093b46c, 0x9b83 ]     # store 0
-   #- [ be32, 0x00720340, 0x480009ac ] # unconditonally branch to disable MLAA
+  # - [ be32, 0x00720340, 0x480009ac ] # unconditonally branch to disable MLAA
 
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
@@ -5806,7 +5806,7 @@ Anchors:
   uc3_JP_100_mlaa: &uc3_JP_100_mlaa
     - [ be32, 0x00635fb8, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0093b494, 0x9b83 ]     # store 0
-   #- [ be32, 0x00720368, 0x480009ac ] # unconditonally branch to disable MLAA
+  # - [ be32, 0x00720368, 0x480009ac ] # unconditonally branch to disable MLAA
 
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
@@ -5852,7 +5852,7 @@ Anchors:
   uc3_110_mlaa: &uc3_110_mlaa
     - [ be32, 0x0063e014, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0094d850, 0x9b83 ]     # store 0
-    #- [ be32, 0x00728cac, 0x480009ac ] # unconditonally branch to disable MLAA
+   # - [ be32, 0x00728cac, 0x480009ac ] # unconditonally branch to disable MLAA
     # Beginning of new blooom code
     - [ be16, 0x0077bd92, 0xfd40 ]
     - [ byte, 0x0077bdb7, 0xb0 ]
@@ -5935,13 +5935,13 @@ Anchors:
     - [ be32, 0x0094dae8, 0x90e303ec ] # Depth buffer = 2       (mem address: 0x1377387)
 
   uc3_119_FPS: &uc3_119_FPS
-    - [ be32, 0x0096e980, 0x3b6000da ] #FPS
-    - [ be32, 0x0096e97c, 0x48000040 ] #Unlock
+    - [ be32, 0x0096e980, 0x3b6000da ] # FPS
+    - [ be32, 0x0096e97c, 0x48000040 ] # Unlock
 
   uc3_119_mlaa: &uc3_119_mlaa
     - [ be32, 0x0064df28, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0096eaa0, 0x9b83 ]     # store 0
-    #- [ be32, 0x0073a1d8, 0x480009ac ] # unconditonally branch to disable MLAA
+   # - [ be32, 0x0073a1d8, 0x480009ac ] # unconditonally branch to disable MLAA
     # Beginning of new blooom code
     - [ be16, 0x0078c3aa, 0x1530 ]
     - [ byte, 0x0078c3cf, 0xb0 ]
@@ -6026,8 +6026,8 @@ Anchors:
   uc3_119_devmenu: &uc3_119_devmenu
     - [ be16, 0x00042814, 0x419e ]
     - [ byte, 0x00042837, 0x01 ]
-    - [ be32, 0x0083028c, 0x60000000 ] #Don't pause on Select button
-    - [ be32, 0x0095b720, 0x60000000 ] #Remove "!" model render
+    - [ be32, 0x0083028c, 0x60000000 ] # Don't pause on Select button
+    - [ be32, 0x0095b720, 0x60000000 ] # Remove "!" model render
     - [ utf8, 0x010d8cf0, "galil-rifle            " ]
     - [ utf8, 0x010d8d08, "NO_ART_GROUP           " ]
     - [ utf8, 0x010d8d20, "uber-pistol            " ]
@@ -6864,7 +6864,7 @@ PPU-9216b03cf8f4ff27a57ff44ede2bc43a9d3087c0:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00a0f640, 0x38800000 ] #1.12 eboot (1.13 doesn't have elf)
+      - [ be32, 0x00a0f640, 0x38800000 ] # 1.12 eboot (1.13 doesn't have elf)
 
 PPU-ef552ab6594271862d9c6ab62e982c92380ad6cd:
   "Unlock FPS":
@@ -6875,7 +6875,7 @@ PPU-ef552ab6594271862d9c6ab62e982c92380ad6cd:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00a0f640, 0x38800000 ] #1.12 eboot (1.13 doesn't have elf)
+      - [ be32, 0x00a0f640, 0x38800000 ] # 1.12 eboot (1.13 doesn't have elf)
 
 PPU-223cc85fc80a6667fae775c7c02f7f65e6b2871f:
   "Unlock FPS":
@@ -14241,8 +14241,8 @@ PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 0x01 ] #fps mode 1
-      - [ bef32, 0x10060170, 60 ] #max fps
+      - [ byte, 0x0002343b, 1 ] # fps mode 1
+      - [ bef32, 0x10060170, 60 ] # max fps
 PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
   "60 FPS":
     Games:
@@ -14252,6 +14252,6 @@ PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 0x01 ] #fps mode 1
-      - [ bef32, 0x10060170, 60 ] #max fps
+      - [ byte, 0x0002343b, 1 ] # fps mode 1
+      - [ bef32, 0x10060170, 60 ] # max fps
 
