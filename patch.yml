@@ -13173,31 +13173,31 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
 Anchors:
-  debugmenunotesBTS: &debugmenunotesBTS "L3 = Brings Debug Menu\nL1/R1 = Change pages\nOnly tested BCUS98298"
+  debugmenunotesBTS: &debugmenunotesBTS "L3 = Brings Debug Menu\nL1/R1 = Change pages\nOnly tested on BCUS98298"
   BTS_disc_v100_debugmenu: &BTS_disc_v100_debugmenu
-      - [ be32, 0x00D6416C, 0x82FD0008 ]
-      - [ be32, 0x00D64170, 0xEB370000 ]
-      - [ be32, 0x00D64174, 0x48000020 ]
-      - [ be32, 0x00D64194, 0x3F004465 ]
-      - [ be32, 0x00D64198, 0x63186275 ]
-      - [ be32, 0x00D6419C, 0x7B1807C6 ]
-      - [ be32, 0x00D641A0, 0x48000020 ]
-      - [ be32, 0x00D641C0, 0x6718674D ]
-      - [ be32, 0x00D641C4, 0x6318656E ]
-      - [ be32, 0x00D641C8, 0x7FB9C040 ]
-      - [ be32, 0x00D641CC, 0x48000020 ]
-      - [ be32, 0x00D641EC, 0x409E005C ]
-      - [ be32, 0x00D641F0, 0xEB370008 ]
-      - [ be32, 0x00D641F4, 0x3F007500 ]
-      - [ be32, 0x00D641F8, 0x48000020 ]
-      - [ be32, 0x00D64218, 0x7B1807C6 ]
-      - [ be32, 0x00D6421C, 0x7FB9C040 ]
-      - [ be32, 0x00D64220, 0x409E0028 ]
-      - [ be32, 0x00D64224, 0x48000020 ]
-      - [ be32, 0x00D64244, 0x38600001 ]
-      - [ be32, 0x00D64248, 0x4835B4DE ]
-      - [ be32, 0x0035B4D8, 0x48D6416E ]
-      
+    - [ be32, 0x00d6416c, 0x82fd0008 ]
+    - [ be32, 0x00d64170, 0xeb370000 ]
+    - [ be32, 0x00d64174, 0x48000020 ]
+    - [ be32, 0x00d64194, 0x3f004465 ]
+    - [ be32, 0x00d64198, 0x63186275 ]
+    - [ be32, 0x00d6419c, 0x7b1807c6 ]
+    - [ be32, 0x00d641a0, 0x48000020 ]
+    - [ be32, 0x00d641c0, 0x6718674d ]
+    - [ be32, 0x00d641c4, 0x6318656e ]
+    - [ be32, 0x00d641c8, 0x7fb9c040 ]
+    - [ be32, 0x00d641cc, 0x48000020 ]
+    - [ be32, 0x00d641ec, 0x409e005c ]
+    - [ be32, 0x00d641f0, 0xeb370008 ]
+    - [ be32, 0x00d641f4, 0x3f007500 ]
+    - [ be32, 0x00d641f8, 0x48000020 ]
+    - [ be32, 0x00d64218, 0x7b1807c6 ]
+    - [ be32, 0x00d6421c, 0x7fb9c040 ]
+    - [ be32, 0x00d64220, 0x409e0028 ]
+    - [ be32, 0x00d64224, 0x48000020 ]
+    - [ be32, 0x00d64244, 0x38600001 ]
+    - [ be32, 0x00d64248, 0x4835b4de ]
+    - [ be32, 0x0035b4d8, 0x48d6416e ]
+
 PPU-ec6d9414990cb8ad0adb282f5d16a1af4cb3f956:
   "Debug Menu":
     Games:
