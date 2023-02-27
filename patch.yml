@@ -599,9 +599,9 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
       "Demon's Souls":
         BLES00932: [ 01.00 ]
     Author: "horkrux"
-    Patch Version: 1.0
-    Group:
     Notes: *FreeCam_Notes
+    Group:
+    Patch Version: 1.0
     Patch:
       - [ load, *BLES00932_FreeCam ]
 
