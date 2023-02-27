@@ -1533,25 +1533,27 @@ PPU-6875682ab309df32307c5305c43bb132c4e261fa:
     Patch:
       - [ load, *JoJoASB_FPS ]
 
-LegoCompleteSaga_titleID: &LegoCompleteSaga_titleID
+LegoStarWarsTheCompleteSaga_titleID: &LegoStarWarsTheCompleteSaga_titleID
     "LEGO Star Wars: The Complete Saga":
       BLUS30079: [ 02.00 ]
       BLES00121: [ 02.00 ]
 
 PPU-023ff768c205b6a7b819005c6eccf5c099ca3e04:
   "No Blur":
-    Games: *LegoCompleteSaga_titleID
+    Games: *LegoStarWarsTheCompleteSaga_titleID
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0023dabc, 0x38000000 ]
   "1280x720 Resolution":
-    Games: *LegoCompleteSaga_titleID
+    Games: *LegoStarWarsTheCompleteSaga_titleID
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004a75f2, 1280 ]
-      - [ be16, 0x004a75f6, 720  ]
+      - [ be16, 0x004a75f6, 720 ]
 
 Anchors:
   LC_FPS: &LC_FPS
@@ -2093,6 +2095,7 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
   "Skip any videos with X button":
     Games: *gow3-103-title
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0026fe14, 0x901f ]
@@ -2131,8 +2134,8 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
     Notes: *gow3fog
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00296a90, 0x38000000 ] #Disable Layered fog
-      - [ be32, 0x00296bd4, 0x38000000 ] #On pause
+      - [ be32, 0x00296a90, 0x38000000 ] # Disable Layered fog
+      - [ be32, 0x00296bd4, 0x38000000 ] # On pause
   "Disable Bloom":
     Games: *gow3-103-title
     Author: "illusion"
@@ -2180,16 +2183,17 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
     Patch:
       - [ bef32, 0x00528560, 1000 ]
       - [ bef32, 0x005284b8, 100000 ]
-      - [ be32, 0x0026b528, 0x60000000 ] #don't write to target fps
-      - [ bef32, 0x0052bee4, 60 ] #target fps # read max of 60 for physics stuff
-      - [ be16, 0x0026b6e6, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x0026b74a, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x0026b75e, 0xe7a8 ] #1000.0f sync stuff
-      - [ be16, 0x001e51b6, 0xe7a8 ] #1000.0f gameplay speed scaling
-      - [ be16, 0x002710f6, 0xe7a8 ] #1000.0f video player speed scaling
+      - [ be32, 0x0026b528, 0x60000000 ] # don't write to target fps
+      - [ bef32, 0x0052bee4, 60 ] # target fps # read max of 60 for physics stuff
+      - [ be16, 0x0026b6e6, 0xe7a8 ] # 1000.0f sync stuff
+      - [ be16, 0x0026b74a, 0xe7a8 ] # 1000.0f sync stuff
+      - [ be16, 0x0026b75e, 0xe7a8 ] # 1000.0f sync stuff
+      - [ be16, 0x001e51b6, 0xe7a8 ] # 1000.0f gameplay speed scaling
+      - [ be16, 0x002710f6, 0xe7a8 ] # 1000.0f video player speed scaling
   "Skip any videos with X button":
     Games: *gow3-100-title
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0026fd18, 0x901f ]
@@ -2228,8 +2232,8 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
     Notes: *gow3fog
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00296994, 0x38000000 ] #Disable Layered fog
-      - [ be32, 0x00296ad8, 0x38000000 ] #On pause
+      - [ be32, 0x00296994, 0x38000000 ] # Disable Layered fog
+      - [ be32, 0x00296ad8, 0x38000000 ] # On pause
   "Disable Bloom":
     Games: *gow3-100-title
     Author: "illusion"
@@ -2243,7 +2247,7 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0015d1b8, 0x38000000 ] #Camera sway
+      - [ be32, 0x0015d1b8, 0x38000000 ] # Camera sway
   "Skip intro":
     Games: *gow3-100-title
     Author: "illusion"
