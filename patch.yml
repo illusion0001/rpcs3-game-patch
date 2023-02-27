@@ -13470,6 +13470,8 @@ PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
       "Just Cause 2":
         NPUB30606: [ 01.02 ]
     Author: "illusion"
+    Notes:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x004087a8, 0x38600000 ]
 
@@ -13595,6 +13597,7 @@ PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0:
       "Portal 2":
         NPUB31077: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00008234, 0x30a50060 ]
@@ -13626,6 +13629,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
       "Puppeteer":
         NPUA80959: [ 01.00 ]
     Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32,  0x000431dc, 0x38800001 ] # 60 FPS
@@ -13635,6 +13639,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
       "Puppeteer":
         NPUA80959: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00050c84, 0x9107 ]
@@ -13646,6 +13651,7 @@ PPU-a35283e496aaade410bce3883e61041aac08de7f:
       "Puppeteer":
         BCJS30078: [ 01.00 ]
     Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32,  0x00042a2c, 0x38800001 ] # 60 FPS
@@ -13655,6 +13661,7 @@ PPU-a35283e496aaade410bce3883e61041aac08de7f:
       "Puppeteer":
         BCJS30078: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000504d4, 0x9107 ]
@@ -13666,6 +13673,7 @@ PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
       "Puppeteer":
         BCES00935: [ 01.00 ]
     Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32,  0x00042a2c, 0x38800001 ] # 60 FPS
@@ -13675,6 +13683,7 @@ PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
       "Puppeteer":
         BCES00935: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000504d4, 0x9107 ]
@@ -13686,6 +13695,7 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
       "Puppeteer: Demo version":
         NPEA90125: [ 01.00 ]
     Author: "ZEROx, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00042f9c, 0x38800001 ] # 60 FPS
@@ -13695,6 +13705,7 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
       "Puppeteer: Demo version":
         NPEA90125: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00050cb4, 0x9107 ]
