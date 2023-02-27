@@ -1787,7 +1787,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       - [ be16, 0x00308078, 0x3f91 ]
       - [ be16, 0x00308070, 0x404e ]
       - [ be16, 0x01841cf8, 0x3f91 ]
-      - [ be16, 0x01841d00, 0x404e ] #gamespeed
+      - [ be16, 0x01841d00, 0x404e ] # gamespeed
       - [ be16, 0x01841d08, 0x3f91 ]
       - [ be16, 0x0125e5c6, 0x4270 ]
       - [ be32, 0x003080b0, 0x3bc0003c ]
@@ -1796,7 +1796,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
     Author: "ZEROx"
-    Notes: "Fixes square artefacts on particle effects."
+    Notes: "Fixes square artifacts on particles."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x012b3330, 0x987f ]
@@ -1808,16 +1808,16 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
     Notes: "Disable overall blur effect, small speed improvement."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00e2de60, 0x4b30bbe1 ] #call
-      - [ be32, 0x00139a40, 0x7383ffff ] #andi r3,r28,0xffff
-      - [ be32, 0x00139a44, 0x2c034fa6 ] #cmpwi r3,0x4fa6
-      - [ be32, 0x00139a48, 0x4182000c ] #beq
-      - [ be32, 0x00139a4c, 0x2c0327d0 ] #cmpwi r3,0x27d0
-      - [ be32, 0x00139a50, 0x4082000c ] #bne
-      - [ be32, 0x00139a54, 0x38600000 ] #li r3,0x0
-      - [ be32, 0x00139a58, 0x48000008 ] #b
-      - [ be32, 0x00139a5c, 0x38600001 ] #li r3,0x1
-      - [ be32, 0x00139a60, 0x4e800020 ] #blr
+      - [ be32, 0x00e2de60, 0x4b30bbe1 ] # call
+      - [ be32, 0x00139a40, 0x7383ffff ] # andi r3,r28,0xffff
+      - [ be32, 0x00139a44, 0x2c034fa6 ] # cmpwi r3,0x4fa6
+      - [ be32, 0x00139a48, 0x4182000c ] # beq
+      - [ be32, 0x00139a4c, 0x2c0327d0 ] # cmpwi r3,0x27d0
+      - [ be32, 0x00139a50, 0x4082000c ] # bne
+      - [ be32, 0x00139a54, 0x38600000 ] # li r3,0x0
+      - [ be32, 0x00139a58, 0x48000008 ] # b
+      - [ be32, 0x00139a5c, 0x38600001 ] # li r3,0x1
+      - [ be32, 0x00139a60, 0x4e800020 ] # blr
   "Half-screen glitches fix":
     Games:
       "Need for Speed Rivals":
