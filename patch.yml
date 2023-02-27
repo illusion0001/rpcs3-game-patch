@@ -2671,8 +2671,8 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
         BLJM61019: [ 02.24 ]
         NPJB00516: [ 01.23 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x004a0dc4, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2681,8 +2681,8 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
         BLJM61019: [ 02.24 ]
         NPJB00516: [ 01.23 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f830, 0x00 ]
 
@@ -2693,8 +2693,8 @@ PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
         BLJM61019: [ 01.00 ]
         NPJB00516: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x0043678c, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2703,8 +2703,8 @@ PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
         BLJM61019: [ 01.00 ]
         NPJB00516: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x01680860, 0x00 ]
 
@@ -2715,8 +2715,8 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
         BLUS31156: [ 01.27 ]
         NPUB31154: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x004a7394, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2725,8 +2725,8 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
         BLUS31156: [ 01.27 ]
         NPUB31154: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x0182a4b0, 0x00 ]
 
@@ -2737,8 +2737,8 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
         BLUS31156: [ 01.00 ]
         NPUB31154: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x0043b7dc, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2747,8 +2747,8 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
         BLUS31156: [ 01.00 ]
         NPUB31154: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x01698260, 0x00 ]
 
@@ -2759,8 +2759,8 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
         BLES01807: [ 01.27 ]
         NPEB01283: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x004a0e34, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2769,8 +2769,8 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
         BLES01807: [ 01.27 ]
         NPEB01283: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f7b0, 0x00 ]
 
@@ -2781,8 +2781,8 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
         BLES01807: [ 01.00 ]
         NPEB01283: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *unlock60FpsNotes
+    Patch Version: 1.0
     Patch:
       - [ be16, 0x004367fc, 0x4800 ]
   "Skip Rockstar Boot Logo":
@@ -2791,8 +2791,8 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
         BLES01807: [ 01.00 ]
         NPEB01283: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Patch Version: 1.0
     Notes: *skipRockstarBootLogoNotes
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x016808e0, 0x00 ]
 
@@ -3121,6 +3121,7 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
       "Ratchet & Clank Future: A Crack in Time":
         NPUA80966: [ 01.20 ]
     Author: "Bungholio"
+    Notes:
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00467a64, 0xd03d0008 ]
@@ -5639,6 +5640,7 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
         NPUA80698: [ 01.10 ]
         NPHA80194: [ 01.10 ]
     Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00094a50, 0x98e3 ]
@@ -7208,6 +7210,7 @@ PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
         NPUB31195: [ 01.00 ]
         NPEB01363: [ 01.00 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0031a804, 0x38000001 ]
@@ -7219,6 +7222,7 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
         BLUS30736: [ 01.03 ]
         BLES01250: [ 01.03 ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0031dff0, 0x38000001 ]
@@ -7879,6 +7883,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
         NPUA80697: [ All ]
         NPHA80193: [ All ]
     Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b5d4, 0x409e ]
@@ -8890,6 +8895,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
     Author: "illusion, ZEROx"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00fb1208, "open(file:///mainmenu.gum)     " ]
