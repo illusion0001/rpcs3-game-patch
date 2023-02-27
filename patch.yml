@@ -6956,7 +6956,7 @@ PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
     Notes: "Disable In Game HUD, needs further testing."
     Patch Version: 1.0
     Patch:
-    #  - [ be32, 0x009c3488, 0x00000001 ] # Menu HUD scale (never use this)
+     # - [ be32, 0x009c3488, 0x00000001 ] # Menu HUD scale (never use this)
       - [ be32, 0x009ba544, 0x00000000 ]
 
 PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
@@ -6964,7 +6964,7 @@ PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
     Games:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
-    #Author:
+    Author: "Margen67"
     Notes: "Enable \"Stretch to Display Area\" option to take advantage of this patch."
     Patch Version: 1.0
     Patch:
