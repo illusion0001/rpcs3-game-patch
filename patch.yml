@@ -11178,8 +11178,8 @@ Anchors:
     - [ be32, 0x0044cb14, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
   ms3psnfps: &ms3psnfps
-    - [ be32, 0x005ba9dc, 0x38800001 ] #vfps
-    - [ be32, 0x005ba514, 0x60000000 ] #target fps
+    - [ be32, 0x005ba9dc, 0x38800001 ] # vfps
+    - [ be32, 0x005ba514, 0x60000000 ] # target fps
 
   ms3100dsr: &ms3100dsr
     - [ be32, 0x004760f0, 0x38600000 ] # li r3 0x0
@@ -11194,8 +11194,8 @@ Anchors:
     - [ be32, 0x00456c94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
   ms3100fps: &ms3100fps
-    - [ be32, 0x005ee690, 0x38800001 ] #vfps
-    - [ be32, 0x005ee42c, 0x60000000 ] #target fps
+    - [ be32, 0x005ee690, 0x38800001 ] # vfps
+    - [ be32, 0x005ee42c, 0x60000000 ] # target fps
 
   ms3100intro: &ms3100intro
     - [ be32, 0x007fb744, 0x3084345f ]
@@ -11696,8 +11696,8 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
     Notes: *ms3fpsnotes
     Patch Version: 2.0
     Patch:
-      - [ be32, 0x005ea630, 0x60000000 ] #vfps
-      - [ be32, 0x005ea3cc, 0x60000000 ] #target fps
+      - [ be32, 0x005ea630, 0x60000000 ] # vfps
+      - [ be32, 0x005ea3cc, 0x60000000 ] # target fps
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse Singleplayer Demo":
