@@ -2081,11 +2081,11 @@ Anchors:
         BCAS25003: [ 01.03 ]
         BCKS15003: [ 01.03 ]
 
-PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
+PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
   "Unlock FPS":
     Games: *gow3-103-title
     Author: "ZEROx, illusion"
-    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60 FPS and above."
+    Notes: "Unlocks internal timestep calculation. Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60 FPS and above."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00528560, 1000 ]
@@ -2174,7 +2174,7 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: #God of War 3 1.03
       - [ be32, 0x003de184, 0x7d4803a6 ] # mtspr LR,r10
       - [ be32, 0x003de188, 0x4e800020 ] # blr
 
-PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: #God of War 3 1.00
+PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
   "Unlock FPS":
     Games: *gow3-100-title
     Author: "ZEROx, illusion"
@@ -3431,78 +3431,78 @@ Anchors:
     - [ be32, 0x0093e30c, 0xc1890990 ] # Cargo fix
     - [ be32, 0x0093e394, 0xc0090990 ] # Reticle bloom
   # Dof patch
-    - [ be32, 0x0093dd64, 0x48113d2d ] #Call1
-    - [ be32, 0x0093dd88, 0x48113d19 ] #Call2
-    - [ be32, 0x00a0ae2c, 0x48046c85 ] #Call3
+    - [ be32, 0x0093dd64, 0x48113d2d ] # Call1
+    - [ be32, 0x0093dd88, 0x48113d19 ] # Call2
+    - [ be32, 0x00a0ae2c, 0x48046c85 ] # Call3
   # Func 1 Overall DoF 1
-    - [ be32, 0x00a51a90, 0xc09c0aa4 ] #Load f4
-    - [ be32, 0x00a51a94, 0xc27e04d4 ] #f19 = 0.3
-    - [ be32, 0x00a51a98, 0xec8404f2 ] #f4*f19
-    - [ be32, 0x00a51a9c, 0x4e800020 ] #Return
+    - [ be32, 0x00a51a90, 0xc09c0aa4 ] # Load f4
+    - [ be32, 0x00a51a94, 0xc27e04d4 ] # f19 = 0.3
+    - [ be32, 0x00a51a98, 0xec8404f2 ] # f4*f19
+    - [ be32, 0x00a51a9c, 0x4e800020 ] # Return
   # Func 2 Cutscene Dof
-    - [ be32, 0x00a51aa0, 0xc01c0aac ] #Load f0
-    - [ be32, 0x00a51aa4, 0xc17e1d34 ] #f11 = 0.75
-    - [ be32, 0x00a51aa8, 0xec0002f2 ] #f0*f11
-    - [ be32, 0x00a51aac, 0x4e800020 ] #Return
+    - [ be32, 0x00a51aa0, 0xc01c0aac ] # Load f0
+    - [ be32, 0x00a51aa4, 0xc17e1d34 ] # f11 = 0.75
+    - [ be32, 0x00a51aa8, 0xec0002f2 ] # f0*f11
+    - [ be32, 0x00a51aac, 0x4e800020 ] # Return
   # Func 3 Overall Dof 2
-    - [ be32, 0x00a51ab0, 0x3d200146 ] #r9 = 1460000
-    - [ be32, 0x00a51ab4, 0x3929481c ] #r9 = 146481c
-    - [ be32, 0x00a51ab8, 0x80080014 ] #Load pattern to r0
-    - [ be32, 0x00a51abc, 0x7f804800 ] #Compare r0 to r9
+    - [ be32, 0x00a51ab0, 0x3d200146 ] # r9 = 1460000
+    - [ be32, 0x00a51ab4, 0x3929481c ] # r9 = 146481c
+    - [ be32, 0x00a51ab8, 0x80080014 ] # Load pattern to r0
+    - [ be32, 0x00a51abc, 0x7f804800 ] # Compare r0 to r9
     - [ be32, 0x00a51ac0, 0x409e0010 ]
-    - [ be32, 0x00a51ac4, 0xc01e10a0 ] #f0 = 0.3
-    - [ be32, 0x00a51ac8, 0xd008000c ] #Store f0
+    - [ be32, 0x00a51ac4, 0xc01e10a0 ] # f0 = 0.3
+    - [ be32, 0x00a51ac8, 0xd008000c ] # Store f0
     - [ be32, 0x00a51acc, 0x48000008 ]
-    - [ be32, 0x00a51ad0, 0xd3e8000c ] #Default store
-    - [ be32, 0x00a51ad4, 0x4e800020 ] #Return
+    - [ be32, 0x00a51ad0, 0xd3e8000c ] # Default store
+    - [ be32, 0x00a51ad4, 0x4e800020 ] # Return
   # Bloom correction patch v2.2
-    - [ be32, 0x0093e308, 0x481137d1 ] #Call
-    - [ be32, 0x00a51ad8, 0xc1a909a4 ] #Load f13
-    - [ be32, 0x00a51adc, 0xc19e064c ] #f12 = 0.69
-    - [ be32, 0x00a51ae0, 0x808909a8 ] #r4 unique value e198
-    - [ be32, 0x00a51ae4, 0x2f840000 ] #if r4 <= 0
-    - [ be32, 0x00a51ae8, 0x409d0058 ] #Skip to Main menu
+    - [ be32, 0x0093e308, 0x481137d1 ] # Call
+    - [ be32, 0x00a51ad8, 0xc1a909a4 ] # Load f13
+    - [ be32, 0x00a51adc, 0xc19e064c ] # f12 = 0.69
+    - [ be32, 0x00a51ae0, 0x808909a8 ] # r4 unique value e198
+    - [ be32, 0x00a51ae4, 0x2f840000 ] # if r4 <= 0
+    - [ be32, 0x00a51ae8, 0x409d0058 ] # Skip to Main menu
   # Bills town Bloater and escape (2)
-    - [ be32, 0x00a51aec, 0x3ca03ba4 ] #r5 = 3ba40000
-    - [ be32, 0x00a51af0, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51af4, 0x419c0074 ] #go to Patch if less
+    - [ be32, 0x00a51aec, 0x3ca03ba4 ] # r5 = 3ba40000
+    - [ be32, 0x00a51af0, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51af4, 0x419c0074 ] # go to Patch if less
   # Bills town Cemetery (1)
-    - [ be32, 0x00a51af8, 0x808909a4 ] #r4 unique value e194
-    - [ be32, 0x00a51afc, 0x3ca03e80 ] #r5 = 3e800000
-    - [ be32, 0x00a51b00, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b04, 0x419c0068 ] #go to Patch if less
+    - [ be32, 0x00a51af8, 0x808909a4 ] # r4 unique value e194
+    - [ be32, 0x00a51afc, 0x3ca03e80 ] # r5 = 3e800000
+    - [ be32, 0x00a51b00, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b04, 0x419c0068 ] # go to Patch if less
   # Bills town main street (2)
-    - [ be32, 0x00a51b08, 0x3ca04026 ] #r5 = 40260000
-    - [ be32, 0x00a51b0c, 0x38a56666 ] #r5 = 40266666
-    - [ be32, 0x00a51b10, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b14, 0x419e0054 ] #go to Patch if ==
+    - [ be32, 0x00a51b08, 0x3ca04026 ] # r5 = 40260000
+    - [ be32, 0x00a51b0c, 0x38a56666 ] # r5 = 40266666
+    - [ be32, 0x00a51b10, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b14, 0x419e0054 ] # go to Patch if ==
   # Bills town Trap (2)
-    - [ be32, 0x00a51b18, 0x3ca0403d ] #r5 = 403d0000
-    - [ be32, 0x00a51b1c, 0x38a5e4e2 ] #r5 = 403ce4e2
-    - [ be32, 0x00a51b20, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b24, 0x419e0044 ] #go to Patch if ==
+    - [ be32, 0x00a51b18, 0x3ca0403d ] # r5 = 403d0000
+    - [ be32, 0x00a51b1c, 0x38a5e4e2 ] # r5 = 403ce4e2
+    - [ be32, 0x00a51b20, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b24, 0x419e0044 ] # go to Patch if ==
   # Bills Town intro check (2)
-    - [ be32, 0x00a51b28, 0x808909bc ] #r4 unique value e1ac
-    - [ be32, 0x00a51b2c, 0x3ca04007 ] #r5 = 40070000
-    - [ be32, 0x00a51b30, 0x38a50a3d ] #r5 = 40070a3d
-    - [ be32, 0x00a51b34, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b38, 0x419e0030 ] #go to Patch if ==
-    - [ be32, 0x00a51b3c, 0x4e800020 ] #Return
+    - [ be32, 0x00a51b28, 0x808909bc ] # r4 unique value e1ac
+    - [ be32, 0x00a51b2c, 0x3ca04007 ] # r5 = 40070000
+    - [ be32, 0x00a51b30, 0x38a50a3d ] # r5 = 40070a3d
+    - [ be32, 0x00a51b34, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b38, 0x419e0030 ] # go to Patch if ==
+    - [ be32, 0x00a51b3c, 0x4e800020 ] # Return
   # Patch Menu/Ending level
-    - [ be32, 0x00a51b40, 0x808909a0 ] #r4 unique value e190
-    - [ be32, 0x00a51b44, 0x3ca03f8d ] #r5 = 3f8d0000
-    - [ be32, 0x00a51b48, 0x38a52f6f ] #r5 = 3f8d2f6f
-    - [ be32, 0x00a51b4c, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b50, 0x419e0010 ] #Patch menu
-    - [ be32, 0x00a51b54, 0x80a909a4 ] #r5 unique value e194
-    - [ be32, 0x00a51b58, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a51b5c, 0x4c9e0020 ] #Return (bnelr)
-    - [ be32, 0x00a51b60, 0xc19e03fc ] #f12 = 0.5
-    - [ be32, 0x00a51b64, 0x48000008 ] #go to Patch
+    - [ be32, 0x00a51b40, 0x808909a0 ] # r4 unique value e190
+    - [ be32, 0x00a51b44, 0x3ca03f8d ] # r5 = 3f8d0000
+    - [ be32, 0x00a51b48, 0x38a52f6f ] # r5 = 3f8d2f6f
+    - [ be32, 0x00a51b4c, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b50, 0x419e0010 ] # Patch menu
+    - [ be32, 0x00a51b54, 0x80a909a4 ] # r5 unique value e194
+    - [ be32, 0x00a51b58, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a51b5c, 0x4c9e0020 ] # Return (bnelr)
+    - [ be32, 0x00a51b60, 0xc19e03fc ] # f12 = 0.5
+    - [ be32, 0x00a51b64, 0x48000008 ] # go to Patch
   # Patch function
-    - [ be32, 0x00a51b68, 0xedad0332 ] #f13=f13*f12
-    - [ be32, 0x00a51b6c, 0xec000332 ] #f0=f0*f12
-    - [ be32, 0x00a51b70, 0x4e800020 ] #Return
+    - [ be32, 0x00a51b68, 0xedad0332 ] # f13=f13*f12
+    - [ be32, 0x00a51b6c, 0xec000332 ] # f0=f0*f12
+    - [ be32, 0x00a51b70, 0x4e800020 ] # Return
 
   # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming
   # address. Without them this patch wouldn't have been possible.
@@ -3697,77 +3697,77 @@ Anchors:
     - [ be32, 0x00a877e0, 0x60000000 ] # skip assert: x + w <= width && y + h <= height
     - [ be32, 0x0096be58, 0xc1890990 ] # Cargo fix
   # Dof correction patch
-    - [ be32, 0x0096b8b0, 0x48114aa5 ] #Call1
-    - [ be32, 0x0096b8d4, 0x48114a91 ] #Call2
-    - [ be32, 0x00a3a588, 0x48045ded ] #Call3
+    - [ be32, 0x0096b8b0, 0x48114aa5 ] # Call1
+    - [ be32, 0x0096b8d4, 0x48114a91 ] # Call2
+    - [ be32, 0x00a3a588, 0x48045ded ] # Call3
   # Func 1 Overall DoF 1
-    - [ be32, 0x00a80354, 0xc09c0aa4 ] #Load f4 e294
-    - [ be32, 0x00a80358, 0xc27e0424 ] #f19 = 0.3
-    - [ be32, 0x00a8035c, 0xec8404f2 ] #f4*f19
-    - [ be32, 0x00a80360, 0x4e800020 ] #Return
+    - [ be32, 0x00a80354, 0xc09c0aa4 ] # Load f4 e294
+    - [ be32, 0x00a80358, 0xc27e0424 ] # f19 = 0.3
+    - [ be32, 0x00a8035c, 0xec8404f2 ] # f4*f19
+    - [ be32, 0x00a80360, 0x4e800020 ] # Return
   # Func 2 Cutscene Dof
-    - [ be32, 0x00a80364, 0xc01c0aac ] #Load f0 e29c
-    - [ be32, 0x00a80368, 0xc17e1b64 ] #f11 = 0.75
-    - [ be32, 0x00a8036c, 0xec0002f2 ] #f0*f11
-    - [ be32, 0x00a80370, 0x4e800020 ] #Return
+    - [ be32, 0x00a80364, 0xc01c0aac ] # Load f0 e29c
+    - [ be32, 0x00a80368, 0xc17e1b64 ] # f11 = 0.75
+    - [ be32, 0x00a8036c, 0xec0002f2 ] # f0*f11
+    - [ be32, 0x00a80370, 0x4e800020 ] # Return
   # Func 3 Overall Dof 2
-    - [ be32, 0x00a80374, 0x3d200151 ] #r9 = 1510000
-    - [ be32, 0x00a80378, 0x3929e29c ] #r9 = 150e29c
-    - [ be32, 0x00a8037c, 0x80080014 ] #r0 = key addr
-    - [ be32, 0x00a80380, 0x7f804800 ] #Compare r0 to r9
+    - [ be32, 0x00a80374, 0x3d200151 ] # r9 = 1510000
+    - [ be32, 0x00a80378, 0x3929e29c ] # r9 = 150e29c
+    - [ be32, 0x00a8037c, 0x80080014 ] # r0 = key addr
+    - [ be32, 0x00a80380, 0x7f804800 ] # Compare r0 to r9
     - [ be32, 0x00a80384, 0x409e000c ]
-    - [ be32, 0x00a80388, 0xc01e137c ] #f0 = 0.3
-    - [ be32, 0x00a8038c, 0xd008000c ] #Store f0
-    - [ be32, 0x00a80390, 0xc0050000 ] #Restore f0
-    - [ be32, 0x00a80394, 0x4e800020 ] #Return
+    - [ be32, 0x00a80388, 0xc01e137c ] # f0 = 0.3
+    - [ be32, 0x00a8038c, 0xd008000c ] # Store f0
+    - [ be32, 0x00a80390, 0xc0050000 ] # Restore f0
+    - [ be32, 0x00a80394, 0x4e800020 ] # Return
   # Bloom correction patch
-    - [ be32, 0x0096be54, 0x48114549 ] #Call
-    - [ be32, 0x00a8039c, 0xc1a909a4 ] #Load f13
-    - [ be32, 0x00a803a0, 0xc19e059c ] #f12 = 0.69
-    - [ be32, 0x00a803a4, 0x808909a8 ] #r4 unique value e198
-    - [ be32, 0x00a803a8, 0x2f840000 ] #if r4 <= 0
-    - [ be32, 0x00a803ac, 0x409d0058 ] #Skip to Main menu
+    - [ be32, 0x0096be54, 0x48114549 ] # Call
+    - [ be32, 0x00a8039c, 0xc1a909a4 ] # Load f13
+    - [ be32, 0x00a803a0, 0xc19e059c ] # f12 = 0.69
+    - [ be32, 0x00a803a4, 0x808909a8 ] # r4 unique value e198
+    - [ be32, 0x00a803a8, 0x2f840000 ] # if r4 <= 0
+    - [ be32, 0x00a803ac, 0x409d0058 ] # Skip to Main menu
   # Bills town Bloater and escape(2)
-    - [ be32, 0x00a803b0, 0x3ca03ba4 ] #r5 = 3ba40000
-    - [ be32, 0x00a803b4, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a803b8, 0x419c0074 ] #go to Patch if less
+    - [ be32, 0x00a803b0, 0x3ca03ba4 ] # r5 = 3ba40000
+    - [ be32, 0x00a803b4, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a803b8, 0x419c0074 ] # go to Patch if less
   # Bills town Cemetery(1)
-    - [ be32, 0x00a803bc, 0x808909a4 ] #r4 unique value e194
-    - [ be32, 0x00a803c0, 0x3ca03e80 ] #r5 = 3e800000
-    - [ be32, 0x00a803c4, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a803c8, 0x419c0068 ] #go to Patch if less
+    - [ be32, 0x00a803bc, 0x808909a4 ] # r4 unique value e194
+    - [ be32, 0x00a803c0, 0x3ca03e80 ] # r5 = 3e800000
+    - [ be32, 0x00a803c4, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a803c8, 0x419c0068 ] # go to Patch if less
   # Bills town main street(2)
-    - [ be32, 0x00a803cc, 0x3ca04026 ] #r5 = 40260000
-    - [ be32, 0x00a803d0, 0x38a56666 ] #r5 = 40266666
-    - [ be32, 0x00a803d4, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a803d8, 0x419e0054 ] #go to Patch if ==
+    - [ be32, 0x00a803cc, 0x3ca04026 ] # r5 = 40260000
+    - [ be32, 0x00a803d0, 0x38a56666 ] # r5 = 40266666
+    - [ be32, 0x00a803d4, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a803d8, 0x419e0054 ] # go to Patch if ==
   # Bills town Trap(2)
-    - [ be32, 0x00a803dc, 0x3ca0403d ] #r5 = 403d0000
-    - [ be32, 0x00a803e0, 0x38a5e4e2 ] #r5 = 403ce4e2
-    - [ be32, 0x00a803e4, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a803e8, 0x419e0044 ] #go to Patch if ==
+    - [ be32, 0x00a803dc, 0x3ca0403d ] # r5 = 403d0000
+    - [ be32, 0x00a803e0, 0x38a5e4e2 ] # r5 = 403ce4e2
+    - [ be32, 0x00a803e4, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a803e8, 0x419e0044 ] # go to Patch if ==
   # Bills Town intro check(2)
-    - [ be32, 0x00a803ec, 0x808909bc ] #r4 unique value e1ac
-    - [ be32, 0x00a803f0, 0x3ca04007 ] #r5 = 40070000
-    - [ be32, 0x00a803f4, 0x38a50a3d ] #r5 = 40070a3d
-    - [ be32, 0x00a803f8, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a803fc, 0x419e0030 ] #go to Patch if ==
-    - [ be32, 0x00a80400, 0x4e800020 ] #Return
+    - [ be32, 0x00a803ec, 0x808909bc ] # r4 unique value e1ac
+    - [ be32, 0x00a803f0, 0x3ca04007 ] # r5 = 40070000
+    - [ be32, 0x00a803f4, 0x38a50a3d ] # r5 = 40070a3d
+    - [ be32, 0x00a803f8, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a803fc, 0x419e0030 ] # go to Patch if ==
+    - [ be32, 0x00a80400, 0x4e800020 ] # Return
   # Patch Menu/Ending level
-    - [ be32, 0x00a80404, 0x808909a0 ] #r4 unique value e190
-    - [ be32, 0x00a80408, 0x3ca03f8d ] #r5 = 3f8d0000
-    - [ be32, 0x00a8040c, 0x38a52f6f ] #r5 = 3f8d2f6f
-    - [ be32, 0x00a80410, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a80414, 0x419e0010 ] #Patch menu
-    - [ be32, 0x00a80418, 0x80a909a4 ] #r5 unique value e194
-    - [ be32, 0x00a8041c, 0x7f842800 ] #compare r4 to r5
-    - [ be32, 0x00a80420, 0x4c9e0020 ] #Return (bnelr)
-    - [ be32, 0x00a80424, 0xc19e034c ] #f12 = 0.5
-    - [ be32, 0x00a80428, 0x48000008 ] #go to Patch
+    - [ be32, 0x00a80404, 0x808909a0 ] # r4 unique value e190
+    - [ be32, 0x00a80408, 0x3ca03f8d ] # r5 = 3f8d0000
+    - [ be32, 0x00a8040c, 0x38a52f6f ] # r5 = 3f8d2f6f
+    - [ be32, 0x00a80410, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a80414, 0x419e0010 ] # Patch menu
+    - [ be32, 0x00a80418, 0x80a909a4 ] # r5 unique value e194
+    - [ be32, 0x00a8041c, 0x7f842800 ] # compare r4 to r5
+    - [ be32, 0x00a80420, 0x4c9e0020 ] # Return (bnelr)
+    - [ be32, 0x00a80424, 0xc19e034c ] # f12 = 0.5
+    - [ be32, 0x00a80428, 0x48000008 ] # go to Patch
   # Patch function
-    - [ be32, 0x00a8042c, 0xedad0332 ] #f13=f13*f12
-    - [ be32, 0x00a80430, 0xec000332 ] #f0=f0*f12
-    - [ be32, 0x00a80434, 0x4e800020 ] #Return
+    - [ be32, 0x00a8042c, 0xedad0332 ] # f13=f13*f12
+    - [ be32, 0x00a80430, 0xec000332 ] # f0=f0*f12
+    - [ be32, 0x00a80434, 0x4e800020 ] # Return
 
   # Special thanks to HdHereidme for debug menu, Smasher248 for inital memory addresses and Skye Mods for mesh trimming
   # address. Without them this patch wouldn't have been possible.
@@ -3796,7 +3796,7 @@ Anchors:
   # source register from one to the other, though some are words and some are bytes, so be careful.
 
   tlou111_ssao: &tlou111_ssao
-    - [ be16, 0x00aa9f9c, 0x9b83 ] #Disable SSAO
+    - [ be16, 0x00aa9f9c, 0x9b83 ] # Disable SSAO
 
   tlou111_mb: &tlou111_mb
     - [ be32, 0x0096aa94, 0x480000e0 ] # Disable motion blur
@@ -3811,139 +3811,139 @@ Anchors:
     - [ be16, 0x00aaa2e4, 0x90c3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x1571E37)
     - [ be16, 0x00aaa290, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571D41)
     - [ be32, 0x00ab9ec8, 0x38000001 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571D41)
-  #Cabin resort fix
-    - [ be64, 0x01572020, 0x1070fd7d7973c900 ] #first line
-    - [ be64, 0x01572030, 0x674da76646c80092 ] #second line p.1
-    - [ be32, 0x01572039, 0x2bfb00a3 ] #second line p.2
-    - [ be64, 0x01572040, 0x00003f8000014034 ] #third line p.1
-    - [ be64, 0x01572048, 0x0000403400013f80 ] #third line p.2
-    - [ be64, 0x01572052, 0x3f80000000a3a588 ] #Inicial Current result
-  #Alpha pass func
-    - [ be32, 0x00a7ffac, 0x419e0020 ] #Go to Alpha pass check
-    - [ be32, 0x00a7ffb0, 0x3d200157 ] #r9 = 0x1570000
-  #Check Task id
-    - [ be32, 0x00a7ffb4, 0x3880201f ] #r4 = 0x201f
-    - [ be32, 0x00a7ffb8, 0x4800018d ] #Task id func Call
-    - [ be32, 0x00a7ffbc, 0x419e0010 ] #beq to Alpha pass check
-    - [ be32, 0x00a7ffc0, 0x98091d41 ] #stb Disable Alpha pass
-    - [ be32, 0x00a7ffc4, 0xb0092028 ] #sth Store flag (0x1572028)
-    - [ be32, 0x00a7ffc8, 0x480001a8 ] #Go to a80170
-  #Alpha pass check
-    - [ be32, 0x00a7ffcc, 0x88691d41 ] #lbz r3 = Alpha pass
-    - [ be32, 0x00a7ffd0, 0x7f801800 ] #cmpw r0 vs r3
-    - [ be32, 0x00a7ffd4, 0x409e019c ] #Skip to a80170
-    - [ be32, 0x00a7ffd8, 0x2f800000 ] #cmpwi r0 vs 0
-    - [ be32, 0x00a7ffdc, 0x419e0010 ] #beq
-    - [ be32, 0x00a7ffe0, 0x38800000 ] #li r4 = 0
-    - [ be32, 0x00a7ffe4, 0xb0892028 ] #sth Store flag (0x1572028)
+  # Cabin resort fix
+    - [ be64, 0x01572020, 0x1070fd7d7973c900 ] # first line
+    - [ be64, 0x01572030, 0x674da76646c80092 ] # second line p.1
+    - [ be32, 0x01572039, 0x2bfb00a3 ]         # second line p.2
+    - [ be64, 0x01572040, 0x00003f8000014034 ] # third line p.1
+    - [ be64, 0x01572048, 0x0000403400013f80 ] # third line p.2
+    - [ be64, 0x01572052, 0x3f80000000a3a588 ] # Initial Current result
+  # Alpha pass func
+    - [ be32, 0x00a7ffac, 0x419e0020 ] # Go to Alpha pass check
+    - [ be32, 0x00a7ffb0, 0x3d200157 ] # r9 = 0x1570000
+  # Check Task id
+    - [ be32, 0x00a7ffb4, 0x3880201f ] # r4 = 0x201f
+    - [ be32, 0x00a7ffb8, 0x4800018d ] # Task id func Call
+    - [ be32, 0x00a7ffbc, 0x419e0010 ] # beq to Alpha pass check
+    - [ be32, 0x00a7ffc0, 0x98091d41 ] # stb Disable Alpha pass
+    - [ be32, 0x00a7ffc4, 0xb0092028 ] # sth Store flag (0x1572028)
+    - [ be32, 0x00a7ffc8, 0x480001a8 ] # Go to a80170
+  # Alpha pass check
+    - [ be32, 0x00a7ffcc, 0x88691d41 ] # lbz r3 = Alpha pass
+    - [ be32, 0x00a7ffd0, 0x7f801800 ] # cmpw r0 vs r3
+    - [ be32, 0x00a7ffd4, 0x409e019c ] # Skip to a80170
+    - [ be32, 0x00a7ffd8, 0x2f800000 ] # cmpwi r0 vs 0
+    - [ be32, 0x00a7ffdc, 0x419e0010 ] # beq
+    - [ be32, 0x00a7ffe0, 0x38800000 ] # li r4 = 0
+    - [ be32, 0x00a7ffe4, 0xb0892028 ] # sth Store flag (0x1572028)
     - [ be32, 0x00a7ffe8, 0x48000008 ]
-    - [ be32, 0x00a7ffec, 0x38800001 ] #li r4 = 1
-    - [ be32, 0x00a7fff0, 0x98891d41 ] #stb r4 Store Alpha pass
-    - [ be32, 0x00a7fff4, 0x4800017c ] #Go to a80170
-  #Task id func
-    - [ be32, 0x00a80144, 0x7ca92214 ] #add r5 = r9 + r4
-    - [ be32, 0x00a80148, 0x3c800142 ] #lis r4 = 0x1420000
-    - [ be32, 0x00a8014c, 0x88649ef4 ] #lbz r3 = Task id first byte
-    - [ be32, 0x00a80150, 0x8c850001 ] #lbzu r4 table byte
-    - [ be32, 0x00a80154, 0x2f840000 ] #r4 vs 0 (Default case)
-    - [ be32, 0x00a80158, 0x419e000c ] #beq (r4 = 0)
-    - [ be32, 0x00a8015c, 0x7f832000 ] #cmpw r3 vs r4
-    - [ be32, 0x00a80160, 0x409efff0 ] #Go back
-    - [ be32, 0x00a80164, 0x2f840000 ] #cmpwi r4 vs 0
-    - [ be32, 0x00a80168, 0x4e800020 ] #Return
-  #The Main function
-    - [ be32, 0x00a3a584, 0x48045a75 ] #Function Call
-    - [ be32, 0x00a7fff8, 0x3d200157 ] #lis r9 = 0x1570000
-    - [ be32, 0x00a7fffc, 0x90692060 ] #stw Store r3
-    - [ be32, 0x00a80000, 0x90a92064 ] #stw Store r5
-    - [ be32, 0x00a80004, 0x3ca00151 ] #lis r5 = 0x1510000
-    - [ be32, 0x00a80008, 0x38a5db24 ] #subi r5 = 0x150db24
-    - [ be32, 0x00a8000c, 0x80050aec ] #lwz r0 = blizzard byte
-    - [ be32, 0x00a80010, 0x2f800000 ] #cmpwi r0 vs 0
-    - [ be32, 0x00a80014, 0x419e0114 ] #beq to Default store (a80128)
-    - [ be32, 0x00a80018, 0xa0092028 ] #lhz r0 = Alpha pass flag
-    - [ be32, 0x00a8001c, 0x2f800001 ] #cmpwi r0 vs 1
-    - [ be32, 0x00a80020, 0x419e0108 ] #beq to Default store (a80128)
-  #Check key addrs
-    - [ be32, 0x00a80024, 0x80080014 ] #lwz r0 = key addr
-    - [ be32, 0x00a80028, 0x7f802800 ] #cmpw r0 vs r5(0x150db24)
-    - [ be32, 0x00a8002c, 0x38803f00 ] #li r4 = 3f00 Final Result
-    - [ be32, 0x00a80030, 0x419e00f0 ] #Go to store result (a80120)
-    - [ be32, 0x00a80034, 0x38a50030 ] #addi r5 = 0x150db54
-    - [ be32, 0x00a80038, 0x7f802800 ] #cmpw r0 vs r5
-    - [ be32, 0x00a8003c, 0x419e00e4 ] #Go to store result (a80120)
-    - [ be32, 0x00a80040, 0x38a5ffe4 ] #subi r5 = 0x150db38
-    - [ be32, 0x00a80044, 0x7f802800 ] #cmpw r0 vs r5
-    - [ be32, 0x00a80048, 0x419e0024 ] #Go to 0x150db38 case (a8006c)
-    - [ be32, 0x00a8004c, 0x38a5fff8 ] #subi r5 = 0x150db30
-    - [ be32, 0x00a80050, 0x7f802800 ] #cmpw r0 vs r5
-    - [ be32, 0x00a80054, 0x409e00d4 ] #Go to Default store (a80128)
-  #0x150db30 case
-    - [ be32, 0x00a80058, 0x3880203b ] #li r4 = 0x203b(case a3)
-    - [ be32, 0x00a8005c, 0x480000e9 ] #Task id func Call
-    - [ be32, 0x00a80060, 0x419e00c8 ] #Go to Default store (a80128)
-    - [ be32, 0x00a80064, 0x38803f00 ] #li r4 = 3f00
-    - [ be32, 0x00a80068, 0x480000b8 ] #Go to Store result (a80120)
-  #0x150db38 Special cases
-    - [ be32, 0x00a8006c, 0x3880203b ] #li r4 = 0x203b(case a3)
-    - [ be32, 0x00a80070, 0x480000d5 ] #Task id func Call
-    - [ be32, 0x00a80074, 0x419e000c ] #Go to next check
-    - [ be32, 0x00a80078, 0x38803f00 ] #li r4 = 0x3f00 Final result
-    - [ be32, 0x00a8007c, 0x480000a4 ] #Go to Store result (a80120)
-    - [ be32, 0x00a80080, 0x38802036 ] #li r4 0x2036(case 92)
-    - [ be32, 0x00a80084, 0x480000c1 ] #Task id func Call
-    - [ be32, 0x00a80088, 0x419e000c ] #Go to next check
-    - [ be32, 0x00a8008c, 0x38804040 ] #li r4 = 0x4040 Final result
-    - [ be32, 0x00a80090, 0x48000090 ] #Go to Store result (a80120)
-    - [ be32, 0x00a80094, 0x38802038 ] #li r4 = 0x2038 (cases 2b/fb)
-    - [ be32, 0x00a80098, 0x480000ad ] #Task id func Call
-    - [ be32, 0x00a8009c, 0x419e000c ] #Skip to usual cases
-    - [ be32, 0x00a800a0, 0x38003f80 ] #li r0 = 0x3f80 Final Result
-    - [ be32, 0x00a800a4, 0x4800007c ] #Go to Store result (a80120)
-    - [ be32, 0x00a800a8, 0x3880202f ] #r4 = 0x202f(main cases)
-    - [ be32, 0x00a800ac, 0x48000099 ] #Task id func Call
-    - [ be32, 0x00a800b0, 0x419e0014 ] #to Joel cases
-    - [ be32, 0x00a800b4, 0x3c60013d ] #lis r3 = 0x13d0000
-    - [ be32, 0x00a800b8, 0x886371b4 ] #lbz r3 = Inside/outside byte (13d71b4) (r3)
-    - [ be32, 0x00a800bc, 0x38a9203c ] #addi r5 = r9+0x203c(0x157203c Ellie cases)
-    - [ be32, 0x00a800c0, 0x48000010 ]
-    - [ be32, 0x00a800c4, 0x3c600151 ] #lis r3 = 0x1510000
-    - [ be32, 0x00a800c8, 0x8063e600 ] #lbz r3 = Inside/outside byte (150e600) (r3)
-    - [ be32, 0x00a800cc, 0x38a92044 ] #addi r5 = r9+0x2044(0x1572044 Joel cases)
-  #Main cases
-    - [ be32, 0x00a800d0, 0xa4850004 ] #lhzu r4 from r5
-    - [ be32, 0x00a800d4, 0x7f832000 ] #cmpw r3 vs r4
-    - [ be32, 0x00a800d8, 0x409efff8 ] #Go back
-    - [ be32, 0x00a800dc, 0xa0892050 ] #lhz r4 = Main byte(0x1502050)
-    - [ be32, 0x00a800e0, 0x7f832000 ] #cmpw r3 vs r4
-    - [ be32, 0x00a800e4, 0xa0850002 ] #lhz r4 = eq-Current/neq-Target result
-    - [ be32, 0x00a800e8, 0x419e0028 ] #beq to Store current result
-    - [ be32, 0x00a800ec, 0xa0092052 ] #lhz r0 = Current result
-    - [ be32, 0x00a800f0, 0x7f802000 ] #cmpw r0 vs r4
-    - [ be32, 0x00a800f4, 0x419e0024 ] #beq to Store main byte
-  #Switcher (spends 30 frames)
-    - [ be32, 0x00a800f8, 0x2f843f80 ] #cmpwi r4 vs 0x3f80
-    - [ be32, 0x00a800fc, 0x7c040378 ] #mr r4 = r0
-    - [ be32, 0x00a80100, 0x419e000c ] #beq
-    - [ be32, 0x00a80104, 0x38840006 ] #addi r4 = r4 + 6
-    - [ be32, 0x00a80108, 0x48000008 ]
-    - [ be32, 0x00a8010c, 0x3884fffa ] #subi r4 = r4 - 6
-    - [ be32, 0x00a80110, 0xb0892052 ] #sth r4 Store new current result
-    - [ be32, 0x00a80114, 0x4800000c ] #b to Store final result
-  #Store main byte
-    - [ be32, 0x00a80118, 0xb0692050 ] #sth r3 Store main byte  (r9)
-  #Store results
-    - [ be32, 0x00a8011c, 0xa0892052 ] #sth r4 = Current resullt  (r9)
-    - [ be32, 0x00a80120, 0xb088000c ] #sth r4 Store final result (r8)
-    - [ be32, 0x00a80124, 0x48000008 ] #Go to return
-    - [ be32, 0x00a80128, 0xd3e8000c ] #Default store
-  #Returning
-    - [ be32, 0x00a8012c, 0x80092056 ] #lwz Load r0 as LR
-    - [ be32, 0x00a80130, 0x7c0803a6 ] #mtlr LR = r0
-    - [ be32, 0x00a80134, 0x80692060 ] #Restore r3
-    - [ be32, 0x00a80138, 0x80a92064 ] #Restore r5
-    - [ be32, 0x00a8013c, 0x38920001 ] #Restore r4
-    - [ be32, 0x00a80140, 0x4e800020 ] #Return
+    - [ be32, 0x00a7ffec, 0x38800001 ] # li r4 = 1
+    - [ be32, 0x00a7fff0, 0x98891d41 ] # stb r4 Store Alpha pass
+    - [ be32, 0x00a7fff4, 0x4800017c ] # Go to a80170
+  # Task id func
+    - [ be32, 0x00a80144, 0x7ca92214 ] # add r5 = r9 + r4
+    - [ be32, 0x00a80148, 0x3c800142 ] # lis r4 = 0x1420000
+    - [ be32, 0x00a8014c, 0x88649ef4 ] # lbz r3 = Task id first byte
+    - [ be32, 0x00a80150, 0x8c850001 ] # lbzu r4 table byte
+    - [ be32, 0x00a80154, 0x2f840000 ] # r4 vs 0 (Default case)
+    - [ be32, 0x00a80158, 0x419e000c ] # beq (r4 = 0)
+    - [ be32, 0x00a8015c, 0x7f832000 ] # cmpw r3 vs r4
+    - [ be32, 0x00a80160, 0x409efff0 ] # Go back
+    - [ be32, 0x00a80164, 0x2f840000 ] # cmpwi r4 vs 0
+    - [ be32, 0x00a80168, 0x4e800020 ] # Return
+  # The Main function
+    - [ be32, 0x00a3a584, 0x48045a75 ] # Function Call
+    - [ be32, 0x00a7fff8, 0x3d200157 ] # lis r9 = 0x1570000
+    - [ be32, 0x00a7fffc, 0x90692060 ] # stw Store r3
+    - [ be32, 0x00a80000, 0x90a92064 ] # stw Store r5
+    - [ be32, 0x00a80004, 0x3ca00151 ] # lis r5 = 0x1510000
+    - [ be32, 0x00a80008, 0x38a5db24 ] # subi r5 = 0x150db24
+    - [ be32, 0x00a8000c, 0x80050aec ] # lwz r0 = blizzard byte
+    - [ be32, 0x00a80010, 0x2f800000 ] # cmpwi r0 vs 0
+    - [ be32, 0x00a80014, 0x419e0114 ] # beq to Default store (a80128)
+    - [ be32, 0x00a80018, 0xa0092028 ] # lhz r0 = Alpha pass flag
+    - [ be32, 0x00a8001c, 0x2f800001 ] # cmpwi r0 vs 1
+    - [ be32, 0x00a80020, 0x419e0108 ] # beq to Default store (a80128)
+  # Check key addrs
+    - [ be32, 0x00a80024, 0x80080014 ] # lwz r0 = key addr
+    - [ be32, 0x00a80028, 0x7f802800 ] # cmpw r0 vs r5(0x150db24)
+    - [ be32, 0x00a8002c, 0x38803f00 ] # li r4 = 3f00 Final Result
+    - [ be32, 0x00a80030, 0x419e00f0 ] # Go to store result (a80120)
+    - [ be32, 0x00a80034, 0x38a50030 ] # addi r5 = 0x150db54
+    - [ be32, 0x00a80038, 0x7f802800 ] # cmpw r0 vs r5
+    - [ be32, 0x00a8003c, 0x419e00e4 ] # Go to store result (a80120)
+    - [ be32, 0x00a80040, 0x38a5ffe4 ] # subi r5 = 0x150db38
+    - [ be32, 0x00a80044, 0x7f802800 ] # cmpw r0 vs r5
+    - [ be32, 0x00a80048, 0x419e0024 ] # Go to 0x150db38 case (a8006c)
+    - [ be32, 0x00a8004c, 0x38a5fff8 ] # subi r5 = 0x150db30
+    - [ be32, 0x00a80050, 0x7f802800 ] # cmpw r0 vs r5
+    - [ be32, 0x00a80054, 0x409e00d4 ] # Go to Default store (a80128)
+  # 0x150db30 case
+    - [ be32, 0x00a80058, 0x3880203b ] # li r4 = 0x203b(case a3)
+    - [ be32, 0x00a8005c, 0x480000e9 ] # Task id func Call
+    - [ be32, 0x00a80060, 0x419e00c8 ] # Go to Default store (a80128)
+    - [ be32, 0x00a80064, 0x38803f00 ] # li r4 = 3f00
+    - [ be32, 0x00a80068, 0x480000b8 ] # Go to Store result (a80120)
+  # 0x150db38 Special cases
+    - [ be32, 0x00a8006c, 0x3880203b ] # li r4 = 0x203b(case a3)
+    - [ be32, 0x00a80070, 0x480000d5 ] # Task id func Call
+    - [ be32, 0x00a80074, 0x419e000c ] # Go to next check
+    - [ be32, 0x00a80078, 0x38803f00 ] # li r4 = 0x3f00 Final result
+    - [ be32, 0x00a8007c, 0x480000a4 ] # Go to Store result (a80120)
+    - [ be32, 0x00a80080, 0x38802036 ] # li r4 0x2036(case 92)
+    - [ be32, 0x00a80084, 0x480000c1 ] # Task id func Call
+    - [ be32, 0x00a80088, 0x419e000c ] # Go to next check
+    - [ be32, 0x00a8008c, 0x38804040 ] # li r4 = 0x4040 Final result
+    - [ be32, 0x00a80090, 0x48000090 ] # Go to Store result (a80120)
+    - [ be32, 0x00a80094, 0x38802038 ] # li r4 = 0x2038 (cases 2b/fb)
+    - [ be32, 0x00a80098, 0x480000ad ] # Task id func Call
+    - [ be32, 0x00a8009c, 0x419e000c ] # Skip to usual cases
+    - [ be32, 0x00a800a0, 0x38003f80 ] # li r0 = 0x3f80 Final Result
+    - [ be32, 0x00a800a4, 0x4800007c ] # Go to Store result (a80120)
+    - [ be32, 0x00a800a8, 0x3880202f ] # r4 = 0x202f(main cases)
+    - [ be32, 0x00a800ac, 0x48000099 ] # Task id func Call
+    - [ be32, 0x00a800b0, 0x419e0014 ] # to Joel cases
+    - [ be32, 0x00a800b4, 0x3c60013d ] # lis r3 = 0x13d0000
+    - [ be32, 0x00a800b8, 0x886371b4 ] # lbz r3 = Inside/outside byte (13d71b4) (r3)
+    - [ be32, 0x00a800bc, 0x38a9203c ] # addi r5 = r9+0x203c(0x157203c Ellie cases)
+    - [ be32, 0x00a800c0, 0x48000010 ] #
+    - [ be32, 0x00a800c4, 0x3c600151 ] # lis r3 = 0x1510000
+    - [ be32, 0x00a800c8, 0x8063e600 ] # lbz r3 = Inside/outside byte (150e600) (r3)
+    - [ be32, 0x00a800cc, 0x38a92044 ] # addi r5 = r9+0x2044(0x1572044 Joel cases)
+  # Main cases
+    - [ be32, 0x00a800d0, 0xa4850004 ] # lhzu r4 from r5
+    - [ be32, 0x00a800d4, 0x7f832000 ] # cmpw r3 vs r4
+    - [ be32, 0x00a800d8, 0x409efff8 ] # Go back
+    - [ be32, 0x00a800dc, 0xa0892050 ] # lhz r4 = Main byte(0x1502050)
+    - [ be32, 0x00a800e0, 0x7f832000 ] # cmpw r3 vs r4
+    - [ be32, 0x00a800e4, 0xa0850002 ] # lhz r4 = eq-Current/neq-Target result
+    - [ be32, 0x00a800e8, 0x419e0028 ] # beq to Store current result
+    - [ be32, 0x00a800ec, 0xa0092052 ] # lhz r0 = Current result
+    - [ be32, 0x00a800f0, 0x7f802000 ] # cmpw r0 vs r4
+    - [ be32, 0x00a800f4, 0x419e0024 ] # beq to Store main byte
+  # Switcher (spends 30 frames)
+    - [ be32, 0x00a800f8, 0x2f843f80 ] # cmpwi r4 vs 0x3f80
+    - [ be32, 0x00a800fc, 0x7c040378 ] # mr r4 = r0
+    - [ be32, 0x00a80100, 0x419e000c ] # beq
+    - [ be32, 0x00a80104, 0x38840006 ] # addi r4 = r4 + 6
+    - [ be32, 0x00a80108, 0x48000008 ] #
+    - [ be32, 0x00a8010c, 0x3884fffa ] # subi r4 = r4 - 6
+    - [ be32, 0x00a80110, 0xb0892052 ] # sth r4 Store new current result
+    - [ be32, 0x00a80114, 0x4800000c ] # b to Store final result
+  # Store main byte
+    - [ be32, 0x00a80118, 0xb0692050 ] # sth r3 Store main byte  (r9)
+  # Store results
+    - [ be32, 0x00a8011c, 0xa0892052 ] # sth r4 = Current resullt  (r9)
+    - [ be32, 0x00a80120, 0xb088000c ] # sth r4 Store final result (r8)
+    - [ be32, 0x00a80124, 0x48000008 ] # Go to return
+    - [ be32, 0x00a80128, 0xd3e8000c ] # Default store
+  # Returning
+    - [ be32, 0x00a8012c, 0x80092056 ] # lwz Load r0 as LR
+    - [ be32, 0x00a80130, 0x7c0803a6 ] # mtlr LR = r0
+    - [ be32, 0x00a80134, 0x80692060 ] # Restore r3
+    - [ be32, 0x00a80138, 0x80a92064 ] # Restore r5
+    - [ be32, 0x00a8013c, 0x38920001 ] # Restore r4
+    - [ be32, 0x00a80140, 0x4e800020 ] # Return
 
   tlou111_speed: &tlou111_speed
     - [ be16, 0x00aaa1e8, 0x9383 ]     # Speedboost                               (mem address: 0x1571d03)
@@ -4225,11 +4225,11 @@ Anchors:
     - [ be32, 0x0078c5b0, 0x482c5c51 ]
     - [ be32, 0x0078c5b4, 0x48000018 ]
 
-  gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artefacts without removing the fog (1.11 only)"
+  gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artifacts without removing the fog (1.11 only)"
 
   debugmenunotes: &debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
 
-  fpsnotes: &fpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500FPS in loading screen."
+  fpsnotes: &fpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screen."
 
   tloumlaanotes: &tloumlaanotes "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
 
@@ -4338,12 +4338,12 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Notes: "Last modified: 13 Feb 2020.\nFixed a bug where throwing an object at a Infected Severed Head causes a game crash."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006b06a8, 0x483a4b95 ] #Branch
-      - [ be32, 0x00a5523c, 0x3d400001 ] #r10 = 0x10000
-      - [ be32, 0x00a55240, 0x7f9d5000 ] #r29 vs r10
-      - [ be32, 0x00a55244, 0x409d0008 ] #Skip if r29<=r10 // If r29 less or equal to r10 then do nothing
-      - [ be32, 0x00a55248, 0x813d0040 ] #lwz r9,0x40(r29) // load as normal
-      - [ be32, 0x00a5524c, 0x4e800020 ] #Return
+      - [ be32, 0x006b06a8, 0x483a4b95 ] # Branch
+      - [ be32, 0x00a5523c, 0x3d400001 ] # r10 = 0x10000
+      - [ be32, 0x00a55240, 0x7f9d5000 ] # r29 vs r10
+      - [ be32, 0x00a55244, 0x409d0008 ] # Skip if r29<=r10 // If r29 less or equal to r10 then do nothing
+      - [ be32, 0x00a55248, 0x813d0040 ] # lwz r9,0x40(r29) // load as normal
+      - [ be32, 0x00a5524c, 0x4e800020 ] # Return
   "21:9 Aspect Ratio":
     Games: *tlou100_title
     Author: "illusion"
@@ -4504,12 +4504,12 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes: "Fixed a bug where throwing an object at an Infected Severed Head causes a game crash."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006d9368, 0x483aa7ed ] #Call
-      - [ be32, 0x00a83b54, 0x3d400001 ] #r10 = 0x10000
-      - [ be32, 0x00a83b58, 0x7f9d5000 ] #r29 vs r10
-      - [ be32, 0x00a83b5c, 0x409d0008 ] #Skip if r29<=r10 // If r29 less or equal to r10 then do nothing
-      - [ be32, 0x00a83b60, 0x813d0040 ] #lwz r9,0x40(r29) // load as normal
-      - [ be32, 0x00a83b64, 0x4e800020 ] #Return
+      - [ be32, 0x006d9368, 0x483aa7ed ] # Call
+      - [ be32, 0x00a83b54, 0x3d400001 ] # r10 = 0x10000
+      - [ be32, 0x00a83b58, 0x7f9d5000 ] # r29 vs r10
+      - [ be32, 0x00a83b5c, 0x409d0008 ] # Skip if r29<=r10 // If r29 less or equal to r10 then do nothing
+      - [ be32, 0x00a83b60, 0x813d0040 ] # lwz r9,0x40(r29) // load as normal
+      - [ be32, 0x00a83b64, 0x4e800020 ] # Return
   "21:9 Aspect Ratio":
     Games: *tlou111_title
     Author: "illusion"
