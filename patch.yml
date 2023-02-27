@@ -929,6 +929,7 @@ PPU-f2f7f7ea0444353884bb715152147c3a29f4e790:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BLUS31197: [ 01.01 ]
     Author: "emoose"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a5455c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
@@ -977,6 +978,7 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
       "Drakengard 3 (Drag-On Dragoon 3)":
         NPUB31251: [ 01.01 ]
     Author: "emoose"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a5385c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
@@ -1047,6 +1049,7 @@ PPU-c09c496514f6dc591434575b04eb7c003826c11d:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BLJM61043: [ 01.04 ]
     Author: "emoose"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a4e854, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
@@ -1084,6 +1087,7 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BCAS20311: [ 01.02 ]
     Author: "emoose"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a5245c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
@@ -12587,7 +12591,7 @@ Anchors:
   Jak1_Resolution_Notes: &Jak1_Resolution_Notes "Native resolution is 1024x720."
 
 PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
-  "Jak I: 1280x720 Resolution":
+  "Jak 1: 1280x720 Resolution":
     Games:
       "Jak and Daxter Collection":
         BCUS98281: [ 01.00 ]
@@ -12597,7 +12601,7 @@ PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
     Notes: *Jak1_Resolution_Notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0003560a, 0x0500 ]
+      - [ be16, 0x0003560a, 1280 ]
 
 PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
   "1280x720 Resolution":
@@ -12606,10 +12610,10 @@ PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
         NPEA00338: [ 01.00 ]
         NPUA80706: [ 01.00 ]
     Author: "Margen67"
-    Patch Version: 1.0
     Notes: *Jak1_Resolution_Notes
+    Patch Version: 1.0
     Patch:
-      - [ be16, 0x0003569e, 0x0500 ]
+      - [ be16, 0x0003569e, 1280 ]
 
 PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
   "Infinite Ammo":
