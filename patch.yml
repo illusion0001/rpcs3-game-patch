@@ -13594,7 +13594,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Patch Version: 1.0
     Patch:
       - [ be32,  0x000431dc, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x000846c0, 1 ]          # Avoid double game speed
+      - [ bef32, 0x00084690, 1 ]          # Avoid double game speed
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -13634,7 +13634,7 @@ PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
     Patch Version: 1.0
     Patch:
       - [ be32,  0x00042a2c, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00083e28, 1 ]          # Avoid double game speed
+      - [ bef32, 0x00083df8, 1 ]          # Avoid double game speed
   "Disable MLAA":
     Games:
       "Puppeteer":
