@@ -2479,8 +2479,8 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
         BLUS30758: [ 01.00 ]
     Author: "vStar925"
     Notes:
-    Patch Version: 1.0
     Group:
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00095f18, 0x4017b9aa ] # 21:9
       - [ be32, 0x00475234, 0x4017b9aa ] # 21:9 hud
