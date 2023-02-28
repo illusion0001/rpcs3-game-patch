@@ -5108,8 +5108,8 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCJS30035: [ 01.00 ]
     Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_60FPS ]
   "Unlock FPS":
@@ -5121,8 +5121,8 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
         BCJS30035: [ 01.00 ]
     Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_UnlockFPS ]
   "Disable SSAO":
@@ -5260,8 +5260,8 @@ PPU-9fe364d48b610e4b0a1c41d526bec9b1b2039c07:
         BCUS98123: [ 01.00 ]
     Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_60FPS ]
   "Unlock FPS":
@@ -5270,8 +5270,8 @@ PPU-9fe364d48b610e4b0a1c41d526bec9b1b2039c07:
         BCUS98123: [ 01.00 ]
     Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_UnlockFPS ]
   "Disable SSAO":
@@ -5367,8 +5367,8 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCJS30035: [ 01.09 ]
     Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_60FPS ]
   "Unlock FPS":
@@ -5381,8 +5381,8 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
         BCJS30035: [ 01.09 ]
     Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_UnlockFPS ]
   "Disable SSAO":
@@ -5532,8 +5532,8 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
         NPHA80194: [ 01.10 ]
     Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_60FPS ]
   "Unlock FPS":
@@ -5545,8 +5545,8 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
         NPHA80194: [ 01.10 ]
     Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_UnlockFPS ]
   "Disable SSAO":
@@ -5665,8 +5665,8 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
         NPEA90055: [ All ]
     Author: "ZEROx, illusion"
     Notes: *uc260fpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_60FPS ]
   "Unlock FPS":
@@ -5675,8 +5675,8 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
         NPEA90055: [ All ]
     Author: "ZEROx, illusion"
     Notes: *uc2unlockedfpsnotes
-    Patch Version: 1.2
     Group: FPS
+    Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_UnlockFPS ]
   "Disable SSAO":
