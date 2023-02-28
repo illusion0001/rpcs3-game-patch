@@ -7065,8 +7065,8 @@ PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
         BLUS31006: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ load, *tox_aspect_ratio_21_9 ]
   "32:9 Aspect Ratio":
@@ -7076,8 +7076,8 @@ PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
         BLUS31006: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ load, *tox_aspect_ratio_32_9 ]
   "60 FPS":
@@ -7119,8 +7119,8 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
         NPEB01310: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ load, *tox_aspect_ratio_21_9 ]
   "32:9 Aspect Ratio":
@@ -7130,8 +7130,8 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
         NPEB01310: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
-    Patch Version: 1.0
     Group: AR
+    Patch Version: 1.0
     Patch:
       - [ load, *tox_aspect_ratio_32_9 ]
   "60 FPS":
@@ -11868,8 +11868,8 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
         NPEA90125: [ All ]
     Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
-    Patch Version: 1.5
     Group: SPUMLAA
+    Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_01 ]
   "Disable SPU MLAA - Multiple titles":
@@ -11878,8 +11878,8 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
         All: [ All ]
     Author: "Whatcookie"
     Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nBinary Domain\nJourney\nOddworld: Stranger's Wrath HD\nTokyo Jungle\nSoulCalibur Lost Swords\nSoulCalibur V\nYakuza Ishin\nYakuza 5\nFerrari Racing Legends\nPool Nation\nPortal 2\nThe Ratchet & Clank Trilogy" ]
-    Patch Version: 1.5
     Group: SPUMLAA
+    Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_02 ]
 
