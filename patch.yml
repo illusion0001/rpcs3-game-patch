@@ -13914,6 +13914,20 @@ PPU-ed6f26aa6f0b494a9af4f67261fc27b2343da9e1:
     Patch:
       - [ byte, 0x00023c37, 2 ]
 
+PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
+  "60 FPS":
+    Games:
+      "Splatterhouse":
+        BLES01120: [ 01.00 ]
+        BLUS30335: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00819294, 0x9b9f00ee ]
+      - [ be32, 0x010b4608, 0x3c888889 ]
+      - [ be32, 0x011178d0, 0x3c888889 ]
+      - [ be32, 0x011178d4, 0x3c888889 ]
+
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
     Games:
