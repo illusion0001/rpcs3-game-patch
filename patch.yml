@@ -501,8 +501,8 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x018cefbc, 0x4017b9aa ] # 21:9 aspect ratio
-      - [ be32, 0x0190433c, 0x4017b9aa ]
+      - [ bef32, 0x018cefbc, 2.37071 ] # 21:9 aspect ratio
+      - [ bef32, 0x0190433c, 2.37071 ]
   "32:9 Aspect Ratio":
     Games:
       "Demon's Souls":
@@ -529,7 +529,6 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
         BLUS30443: [ 01.00 ]
     Author: "horkrux"
     Notes: *FreeCam_Notes
-    Group:
     Patch Version: 1.0
     Patch:
       - [ load, *BLUS30443_FreeCam ]
@@ -572,8 +571,8 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x018cf13c, 0x4017b9aa ] # 21:9 aspect ratio
-      - [ be32, 0x01904494, 0x4017b9aa ]
+      - [ bef32, 0x018cf13c, 2.37071 ] # 21:9 aspect ratio
+      - [ bef32, 0x01904494, 2.37071 ]
   "32:9 Aspect Ratio":
     Games:
       "Demon's Souls":
@@ -600,7 +599,6 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
         BLES00932: [ 01.00 ]
     Author: "horkrux"
     Notes: *FreeCam_Notes
-    Group:
     Patch Version: 1.0
     Patch:
       - [ load, *BLES00932_FreeCam ]
@@ -643,8 +641,8 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x018cee14, 0x4017b9aa ] # 21:9 aspect ratio
-      - [ be32, 0x0190430c, 0x4017b9aa ]
+      - [ bef32, 0x018cee14, 2.37071 ] # 21:9 aspect ratio
+      - [ bef32, 0x0190430c, 2.37071 ]
   "32:9 Aspect Ratio":
     Games:
       "Demon's Souls":
@@ -671,7 +669,6 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
         BCAS20071: [ 01.04 ]
     Author: "horkrux"
     Notes: *FreeCam_Notes
-    Group:
     Patch Version: 1.0
     Patch:
       - [ load, *BCAS20071_FreeCam ]
@@ -714,8 +711,8 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x018cefbc, 0x4017b9aa ] # 21:9 aspect ratio
-      - [ be32, 0x0190433c, 0x4017b9aa ]
+      - [ bef32, 0x018cefbc, 2.37071 ] # 21:9 aspect ratio
+      - [ bef32, 0x0190433c, 2.37071 ]
   "32:9 Aspect Ratio":
     Games:
       "Demon's Souls Trade Demo":
@@ -742,7 +739,6 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
         BLUD80018: [ 01.01 ]
     Author: "horkrux"
     Notes: *FreeCam_Notes
-    Group:
     Patch Version: 1.0
     Patch:
       - [ load, *BLUS30443_FreeCam ]
