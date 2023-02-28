@@ -2424,7 +2424,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00474f24, 2.37071 ] # 21:9 Aspect Ratio
-      - [ bef32, 0x000954b8, 2.37071 ] # 21:9 HUD fix for 21:9 AR
+      - [ bef32, 0x000954b8, 2.37071 ] # 21:9 HUD
   "32:9 Aspect Ratio":
     Games:
       "Red Dead Redemption":
@@ -2435,7 +2435,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
     Patch Version: 1.2
     Patch:
       - [ bef32, 0x00474f24, 3.55555 ] # 32:9 Aspect Ratio
-      - [ bef32, 0x000954b8, 3.55555 ] # 32:9 HUD fix for 32:9 AR
+      - [ bef32, 0x000954b8, 3.55555 ] # 32:9 HUD
   "Disable Motion Blur":
     Games:
       "Red Dead Redemption":
@@ -2452,7 +2452,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
         NPUB30638: [ 01.00 ]
         NPEB00833: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "Allows the framerate to exceed 65. (still need to set vblank to unlock framerate)"
+    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025ed14, 0x386003e8 ]
@@ -2478,14 +2478,14 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00095f18, 2.37071 ] # 21:9
-      - [ bef32, 0x00475234, 2.37071 ] # 21:9 hud
+      - [ bef32, 0x00475234, 2.37071 ] # 21:9 HUD
   "Unlock FPS":
     Games:
       "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "Whatcookie, illusion"
-    Notes: "Allows the framerate to exceed 65. (still need to set vblank to unlock framerate)"
+    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025f98c, 0x386003e8 ]
@@ -2558,7 +2558,7 @@ PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
         BLES01294: [ 01.01 ]
         BLUS30758: [ 01.01 ]
     Author: "Whatcookie, illusion"
-    Notes: "Allows the framerate to exceed 65. (still need to set vblank to unlock framerate)"
+    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00260b3c, 0x386003e8 ]
@@ -12849,9 +12849,9 @@ PPU-46bf3c2b3292d77f10d82e3a8729625ab0d3d6c2:
     Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00f5283c, 0x401851ec ]
-      - [ be32, 0x00f5f3f4, 0x401851ec ]
-      - [ be32, 0x00f63128, 0x401851ec ]
+      - [ bef32, 0x00f5283c, 2.38 ]
+      - [ bef32, 0x00f5f3f4, 2.38 ]
+      - [ bef32, 0x00f63128, 2.38 ]
 
 PPU-539a6d42763b06228b136fa70f42070b34d30529:
   "21:9 Aspect Ratio":
@@ -12863,9 +12863,9 @@ PPU-539a6d42763b06228b136fa70f42070b34d30529:
     Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x011bfa38, 0x401851ec ]
-      - [ be32, 0x011c3928, 0x401851ec ]
-      - [ be32, 0x011b0ae0, 0x401851ec ]
+      - [ bef32, 0x011bfa38, 2.38 ]
+      - [ bef32, 0x011c3928, 2.38 ]
+      - [ bef32, 0x011b0ae0, 2.38 ]
 
 PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
   "Infinite Health":
