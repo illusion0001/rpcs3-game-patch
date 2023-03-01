@@ -7238,8 +7238,7 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
 Anchors:
 
   sk82_fisheye: &sk82_fisheye
-    - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
-    - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+    - [ be32, 0x00460434, 0x388000013 ]
 
   sk82_219widescreen: &sk82_219widescreen
     - [ be32, 0x01311760, 0x4002f1bd ]
