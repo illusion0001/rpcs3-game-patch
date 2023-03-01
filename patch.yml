@@ -7235,6 +7235,18 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
     Patch:
       - [ be32, 0x0031dff0, 0x38000001 ]
 
+Anchors:
+
+  sk82_fisheye: &sk82_fisheye
+    - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
+    - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+
+  sk82_219widescreen: &sk82_219widescreen
+    - [ be32, 0x01311760, 0x4002f1bd ]
+
+  sk82_movies: &sk82_movies
+    - [ be32, 0x001bd8c8, 0x60000000 ]
+
 PPU-c5d2fd31933f88313956774b84346d242979eba6:
   "21:9 Aspect Ratio":
     Games:
@@ -7244,7 +7256,7 @@ PPU-c5d2fd31933f88313956774b84346d242979eba6:
     Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x01311760, 0x4002f1bd ]
+      - [ load, *sk82_219widescreen ]
   "Disable Fisheye":
     Games:
       "Skate 2":
@@ -7253,8 +7265,16 @@ PPU-c5d2fd31933f88313956774b84346d242979eba6:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
-      - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+      - [ load, *sk82_fisheye ]
+  "Skip Intro Logos":
+    Games:
+      "Skate 2":
+        BLUS30253: [ 01.02 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_movies ]
 
 PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
   "21:9 Aspect Ratio":
@@ -7265,7 +7285,7 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
     Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x01311760, 0x4002f1bd ]
+      - [ load, *sk82_219widescreen ]
   "Disable Fisheye":
     Games:
       "Skate 2":
@@ -7274,8 +7294,16 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0043c84c, 0xc0090088 ] # lfs f0,0x88(r9)
-      - [ be32, 0x0043c808, 0xc3c90048 ] # lfs f30,0x48(r9)
+      - [ load, *sk82_fisheye ]
+  "Skip Intro Logos":
+    Games:
+      "Skate 2":
+        BLES00461: [ 01.02 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_movies ]
 
 PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
   "Unlock FPS":
