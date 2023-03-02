@@ -876,7 +876,7 @@ PPU-QoiFRPF8j00N996aQMthtWqEUG0Y:
       - [ be32, 0x0064768d, 0x006481d5 ]
 
 Anchors:
-  DOD3_FPS_Notes: &DOD3_FPS_Notes "Need to also change Vblank frequency to 120Hz for 60FPS or 240Hz for 120FPS. Going over 120FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+  DOD3_FPS_Notes: &DOD3_FPS_Notes "Need to also change Vblank frequency to 120Hz for 60 FPS or 240Hz for 120 FPS. Going over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
   # Min frametime is this value / 30
   # 0.125 / 30 is 4.1ms, so max FPS is 240
   # This game has a second framerate limiter based
@@ -1005,7 +1005,7 @@ PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
       "Drakengard 3 (Drag-On Dragoon 3)":
         NPEB01407: [ All ]
     Author: "Whatcookie, Asinine"
-    Notes: "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\", so the patch can't be separated. Need to also change Vblank frequency to 120Hz for 60FPS or 240Hz for 120FPS. Going over 120FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+    Notes: "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\", so the patch can't be separated. Need to also change Vblank frequency to 120Hz for 60 FPS or 240Hz for 120 FPS. Going over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ecf1c, 0.125 ] # 240 max FPS
