@@ -6881,9 +6881,9 @@ PPU-223cc85fc80a6667fae775c7c02f7f65e6b2871f:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x001855cb, 0x00 ] # unlock fps ingame
-      - [ byte, 0x001855d7, 0x00 ] # unlock fps ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # unlock fps in menu
+      - [ byte, 0x001855cb, 0x00 ] # Unlock FPS ingame
+      - [ byte, 0x001855d7, 0x00 ] # Unlock FPS ingame
+      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
 PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
   "Unlock FPS":
@@ -6894,9 +6894,9 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # unlock fps ingame
-      - [ byte, 0x00185463, 0x00 ] # unlock fps ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # unlock fps in menu
+      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
+      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
+      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
 PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
   "Unlock FPS":
@@ -6907,9 +6907,9 @@ PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # unlock fps ingame
-      - [ byte, 0x00185463, 0x00 ] # unlock fps ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # unlock fps in menu
+      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
+      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
+      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
 PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
   "Unlock FPS":
@@ -6920,9 +6920,9 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # unlock fps ingame
-      - [ byte, 0x00185463, 0x00 ] # unlock fps ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # unlock fps in menu
+      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
+      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
+      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
 PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
   "21:9 Aspect Ratio":
@@ -14277,8 +14277,8 @@ PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 1 ] # fps mode 1
-      - [ bef32, 0x10060170, 60 ] # max fps
+      - [ byte, 0x0002343b, 1 ] # FPS mode 1
+      - [ bef32, 0x10060170, 60 ] # Max FPS
 PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
   "60 FPS":
     Games:
@@ -14288,6 +14288,6 @@ PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 1 ] # fps mode 1
-      - [ bef32, 0x10060170, 60 ] # max fps
+      - [ byte, 0x0002343b, 1 ] # FPS mode 1
+      - [ bef32, 0x10060170, 60 ] # Max FPS
 
