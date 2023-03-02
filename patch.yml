@@ -8421,14 +8421,14 @@ PPU-890a336132e35e8bfb7cbe430ea9b09114915346:
 
 Anchors:
   HMPDF_FPS_USEU: &HMPDF_FPS_USEU
-    - [ be32, 0x00bf289c, 0x3f800000 ]
+    - [ bef32, 0x00bf289c, 1 ]
     - [ be16, 0x00589496, 0x0001 ]
     - [ be16, 0x005894ba, 0x0001 ]
     - [ be16, 0x00589802, 0x0001 ]
     - [ be16, 0x0058982a, 0x0001 ]
 
   HMPDF_FPS_JP: &HMPDF_FPS_JP
-    - [ be32, 0x00bf22fc, 0x3f800000 ]
+    - [ bef32, 0x00bf22fc, 1 ]
     - [ be16, 0x00586202, 0x0001 ]
     - [ be16, 0x00586226, 0x0001 ]
     - [ be16, 0x0058656e, 0x0001 ]
@@ -8484,21 +8484,21 @@ PPU-1105af0a4d6a4a1481930c6f3090c476cde06c4c:
 
 Anchors:
   HMPDF2_FPS_USEU: &HMPDF2_FPS_USEU
-    - [ be32, 0x000423c8, 0x3f800000 ]
+    - [ bef32, 0x000423c8, 1 ]
     - [ be16, 0x006af44e, 0x0001 ]
     - [ be16, 0x006af46e, 0x0001 ]
     - [ be16, 0x006af492, 0x0001 ]
     - [ be16, 0x006af4b6, 0x0001 ]
 
   HMPDF2_FPS_AS: &HMPDF2_FPS_AS
-    - [ be32, 0x00042390, 0x3f800000 ]
+    - [ bef32, 0x00042390, 1 ]
     - [ be16, 0x006af0b6, 0x0001 ]
     - [ be16, 0x006af0d6, 0x0001 ]
     - [ be16, 0x006af0fa, 0x0001 ]
     - [ be16, 0x006af11e, 0x0001 ]
 
   HMPDF2_FPS_JP: &HMPDF2_FPS_JP
-    - [ be32, 0x00041f40, 0x3f800000 ]
+    - [ bef32, 0x00041f40, 1 ]
     - [ be16, 0x006a48f6, 0x0001 ]
     - [ be16, 0x006a4916, 0x0001 ]
     - [ be16, 0x006a493a, 0x0001 ]
@@ -8594,7 +8594,7 @@ PPU-311fcd98af6adc5e64e6a833eb959f43b0976193:
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00041f78, 0x3f800000 ]
+      - [ bef32, 0x00041f78, 1 ]
       - [ be16, 0x006ab316, 0x0001 ]
       - [ be16, 0x006ab336, 0x0001 ]
       - [ be16, 0x006ab35a, 0x0001 ]
