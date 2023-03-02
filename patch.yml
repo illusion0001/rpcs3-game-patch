@@ -1952,7 +1952,7 @@ PPU-93aed31e80e0a91e11fdcff1b83d42c235bc3548:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 0x01 ]       # 60 fps
+      - [ byte, 0x004c4383, 1 ]          # 60 FPS
       - [ be32, 0x00162228, 0x60000000 ] # No reset
       - [ be32, 0x001633e8, 0x60000000 ] # Pause fix
 
@@ -1965,7 +1965,7 @@ PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 0x01 ]       # 60 fps
+      - [ byte, 0x004c4383, 1 ]          # 60 FPS
       - [ be32, 0x001622dc, 0x60000000 ] # No reset
       - [ be32, 0x0016349c, 0x60000000 ] # Pause fix
 
@@ -2085,9 +2085,9 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00528560, 1000 ]
-      - [ bef32, 0x005284b8, 50000 ] # min fps of 2
-      - [ be16, 0x000c7b0a, 0xccc8 ] # chainswing fix
-      - [ be16, 0x000ea0fe, 0xccc8 ] # water freeze fix
+      - [ bef32, 0x005284b8, 50000 ] # Min FPS of 2
+      - [ be16, 0x000c7b0a, 0xccc8 ] # Chainswing fix
+      - [ be16, 0x000ea0fe, 0xccc8 ] # Water freeze fix
   "Skip any videos with X button":
     Games: *gow3-103-title
     Author: "illusion"
@@ -2179,8 +2179,8 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
     Patch:
       - [ bef32, 0x00528560, 1000 ]
       - [ bef32, 0x005284b8, 100000 ]
-      - [ be32, 0x0026b528, 0x60000000 ] # don't write to target fps
-      - [ bef32, 0x0052bee4, 60 ] # target fps # read max of 60 for physics stuff
+      - [ be32, 0x0026b528, 0x60000000 ] # Don't write to target FPS
+      - [ bef32, 0x0052bee4, 60 ] # Target FPS # read max of 60 for physics stuff
       - [ be16, 0x0026b6e6, 0xe7a8 ] # 1000.0f sync stuff
       - [ be16, 0x0026b74a, 0xe7a8 ] # 1000.0f sync stuff
       - [ be16, 0x0026b75e, 0xe7a8 ] # 1000.0f sync stuff
