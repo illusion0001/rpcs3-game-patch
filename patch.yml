@@ -4743,6 +4743,35 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000db720, 0x4e800020 ]
+  "Infinite Ammo":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0008C578, 0x60000000 ]
+  "No Reload":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0008C4DC, 0x7D004378 ]
+  "Max Camo":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00076564, 0x38000064 ]
+      - [ be32, 0x00076568, 0x38600064 ]
+      - [ be32, 0x000765B4, 0x3BA00064 ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
