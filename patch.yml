@@ -3012,9 +3012,9 @@ PPU-301488b15ab0e31e7c5b284da437c5047eabd025:
     Notes:
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x00ca2500, 0.001 ] # max fps
-      - [ bef32, 0x00ca4170, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c9438c, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2500, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca4170, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c9438c, 0.001 ] # Min gamespeed
 
 PPU-a3ed375ea1044d5abe734a4aa3a740f7673a4274:
   "Unlock FPS":
@@ -3025,9 +3025,9 @@ PPU-a3ed375ea1044d5abe734a4aa3a740f7673a4274:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00ca2500, 0.001 ] # max fps
-      - [ bef32, 0x00ca4170, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c9438c, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2500, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca4170, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c9438c, 0.001 ] # Min gamespeed
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: A Crack in Time":
@@ -3047,9 +3047,9 @@ PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00ca2448, 0.001 ] # max fps
-      - [ bef32, 0x00ca40b8, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c942fc, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2448, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca40b8, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c942fc, 0.001 ] # Min gamespeed
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: A Crack in Time":
@@ -3069,9 +3069,9 @@ PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00ca2398, 0.001 ] # max fps
-      - [ bef32, 0x00ca4008, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c941fc, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2398, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca4008, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c941fc, 0.001 ] # Min gamespeed
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: A Crack in Time":
@@ -3109,9 +3109,9 @@ PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00ca2378, 0.001 ] # max fps
-      - [ bef32, 0x00ca3ff8, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c9420c, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2378, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca3ff8, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c9420c, 0.001 ] # Min gamespeed
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   "1280x720 Resolution":
@@ -3141,9 +3141,9 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00ca2370, 0.001 ] # max fps
-      - [ bef32, 0x00ca3fe0, 0.001 ] # min gamespeed
-      - [ bef32, 0x00c9420c, 0.001 ] # min gamespeed
+      - [ bef32, 0x00ca2370, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca3fe0, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c9420c, 0.001 ] # Min gamespeed
   "Skip Intro Logos":
     Games:
       "Ratchet & Clank Future: A Crack in Time":
@@ -3317,7 +3317,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
     Notes: "Skips SCE intros up to first video\n2.0 Skips intro video."
     Patch Version: 2.0
     Patch:
-      - [ byte, 0x00204d5b, 0x01 ] # Skip intro vid on first run
+      - [ byte, 0x00204d5b, 0x01 ] # Skip intro video on first run
       - [ be16, 0x00411ff4, 0x4800 ] # Skip intro logo
       - [ be32, 0x003efa04, 0x480225f5 ] # func call
       - [ be32, 0x00411ff8, 0x3c60009e ] # lis r3,0x9e
@@ -3344,8 +3344,8 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
     Patch Version: 2.0
     Patch:
       - [ bef32, 0x0039e284, 1000 ]
-      - [ bef32, 0x002cae2c, 10000 ] # timestamp
-      - [ bef32, 0x0083b2cc, 60 ] # target fps, main float
+      - [ bef32, 0x002cae2c, 10000 ] # Timestamp
+      - [ bef32, 0x0083b2cc, 60 ] # Target FPS, main float
       - [ be32, 0x002cadd8, 0x60000000 ]
       - [ be16, 0x002c537e, 0x93cc ] # 1000.0f gameplay speed scaling
       - [ be16, 0x002caec6, 0x93cc ] # 1000.0f sync
@@ -3400,7 +3400,7 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0043f210, 0x38a00000 ]
-# moved fps 1.12 to canary, Todo: re add when fixed
+# Moved FPS 1.12 to canary. TODO: re-add when fixed.
 
 PPU-93623f42f6f50bed58ca60927ed43beab749a2cd:
   "Disable MLAA":
@@ -5087,10 +5087,10 @@ Anchors:
   uc2_Demo_vmb: &uc2_Demo_vmb
     - [ be16, 0x000c986c, 0x9b83 ] # Velocity motion blur
 
-  debugmenunotesUC2: &debugmenunotesUC2 "Enable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+  debugmenunotesUC2: &debugmenunotesUC2 "Enable Debug Console (DECR Console) mode to unlock full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc2spupostnotes: &uc2spupostnotes "Fixes green graphics when using Resolution Scaling."
   uc260fpsnotes: &uc260fpsnotes "Allows framerates of up to 60 FPS."
-  uc2unlockedfpsnotes: &uc2unlockedfpsnotes "Completely unlocks Uncharted 2's framerate."
+  uc2unlockedfpsnotes: &uc2unlockedfpsnotes "Completely unlocks the framerate."
   uc2spulightingnotes: &uc2spulightingnotes "Improves performance slightly by using GPU path for lighting.\nFixes lighting issues in Chapter 9 when shining the beams of light onto the statues."
 
 PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
@@ -5217,7 +5217,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
     Patch:
       - [ be16, 0x00023c64, 0x419e ]
       - [ be32, 0x00062e10, 0x60000000 ] # Don't pause on Select button
-  "Bug Fix: Quit to Menu Crash": # TODO: port to PSN ver
+  "Bug Fix: Quit to Menu Crash": # TODO: Port to PSN version
     Games:
       "Uncharted 2: Among Thieves":
         BCES00509: [ 01.00 ]
@@ -5745,7 +5745,7 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
     Notes: *debugmenunotesUC2
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00097a18, 0x98c3 ] # demo doesn't have check, fps text disabled by default + decr infinite loading
+      - [ be16, 0x00097a18, 0x98c3 ] # Demo doesn't have check. FPS text is disabled by default + DECR infinite loading
 
 Anchors:
   uc3_100_FPS: &uc3_100_FPS
