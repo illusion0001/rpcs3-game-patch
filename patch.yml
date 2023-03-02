@@ -1348,7 +1348,7 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
       - [ be32, 0x00181118, 0x60000000 ]
 
 Anchors:
-  ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60 FPS if you are good at button mashing, but 120FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+  ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60 FPS if you are good at button mashing, but 120 FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
   ASURA_DEVnotes: &ASURA_DEVnotes "Press D-pad Left at any time to access the Developer Menu."
 
   ASURA_FPS: &ASURA_FPS
@@ -7970,7 +7970,7 @@ Anchors:
     - [ be32, 0x001423e8, 0x494447e9 ] # jump to code cave
 
   # get mftb
-    - [ be32, 0x01586bd0, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
+    - [ be32, 0x01586bd0, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
 
   # get mftb delta
     - [ be32, 0x01586bd4, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
@@ -8006,12 +8006,12 @@ Anchors:
 
   # constants
     - [ be32, 0x01586c24, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x01586c28, 0.05 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x01586c28, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   DS1_BLES01396_FPS: &DS1_BLES01396_FPS
   # offset by Lilium
 
-  # 60fps noskip; addresses offset by +0x108
+  # 60 FPS noskip; addresses offset by +0x108
     - [ be32, 0x00146f48, 0x38800002 ] # li r4 0x2
     - [ be32, 0x00146f4c, 0x989f070c ]
     - [ be32, 0x00146f50, 0x989f070d ]
@@ -8057,12 +8057,12 @@ Anchors:
 
   # constants
     - [ be32, 0x01586d44, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x01586d48, 0.05 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x01586d48, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   DS1_BLES01402_FPS: &DS1_BLES01402_FPS
   # offset by Lilium
 
-  # 60fps noskip; addresses offset by -0x770
+  # 60 FPS noskip; addresses offset by -0x770
     - [ be32, 0x001466d0, 0x38800002 ] # li r4 0x2
     - [ be32, 0x001466d4, 0x989f070c ]
     - [ be32, 0x001466d8, 0x989f070d ]
@@ -8108,7 +8108,7 @@ Anchors:
 
   # constants
     - [ be32, 0x015864c4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x015864c8, 0.05 ] # maximum timestep size (50ms or 20fps)
+    - [ bef32, 0x015864c8, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
 PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
   "Unlock FPS":
@@ -11246,7 +11246,7 @@ Anchors:
 
   ms3mlaanotes: &ms3mlaanotes "Allows for the use of Resolution Scaling in the title.\nMust be used with Disable Dynamic Resolution Scale patch for proper upscaling and improved performance.\nSet Resolution Scale Threshold to 256x256 Partially fixes screen pattern on bloom when using Resolution Scaling."
 
-  ms3fpsnotes: &ms3fpsnotes "Updated with a new version that has correct game speed above 15FPS.\nIncrease Vblank above 60Hz to go above 60FPS.\nSome UI elements are still tied to target FPS."
+  ms3fpsnotes: &ms3fpsnotes "Updated with a new version that has correct game speed above 15 FPS.\nIncrease Vblank above 60Hz to go above 60 FPS.\nSome UI elements are still tied to target FPS."
 
   ms3ssaonotes: &ms3ssaonotes "Disabling SSAO (Screen Space Ambient Occlusion) does not improve performance, and makes the game look worse. Optional patch for those that wish to use it."
 
