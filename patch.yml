@@ -2879,7 +2879,7 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x008aa558, 0.001 ] # max fps
+      - [ bef32, 0x008aa558, 0.001 ] # Max FPS
 
 PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
   "Infinite Ammo":
