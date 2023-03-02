@@ -13979,57 +13979,50 @@ PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
       - [ be32, 0x011178d0, 0x3c888889 ]
       - [ be32, 0x011178d4, 0x3c888889 ]
 
-PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
-  "60 FPS":
-    Games:
+Anchors:
+  skyrim_titleid: &skyrim_titleid
       "The Elder Scrolls V: Skyrim":
         BLUS30778: [ 01.09 ]
         BLES01329: [ 02.09 ]
         BLES01330: [ 02.09 ]
+
+  skyrimLE_titleid: &skyrimLE_titleid
+      "The Elder Scrolls V: Skyrim Legendary Edition":
+        BLES01885: [ 01.00 ]
+        BLES01886: [ 01.00 ]
+        BLUS31202: [ 01.00 ]
+
+PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
+  "60 FPS":
+    Games: *skyrim_titleid
     Author: "illusion"
     Notes: "Camera speeds up while having 60+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
   "Infinite Shout":
-    Games:
-      "The Elder Scrolls V: Skyrim":
-        BLUS30778: [ 01.09 ]
-        BLES01329: [ 02.09 ]
-        BLES01330: [ 02.09 ]
+    Games: *skyrim_titleid
     Author: "Medo"
     Notes: "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x0008ea00, 0x60000000 ]
   "Can Always Level Up At Trainers":
-    Games:
-      "The Elder Scrolls V: Skyrim":
-        BLUS30778: [ 01.09 ]
-        BLES01329: [ 02.09 ]
-        BLES01330: [ 02.09 ]
+    Games: *skyrim_titleid
     Author: "Medo"
     Notes: "Removes annoying 5 per level limit."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00308d30, 0x60000000 ]
   "Carry Weight Never Increases":
-    Games:
-      "The Elder Scrolls V: Skyrim":
-        BLUS30778: [ 01.09 ]
-        BLES01329: [ 02.09 ]
-        BLES01330: [ 02.09 ]
+    Games: *skyrim_titleid
     Author: "Medo"
     Notes: "Or decreases, apply this patch while you can still run. Unless you prefer being over-encumbered."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00414fcc, 0x60000000 ]
   "Quick Main Level Up":
-    Games:
-      "The Elder Scrolls V: Skyrim":
-        BLUS30778: [ 01.09 ]
-        BLES01329: [ 02.09 ]
-        BLES01330: [ 02.09 ]
+    Games: *skyrim_titleid
     Author: "Medo"
     Notes: "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
     Patch Version: 1.2
@@ -14038,55 +14031,35 @@ PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
 
 PPU-ce80647b91654477032788d990641cde6412a74f:
   "60 FPS":
-    Games:
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    Games: *skyrimLE_titleid
     Author: "illusion"
     Notes: "Camera speeds up while having 60+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
   "Infinite Shout":
-    Games:
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    Games: *skyrimLE_titleid
     Author: "Medo"
     Notes: "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x0008ea00, 0x60000000 ]
   "Can Always Level Up At Trainers":
-    Games:
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    Games: *skyrimLE_titleid
     Author: "Medo"
     Notes: "Removes annoying 5 per level limit."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00308d30, 0x60000000 ]
   "Carry Weight Never Increases":
-    Games:
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    Games: *skyrimLE_titleid
     Author: "Medo"
     Notes: "Or decreases, apply this patch while you can still run. Unless you prefer being over-encumbered."
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00414fcc, 0x60000000 ]
   "Quick Main Level Up":
-    Games:
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    Games: *skyrimLE_titleid
     Author: "Medo"
     Notes: "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
     Patch Version: 1.2
