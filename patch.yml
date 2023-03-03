@@ -2616,8 +2616,7 @@ PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
       - [ be32, 0x00444de0, 0x480001a0 ]
 
 Anchors:
-  62fpsnotes: &62fpsnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
-
+  MirrorsEdgeUnlockFPSnotes: &MirrorsEdgeUnlockFPSnotes "Removes the ~62 FPS limit. Maximum framerate is half the Vblank frequency."
   MirrorsEdgeUnlockFPSDisc: &MirrorsEdgeUnlockFPSDisc
     - [ be32, 0x00eaa348, 0x60000000 ]
   MirrorsEdgeUnlockFPSPSN: &MirrorsEdgeUnlockFPSPSN
@@ -2629,17 +2628,18 @@ PPU-11db6db9c4edc67887b09aa7ec83b18f27adf9a3:
       "Mirror's Edge":
         BLES00322: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 27 September 2020\n\n", *62fpsnotes ]
+    Notes: [ "Last modified: 27 September 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
     Patch Version: 1.0
     Patch:
       - [ load, *MirrorsEdgeUnlockFPSDisc ]
+
 PPU-95323989be16af11f04a017518802d090bc3eb47:
   "Unlock FPS":
     Games:
       "Mirror's Edge":
         BLUS30179: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 27 September 2020\n\n", *62fpsnotes ]
+    Notes: [ "Last modified: 27 September 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
     Patch Version: 1.0
     Patch:
       - [ load, *MirrorsEdgeUnlockFPSDisc ]
@@ -2650,17 +2650,18 @@ PPU-e8a0506d192495504c7f954ce9430e8ba1416c64:
       "Mirror's Edge":
         NPUB30838: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 30 November 2020\n\n", *62fpsnotes ]
+    Notes: [ "Last modified: 30 November 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
     Patch Version: 1.0
     Patch:
       - [ load, *MirrorsEdgeUnlockFPSPSN ]
+
 PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
   "Unlock FPS":
     Games:
       "Mirror's Edge":
         NPEB00052: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 30 November 2020\n\n", *62fpsnotes ]
+    Notes: [ "Last modified: 30 November 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
     Patch Version: 1.0
     Patch:
       - [ load, *MirrorsEdgeUnlockFPSPSN ]
