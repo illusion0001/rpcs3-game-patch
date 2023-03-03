@@ -2670,10 +2670,10 @@ Anchors:
   gta560FpsNotes: &gta560FpsNotes
     "Allows the game to run at 60 FPS when the VBlank frequency is set to 120 Hz.\n\n※ While this patch does set the frame limit to be half of the VBlank frequency, the game will not actually run any higher than 62 FPS except during the legal/copyright notice screen that is shown at boot."
   gta5SkipRockstarBootLogoNotes: &gta5SkipRockstarBootLogoNotes
-    "Skips the Rockstar boot logo, like the PS5 version.\n\n※ Does not skip the legal/copyright notice screen."
+    "Skips the Rockstar boot logo like the PS5 version.\n\n※ Does not skip the legal/copyright notice screen."
 
 PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLJM61019: [ 02.24 ]
@@ -2695,7 +2695,7 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
       - [ byte, 0x0180f830, 0x00 ]
 
 PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLJM61019: [ 01.00 ]
@@ -2717,7 +2717,7 @@ PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
       - [ byte, 0x01680860, 0x00 ]
 
 PPU-33546066628b10ec09f08a3c29c15611f9e65493:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLUS31156: [ 01.27 ]
@@ -2739,7 +2739,7 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
       - [ byte, 0x0182a4b0, 0x00 ]
 
 PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLUS31156: [ 01.00 ]
@@ -2761,7 +2761,7 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
       - [ byte, 0x01698260, 0x00 ]
 
 PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLES01807: [ 01.27 ]
@@ -2783,7 +2783,7 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
       - [ byte, 0x0180f7b0, 0x00 ]
 
 PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
-  "Unlock Framerate to 60 FPS":
+  "60 FPS":
     Games:
       "Grand Theft Auto V (Grand Theft Auto 5)":
         BLES01807: [ 01.00 ]
