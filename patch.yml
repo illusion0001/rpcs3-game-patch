@@ -6232,7 +6232,7 @@ Anchors:
     - [ be32, 0x00dd4eec, 0x88090078 ]
     - [ be32, 0x00dd4ef0, 0x4e800020 ]
 
-  debugmenunotesUC3: &debugmenunotesUC3 "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+  uc3debugmenunotes: &uc3debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
   uc3mlaanotes: &uc3mlaanotes "Allows for the use of Resolution Scaling in the title and also improves performance.\nVersion 2.0 Fixes high levels of Bloom in some areas. (1.10 and 1.19 Only)"
 
@@ -6346,7 +6346,7 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Debug Menu":
     Games: *uc3_100title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC3
+    Notes: *uc3debugmenunotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00041e34, 0x419e ]
@@ -6438,7 +6438,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC3
+    Notes: *uc3debugmenunotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00041e34, 0x419e ]
@@ -6524,7 +6524,7 @@ PPU-664fb0e4a94c62c15a6474841c202fb2bf80ce16:
   "Debug Menu":
     Games: *uc3_110title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC3
+    Notes: *uc3debugmenunotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00042624, 0x419e ]
@@ -6610,7 +6610,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Debug Menu":
     Games: *uc3_119title
     Author: "dron_3, HdHereidme, illusion, ZEROx, Skye"
-    Notes: *debugmenunotesUC3
+    Notes: *uc3debugmenunotes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_devmenu ]
@@ -8328,7 +8328,7 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
       - [ be32, 0x007b37d0, 0x32360000 ]
 
 Anchors:
-  crabnotes: &crabnotes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
+  genjidotb60fpsnotes: &genjidotb60fpsnotes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
 
 PPU-4aeb132cdf86d9c4ab20e48ae70cc823e455e05d:
   "21:9 Aspect Ratio":
@@ -8339,13 +8339,13 @@ PPU-4aeb132cdf86d9c4ab20e48ae70cc823e455e05d:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x100fa8b0, 2.37071 ] # 21:9
+      - [ bef32, 0x100fa8b0, 2.37071 ]
   "60 FPS":
     Games:
       "Genji: Days of the Blade":
         BCES00002: [ 01.00 ]
     Author: "Esppiral, illusion"
-    Notes: *crabnotes
+    Notes: *genjidotb60fpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004d0178, 0x38000000 ] # li r0 0x0
@@ -8356,7 +8356,7 @@ PPU-d99d403214a204b9fe8a5c23079dab8ddf4c0654:
       "Genji: Days of the Blade":
         BCAS20002: [ 01.00 ]
     Author: "illusion"
-    Notes: *crabnotes
+    Notes: *genjidotb60fpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004cbda8, 0x38000000 ] # li r0 0x0
