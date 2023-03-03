@@ -2667,9 +2667,9 @@ PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
       - [ load, *MirrorsEdgeUnlockFPSPSN ]
 
 Anchors:
-  unlock60FpsNotes: &unlock60FpsNotes
+  gta560FpsNotes: &gta560FpsNotes
     "Allows the game to run at 60 FPS when the VBlank frequency is set to 120 Hz.\n\n※ While this patch does set the frame limit to be half of the VBlank frequency, the game will not actually run any higher than 62 FPS except during the legal/copyright notice screen that is shown at boot."
-  skipRockstarBootLogoNotes: &skipRockstarBootLogoNotes
+  gta5SkipRockstarBootLogoNotes: &gta5SkipRockstarBootLogoNotes
     "Skips the Rockstar boot logo, like the PS5 version.\n\n※ Does not skip the legal/copyright notice screen."
 
 PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
@@ -2679,7 +2679,7 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
         BLJM61019: [ 02.24 ]
         NPJB00516: [ 01.23 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004a0dc4, 0x4800 ]
@@ -2689,7 +2689,7 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
         BLJM61019: [ 02.24 ]
         NPJB00516: [ 01.23 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f830, 0x00 ]
@@ -2701,7 +2701,7 @@ PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
         BLJM61019: [ 01.00 ]
         NPJB00516: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0043678c, 0x4800 ]
@@ -2711,7 +2711,7 @@ PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
         BLJM61019: [ 01.00 ]
         NPJB00516: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x01680860, 0x00 ]
@@ -2723,7 +2723,7 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
         BLUS31156: [ 01.27 ]
         NPUB31154: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004a7394, 0x4800 ]
@@ -2733,7 +2733,7 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
         BLUS31156: [ 01.27 ]
         NPUB31154: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0182a4b0, 0x00 ]
@@ -2745,7 +2745,7 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
         BLUS31156: [ 01.00 ]
         NPUB31154: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0043b7dc, 0x4800 ]
@@ -2755,7 +2755,7 @@ PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
         BLUS31156: [ 01.00 ]
         NPUB31154: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x01698260, 0x00 ]
@@ -2767,7 +2767,7 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
         BLES01807: [ 01.27 ]
         NPEB01283: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004a0e34, 0x4800 ]
@@ -2777,7 +2777,7 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
         BLES01807: [ 01.27 ]
         NPEB01283: [ 01.27 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f7b0, 0x00 ]
@@ -2789,7 +2789,7 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
         BLES01807: [ 01.00 ]
         NPEB01283: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *unlock60FpsNotes
+    Notes: *gta560FpsNotes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004367fc, 0x4800 ]
@@ -2799,7 +2799,7 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
         BLES01807: [ 01.00 ]
         NPEB01283: [ 01.00 ]
     Author: "illusion, Karen/あけみ (akemin_dayo)"
-    Notes: *skipRockstarBootLogoNotes
+    Notes: *gta5SkipRockstarBootLogoNotes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x016808e0, 0x00 ]
