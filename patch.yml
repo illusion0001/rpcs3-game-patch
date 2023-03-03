@@ -4739,7 +4739,7 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
+    Notes: "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000db720, 0x4e800020 ]
@@ -4875,7 +4875,7 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
+    Notes: "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000d9fe0, 0x4e800020 ]
@@ -4982,7 +4982,7 @@ PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Allows you to play the game at 60 FPS or higher without modyfing the vblank frequency."
+    Notes: "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000db720, 0x4e800020 ]
