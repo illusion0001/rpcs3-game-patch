@@ -4221,11 +4221,11 @@ Anchors:
     - [ be32, 0x0078c5b0, 0x482c5c51 ]
     - [ be32, 0x0078c5b4, 0x48000018 ]
 
-  gpulightingnotes: &gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artifacts without removing the fog (1.11 only)"
+  tlougpulightingnotes: &tlougpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artifacts without removing the fog (1.11 only)"
 
-  debugmenunotes: &debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
+  tloudebugmenunotes: &tloudebugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
 
-  fpsnotes: &fpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screen."
+  tloufpsnotes: &tloufpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screen."
 
   tloumlaanotes: &tloumlaanotes "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
 
@@ -4310,7 +4310,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Enable GPU Lighting":
     Games: *tlou100_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes: *gpulightingnotes
+    Notes: *tlougpulightingnotes
     Patch Version: 2.0
     Patch:
       - [ load, *tlou100_db ]
@@ -4324,7 +4324,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Debug Menu":
     Games: *tlou100_title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotes
+    Notes: *tloudebugmenunotes
     Patch Version: 1.01
     Patch:
       - [ load, *tlou100_devmenu ]
@@ -4352,7 +4352,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Unlock FPS":
     Games: *tlou100_title
     Author: "illusion"
-    Notes: *fpsnotes
+    Notes: *tloufpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00036ab8, 0x38a00000 ]
@@ -4469,7 +4469,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Enable GPU Lighting":
     Games: *tlou111_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes: *gpulightingnotes
+    Notes: *tlougpulightingnotes
     Patch Version: 2.0
     Patch:
       - [ load, *tlou111_db ]
@@ -4483,7 +4483,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Debug Menu":
     Games: *tlou111_title
     Author: "illusion, ZEROx, dron_3, HdHereidme"
-    Notes: *debugmenunotes
+    Notes: *tloudebugmenunotes
     Patch Version: 1.2
     Patch:
       - [ load, *tlou111_devmenu ]
@@ -4518,7 +4518,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Unlock FPS":
     Games: *tlou111_title
     Author: "illusion"
-    Notes: *fpsnotes
+    Notes: *tloufpsnotes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00039d08, 0x38a00000 ]
