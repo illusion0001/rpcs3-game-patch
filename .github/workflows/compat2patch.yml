@@ -3,13 +3,16 @@ name: Process compat.json into readable patch.yml
 on:
   push:
     paths:
-      - ".github/workflows/compat2patch.yml"
+      - '.github/workflows/compat2patch.yml'
   schedule:
-    - cron: "* * * * *"
+    - cron: '* * * * *'
   workflow_dispatch:
 
 jobs:
   build:
+    if: |
+      github.repository == 'illusion0001/rpcs3-game-patch' &&
+      github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
