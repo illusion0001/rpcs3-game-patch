@@ -1626,73 +1626,74 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       - [ be32, 0x00663680, 0x60000000 ]
 
 Anchors:
+  NieR_FPS_Notes: &NieR_FPS_Notes "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
   NieR_FPS_USEU: &NieR_FPS_USEU
-  # "unlock" framerate
+  # unlock framerate
     - [ be32, 0x00f7c3b8, 0x386001f5 ] # li r3, 1f5
-
     - [ be32, 0x00711b50, 0x489c3ef1 ] # jump to code cave
-
   # get mftb
-    - [ be32, 0x010d5a40, 0x7ccc42e6 ] # mftb r6             // Move from timebase register (clock)
-
+    - [ be32, 0x010d5a40, 0x7ccc42e6 ] # mftb r6             // move from timebase register (clock)
   # get mftb delta
     - [ be32, 0x010d5a44, 0x3ca0010e ] # lis r5,0x010e       // load high bits of address (0x010e23c8)
     - [ be32, 0x010d5a48, 0x60a523c8 ] # ori r5,r5,0x23c8    // load low bits of address
     - [ be32, 0x010d5a4c, 0x7c85202a ] # ldx r4,r5,r4        // load previous frames mftb reading
     - [ be32, 0x010d5a50, 0xf8c50000 ] # std r6,0x0(r5)      // store this frames mftb reading
     - [ be32, 0x010d5a54, 0x7cc43050 ] # subf r6,r4,r6       // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x010d5a58, 0xf8c50080 ] # std r6,0x80(r5)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x010d5a5c, 0xcba50080 ] # lfd f29,0x80(r5)    // load mftb delta into FPR
     - [ be32, 0x010d5a60, 0xffa0ee9c ] # fcfid f29,f29       // convert integer to double
     - [ be32, 0x010d5a64, 0xffa0e818 ] # frsp f29,f29        // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x010d5a68, 0x3c80010d ] # r4,0x10d            // load high bits constants pointer
     - [ be32, 0x010d5a6c, 0x60845a40 ] # ori r4,r4,0x5a40    // load low bits of constants pointer
     - [ be32, 0x010d5a70, 0xc384003c ] # lfs f28,0x3c(r4)    // load timebase frequency
     - [ be32, 0x010d5a74, 0xec3de024 ] # fdivs f1,f29,f28    // divide timebase delta by timebase frequency
-
   # return
     - [ be32, 0x010d5a78, 0x4e800020 ] # blr                 // return
-
   # constants
     - [ be32, 0x010d5a7c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
   NieR_FPS_JP: &NieR_FPS_JP
-  # "unlock" framerate
+  # unlock framerate
     - [ be32, 0x00f7cbcc, 0x386001f5 ] # li r3, 1f5
-
     - [ be32, 0x00711d58, 0x489c48e9 ] # jump to code cave
-
   # get mftb
-    - [ be32, 0x010d6640, 0x7ccc42e6 ] # mftb r6             // Move from timebase register (clock)
-
+    - [ be32, 0x010d6640, 0x7ccc42e6 ] # mftb r6             // move from timebase register (clock)
   # get mftb delta
     - [ be32, 0x010d6644, 0x3ca0010e ] # lis r5,0x010e       // load high bits of address (0x010e23e8)
     - [ be32, 0x010d6648, 0x60a523e8 ] # ori r5,r5,0x23e8    // load low bits of address
     - [ be32, 0x010d664c, 0x7c85202a ] # ldx r4,r5,r4        // load previous frames mftb reading
     - [ be32, 0x010d6650, 0xf8c50000 ] # std r6,0x0(r5)      // store this frames mftb reading
     - [ be32, 0x010d6654, 0x7cc43050 ] # subf r6,r4,r6       // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x010d6658, 0xf8c50080 ] # std r6,0x80(r5)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x010d665c, 0xcba50080 ] # lfd f29,0x80(r5)    // load mftb delta into FPR
     - [ be32, 0x010d6660, 0xffa0ee9c ] # fcfid f29,f29       // convert integer to double
     - [ be32, 0x010d6664, 0xffa0e818 ] # frsp f29,f29        // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x010d6668, 0x3c80010d ] # r4,0x10d            // load high bits constants pointer
     - [ be32, 0x010d666c, 0x60846640 ] # ori r4,r4,0x6640    // load low bits of constants pointer
     - [ be32, 0x010d6670, 0xc384003c ] # lfs f28,0x3c(r4)    // load timebase frequency
     - [ be32, 0x010d6674, 0xec3de024 ] # fdivs f1,f29,f28    // divide timebase delta by timebase frequency
-
   # return
     - [ be32, 0x010d6678, 0x4e800020 ] # blr                 // return
-
   # constants
     - [ be32, 0x010d667c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+
+  NieR_AR_Notes: &NieR_AR_Notes "HUD Elements will be stretched and misplaced."
+  NieR_AR_Configurable_values: &NieR_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
 
 PPU-13950b2e29e05a115fe317815d3da9d2b2baee65:
   "Unlock FPS":
@@ -1701,20 +1702,21 @@ PPU-13950b2e29e05a115fe317815d3da9d2b2baee65:
         BLUS30481: [ All ]
         BLES00826: [ All ]
     Author: "Whatcookie"
-    Notes: "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
+    Notes: *NieR_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *NieR_FPS_USEU ]
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "NieR (Nier Replicant)":
         BLUS30481: [ All ]
         BLES00826: [ All ]
     Author: "dio"
-    Notes: "HUD Elements will be stretched and misplaced. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *NieR_AR_Notes
+    Configurable Values: *NieR_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x01120398, 2.3703704 ] # HUD elements will look wrong & needs stretch to display area
+      - [ bef32, 0x01120398, "Aspect Ratio" ]
 
 PPU-f098ee8410599c81c89f90d698340a078dc69a90:
   "Unlock FPS":
@@ -1722,7 +1724,7 @@ PPU-f098ee8410599c81c89f90d698340a078dc69a90:
       "NieR (Nier Replicant)":
         BLJM60223: [ All ]
     Author: "Whatcookie"
-    Notes: "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
+    Notes: *NieR_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *NieR_FPS_JP ]
