@@ -7470,6 +7470,16 @@ PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
     Patch:
       - [ bef32, 0x00DF78EC, 0.7 ]
 
+Anchors:
+  wipeouthd_ar_notes: &wipeouthd_ar_notes "Fixes stretching and frustum culling. \"Stretch To Display Area\" must be checked in GPU > \"Additional Settings\". HUD is stretched."
+  wipeouthd_highfps_notes: &wipeouthd_highfps_notes "Fixes ship-shield and absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+  wipeouthd_highfps_configurablevalues: &wipeouthd_highfps_configurablevalues
+    "FPS":
+      Type: double_range
+      Value: 120
+      Min: 61
+      Max: 1000
+
 PPU-0e95b58ae209a37060f3388434b59bcce8a708ab:
   "21:9 Aspect Ratio":
     Games:
@@ -7489,63 +7499,50 @@ PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
         NPUA80105: [ 02.51 ]
     Author: "illusion"
     Notes: "Patched default is 0.6."
+    Group: AR
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0072e544, 0.6 ]
-
-PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
   "21:9 Aspect Ratio Fix":
     Games:
       "WipEout HD":
         NPUA80105: [ 02.51 ]
         NPEA00057: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Notes: *wipeouthd_ar_notes
+    Group: AR
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00732808, 2.380000114 ] # 21:9 Stretch Fix
       - [ bef32, 0x0073303c, 2.462 ] # Flame Trail Fix
       - [ bef32, 0x00720058, 2.654 ] # Render FOV Fix
       - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
-
-PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
   "32:9 Aspect Ratio Fix":
     Games:
       "WipEout HD":
         NPUA80105: [ 02.51 ]
         NPEA00057: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Notes: *wipeouthd_ar_notes
+    Group: AR
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00732808, 3.555555582 ] # 32:9 Stretch Fix
       - [ bef32, 0x0073303c, 3.555555582 ] # Flame Trail Fix
       - [ bef32, 0x00720058, 3.555555582 ] # Render FOV Fix
       - [ bef32, 0x0072e544, 0.95 ] # Slightly Extended FOV
-
-PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-  "120 FPS Shield Sync Fix":
+  "High FPS Fixes":
     Games:
       "WipEout HD":
         NPUA80105: [ 02.51 ]
         NPEA00057: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Notes: *wipeouthd_highfps_notes
+    Configurable Values: *wipeouthd_highfps_configurablevalues
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x0072e034, 120 ] # Shield Framerate Fix
-
-PPU-644ef72f7233d9fc7fb4c891083714ee8db474c7:
-  "120 FPS Absorb Sync Fix":
-    Games:
-      "WipEout HD":
-        NPUA80105: [ 02.51 ]
-        NPEA00057: [ 02.51 ]
-    Author: "Lex6s"
-    Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x0073100c, 120 ] # Absorb Glow Framerate Fix
+      - [ bef32, 0x0072e034, "FPS" ] # Shield Framerate Fix
+      - [ bef32, 0x0073100c, "FPS" ] # Absorb Glow Framerate Fix
 
 PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
   "21:9 Aspect Ratio Fix":
@@ -7553,49 +7550,39 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       "WipEout HD Fury":
         BCES00664: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes 21:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Notes: *wipeouthd_ar_notes
+    Group: AR
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00732878, 2.380000114 ] # 21:9 Stretch Fix
       - [ bef32, 0x007330ac, 2.462 ] # Flame Trail Fix
       - [ bef32, 0x007200f8, 2.654 ] # Render FOV Fix
       - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
-
-PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
   "32:9 Aspect Ratio Fix":
     Games:
       "WipEout HD Fury":
         BCES00664: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes 32:9 stretching and frustum culling. Need to enable \"Stretch To Display Area\" in GPU > \"Additional Settings\". HUD still stretched."
+    Notes: *wipeouthd_ar_notes
+    Group: AR
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00732878, 3.555555582 ] # 32:9 Stretch Fix
       - [ bef32, 0x007330ac, 3.555555582 ] # Flame Trail Fix
       - [ bef32, 0x007200f8, 3.555555582 ] # Render FOV Fix
       - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
-
-PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-  "120 FPS Shield Sync Fix":
+  "High FPS Fixes":
     Games:
-      "WipEout HD Fury":
-        BCES00664: [ 02.51 ]
+      "WipEout HD":
+        NPUA80105: [ 02.51 ]
+        NPEA00057: [ 02.51 ]
     Author: "Lex6s"
-    Notes: "Fixes ship-shield getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+    Notes: *wipeouthd_highfps_notes
+    Configurable Values: *wipeouthd_highfps_configurablevalues
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x0072e0d4, 120 ] # Shield Framerate Fix
-
-PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
-  "120 FPS Absorb Sync Fix":
-    Games:
-      "WipEout HD Fury":
-        BCES00664: [ 02.51 ]
-    Author: "Lex6s"
-    Notes: "Fixes absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x0072bf80, 120 ] # Absorb Glow Framerate Fix
+      - [ bef32, 0x0072e0d4, "FPS" ] # Shield Framerate Fix
+      - [ bef32, 0x0072bf80, "FPS" ] # Absorb Glow Framerate Fix
 
 Anchors:
   iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
@@ -8706,12 +8693,14 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 Anchors:
+  hazefpsnotes: &hazefpsnotes "Needs testing above 60 FPS."
   hazefps: &hazefps
     - [ be32, 0x0068d0e8, 0x38000000 ] # li r0 0x0
 
+  hazeammonotes: &hazeammonotes "Unlimited ammo, grenades, etc. without reloading."
   hazeammo: &hazeammo
-    - [ be32, 0x0033854c, 0x60000000 ] # infinite clip capacity
-    - [ be32, 0x00395884, 0x60000000 ] # infinite ammo
+    - [ be32, 0x0033854c, 0x60000000 ] # Infinite clip capacity
+    - [ be32, 0x00395884, 0x60000000 ] # Infinite ammo
 
   hazehp: &hazehp
     - [ be32, 0x0005328c, 0x60000000 ]
@@ -8722,7 +8711,7 @@ PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
       "Haze":
         BLUS30094: [ 01.36 ]
     Author: "illusion"
-    Notes: "Needs testing above 60 FPS."
+    Notes: *hazefpsnotes
     Patch Version: 1.0
     Patch:
       - [ load, *hazefps ]
@@ -8731,7 +8720,7 @@ PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
       "Haze":
         BLUS30094: [ 01.36 ]
     Author: "Aphelion"
-    Notes: "Unlimited ammo, grenades, etc. with no reloading."
+    Notes: *hazeammonotes
     Patch Version: 1.0
     Patch:
       - [ load, *hazeammo ]
@@ -8751,17 +8740,16 @@ PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
       "Haze":
         BLES00157: [ 01.36 ]
     Author: "illusion"
-    Notes: "Needs testing above 60 FPS."
+    Notes: *hazefpsnotes
     Patch Version: 1.0
     Patch:
       - [ load, *hazefps ]
-PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
   "Infinite Ammo":
     Games:
       "Haze":
         BLES00157: [ 01.36 ]
     Author: "Aphelion"
-    Notes: "Unlimited ammo, grenades, etc. with no reloading."
+    Notes: *hazeammonotes
     Patch Version: 1.0
     Patch:
       - [ load, *hazeammo ]
