@@ -2285,65 +2285,69 @@ PPU-0604e637a841bdd85ac770d76281bdca18ac61f4: # OGRE2.self
       - [ load, *Y2HD_ModSupport ]
 
 PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
-  Enable Deltatime:
+  "Enable Deltatime":
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
     Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5220, 0x60000000 ]
       - [ be32, 0x004c5240, 0x48000084 ]
       - [ be32, 0x004c3f0c, 0x386003e8 ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0050f9d8, 0x38600000 ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b2410, 0x48000038 ]
 
 PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
-  Enable Deltatime:
+  "Enable Deltatime":
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
         BLUS30442: [ 01.06 ]
-    Author: illusion
+    Author: "illusion"
     Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5fc0, 0x60000000 ]
       - [ be32, 0x004c5fe0, 0x48000084 ]
       - [ be32, 0x004c4cac, 0x386003e8 ]
-  Disable Motion Blur:
+  "Disable Motion Blur":
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
         BLUS30442: [ 01.06 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005109d0, 0x38600000 ]
-  Skip Intro:
+  "Skip Intro":
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
         BLUS30442: [ 01.06 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
@@ -7337,7 +7341,6 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
       - [ be32, 0x0031dff0, 0x38000001 ]
 
 Anchors:
-
   sk82_fisheye: &sk82_fisheye
     - [ be32, 0x00460434, 0x388000013 ]
 
