@@ -12455,125 +12455,92 @@ PPU-e8d5bbb306b85186133e090b79a5c0fd5d11ccfb: # siren cursed
       - [ be32, 0x00022d90, 0x60000000 ] # startup
       - [ be32, 0x00022980, 0x60000000 ] # splitscreen
 
+Anchors:
+  ratchet_trilogy_ar_notes: &ratchet_trilogy_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  ratchet_trilogy_ar_configurable_values: &ratchet_trilogy_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-ccc559bb969d8a52d00597b7ecc5e76e552c2cb6:
-  "R&C 1 Ultrawide (21:9)":
+  "R&C 1: Aspect Ratio":
     Games:
       "The Ratchet & Clank Trilogy":
         BCES01503: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x004df144, 2.37037 ]
-  "R&C 1 Super Ultrawide (32:9)":
-    Games:
-      "The Ratchet & Clank Trilogy":
-        BCES01503: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x004df144, 3.55555 ]
+      - [ bef32, 0x004df144, "Aspect Ratio" ]
 
 PPU-f3eccbf6ccf5e2aa99f352b612069e7a20198d68:
-  "R&C 1 Ultrawide (21:9)":
+  "R&C 1: Aspect Ratio":
     Games:
       "Ratchet & Clank":
         NPUA80643: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x0052cb04, 2.37037 ]
-  "R&C 1 Super Ultrawide (32:9)":
-    Games:
-      "Ratchet & Clank":
-        NPUA80643: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x0052cb04, 3.55555 ]
+      - [ bef32, 0x0052cb04, "Aspect Ratio" ]
 
 PPU-2489bccdbafacc6ec3a36aa68ae3dcbe7e9e2d6c:
-  "R&C 2 Ultrawide (21:9)":
+  "R&C 2: Aspect Ratio":
     Games:
       "The Ratchet & Clank Trilogy":
         BCES01503: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x010b2574, 2.37037 ]
-  "R&C 2 Super Ultrawide (32:9)":
-    Games:
-      "The Ratchet & Clank Trilogy":
-        BCES01503: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x010b2574, 3.55555 ]
+      - [ bef32, 0x010b2574, "Aspect Ratio" ]
 
 PPU-756536d2feaab9088d1c3cb086d999be20256feb:
-  "R&C 2 Ultrawide (21:9)":
+  "R&C 2: Aspect Ratio":
     Games:
       "Ratchet & Clank 2":
         NPUA80644: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x010b2f04, 2.37037 ]
-  "R&C 2 Super Ultrawide (32:9)":
-    Games:
-      "Ratchet & Clank 2":
-        NPUA80644: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x010b2f04, 3.55555 ]
+      - [ bef32, 0x010b2f04, "Aspect Ratio" ]
 
 PPU-2b534405de98e28b1368947c8f14d9a386bc53de:
-  "R&C 3 Ultrawide (21:9)":
+  "R&C 3: Aspect Ratio":
     Games:
       "The Ratchet & Clank Trilogy":
         BCES01503: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x0096f544, 2.37037 ]
-  "R&C 3 Super Ultrawide (32:9)":
-    Games:
-      "The Ratchet & Clank Trilogy":
-        BCES01503: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x0096f544, 3.55555 ]
+      - [ bef32, 0x0096f544, "Aspect Ratio" ]
 
 PPU-835dc9b413a3f538ddb52f24382b93e3fad5164d:
-  "R&C 3 Ultrawide (21:9)":
+  "R&C 3: Aspect Ratio":
     Games:
       "Ratchet & Clank 3":
         NPUA80645: [ All ]
-    Author: "Juhn"
-    Notes:
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
     Patch Version: 1.2
     Patch:
-      - [ bef32, 0x0096c6a4, 2.37037 ]
-  "R&C 3 Super Ultrawide (32:9)":
-    Games:
-      "Ratchet & Clank 3":
-        NPUA80645: [ All ]
-    Author: "Victoria"
-    Notes:
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x0096f6a4, 3.55555 ]
+      - [ bef32, 0x0096c6a4, "Aspect Ratio" ]
 
 PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
   "Infinite Ammo & Consumables":
