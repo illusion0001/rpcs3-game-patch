@@ -5,46 +5,37 @@ Anchors:
   # Set 60 FPS with no frameskip
   # by Gibbed
     - [ be16, 0x00025ed8, 0x981f ]
-
   # delta time
   # by Whatcookie
     - [ be32, 0x0001b964, 0x496ac2cd ] # jump to code cave
-
   # get mftb
     - [ be32, 0x016c7c30, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-
   # get mftb delta
     - [ be32, 0x016c7c34, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c7c38, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c7c3c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c7c40, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c7c44, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x016c7c48, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c7c4c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c7c50, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c7c54, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x016c7c58, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c7c5c, 0x3a527c30 ] # addi r18,r18,0x7c30   // load low bits of constants pointer
     - [ be32, 0x016c7c60, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c7c64, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c7c68, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x016c7c6c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c7c70, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x016c7c74, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x016c7c78, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c7c7c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c7c80, 0x4e800020 ] # blr                   // return
-
   # constants
     - [ be32, 0x016c7c84, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c7c88, 0.05 ] # maximum timestep size (50ms or 20 FPS)
@@ -53,46 +44,37 @@ Anchors:
   # Set 60 FPS with no frameskip
   # by Gibbed
     - [ be16, 0x00026ac0, 0x981f ]
-
   # delta time
   # by Whatcookie
     - [ be32, 0x0001c534, 0x496ada1d ] # jump to code cave
-
   # get mftb
-    - [ be32, 0x016c9f50, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-
+    - [ be32, 0x016c9f50, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
   # get mftb delta
     - [ be32, 0x016c9f54, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c9f58, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c9f5c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c9f60, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c9f64, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x016c9f68, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c9f6c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c9f70, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c9f74, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x016c9f78, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c9f7c, 0x62529f50 ] # ori r18,r18,0x9f50    // load low bits of constants pointer
     - [ be32, 0x016c9f80, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c9f84, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c9f88, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x016c9f8c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c9f90, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x016c9f94, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x016c9f98, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c9f9c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c9fa0, 0x4e800020 ] # blr                   // return
-
   # constants
     - [ be32, 0x016c9fa4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c9fa8, 0.05 ] # maximum timestep size (50ms or 20 FPS)
@@ -101,46 +83,37 @@ Anchors:
   # Set 60 FPS with no frameskip
   # by Gibbed, KokutouKiritsugu port to BCAS20071
     - [ be16, 0x00024148, 0x981f ]
-
   # delta time
   # by Whatcookie
     - [ be32, 0x00019794, 0x496af37d ] # jump to code cave
-
   # get mftb
-    - [ be32, 0x016c8b10, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-
+    - [ be32, 0x016c8b10, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
   # get mftb delta
     - [ be32, 0x016c8b14, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c8b18, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
     - [ be32, 0x016c8b1c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x016c8b20, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x016c8b24, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x016c8b28, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x016c8b2c, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
     - [ be32, 0x016c8b30, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x016c8b34, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x016c8b38, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
     - [ be32, 0x016c8b3c, 0x62528b10 ] # ori r18,r18,0x8b10    // load low bits of constants pointer
     - [ be32, 0x016c8b40, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x016c8b44, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x016c8b48, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x016c8b4c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x016c8b50, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x016c8b54, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x016c8b58, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x016c8b5c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c8b60, 0x4e800020 ] # blr                   // return
-
   # constants
     - [ be32, 0x016c8b64, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c8b68, 0.05 ] # maximum timestep size (50ms or 20 FPS)
@@ -149,7 +122,20 @@ Anchors:
 
   DeS_DDE_Notes: &DeS_DDE_Notes "Can disable Write Color Buffers for 20% faster performance. Please note this patch gives a slightly darker tone to the game."
 
-  DeS_AR_Notes: &DeS_AR_Notes "UI Elements will be stretched."
+  DeS_AR_Notes: &DeS_AR_Notes "Requires \"Stretch To Display Area\" set in the GPU settings. UI Elements will be stretched."
+
+  DeS_AR_Configurable_Values: &DeS_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
 
   BLUS30443_FreeCam: &BLUS30443_FreeCam
   # Thanks to Meow for original DS1 code
@@ -492,28 +478,17 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
     Patch:
       - [ be32, 0x008eef78, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008eef7c, 0x901c0100 ]
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Demon's Souls":
         BLUS30443: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Group: AR
+    Configurable Values: *DeS_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x018cefbc, 2.37071 ] # 21:9 aspect ratio
-      - [ bef32, 0x0190433c, 2.37071 ]
-  "32:9 Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
-    Author: "Whatcookie"
-    Notes: *DeS_AR_Notes
-    Group: AR
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x018cefbc, 3.5555556 ] # 32:9 aspect ratio
-      - [ bef32, 0x0190433c, 3.5555556 ]
+      - [ bef32, 0x018cefbc, "Aspect Ratio" ]
+      - [ bef32, 0x0190433c, "Aspect Ratio" ]
   "Disable Motion Blur":
     Games:
       "Demon's Souls":
@@ -562,28 +537,17 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
     Patch:
       - [ be32, 0x008f0928, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008f092c, 0x901c0100 ]
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Demon's Souls":
         BLES00932: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Group: AR
+    Configurable Values: *DeS_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x018cf13c, 2.37071 ] # 21:9 aspect ratio
-      - [ bef32, 0x01904494, 2.37071 ]
-  "32:9 Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
-    Author: "Whatcookie"
-    Notes: *DeS_AR_Notes
-    Group: AR
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x018cf13c, 3.5555556 ] # 32:9 aspect ratio
-      - [ bef32, 0x01904494, 3.5555556 ]
+      - [ bef32, 0x018cf13c, "Aspect Ratio" ]
+      - [ bef32, 0x01904494, "Aspect Ratio" ]
   "Disable Motion Blur":
     Games:
       "Demon's Souls":
@@ -632,28 +596,17 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
     Patch:
       - [ be32, 0x008efecc, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008efed0, 0x901c0100 ]
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Demon's Souls":
         BCAS20071: [ 01.04 ]
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_AR_Notes
-    Group: AR
+    Configurable Values: *DeS_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x018cee14, 2.37071 ] # 21:9 aspect ratio
-      - [ bef32, 0x0190430c, 2.37071 ]
-  "32:9 Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
-    Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
-    Notes: *DeS_AR_Notes
-    Group: AR
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x018cee14, 3.5555556 ] # 32:9 aspect ratio
-      - [ bef32, 0x0190430c, 3.5555556 ]
+      - [ bef32, 0x018cee14, "Aspect Ratio" ]
+      - [ bef32, 0x0190430c, "Aspect Ratio" ]
   "Disable Motion Blur":
     Games:
       "Demon's Souls":
@@ -702,28 +655,17 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
     Patch:
       - [ be32, 0x008eef78, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008eef7c, 0x901c0100 ]
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Demon's Souls Trade Demo":
         BLUD80018: [ 01.01 ]
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
-    Group: AR
+    Configurable Values: *DeS_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x018cefbc, 2.37071 ] # 21:9 aspect ratio
-      - [ bef32, 0x0190433c, 2.37071 ]
-  "32:9 Aspect Ratio":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
-    Author: "Whatcookie"
-    Notes: *DeS_AR_Notes
-    Group: AR
-    Patch Version: 1.0
-    Patch:
-      - [ bef32, 0x018cefbc, 3.5555556 ] # 32:9 aspect ratio
-      - [ bef32, 0x0190433c, 3.5555556 ]
+      - [ bef32, 0x018cefbc, "Aspect Ratio" ]
+      - [ bef32, 0x0190433c, "Aspect Ratio" ]
   "Disable Motion Blur":
     Games:
       "Demon's Souls Trade Demo":
