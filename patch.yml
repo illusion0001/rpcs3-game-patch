@@ -8397,24 +8397,38 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
       - [ be32, 0x007b37d0, 0x32360000 ]
 
 Anchors:
-  genjidotb60fpsnotes: &genjidotb60fpsnotes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
+  genji_dotb_60fps_notes: &genji_dotb_60fps_notes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
+  genji_dotb_ar_notes: &genji_dotb_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  genji_dotb_ar_configurable_values: &genji_dotb_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
 
 PPU-4aeb132cdf86d9c4ab20e48ae70cc823e455e05d:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Genji: Days of the Blade":
         BCES00002: [ 01.00 ]
     Author: "Esppiral"
-    Notes:
+    Notes: *genji_dotb_ar_notes
+    Configurable Values: *genji_dotb_ar_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x100fa8b0, 2.37071 ]
+      - [ bef32, 0x100fa8b0, "Aspect Ratio" ]
   "60 FPS":
     Games:
       "Genji: Days of the Blade":
         BCES00002: [ 01.00 ]
     Author: "Esppiral, illusion"
-    Notes: *genjidotb60fpsnotes
+    Notes: *genji_dotb_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004d0178, 0x38000000 ] # li r0 0x0
@@ -8425,7 +8439,7 @@ PPU-d99d403214a204b9fe8a5c23079dab8ddf4c0654:
       "Genji: Days of the Blade":
         BCAS20002: [ 01.00 ]
     Author: "illusion"
-    Notes: *genjidotb60fpsnotes
+    Notes: *genji_dotb_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004cbda8, 0x38000000 ] # li r0 0x0
