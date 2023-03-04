@@ -1216,18 +1216,34 @@ PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
       - [ be64, 0x000593b8, 0xfca00890fcc0e890 ]
       - [ be64, 0x000593c0, 0x807f000cfc20f890 ]
 
+Anchors:
+  lbp2_ar_notes: &lbp2_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  lbp2_ar_configurable_values: &lbp2_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "LittleBigPlanet 2":
         NPUA80662: [ 01.33 ]
         BCES00850: [ 01.33 ]
         BCES01693: [ 01.33 ]
     Author: "slashiee"
-    Notes:
+    Notes: *lbp2_ar_notes
+    Configurable Values: *lbp2_ar_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00d9c8ec, 2.37037037 ]
+      - [ bef32, 0x00d9c8ec, "Aspect Ratio" ]
   "Create Mode Everywhere":
     Games:
       "LittleBigPlanet 2":
