@@ -2376,29 +2376,36 @@ PPU-a2c90aafce24744d5ac6da8ad009ce301458c8a7:
     Patch:
       - [ be32, 0x00f18840, 0x00000000 ]
 
+Anchors:
+  RDR_AR_Notes: &RDR_AR_Notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  RDR_AR_Configurable_Values: &RDR_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
+  RDR_FPS_Notes: &RDR_FPS_Notes "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
+
 PPU-8a18a0314cade28526874128b253acd98863b83d:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Red Dead Redemption":
         NPUB30638: [ 01.00 ]
         NPEB00833: [ 01.00 ]
-    Author: "Esppiral"
-    Notes:
+    Author: "Esppiral, Victoria"
+    Notes: *RDR_AR_Notes
+    Configurable Values: *RDR_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00474f24, 2.37071 ] # 21:9 Aspect Ratio
-      - [ bef32, 0x000954b8, 2.37071 ] # 21:9 HUD
-  "32:9 Aspect Ratio":
-    Games:
-      "Red Dead Redemption":
-        NPUB30638: [ 01.00 ]
-        NPEB00833: [ 01.00 ]
-    Author: "Victoria"
-    Notes: "Users need to enable the \"Stretch to Display Area\" option in GPU settings."
-    Patch Version: 1.2
-    Patch:
-      - [ bef32, 0x00474f24, 3.55555 ] # 32:9 Aspect Ratio
-      - [ bef32, 0x000954b8, 3.55555 ] # 32:9 HUD
+      - [ bef32, 0x00474f24, "Aspect Ratio" ]
+      - [ bef32, 0x000954b8, "Aspect Ratio" ]
   "Disable Motion Blur":
     Games:
       "Red Dead Redemption":
@@ -2415,7 +2422,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
         NPUB30638: [ 01.00 ]
         NPEB00833: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
+    Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025ed14, 0x386003e8 ]
@@ -2431,24 +2438,25 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
       - [ be32, 0x00457ff0, 0x480001a0 ]
 
 PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
-  "21:9 Aspect Ratio + HUD fix":
+  "Aspect Ratio":
     Games:
       "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "vStar925"
-    Notes:
+    Notes: *RDR_AR_Notes
+    Configurable Values: *RDR_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00095f18, 2.37071 ] # 21:9
-      - [ bef32, 0x00475234, 2.37071 ] # 21:9 HUD
+      - [ bef32, 0x00095f18, "Aspect Ratio" ]
+      - [ bef32, 0x00475234, "Aspect Ratio" ]
   "Unlock FPS":
     Games:
       "Red Dead Redemption GOTY Edition":
         BLES01294: [ 01.00 ]
         BLUS30758: [ 01.00 ]
     Author: "Whatcookie, illusion"
-    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
+    Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025f98c, 0x386003e8 ]
@@ -2521,7 +2529,7 @@ PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
         BLES01294: [ 01.01 ]
         BLUS30758: [ 01.01 ]
     Author: "Whatcookie, illusion"
-    Notes: "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
+    Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00260b3c, 0x386003e8 ]
