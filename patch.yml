@@ -2283,66 +2283,65 @@ PPU-0604e637a841bdd85ac770d76281bdca18ac61f4: # OGRE2.self
       - [ load, *Y2HD_ModSupport ]
 
 PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
-  "Enable Deltatime":
+  Enable Deltatime:
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: "illusion"
+    Author: illusion
     Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5220, 0x60000000 ]
       - [ be32, 0x004c5240, 0x48000084 ]
       - [ be32, 0x004c3f0c, 0x386003e8 ]
-  "Disable Motion Blur":
+  Disable Motion Blur:
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: "illusion"
-    Notes:
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0050f9d8, 0x38600000 ]
-  "Skip Intro":
+  Skip Intro:
     Games:
       "Midnight Club: Los Angeles":
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
-    Author: "illusion"
-    Notes:
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b2410, 0x48000038 ]
 
 PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
-  "Enable Deltatime":
+  Enable Deltatime:
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
-    Author: "illusion"
+        BLUS30442: [ 01.06 ]
+    Author: illusion
     Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5fc0, 0x60000000 ]
       - [ be32, 0x004c5fe0, 0x48000084 ]
       - [ be32, 0x004c4cac, 0x386003e8 ]
-  "Disable Motion Blur":
+  Disable Motion Blur:
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
-    Author: "illusion"
-    Notes:
+        BLUS30442: [ 01.06 ]
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005109d0, 0x38600000 ]
-  "Skip Intro":
+  Skip Intro:
     Games:
       "Midnight Club: Los Angeles":
         BLES00652: [ 01.06 ]
-    Author: "illusion"
-    Notes:
+        BLUS30442: [ 01.06 ]
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
@@ -7009,25 +7008,45 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
       - [ be32, 0x001ed2ac, 0x41e00001 ]
 
 Anchors:
-  tox_aspect_ratio_21_9: &tox_aspect_ratio_21_9
-    - [ be32, 0x00c14adc, 0x44d20000 ] # HUD / GUI (Width)
-    - [ be32, 0x00c14ae4, 0x4017b426 ] # Display: Aspect Ratio
-    - [ be32, 0x00c14ae8, 0x00000348 ] # HUD: "Start" Menu - Background (Width)
-    - [ be32, 0x00c14af0, 0x44520000 ] # HUD: "Pause" Menu - Background (Width)
-    - [ be32, 0x00c14b10, 0xc4520000 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ be32, 0x00c14b14, 0x44520000 ] # HUD: Movie / Map / Skit - Background - Right
-    - [ be32, 0x00e15574, 0x3f71a36e ] # Display: vFOV
-    - [ be32, 0x00e15578, 0x3efac711 ] # Display: hFOV
+  tox_jp_ar_21_9: &tox_jp_ar_21_9
+    - [ bef32, 0x00c08714, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00c0871c, 2.37037 ] # Display: Aspect Ratio
+    - [ be32,  0x00c08720, 840 ] # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00c08728, 840 ] # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00c08748, -840 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00c0874c, 840 ] # HUD: Movie / Map / Skit - Background - Right
 
-  tox_aspect_ratio_32_9: &tox_aspect_ratio_32_9
-    - [ be32, 0x00c14adc, 0x45200000 ] # HUD / GUI (Width)
-    - [ be32, 0x00c14ae4, 0x40638e39 ] # Display: Aspect Ratio
-    - [ be32, 0x00c14ae8, 0x00000500 ] # HUD: "Start" Menu - Background (Width)
-    - [ be32, 0x00c14af0, 0x44a00000 ] # HUD: "Pause" Menu - Background (Width)
-    - [ be32, 0x00c14b10, 0xc4a00000 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ be32, 0x00c14b14, 0x44a00000 ] # HUD: Movie / Map / Skit - Background - Right
-    - [ be32, 0x00e15574, 0x3f9542c4 ] # Display: vFOV
-    - [ be32, 0x00e15578, 0x4243eb85 ] # Display: hFOV
+  tox_ar_21_9: &tox_ar_21_9
+    - [ bef32, 0x00c14adc, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00c14ae4, 2.37037 ] # Display: Aspect Ratio
+    - [ be32,  0x00c14ae8, 840 ] # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00c14af0, 840 ] # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00c14b10, -840 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00c14b14, 840 ] # HUD: Movie / Map / Skit - Background - Right
+
+  tox_jp_ar_32_9: &tox_jp_ar_32_9
+    - [ bef32, 0x00c08714, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00c0871c, 3.555556 ] # Display: Aspect Ratio
+    - [ be32,  0x00c08720, 1280 ] # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00c08728, 1280 ] # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00c08748, -1280 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00c0874c, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+
+  tox_ar_32_9: &tox_ar_32_9
+    - [ bef32, 0x00c14adc, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00c14ae4, 3.555556 ] # Display: Aspect Ratio
+    - [ be32,  0x00c14ae8, 1280 ] # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00c14af0, 1280 ] # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00c14b10, -1280 ] # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00c14b14, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+
+  tox_jp_fps: &tox_jp_fps
+    - [ be32, 0x007004f0, 0x38600002 ]
+    - [ be32, 0x00239b7c, 0x3a900001 ]
+
+  tox_fps: &tox_fps
+    - [ be32, 0x00710694, 0x38600002 ]
+    - [ be32, 0x0023f114, 0x3a900001 ]
 
   tox_gald: &tox_gald
     - [ be32, 0x0020337c, 0x80690fef ]
@@ -7036,38 +7055,108 @@ Anchors:
     - [ be32, 0x0018a210, 0x9bdd000c ]
     - [ be32, 0x00187a60, 0x3a30270f ]
 
-  tox_fps: &tox_fps
-    - [ be32, 0x00710694, 0x38600002 ]
-    - [ be32, 0x0023f114, 0x3a900001 ]
+PPU-f7f6881ea84c3196f294e437d766e7fb2c5b8d0c:
+  "21:9 Aspect Ratio":
+    Games:
+      "Tales of Xillia":
+        BLJS10120: [ All ]
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox_jp_ar_21_9 ]
+  "32:9 Aspect Ratio":
+    Games:
+      "Tales of Xillia":
+        BLJS10120: [ All ]
+    Author: "NeXoGone"
+    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox_jp_ar_32_9 ]
+  "Field of View":
+    Games:
+      "Tales of Xillia":
+        BLJS10120: [ All ]
+    Author: "NeXoGone"
+    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Patch Version: 1.0
+    Configurable Values:
+      "FOV (Horizontal)":
+        Type: double_range
+        Value: 0.78
+        Min: 0.20
+        Max: 2.4
+      "FOV (Vertical)":
+        Type: double_range
+        Value: 0.62
+        Min: 0.20
+        Max: 2.4
+    Patch:
+      - [ bef32, 0x00e14e4c, "FOV (Horizontal)" ]
+      - [ bef32, 0x00e14e50, "FOV (Vertical)" ]
+  "60 FPS":
+    Games:
+      "Tales of Xillia":
+        BLJS10120: [ All ]
+    Author: "Aphelion, illusion"
+    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox_jp_fps ]
 
 PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
   "21:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
-        NPUB31136: [ All ]
         BLUS31006: [ All ]
+        NPUB31136: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Group: AR
-    Patch Version: 1.0
+    Patch Version: 1.1
     Patch:
-      - [ load, *tox_aspect_ratio_21_9 ]
+      - [ load, *tox_ar_21_9 ]
   "32:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
-        NPUB31136: [ All ]
         BLUS31006: [ All ]
+        NPUB31136: [ All ]
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Group: AR
-    Patch Version: 1.0
+    Patch Version: 1.1
     Patch:
-      - [ load, *tox_aspect_ratio_32_9 ]
+      - [ load, *tox_ar_32_9 ]
+  "Field of View":
+    Games:
+      "Tales of Xillia":
+        BLUS31006: [ All ]
+        NPUB31136: [ All ]
+    Author: "NeXoGone"
+    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Patch Version: 1.0
+    Configurable Values:
+      "FOV (Horizontal)":
+        Type: double_range
+        Value: 0.78
+        Min: 0.20
+        Max: 2.4
+      "FOV (Vertical)":
+        Type: double_range
+        Value: 0.62
+        Min: 0.20
+        Max: 2.4
+    Patch:
+      - [ bef32, 0x00e1556c, "FOV (Horizontal)" ]
+      - [ bef32, 0x00e15570, "FOV (Vertical)" ]
   "60 FPS":
     Games:
       "Tales of Xillia":
-        NPUB31136: [ All ]
         BLUS31006: [ All ]
+        NPUB31136: [ All ]
     Author: "Aphelion, illusion"
     Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
     Patch Version: 1.1
@@ -7076,8 +7165,8 @@ PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
   "Infinite Gald":
     Games:
       "Tales of Xillia":
-        NPUB31136: [ All ]
         BLUS31006: [ All ]
+        NPUB31136: [ All ]
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
@@ -7086,8 +7175,8 @@ PPU-a7f26bbbcb13fd5f554d0612f490861feec78e8f:
   "Infinite Health":
     Games:
       "Tales of Xillia":
-        NPUB31136: [ All ]
         BLUS31006: [ All ]
+        NPUB31136: [ All ]
     Author: "Aphelion"
     Notes:
     Patch Version: 1.1
@@ -7103,9 +7192,9 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Group: AR
-    Patch Version: 1.0
+    Patch Version: 1.1
     Patch:
-      - [ load, *tox_aspect_ratio_21_9 ]
+      - [ load, *tox_ar_21_9 ]
   "32:9 Aspect Ratio":
     Games:
       "Tales of Xillia":
@@ -7114,9 +7203,31 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
     Author: "NeXoGone"
     Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
     Group: AR
-    Patch Version: 1.0
+    Patch Version: 1.1
     Patch:
-      - [ load, *tox_aspect_ratio_32_9 ]
+      - [ load, *tox_ar_32_9 ]
+  "Field of View":
+    Games:
+      "Tales of Xillia":
+        BLES01815: [ All ]
+        NPEB01310: [ All ]
+    Author: "NeXoGone"
+    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Patch Version: 1.0
+    Configurable Values:
+      "FOV (Horizontal)":
+        Type: double_range
+        Value: 0.78
+        Min: 0.20
+        Max: 2.4
+      "FOV (Vertical)":
+        Type: double_range
+        Value: 0.62
+        Min: 0.20
+        Max: 2.4
+    Patch:
+      - [ bef32, 0x00e15578, "FOV (Horizontal)" ]
+      - [ bef32, 0x00e15574, "FOV (Vertical)" ]
   "60 FPS":
     Games:
       "Tales of Xillia":
@@ -7293,76 +7404,71 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
       - [ load, *sk82_movies ]
 
 PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
-  "Unlock FPS":
+  Unlock FPS:
     Games:
       "Resistance 2":
         BCUS98120: [ 01.00 ]
         BCES00226: [ 01.00 ]
-    Author: "Whatcookie"
-    Notes:
+    Author: Whatcookie
+    Notes: 
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00635d7c, 0x60000000 ] # nop
       - [ be32, 0x00635d88, 0x60000000 ] # nop
       - [ bef32, 0x00d529d8, 0.0001 ]
       - [ bef32, 0x00d69eb8, 0.0001 ]
-  "Extended FOV":
+  Extended FOV:
     Games:
       "Resistance 2":
         BCUS98120: [ 01.00 ]
         BCES00226: [ 01.00 ]
-    Author: "illusion"
-    Notes:
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00de67e4, 0.7 ]
 
 PPU-ee7a0a8f83814fd2570ac65e744951cf59264491:
-  "Unlock FPS":
+  Unlock FPS:
     Games:
       "Resistance 2":
         BCUS98120: [ 01.60 ]
         BCES00226: [ 01.60 ]
-    Author: "Whatcookie, illusion"
-    Notes:
+    Author: Whatcookie, illusion
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0065066c, 0x4800 ]
-      - [ bef32, 0x00d62f34, 0.0001 ]
-      - [ bef32, 0x00d7a498, 0.0001 ]
-  "Extended FOV":
+      - [ be16,  0x0065066c, 0x4800 ]
+      - [ bef32, 0x00D62F34, 0.0001 ]
+      - [ bef32, 0x00D7A498, 0.0001 ]
+  Extended FOV:
     Games:
       "Resistance 2":
         BCUS98120: [ 01.60 ]
         BCES00226: [ 01.60 ]
-    Author: "illusion"
-    Notes:
+    Author: illusion
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00df765c, 0.7 ]
 
 PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
-  "Unlock FPS":
+  Unlock FPS:
     Games:
       "Resistance 2":
         NPEA00431: [ 01.00 ]
-    Author: "Whatcookie, illusion"
-    Notes:
+    Author: Whatcookie, illusion
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0064816c, 0x60000000 ] # nop
       - [ be32, 0x00648178, 0x60000000 ] # nop
       - [ bef32, 0x00d62ee4, 0.0001 ]
       - [ bef32, 0x00d7a450, 0.0001 ]
-  "Extended FOV":
+  Extended FOV:
     Games:
       "Resistance 2":
         NPEA00431: [ 01.00 ]
-    Author: "illusion"
-    Notes:
+    Author: illusion
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00df78ec, 0.7 ]
+      - [ bef32, 0x00DF78EC, 0.7 ]
 
 PPU-0e95b58ae209a37060f3388434b59bcce8a708ab:
   "21:9 Aspect Ratio":
