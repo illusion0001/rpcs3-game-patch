@@ -13015,8 +13015,8 @@ PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
     Notes: *SSX_Resolution_Notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00b625ce, 0x0500 ]
-      - [ be16, 0x00b625d2, 0x02d0 ]
+      - [ be16, 0x00b625ce, 1280 ]
+      - [ be16, 0x00b625d2, 720 ]
 
 PPU-3c592821a982e587b06e8b026ece13897eab826f:
   "1280x720 Resolution":
@@ -13027,8 +13027,8 @@ PPU-3c592821a982e587b06e8b026ece13897eab826f:
     Notes: *SSX_Resolution_Notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00b83f8e, 0x0500 ]
-      - [ be16, 0x00b83f92, 0x02d0 ]
+      - [ be16, 0x00b83f8e, 1280 ]
+      - [ be16, 0x00b83f92, 720 ]
 
 PPU-e9844aeece4ed8abaffc9ee5966e0750f5747308:
   "1280x720 Resolution":
@@ -13041,8 +13041,8 @@ PPU-e9844aeece4ed8abaffc9ee5966e0750f5747308:
     Notes: *SSX_Resolution_Notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00b8422e, 0x0500 ]
-      - [ be16, 0x00b84232, 0x02d0 ]
+      - [ be16, 0x00b8422e, 1280 ]
+      - [ be16, 0x00b84232, 720 ]
 
 PPU-ae7633f0660f4386e11a3d727d54512d7990721b:
   "Unlock All Levels":
