@@ -7404,71 +7404,76 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
       - [ load, *sk82_movies ]
 
 PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 2":
         BCUS98120: [ 01.00 ]
         BCES00226: [ 01.00 ]
-    Author: Whatcookie
-    Notes: 
+    Author: "Whatcookie"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00635d7c, 0x60000000 ] # nop
       - [ be32, 0x00635d88, 0x60000000 ] # nop
       - [ bef32, 0x00d529d8, 0.0001 ]
       - [ bef32, 0x00d69eb8, 0.0001 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 2":
         BCUS98120: [ 01.00 ]
         BCES00226: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00de67e4, 0.7 ]
 
 PPU-ee7a0a8f83814fd2570ac65e744951cf59264491:
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 2":
         BCUS98120: [ 01.60 ]
         BCES00226: [ 01.60 ]
-    Author: Whatcookie, illusion
+    Author: "Whatcookie, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16,  0x0065066c, 0x4800 ]
-      - [ bef32, 0x00D62F34, 0.0001 ]
-      - [ bef32, 0x00D7A498, 0.0001 ]
-  Extended FOV:
+      - [ be16, 0x0065066c, 0x4800 ]
+      - [ bef32, 0x00d62f34, 0.0001 ]
+      - [ bef32, 0x00d7a498, 0.0001 ]
+  "Extended FOV":
     Games:
       "Resistance 2":
         BCUS98120: [ 01.60 ]
         BCES00226: [ 01.60 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00df765c, 0.7 ]
 
 PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
-  Unlock FPS:
+  "Unlock FPS":
     Games:
       "Resistance 2":
         NPEA00431: [ 01.00 ]
-    Author: Whatcookie, illusion
+    Author: "Whatcookie, illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0064816c, 0x60000000 ] # nop
       - [ be32, 0x00648178, 0x60000000 ] # nop
       - [ bef32, 0x00d62ee4, 0.0001 ]
       - [ bef32, 0x00d7a450, 0.0001 ]
-  Extended FOV:
+  "Extended FOV":
     Games:
       "Resistance 2":
         NPEA00431: [ 01.00 ]
-    Author: illusion
+    Author: "illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00DF78EC, 0.7 ]
+      - [ bef32, 0x00df78ec, 0.7 ]
 
 Anchors:
   wipeouthd_ar_notes: &wipeouthd_ar_notes "Fixes stretching and frustum culling. \"Stretch To Display Area\" must be checked in GPU > \"Additional Settings\". HUD is stretched."
