@@ -122,7 +122,7 @@ Anchors:
 
   DeS_DDE_Notes: &DeS_DDE_Notes "Can disable Write Color Buffers for 20% faster performance. Please note this patch gives a slightly darker tone to the game."
 
-  DeS_AR_Notes: &DeS_AR_Notes "Requires \"Stretch To Display Area\" set in the GPU settings. UI Elements will be stretched."
+  DeS_AR_Notes: &DeS_AR_Notes "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
 
   DeS_AR_Configurable_Values: &DeS_AR_Configurable_Values
     "Aspect Ratio":
