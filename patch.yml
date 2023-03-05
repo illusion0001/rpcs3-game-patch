@@ -14016,7 +14016,7 @@ PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
 PPU-c081cd32886db63ae77928063579c7b0601835e1:
   "Start with nostalgia filter":
     Games:
-      "SONIC CD Trial":
+      "SONIC CD":
         NPUB30624: [ 01.00 ]
     Author: "Margen67"
     Notes: "Game normally starts with smooth filter."
@@ -14026,7 +14026,7 @@ PPU-c081cd32886db63ae77928063579c7b0601835e1:
 PPU-ed6f26aa6f0b494a9af4f67261fc27b2343da9e1:
   "Start with nostalgia filter":
     Games:
-      "SONIC CD Trial":
+      "SONIC CD":
         NPEB00787: [ 01.00 ]
     Author: "Margen67"
     Notes: "Game normally starts with smooth filter."
