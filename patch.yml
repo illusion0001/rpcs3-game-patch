@@ -12947,33 +12947,50 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Patch:
       - [ be32, 0x000170cc, 0x60000000 ]
 
+Anchors:
+  dantesinferno_ar_notes: &dantesinferno_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  dantesinferno_ar_configurable_values: &dantesinferno_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-46bf3c2b3292d77f10d82e3a8729625ab0d3d6c2:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Dante's Inferno":
         BLUS30405: [ 01.00 ]
         BLES00713: [ 01.00 ]
     Author: "boma"
-    Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
+    Notes: *dantesinferno_ar_notes
+    Configurable Values: *dantesinferno_ar_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x00f5283c, 2.38 ]
-      - [ bef32, 0x00f5f3f4, 2.38 ]
-      - [ bef32, 0x00f63128, 2.38 ]
+      - [ bef32, 0x00f5283c, "Aspect Ratio" ]
+      - [ bef32, 0x00f5f3f4, "Aspect Ratio" ]
+      - [ bef32, 0x00f63128, "Aspect Ratio" ]
 
 PPU-539a6d42763b06228b136fa70f42070b34d30529:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Dante's Inferno":
         BLUS30405: [ 01.04 ]
         BLES00713: [ 01.04 ]
     Author: "boma"
-    Notes: "HUD will be stretched. Users need to enable the \"Stretch to Display Area\" option in GPU settings."
+    Notes: *dantesinferno_ar_notes
+    Configurable Values: *dantesinferno_ar_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x011bfa38, 2.38 ]
-      - [ bef32, 0x011c3928, 2.38 ]
-      - [ bef32, 0x011b0ae0, 2.38 ]
+      - [ bef32, 0x011bfa38, "Aspect Ratio" ]
+      - [ bef32, 0x011c3928, "Aspect Ratio" ]
+      - [ bef32, 0x011b0ae0, "Aspect Ratio" ]
 
 PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
   "Infinite Health":
