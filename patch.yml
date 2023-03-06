@@ -13355,7 +13355,7 @@ PPU-d3a99698275b4203d42c7aeccc053299a5811804:
 PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
   "Infinite Draw Distance":
     Games:
-      "Sly 3: Honor Among Thieves™":
+      "Sly 3: Honor Among Thieves":
         NPUA80665: [ 01.00 ]
     Author: "VelocityRa"
     Notes: "Renders all objects, even ones that are far away."
