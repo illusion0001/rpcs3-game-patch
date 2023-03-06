@@ -2948,7 +2948,7 @@ PPU-16506d9d5bf692d615645accd24bca1ee1f8f9a6:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x005372aa, 1280 ]
-      - [ be16, 0x005372b2, 720 ]
+      - [ be16, 0x005372b2, 704 ]
 
 PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
   "Unlock FPS":
