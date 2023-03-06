@@ -9,7 +9,7 @@ Anchors:
   # by Whatcookie
     - [ be32, 0x0001b964, 0x496ac2cd ] # jump to code cave
   # get mftb
-    - [ be32, 0x016c7c30, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
+    - [ be32, 0x016c7c30, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
   # get mftb delta
     - [ be32, 0x016c7c34, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
     - [ be32, 0x016c7c38, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
