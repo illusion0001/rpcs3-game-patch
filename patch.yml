@@ -1941,6 +1941,18 @@ PPU-b711c520e0295b480e4163e473886122cd033329:
     Patch:
       - [ be32, 0x0116cb84, 0x38600000 ]
 
+PPU-3101bddb805923d3b32be8e64b986bb6b60581bb:
+  "Debug Menu":
+    Games:
+      "DmC Devil May Cry":
+        BLUS30723: [ 01.01 ]
+        NPUB30830: [ 01.01 ]
+    Author: "dron_3"
+    Notes: "SELECT+START = Brings menu.\nUsing the menu makes screen red until a new map will be loaded."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0116cb84, 0x38600000 ]
+
 PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
   "21:9 Aspect Ratio":
     Games:
