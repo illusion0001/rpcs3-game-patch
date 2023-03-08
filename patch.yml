@@ -7801,6 +7801,16 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
       - [ bef32, 0x00732894, 1.5 ]
 
 PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
+  "Enable Full Pixel Mode":
+    Games:
+      "Shadow of the Colossus":
+        NPEA00280: [ 01.00 ]
+        NPUA80677: [ 01.00 ]
+    Author: "Margen67"
+    Notes: "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00316827, 2 ]
   "Disable Bloom":
     Games:
       "Shadow of the Colossus":
@@ -7834,6 +7844,16 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
       - [ be32, 0x002011fc, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f8af4, 0x40800003 ] # il r3 0
       - [ be32, 0x006f8d9c, 0x40800017 ] # il r23 0
+  "60 FPS":
+    Games:
+      "Shadow of the Colossus":
+        NPEA00280: [ 01.00 ]
+        NPUA80677: [ 01.00 ]
+    Author: "Margen67"
+    Notes: "Allows 60 FPS without changing Vblank."
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x0031f677, 1 ]
 # Memory Patches
   "Extended FOV":
     Games:
