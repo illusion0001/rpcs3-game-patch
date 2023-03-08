@@ -7625,7 +7625,11 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       - [ bef32, 0x0072bf80, "FPS" ] # Absorb Glow Framerate Fix
 
 Anchors:
-  iconotes: &iconotes "Allows for the use of Resolution Scaling in the title and improves performance."
+  ico_mlaa_notes: &ico_mlaa_notes "Allows for the use of Resolution Scaling in the title and improves performance."
+
+  sotc_extended_fov_notes: &sotc_extended_fov_notes "Camera may zoom out during cinematic change."
+  sotc_full_notes: &sotc_full_notes "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
+  sotc_60fps_notes: &sotc_60fps_notes "Allows 60 FPS without changing Vblank."
 
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
   "Disable MLAA":
@@ -7634,7 +7638,7 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
         NPEA00279: [ 01.00 ]
         NPUA80676: [ 01.00 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00045c84, 0x38800000 ] # li r4 0x0
@@ -7669,7 +7673,7 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00045a50, 0x38800000 ] # li r4 0x0
@@ -7707,7 +7711,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         NPEA00279: [ 01.01 ]
         NPUA80676: [ 01.01 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x004e224c, 0x00000000 ] # 0 int32
@@ -7782,7 +7786,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00200c58, 0x38000000 ] # li r0 0x0
@@ -7795,7 +7799,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCES01097: [ 01.00 ]
         BCUS98259: [ 01.00 ]
     Author: "illusion"
-    Notes: "Camera may zoom out during cinematic change."
+    Notes: *sotc_extended_fov_notes
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x00732894, 1.5 ]
@@ -7807,7 +7811,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
     Author: "Margen67"
-    Notes: "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
+    Notes: *sotc_full_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00316827, 2 ]
@@ -7838,7 +7842,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x002011fc, 0x38000000 ] # li r0 0x0
@@ -7850,7 +7854,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
     Author: "Margen67"
-    Notes: "Allows 60 FPS without changing Vblank."
+    Notes: *sotc_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0031f677, 1 ]
@@ -7861,12 +7865,25 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPEA00280: [ 01.00 ]
         NPUA80677: [ 01.00 ]
     Author: "illusion"
-    Notes: "Camera may zoom out during cinematic change."
+    Notes: *sotc_extended_fov_notes
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x007328c4, 1.5 ]
 
 PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
+  "Enable Full Pixel Mode":
+    Games:
+      "Shadow of the Colossus":
+        BCES01097: [ 01.01 ]
+        BCES01115: [ 01.01 ]
+        BCUS98259: [ 01.01 ]
+        NPEA00280: [ 01.01 ]
+        NPUA80677: [ 01.01 ]
+    Author: "Margen67"
+    Notes: *sotc_full_notes
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x003298b7, 2 ]
   "Disable Bloom":
     Games:
       "Shadow of the Colossus":
@@ -7903,12 +7920,25 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
     Author: "illusion"
-    Notes: *iconotes
+    Notes: *ico_mlaa_notes
     Patch Version: 1.00
     Patch:
       - [ be32, 0x00201a14, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f96f4, 0x40800003 ] # il r3 0x0
       - [ be32, 0x006f999c, 0x40800017 ] # il r23 0x0
+  "60 FPS":
+    Games:
+      "Shadow of the Colossus":
+        BCES01097: [ 01.01 ]
+        BCES01115: [ 01.01 ]
+        BCUS98259: [ 01.01 ]
+        NPEA00280: [ 01.01 ]
+        NPUA80677: [ 01.01 ]
+    Author: "Margen67"
+    Notes: *sotc_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00332707, 1 ]
 # Memory Patches
   "Extended FOV":
     Games:
@@ -7919,7 +7949,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPEA00280: [ 01.01 ]
         NPUA80677: [ 01.01 ]
     Author: "illusion"
-    Notes: "Camera may zoom out during cinematic change."
+    Notes: *sotc_extended_fov_notes
     Patch Version: 1.00
     Patch:
       - [ bef32, 0x007328dc, 1.5 ]
