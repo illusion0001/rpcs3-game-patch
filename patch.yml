@@ -11275,87 +11275,93 @@ PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
       - [ load, *SA_169 ]
 
 Anchors:
-  su1280x720_Digital: &su1280x720_Digital
+  su_1280x720_Digital: &su_1280x720_Digital
   # Main backbuffer (880x720)
     - [ be16, 0x013d197a, 1280 ]
-
   # Other buffers
     - [ be16, 0x0144a53e, 1280 ]
     - [ be16, 0x0144a5f6, 1280 ]
     - [ be16, 0x0144a652, 1280 ]
 
-  su1280x720_USEUPhysical: &su1280x720_USEUPhysical
+  su_1280x720_USEUPhysical: &su_1280x720_USEUPhysical
   # Main backbuffer (880x720)
     - [ be16, 0x00dd85b6, 1280 ]
-
   # Other buffers
     - [ be16, 0x013608d6, 1280 ]
     - [ be16, 0x0136098e, 1280 ]
     - [ be16, 0x013609ea, 1280 ]
 
-  swa1280x720_BLJM60112: &swa1280x720_BLJM60112
+  swa_1280x720_BLJM60112: &swa_1280x720_BLJM60112
   # Main backbuffer (880x720)
     - [ be16, 0x00dec49e, 1280 ]
-
   # Other buffers
     - [ be16, 0x013644fe, 1280 ]
     - [ be16, 0x013645b6, 1280 ]
     - [ be16, 0x01364612, 1280 ]
 
-  su1280x720_v102: &su1280x720_v102
+  su_1280x720_v102: &su_1280x720_v102
   # Main backbuffer (880x720)
     - [ be16, 0x00dfd7c6, 1280 ]
-
   # Other buffers
     - [ be16, 0x01371b8e, 1280 ]
     - [ be16, 0x01371c46, 1280 ]
     - [ be16, 0x01371ca2, 1280 ]
 
-  su1280x720_NPUB90194_Demo: &su1280x720_NPUB90194_Demo
+  su_1280x720_NPUB90194_Demo: &su_1280x720_NPUB90194_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013c4b5a, 1280 ]
-
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
     - [ be16, 0x0143913e, 1280 ]
     - [ be16, 0x0143919a, 1280 ]
 
-  su1280x720_NPEB90132_Demo: &su1280x720_NPEB90132_Demo
+  su_1280x720_NPEB90132_Demo: &su_1280x720_NPEB90132_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013c4b62, 1280 ]
-
   # Other buffers
     - [ be16, 0x0143908e, 1280 ]
     - [ be16, 0x01439146, 1280 ]
     - [ be16, 0x014391a2, 1280 ]
 
-  swa1280x720_NPJB90162_Demo: &swa1280x720_NPJB90162_Demo
+  swa_1280x720_NPJB90162_Demo: &swa_1280x720_NPJB90162_Demo
   # Main backbuffer (880x720)
     - [ be16, 0x013c4b56, 1280 ]
-
   # Other buffers
     - [ be16, 0x01439086, 1280 ]
     - [ be16, 0x0143913e, 1280 ]
     - [ be16, 0x0143919a, 1280 ]
 
-  su1280x720_Notes: &su1280x720_Notes "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
+  su_1280x720_notes: &su_1280x720_notes "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
 
-  suAspectRatio_v102: &suAspectRatio_v102
-  # Aspect ratio. Divide width by height to get the float value.
-    - [ bef32, 0x0275db2c, 2.37037037 ]
+  su_aspectratio_notes: &su_aspectratio_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
 
-  suAspectRatio_Notes: &suAspectRatio_Notes "Enables 21:9 aspect ratio support. Users must enable \"Stretch to Display Area\" option to take advantage of this patch."
+  su_aspectratio_configurable_values: &su_aspectratio_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+      # Divide width by height to get the float value.
 
-  su102mb: &su102mb
+  su_aspectratio_v102: &su_aspectratio_v102
+    - [ bef32, 0x0275db2c, "Aspect Ratio" ]
+
+  su_102_mb: &su_102_mb
     - [ be32, 0x00e234e8, 0x38000000 ]
-  su102dof: &su102dof
+  su_102_dof: &su_102_dof
     - [ be32, 0x00e5d7c4, 0x38000000 ]
-  su102ds: &su102ds
+  su_102_ds: &su_102_ds
     - [ be32, 0x00e0464c, 0x38000000 ]
-  su102re: &su102re
+  su_102_re: &su_102_re
     - [ be32, 0x00e1eef0, 0x38000000 ]
 
-  suborkednotes: &suborkednotes "Improves performance at the cost of graphics quality."
+  su_borked_notes: &su_borked_notes "Improves performance at the cost of graphics quality."
 
 PPU-6ebcaf71dc08cd612acb82f8e32738a8693d9347:
   "1280x720 Resolution":
@@ -11364,10 +11370,10 @@ PPU-6ebcaf71dc08cd612acb82f8e32738a8693d9347:
         BLUS30244: [ 01.00 ]
         BLES00425: [ 01.00 ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_USEUPhysical ]
+      - [ load, *su_1280x720_USEUPhysical ]
 
 PPU-c2911b4248ca2090819299f90d1a2d37f50fd5a8:
   "1280x720 Resolution":
@@ -11375,19 +11381,20 @@ PPU-c2911b4248ca2090819299f90d1a2d37f50fd5a8:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_v102 ]
-  "21:9 Aspect Ratio":
+      - [ load, *su_1280x720_v102 ]
+  "Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
     Author: "slashiee"
-    Notes: *suAspectRatio_Notes
+    Notes: *su_aspectratio_notes
+    Configurable Values: *su_aspectratio_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ load, *suAspectRatio_v102 ]
+      - [ load, *su_aspectratio_v102 ]
   "Disable Depth of Field":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
@@ -11396,7 +11403,7 @@ PPU-c2911b4248ca2090819299f90d1a2d37f50fd5a8:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *su102dof ]
+      - [ load, *su_102_dof ]
   "Disable Motion Blur":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
@@ -11405,25 +11412,25 @@ PPU-c2911b4248ca2090819299f90d1a2d37f50fd5a8:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *su102mb ]
+      - [ load, *su_102_mb ]
   "Disable Dynamic Shadows":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
     Author: "illusion"
-    Notes: *suborkednotes
+    Notes: *su_borked_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *su102ds ]
+      - [ load, *su_102_ds ]
   "Disable Real-time Reflections":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLUS30244: [ 01.02 ]
     Author: "illusion"
-    Notes: *suborkednotes
+    Notes: *su_borked_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *su102re ]
+      - [ load, *su_102_re ]
 
 PPU-dfe27b6a57f3fd01f310e402e97a297836b46ceb:
   "1280x720 Resolution":
@@ -11431,19 +11438,20 @@ PPU-dfe27b6a57f3fd01f310e402e97a297836b46ceb:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_v102 ]
-  "21:9 Aspect Ratio":
+      - [ load, *su_1280x720_v102 ]
+  "Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
     Author: "slashiee"
-    Notes: *suAspectRatio_Notes
+    Notes: *su_aspectratio_notes
+    Configurable Values: *su_aspectratio_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ load, *suAspectRatio_v102 ]
+      - [ load, *su_aspectratio_v102 ]
   "Disable Depth of Field":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
@@ -11452,7 +11460,7 @@ PPU-dfe27b6a57f3fd01f310e402e97a297836b46ceb:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *su102dof ]
+      - [ load, *su_102_dof ]
   "Disable Motion Blur":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
@@ -11461,25 +11469,25 @@ PPU-dfe27b6a57f3fd01f310e402e97a297836b46ceb:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *su102mb ]
+      - [ load, *su_102_mb ]
   "Disable Dynamic Shadows":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
     Author: "illusion"
-    Notes: *suborkednotes
+    Notes: *su_borked_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *su102ds ]
+      - [ load, *su_102_ds ]
   "Disable Real-time Reflections":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLES00425: [ 01.02 ]
     Author: "illusion"
-    Notes: *suborkednotes
+    Notes: *su_borked_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *su102re ]
+      - [ load, *su_102_re ]
 
 PPU-fbb2149d0f9ad51398eed59cbd26db5367d6376e:
   "1280x720 Resolution":
@@ -11487,10 +11495,10 @@ PPU-fbb2149d0f9ad51398eed59cbd26db5367d6376e:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.00 ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *swa1280x720_BLJM60112 ]
+      - [ load, *swa_1280x720_BLJM60112 ]
 
 PPU-4b48caf21e1f10d47aa9a20acce8ecd8c055755e:
   "1280x720 Resolution":
@@ -11498,19 +11506,20 @@ PPU-4b48caf21e1f10d47aa9a20acce8ecd8c055755e:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.02 ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_v102 ]
-  "21:9 Aspect Ratio":
+      - [ load, *su_1280x720_v102 ]
+  "Aspect Ratio":
     Games:
       "Sonic Unleashed (Sonic World Adventure)":
         BLJM60112: [ 01.02 ]
     Author: "slashiee"
-    Notes: *suAspectRatio_Notes
+    Notes: *su_aspectratio_notes
+    Configurable Values: *su_aspectratio_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ load, *suAspectRatio_v102 ]
+      - [ load, *su_aspectratio_v102 ]
 
 PPU-88b57d524597bbee38df3a452eb0e86c5e789f73:
   "1280x720 Resolution":
@@ -11518,10 +11527,20 @@ PPU-88b57d524597bbee38df3a452eb0e86c5e789f73:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB31204: [ All ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_Digital ]
+      - [ load, *su_1280x720_Digital ]
+  "Aspect Ratio":
+    Games:
+      "Sonic Unleashed (Sonic World Adventure)":
+        NPUB31204: [ All ]
+    Author: "Margen67"
+    Notes: *su_aspectratio_notes
+    Configurable Values: *su_aspectratio_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0295a108, "Aspect Ratio" ]
 
 PPU-d0bf7a33f1763725609feaa87e0e4d18ab9e8acd:
   "1280x720 Resolution":
@@ -11529,10 +11548,10 @@ PPU-d0bf7a33f1763725609feaa87e0e4d18ab9e8acd:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB01347: [ All ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_Digital ]
+      - [ load, *su_1280x720_Digital ]
 
 PPU-bd76a566ab62386b90443711206c3f5063b5ab38:
   "1280x720 Resolution":
@@ -11540,10 +11559,10 @@ PPU-bd76a566ab62386b90443711206c3f5063b5ab38:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB90194: [ All ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_NPUB90194_Demo ]
+      - [ load, *su_1280x720_NPUB90194_Demo ]
 
 PPU-7d9105cac7fb9c8ebbbd791693c27986b12c98ad:
   "1280x720 Resolution":
@@ -11551,10 +11570,10 @@ PPU-7d9105cac7fb9c8ebbbd791693c27986b12c98ad:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB90132: [ All ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *su1280x720_NPEB90132_Demo ]
+      - [ load, *su_1280x720_NPEB90132_Demo ]
 
 PPU-8bc924308cd72132d78bae70fb9a1fa82af03c19:
   "1280x720 Resolution":
@@ -11562,10 +11581,10 @@ PPU-8bc924308cd72132d78bae70fb9a1fa82af03c19:
       "Sonic Unleashed (Sonic World Adventure)":
         NPJB90162: [ All ]
     Author: "TGEnigma, slashiee"
-    Notes: *su1280x720_Notes
+    Notes: *su_1280x720_notes
     Patch Version: 1.3
     Patch:
-      - [ load, *swa1280x720_NPJB90162_Demo ]
+      - [ load, *swa_1280x720_NPJB90162_Demo ]
 
 PPU-2f6778a8e97be84833e47ef273ff10cc2bd6809e:
   "21:9 Aspect Ratio":
