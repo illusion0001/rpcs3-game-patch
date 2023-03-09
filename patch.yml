@@ -7085,8 +7085,8 @@ Anchors:
     - [ bef32, 0x00e15570, "FOV (Vertical)" ]
 
   tox_eu_fov: &tox_eu_fov
-      - [ bef32, 0x00e15578, "FOV (Horizontal)" ]
-      - [ bef32, 0x00e15574, "FOV (Vertical)" ]
+    - [ bef32, 0x00e15578, "FOV (Horizontal)" ]
+    - [ bef32, 0x00e15574, "FOV (Vertical)" ]
 
   tox_jp_fps: &tox_jp_fps
     - [ be32, 0x0070725c, 0x38600002 ]
