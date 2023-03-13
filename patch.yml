@@ -4705,7 +4705,7 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost, but causes monitors to break in-game."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000fa7ec, 0x4e800020 ]
@@ -4841,7 +4841,7 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       "Metal Gear Solid 4: Guns of the Patriots":
         NPUB31633: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost, but causes monitors to break in-game."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000f90ac, 0x4e800020 ]
@@ -4948,7 +4948,7 @@ PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
     Author: "TriggerHappy"
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
+    Notes: "Removes some transparency related effects from stages. Provides a small performance boost, but causes monitors to break in-game."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000fa7ec, 0x4e800020 ]
