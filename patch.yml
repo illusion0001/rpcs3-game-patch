@@ -14462,50 +14462,65 @@ PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
 
 Anchors:
   skyrim_titleid: &skyrim_titleid
-      "The Elder Scrolls V: Skyrim":
-        BLUS30778: [ 01.09 ]
-        BLES01329: [ 02.09 ]
-        BLES01330: [ 02.09 ]
+    "The Elder Scrolls V: Skyrim":
+      BLUS30778: [ 01.09 ]
+      BLES01329: [ 02.09 ]
+      BLES01330: [ 02.09 ]
 
   skyrimLE_titleid: &skyrimLE_titleid
-      "The Elder Scrolls V: Skyrim Legendary Edition":
-        BLES01885: [ 01.00 ]
-        BLES01886: [ 01.00 ]
-        BLUS31202: [ 01.00 ]
+    "The Elder Scrolls V: Skyrim Legendary Edition":
+      BLES01885: [ 01.00 ]
+      BLES01886: [ 01.00 ]
+      BLUS31202: [ 01.00 ]
+
+  skyrim_shout_notes: &skyrim_shout_notes
+    "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
+
+  skyrim_60fps_notes: &skyrim_60fps_notes
+    "Camera speeds up while having 60+ FPS."
+
+  skyrim_trainerlvlup_notes: &skyrim_trainerlvlup_notes
+    "Removes 5 per level limit."
+
+  skyrim_persistentcarryweight_notes: &skyrim_persistentcarryweight_notes
+    "Apply this patch while you can still run. Unless you prefer being over-encumbered."
+
+  skyrim_alwayslvlup_notes: &skyrim_alwayslvlup_notes
+    "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
 
 PPU-8854da0c79e5c5bf386cb32e280f83c89cab40ff:
   "60 FPS":
     Games: *skyrim_titleid
     Author: "illusion"
-    Notes: "Camera speeds up while having 60+ FPS."
+    Notes: *skyrim_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
   "Infinite Shout":
     Games: *skyrim_titleid
     Author: "Medo"
-    Notes: "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
+    Notes: *skyrim_shout_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x0008ea00, 0x60000000 ]
   "Can Always Level Up At Trainers":
     Games: *skyrim_titleid
     Author: "Medo"
-    Notes: "Removes annoying 5 per level limit."
+    Notes: *skyrim_trainerlvlup_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00308d30, 0x60000000 ]
-  "Carry Weight Never Increases":
+  "Carry Weight Never Changes":
     Games: *skyrim_titleid
     Author: "Medo"
-    Notes: "Or decreases, apply this patch while you can still run. Unless you prefer being over-encumbered."
+    Notes: *skyrim_persistentcarryweight_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00414fcc, 0x60000000 ]
   "Quick Main Level Up":
     Games: *skyrim_titleid
     Author: "Medo"
-    Notes: "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
+    Notes: *skyrim_alwayslvlup_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x001d8e9c, 0xc0230004 ]
@@ -14514,35 +14529,35 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
   "60 FPS":
     Games: *skyrimLE_titleid
     Author: "illusion"
-    Notes: "Camera speeds up while having 60+ FPS."
+    Notes: *skyrim_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008edb64, 0xf8051c60 ]
   "Infinite Shout":
     Games: *skyrimLE_titleid
     Author: "Medo"
-    Notes: "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
+    Notes: *skyrim_shout_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x0008ea00, 0x60000000 ]
   "Can Always Level Up At Trainers":
     Games: *skyrimLE_titleid
     Author: "Medo"
-    Notes: "Removes annoying 5 per level limit."
+    Notes: *skyrim_trainerlvlup_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00308d30, 0x60000000 ]
-  "Carry Weight Never Increases":
+  "Carry Weight Never Changes":
     Games: *skyrimLE_titleid
     Author: "Medo"
-    Notes: "Or decreases, apply this patch while you can still run. Unless you prefer being over-encumbered."
+    Notes: *skyrim_persistentcarryweight_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00414fcc, 0x60000000 ]
   "Quick Main Level Up":
     Games: *skyrimLE_titleid
     Author: "Medo"
-    Notes: "Level up every skill level up. Quick way to unlock perks without unnecessarily making your skills Legendary."
+    Notes: *skyrim_alwayslvlup_notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x001d8e9c, 0xc0230004 ]
