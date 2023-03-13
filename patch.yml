@@ -6245,6 +6245,7 @@ Anchors:
         NPUA80858: [ 01.19 ]
         BCUS99086: [ 01.19 ]
         BCAS25014: [ 01.19 ]
+        BCAS25009: [ 01.19 ]
 
   uc3_110title: &uc3_110title
       "Uncharted 3: Drake's Deception":
