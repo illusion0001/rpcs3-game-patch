@@ -2019,41 +2019,50 @@ PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
       - [ be32, 0x00d69588, 0xc80b13fc ]
 
 Anchors:
-  gow3resnotes: &gow3resnotes "Allows for the use of Resolution Scaling in the title.\nSet Resolution Scale Threshold to 1x1 or some effects will break.\n2.0 Slightly improves performance when using resolution scaling in some cases."
+  gow3_fps_notes: &gow3_fps_notes
+    "Unlocks internal timestep calculation. Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60 FPS and above."
 
-  gow3speedhack: &gow3speedhack "Significantly improves performance, changes visuals for Army of Sparta special attack and some lighting changes, generally only on magic sources."
+  gow3_mlaa_notes: &gow3_mlaa_notes
+    "Allows for the use of Resolution Scaling in the title.\nSet Resolution Scale Threshold to 1x1 or some effects will break.\n2.0 Slightly improves performance when using resolution scaling in some cases."
 
-  gow3bloom: &gow3bloom "Disables some (not all) bloom effects."
+  gow3_colorgrading_notes: &gow3_colorgrading_notes
+    "Significantly improves performance, changes visuals for Army of Sparta special attack and some lighting changes, generally only on magic sources."
 
-  gow3fog: &gow3fog "Significantly improves performance in some cases, some distant places may look too clear due to removing the Layered fog effect. The patch is a good alternative to the Color Grading patch."
+  gow3_fog_notes: &gow3_fog_notes
+    "Significantly improves performance in some cases, some distant places may look too clear due to removing the Layered fog effect. The patch is a good alternative to the Color Grading patch."
 
-  gow3camerasway: &gow3camerasway "Stops the ingame camera from swaying and shaking."
+  gow3_bloom_notes: &gow3_bloom_notes
+    "Disables some (not all) bloom effects."
 
-  gow3skipintro: &gow3skipintro "Skips SCE intros up to the first video.\n2.0 Skips now first two intro videos."
+  gow3_camerasway_notes: &gow3_camerasway_notes
+    "Stops the ingame camera from swaying and shaking."
 
-  gow3-100-title: &gow3-100-title
-      "God of War 3 (God of War III)":
-        BCES00510: [ 01.00 ]
-        BCES00799: [ 01.00 ]
-        BCUS98111: [ 01.00 ]
-        BCJS37001: [ 01.00 ]
-        BCAS25003: [ 01.00 ]
-        BCKS15003: [ 01.00 ]
+  gow3_skipintro_notes: &gow3_skipintro_notes
+    "Skips SCE intros up to the first video.\n2.0 now skips first two intro videos."
 
-  gow3-103-title: &gow3-103-title
-      "God of War 3 (God of War III)":
-        BCES00510: [ 01.03 ]
-        BCES00799: [ 01.03 ]
-        BCUS98111: [ 01.03 ]
-        BCJS37001: [ 01.03 ]
-        BCAS25003: [ 01.03 ]
-        BCKS15003: [ 01.03 ]
+  gow3_100_title: &gow3_100_title
+    "God of War 3 (God of War III)":
+      BCES00510: [ 01.00 ]
+      BCES00799: [ 01.00 ]
+      BCUS98111: [ 01.00 ]
+      BCJS37001: [ 01.00 ]
+      BCAS25003: [ 01.00 ]
+      BCKS15003: [ 01.00 ]
+
+  gow3_103_title: &gow3_103_title
+    "God of War 3 (God of War III)":
+      BCES00510: [ 01.03 ]
+      BCES00799: [ 01.03 ]
+      BCUS98111: [ 01.03 ]
+      BCJS37001: [ 01.03 ]
+      BCAS25003: [ 01.03 ]
+      BCKS15003: [ 01.03 ]
 
 PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
   "Unlock FPS":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "ZEROx, illusion"
-    Notes: "Unlocks internal timestep calculation. Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60 FPS and above."
+    Notes: *gow3_fps_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00528560, 1000 ]
@@ -2061,67 +2070,67 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
       - [ be16, 0x000c7b0a, 0xccc8 ] # Chainswing fix
       - [ be16, 0x000ea0fe, 0xccc8 ] # Water freeze fix
   "Skip any videos with X button":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0026fe14, 0x901f ]
   "Disable MLAA":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "illusion, ZEROx"
-    Notes: *gow3resnotes
+    Notes: *gow3_mlaa_notes
     Patch Version: 3.0
     Patch:
       - [ be32, 0x0052bf2c, 0x00000000 ]
       - [ be32, 0x0023137c, 0x60000000 ]
   "Disable Depth of Field":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c14ac, 0x38000000 ]
   "Disable Motion Blur":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c57e4, 0x38000000 ]
   "Disable Color Grading (Speedboost)":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "illusion"
-    Notes: *gow3speedhack
+    Notes: *gow3_colorgrading_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0052bda3, 0x00 ]
   "Disable Layered Fog (Speedboost)":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "ZEROx"
-    Notes: *gow3fog
+    Notes: *gow3_fog_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00296a90, 0x38000000 ] # Disable Layered fog
       - [ be32, 0x00296bd4, 0x38000000 ] # On pause
   "Disable Bloom":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "illusion"
-    Notes: *gow3bloom
+    Notes: *gow3_bloom_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00231288, 0x60000000 ]
   "Disable Camera Sway":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "ZEROx"
-    Notes: *gow3camerasway
+    Notes: *gow3_camerasway_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0015d29c, 0x38000000 ]
   "Skip intro":
-    Games: *gow3-103-title
+    Games: *gow3_103_title
     Author: "illusion, ZEROx"
-    Notes: *gow3skipintro
+    Notes: *gow3_skipintro_notes
     Patch Version: 2.0
     Patch:
       - [ byte, 0x00588e50, 0x01 ]       # Skip SCEA logos
@@ -2144,9 +2153,9 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
 
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
   "Unlock FPS":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "ZEROx, illusion"
-    Notes: "Unlocks internal timestep calculation, Increase vblank to match your desired framerate.\nThis patch also fixes IGC timing issues at 60 FPS and above."
+    Notes: *gow3_fps_notes
     Patch Version: 2.0
     Patch:
       - [ bef32, 0x00528560, 1000 ]
@@ -2159,67 +2168,67 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
       - [ be16, 0x001e51b6, 0xe7a8 ] # 1000.0f gameplay speed scaling
       - [ be16, 0x002710f6, 0xe7a8 ] # 1000.0f video player speed scaling
   "Skip any videos with X button":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0026fd18, 0x901f ]
   "Disable MLAA":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "illusion, ZEROx"
-    Notes: *gow3resnotes
+    Notes: *gow3_mlaa_notes
     Patch Version: 3.0
     Patch:
       - [ byte, 0x0052bf2f, 0x00 ]
       - [ be32, 0x00231248, 0x60000000 ]
   "Disable Depth of Field":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c13c8, 0x38000000 ]
   "Disable Motion Blur":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c5700, 0x38000000 ]
   "Disable Color Grading (Speedboost)":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "illusion"
-    Notes: *gow3speedhack
+    Notes: *gow3_colorgrading_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0052bda3, 0x00 ]
   "Disable Layered Fog (Speedboost)":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "ZEROx"
-    Notes: *gow3fog
+    Notes: *gow3_fog_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00296994, 0x38000000 ] # Disable Layered fog
       - [ be32, 0x00296ad8, 0x38000000 ] # On pause
   "Disable Bloom":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "illusion"
-    Notes: *gow3bloom
+    Notes: *gow3_bloom_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00231288, 0x60000000 ]
   "Disable Camera sway":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0015d1b8, 0x38000000 ] # Camera sway
   "Skip intro":
-    Games: *gow3-100-title
+    Games: *gow3_100_title
     Author: "illusion"
-    Notes: *gow3skipintro
+    Notes: *gow3_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001e5468, 0x4800 ]
