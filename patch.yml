@@ -6234,39 +6234,46 @@ Anchors:
     - [ be32, 0x00dd4eec, 0x88090078 ]
     - [ be32, 0x00dd4ef0, 0x4e800020 ]
 
-  uc3debugmenunotes: &uc3debugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+  uc3_debugmenu_notes: &uc3_debugmenu_notes
+    "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
-  uc3mlaanotes: &uc3mlaanotes "Allows for the use of Resolution Scaling in the title and also improves performance.\nVersion 2.0 Fixes high levels of Bloom in some areas. (1.10 and 1.19 Only)"
+  uc3_mlaa_notes: &uc3_mlaa_notes
+    "Allows for the use of Resolution Scaling in the title and also improves performance.\nVersion 2.0 Fixes high levels of Bloom in some areas. (1.10 and 1.19 Only)"
 
-  uc3gpulightingnotes: &uc3gpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
+  uc3_wcbperformance_notes: &uc3_wcbperformance_notes
+    "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
 
-  uc3camshakenotes: &uc3camshakenotes "Last modified: 1 Mar 2021\n\nDisables Camera Shake during Gameplay.\nIn-Game-Cinematics remain is unaffected."
+  uc3_gpulighting_notes: &uc3_gpulighting_notes
+    "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
+
+  uc3_camshake_notes: &uc3_camshake_notes
+    "Last modified: 1 Mar 2021\n\nDisables Camera Shake during Gameplay.\nIn-Game-Cinematics remain is unaffected."
 
   uc3_119title: &uc3_119title
-      "Uncharted 3: Drake's Deception":
-        BCES01175: [ 01.19 ]
-        BCES01176: [ 01.19 ]
-        BCES01670: [ 01.19 ]
-        BCES01692: [ 01.19 ]
-        BCUS98233: [ 01.19 ]
-        BCJS37004: [ 02.17 ]
-        NPEA00422: [ 01.19 ]
-        NPUA80858: [ 01.19 ]
-        BCUS99086: [ 01.19 ]
-        BCAS25014: [ 01.19 ]
-        BCAS25009: [ 01.19 ]
+    "Uncharted 3: Drake's Deception":
+      BCES01175: [ 01.19 ]
+      BCES01176: [ 01.19 ]
+      BCES01670: [ 01.19 ]
+      BCES01692: [ 01.19 ]
+      BCUS98233: [ 01.19 ]
+      BCJS37004: [ 02.17 ]
+      NPEA00422: [ 01.19 ]
+      NPUA80858: [ 01.19 ]
+      BCUS99086: [ 01.19 ]
+      BCAS25014: [ 01.19 ]
+      BCAS25009: [ 01.19 ]
 
   uc3_110title: &uc3_110title
-      "Uncharted 3: Drake's Deception":
-        BCES01670: [ 01.10 ]
-        BCAS25014: [ 01.10 ]
+    "Uncharted 3: Drake's Deception":
+      BCES01670: [ 01.10 ]
+      BCAS25014: [ 01.10 ]
 
   uc3_100title: &uc3_100title
-      "Uncharted 3: Drake's Deception":
-        BCES01175: [ 01.00 ]
-        BCES01176: [ 01.00 ]
-        BCES01692: [ 01.00 ]
-        BCUS98233: [ 01.00 ]
+    "Uncharted 3: Drake's Deception":
+      BCES01175: [ 01.00 ]
+      BCES01176: [ 01.00 ]
+      BCES01692: [ 01.00 ]
+      BCUS98233: [ 01.00 ]
 
 PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Unlock FPS":
@@ -6279,7 +6286,7 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Disable in-built MLAA":
     Games: *uc3_100title
     Author: "Whatcookie"
-    Notes: *uc3mlaanotes
+    Notes: *uc3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_100_mlaa ]
@@ -6314,7 +6321,7 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Performance (WCB)":
     Games: *uc3_100title
     Author: "ZEROx, illusion"
-    Notes: "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
+    Notes: *uc3_wcbperformance_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_100_speed ]
@@ -6335,21 +6342,21 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Enable GPU Lighting":
     Games: *uc3_100title
     Author: "ZEROx, illusion"
-    Notes: *uc3gpulightingnotes
+    Notes: *uc3_gpulighting_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_100_db ]
   "Disable Camera Shake":
     Games: *uc3_100title
     Author: "illusion"
-    Notes: *uc3camshakenotes
+    Notes: *uc3_camshake_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00806c88, 0x3800 ]
   "Debug Menu":
     Games: *uc3_100title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *uc3debugmenunotes
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00041e34, 0x419e ]
@@ -6360,7 +6367,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: *uc3mlaanotes
+    Notes: *uc3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_JP_100_mlaa ]
@@ -6405,7 +6412,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
+    Notes: *uc3_wcbperformance_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_JP_100_speed ]
@@ -6432,7 +6439,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: *uc3gpulightingnotes
+    Notes: *uc3_gpulighting_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_JP_100_db ]
@@ -6441,7 +6448,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *uc3debugmenunotes
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00041e34, 0x419e ]
@@ -6450,7 +6457,7 @@ PPU-664fb0e4a94c62c15a6474841c202fb2bf80ce16:
   "Disable in-built MLAA":
     Games: *uc3_110title
     Author: "Whatcookie, ZEROx"
-    Notes: *uc3mlaanotes
+    Notes: *uc3_mlaa_notes
     Patch Version: 2.0
     Patch:
       - [ load, *uc3_110_mlaa ]
@@ -6492,7 +6499,7 @@ PPU-664fb0e4a94c62c15a6474841c202fb2bf80ce16:
   "Performance (WCB)":
     Games: *uc3_110title
     Author: "ZEROx, illusion"
-    Notes: "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
+    Notes: *uc3_wcbperformance_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_110_speed ]
@@ -6513,21 +6520,21 @@ PPU-664fb0e4a94c62c15a6474841c202fb2bf80ce16:
   "Enable GPU Lighting":
     Games: *uc3_110title
     Author: "ZEROx, illusion"
-    Notes: *uc3gpulightingnotes
+    Notes: *uc3_gpulighting_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_110_db ]
   "Disable Camera Shake":
     Games: *uc3_110title
     Author: "illusion"
-    Notes: *uc3camshakenotes
+    Notes: *uc3_camshake_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00812b44, 0x3800 ]
   "Debug Menu":
     Games: *uc3_110title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *uc3debugmenunotes
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00042624, 0x419e ]
@@ -6543,7 +6550,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Disable in-built MLAA":
     Games: *uc3_119title
     Author: "Whatcookie, ZEROx"
-    Notes: *uc3mlaanotes
+    Notes: *uc3_mlaa_notes
     Patch Version: 2.0
     Patch:
       - [ load, *uc3_119_mlaa ]
@@ -6585,7 +6592,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Performance (WCB)":
     Games: *uc3_119title
     Author: "ZEROx, illusion"
-    Notes: "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
+    Notes: *uc3_wcbperformance_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_speed ]
@@ -6606,14 +6613,14 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Enable GPU Lighting":
     Games: *uc3_119title
     Author: "ZEROx, illusion"
-    Notes: *uc3gpulightingnotes
+    Notes: *uc3_gpulighting_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_db ]
   "Debug Menu":
     Games: *uc3_119title
     Author: "dron_3, HdHereidme, illusion, ZEROx, Skye"
-    Notes: *uc3debugmenunotes
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_devmenu ]
@@ -6627,7 +6634,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Disable Camera Shake":
     Games: *uc3_119title
     Author: "illusion"
-    Notes: *uc3camshakenotes
+    Notes: *uc3_camshake_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x008242cc, 0x3800 ]
@@ -6694,7 +6701,7 @@ PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
   "Disable Uncharted TV":
     Games: *uc3beta100_title
     Author: "illusion"
-    Notes: "Fixes significant slowdown because the video is no longer hosted on server"
+    Notes: "Fixes significant slowdown because the video is no longer hosted on the server."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00700f42, 0x0000 ] # ret 0
@@ -6749,7 +6756,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
   "Disable Uncharted TV":
     Games: *uc3beta104_title
     Author: "illusion"
-    Notes: "Fixes crash after entering MP menu due to offline video streaming API"
+    Notes: "Fixes crash after entering MP menu due to offline video streaming API."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0070194e, 0x0000 ] # ret 0
@@ -6799,7 +6806,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
   "Disable Post on SPU":
     Games: *uc3beta104_title
     Author: "illusion, ZEROx"
-    Notes: "Slight overbloom in some areas, needs correction."
+    Notes: "Slight overbloom in some areas. Needs correction."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00897644, 0x9b43 ] # post on spu         = 0
@@ -6834,7 +6841,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
   "Performance (WCB)":
     Games: *uc3beta104_title
     Author: "illusion, ZEROx"
-    Notes: "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
+    Notes: *uc3_wcbperformance_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00897620, 0x9b83 ] # reload depth buffer = 0
