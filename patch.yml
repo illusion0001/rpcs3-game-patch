@@ -6238,16 +6238,16 @@ Anchors:
     "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
   uc3_mlaa_notes: &uc3_mlaa_notes
-    "Allows for the use of Resolution Scaling in the title and also improves performance.\nVersion 2.0 Fixes high levels of Bloom in some areas. (1.10 and 1.19 Only)"
+    "Allows for the use of Resolution Scaling in the title and improves performance.\nVersion 2.0 Fixes high levels of bloom in some areas. (1.10 and 1.19 Only)"
 
   uc3_wcbperformance_notes: &uc3_wcbperformance_notes
     "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
 
   uc3_gpulighting_notes: &uc3_gpulighting_notes
-    "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
+    "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lighting effects that are broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
 
   uc3_camshake_notes: &uc3_camshake_notes
-    "Last modified: 1 Mar 2021\n\nDisables Camera Shake during Gameplay.\nIn-Game-Cinematics remain is unaffected."
+    "Last modified: 1 Mar 2021\n\nDisables Camera Shake during gameplay.\nIn-Game-Cinematics are unaffected."
 
   uc3_119title: &uc3_119title
     "Uncharted 3: Drake's Deception":
