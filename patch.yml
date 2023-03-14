@@ -1046,8 +1046,10 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
       - [ be32, 0x008c5178, 0x30840000 ]
 
 Anchors:
-  GoWHD43notes: &GoWHD43notes "Restores original viewport size from PS2 releases. The remastered versions of the first two games handled a 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. Must enable Stretch to Display Area in GPU configuration."
-  GoW169notes: &GoW169notes "Just like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of actually expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9."
+  gow_hd_4_3_notes: &gow_hd_4_3_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Restores original viewport size from PS2 releases. The remastered versions of the first two games handled a 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of expanding the horizontal FOV."
+  gow_hd_16_9_notes: &gow_hd_16_9_notes
+    "Like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9."
 
 PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
   "4:3 Aspect Ratio":
@@ -1055,7 +1057,7 @@ PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
       "God of War: HD":
         NPUA80490: [ 01.00 ]
     Author: "boma"
-    Notes: *GoWHD43notes
+    Notes: *gow_hd_4_3_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x004ff9ec, 1.333333334 ]
@@ -1066,19 +1068,31 @@ PPU-31e32090ea333902dbf322c24487bab7e8c8d0d1:
       "God of War: II HD":
         NPUA80491: [ 01.00 ]
     Author: "boma"
-    Notes: *GoWHD43notes
+    Notes: *gow_hd_4_3_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0053ee4c, 1.333333334 ]
 
 PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
+  "True widescreen":
+    Games:
+      "God of War: HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80490: [ 01.01 ]
+    Author: "Garasuhato"
+    Notes: *gow_hd_16_9_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x001958d0, 0x38800000ffc00890 ]
+      - [ be64, 0x001958d8, 0xfc20f89048092135 ]
+      - [ be64, 0x001958e0, 0xc002daa4ec210032 ]
   "4:3 Aspect Ratio":
     Games:
       "God of War: HD":
         BCUS98229: [ 01.01 ]
         NPUA80490: [ 01.01 ]
     Author: "boma"
-    Notes: *GoWHD43notes
+    Notes: *gow_hd_4_3_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x004ffa44, 1.333333334 ]
@@ -1094,13 +1108,25 @@ PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
       - [ be32, 0x001c67f0, 0x38000001 ]
 
 PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
+  "True widescreen":
+    Games:
+      "God of War: II HD":
+        BCUS98229: [ 01.01 ]
+        NPUA80491: [ 01.01 ]
+    Author: "Garasuhato"
+    Notes: *gow_hd_16_9_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000593e4, 0xfca00890 ]
+      - [ be64, 0x000593e8, 0xfcc0e890807f000c ]
+      - [ be32, 0x001958f0, 0xfc20f890 ]
   "4:3 Aspect Ratio":
     Games:
       "God of War: II HD":
         BCUS98229: [ 01.01 ]
         NPUA80491: [ 01.01 ]
     Author: "boma"
-    Notes: *GoWHD43notes
+    Notes: *gow_hd_4_3_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0053eecc, 1.333333334 ]
@@ -1126,6 +1152,19 @@ PPU-e8e29268437430a42b01ccbdea814560150bc037:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c84d8, 0x38000001 ]
+  "True widescreen":
+    Games:
+      "God of War: HD":
+        BCES00791: [ 01.01 ]
+        NPEA00255: [ 01.01 ]
+    Author: "Garasuhato"
+    Notes: *gow_hd_16_9_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00197164, 0x38800000 ]
+      - [ be64, 0x00197168, 0xffc00890fc20f890 ]
+      - [ be32, 0x00197170, 0x48091ad9 ]
+      - [ be64, 0x00197174, 0xc002dab8ec210032 ]
 
 PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
   "Skip any videos with X button":
@@ -1138,57 +1177,13 @@ PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002c2b14, 0x38000001 ]
-PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
-  "True widescreen":
-    Games:
-      "God of War: HD":
-        BCUS98229: [ 01.01 ]
-        NPUA80490: [ 01.01 ]
-    Author: "Garasuhato"
-    Notes: *GoW169notes
-    Patch Version: 1.0
-    Patch:
-      - [ be64, 0x001958d0, 0x38800000ffc00890 ]
-      - [ be64, 0x001958d8, 0xfc20f89048092135 ]
-      - [ be64, 0x001958e0, 0xc002daa4ec210032 ]
-
-PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
-  "True widescreen":
-    Games:
-      "God of War: II HD":
-        BCUS98229: [ 01.01 ]
-        NPUA80491: [ 01.01 ]
-    Author: "Garasuhato"
-    Notes: *GoW169notes
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x000593e4, 0xfca00890 ]
-      - [ be64, 0x000593e8, 0xfcc0e890807f000c ]
-      - [ be32, 0x001958f0, 0xfc20f890 ]
-
-PPU-e8e29268437430a42b01ccbdea814560150bc037:
-  "True widescreen":
-    Games:
-      "God of War: HD":
-        BCES00791: [ 01.01 ]
-        NPEA00255: [ 01.01 ]
-    Author: "Garasuhato"
-    Notes: *GoW169notes
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00197164, 0x38800000 ]
-      - [ be64, 0x00197168, 0xffc00890fc20f890 ]
-      - [ be32, 0x00197170, 0x48091ad9 ]
-      - [ be64, 0x00197174, 0xc002dab8ec210032 ]
-
-PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
   "True widescreen":
     Games:
       "God of War: II HD":
         BCES00791: [ 01.01 ]
         NPEA00256: [ 01.01 ]
     Author: "Garasuhato"
-    Notes: *GoW169notes
+    Notes: *gow_hd_16_9_notes
     Patch Version: 1.0
     Patch:
       - [ be64, 0x00059600, 0xfca00890fcc0e890 ]
@@ -1201,7 +1196,7 @@ PPU-a991fd08acbc0262bfc4cca1a60619d758620565:
         BCUS98229: [ 01.00 ]
         NPUA80490: [ 01.00 ]
     Author: "Garasuhato"
-    Notes: *GoW169notes
+    Notes: *gow_hd_16_9_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001a27d4, 0x38800000 ]
@@ -1216,7 +1211,7 @@ PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
         BCUS98229: [ 01.00 ]
         NPUA80491: [ 01.00 ]
     Author: "Garasuhato"
-    Notes: *GoW169notes
+    Notes: *gow_hd_16_9_notes
     Patch Version: 1.0
     Patch:
       - [ be64, 0x000593b8, 0xfca00890fcc0e890 ]
