@@ -1516,20 +1516,24 @@ PPU-023ff768c205b6a7b819005c6eccf5c099ca3e04:
       - [ be16, 0x004a75f6, 720 ]
 
 Anchors:
+  LC_FPS_Notes: &LC_FPS_Notes
+   "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+
   LC_FPS: &LC_FPS
     - [ be32, 0x00932f2c, 0x60000000 ]
     - [ be32, 0x00932f8c, 0x60000000 ]
     - [ be32, 0x00932f90, 0x60000000 ]
 
-  LC_GRAIN: &LC_GRAIN
+  LC_Grain: &LC_Grain
     - [ be32, 0x00408690, 0x4800007c ] # b 0x40870c
+
+  LC_DOF_Notes: &LC_DOF_Notes
+    "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
 
   LC_DOF: &LC_DOF
     - [ be32, 0x0016c1b4, 0x38a00000 ] # li r5 0
     - [ be32, 0x00326f6c, 0x38a00000 ] # li r5 0
     - [ be32, 0x00408498, 0x38a00000 ] # li r5 0
-
-  LC_DOFnotes: &LC_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
 
   LC_BLOOM: &LC_BLOOM
     - [ be32, 0x0016c1a8, 0x38c00000 ] # li r6 0
@@ -1541,7 +1545,7 @@ PPU-df6f6701742921b9cbb2554983bb4568aae8d659:
       "Lollipop Chainsaw":
         BLUS30917: [ All ]
     Author: "Whatcookie"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+    Notes: *LC_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *LC_FPS ]
@@ -1553,13 +1557,13 @@ PPU-df6f6701742921b9cbb2554983bb4568aae8d659:
     Notes:
     Patch Version: 2.0
     Patch:
-      - [ load, *LC_GRAIN ]
+      - [ load, *LC_Grain ]
   "Disable Low-Resolution Depth of Field":
     Games:
       "Lollipop Chainsaw":
         BLUS30917: [ All ]
     Author: "boma"
-    Notes: *LC_DOFnotes
+    Notes: *LC_DOF_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *LC_DOF ]
@@ -1579,7 +1583,7 @@ PPU-6f69ee207208d55faacb75a3aac6a9ce2aa290b7:
       "Lollipop Chainsaw":
         BLES01525: [ All ]
     Author: "Whatcookie"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+    Notes: *LC_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *LC_FPS ]
@@ -1591,13 +1595,13 @@ PPU-6f69ee207208d55faacb75a3aac6a9ce2aa290b7:
     Notes:
     Patch Version: 2.0
     Patch:
-      - [ load, *LC_GRAIN ]
+      - [ load, *LC_Grain ]
   "Disable Low-Resolution Depth of Field":
     Games:
       "Lollipop Chainsaw":
         BLES01525: [ All ]
     Author: "boma"
-    Notes: *LC_DOFnotes
+    Notes: *LC_DOF_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *LC_DOF ]
