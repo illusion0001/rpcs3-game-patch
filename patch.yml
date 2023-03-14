@@ -469,7 +469,7 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
         BLUS30443: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
-    Patch Version: 1.0.1
+    Patch Version: 1.1
     Patch:
       - [ be16, 0x00025edc, 0x981f ]
   "Skip Intro Videos":
@@ -528,7 +528,7 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
         BLES00932: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
-    Patch Version: 1.0.1
+    Patch Version: 1.1
     Patch:
       - [ be16, 0x00026ac4, 0x981f ]
   "Skip Intro Videos":
@@ -587,7 +587,7 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
         BCAS20071: [ 01.04 ]
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_DDE_Notes
-    Patch Version: 1.0.1
+    Patch Version: 1.1
     Patch:
       - [ be16, 0x0002414c, 0x981f ]
   "Skip Intro Videos":
@@ -646,7 +646,7 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
         BLUD80018: [ 01.01 ]
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
-    Patch Version: 1.0.1
+    Patch Version: 1.1
     Patch:
       - [ be16, 0x00025edc, 0x981f ]
   "Skip Intro Videos":
@@ -1218,7 +1218,8 @@ PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
       - [ be64, 0x000593c0, 0x807f000cfc20f890 ]
 
 Anchors:
-  lbp2_ar_notes: &lbp2_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  lbp2_ar_notes: &lbp2_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings."
   lbp2_ar_configurable_values: &lbp2_ar_configurable_values
     "Aspect Ratio":
       Type: double_enum
