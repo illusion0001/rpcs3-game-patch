@@ -1636,7 +1636,9 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       - [ be32, 0x00663680, 0x60000000 ]
 
 Anchors:
-  NieR_FPS_Notes: &NieR_FPS_Notes "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
+  NieR_FPS_Notes: &NieR_FPS_Notes
+    "Updated with a new version that has correct game speed at any framerate. You no longer need to set the Framelimiter to 30 or 60."
+
   NieR_FPS_USEU: &NieR_FPS_USEU
   # unlock framerate
     - [ be32, 0x00f7c3b8, 0x386001f5 ] # li r3, 1f5
@@ -1691,7 +1693,8 @@ Anchors:
   # constants
     - [ be32, 0x010d667c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
-  NieR_AR_Notes: &NieR_AR_Notes "HUD Elements will be stretched and misplaced."
+  NieR_AR_Notes: &NieR_AR_Notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will be stretched and misplaced."
   NieR_AR_Configurable_values: &NieR_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
