@@ -8703,14 +8703,20 @@ PPU-65078c652115190ecb64b7ff52bbf1c68696deb6:
       - [ be32, 0x010b9e68, 0x60000000 ]
       - [ be32, 0x010b9ec0, 0x60000000 ]
 
+Anchors:
+  blackoutvenue_unlock_notes: &blackoutvenue_unlock_notes
+    "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
+  blackoutvenue_force_notes: &blackoutvenue_force_notes
+    "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
+
 PPU-1369b92d59b3727ea77257795263de460e621823:
   "Unlock Pitch Black Out Venue":
     Games:
       "DJ Hero 2":
         BLUS30526: [ 01.00 ]
     Author: "shockdude"
-    Notes: "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_unlock_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0086d99c, 0x58585858 ]
 
@@ -8720,8 +8726,8 @@ PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
       "DJ Hero 2":
         BLUS30526: [ 01.01 ]
     Author: "shockdude"
-    Notes: "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_unlock_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0086f718, 0x58585858 ]
 
@@ -8731,8 +8737,8 @@ PPU-b70a9965638aa43c4edec58683cf0f2dfed8071b:
       "DJ Hero 2":
         BLES00896: [ 01.00 ]
     Author: "shockdude"
-    Notes: "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_unlock_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0086d55c, 0x58585858 ]
 
@@ -8742,8 +8748,8 @@ PPU-bccea158f89820de105a87541c9252052538a5fb:
       "DJ Hero 2":
         BLES00896: [ 01.01 ]
     Author: "shockdude"
-    Notes: "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_unlock_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0086f2d8, 0x58585858 ]
 
@@ -8753,8 +8759,8 @@ PPU-530aadd4c93166a0ca0d3acbe963a09f7926b878:
       "DJ Hero 2 Demo":
         NPUB90438: [ 01.00 ]
     Author: "shockdude"
-    Notes: "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_force_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x007b3c40, 0x51756179 ]
       - [ be32, 0x007b3c44, 0x32360000 ]
@@ -8765,8 +8771,8 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
       "DJ Hero 2 Demo":
         NPEB90275: [ 01.00 ]
     Author: "shockdude"
-    Notes: "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
-    Patch Version: 1.00
+    Notes: *blackoutvenue_force_notes
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x007b37cc, 0x51756179 ]
       - [ be32, 0x007b37d0, 0x32360000 ]
