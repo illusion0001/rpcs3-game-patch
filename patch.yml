@@ -822,19 +822,21 @@ PPU-QoiFRPF8j00N996aQMthtWqEUG0Y:
       - [ be32, 0x0064768d, 0x006481d5 ]
 
 Anchors:
-  DOD3_FPS_Notes: &DOD3_FPS_Notes "Need to also change Vblank frequency to 120Hz for 60 FPS or 240Hz for 120 FPS. Going over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
-  # Min frametime is this value / 30
-  # 0.125 / 30 is 4.1ms, so max FPS is 240
-  # This game has a second framerate limiter based
-  # on Vblank, so set Vblank high to raise the framerate
-  # Max FPS is Vblank / 2
+  DOD3_FPS_Notes: &DOD3_FPS_Notes
+    "Need to also change Vblank frequency to 120Hz for 60 FPS or 240Hz for 120 FPS. Going over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+    # Min frametime is this value / 30
+    # 0.125 / 30 is 4.1ms, so max FPS is 240
+    # This game has a second framerate limiter based
+    # on Vblank, so set Vblank high to raise the framerate
+    # Max FPS is Vblank / 2
 
-  DOD3_Camera_H_Sens_Notes: &DOD3_Camera_H_Sens_Notes "When using the FPS unlock patch the horizontal camera sensitivity gets very low. This patch changes a multiplier so that the horizontal camera sensitivity slider in the game's settings does something meaningful again. The multiplier can be altered in the patch file."
-  # Sensitivity formula is "SliderValue * (Multiplier + 1)"
-  # Where SliderValue is the setting (0-15) from the game settings and
-  # default Multiplier is 0.125, giving a default range of 0.125 - 2.
-  # 0.35 seems good from my testing, feel free to change as you see fit.
-  DOD3_Camera_H_Sens_Multiplier: &DOD3_Camera_H_Sens_Multiplier 0.35000000
+  DOD3_Camera_H_Sens_Notes: &DOD3_Camera_H_Sens_Notes
+    "When using the FPS unlock patch the horizontal camera sensitivity gets very low. This patch changes a multiplier so that the horizontal camera sensitivity slider in the game's settings does something meaningful again. The multiplier can be altered in the patch file."
+    # Sensitivity formula is "SliderValue * (Multiplier + 1)"
+    # Where SliderValue is the setting (0-15) from the game settings and
+    # default Multiplier is 0.125, giving a default range of 0.125 - 2.
+    # 0.35 seems good from my testing, feel free to change as you see fit.
+  DOD3_Camera_H_Sens_Multiplier: &DOD3_Camera_H_Sens_Multiplier 0.35
 
 PPU-2b393f064786e5895d5a576621deb4c9107a8f0b:
   "Unlock FPS":
