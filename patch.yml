@@ -1309,13 +1309,16 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
       - [ be32, 0x00181118, 0x60000000 ]
 
 Anchors:
-  ASURA_FPSnotes: &ASURA_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's quite possible to play through the game at 60 FPS if you are good at button mashing, but 120 FPS and higher aren't really playable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
-  ASURA_DEVnotes: &ASURA_DEVnotes "Press D-pad Left at any time to access the Developer Menu."
+  ASURA_FPS_notes: &ASURA_FPS_notes
+    "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's possible to play through the game at 60 FPS if you are good at button mashing, but 120 FPS and higher are unplayable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
 
   ASURA_FPS: &ASURA_FPS
     - [ be32, 0x008bbd04, 0x60000000 ] # nop
     - [ be32, 0x008bbd64, 0x60000000 ] # nop
     - [ be32, 0x008bbd68, 0x60000000 ] # nop
+
+  ASURA_DEV_notes: &ASURA_DEV_notes
+    "Press D-pad Left at any time to access the Developer Menu."
 
   ASURA_DEV: &ASURA_DEV
     - [ be32, 0x014d69ec, 0x38600000 ] # li r3, 0
@@ -1348,7 +1351,7 @@ PPU-83096111daff850cc92b637aec1780c4079e1c58:
       "Asura's Wrath":
         BLUS30721: [ All ]
     Author: "Whatcookie"
-    Notes: *ASURA_FPSnotes
+    Notes: *ASURA_FPS_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
@@ -1357,7 +1360,7 @@ PPU-83096111daff850cc92b637aec1780c4079e1c58:
       "Asura's Wrath":
         BLUS30721: [ All ]
     Author: "dron_3"
-    Notes: *ASURA_DEVnotes
+    Notes: *ASURA_DEV_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
@@ -1404,7 +1407,7 @@ PPU-69f53b470d81ea961c1c2ff264ade6ab8077d2a1:
       "Asura's Wrath":
         BLES01227: [ All ]
     Author: "Whatcookie, Mew21"
-    Notes: *ASURA_FPSnotes
+    Notes: *ASURA_FPS_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
@@ -1413,7 +1416,7 @@ PPU-69f53b470d81ea961c1c2ff264ade6ab8077d2a1:
       "Asura's Wrath":
         BLES01227: [ All ]
     Author: "dron_3"
-    Notes: *ASURA_DEVnotes
+    Notes: *ASURA_DEV_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
