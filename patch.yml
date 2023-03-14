@@ -11617,8 +11617,8 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
         BLUS30087: [ 01.00 ]
         BLES00163: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the maximum framerate."
-    Patch Version: 1.00
+    Notes: "Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the framerate."
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00aaed04, 0x60000000 ]
       - [ be32, 0x00aaec4c, 0x60000000 ]
