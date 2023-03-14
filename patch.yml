@@ -1272,7 +1272,8 @@ PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
       - [ be32, 0x0014c6c4, 0x38000001 ]
 
 Anchors:
-  Folklore_FPS_Notes: &Folklore_FPS_Notes "Totally unlocks FPS during gameplay. Sadly the cloth physics goes nuts at 60 FPS, despite the gameplay working perfectly. You can set the framelimit to 50 and the cloth physics will work perfectly!"
+  Folklore_FPS_Notes: &Folklore_FPS_Notes
+    "Unlocks FPS during gameplay. Cloth physics break above 50 FPS despite the gameplay working."
 
 PPU-eb05d70d23d075ef6d9c81f7e7cf9bffc98c404c:
   "Unlock FPS":
