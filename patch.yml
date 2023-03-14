@@ -7925,11 +7925,14 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       - [ bef32, 0x0072bf80, "FPS" ] # Absorb Glow Framerate Fix
 
 Anchors:
-  ico_mlaa_notes: &ico_mlaa_notes "Allows for the use of Resolution Scaling in the title and improves performance."
-
-  sotc_extended_fov_notes: &sotc_extended_fov_notes "Camera may zoom out during cinematic change."
-  sotc_full_notes: &sotc_full_notes "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
-  sotc_60fps_notes: &sotc_60fps_notes "Allows 60 FPS without changing Vblank."
+  ico_mlaa_notes: &ico_mlaa_notes
+    "Allows for the use of Resolution Scaling in the title and improves performance."
+  sotc_extended_fov_notes: &sotc_extended_fov_notes
+    "Camera may zoom out during cinematic change."
+  sotc_full_notes: &sotc_full_notes
+    "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
+  sotc_60fps_notes: &sotc_60fps_notes
+    "Allows 60 FPS without changing Vblank."
 
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
   "Disable MLAA":
@@ -7939,7 +7942,7 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
         NPUA80676: [ 01.00 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00045c84, 0x38800000 ] # li r4 0x0
       - [ be32, 0x00476af4, 0x40800003 ] # il r3 0x0
@@ -7952,7 +7955,7 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
         NPUA80676: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004d20cb, 0x00 ]
   "Disable All Post-processing":
@@ -7962,7 +7965,7 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
         NPUA80676: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004d20bf, 0x00 ]
 
@@ -7974,7 +7977,7 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00045a50, 0x38800000 ] # li r4 0x0
       - [ be32, 0x00475f74, 0x40800003 ] # il r3 0x0
@@ -7987,7 +7990,7 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004d203b, 0x00 ]
   "Disable All Post-processing":
@@ -7997,7 +8000,7 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004d202f, 0x00 ]
 
@@ -8012,7 +8015,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         NPUA80676: [ 01.01 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x004e224c, 0x00000000 ] # 0 int32
       - [ be32, 0x00477d74, 0x40800003 ] # il r3 0x0
@@ -8027,7 +8030,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         NPUA80676: [ 01.01 ]
     Author: "illusion"
     Notes: "Warning: Log Spam!"
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00015e50, 0x480ecd20 ] # b 0x00102b70
 # Memory Patches
@@ -8041,7 +8044,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         NPUA80676: [ 01.01 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004e215b, 0x00 ]
   "Disable All Post-processing":
@@ -8054,7 +8057,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
         NPUA80676: [ 01.01 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ byte, 0x004e214f, 0x00 ]
 
@@ -8066,7 +8069,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00209d88, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
@@ -8076,7 +8079,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219360, 0x38000000 ] # li r0 0x0
@@ -8087,7 +8090,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00200c58, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f8374, 0x40800003 ] # il r3 0x0
@@ -8100,7 +8103,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
         BCUS98259: [ 01.00 ]
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x00732894, 1.5 ]
 
@@ -8122,7 +8125,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPUA80677: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0020a338, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
@@ -8132,7 +8135,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPUA80677: [ 01.00 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219910, 0x38000000 ] # li r0 0x0
@@ -8143,7 +8146,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPUA80677: [ 01.00 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x002011fc, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f8af4, 0x40800003 ] # il r3 0
@@ -8166,7 +8169,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
         NPUA80677: [ 01.00 ]
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x007328c4, 1.5 ]
 
@@ -8194,7 +8197,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPUA80677: [ 01.01 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0020ab50, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
@@ -8207,7 +8210,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPUA80677: [ 01.01 ]
     Author: "illusion"
     Notes:
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x0021a2e4, 0x38000000 ] # li r0 0x0
       - [ be32, 0x0021a128, 0x38000000 ] # li r0 0x0
@@ -8221,7 +8224,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPUA80677: [ 01.01 ]
     Author: "illusion"
     Notes: *ico_mlaa_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00201a14, 0x38000000 ] # li r0 0x0
       - [ be32, 0x006f96f4, 0x40800003 ] # il r3 0x0
@@ -8250,7 +8253,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
         NPUA80677: [ 01.01 ]
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
-    Patch Version: 1.00
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x007328dc, 1.5 ]
 
