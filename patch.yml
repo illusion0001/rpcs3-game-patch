@@ -7314,69 +7314,87 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
       - [ load, *tox_hp ]
 
 Anchors:
+  tox2_ar_notes: &tox2_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+
   tox2_jp_v01_00_ar_21_9: &tox2_jp_v01_00_ar_21_9
-    - [ bef32, 0x00e5c94c, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e5c94c, 1680 ]    # HUD / GUI (Width)
     - [ bef32, 0x00e5c954, 2.37037 ] # Display: Aspect Ratio
-    - [ be32,  0x00e5c958, 840 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e5c960, 840 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e5c980, -840 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e5c984, 840 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e5c958, 840 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e5c960, 840 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e5c980, -840 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e5c984, 840 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_jp_v01_01_ar_21_9: &tox2_jp_v01_01_ar_21_9
-    - [ bef32, 0x00e5b6cc, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e5b6cc, 1680 ]    # HUD / GUI (Width)
     - [ bef32, 0x00e5b6d4, 2.37037 ] # Display: Aspect Ratio
-    - [ be32,  0x00e5b6d8, 840 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e5b6e0, 840 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e5b700, -840 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e5b704, 840 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e5b6d8, 840 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e5b6e0, 840 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e5b700, -840 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e5b704, 840 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_us_ar_21_9: &tox2_us_ar_21_9
-    - [ bef32, 0x00e7233c, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e7233c, 1680 ]    # HUD / GUI (Width)
     - [ bef32, 0x00e72344, 2.37037 ] # Display: Aspect Ratio
-    - [ be32,  0x00e72348, 840 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e72350, 840 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e72370, -840 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e72374, 840 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32,  0x00e72348, 840 ]     # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e72350, 840 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e72370, -840 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e72374, 840 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_eu_ar_21_9: &tox2_eu_ar_21_9
-    - [ bef32, 0x00e723bc, 1680 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e723bc, 1680 ]    # HUD / GUI (Width)
     - [ bef32, 0x00e723c4, 2.37037 ] # Display: Aspect Ratio
-    - [ be32,  0x00e723c8, 840 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e723d0, 840 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e723f0, -840 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e723f4, 840 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e723c8, 840 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e723d0, 840 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e723f0, -840 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e723f4, 840 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_jp_v01_00_ar_32_9: &tox2_jp_v01_00_ar_32_9
-    - [ bef32, 0x00e5c94c, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e5c94c, 2560 ]     # HUD / GUI (Width)
     - [ bef32, 0x00e5c954, 3.555556 ] # Display: Aspect Ratio
-    - [ be32,  0x00e5c958, 1280 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e5c960, 1280 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e5c980, -1280 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e5c984, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e5c958, 1280 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e5c960, 1280 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e5c980, -1280 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e5c984, 1280 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_jp_v01_01_ar_32_9: &tox2_jp_v01_01_ar_32_9
-    - [ bef32, 0x00e5b6cc, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e5b6cc, 2560 ]     # HUD / GUI (Width)
     - [ bef32, 0x00e5b6d4, 3.555556 ] # Display: Aspect Ratio
-    - [ be32,  0x00e5b6d8, 1280 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e5b6e0, 1280 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e5b700, -1280 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e5b704, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e5b6d8, 1280 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e5b6e0, 1280 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e5b700, -1280 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e5b704, 1280 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_us_ar_32_9: &tox2_us_ar_32_9
-    - [ bef32, 0x00e7233c, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e7233c, 2560 ]     # HUD / GUI (Width)
     - [ bef32, 0x00e72344, 3.555556 ] # Display: Aspect Ratio
-    - [ be32,  0x00e72348, 1280 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e72350, 1280 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e72370, -1280 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e72374, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e72348, 1280 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e72350, 1280 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e72370, -1280 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e72374, 1280 ]     # HUD: Movie / Map / Skit - Background - Right
 
   tox2_eu_ar_32_9: &tox2_eu_ar_32_9
-    - [ bef32, 0x00e723bc, 2560 ] # HUD / GUI (Width)
+    - [ bef32, 0x00e723bc, 2560 ]     # HUD / GUI (Width)
     - [ bef32, 0x00e723c4, 3.555556 ] # Display: Aspect Ratio
-    - [ be32,  0x00e723c8, 1280 ] # HUD: "Start" Menu - Background (Width)
-    - [ bef32, 0x00e723d0, 1280 ] # HUD: "Pause" Menu - Background (Width)
-    - [ bef32, 0x00e723f0, -1280 ] # HUD: Movie / Map / Skit - Background - Left
-    - [ bef32, 0x00e723f4, 1280 ] # HUD: Movie / Map / Skit - Background - Right
+    - [ be32, 0x00e723c8, 1280 ]      # HUD: "Start" Menu - Background (Width)
+    - [ bef32, 0x00e723d0, 1280 ]     # HUD: "Pause" Menu - Background (Width)
+    - [ bef32, 0x00e723f0, -1280 ]    # HUD: Movie / Map / Skit - Background - Left
+    - [ bef32, 0x00e723f4, 1280 ]     # HUD: Movie / Map / Skit - Background - Right
+
+  tox2_fov_configurable_values: &tox2_fov_configurable_values
+    "FOV (Horizontal)":
+      Type: double_range
+      Value: 0.78
+      Min: 0.2
+      Max: 2.4
+    "FOV (Vertical)":
+      Type: double_range
+      Value: 0.62
+      Min: 0.2
+      Max: 2.4
+
+  tox2_fov_notes: &tox2_fov_notes
+    "Default values:\n Horizontal: 0.78\n Vertical: 0.62"
 
   tox2_jp_v01_00_fov: &tox2_jp_v01_00_fov
     - [ bef32, 0x010b7340, "FOV (Horizontal)" ]
@@ -7394,6 +7412,9 @@ Anchors:
     - [ bef32, 0x010d7bac, "FOV (Horizontal)" ]
     - [ bef32, 0x010d7ba8, "FOV (Vertical)" ]
 
+  tox2_fps_notes: &tox2_fps_notes
+    "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+
   tox2_jp_v01_00_fps: &tox2_jp_v01_00_fps
     - [ be32, 0x0082d108, 0x38600002 ]
     - [ be32, 0x0027a45c, 0x3a900001 ]
@@ -7410,6 +7431,9 @@ Anchors:
     - [ be32, 0x00846310, 0x38600002 ]
     - [ be32, 0x00282b2c, 0x3a900001 ]
 
+  tox2_hp_notes: &tox2_hp_notes
+    "In-game menu is a little ugly, but it works."
+
   tox2_hp: &tox2_hp
     - [ be32, 0x00184934, 0x9ba70010 ]
     - [ be32, 0x0017a7e8, 0x3a10270e ]
@@ -7420,7 +7444,7 @@ PPU-c8cfdd45c319ebbb747f070c80436c3472e28181:
       "Tales of Xillia 2":
         BLJS10188: [ 01.00 ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7430,7 +7454,7 @@ PPU-c8cfdd45c319ebbb747f070c80436c3472e28181:
       "Tales of Xillia 2":
         BLJS10188: [ 01.00 ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7440,19 +7464,9 @@ PPU-c8cfdd45c319ebbb747f070c80436c3472e28181:
       "Tales of Xillia 2":
         BLJS10188: [ 01.00 ]
     Author: "NeXoGone"
-    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Notes: *tox2_fov_notes
+    Configurable Values: *tox2_fov_configurable_values
     Patch Version: 1.0
-    Configurable Values:
-      "FOV (Horizontal)":
-        Type: double_range
-        Value: 0.78
-        Min: 0.20
-        Max: 2.4
-      "FOV (Vertical)":
-        Type: double_range
-        Value: 0.62
-        Min: 0.20
-        Max: 2.4
     Patch:
       - [ load, *tox2_jp_v01_00_fov ]
   "60 FPS":
@@ -7460,7 +7474,7 @@ PPU-c8cfdd45c319ebbb747f070c80436c3472e28181:
       "Tales of Xillia 2":
         BLJS10188: [ 01.00 ]
     Author: "Aphelion"
-    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+    Notes: *tox2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tox2_jp_v01_00_fps ]
@@ -7471,7 +7485,7 @@ PPU-b04f05aaf687e0f9b26887c7d277d571079efcc5:
       "Tales of Xillia 2":
         BLJS10188: [ 01.01 ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7481,7 +7495,7 @@ PPU-b04f05aaf687e0f9b26887c7d277d571079efcc5:
       "Tales of Xillia 2":
         BLJS10188: [ 01.01 ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7491,19 +7505,9 @@ PPU-b04f05aaf687e0f9b26887c7d277d571079efcc5:
       "Tales of Xillia 2":
         BLJS10188: [ 01.01 ]
     Author: "NeXoGone"
-    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Notes: *tox2_fov_notes
+    Configurable Values: *tox2_fov_configurable_values
     Patch Version: 1.0
-    Configurable Values:
-      "FOV (Horizontal)":
-        Type: double_range
-        Value: 0.78
-        Min: 0.20
-        Max: 2.4
-      "FOV (Vertical)":
-        Type: double_range
-        Value: 0.62
-        Min: 0.20
-        Max: 2.4
     Patch:
       - [ load, *tox2_jp_v01_01_fov ]
   "60 FPS":
@@ -7511,7 +7515,7 @@ PPU-b04f05aaf687e0f9b26887c7d277d571079efcc5:
       "Tales of Xillia 2":
         BLJS10188: [ 01.01 ]
     Author: "Aphelion"
-    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+    Notes: *tox2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tox2_jp_v01_01_fps ]
@@ -7523,7 +7527,7 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
         BLUS31397: [ All ]
         NPUB31443: [ All ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7534,7 +7538,7 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
         BLUS31397: [ All ]
         NPUB31443: [ All ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7545,19 +7549,9 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
         BLUS31397: [ All ]
         NPUB31443: [ All ]
     Author: "NeXoGone"
-    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Notes: *tox2_fov_notes
+    Configurable Values: *tox2_fov_configurable_values
     Patch Version: 1.0
-    Configurable Values:
-      "FOV (Horizontal)":
-        Type: double_range
-        Value: 0.78
-        Min: 0.20
-        Max: 2.4
-      "FOV (Vertical)":
-        Type: double_range
-        Value: 0.62
-        Min: 0.20
-        Max: 2.4
     Patch:
       - [ load, *tox2_us_fov ]
   "60 FPS":
@@ -7566,7 +7560,7 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
         BLUS31397: [ All ]
         NPUB31443: [ All ]
     Author: "Aphelion"
-    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+    Notes: *tox2_fps_notes
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_us_fps ]
@@ -7576,7 +7570,7 @@ PPU-d96e838f10e9730d8ba21659e02663b44488670f:
         BLUS31397: [ All ]
         NPUB31443: [ All ]
     Author: "Aphelion"
-    Notes: "In-game menu is a little ugly, but it works."
+    Notes: *tox2_hp_notes
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_hp ]
@@ -7588,7 +7582,7 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
         BLES01962: [ All ]
         NPEB01858: [ All ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7599,7 +7593,7 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
         NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "NeXoGone"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tox2_ar_notes
     Group: AR
     Patch Version: 1.0
     Patch:
@@ -7610,19 +7604,9 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
         NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "NeXoGone"
-    Notes: "Default values: Horizontal - 0.78, Vertical - 0.62"
+    Notes: *tox2_fov_notes
+    Configurable Values: *tox2_fov_configurable_values
     Patch Version: 1.0
-    Configurable Values:
-      "FOV (Horizontal)":
-        Type: double_range
-        Value: 0.78
-        Min: 0.20
-        Max: 2.4
-      "FOV (Vertical)":
-        Type: double_range
-        Value: 0.62
-        Min: 0.20
-        Max: 2.4
     Patch:
       - [ load, *tox2_eu_fov ]
   "60 FPS":
@@ -7631,7 +7615,7 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
         NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "Aphelion"
-    Notes: "Set VBlank Frequency to 60. Gameplay will slow down if the framerate dips below 60."
+    Notes: *tox2_fps_notes
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_eu_fps ]
@@ -7641,7 +7625,7 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
         BLES01962: [ All ]
         NPEB01858: [ All ]
     Author: "Aphelion"
-    Notes: "In-game menu is a little ugly, but it works."
+    Notes: *tox2_hp_notes
     Patch Version: 1.1
     Patch:
       - [ load, *tox2_hp ]
