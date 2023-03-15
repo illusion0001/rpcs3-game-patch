@@ -7128,6 +7128,27 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0001877c, 0x38e00001 ]
+PPU-545c1abbf1c562d60fca7435401f020beab76b53:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet":
+        NPUA80472: [ 01.30 ]
+        NPEA00241: [ 01.30 ]
+        NPJA00052: [ 01.30 ]
+        BCUS98148: [ 01.30 ]
+        BCUS98208: [ 01.30 ]
+        BCES00141: [ 01.30 ]
+        BCES00611: [ 01.30 ]
+        BCAS20058: [ 01.30 ]
+        BCAS20078: [ 01.30 ]
+        BCJS30018: [ 01.30 ]
+    Author: "uh wot"
+    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00767c40, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00767cf8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
 
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Create Mode":
@@ -7140,6 +7161,27 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ed2ac, 0x41e00001 ]
+
+PPU-4ff9503c80ff356080c96f3828890906073b8e43:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet 3":
+        NPUA81116: [ 01.26 ]
+        NPEA00515: [ 01.26 ]
+        NPHA80277: [ 01.26 ]
+        BCUS81138: [ 01.26 ]
+        BCUS98362: [ 01.26 ]
+        BCES01663: [ 01.26 ]
+        BCES02068: [ 01.26 ]
+        BCAS20322: [ 01.26 ]
+    Author: "uh wot"
+    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d9e4c4, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00d9e53c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # presence server url
+      - [ utf8, 0x00d9e58c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # live server url
+      - [ utf8, 0x00d9e5d8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
