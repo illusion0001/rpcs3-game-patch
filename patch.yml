@@ -1271,6 +1271,31 @@ PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
     Patch:
       - [ be32, 0x0014c6c4, 0x38000001 ]
 
+PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet 2":
+        NPUA80662: [ 01.33 ]
+        NPEA00324: [ 01.33 ]
+        NPEA00437: [ 01.33 ]
+        BCUS98245: [ 01.33 ]
+        BCUS98372: [ 01.33 ]
+        BCES00850: [ 01.33 ]
+        BCES01086: [ 01.33 ]
+        BCES01345: [ 01.33 ]
+        BCES01346: [ 01.33 ]
+        BCES01693: [ 01.33 ]
+        BCES01694: [ 01.33 ]
+        BCAS20113: [ 01.33 ]
+        BCAS20201: [ 01.33 ]
+        BCJS30058: [ 01.33 ]
+    Author: "uh wot"
+    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00c51b68, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00c51c08, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+
 Anchors:
   Folklore_FPS_Notes: &Folklore_FPS_Notes
     "Unlocks FPS during gameplay. Cloth physics break above 50 FPS despite the gameplay working."
