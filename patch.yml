@@ -1257,21 +1257,6 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00156f00, 0x38000001 ]
-
-PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
-  "Create Mode Everywhere":
-    Games:
-      "LittleBigPlanet 2":
-        NPUA80662: [ 01.21 ]
-        BCES00850: [ 01.21 ]
-        BCES01693: [ 01.21 ]
-    Author: "Aphelion"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0014c6c4, 0x38000001 ]
-
-PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   "Beacon Custom Server":
     Games:
       "LittleBigPlanet 2":
@@ -1295,6 +1280,19 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch:
       - [ utf8, 0x00c51b68, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
       - [ utf8, 0x00c51c08, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+
+PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
+  "Create Mode Everywhere":
+    Games:
+      "LittleBigPlanet 2":
+        NPUA80662: [ 01.21 ]
+        BCES00850: [ 01.21 ]
+        BCES01693: [ 01.21 ]
+    Author: "Aphelion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0014c6c4, 0x38000001 ]
 
 Anchors:
   Folklore_FPS_Notes: &Folklore_FPS_Notes
@@ -3021,6 +3019,7 @@ PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
   "Unlock FPS":
     Games:
       "Ratchet & Clank Future: Quest for Booty":
+        BCAS20052: [ All ]
         BCES00301: [ All ]
         NPEA00088: [ All ]
         NPEA00106: [ All ]
@@ -3032,6 +3031,7 @@ PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: Quest for Booty":
+        BCAS20052: [ All ]
         BCES00301: [ All ]
         NPEA00088: [ All ]
         NPEA00106: [ All ]
