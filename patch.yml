@@ -2411,7 +2411,8 @@ PPU-a2c90aafce24744d5ac6da8ad009ce301458c8a7:
       - [ be32, 0x00f18840, 0x00000000 ]
 
 Anchors:
-  RDR_AR_Notes: &RDR_AR_Notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  RDR_AR_Notes: &RDR_AR_Notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
   RDR_AR_Configurable_Values: &RDR_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
@@ -2425,7 +2426,8 @@ Anchors:
         "4:3": 1.333333333333333
         "5:4": 1.25
 
-  RDR_FPS_Notes: &RDR_FPS_Notes "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
+  RDR_FPS_Notes: &RDR_FPS_Notes
+    "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
 
 PPU-8a18a0314cade28526874128b253acd98863b83d:
   "Aspect Ratio":
