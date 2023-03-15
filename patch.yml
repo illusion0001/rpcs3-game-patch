@@ -3535,13 +3535,13 @@ Anchors:
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
 
   tlou100_post: &tlou100_post
-  #  - [ be32, 0x00a7991c, 0x38000003 ] # Post-processing modes                    (mem address: 0x14C79C7)
+  #  - [ be32, 0x00a7991c, 0x38000003 ] # Post-processing modes                    (mem address: 0x14c79c7)
     - [ be32, 0x0093e300, 0xc0090990 ] # load e190 with 0
     - [ be32, 0x0093e30c, 0xc1890990 ] # load e198 with 0f
     - [ be32, 0x0093e394, 0xc0090990 ] # load e1a0 with 0f
 
   tlou100_mesh: &tlou100_mesh
-    - [ be16, 0x00923a94, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x142C584)
+    - [ be16, 0x00923a94, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x142c584)
 
   # Many settings below are enabled/disabled in sub_A7A340. In this subroutine,
   #    r6  = 2
@@ -3551,22 +3551,22 @@ Anchors:
   # source register from one to the other, though some are words and some are bytes, so be careful.
 
   tlou100_ssao: &tlou100_ssao
-    - [ be16, 0x00a7a470, 0x9b83 ]     # Disable SSAO                (r27 => r28) (mem address: 0x14C7C0F)
+    - [ be16, 0x00a7a470, 0x9b83 ]     # Disable SSAO                (r27 => r28) (mem address: 0x14c7c0f)
 
   tlou100_mb: &tlou100_mb
-    - [ be16, 0x00a7a4d4, 0x9b83 ]     # Disable motion blur         (r27 => r28) (mem address: 0x14C7C2E)
+    - [ be16, 0x00a7a4d4, 0x9b83 ]     # Disable motion blur         (r27 => r28) (mem address: 0x14c7c2e)
 
   tlou100_dof: &tlou100_dof
-    - [ be16, 0x00a7a4e0, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x14C7C31)
+    - [ be16, 0x00a7a4e0, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x14c7c31)
 
   tlou100_dbv: &tlou100_dbv
-    - [ be16, 0x00a7a760, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x14C7E9D)
+    - [ be16, 0x00a7a760, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x14c7e9d)
 
   tlou100_dbf: &tlou100_dbf
-    - [ be16, 0x00a7a7ac, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x14C7EC1)
+    - [ be16, 0x00a7a7ac, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x14c7ec1)
 
   tlou100_db: &tlou100_db
-    - [ be16, 0x00a7a7b8, 0x90e3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x14C7F93)
+    - [ be16, 0x00a7a7b8, 0x90e3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x14c7f93)
     - [ be16, 0x00a516ec, 0x4800 ]     # Cabin resort crash fix
 
   tlou100_speed: &tlou100_speed
@@ -3806,7 +3806,7 @@ Anchors:
     - [ be32, 0x0096bee0, 0xc0090990 ] # load e1a0 with 0
 
   tlou111_mesh: &tlou111_mesh
-    - [ be16, 0x009515d8, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x14A9604)
+    - [ be16, 0x009515d8, 0x9809 ]     # Disable Mesh trimming       (r3  => r0 ) (mem address: 0x14a9604)
 
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine,
   #    r6  = 2
@@ -3816,21 +3816,21 @@ Anchors:
   # source register from one to the other, though some are words and some are bytes, so be careful.
 
   tlou111_ssao: &tlou111_ssao
-    - [ be16, 0x00aa9f9c, 0x9b83 ] # Disable SSAO
+    - [ be16, 0x00aa9f9c, 0x9b83 ]     # Disable SSAO
 
   tlou111_mb: &tlou111_mb
     - [ be32, 0x0096aa94, 0x480000e0 ] # Disable motion blur
 
   tlou111_dof: &tlou111_dof
-    - [ be16, 0x00aaa00c, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x1571AD1)
+    - [ be16, 0x00aaa00c, 0x9b83 ]     # Disable depth of field      (r27 => r28) (mem address: 0x1571ad1)
 
   tlou111_dbf: &tlou111_dbf
-    - [ be16, 0x00aaa2d8, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x1571D65)
+    - [ be16, 0x00aaa2d8, 0x9b83 ]     # Depth border fix            (r27 => r28) (mem address: 0x1571d65)
 
   tlou111_db: &tlou111_db
-    - [ be16, 0x00aaa2e4, 0x90c3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x1571E37)
-    - [ be16, 0x00aaa290, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571D41)
-    - [ be32, 0x00ab9ec8, 0x38000001 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571D41)
+    - [ be16, 0x00aaa2e4, 0x90c3 ]     # Depth buffer                (r27 => r6 ) (mem address: 0x1571e37)
+    - [ be16, 0x00aaa290, 0x9b63 ]     # Depth buffer viewport       (r28 => r27) (mem address: 0x1571d41)
+    - [ be32, 0x00ab9ec8, 0x38000001 ] # Depth buffer viewport       (r28 => r27) (mem address: 0x1571d41)
   # Cabin resort fix
     - [ be64, 0x01572020, 0x1070fd7d7973c900 ] # first line
     - [ be64, 0x01572030, 0x674da76646c80092 ] # second line p.1
@@ -3980,7 +3980,7 @@ Anchors:
     - [ be32, 0x0129732c, 0x015715f0 ] # pointer
     - [ be32, 0x002dcc40, 0x38bc00be ] # disable vis
     - [ be32, 0x012973fc, 0x00ee0490 ]
-    - [ be16, 0x00ee0498, 0x5669 ] # capitalise visibility for
+    - [ be16, 0x00ee0498, 0x5669 ]     # capitalise visibility for
     - [ be32, 0x002dcc74, 0x38bc06d9 ] # wireframe
     - [ be32, 0x01297400, 0x00ee01d8 ]
     - [ be32, 0x002dcca8, 0x38bc06da ] # see through
@@ -3996,7 +3996,7 @@ Anchors:
     - [ be32, 0x012974e4, 0x0135bfe8 ] # ptr
     - [ be64, 0x00ea8ba0, 0x456e61626c652050 ] # rename string
     - [ be32, 0x00ea8ba8, 0x61757365 ]
-    - [ byte, 0x00ea8bac, 0x00 ] # term str
+    - [ byte, 0x00ea8bac, 0x00 ]       # term str
     - [ be32, 0x01297418, 0x00e8d580 ]
     - [ byte, 0x00eeeef8, 0x00 ]
     - [ byte, 0x00eeef10, 0x00 ]
@@ -4020,12 +4020,13 @@ Anchors:
   #  - [ be16, 0x00aa9464, 0x9869 ]     # load from r3
 
   tlou111_cparts: &tlou111_cparts
-    - [ be64, 0x00e8d600, 0x496e66696e697465 ] # str Infinite Everything (Ammo, Items, Skills, Parts)
-    - [ be64, 0x00e8d608, 0x2045766572797468 ]
-    - [ be64, 0x00e8d610, 0x696e672028416d6d ]
-    - [ be64, 0x00e8d618, 0x6f2c204974656d73 ]
-    - [ be64, 0x00e8d620, 0x2c20536b696c6c73 ]
-    - [ be64, 0x00e8d628, 0x2c20506172747329 ]
+    - [ utf8, 0x00e8d600, "Infinite Everything (Ammo, Items, Skills, Parts)" ]
+    #- [ be64, 0x00e8d600, 0x496e66696e697465 ] # str Infinite Everything (Ammo, Items, Skills, Parts)
+    #- [ be64, 0x00e8d608, 0x2045766572797468 ]
+    #- [ be64, 0x00e8d610, 0x696e672028416d6d ]
+    #- [ be64, 0x00e8d618, 0x6f2c204974656d73 ]
+    #- [ be64, 0x00e8d620, 0x2c20536b696c6c73 ]
+    #- [ be64, 0x00e8d628, 0x2c20506172747329 ]
     - [ be32, 0x01286780, 0x00e8d600 ] # point addr to e8e490
     - [ be32, 0x01286784, 0x014f3412 ] # point addr to 014f3412
 # add
@@ -4177,12 +4178,12 @@ Anchors:
     - [ be32, 0x01286784, 0x0150cfe0 ]
     - [ be32, 0x00a5228c, 0x39200001 ] # force mode 1
     - [ be32, 0x00a23ed0, 0x4802e330 ]
-    - [ utf8, 0x00efc158, "%x" ] # branch in hex
-    - [ utf8, 0x00efc173, "%x" ] # branch in hex
-    - [ utf8, 0x00efc177, "%x" ] # branch in hex
-    - [ utf8, 0x00efc197, "%x" ] # branch in hex
-    - [ utf8, 0x00efc19b, "%x" ] # branch in hex
-    - [ utf8, 0x00efc7fe, "%x" ] # imm in hex
+    - [ utf8, 0x00efc158, "%x" ]       # branch in hex
+    - [ utf8, 0x00efc173, "%x" ]       # branch in hex
+    - [ utf8, 0x00efc177, "%x" ]       # branch in hex
+    - [ utf8, 0x00efc197, "%x" ]       # branch in hex
+    - [ utf8, 0x00efc19b, "%x" ]       # branch in hex
+    - [ utf8, 0x00efc7fe, "%x" ]       # imm in hex
     # debug renderer
     - [ be32, 0x0061cf10, 0x7fa3eb78 ]
     - [ be32, 0x0061cf14, 0x4bd47aad ]
@@ -4245,13 +4246,38 @@ Anchors:
     - [ be32, 0x0078c5b0, 0x482c5c51 ]
     - [ be32, 0x0078c5b4, 0x48000018 ]
 
-  tlougpulightingnotes: &tlougpulightingnotes "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artifacts without removing the fog (1.11 only)"
+  tlou_gpulighting_notes: &tlou_gpulighting_notes
+    "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lightning effects that are being rendered broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting.\nVersion 2.0 - Fixes Cabin Resort level crashes/artifacts without removing the fog (1.11 only)"
 
-  tloudebugmenunotes: &tloudebugmenunotes "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
+  tlou_speed_notes: &tlou_speed_notes
+    "Improves performance in certain areas. May cause issues."
 
-  tloufpsnotes: &tloufpsnotes "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screen."
+  tlou_debugmenu_notes: &tlou_debugmenu_notes
+    "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = FPS Text\nL3 + R3 = Debug Fly"
 
-  tloumlaanotes: &tloumlaanotes "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
+  tlou_infiniteflashlight_notes: &tlou_infiniteflashlight_notes
+    "This patch is useful for people who play with something other than DualShock3/4.\nNormaly flashlight battery drains after ~3600 frames, patch disables battery drain, Infinite flashlight battery no controller shake."
+
+  tlou_nocamshake_notes: &tlou_nocamshake_notes
+    "Disables camera shake during gameplay.\nIn-Game cinematics remain unaffected."
+
+  tlou_localmp_notes: &tlou_localmp_notes
+    "Matchmaking does not work."
+
+  tlou_dbgtasks_notes: &tlou_dbgtasks_notes
+    "Only enable this if you know what you are doing!"
+
+  tlou_headcrash_notes: &tlou_headcrash_notes
+    "Fixes a bug where throwing an object at an Infected Severed Head causes a game crash."
+
+  tlou_ar_notes: &tlou_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+
+  tlou_fps_notes: &tlou_fps_notes
+    "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screens."
+
+  tlou_mlaa_notes: &tlou_mlaa_notes
+    "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
 
   tlou100_title: &tlou100_title
     "The Last of Us":
@@ -4278,7 +4304,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Disable in-built MLAA":
     Games: *tlou100_title
     Author: "Whatcookie"
-    Notes: *tloumlaanotes
+    Notes: *tlou_mlaa_notes
     Patch Version: 4.0
     Patch:
       - [ load, *tlou100_mlaa ]
@@ -4334,28 +4360,28 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Enable GPU Lighting":
     Games: *tlou100_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes: *tlougpulightingnotes
+    Notes: *tlou_gpulighting_notes
     Patch Version: 2.0
     Patch:
       - [ load, *tlou100_db ]
   "Speedboost":
     Games: *tlou100_title
     Author: "ZEROx, illusion"
-    Notes: "Improves performance in certain areas. May cause issues."
+    Notes: *tlou_speed_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tlou100_speed ]
   "Debug Menu":
     Games: *tlou100_title
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *tloudebugmenunotes
+    Notes: *tlou_debugmenu_notes
     Patch Version: 1.01
     Patch:
       - [ load, *tlou100_devmenu ]
   "Bug Fix: Infected Severed Head Crash":
     Games: *tlou100_title
     Author: "illusion, ZEROx"
-    Notes: "Last modified: 13 Feb 2020.\nFixed a bug where throwing an object at a Infected Severed Head causes a game crash."
+    Notes: [ *tlou_headcrash_notes, "\n\nLast modified: 13 Feb 2020." ]
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006b06a8, 0x483a4b95 ] # Branch
@@ -4367,37 +4393,37 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "21:9 Aspect Ratio":
     Games: *tlou100_title
     Author: "illusion"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tlou_ar_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000325b8, 0x60000000 ] # nop write for ar float
-      - [ be32, 0x014aebd0, 0x3ed70a3d ] # ar float
-      - [ be32, 0x0128f2f4, 0x3f400000 ]
+      - [ bef32, 0x014aebd0, 0.42 ]      # ar float
+      - [ bef32, 0x0128f2f4, 0.75 ]
   "Unlock FPS":
     Games: *tlou100_title
     Author: "illusion"
-    Notes: *tloufpsnotes
+    Notes: *tlou_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00036ab8, 0x38a00000 ]
   "Infinite flashlight battery":
     Games: *tlou100_title
     Author: "bungholio, ZEROx"
-    Notes: "This patch is useful for people who play with something other than DualShock3/4.\nNormaly flashlight battery drains after ~3600 frames, patch disables battery drain, Infinite flashlight battery no controller shake."
+    Notes: *tlou_infiniteflashlight_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0068eb38, 0x60000000 ]
   "Disable Camera Shake":
     Games: *tlou100_title
     Author: "illusion"
-    Notes: "Last modified: 1 Mar 2021\n\nDisables camera shake during Gameplay.\nIn-Game cinematics remain unaffected."
+    Notes: [ *tlou_nocamshake_notes, "\n\nLast modified: 1 Mar 2021." ]
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00966784, 0x997d ]
   "Enable Local Multiplayer":
     Games: *tlou100_title
     Author: "icemesh, illusion"
-    Notes: "Matchmaking does not work."
+    Notes: *tlou_localmp_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00353e7c, 0x3b800001 ] # (icemesh)
@@ -4414,7 +4440,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "DEBUG: Replace Task With Test Tasks":
     Games: *tlou100_title
     Author: "illusion, icemesh" # SID Utils
-    Notes: "Only enable this patch if you know what you are doing!!"
+    Notes: *tlou_dbgtasks_notes
     Patch Version: 1.0
     Patch:
       # test-tasks begin!!
@@ -4444,7 +4470,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Disable in-built MLAA":
     Games: *tlou111_title
     Author: "Whatcookie, illusion, ZEROx"
-    Notes: *tloumlaanotes
+    Notes: *tlou_mlaa_notes
     Patch Version: 4.0
     Patch:
       - [ load, *tlou111_mlaa ]
@@ -4493,35 +4519,35 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Enable GPU Lighting":
     Games: *tlou111_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes: *tlougpulightingnotes
+    Notes: *tlou_gpulighting_notes
     Patch Version: 2.0
     Patch:
       - [ load, *tlou111_db ]
   "Speedboost":
     Games: *tlou111_title
     Author: "ZEROx, illusion"
-    Notes: "Improves performance in certain areas. May cause issues."
+    Notes: *tlou_speed_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_speed ]
   "Debug Menu":
     Games: *tlou111_title
     Author: "illusion, ZEROx, dron_3, HdHereidme"
-    Notes: *tloudebugmenunotes
+    Notes: *tlou_debugmenu_notes
     Patch Version: 1.2
     Patch:
       - [ load, *tlou111_devmenu ]
   "Infinite flashlight battery":
     Games: *tlou111_title
     Author: "bungholio, ZEROx"
-    Notes: "This patch is useful for people who play with something other than DualShock3/4.\nNormaly flashlight battery drains after ~3600 frames, patch disables battery drain, Infinite flashlight battery no controller shake."
+    Notes: *tlou_infiniteflashlight_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006acbc8, 0x60000000 ]
   "Bug Fix: Infected Severed Head Crash":
     Games: *tlou111_title
     Author: "illusion, ZEROx"
-    Notes: "Fixed a bug where throwing an object at an Infected Severed Head causes a game crash."
+    Notes: *tlou_headcrash_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006d9368, 0x483aa7ed ] # Call
@@ -4533,23 +4559,23 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "21:9 Aspect Ratio":
     Games: *tlou111_title
     Author: "illusion"
-    Notes: "HUD Elements will be stretched. Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *tlou_ar_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0003556c, 0x60000000 ] # nop write for ar float
-      - [ be32, 0x01558a50, 0x3ed70a3d ] # ar float
-      - [ be32, 0x012c1964, 0x3f400000 ]
+      - [ bef32, 0x01558a50, 0.42 ]      # ar float
+      - [ bef32, 0x012c1964, 0.75 ]
   "Unlock FPS":
     Games: *tlou111_title
     Author: "illusion"
-    Notes: *tloufpsnotes
+    Notes: *tlou_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00039d08, 0x38a00000 ]
   "Dev Menu Plus":
     Games: *tlou111_title
     Author: "illusion, Freako, Smasher248"
-    Notes: "Replaces some useless options in Memory Tab with rendering features.\n\nWireframe modes currently do not work on the emulator."
+    Notes: "Replaces some useless options in Memory Tab with rendering features.\nWireframe modes currently do not work on the emulator."
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_devplus ]
@@ -4566,8 +4592,8 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x012850f8, 0x0148ae18 ] # ptr
-      - [ be16, 0x0135dcac, 0x3f80 ] # avoid assertion
+      - [ be32, 0x012850f8, 0x0148ae18 ]         # ptr
+      - [ be16, 0x0135dcac, 0x3f80 ]             # avoid assertion
       - [ be64, 0x00e8c418, 0x4e5043204d6f6465 ] # string replace
       - [ be32, 0x00e8c420, 0x6c205363 ]
       - [ be16, 0x00e8c424, 0x616c ]
@@ -4575,14 +4601,14 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Disable Camera Shake":
     Games: *tlou111_title
     Author: "illusion"
-    Notes: "Disables camera shake during gameplay.\nIn-Game cinematics remain unaffected."
+    Notes: *tlou_nocamshake_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00994234, 0x997d ]
   "Infinite Everything (Parts, Pills, Crafting items)":
     Games: *tlou111_title
     Author: "Medo, Randy97Killa, illusion"
-    Notes: "Activate cheat in gameplay... pickup any amount of parts or items for high value."
+    Notes: "Pick up any amount of parts or items to activate the cheat."
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_cparts ]
@@ -4597,7 +4623,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Bug Fix: University Nailbomb Softlock Fix":
     Games: *tlou111_title
     Author: "illusion, ZEROx"
-    Notes: "Fixes a softlock at the end of university chapter."
+    Notes: "Fixes a softlock at the end of the university chapter."
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_nailbombsoftlockfix ]
@@ -4611,7 +4637,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Enable Local Multiplayer":
     Games: *tlou111_title
     Author: "icemesh, illusion"
-    Notes: "Matchmaking does not work."
+    Notes: *tlou_localmp_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0036ad6c, 0x3be00001 ] # (icemesh)
@@ -4622,7 +4648,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "DEBUG: Replace Task With Test Tasks":
     Games: *tlou111_title
     Author: "illusion, icemesh" # SID Utils
-    Notes: "Only enable this patch if you know what you are doing!!"
+    Notes: *tlou_dbgtasks_notes
     Patch Version: 1.0
     Patch:
       # test-tasks begin!!
