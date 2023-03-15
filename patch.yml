@@ -7185,8 +7185,6 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ed2ac, 0x41e00001 ]
-
-PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Beacon Custom Server":
     Games:
       "LittleBigPlanet 3":
