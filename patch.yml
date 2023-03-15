@@ -6981,7 +6981,8 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
       - [ be16, 0x008978cc, 0x9103 ] # spu lighting        = 2
 
 Anchors:
-  gt5_unlockfps_notes: &gt5_unlockfps_notes "Cutscenes rendered in the game's engine are sped up."
+  gt5_unlockfps_notes: &gt5_unlockfps_notes
+    "Cutscenes rendered in the game's engine are sped up."
 
 PPU-5eb226d8430cf943cca1344fcf0c76db15aaaeb7:
   "Extended FOV":
@@ -6990,9 +6991,15 @@ PPU-5eb226d8430cf943cca1344fcf0c76db15aaaeb7:
         BCES00569: [ 01.00 ]
     Author: "illusion"
     Notes: "Global FOV setting."
+    Configurable Values:
+      "FOV":
+        Type: double_range
+        Value: 0.75
+        Min: 0.1
+        Max: 1
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x018eff34, 0.75 ] # tweak this number to your liking
+      - [ bef32, 0x018eff34, "FOV" ]
   "Unlock FPS":
     Games:
       "Gran Turismo 5":
