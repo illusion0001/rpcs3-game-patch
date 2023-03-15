@@ -2623,10 +2623,16 @@ PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
       - [ be32, 0x00444de0, 0x480001a0 ]
 
 Anchors:
-  MirrorsEdgeUnlockFPSnotes: &MirrorsEdgeUnlockFPSnotes "Removes the ~62 FPS limit. Maximum framerate is half the Vblank frequency."
-  MirrorsEdgeUnlockFPSDisc: &MirrorsEdgeUnlockFPSDisc
+  MirrorsEdge_UnlockFPS_Notes: &MirrorsEdge_UnlockFPS_Notes
+    "Removes the ~62 FPS limit. Maximum framerate is half the Vblank frequency."
+  MirrorsEdge_UnlockFPS_Notes_Disc: &MirrorsEdge_UnlockFPS_Notes_Disc
+    [ *MirrorsEdge_UnlockFPS_Notes, "\n\nLast modified: 27 September 2020." ]
+  MirrorsEdge_UnlockFPS_Notes_PSN: &MirrorsEdge_UnlockFPS_Notes_PSN
+    [ *MirrorsEdge_UnlockFPS_Notes, "\n\nLast modified: 30 November 2020." ]
+
+  MirrorsEdge_UnlockFPS_Disc: &MirrorsEdge_UnlockFPS_Disc
     - [ be32, 0x00eaa348, 0x60000000 ]
-  MirrorsEdgeUnlockFPSPSN: &MirrorsEdgeUnlockFPSPSN
+  MirrorsEdge_UnlockFPS_PSN: &MirrorsEdge_UnlockFPS_PSN
     - [ be32, 0x00eaa6d0, 0x60000000 ]
 
 PPU-11db6db9c4edc67887b09aa7ec83b18f27adf9a3:
@@ -2635,10 +2641,10 @@ PPU-11db6db9c4edc67887b09aa7ec83b18f27adf9a3:
       "Mirror's Edge":
         BLES00322: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 27 September 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
+    Notes: *MirrorsEdge_UnlockFPS_Notes_Disc
     Patch Version: 1.0
     Patch:
-      - [ load, *MirrorsEdgeUnlockFPSDisc ]
+      - [ load, *MirrorsEdge_UnlockFPS_Disc ]
 
 PPU-95323989be16af11f04a017518802d090bc3eb47:
   "Unlock FPS":
@@ -2646,10 +2652,10 @@ PPU-95323989be16af11f04a017518802d090bc3eb47:
       "Mirror's Edge":
         BLUS30179: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 27 September 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
+    Notes: *MirrorsEdge_UnlockFPS_Notes_Disc
     Patch Version: 1.0
     Patch:
-      - [ load, *MirrorsEdgeUnlockFPSDisc ]
+      - [ load, *MirrorsEdge_UnlockFPS_Disc ]
 
 PPU-e8a0506d192495504c7f954ce9430e8ba1416c64:
   "Unlock FPS":
@@ -2657,10 +2663,10 @@ PPU-e8a0506d192495504c7f954ce9430e8ba1416c64:
       "Mirror's Edge":
         NPUB30838: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 30 November 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
+    Notes: *MirrorsEdge_UnlockFPS_Notes_PSN
     Patch Version: 1.0
     Patch:
-      - [ load, *MirrorsEdgeUnlockFPSPSN ]
+      - [ load, *MirrorsEdge_UnlockFPS_PSN ]
 
 PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
   "Unlock FPS":
@@ -2668,10 +2674,10 @@ PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
       "Mirror's Edge":
         NPEB00052: [ 01.01 ]
     Author: "illusion"
-    Notes: [ "Last modified: 30 November 2020\n\n", *MirrorsEdgeUnlockFPSnotes ]
+    Notes: *MirrorsEdge_UnlockFPS_Notes_PSN
     Patch Version: 1.0
     Patch:
-      - [ load, *MirrorsEdgeUnlockFPSPSN ]
+      - [ load, *MirrorsEdge_UnlockFPS_PSN ]
 
 Anchors:
   gta560FpsNotes: &gta560FpsNotes
@@ -3271,7 +3277,8 @@ PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
       - [ bef64, 0x0072c140, 0.001 ] # init/level load
 
 Anchors:
-  gowamlaanotes: &gowamlaanotes "Allows for the use of Resolution Scaling in the title.\n\nSet Resolution Scale Threshold to 1x1 for proper scaling of effects."
+  gowa_mlaa_notes: &gowa_mlaa_notes
+    "Allows for the use of Resolution Scaling in this title.\nSet Resolution Scale Threshold to 1x1 for proper scaling of effects."
 
 PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
   "Disable MLAA":
@@ -3285,7 +3292,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
         NPUA80918: [ 01.04 ]
         NPHA80258: [ 01.04 ]
     Author: "illusion, ZEROx"
-    Notes: *gowamlaanotes
+    Notes: *gowa_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0083ce77, 0x00 ]
@@ -3382,7 +3389,7 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
         NPUA80918: [ 01.12 ]
         NPHA80258: [ 01.12 ]
     Author: "illusion, ZEROx"
-    Notes: *gowamlaanotes
+    Notes: *gowa_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0083d007, 0x00 ]
@@ -3426,7 +3433,7 @@ PPU-93623f42f6f50bed58ca60927ed43beab749a2cd:
       "God of War: Ascension Demo":
         NPEA90123: [ 01.00 ]
     Author: "illusion"
-    Notes: *gowamlaanotes
+    Notes: *gowa_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x007dc0b7, 0x00 ]
