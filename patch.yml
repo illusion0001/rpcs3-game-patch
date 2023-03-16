@@ -12908,6 +12908,10 @@ PPU-4050da6fa9d7eed65e7d748b03a6ba89023b90c3:
     Patch:
       - [ be32, 0x0121dbac, 0x38600000 ]
 
+Anchors:
+  armyoftwotdc_speedup_notes: &armyoftwotdc_speedup_notes
+    "Compromises visuals for extra performance."
+
 PPU-17a273d69dad20980377e405809f7d888b6c6dce:
   "Disable MLAA":
     Games:
@@ -12937,7 +12941,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: "Compromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b48, 0x991f ]
@@ -12958,7 +12962,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
     Author: "illusion"
-    Notes: "Last modified: 06 October 2020\n\nCompromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b58, 0x991f ]
@@ -12968,7 +12972,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
         NPEB90470: [ 01.00 ]
         NPUB90862: [ 01.00 ]
     Author: "illusion"
-    Notes: "Compromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b5c, 0x991f ]
@@ -13007,7 +13011,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "ZEROx, illusion"
-    Notes: "Compromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755bc8, 0x991f ]
@@ -13032,7 +13036,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "illusion"
-    Notes: "Compromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755bd8, 0x991f ]
@@ -13044,7 +13048,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
         BLES01763: [ 01.01 ]
         BLUS31069: [ 01.01 ]
     Author: "illusion"
-    Notes: "Compromises visuals for extra performance."
+    Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755bdc, 0x991f ]
