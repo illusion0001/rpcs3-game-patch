@@ -9969,8 +9969,10 @@ PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
       - [ be32, 0x0038561c, 0x38600000 ] # li r3 0x0
 
 Anchors:
-  p5_ModSupport_Author: &p5_ModSupport_Author "TGEnigma"
-  p5_ModSupport_Notes: &p5_ModSupport_Notes "Enable support for adding mod files (through mod.cpk) to the game. This feature is required to fix the dialog portraits when using resolution scaling."
+  p5_ModSupport_Author: &p5_ModSupport_Author
+    "TGEnigma"
+  p5_ModSupport_Notes: &p5_ModSupport_Notes
+    "Enable support for adding mod files (through mod.cpk) to the game. This feature is required to fix the dialog portraits when using resolution scaling."
   p5_ModSupport_PatVer: &p5_ModSupport_PatVer 1.0
   p5_ModSupport: &p5_ModSupport
   # make %s/hdd.cpk -> %s%s/mod.cpk
@@ -10006,13 +10008,16 @@ Anchors:
     - [ be32, 0x00b44ab4, 0x48114ce6 ] # ba     0x114ca4 + 0x40
     - [ be32, 0x00b44ab8, 0x60000000 ] # nop
 
-  p5_SkipIntro_Author: &p5_SkipIntro_Author "TGEnigma"
+  p5_SkipIntro_Author: &p5_SkipIntro_Author
+    "TGEnigma"
   p5_SkipIntro_PatVer: &p5_SkipIntro_PatVer 1.0
   p5_SkipIntro: &p5_SkipIntro
     - [ be32, 0x0055ac8c, 0x60000000 ]
 
-  p5_60FPS_Author: &p5_60FPS_Author "TGEnigma, rexis"
-  p5_60FPS_Notes: &p5_60FPS_Notes "Patch may accelerate some game effects by 2x. Updated patch fixes subtitle cut-off in cutscenes."
+  p5_60FPS_Author: &p5_60FPS_Author
+    "TGEnigma, rexis"
+  p5_60FPS_Notes: &p5_60FPS_Notes
+    "Patch may accelerate some game effects by 2x. Updated patch fixes subtitle cut-off in cutscenes."
   p5_60FPS_PatVer: &p5_60FPS_PatVer 1.1
   p5_60FPS: &p5_60FPS
     - [ be32, 0x00010268, 0x9061009c ] # Set update rate to 60 -> r3, 0xe0+var_44(r1)
@@ -10369,12 +10374,14 @@ Anchors:
     - [ be32, 0x00575fc4, 0x7c892010 ] # subfc      r4,r9,r4
     - [ be32, 0x00575fe0, 0x7c681810 ] # subfc      r3,r8,r3
 
-  p5_DLC_Author: &p5_DLC_Author "TGEnigma"
+  p5_DLC_Author: &p5_DLC_Author
+    "TGEnigma"
   p5_DLC_PatVer: &p5_DLC_PatVer 1.0
   p5_DLC: &p5_DLC
     - [ be32, 0x00197ae8, 0x4e800020 ]
 
-  p5_DisableBlur_Author: &p5_DisableBlur_Author "TGEnigma, ruipin, kd-11"
+  p5_DisableBlur_Author: &p5_DisableBlur_Author
+    "TGEnigma, ruipin, kd-11"
   p5_DisableBlur_PatVer: &p5_DisableBlur_PatVer 1.0
   p5_DisableBlur: &p5_DisableBlur
     - [ be32, 0x00fee27a, 0x9e001700 ]
@@ -10386,7 +10393,8 @@ Anchors:
     - [ be32, 0x00fee292, 0x00000000 ]
     - [ be32, 0x00fee296, 0x00000000 ]
 
-  p5_DisableDistortion_Author: &p5_DisableDistortion_Author "TGEnigma, ruipin, kd-11"
+  p5_DisableDistortion_Author: &p5_DisableDistortion_Author
+    "TGEnigma, ruipin, kd-11"
   p5_DisableDistortion_PatVer: &p5_DisableDistortion_PatVer 1.0
   p5_DisableDistortion: &p5_DisableDistortion
     - [ be32, 0x00fe2e28, 0x9e001700 ]
@@ -10398,7 +10406,8 @@ Anchors:
     - [ be32, 0x00fe2e40, 0x00000000 ]
     - [ be32, 0x00fe2e44, 0x00000000 ]
 
-  p5_Disable100PctDistortion_Author: &p5_Disable100PctDistortion_Author "TGEnigma, ruipin, kd-11"
+  p5_Disable100PctDistortion_Author: &p5_Disable100PctDistortion_Author
+    "TGEnigma, ruipin, kd-11"
   p5_Disable100PctDistortion_PatVer: &p5_Disable100PctDistortion_PatVer 1.0
   p5_Disable100PctDistortion: &p5_Disable100PctDistortion
     - [ be32, 0x00fe31cc, 0x9e001700 ]
@@ -10410,8 +10419,10 @@ Anchors:
     - [ be32, 0x00fe31e4, 0x00000000 ]
     - [ be32, 0x00fe31e8, 0x00000000 ]
 
-  p5_NoHudLite_Author: &p5_NoHudLite_Author "TGEnigma"
-  p5_NoHudLite_Notes: &p5_NoHudLite_Notes "Elements can disabled separately by adding/removing their respective lines from the patch."
+  p5_NoHudLite_Author: &p5_NoHudLite_Author
+    "TGEnigma"
+  p5_NoHudLite_Notes: &p5_NoHudLite_Notes
+    "Elements can disabled separately by adding/removing their respective lines from the patch."
   p5_NoHudLite_PatVer: &p5_NoHudLite_PatVer 1.0
   p5_NoHudLite: &p5_NoHudLite
     - [ be32, 0x000de4ec, 0x60000000 ] # mission list
@@ -10425,14 +10436,18 @@ Anchors:
     - [ be32, 0x000d6b48, 0x60000000 ] # mini map
     - [ be32, 0x000d6490, 0x60000000 ] # mini map
 
-  p5_NoHud_Author: &p5_NoHud_Author "TGEnigma"
-  p5_NoHud_Notes: &p5_NoHud_Notes "Disable HUD by disabling rendering of 2D elements entirely. Breaks things."
+  p5_NoHud_Author: &p5_NoHud_Author
+    "TGEnigma"
+  p5_NoHud_Notes: &p5_NoHud_Notes
+    "Disable HUD by disabling rendering of 2D elements entirely. Breaks things."
   p5_NoHud_PatVer: &p5_NoHud_PatVer 1.0
   p5_NoHud: &p5_NoHud
     - [ be32, 0x00116934, 0x4e800020 ]
 
-  p5_BgmOrder_Author: &p5_BgmOrder_Author "TGEnigma, lipsum"
-  p5_BgmOrder_Notes: &p5_BgmOrder_Notes "Plays encounter BGM in file order."
+  p5_BgmOrder_Author: &p5_BgmOrder_Author
+    "TGEnigma, lipsum"
+  p5_BgmOrder_Notes: &p5_BgmOrder_Notes
+    "Plays encounter BGM in file order."
   p5_BgmOrder_PatVer: &p5_BgmOrder_PatVer 1.0
   p5_BgmOrder: &p5_BgmOrder
   # patch SoundManager__SetEquipBgm
@@ -10475,8 +10490,10 @@ Anchors:
   # return
     - [ be32, 0x00b44b94, 0x4863acea ] # ba 0x0063ace8
 
-  p5_BgmRandom_Author: &p5_BgmRandom_Author "TGEnigma, lipsum"
-  p5_BgmRandom_Notes: &p5_BgmRandom_Notes "Plays encounter BGM in random order."
+  p5_BgmRandom_Author: &p5_BgmRandom_Author
+    "TGEnigma, lipsum"
+  p5_BgmRandom_Notes: &p5_BgmRandom_Notes
+    "Plays encounter BGM in random order."
   p5_BgmRandom_PatVer: &p5_BgmRandom_PatVer 1.1
   p5_BgmRandom: &p5_BgmRandom
   # patch SoundManager__SetEquipBgm
@@ -10523,15 +10540,19 @@ Anchors:
   # return
     - [ be32, 0x00b44b94, 0x4863acea ] # ba 0x0063ace8
 
-  p5_NaviLines_Author: &p5_NaviLines_Author "lipsum"
-  p5_NaviLines_Notes: &p5_NaviLines_Notes "Disables Navigator battle lines (voice and message popups)."
+  p5_NaviLines_Author: &p5_NaviLines_Author
+    "lipsum"
+  p5_NaviLines_Notes: &p5_NaviLines_Notes
+    "Disables Navigator battle lines (voice and message popups)."
   p5_NaviLines_PatVer: &p5_NaviLines_PatVer 1.0
   p5_NaviLines: &p5_NaviLines
     - [ be32, 0x0074a3b4, 0x38a00000 ] # li r5, 0x0 # morgana
     - [ be32, 0x0074a424, 0x38a00000 ] # li r5, 0x0 # futaba
 
-  p5_MaxBullet_Author: &p5_MaxBullet_Author "lipsum"
-  p5_MaxBullet_Notes: &p5_MaxBullet_Notes "To change the maximum bullet counts for each character, edit this patch and input your desired values. By default, this patch retains the game defaults until modified."
+  p5_MaxBullet_Author: &p5_MaxBullet_Author
+    "lipsum"
+  p5_MaxBullet_Notes: &p5_MaxBullet_Notes
+    "To change the maximum bullet counts for each character, edit this patch and input your desired values. By default, this patch retains the game defaults until modified."
   p5_MaxBullet_PatVer: &p5_MaxBullet_PatVer 1.0
   p5_MaxBullet: &p5_MaxBullet
     - [ be16, 0x00d5c188, 0  ] # empty   - base start
@@ -10555,8 +10576,10 @@ Anchors:
     - [ be16, 0x00d5c1ac, 0  ] # futaba  -- 0
     - [ be16, 0x00d5c1ae, 24 ] # goro    -- 24
 
-  p5_FileAccessLog_Author: &p5_FileAccessLog_Author "TGEnigma"
-  p5_FileAccessLog_Notes: &p5_FileAccessLog_Notes "Prints file paths to the console's TTY Log as they are accessed."
+  p5_FileAccessLog_Author: &p5_FileAccessLog_Author
+    "TGEnigma"
+  p5_FileAccessLog_Notes: &p5_FileAccessLog_Notes
+    "Prints file paths to the console's TTY Log as they are accessed."
   p5_FileAccessLog_PatVer: &p5_FileAccessLog_PatVer 1.0
   p5_FileAccessLog: &p5_FileAccessLog
   # branch to trampoline
@@ -10608,8 +10631,10 @@ Anchors:
     - [ be32, 0x00b44b48, 0xfaa100d8 ] # std    r21, 0xd8(r1)
     - [ be32, 0x00b44b4c, 0x4e800020 ] # blr
 
-  p5_FixScriptPrintingFunctions_Author: &p5_FixScriptPrintingFunctions_Author "TGEnigma"
-  p5_FixScriptPrintingFunctions_Notes: &p5_FixScriptPrintingFunctions_Notes "Allows flowscripts to print strings to TTY Log."
+  p5_FixScriptPrintingFunctions_Author: &p5_FixScriptPrintingFunctions_Author
+    "TGEnigma"
+  p5_FixScriptPrintingFunctions_Notes: &p5_FixScriptPrintingFunctions_Notes
+    "Allows flowscripts to print strings to TTY Log."
   p5_FixScriptPrintingFunctions_PatVer: &p5_FixScriptPrintingFunctions_PatVer 1.0
   p5_FixScriptPrintingFunctions: &p5_FixScriptPrintingFunctions
   # ScriptInterpreter_Comm_PUT_Hook
@@ -10646,8 +10671,10 @@ Anchors:
     - [ be32, 0x00b44bf0, 0x48ad546f ]
     - [ be32, 0x00b44bf4, 0x481e9d42 ]
 
-  p5_d0d0d0_Author: &p5_d0d0d0_Author "Lipsum"
-  p5_d0d0d0_Notes: &p5_d0d0d0_Notes "Replaces the red color in the pause menu. Yellow by default."
+  p5_d0d0d0_Author: &p5_d0d0d0_Author
+    "Lipsum"
+  p5_d0d0d0_Notes: &p5_d0d0d0_Notes
+    "Replaces the red color in the pause menu. Yellow by default."
   p5_d0d0d0_PatVer: &p5_d0d0d0_PatVer 1.0
   p5_d0d0d0: &p5_d0d0d0
     - [ be32, 0x0045a6d8, 0x3c80ffff ] # lis param_2,-0x2f30
@@ -10695,8 +10722,10 @@ Anchors:
     - [ be32, 0x0052b1b0, 0x3ca0ffff ] # lis param_3,-0x2f30
     - [ be32, 0x0052b1c4, 0x60a52200 ] # ori param_3,param_3,0xd000
 
-  p5_StopPartyPanel_Author: &p5_StopPartyPanel_Author "DeathChaos"
-  p5_StopPartyPanel_Notes: &p5_StopPartyPanel_Notes "Prevents in combat HP/SP Bar UI from loading for testing purposes."
+  p5_StopPartyPanel_Author: &p5_StopPartyPanel_Author
+    "DeathChaos"
+  p5_StopPartyPanel_Notes: &p5_StopPartyPanel_Notes
+    "Prevents in combat HP/SP Bar UI from loading for testing purposes."
   p5_StopPartyPanel_PatVer: &p5_StopPartyPanel_PatVer 1.0
   p5_StopPartyPanel: &p5_StopPartyPanel
   # Prevent party_panel from being loaded
@@ -11210,7 +11239,8 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
       - [ load, *p5_StopPartyPanel ]
 
 Anchors:
-  r1fpsnotes: &r1fpsnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 33 FPS or 60 FPS depending on the scene."
+  r1_fps_notes: &r1_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 33 FPS or 60 FPS depending on the scene."
 
 PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
   "Unlock FPS":
@@ -11219,7 +11249,7 @@ PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
         BCUS98107: [ 01.00 ]
         BCES00001: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: *r1fpsnotes
+    Notes: *r1_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001e5db0, 0x60000000 ]
@@ -11241,7 +11271,7 @@ PPU-82555e0b1aaaa6c62ae8f23057e38d1006b7c19c: # game.self
       "Resistance: Fall of Man":
         NPEA00430: [ 01.00 ]
     Author: "Whatcookie, illusion"
-    Notes: *r1fpsnotes
+    Notes: *r1_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00418898, 0x4800 ]
@@ -11278,23 +11308,23 @@ PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
       - [ be32, 0x00e23178, 0x60000000 ] # nop
 
 Anchors:
-  SHADOWS_FPSnotes: &SHADOWS_FPSnotes "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 31 FPS."
-
-  SHADOWS_FPS: &SHADOWS_FPS
+  ShadowsoftheDamned_FPS_notes: &ShadowsoftheDamned_FPS_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 31 FPS."
+  ShadowsoftheDamned_FPS: &ShadowsoftheDamned_FPS
     - [ be32, 0x009e0ce4, 0x60000000 ] # nop
     - [ be32, 0x009e0d64, 0x60000000 ] # nop
 
-  SHADOWS_DOFnotes: &SHADOWS_DOFnotes "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
-
-  SHADOWS_DOF: &SHADOWS_DOF
+  ShadowsoftheDamned_DOF_notes: &ShadowsoftheDamned_DOF_notes
+    "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect the game brightness in some levels."
+  ShadowsoftheDamned_DOF: &ShadowsoftheDamned_DOF
     - [ be32, 0x00126960, 0x38a00000 ] # li r5 0
     - [ be32, 0x00325488, 0x38a00000 ] # li r5 0
     - [ be32, 0x003e3050, 0x38a00000 ] # li r5 0
 
-  SHADOWS_GRAIN: &SHADOWS_GRAIN
+  ShadowsoftheDamned_Grain: &ShadowsoftheDamned_Grain
     - [ be16, 0x003e3398, 0x4800 ] # b 0x3e3410
 
-  SHADOWS_BLUR: &SHADOWS_BLUR
+  ShadowsoftheDamned_Blur: &ShadowsoftheDamned_Blur
     - [ be32, 0x003e3998, 0x38600000 ] # li r3 0
 
 PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
@@ -11303,10 +11333,10 @@ PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
       "Shadows of the Damned":
         BLUS30653: [ All ]
     Author: "Whatcookie"
-    Notes: *SHADOWS_FPSnotes
+    Notes: *ShadowsoftheDamned_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_FPS ]
+      - [ load, *ShadowsoftheDamned_FPS ]
   "Disable Image Grain":
     Games:
       "Shadows of the Damned":
@@ -11315,16 +11345,16 @@ PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_GRAIN ]
+      - [ load, *ShadowsoftheDamned_Grain ]
   "Disable Low-Resolution Depth of Field":
     Games:
       "Shadows of the Damned":
         BLUS30653: [ All ]
     Author: "boma"
-    Notes: *SHADOWS_DOFnotes
+    Notes: *ShadowsoftheDamned_DOF_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_DOF ]
+      - [ load, *ShadowsoftheDamned_DOF ]
   "Disable Motion Blur":
     Games:
       "Shadows of the Damned":
@@ -11333,7 +11363,7 @@ PPU-888f4088d305a6add6f83728bdf917c8245fb72c:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_BLUR ]
+      - [ load, *ShadowsoftheDamned_Blur ]
 
 PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
   "Unlock FPS":
@@ -11341,10 +11371,10 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
       "Shadows of the Damned":
         BLES01276: [ All ]
     Author: "Whatcookie, Dante3732"
-    Notes: *SHADOWS_FPSnotes
+    Notes: *ShadowsoftheDamned_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_FPS ]
+      - [ load, *ShadowsoftheDamned_FPS ]
   "Disable Image Grain":
     Games:
       "Shadows of the Damned":
@@ -11353,16 +11383,16 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_GRAIN ]
+      - [ load, *ShadowsoftheDamned_Grain ]
   "Disable Low-Resolution Depth of Field":
     Games:
       "Shadows of the Damned":
         BLES01276: [ All ]
     Author: "boma"
-    Notes: *SHADOWS_DOFnotes
+    Notes: *ShadowsoftheDamned_DOF_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_DOF ]
+      - [ load, *ShadowsoftheDamned_DOF ]
   "Disable Motion Blur":
     Games:
       "Shadows of the Damned":
@@ -11371,7 +11401,7 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *SHADOWS_BLUR ]
+      - [ load, *ShadowsoftheDamned_Blur ]
 
 Anchors:
   sly4mlaaEU: &sly4mlaaEU
