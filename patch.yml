@@ -13556,7 +13556,8 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
       - [ be32, 0x000170cc, 0x60000000 ]
 
 Anchors:
-  dantesinferno_ar_notes: &dantesinferno_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  dantesinferno_ar_notes: &dantesinferno_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
   dantesinferno_ar_configurable_values: &dantesinferno_ar_configurable_values
     "Aspect Ratio":
       Type: double_enum
@@ -13680,7 +13681,8 @@ PPU-2845afa9e4dc56df06a61f2e51463468e9a557c7:
       - [ be32, 0x008d2e94, 0x38800001 ] # vsync flip rate 60hz // unlimited freeze at SE screen
 
 Anchors:
-  SSX_Resolution_Notes: &SSX_Resolution_Notes "Native resolution is 1120x584."
+  SSX_Resolution_Notes: &SSX_Resolution_Notes
+    "Native resolution is 1120x584."
 
 PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
   "60 FPS":
@@ -14004,7 +14006,8 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
 Anchors:
-  debugmenunotesBTS: &debugmenunotesBTS "L3 = Brings Debug Menu\nL1/R1 = Change pages\nOnly tested on BCUS98298"
+  BTS_debugmenu_notes: &debugmenunotesBTS
+    "L3 = Opens Debug Menu\nL1/R1 = Change pages\nOnly tested on BCUS98298."
   BTS_disc_v100_debugmenu: &BTS_disc_v100_debugmenu
     - [ be32, 0x00d6416c, 0x82fd0008 ]
     - [ be32, 0x00d64170, 0xeb370000 ]
