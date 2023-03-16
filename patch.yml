@@ -8923,8 +8923,10 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
       - [ be32, 0x007b37d0, 0x32360000 ]
 
 Anchors:
-  genji_dotb_60fps_notes: &genji_dotb_60fps_notes "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
-  genji_dotb_ar_notes: &genji_dotb_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  genji_dotb_60fps_notes: &genji_dotb_60fps_notes
+    "Set Framelimit to 60 FPS as going above this will cause speed up.\nIn-game cinematic animations and camera are only interpolated at 30 FPS."
+  genji_dotb_ar_notes: &genji_dotb_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
   genji_dotb_ar_configurable_values: &genji_dotb_ar_configurable_values
     "Aspect Ratio":
       Type: double_enum
@@ -8982,7 +8984,8 @@ PPU-daf192f4e83562758e1f988455b14f1b52b51537:
       - [ be32, 0x003c761c, 0x38000001 ] # li r0 0x1
 
 Anchors:
-  HMPDDT_PSP_Notes: &HMPDDT_PSP_Notes "Makes the game playable by skipping the PSP connection screen. A decrypted save is still required to play the game. The patch can also be used on real hardware."
+  HMPDDT_PSP_Notes: &HMPDDT_PSP_Notes
+    "Makes the game playable by skipping the PSP connection screen. A decrypted save is still required to play the game. The patch can also be used on real hardware."
 
 PPU-ddd080c3a59b7d8f7e640b419efccea6972d1e21:
   "Sign in without connecting a PSP":
