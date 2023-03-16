@@ -4707,7 +4707,7 @@ Anchors:
     "Does not provide any performance benefit."
 
   MGS4_Reducestagequality_Notes: &MGS4_Reducestagequality_Notes
-    "Removes some transparency related effects from stages. Provides a small performance boost, but causes monitors to break in-game."
+    "Removes some transparency related effects from stages. Provides a small performance boost, but causes monitor visuals to break in-game."
 
   MGS4_RemoveHUD_Notes: &MGS4_RemoveHUD_Notes
     "Removes the ingame HUD. Useful for videos and screenshots."
