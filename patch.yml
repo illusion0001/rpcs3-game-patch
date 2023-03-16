@@ -9491,12 +9491,19 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
       - [ be32, 0x00b336f4, 0x38600001 ]
 
 Anchors:
-  kz3mlaanotes: &kz3mlaanotes "Allows for the use of Resolution Scaling in the title and improved performance.\nSome screen effects will be lost.\nWrite Color Buffers is no longer required."
-  kz3demofov: &kz3demofov
+  kz3_fov_notes: &kz3_fov_notes
+    "Bound to cause issues, needs further testing."
+  kz3demo_fov: &kz3demo_fov
     - [ bef32, 0x01327da0, 0.85 ] # static float in memory // viewmodel
     - [ bef32, 0x01327e74, 0.85 ] # static float in memory // camera
-  kz3demomlaa: &kz3demomlaa
+
+  kz3_mlaa_notes: &kz3_mlaa_notes
+    "Allows for the use of Resolution Scaling in the title and improves performance. Some screen effects will be lost. Write Color Buffers is no longer required."
+  kz3demo_mlaa: &kz3demo_mlaa
     - [ be32, 0x001bded8, 0x38a00000 ] # li r5 0x0
+
+  kz3_infammo_notes: &kz3_infammo_notes
+    "Infinite ammo and grenades."
 
 PPU-ae204e2198c9a051a44a69913c48f6591b811082:
   "Extended FOV":
@@ -9505,7 +9512,7 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz3_fov_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x01327e54, 0.85 ] # static float in memory
@@ -9515,7 +9522,7 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
     Author: "illusion"
-    Notes: *kz3mlaanotes
+    Notes: *kz3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001be008, 0x38a00000 ] # li r5 0x0
@@ -9525,7 +9532,7 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
         BCES01007: [ 01.00 ]
         BCUS98234: [ 01.00 ]
     Author: "Aphelion"
-    Notes: "Infinite ammo and grenades."
+    Notes: *kz3_infammo_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0073d598, 0x60000000 ]
@@ -9549,7 +9556,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz3_fov_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0139bdf0, 0.85 ] # static float in memory // viewmodel
@@ -9560,7 +9567,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
     Author: "illusion"
-    Notes: *kz3mlaanotes
+    Notes: *kz3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001c95a8, 0x38a00000 ] # li r5 0x0
@@ -9571,7 +9578,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
         BCES01007: [ 01.14 ]
         BCUS98234: [ 01.14 ]
     Author: "Aphelion"
-    Notes: "Infinite ammo and grenades."
+    Notes: *kz3_infammo_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00753018, 0x60000000 ]
@@ -9619,19 +9626,19 @@ PPU-5f932afa0b36e8be30b4ab96689ad10e3583a261:
       "Killzone 3 Demo":
         NPEA90084: [ 01.00 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz3_fov_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz3demofov ]
+      - [ load, *kz3demo_fov ]
   "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3 Demo":
         NPEA90084: [ 01.00 ]
     Author: "illusion"
-    Notes: *kz3mlaanotes
+    Notes: *kz3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz3demomlaa ]
+      - [ load, *kz3demo_mlaa ]
 
 PPU-c28a92c751f6c6ffae0f354c7329ee599912baac:
   "Extended FOV":
@@ -9639,19 +9646,19 @@ PPU-c28a92c751f6c6ffae0f354c7329ee599912baac:
       "Killzone 3 Demo":
         NPUA70133: [ 01.00 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz3_fov_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz3demofov ]
+      - [ load, *kz3demo_fov ]
   "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
     Games:
       "Killzone 3 Demo":
         NPUA70133: [ 01.00 ]
     Author: "illusion"
-    Notes: *kz3mlaanotes
+    Notes: *kz3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz3demomlaa ]
+      - [ load, *kz3demo_mlaa ]
 
 Anchors:
   msnotes: &msnotes "Updated with a new version that has correct game speed above 15 FPS. (Except countdown timer)\nIncrease Vblank above 60Hz to go above 60 FPS.\nIssues introduced in 1.0 version of the patch are now resolved."
