@@ -9661,7 +9661,8 @@ PPU-c28a92c751f6c6ffae0f354c7329ee599912baac:
       - [ load, *kz3demo_mlaa ]
 
 Anchors:
-  msnotes: &msnotes "Updated with a new version that has correct game speed above 15 FPS. (Except countdown timer)\nIncrease Vblank above 60Hz to go above 60 FPS.\nIssues introduced in 1.0 version of the patch are now resolved."
+  ms_fps_notes: &ms_fps_notes
+    "Updated with a new version that has correct game speed above 15 FPS except for the countdown timer.\nIncrease Vblank above 60Hz to go above 60 FPS.\nIssues introduced in version 1.0 of the patch have been resolved."
 
 PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
   "Unlock FPS":
@@ -9669,7 +9670,7 @@ PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
       "Motorstorm":
         BCES00006: [ All ]
     Author: "illusion, ZEROx"
-    Notes: *msnotes
+    Notes: *ms_fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x00013030, 0x38c00001 ] # li r6,0x1
@@ -9713,7 +9714,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
         BCES00006: [ All ]
         BCJS30019: [ All ]
     Author: "illusion, ZEROx"
-    Notes: *msnotes
+    Notes: *ms_fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x0001852c, 0x38c00001 ] # li r6,0x1
@@ -9779,7 +9780,7 @@ PPU-ac5d994a6742a717d530cdcf095e880533465b66: # NPEA80017
       "Motorstorm Demo":
         NPEA80017: [ All ]
     Author: "illusion, ZEROx"
-    Notes: *msnotes
+    Notes: *ms_fps_notes
     Patch Version: 2.0
     Patch:
       - [ be16, 0x00607e10, 0x937d ] # variable framerate
@@ -9792,7 +9793,7 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       "Motorstorm":
         BCUS98137: [ All ]
     Author: "illusion, ZEROx"
-    Notes: *msnotes
+    Notes: *ms_fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x00013030, 0x38c00001 ] # li r6,0x1
@@ -9830,9 +9831,11 @@ PPU-e962bc16978b776063858254ae49aed7eac2a4f6: # BCUS98137
       - [ be32, 0x004fb330, 0x2fa3ffff ]
 
 Anchors:
-  ms2notes: &ms2notes "No need for additional settings change.\nNeeds a stable and locked 60 FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
+  ms2_fps_notes: &ms2_fps_notes
+    "No need for additional settings change.\nNeeds a stable and locked 60 FPS otherwise game will slow down.\n\nKnown issues:\nCamera moves at double speed.\nSlower movement through water."
 
-  ms2vfpsnotes: &ms2vfpsnotes "Allows for variable FPS and correct game speed above 15 FPS.\n\nKnown issues:\nSlower movement through water, especially over 60 FPS\nCamera shakes when using PPU recompiler (patch will be kept separate until resolved)."
+  ms2_vfps_notes: &ms2_vfps_notes
+    "Allows for variable FPS and correct game speed above 15 FPS.\n\nKnown issues:\n Slower movement through water, especially over 60 FPS.\n Camera shakes when using PPU recompiler. Patch will be kept separate until resolved."
 
 PPU-34984cacd60f2ee2a380157a009122698d470056:
   "60 FPS":
@@ -9840,7 +9843,7 @@ PPU-34984cacd60f2ee2a380157a009122698d470056:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms2notes
+    Notes: *ms2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00435d1c, 0x60000000 ]
@@ -9849,7 +9852,7 @@ PPU-34984cacd60f2ee2a380157a009122698d470056:
       "MotorStorm: Pacific Rift":
         BCES00129: [ 01.00 ]
     Author: "illusion, ZEROx"
-    Notes: *ms2vfpsnotes
+    Notes: *ms2_vfps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00435f9c, 0x38c00001 ]
@@ -9879,7 +9882,7 @@ PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
     Author: "illusion"
-    Notes: *ms2notes
+    Notes: *ms2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00407b44, 0x60000000 ]
@@ -9889,7 +9892,7 @@ PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
         BCES00129: [ 01.03 ]
         BCUS98155: [ 01.03 ]
     Author: "illusion, ZEROx"
-    Notes: *ms2vfpsnotes
+    Notes: *ms2_vfps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00407d8c, 0x38c00001 ]
@@ -9933,7 +9936,7 @@ PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
     Author: "illusion"
-    Notes: *ms2notes
+    Notes: *ms2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0045c7b4, 0x60000000 ]
@@ -9942,7 +9945,7 @@ PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
       "MotorStorm: Pacific Rift Demo 2.0":
         NPEA90033: [ All ]
     Author: "illusion, ZEROx"
-    Notes: *ms2vfpsnotes
+    Notes: *ms2_vfps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0045ca34, 0x38c00001 ]
