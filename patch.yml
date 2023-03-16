@@ -7953,8 +7953,10 @@ PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
       - [ bef32, 0x00df78ec, 0.7 ]
 
 Anchors:
-  wipeouthd_ar_notes: &wipeouthd_ar_notes "Fixes stretching and frustum culling. \"Stretch To Display Area\" must be checked in GPU > \"Additional Settings\". HUD is stretched."
-  wipeouthd_highfps_notes: &wipeouthd_highfps_notes "Fixes ship-shield and absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
+  wipeouthd_ar_notes: &wipeouthd_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Fixes stretching and frustum culling. HUD is stretched."
+  wipeouthd_highfps_notes: &wipeouthd_highfps_notes
+    "Fixes ship-shield and absorb glow effect getting out of sync when playing above 60 FPS. The \"120\" value can be changed to match your display framerate."
   wipeouthd_highfps_configurablevalues: &wipeouthd_highfps_configurablevalues
     "FPS":
       Type: double_range
