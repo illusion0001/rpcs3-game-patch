@@ -8578,155 +8578,131 @@ PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
       - [ be16, 0x0004db4c, 0x9bf1 ]
 
 Anchors:
+  DS1_100_FPS_Notes: &DS1_100_FPS_Notes
+    "For people who would like to play the unpatched version of Dark Souls at decent framerates. Unpatched PC version is equivalent to 1.06 on consoles."
+  DS1_109_FPS_Notes: &DS1_109_FPS_Notes
+    "Based on Whatcookie's & Gibbed's work."
+
   DS1_US_FPS: &DS1_US_FPS
   # 60 FPS no skip
     - [ be32, 0x00146e40, 0x38800002 ] # li r4 0x2
     - [ be32, 0x00146e44, 0x989f070c ]
     - [ be32, 0x00146e48, 0x989f070d ]
-
   # delta time
     - [ be32, 0x001423e8, 0x494447e9 ] # jump to code cave
-
   # get mftb
     - [ be32, 0x01586bd0, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
-
   # get mftb delta
     - [ be32, 0x01586bd4, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
     - [ be32, 0x01586bd8, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
     - [ be32, 0x01586bdc, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x01586be0, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x01586be4, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x01586be8, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x01586bec, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
     - [ be32, 0x01586bf0, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x01586bf4, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x01586bf8, 0x3e400158 ] # r18,0x158             // load high bits constants pointer
     - [ be32, 0x01586bfc, 0x62526bd0 ] # ori r18,r18,0x6bd0    // load low bits of constants pointer
     - [ be32, 0x01586c00, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x01586c04, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x01586c08, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x01586c0c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x01586c10, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x01586c14, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x01586c18, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x01586c1c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x01586c20, 0x4e800020 ] # blr                   // return
-
   # constants
     - [ be32, 0x01586c24, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x01586c28, 0.05 ] # maximum timestep size (50ms or 20 FPS)
 
   DS1_BLES01396_FPS: &DS1_BLES01396_FPS
   # offset by Lilium
-
   # 60 FPS noskip; addresses offset by +0x108
     - [ be32, 0x00146f48, 0x38800002 ] # li r4 0x2
     - [ be32, 0x00146f4c, 0x989f070c ]
     - [ be32, 0x00146f50, 0x989f070d ]
-
   # delta time; address offset by +0x108, jump target offset by +0x18
     - [ be32, 0x001424f0, 0x49444801 ] # jump to code cave
-
   # the following addresses are offset by +0x120
   # get mftb
     - [ be32, 0x01586cf0, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-
   # get mftb delta
     - [ be32, 0x01586cf4, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
     - [ be32, 0x01586cf8, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
     - [ be32, 0x01586cfc, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x01586d00, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x01586d04, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x01586d08, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x01586d0c, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
     - [ be32, 0x01586d10, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x01586d14, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x01586d18, 0x3e400158 ] # r18,0x0158            // load high bits constants pointer
     - [ be32, 0x01586d1c, 0x62526cf0 ] # ori r18,r18,0x6cf0    // load low bits of constants pointer (offset by +0x120)
     - [ be32, 0x01586d20, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x01586d24, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x01586d28, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x01586d2c, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x01586d30, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x01586d34, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x01586d38, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x01586d3c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x01586d40, 0x4e800020 ] # blr                   // return
-
   # constants
-    - [ be32, 0x01586d44, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x01586d48, 0.05 ] # maximum timestep size (50ms or 20 FPS)
+    - [ be32, 0x01586d44, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x01586d48, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
   DS1_BLES01402_FPS: &DS1_BLES01402_FPS
   # offset by Lilium
-
-  # 60 FPS noskip; addresses offset by -0x770
+  # 60 FPS no skip; addresses offset by -0x770
     - [ be32, 0x001466d0, 0x38800002 ] # li r4 0x2
     - [ be32, 0x001466d4, 0x989f070c ]
     - [ be32, 0x001466d8, 0x989f070d ]
-
   # delta time; address offset by -0x770, jump target offset by +0x10
     - [ be32, 0x00141c78, 0x494447f9 ] # jump to code cave
-
   # the following addresses are offset by -0x760
   # get mftb
     - [ be32, 0x01586470, 0x7eac42e6 ] # mftb r21              // Move from timebase register (clock)
-
   # get mftb delta
     - [ be32, 0x01586474, 0x3ec0017d ] # lis r22,0x017d        // load high bits of address (0x017de3f8)
     - [ be32, 0x01586478, 0x62d6e3f8 ] # ori r22,r22,0xe3f8    // load low bits of address
     - [ be32, 0x0158647c, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
     - [ be32, 0x01586480, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
     - [ be32, 0x01586484, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
-
   # mftb delta to float
     - [ be32, 0x01586488, 0xfa7600e0 ] # std r19,0xe0(r22)     // store mftb delta (to be loaded into FPR)
     - [ be32, 0x0158648c, 0xcbd600e0 ] # lfd f30,0xe0(r22)     // load mftb delta into FPR
     - [ be32, 0x01586490, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
     - [ be32, 0x01586494, 0xffc0f018 ] # frsp f30,f30          // round to single precision
-
   # mftb delta to seconds
     - [ be32, 0x01586498, 0x3e400158 ] # r18,0x0158            // load high bits constants pointer
     - [ be32, 0x0158649c, 0x62526470 ] # ori r18,r18,0x6470    // load low bits of constants pointer (offset by -0x760)
     - [ be32, 0x015864a0, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
     - [ be32, 0x015864a4, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
     - [ be32, 0x015864a8, 0xfffee824 ] # fdiv f31,f30,f29      // divide timebase delta by timebase frequency
-
   # check timestep size
     - [ be32, 0x015864ac, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
     - [ be32, 0x015864b0, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
-
   # set maximum timestep
     - [ be32, 0x015864b4, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
-
   # cleanup
     - [ be32, 0x015864b8, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
     - [ be32, 0x015864bc, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x015864c0, 0x4e800020 ] # blr                   // return
-
   # constants
-    - [ be32, 0x015864c4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x015864c8, 0.05 ] # maximum timestep size (50ms or 20 FPS)
+    - [ be32, 0x015864c4, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x015864c8, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
 PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
   "Unlock FPS":
@@ -8734,7 +8710,7 @@ PPU-3577a3e8efa233c68dedce81a3d0a63dab05dbed:
       "Dark Souls":
         BLUS30782: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "For people who would like to play the unpatched version of Dark Souls at decent framerates. Unpatched PC version is equivalent to 1.06 on consoles"
+    Notes: *DS1_100_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS1_US_FPS ]
@@ -8745,7 +8721,7 @@ PPU-451f1a767110d8ac166c5de50b67e057120644f5:
       "Dark Souls":
         BLES01396: [ 01.00 ]
     Author: "Whatcookie, offset by Lilium"
-    Notes: "For people who would like to play the unpatched version of Dark Souls at decent framerates. Unpatched PC version is equivalent to 1.06 on consoles."
+    Notes: *DS1_100_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS1_BLES01396_FPS ]
@@ -8756,7 +8732,7 @@ PPU-23d264a90e9ff8077c6d2e9418d6ae7ccd9bb0a0:
       "Dark Souls":
         BLES01402: [ 01.00 ]
     Author: "Whatcookie, offset by Lilium"
-    Notes: "For people who would like to play the unpatched version of Dark Souls at decent framerates. Unpatched PC version is equivalent to 1.06 on consoles."
+    Notes: *DS1_100_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS1_BLES01402_FPS ]
@@ -8767,7 +8743,7 @@ PPU-61606645abb9cc39f48072166c04df8da629fb99:
       "Dark Souls":
         BLUS30782: [ 01.09 ]
     Author: "Jao"
-    Notes: "Based on Whatcookie's & Gibbed's work."
+    Notes: *DS1_109_FPS_Notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00149324, 0x38800002 ]
@@ -8804,7 +8780,7 @@ PPU-03679186107dbc5525c9527efdab0f4818d3a5b4:
       "Dark Souls Prepare To Die Edition":
         BLES01765: [ 01.09 ]
     Author: "Jao"
-    Notes: "Based on Whatcookie's & Gibbed's work."
+    Notes: *DS1_109_FPS_Notes
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00149414, 0x38800002 ]
