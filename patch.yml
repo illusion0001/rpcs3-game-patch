@@ -37,8 +37,8 @@ Anchors:
     - [ be32, 0x016c7c7c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c7c80, 0x4e800020 ] # blr                   // return
   # constants
-    - [ be32, 0x016c7c84, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c7c88, 0.05 ] # maximum timestep size (50ms or 20 FPS)
+    - [ be32, 0x016c7c84, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x016c7c88, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
   BLES00932_FpsUnlock: &BLES00932_FpsUnlock
   # Set 60 FPS with no frameskip
@@ -76,8 +76,8 @@ Anchors:
     - [ be32, 0x016c9f9c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c9fa0, 0x4e800020 ] # blr                   // return
   # constants
-    - [ be32, 0x016c9fa4, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c9fa8, 0.05 ] # maximum timestep size (50ms or 20 FPS)
+    - [ be32, 0x016c9fa4, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x016c9fa8, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
   BCAS20071_FpsUnlock: &BCAS20071_FpsUnlock
   # Set 60 FPS with no frameskip
@@ -115,8 +115,8 @@ Anchors:
     - [ be32, 0x016c8b5c, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
     - [ be32, 0x016c8b60, 0x4e800020 ] # blr                   // return
   # constants
-    - [ be32, 0x016c8b64, 0x4c989680 ]  # timebase frequency as hexfloat (80mhz)
-    - [ bef32, 0x016c8b68, 0.05 ] # maximum timestep size (50ms or 20 FPS)
+    - [ be32, 0x016c8b64, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x016c8b68, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
   DeS_FPS_Notes: &DeS_FPS_Notes
     "Patch version 2.0 and above is not compatible with the settings used for the previous patch. Clocks scale and Vblank rate must be set to the defaults. Vblank rate can be modified to increase the framelimit beyond 60 FPS. However, it's not recommended as users may encounter physics issues."
