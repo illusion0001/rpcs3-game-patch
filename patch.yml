@@ -11404,14 +11404,14 @@ PPU-57b3bd94bab3f0db81625c843cdd9bc04d77cd4a:
       - [ load, *ShadowsoftheDamned_Blur ]
 
 Anchors:
-  sly4mlaaEU: &sly4mlaaEU
+  sly4_mlaa_notes: &sly4_mlaa_notes
+    "Disables MLAA, allowing for the use of resolution scaling. Use in conjunction with the SPU MLAA patch for better performance."
+  sly4_mlaa_EU: &sly4_mlaa_EU
     - [ be32, 0x00531cc0, 0x38800000 ] # li r4 0x0
-  sly4mlaaUK: &sly4mlaaUK
+  sly4_mlaa_UK: &sly4_mlaa_UK
     - [ be32, 0x00531cb0, 0x38800000 ] # li r4 0x0
-  sly4mlaaUS: &sly4mlaaUS
+  sly4_mlaa_US: &sly4_mlaa_US
     - [ be32, 0x00531d40, 0x38800000 ] # li r4 0x0
-
-  sly4mlaanotes: &sly4mlaanotes "Disables MLAA, allowing for the use of resolution scaling. Use in conjunction with the SPU MLAA patch for better performance."
 
 PPU-5c741b00514f07966c2820d67f395d945a88d79d:
   "Disable MLAA":
@@ -11419,10 +11419,10 @@ PPU-5c741b00514f07966c2820d67f395d945a88d79d:
       "Sly Cooper: Thieves in Time":
         BCES01284: [ 01.00 ]
     Author: "illusion"
-    Notes: *sly4mlaanotes
+    Notes: *sly4_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *sly4mlaaEU ]
+      - [ load, *sly4_mlaa_EU ]
 
 PPU-326bf99e707d7d2be160ec116bb6313ae2f42ebc:
   "Disable MLAA":
@@ -11430,10 +11430,10 @@ PPU-326bf99e707d7d2be160ec116bb6313ae2f42ebc:
       "Sly Cooper: Thieves in Time":
         BCES01285: [ 01.00 ]
     Author: "illusion, YuriNator557"
-    Notes: *sly4mlaanotes
+    Notes: *sly4_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *sly4mlaaUK ]
+      - [ load, *sly4_mlaa_UK ]
 
 PPU-69acb9900ff44f7d7a3b25b226b213966955aed4:
   "Disable MLAA":
@@ -11441,10 +11441,10 @@ PPU-69acb9900ff44f7d7a3b25b226b213966955aed4:
       "Sly Cooper: Thieves in Time":
         BCUS98247: [ 01.00 ]
     Author: "illusion"
-    Notes: *sly4mlaanotes
+    Notes: *sly4_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *sly4mlaaUS ]
+      - [ load, *sly4_mlaa_US ]
 
 PPU-fb1e9e9160613b89047715ce62f2da97201118d1:
   "Disable MLAA":
@@ -11452,10 +11452,10 @@ PPU-fb1e9e9160613b89047715ce62f2da97201118d1:
       "Sly Cooper: Thieves in Time":
         NPEA00429: [ 01.00 ]
     Author: "illusion, mew21"
-    Notes: *sly4mlaanotes
+    Notes: *sly4_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *sly4mlaaEU ]
+      - [ load, *sly4_mlaa_EU ]
 
 PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
   "Disable MLAA":
@@ -11463,10 +11463,10 @@ PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
       "Sly Cooper: Thieves in Time":
         NPUA80875: [ 01.00 ]
     Author: "illusion, mew21"
-    Notes: *sly4mlaanotes
+    Notes: *sly4_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *sly4mlaaUS ]
+      - [ load, *sly4_mlaa_US ]
 
 Anchors:
   SA_169: &SA_169
@@ -11490,6 +11490,9 @@ PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
       - [ load, *SA_169 ]
 
 Anchors:
+  su_1280x720_notes: &su_1280x720_notes
+    "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
+
   su_1280x720_Digital: &su_1280x720_Digital
   # Main backbuffer (880x720)
     - [ be16, 0x013d197a, 1280 ]
@@ -11546,9 +11549,8 @@ Anchors:
     - [ be16, 0x0143913e, 1280 ]
     - [ be16, 0x0143919a, 1280 ]
 
-  su_1280x720_notes: &su_1280x720_notes "This game originally rendered at a resolution of 880x720. With this patch, it will render at a resolution of 1280x720."
-
-  su_aspectratio_notes: &su_aspectratio_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+  su_aspectratio_notes: &su_aspectratio_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
 
   su_aspectratio_configurable_values: &su_aspectratio_configurable_values
     "Aspect Ratio":
@@ -11576,7 +11578,8 @@ Anchors:
   su_102_re: &su_102_re
     - [ be32, 0x00e1eef0, 0x38000000 ]
 
-  su_borked_notes: &su_borked_notes "Improves performance at the cost of graphics quality."
+  su_borked_notes: &su_borked_notes
+    "Improves performance at the cost of graphics quality."
 
 PPU-6ebcaf71dc08cd612acb82f8e32738a8693d9347:
   "1280x720 Resolution":
