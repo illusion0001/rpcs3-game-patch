@@ -9076,7 +9076,8 @@ Anchors:
     - [ be16, 0x0058656e, 0x0001 ]
     - [ be16, 0x00586596, 0x0001 ]
 
-  HMPDF_FPS_Notes: &HMPDF_FPS_Notes "Patch accelerates some game effects by 2x. Does not affect playability."
+  HMPDF_FPS_Notes: &HMPDF_FPS_Notes
+    "Patch accelerates some game effects by 2x. Does not affect playability."
 
 PPU-f3227f57ec001582b253035fd90de77f05ead470:
   "60 FPS":
