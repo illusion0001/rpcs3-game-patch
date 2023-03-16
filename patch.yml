@@ -13653,14 +13653,14 @@ PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
   "Disable MLAA":
     Games: *bf4120_title
     Author: "illusion"
-    Notes: "Last modified: 09 October 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0094ec04, 0x38600000 ]
   "Disable Dynamic Lights":
     Games: *bf4120_title
     Author: "illusion"
-    Notes: "Last modified: 14 October 2020\n\nCompromises visuals for extra performance."
+    Notes: "Compromises visuals for extra performance."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01499ab8, 0x98bf ]
@@ -13668,7 +13668,7 @@ PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
   "Disable Bloom":
     Games: *bf4120_title
     Author: "illusion"
-    Notes: "Last modified: 14 October 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01487934, 0x98bf ]
