@@ -4298,7 +4298,7 @@ Anchors:
     "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screens."
 
   tlou_mlaa_notes: &tlou_mlaa_notes
-    "Last modified: Dec 28 2020\n\nAllows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work"
+    "Allows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work."
 
   tlou100_title: &tlou100_title
     "The Last of Us":
@@ -4402,7 +4402,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Bug Fix: Infected Severed Head Crash":
     Games: *tlou100_title
     Author: "illusion, ZEROx"
-    Notes: [ *tlou_headcrash_notes, "\n\nLast modified: 13 Feb 2020." ]
+    Notes: *tlou_headcrash_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006b06a8, 0x483a4b95 ] # Branch
@@ -4437,7 +4437,7 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
   "Disable Camera Shake":
     Games: *tlou100_title
     Author: "illusion"
-    Notes: [ *tlou_nocamshake_notes, "\n\nLast modified: 1 Mar 2021." ]
+    Notes: *tlou_nocamshake_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00966784, 0x997d ]
@@ -5222,9 +5222,9 @@ Anchors:
     - [ be16, 0x000c986c, 0x9b83 ] # Velocity motion blur
 
   uc2_debugmenu_notes: &uc2_debugmenu_notes
-    "Enable Debug Console (DECR Console) mode to unlock full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+    "Enable Debug (DECR) Console mode to unlock full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc2_quitcrashfix_notes: &uc2_quitcrashfix_notes
-    "Fixes a rare bug where quitting to menu causes a game crash.\n\nLast modified: 16 Feb 2021"
+    "Fixes a rare bug where quitting to menu causes a game crash."
   uc2_spupost_notes: &uc2_spupost_notes
     "Fixes green graphics when using Resolution Scaling."
   uc2_60fps_notes: &uc2_60fps_notes
