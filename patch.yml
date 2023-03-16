@@ -8413,7 +8413,8 @@ PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
       - [ be32, 0x00dee1b0, 0x3f100001 ] # Ingame 21:9 AR
 
 Anchors:
-  debugmenunotesUC1: &debugmenunotesUC1 "Enable Debug Console mode to unlock full menu (DECR Console)\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+  uc1_debugmenu_notes: &uc1_debugmenu_notes
+    "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   "Disable Motion Blur":
@@ -8422,7 +8423,7 @@ PPU-8007056e52279bea26c15669d1ee08c2df321d00:
         BCES00065: [ 01.00 ]
         BCUS98103: [ 01.00 ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a8, 0x995d ] # (mem address: 0x42974a)
@@ -8432,7 +8433,7 @@ PPU-8007056e52279bea26c15669d1ee08c2df321d00:
         BCES00065: [ 01.00 ]
         BCUS98103: [ 01.00 ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a0, 0x995d ] # (mem address: 0x42974c)
@@ -8442,7 +8443,7 @@ PPU-8007056e52279bea26c15669d1ee08c2df321d00:
         BCES00065: [ 01.00 ]
         BCUS98103: [ 01.00 ]
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004e61c, 0x409e ]
@@ -8454,7 +8455,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
         BCES00065: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e5284, 0x995d ] # (mem address: 0xbb43da)
@@ -8464,7 +8465,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
         BCES00065: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
@@ -8474,7 +8475,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
         BCES00065: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b6ac, 0x409e ]
@@ -8484,7 +8485,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
         BCES00065: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
-    Notes: "Last modified: Decmeber 16 2020\n\nUnlocks some devkit menu without DECR.\nRendering\nCollision (needs working msgcon)\nInteractive Background\nPhysics\nParticles"
+    Notes: "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0007023c, 0x4800 ] # rendering
@@ -8503,7 +8504,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
         NPUA80697: [ All ]
         NPHA80193: [ All ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e5234, 0x995d ] # (mem address: 0xbb321a)
@@ -8514,7 +8515,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
         NPUA80697: [ All ]
         NPHA80193: [ All ]
     Author: "illusion"
-    Notes: "Last modified: 02 June 2020"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e522c, 0x995d ] # (mem address: 0xbb321c)
@@ -8525,7 +8526,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
         NPUA80697: [ All ]
         NPHA80193: [ All ]
     Author: "dron_3, HdHereidme, illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b5c4, 0x419e ] # has it's function branched out!
@@ -8547,7 +8548,7 @@ PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
       "Uncharted: Drake's Fortune":
         TEST12345: [ 01.00 ]
     Author: "illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0005bc84, 0x38000000 ]
@@ -8559,7 +8560,7 @@ PPU-e6416a6e08fff80e71a78ac2b265bce980cedcb4:
       "Uncharted: Drake's Fortune":
         TEST12345: [ 01.00 ]
     Author: "illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00024dd0, 0x38000000 ]
@@ -8571,7 +8572,7 @@ PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
       "Uncharted: Drake's Fortune":
         TEST12345: [ 01.00 ]
     Author: "illusion"
-    Notes: *debugmenunotesUC1
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004db48, 0x9811 ]
