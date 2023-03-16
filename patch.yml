@@ -11901,70 +11901,74 @@ PPU-7bf98dfa97ff84d8db49fcf198e2ecb9d9975ac6: # bin\s4_g.self
       - [ be32, 0x001ec298, 0x38c00000 ]
 
 Anchors:
-  ms3psndsr: &ms3psndsr
+  ms3_psn_dsr: &ms3_psn_dsr
     - [ be32, 0x00469cf0, 0x38600000 ] # li r3 0x0
 
-  ms3psnmb: &ms3psnmb
+  ms3_psn_mb: &ms3_psn_mb
     - [ be32, 0x00469d24, 0x38600000 ] # li r3 0x0
 
-  ms3psnssao: &ms3psnssao
+  ms3_psn_ssao: &ms3_psn_ssao
     - [ be32, 0x00469dfc, 0x38600000 ] # li r3 0x0
 
-  ms3psnmlaa: &ms3psnmlaa
+  ms3_psn_mlaa: &ms3_psn_mlaa
     - [ be32, 0x0044cb14, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
-  ms3psnfps: &ms3psnfps
+  ms3_psn_fps: &ms3_psn_fps
     - [ be32, 0x005ba9dc, 0x38800001 ] # vfps
     - [ be32, 0x005ba514, 0x60000000 ] # target fps
 
-  ms3100dsr: &ms3100dsr
+  ms3_100_dsr: &ms3_100_dsr
     - [ be32, 0x004760f0, 0x38600000 ] # li r3 0x0
 
-  ms3100mb: &ms3100mb
+  ms3_100_mb: &ms3_100_mb
     - [ be32, 0x00476124, 0x38600000 ] # li r3 0x0
 
-  ms3100ssao: &ms3100ssao
+  ms3_100_ssao: &ms3_100_ssao
     - [ be32, 0x004761fc, 0x38600000 ] # li r3 0x0
 
-  ms3100mlaa: &ms3100mlaa
+  ms3_100_mlaa: &ms3_100_mlaa
     - [ be32, 0x00456c94, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
-  ms3100fps: &ms3100fps
+  ms3_100_fps: &ms3_100_fps
     - [ be32, 0x005ee690, 0x38800001 ] # vfps
     - [ be32, 0x005ee42c, 0x60000000 ] # target fps
 
-  ms3100intro: &ms3100intro
+  ms3_100_intro: &ms3_100_intro
     - [ be32, 0x007fb744, 0x3084345f ]
 
-  ms3100dev: &ms3100dev
+  ms3_100_dev: &ms3_100_dev
     - [ utf8, 0x010f3460, "\x00" ]
 
-  ms3106dsr: &ms3106dsr
+  ms3_106_dsr: &ms3_106_dsr
     - [ be32, 0x00469e90, 0x38600000 ] # li r3 0x0
 
-  ms3106mb: &ms3106mb
+  ms3_106_mb: &ms3_106_mb
     - [ be32, 0x00469ec4, 0x38600000 ] # li r3 0x0
 
-  ms3106ssao: &ms3106ssao
+  ms3_106_ssao: &ms3_106_ssao
     - [ be32, 0x00469f9c, 0x38600000 ] # li r3 0x0
 
-  ms3106mlaa: &ms3106mlaa
+  ms3_106_mlaa: &ms3_106_mlaa
     - [ be32, 0x0044ccb4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
-  ms3106fps: &ms3106fps
+  ms3_106_fps: &ms3_106_fps
     - [ be32, 0x005bc2ac, 0x38800001 ]
     - [ be32, 0x005bbde4, 0x60000000 ]
 
-  ms3106intro: &ms3106intro
+  ms3_106_intro: &ms3_106_intro
     - [ utf8, 0x00f965d4, "\x00" ]
 
-  ms3mlaanotes: &ms3mlaanotes "Allows for the use of Resolution Scaling in the title.\nMust be used with Disable Dynamic Resolution Scale patch for proper upscaling and improved performance.\nSet Resolution Scale Threshold to 256x256 Partially fixes screen pattern on bloom when using Resolution Scaling."
+  ms3_mlaa_notes: &ms3_mlaa_notes
+    "Allows for the use of Resolution Scaling in the title.\nMust be used with Disable Dynamic Resolution Scale patch for proper upscaling and improved performance.\nSet Resolution Scale Threshold to 256x256 Partially fixes screen pattern on bloom when using Resolution Scaling."
 
-  ms3fpsnotes: &ms3fpsnotes "Updated with a new version that has correct game speed above 15 FPS.\nIncrease Vblank above 60Hz to go above 60 FPS.\nSome UI elements are still tied to target FPS."
+  ms3_fps_notes: &ms3_fps_notes
+    "Updated with a new version that has correct game speed above 15 FPS.\nIncrease Vblank above 60Hz to go above 60 FPS.\nSome UI elements are still tied to target FPS."
 
-  ms3ssaonotes: &ms3ssaonotes "Disabling SSAO (Screen Space Ambient Occlusion) does not improve performance, and makes the game look worse. Optional patch for those that wish to use it."
+  ms3_ssao_notes: &ms3_ssao_notes
+    "Disabling SSAO (Screen Space Ambient Occlusion) does not improve performance, and makes the game look worse. Optional patch for those that wish to use it."
 
-  ms3drsnotes: &ms3drsnotes "Must be used with the MLAA patch for proper upscaling and improved performance."
+  ms3_drs_notes: &ms3_drs_notes
+    "Must be used with the MLAA patch for proper upscaling and improved performance."
 
 PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
   "Skip Intro":
@@ -11975,7 +11979,7 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100intro ]
+      - [ load, *ms3_100_intro ]
   "Enable Dev Menu":
     Games:
       "Motorstorm: Apocalypse":
@@ -11984,34 +11988,34 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dev ]
+      - [ load, *ms3_100_dev ]
   "Unlock FPS":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3100fps ]
+      - [ load, *ms3_100_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dsr ]
+      - [ load, *ms3_100_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100ssao ]
+      - [ load, *ms3_100_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12020,16 +12024,16 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mb ]
+      - [ load, *ms3_100_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mlaa ]
+      - [ load, *ms3_100_mlaa ]
 
 PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
   "Skip Intro":
@@ -12040,7 +12044,7 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100intro ]
+      - [ load, *ms3_100_intro ]
   "Enable Dev Menu":
     Games:
       "Motorstorm: Apocalypse":
@@ -12049,34 +12053,34 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dev ]
+      - [ load, *ms3_100_dev ]
   "Unlock FPS":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3100fps ]
+      - [ load, *ms3_100_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dsr ]
+      - [ load, *ms3_100_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100ssao ]
+      - [ load, *ms3_100_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12085,16 +12089,16 @@ PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mb ]
+      - [ load, *ms3_100_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mlaa ]
+      - [ load, *ms3_100_mlaa ]
 
 PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
   "Skip Intro":
@@ -12105,7 +12109,7 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100intro ]
+      - [ load, *ms3_100_intro ]
   "Enable Dev Menu":
     Games:
       "Motorstorm: Apocalypse":
@@ -12114,34 +12118,34 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dev ]
+      - [ load, *ms3_100_dev ]
   "Unlock FPS":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3100fps ]
+      - [ load, *ms3_100_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100dsr ]
+      - [ load, *ms3_100_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100ssao ]
+      - [ load, *ms3_100_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12150,16 +12154,16 @@ PPU-bc3b923ec314051c7c61d3134ea9c01f24eaf4f7:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mb ]
+      - [ load, *ms3_100_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3100mlaa ]
+      - [ load, *ms3_100_mlaa ]
 
 PPU-41644f9f5fda72efc62e7146620db9679969bff6:
   "Unlock FPS":
@@ -12167,28 +12171,28 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3106fps ]
+      - [ load, *ms3_106_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106dsr ]
+      - [ load, *ms3_106_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106ssao ]
+      - [ load, *ms3_106_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12197,25 +12201,25 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mb ]
+      - [ load, *ms3_106_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mlaa ]
+      - [ load, *ms3_106_mlaa ]
   "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCES00484: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106intro ]
+      - [ load, *ms3_106_intro ]
 
 PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
   "Unlock FPS":
@@ -12223,28 +12227,28 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3106fps ]
+      - [ load, *ms3_106_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106dsr ]
+      - [ load, *ms3_106_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106ssao ]
+      - [ load, *ms3_106_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12253,25 +12257,25 @@ PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mb ]
+      - [ load, *ms3_106_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mlaa ]
+      - [ load, *ms3_106_mlaa ]
   "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCES01104: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106intro ]
+      - [ load, *ms3_106_intro ]
 
 PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
   "Unlock FPS":
@@ -12279,28 +12283,28 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3106fps ]
+      - [ load, *ms3_106_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106dsr ]
+      - [ load, *ms3_106_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106ssao ]
+      - [ load, *ms3_106_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12309,25 +12313,25 @@ PPU-d39f3ed2bf15a49d28486c7bad52b72c8933cbe8:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mb ]
+      - [ load, *ms3_106_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106mlaa ]
+      - [ load, *ms3_106_mlaa ]
   "Skip Intro":
     Games:
       "Motorstorm: Apocalypse":
         BCUS98242: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3106intro ]
+      - [ load, *ms3_106_intro ]
 
 PPU-507b9d34380cff4bc03d7c64ce6342180779c84b:
   "Unlock FPS":
@@ -12335,28 +12339,28 @@ PPU-507b9d34380cff4bc03d7c64ce6342180779c84b:
       "Motorstorm: Apocalypse":
         NPUA80661: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3psnfps ]
+      - [ load, *ms3_psn_fps ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         NPUA80661: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psndsr ]
+      - [ load, *ms3_psn_dsr ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         NPUA80661: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnssao ]
+      - [ load, *ms3_psn_ssao ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12365,16 +12369,16 @@ PPU-507b9d34380cff4bc03d7c64ce6342180779c84b:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnmb ]
+      - [ load, *ms3_psn_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         NPUA80661: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnmlaa ]
+      - [ load, *ms3_psn_mlaa ]
 
 PPU-fe5be566e6cf8bb0b405c8f2b6689e33c471b143:
   "Unlock FPS":
@@ -12382,28 +12386,28 @@ PPU-fe5be566e6cf8bb0b405c8f2b6689e33c471b143:
       "Motorstorm: Apocalypse":
         NPEA00315: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
-      - [ load, *ms3psnfps ]
+      - [ load, *ms3_psn_fps ]
   "Disable SSAO":
     Games:
       "Motorstorm: Apocalypse":
         NPEA00315: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnssao ]
+      - [ load, *ms3_psn_ssao ]
   "Disable Dynamic Resolution Scaling":
     Games:
       "Motorstorm: Apocalypse":
         NPEA00315: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psndsr ]
+      - [ load, *ms3_psn_dsr ]
   "Disable Motion blur":
     Games:
       "Motorstorm: Apocalypse":
@@ -12412,16 +12416,16 @@ PPU-fe5be566e6cf8bb0b405c8f2b6689e33c471b143:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnmb ]
+      - [ load, *ms3_psn_mb ]
   "Disable MLAA":
     Games:
       "Motorstorm: Apocalypse":
         NPEA00315: [ 01.06 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *ms3psnmlaa ]
+      - [ load, *ms3_psn_mlaa ]
 
 PPU-afb6e2e47e170711041775e0280707e503469d85:
   "Unlock FPS":
@@ -12429,7 +12433,7 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
       "Motorstorm: Apocalypse Singleplayer Demo":
         NPEA90090: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3fpsnotes
+    Notes: *ms3_fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x005ea630, 0x60000000 ] # vfps
@@ -12439,7 +12443,7 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
       "Motorstorm: Apocalypse Singleplayer Demo":
         NPEA90090: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3drsnotes
+    Notes: *ms3_drs_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00471d40, 0x38600000 ] # li r3 0x0
@@ -12448,7 +12452,7 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
       "Motorstorm: Apocalypse Singleplayer Demo":
         NPEA90090: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3ssaonotes
+    Notes: *ms3_ssao_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00471e4c, 0x38600000 ] # li r3 0x0
@@ -12466,7 +12470,7 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
       "Motorstorm: Apocalypse Singleplayer Demo":
         NPEA90090: [ 01.00 ]
     Author: "illusion"
-    Notes: *ms3mlaanotes
+    Notes: *ms3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004528e4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
@@ -12532,6 +12536,9 @@ PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
       - [ be32, 0x0076efb4, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
 
 Anchors:
+  SPU_MLAA_Notes: &SPU_MLAA_Notes
+    "Removes Morphological Anti-Aliasing, known as \"MLAA\", a form of post process anti-aliasing which is done using the CELL's SPUs instead of the RSX for extra performance."
+
   SPU_MLAA_01: &SPU_MLAA_01
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
   #  - [ be32, 0x0000349c, 0x40800017 ] # il r23 0 # Causes blackscreen
@@ -12575,8 +12582,6 @@ Anchors:
   SPU_MLAA_11: &SPU_MLAA_11
     - [ be32, 0x00003344, 0x40800003 ] # il r3 0
     - [ be32, 0x000037b4, 0x4020007f ] # spu nop
-
-  SPU_MLAA_Notes: &SPU_MLAA_Notes "Removes Morphological Anti-Aliasing, known as \"MLAA\", a form of post process anti-aliasing which is done using the CELL's SPUs instead of the RSX for extra performance."
 
 SPU-5177cbc4bf45c8a0a6968c2a722da3a9e6cfb28b: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
   "Disable SPU MLAA - Prince of Persia series":
@@ -13056,7 +13061,8 @@ PPU-e8d5bbb306b85186133e090b79a5c0fd5d11ccfb: # siren cursed
       - [ be32, 0x00022980, 0x60000000 ] # splitscreen
 
 Anchors:
-  ratchet_trilogy_ar_notes: &ratchet_trilogy_ar_notes "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  ratchet_trilogy_ar_notes: &ratchet_trilogy_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
   ratchet_trilogy_ar_configurable_values: &ratchet_trilogy_ar_configurable_values
     "Aspect Ratio":
       Type: double_enum
