@@ -9147,7 +9147,8 @@ Anchors:
     - [ be16, 0x006a493a, 0x0001 ]
     - [ be16, 0x006a495e, 0x0001 ]
 
-  HMPDF2_FPS_Notes: &HMPDF2_FPS_Notes "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability."
+  HMPDF2_FPS_Notes: &HMPDF2_FPS_Notes
+    "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability."
 
 PPU-092c43e2bcacccfe3cdc22b0ab8062b91d4e1cf9:
   "60 FPS":
@@ -9156,7 +9157,7 @@ PPU-092c43e2bcacccfe3cdc22b0ab8062b91d4e1cf9:
         BLUS31431: [ All ]
         NPUB31488: [ All ]
     Author: "Brolijah"
-    Notes: "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with NPUB31488 as well."
+    Notes: [ *HMPDF2_FPS_Notes, "\nMight work with NPUB31488 as well." ]
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
@@ -9167,7 +9168,7 @@ PPU-67e0e7c9b2a7a340c914a0d078e25aac1047e4d4:
       "Hatsune Miku: Project Diva F 2nd":
         NPEB02013: [ All ]
     Author: "Brolijah"
-    Notes: "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability. Might work with BLES02029 as well."
+    Notes: [ *HMPDF2_FPS_Notes, "\nMight work with BLES02029 as well." ]
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
@@ -9255,16 +9256,18 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 Anchors:
-  hazefpsnotes: &hazefpsnotes "Needs testing above 60 FPS."
-  hazefps: &hazefps
+  haze_fps_notes: &haze_fps_notes
+    "Needs testing above 60 FPS."
+  haze_fps: &haze_fps
     - [ be32, 0x0068d0e8, 0x38000000 ] # li r0 0x0
 
-  hazeammonotes: &hazeammonotes "Unlimited ammo, grenades, etc. without reloading."
-  hazeammo: &hazeammo
+  haze_ammo_notes: &haze_ammo_notes
+    "Unlimited ammo, grenades, etc. without reloading."
+  haze_ammo: &haze_ammo
     - [ be32, 0x0033854c, 0x60000000 ] # Infinite clip capacity
     - [ be32, 0x00395884, 0x60000000 ] # Infinite ammo
 
-  hazehp: &hazehp
+  haze_hp: &haze_hp
     - [ be32, 0x0005328c, 0x60000000 ]
 
 PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
@@ -9273,19 +9276,19 @@ PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
       "Haze":
         BLUS30094: [ 01.36 ]
     Author: "illusion"
-    Notes: *hazefpsnotes
+    Notes: *haze_fps_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *hazefps ]
+      - [ load, *haze_fps ]
   "Infinite Ammo":
     Games:
       "Haze":
         BLUS30094: [ 01.36 ]
     Author: "Aphelion"
-    Notes: *hazeammonotes
+    Notes: *haze_ammo_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *hazeammo ]
+      - [ load, *haze_ammo ]
   "Infinite Health":
     Games:
       "Haze":
@@ -9294,7 +9297,7 @@ PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *hazehp ]
+      - [ load, *haze_hp ]
 
 PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
   "Unlock FPS":
@@ -9302,19 +9305,19 @@ PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
       "Haze":
         BLES00157: [ 01.36 ]
     Author: "illusion"
-    Notes: *hazefpsnotes
+    Notes: *haze_fps_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *hazefps ]
+      - [ load, *haze_fps ]
   "Infinite Ammo":
     Games:
       "Haze":
         BLES00157: [ 01.36 ]
     Author: "Aphelion"
-    Notes: *hazeammonotes
+    Notes: *haze_ammo_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *hazeammo ]
+      - [ load, *haze_ammo ]
   "Infinite Health":
     Games:
       "Haze":
@@ -9323,7 +9326,7 @@ PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *hazehp ]
+      - [ load, *haze_hp ]
 
 PPU-ec7c75bef42758b1823ce0b2835935992ae72e8f:
   "60 FPS":
@@ -9392,11 +9395,16 @@ PPU-0bb16b9f48bfea44a892110beec812664e84539f:
       - [ bef64, 0x0021c0f0, 0.06 ]
 
 Anchors:
-  kz2demofov: &kz2demofov
+  kz2demo_fov_notes: &kz2demo_fov_notes
+    "Bound to cause issues, needs further testing."
+  kz2demo_fov: &kz2demo_fov
     - [ bef32, 0x00eb0174, 0.65 ] # Static float in memory
-  kz2demospu: &kz2demospu
+
+  kz2demo_spu: &kz2demo_spu
     - [ be32, 0x00a42a3c, 0x8a840089 ]
-  kz2spunotes: &kz2spunotes "No longer requires Write Color Buffers."
+
+  kz2_spu_notes: &kz2_spu_notes
+    "No longer requires Write Color Buffers."
 
 PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
   "Extended FOV":
@@ -9404,19 +9412,19 @@ PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
       "Killzone 2 Demo":
         NPEA90034: [ 01.00 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz2demo_fov_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz2demofov ]
+      - [ load, *kz2demo_fov ]
   "Disable Post Processing on SPU":
     Games:
       "Killzone 2 Demo":
         NPEA90034: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: *kz2spunotes
+    Notes: *kz2_spu_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz2demospu ]
+      - [ load, *kz2demo_spu ]
 
 PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
   "Extended FOV":
@@ -9424,19 +9432,19 @@ PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
       "Killzone 2 Demo":
         NPUA70034: [ 01.00 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz2demo_fov_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz2demofov ]
+      - [ load, *kz2demo_fov ]
   "Disable Post Processing on SPU":
     Games:
       "Killzone 2 Demo":
         NPUA70034: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: *kz2spunotes
+    Notes: *kz2_spu_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kz2demospu ]
+      - [ load, *kz2demo_spu ]
 
 PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
   "Extended FOV":
@@ -9446,7 +9454,7 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
         BCES00081: [ 01.29 ]
         BCUS98116: [ 01.29 ]
     Author: "illusion"
-    Notes: "Bound to cause issues, needs further testing."
+    Notes: *kz2demo_fov_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00ec096c, 0.65 ] # Static float in memory
@@ -9457,7 +9465,7 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
         BCES00081: [ 01.29 ]
         BCUS98116: [ 01.29 ]
     Author: "ZEROx, illusion"
-    Notes: *kz2spunotes
+    Notes: *kz2_spu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a5a7cc, 0x8a840089 ]
