@@ -14202,7 +14202,8 @@ PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
       - [ be32, 0x0066b764, 0x38800001 ]
 
 Anchors:
-  debugmenunotesHR: &debugmenunotesHR "L3 = Brings Debug Menu\nL1/R1 = Change pages"
+  HR_debugmenu_notes: &HR_debugmenu_notes
+    "L3 = Opens Debug Menu\nL1/R1 = Change pages"
 
 PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
   "Playable Demo Mode":
@@ -14210,7 +14211,7 @@ PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
       "Heavy Rain":
         BCUS98164: [ 01.00 ]
     Author: "bungholio"
-    Notes: *debugmenunotesHR
+    Notes: *HR_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00547b6c, 0x38600001 ]
@@ -14219,7 +14220,7 @@ PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
       "Heavy Rain":
         BCUS98164: [ 01.00 ]
     Author: "bungholio"
-    Notes: *debugmenunotesHR
+    Notes: *HR_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000c7f98, 0x38000001 ]
