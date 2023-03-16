@@ -13325,7 +13325,8 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
       - [ be32, 0x006a1348, 0x3c007000 ]
 
 Anchors:
-  Jak1_Resolution_Notes: &Jak1_Resolution_Notes "Native resolution is 1024x720."
+  Jak_Resolution_Notes: &Jak_Resolution_Notes
+    "Native resolution is 1024x720."
 
 PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
   "Jak 1: 1280x720 Resolution":
@@ -13335,7 +13336,7 @@ PPU-09312c5359ff001526cd7f817d48cb0961bbf515:
       "The Jak and Daxter Trilogy":
         BCES01325: [ 01.00 ]
     Author: "Margen67"
-    Notes: *Jak1_Resolution_Notes
+    Notes: *Jak_Resolution_Notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0003560a, 1280 ]
@@ -13347,7 +13348,7 @@ PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
         NPEA00338: [ 01.00 ]
         NPUA80706: [ 01.00 ]
     Author: "Margen67"
-    Notes: *Jak1_Resolution_Notes
+    Notes: *Jak_Resolution_Notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0003569e, 1280 ]
@@ -13405,12 +13406,13 @@ PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
       - [ be32, 0x0065fe4c, 0x3c007000 ]
 
 Anchors:
-  R3FPSnotes: &R3FPSnotes "Maximum framerate with the patch is directly proportionate to Vblank frequency. More than 60 Vblank is not recommended since framerates above 75 can cause issues with left analog-stick input detection that are caused by inherent limitations in the game engine. Some in-game actions, namely ladder climbing, may require several attempts to register a proper interaction."
-  R3FPS_v100: &R3FPS_v100
+  R3_FPS_Notes: &R3_FPS_Notes
+    "Maximum framerate with the patch is proportionate to Vblank frequency. More than 60 Vblank is not recommended as framerates above 75 can cause issues with left analog-stick input detection that are caused by limitations in the game engine. Some in-game actions, namely ladder climbing, may require several attempts to register a proper interaction."
+  R3_FPS_v100: &R3_FPS_v100
     - [ be32, 0x007eeac8, 0xc0228dcc ]
     - [ be32, 0x00f02ad4, 0x38d1b717 ]
     - [ be32, 0x00736c44, 0x60000000 ]
-  R3FPS_v105: &R3FPS_v105
+  R3_FPS_v105: &R3_FPS_v105
     - [ be32, 0x00817d48, 0xc0228dd4 ]
     - [ be32, 0x00f330fc, 0x38d1b717 ]
     - [ be32, 0x0075fa54, 0x60000000 ]
@@ -13421,10 +13423,10 @@ PPU-2701cf372814d59f26e771dc9394323d4f799682:
       "Resistance 3":
         BCES01118: [ 01.00 ]
     Author: "Whatcookie, boma"
-    Notes: *R3FPSnotes
+    Notes: *R3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *R3FPS_v100 ]
+      - [ load, *R3_FPS_v100 ]
   "Extended FOV":
     Games:
       "Resistance 3":
@@ -13441,10 +13443,10 @@ PPU-cd72aa19da7e24a00802932d06460034c7d94fc6:
       "Resistance 3":
         BCES01118: [ 01.05 ]
     Author: "Whatcookie, boma"
-    Notes: *R3FPSnotes
+    Notes: *R3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *R3FPS_v105 ]
+      - [ load, *R3_FPS_v105 ]
   "Extended FOV":
     Games:
       "Resistance 3":
@@ -13461,10 +13463,10 @@ PPU-502feb2351d2b637a2704d5a50cb44bc1b781532:
       "Resistance 3":
         BCUS98176: [ 01.00 ]
     Author: "Whatcookie, boma"
-    Notes: *R3FPSnotes
+    Notes: *R3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *R3FPS_v100 ]
+      - [ load, *R3_FPS_v100 ]
   "Extended FOV":
     Games:
       "Resistance 3":
@@ -13481,10 +13483,10 @@ PPU-4aa1887bfdd285e3026e6a97d65ed617ddcf4789:
       "Resistance 3":
         BCUS98176: [ 01.05 ]
     Author: "Whatcookie, boma"
-    Notes: *R3FPSnotes
+    Notes: *R3_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *R3FPS_v105 ]
+      - [ load, *R3_FPS_v105 ]
   "Extended FOV":
     Games:
       "Resistance 3":
