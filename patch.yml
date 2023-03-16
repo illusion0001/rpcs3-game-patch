@@ -6343,6 +6343,9 @@ Anchors:
     - [ be32, 0x00dd4eec, 0x88090078 ]
     - [ be32, 0x00dd4ef0, 0x4e800020 ]
 
+  uc3_fps_notes: &uc3_fps_notes
+    "Haven't tested how this affects cutscenes."
+
   uc3_debugmenu_notes: &uc3_debugmenu_notes
     "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
@@ -6356,7 +6359,7 @@ Anchors:
     "Uses GPU (RSX) path for lighting effects instead of SPU.\nFixes rendering of lighting effects that are broken via SPU path and greatly improves performance over it.\nThis path is incomplete and results in some missing effects such as Volumetric lighting."
 
   uc3_camshake_notes: &uc3_camshake_notes
-    "Last modified: 1 Mar 2021\n\nDisables Camera Shake during gameplay.\nIn-Game-Cinematics are unaffected."
+    "Disables Camera Shake during gameplay.\nIn-Game-Cinematics are unaffected."
 
   uc3_119title: &uc3_119title
     "Uncharted 3: Drake's Deception":
@@ -6388,7 +6391,7 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Unlock FPS":
     Games: *uc3_100title
     Author: "superepic31"
-    Notes: "Haven't tested how this affects cutscenes."
+    Notes: *uc3_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_100_FPS ]
@@ -6652,7 +6655,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Unlock FPS":
     Games: *uc3_119title
     Author: "superepic31"
-    Notes: "Haven't tested how this affects cutscenes."
+    Notes: *uc3_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_FPS ]
@@ -6736,7 +6739,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Dev Menu Plus":
     Games: *uc3_119title
     Author: "illusion, Skye"
-    Notes: "Last modified: December 14 2020\nReplaces audio options with various debug features."
+    Notes: "Replaces audio options with various debug features."
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_devplus ]
@@ -11827,6 +11830,8 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
       - [ be32, 0x00682100, 0x60000000 ]
 
 Anchors:
+  UT3_FPS_Notes: &UT3_FPS_Notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
   UT3_FPS: &UT3_FPS
     - [ be32, 0x0057b760, 0x60000000 ]
 
@@ -11836,7 +11841,7 @@ PPU-d4452078fad5d1d71a6ccb30d8349259749f38e7:
       "Unreal Tournament 3":
         BLES00200: [ 02.00 ]
     Author: "Whatcookie, illusion"
-    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
+    Notes: *UT3_FPS_Notes
     Patch Version: 1.1
     Patch:
       - [ load, *UT3_FPS ]
@@ -11847,7 +11852,7 @@ PPU-a14d9bfcebd7226221bc81c9885dab16d688ae5c:
       "Unreal Tournament 3":
         BLUS30086: [ 02.00 ]
     Author: "Whatcookie, illusion"
-    Notes: "Last modified: 30 November 2020\nMaximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
+    Notes: *UT3_FPS_Notes
     Patch Version: 1.1
     Patch:
       - [ load, *UT3_FPS ]
