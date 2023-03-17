@@ -7083,13 +7083,29 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
       - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
+Anchors:
+  gthd_ar_notes: &gthd_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings."
+
+  gthd_fov_notes: &gthd_fov_notes
+    "Might work with other versions with adjustments."
+  gthd_fov_configurable_values: &gthd_fov_configurable_values
+    "FOV":
+      Type: double_range
+      Value: 0.75
+      Min: 0.1
+      Max: 1
+
+  gthd_nohud_notes: &gthd_nohud_notes
+    "Disables in-game HUD. Needs further testing."
+
 PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
   "21:9 Aspect Ratio":
     Games:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
     Author: "illusion"
-    Notes: "Enable \"Stretch to Display Area\" option to take advantage of this patch."
+    Notes: *gthd_ar_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x009bad04, 1.17 ]
@@ -7098,16 +7114,17 @@ PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
     Author: "illusion"
-    Notes: "Might work with other versions with adjustments."
+    Notes: *gthd_fov_notes
+    Configurable Values: *gthd_fov_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x009bccd4, 0.75 ] # tweak this number to your liking
+      - [ bef32, 0x009bccd4, "FOV" ]
   "No HUD":
     Games:
       "Gran Turismo HD Concept":
         NPUA80019: [ All ]
     Author: "illusion"
-    Notes: "Disable In Game HUD, needs further testing."
+    Notes: *gthd_nohud_notes
     Patch Version: 1.0
     Patch:
      # - [ be32, 0x009c3488, 0x00000001 ] # Menu HUD scale (never use this)
@@ -7119,7 +7136,7 @@ PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
     Author: "Margen67"
-    Notes: "Enable \"Stretch to Display Area\" option to take advantage of this patch."
+    Notes: *gthd_ar_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x009bad3c, 1.17 ]
@@ -7128,16 +7145,17 @@ PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
     Author: "illusion"
-    Notes: "Might work with other versions with adjustments."
+    Notes: *gthd_fov_notes
+    Configurable Values: *gthd_fov_configurable_values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x009bcd0c, 0.75 ] # tweak this number to your liking
+      - [ bef32, 0x009bcd0c, "FOV" ]
   "No HUD":
     Games:
       "Gran Turismo HD Concept":
         NPEA90002: [ All ]
     Author: "illusion"
-    Notes: "Disable In Game HUD, needs further testing."
+    Notes: *gthd_nohud_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x009ba57c, 0x00000000 ]
