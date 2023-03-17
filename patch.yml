@@ -690,10 +690,14 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
       - [ load, *BLUS30443_FreeCam ]
 
 Anchors:
-  kh15_ar_219: &kh15_ar_219
+  kh15_ar_21_9_notes: &kh15_ar_21_9_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  kh15_ar_21_9: &kh15_ar_21_9
     - [ be32, 0x000eb170, 0x3faaaaab ] # Vert+ 21:9
     - [ be32, 0x000eb16c, 0x3fc00000 ] # Zoom+ 21:9
 
+  kh15_60fps_notes: &kh15_60fps_notes
+    "May work with JP version with adjustments. May cause double cutscenes audio and/or video."
   kh15_60fps: &kh15_60fps
     - [ be32, 0x00036870, 0x38600000 ] # li r3, 0x0
 
@@ -706,16 +710,16 @@ PPU-d626d9832ed48d1ff0d8d97e53a4e23df50cfae6: # kingdom.self
       "Kingdom Hearts HD 1.5 ReMIX":
         BLUS31212: [ All ]
     Author: "Esppiral"
-    Notes:
+    Notes: *kh15_ar_21_9_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kh15_ar_219 ]
+      - [ load, *kh15_ar_21_9 ]
   "60 FPS":
     Games:
       "Kingdom Hearts HD 1.5 ReMIX":
         BLUS31212: [ All ]
     Author: "Esppiral, Michael Pama, illusion"
-    Notes: "May work with JP version with adjustments. May cause double cutscenes audio and/or video."
+    Notes: *kh15_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *kh15_60fps ]
@@ -726,16 +730,16 @@ PPU-f259a89a80e02a664ab97c3a175330c2e53810ab: # kingdom.self
       "Kingdom Hearts HD 1.5 ReMIX":
         BLES01897: [ All ]
     Author: "Esppiral"
-    Notes:
+    Notes: *kh15_ar_21_9_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *kh15_ar_219 ]
+      - [ load, *kh15_ar_21_9 ]
   "60 FPS":
     Games:
       "Kingdom Hearts HD 1.5 ReMIX":
         BLES01897: [ All ]
     Author: "Esppiral, Michael Pama, illusion"
-    Notes: "May work with JP version with adjustments. May cause double cutscenes audio and/or video."
+    Notes: *kh15_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *kh15_60fps ]
@@ -746,7 +750,7 @@ PPU-c994c802bc88352df8d73bc92f8f9a862814e50d: # recom.self
       "Kingdom Hearts HD 1.5 ReMIX Chain of Memories":
         BLUS31212: [ All ]
     Author: "BlaGe, illusion"
-    Notes: "May work with JP version with adjustments."
+    Notes: *kh15_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *kh15recom_60fps ]
@@ -757,7 +761,7 @@ PPU-4b0a5d3faf18ac22a12c3dca921f82e0c5170bb6: # recom.self
       "Kingdom Hearts HD 1.5 ReMIX Chain of Memories":
         BLES01897: [ All ]
     Author: "BlaGe, illusion"
-    Notes: "May work with JP version with adjustments."
+    Notes: *kh15_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *kh15recom_60fps ]
