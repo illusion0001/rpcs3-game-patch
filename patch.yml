@@ -2862,6 +2862,10 @@ PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
     Patch:
       - [ be32, 0x00f249f0, 0x38600000 ]
 
+Anchors:
+  rftod_instagib_notes: &rftod_instagib_notes
+    "Everything dies in one hit."
+
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
   "Infinite Ammo":
     Games:
@@ -2904,7 +2908,7 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
       "Ratchet & Clank Future: Tools of Destruction":
         BCUS98127: [ All ]
     Author: "Aphelion"
-    Notes: "Everything dies in one hit."
+    Notes: *rftod_instagib_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000bdd44, 0xd27c0004 ]
@@ -2960,7 +2964,7 @@ PPU-c4e26433d1eed9166eb0c67b6f66b2268f3704e2:
       "Ratchet & Clank Future: Tools of Destruction":
         BCES00052: [ All ]
     Author: "Aphelion"
-    Notes: "Everything dies in one hit."
+    Notes: *rftod_instagib_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000bdd14, 0xd27c0004 ]
