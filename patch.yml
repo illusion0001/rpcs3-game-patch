@@ -1893,6 +1893,10 @@ PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
     Patch:
       - [ be16, 0x001740e8, 0x4800 ]
 
+Anchors:
+  aot40d_fps_notes: &aot40d_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency."
+
 PPU-97355e97c701cea87a0ed08bce085cac4949dade:
   "Unlock FPS":
     Games:
@@ -1900,7 +1904,7 @@ PPU-97355e97c701cea87a0ed08bce085cac4949dade:
         BLUS30408: [ 01.00 ]
         BLES00659: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *aot40d_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x003c5f9c, 0x60000000 ]
@@ -1914,7 +1918,7 @@ PPU-66e68ab81cb8c107687e708170fd7f13cfdd641e:
         BLUS30408: [ 01.03 ]
         BLES00659: [ 01.02 ]
     Author: "Whatcookie"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *aot40d_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x003cc00c, 0x60000000 ]
@@ -12481,6 +12485,10 @@ PPU-afb6e2e47e170711041775e0280707e503469d85:
     Patch:
       - [ be32, 0x004528e4, 0x38800000 ] # li r4 0x0 // EdgePostEffects
 
+Anchors:
+  lis_fps_notes: &lis_fps_notes
+    "Removes 62 FPS limit. Maximum framerate with the patch is half the Vblank frequency."
+
 PPU-7b13f30153c465c62995ff4710961f3ae7d2e378:
   "Unlock FPS":
     Games:
@@ -12488,7 +12496,7 @@ PPU-7b13f30153c465c62995ff4710961f3ae7d2e378:
         NPEB02197: [ 01.07 ]
         NPUB31636: [ 01.08 ]
     Author: "illusion"
-    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Notes: *lis_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0042c4fc, 0x60000000 ]
@@ -12499,7 +12507,7 @@ PPU-9940a863ed7bf977c5a15cff5eec8d0649a8552f:
       "Life is Strange":
         NPJB00789: [ 01.00 ]
     Author: "illusion"
-    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Notes: *lis_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0042c1ec, 0x60000000 ]
