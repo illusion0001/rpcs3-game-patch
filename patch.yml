@@ -1827,6 +1827,9 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       - [ be16, 0x012b35f0, 0x98bf ]
 
 Anchors:
+  DS2_Net_Notes: &DS2_Net_Notes
+    "Restores the functionality of the network test client."
+
   DS2_USEU_Net: &DS2_USEU_Net
     - [ be32, 0x019a8c00, 0x01a43068 ]
     - [ be32, 0x019a8c04, 0x01a43060 ]
@@ -1851,7 +1854,7 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
       "Dark Souls II":
         BLET50006: [ All ]
     Author: "DriftItem"
-    Notes: "Fully restores the functionality of network test client."
+    Notes: *DS2_Net_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
@@ -1862,7 +1865,7 @@ PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
       "Dark Souls II":
         NPUB90979: [ All ]
     Author: "DriftItem"
-    Notes: "Fully restores the functionality of network test client."
+    Notes: *DS2_Net_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
@@ -1873,7 +1876,7 @@ PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
       "Dark Souls II":
         NPJB90625: [ All ]
     Author: "DriftItem"
-    Notes: "Fully restores the functionality of network test client."
+    Notes: *DS2_Net_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_JP_Net ]
