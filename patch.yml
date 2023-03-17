@@ -2352,6 +2352,10 @@ PPU-0604e637a841bdd85ac770d76281bdca18ac61f4: # OGRE2.self
     Patch:
       - [ load, *Y2HD_ModSupport ]
 
+Anchors:
+  mcla_deltatime_notes: &mcla_deltatime_notes
+    "Run at any FPS with proper game speed. Increase VBlank for 30+ FPS."
+
 PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
   "Enable Deltatime":
     Games:
@@ -2359,7 +2363,7 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
         NPEB00546: [ 01.00 ]
         NPUB30471: [ 01.00 ]
     Author: "illusion"
-    Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
+    Notes: *mcla_deltatime_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5220, 0x60000000 ]
@@ -2393,7 +2397,7 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
         BLES00652: [ 01.06 ]
         BLUS30442: [ 01.06 ]
     Author: "illusion"
-    Notes: "Runs at any FPS with proper game speed. Increase VBlank for 30+ FPS."
+    Notes: *mcla_deltatime_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c5fc0, 0x60000000 ]
