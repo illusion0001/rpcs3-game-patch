@@ -5253,7 +5253,7 @@ Anchors:
   uc2_quitcrashfix_notes: &uc2_quitcrashfix_notes
     "Fixes a rare bug where quitting to menu causes a game crash."
   uc2_spupost_notes: &uc2_spupost_notes
-    "Fixes green graphics when using Resolution Scaling."
+    "Fixes green graphics when using Resolution Scaling. Do not use this patch if you're not upscaling, it'll introduce white squared artifacts in areas throughout the game."
   uc2_60fps_notes: &uc2_60fps_notes
     "Allows framerates of up to 60 FPS."
   uc2_unlockedfps_notes: &uc2_unlockedfps_notes
