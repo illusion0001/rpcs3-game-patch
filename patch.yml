@@ -5684,6 +5684,35 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00026e08, 0x48000e40 ]
+  "Infinite Ammo":
+    Games:
+      "Uncharted 2: Among Thieves":
+        BCES00509: [ 01.09 ]
+        BCES00727: [ 01.09 ]
+        BCES00757: [ 01.09 ]
+        BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
+    Author: "Hiei-YYH"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0086E0D8, 0x396B0000 ]
+  "Infinite Health":
+    Games:
+      "Uncharted 2: Among Thieves":
+        BCES00509: [ 01.09 ]
+        BCES00727: [ 01.09 ]
+        BCES00757: [ 01.09 ]
+        BCUS98123: [ 01.09 ]
+        BCJS30035: [ 01.09 ]
+    Author: "Hiei-YYH"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00AEA8E0, 0x80030030 ]
+      - [ be32, 0x00AEA8E4, 0x9003002C ]
+      - [ be32, 0x00AEA8E8, 0x4E800020 ]
+      - [ be32, 0x0009F658, 0x48A4B289 ]
 
 PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
   "60 FPS":
