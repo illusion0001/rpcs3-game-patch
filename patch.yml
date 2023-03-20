@@ -6817,7 +6817,20 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
       - [ be32, 0x00df202c, 0x7d284b78 ]
       - [ be32, 0x00df2030, 0x81490000 ]
       - [ be32, 0x00df2034, 0x4bbdee54 ]
-
+  "Infinite Health":
+    Games: *uc3_119title
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00479CD8, 0x60000000 ]
+  "Infinite Ammo":
+    Games: *uc3_119title
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006E4284, 0x60000000 ]
 Anchors:
   uc3beta100_title: &uc3beta100_title
     "Uncharted 3: Drake's Deception Multiplayer Beta":
