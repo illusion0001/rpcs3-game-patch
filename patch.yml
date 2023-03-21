@@ -12876,7 +12876,7 @@ SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-m
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nKillAllZombies\nWWE 2k17" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nHandball 17\nKillAllZombies\nWWE 2k17" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_06 ]
