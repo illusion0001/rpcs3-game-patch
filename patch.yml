@@ -4656,7 +4656,7 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
   "Infinite Everything (Parts, Pills, Crafting items)":
     Games: *tlou111_title
     Author: "Medo, Randy97Killa, illusion"
-    Notes: "Pick up any amount of parts or items to activate the cheat."
+    Notes: "Pick up any amount of parts or items to activate the cheat.\nReplaces 'SS Printout to Msgcon' in Debug Menu Gameplay tab"
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_cparts ]
@@ -4720,6 +4720,25 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       # crash fix
       - [ be32, 0x0003df68, 0x480000a0 ]
       - [ be32, 0x0057cfe8, 0x60000000 ]
+  "Infinite Ammo":
+    Games: *tlou111_title
+    Author: "Medo, Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006B1D94, 0x60000000 ]
+  "Infinite Health":
+    Games: *tlou111_title
+    Author: "Medo, Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007CAF50, 0x486C0D24 ]
+      - [ be32, 0x00E8BC74, 0x3A20008C ]
+      - [ be32, 0x00E8BC78, 0x923F0030 ]
+      - [ be32, 0x00E8BC7C, 0x923F0038 ]
+      - [ be32, 0x00E8BC80, 0x923F0044 ]
+      - [ be32, 0x00E8BC84, 0x4B93F2D0 ]
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes
