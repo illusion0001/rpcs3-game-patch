@@ -14409,6 +14409,44 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
     Patch:
       - [ be32, 0x00013300, 0x60000000 ]
 
+PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
+  "1-Hit Kills":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        BLES01750: [ 01.00 ]
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004A25D4, 0x38800000 ]
+  "Infinite Health":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        BLES01750: [ 01.00 ]
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0063F36C, 0x38A00000 ]
+  "Max FC on Gain":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        BLES01750: [ 01.00 ]
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005EDFF8, 0xD0230004 ]
+  "Max BP on Gain":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        BLES01750: [ 01.00 ]
+    Author: "CodeUnique3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006BEB38, 0x7CE6292D ]
+
 PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
   "Unlock All Chapters":
     Games:
