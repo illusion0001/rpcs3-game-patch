@@ -13747,6 +13747,17 @@ PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
     Patch:
       - [ be32, 0x0026f6b4, 0x90833d48 ]
 
+PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company Demo":
+        NPUB90070: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00010b6c, 0x3c004270 ]
+      - [ be32, 0x0004794c, 0x38800001 ]
+
 Anchors:
   bf4120_title: &bf4120_title
     "Battlefield 4":
