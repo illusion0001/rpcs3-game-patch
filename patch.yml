@@ -13747,6 +13747,15 @@ PPU-8f3e573af22dd5fd077fbe91ac79348eb368f9f6:
     Patch:
       - [ be32, 0x0026f6b4, 0x90833d48 ]
 
+Anchors:
+  bfbc_demo_fps: &bfbc_demo_fps
+    - [ be32, 0x00010b6c, 0x3c004270 ]
+    - [ be32, 0x0004794c, 0x38800001 ]
+
+  bfbc_full_v120_fps: &bfbc_full_v120_fps
+    - [ be32, 0x00010bd0, 0x3c004270 ]
+    - [ be32, 0x0004864c, 0x38800001 ]
+
 PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
   "60 FPS":
     Games:
@@ -13755,8 +13764,37 @@ PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
     Author: "illusion"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00010b6c, 0x3c004270 ]
-      - [ be32, 0x0004794c, 0x38800001 ]
+      - [ load, *bfbc_demo_fps ]
+
+PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30118: [ 01.20 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_fps ]
+
+PPU-6b45e01ffabee0118e0acdbc71995b8f1f5385d2:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company":
+        BLES00259: [ 01.20 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_fps ]
+
+PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company":
+        BLES00261: [ 01.20 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_fps ]
 
 Anchors:
   bf4120_title: &bf4120_title
