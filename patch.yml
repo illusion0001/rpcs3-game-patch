@@ -1284,6 +1284,29 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch:
       - [ utf8, 0x00c51b68, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
       - [ utf8, 0x00c51c08, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+  "Infinite Custom Server":
+    Games:
+      "LittleBigPlanet 2":
+        NPUA80662: [ 01.33 ]
+        NPEA00324: [ 01.33 ]
+        NPEA00437: [ 01.33 ]
+        BCUS98245: [ 01.33 ]
+        BCUS98372: [ 01.33 ]
+        BCES00850: [ 01.33 ]
+        BCES01086: [ 01.33 ]
+        BCES01345: [ 01.33 ]
+        BCES01346: [ 01.33 ]
+        BCES01693: [ 01.33 ]
+        BCES01694: [ 01.33 ]
+        BCAS20113: [ 01.33 ]
+        BCAS20201: [ 01.33 ]
+        BCJS30058: [ 01.33 ]
+    Author: "Toyo"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00c51b68, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00c51c08, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
 
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
@@ -7292,6 +7315,26 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
       - [ utf8, 0x00767c40, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
       - [ utf8, 0x00767cf8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
       - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
+  "Infinite Custom Server":
+    Games:
+      "LittleBigPlanet":
+        NPUA80472: [ 01.30 ]
+        NPEA00241: [ 01.30 ]
+        NPJA00052: [ 01.30 ]
+        BCUS98148: [ 01.30 ]
+        BCUS98208: [ 01.30 ]
+        BCES00141: [ 01.30 ]
+        BCES00611: [ 01.30 ]
+        BCAS20058: [ 01.30 ]
+        BCAS20078: [ 01.30 ]
+        BCJS30018: [ 01.30 ]
+    Author: "Toyo"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00767c40, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00767cf8, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
 
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Create Mode":
@@ -7323,6 +7366,25 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
       - [ utf8, 0x00d9e53c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # presence server url
       - [ utf8, 0x00d9e58c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # live server url
       - [ utf8, 0x00d9e5d8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+  "Infinite Custom Server":
+    Games:
+      "LittleBigPlanet 3":
+        NPUA81116: [ 01.26 ]
+        NPEA00515: [ 01.26 ]
+        NPHA80277: [ 01.26 ]
+        BCUS81138: [ 01.26 ]
+        BCUS98362: [ 01.26 ]
+        BCES01663: [ 01.26 ]
+        BCES02068: [ 01.26 ]
+        BCAS20322: [ 01.26 ]
+    Author: "Toyo"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d9e4c4, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00d9e53c, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # presence server url
+      - [ utf8, 0x00d9e58c, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # live server url
+      - [ utf8, 0x00d9e5d8, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
