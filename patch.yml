@@ -8224,9 +8224,8 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       - [ bef32, 0x0072e5e4, 0.95 ] # Slightly Extended FOV
   "High FPS Fixes":
     Games:
-      "WipEout HD":
-        NPUA80105: [ 02.51 ]
-        NPEA00057: [ 02.51 ]
+      "WipEout HD Fury":
+        BCES00664: [ 02.51 ]
     Author: "Lex6s"
     Notes: *wipeouthd_highfps_notes
     Configurable Values: *wipeouthd_highfps_configurablevalues
