@@ -15251,6 +15251,26 @@ PPU-fbf7ca2e5248cd47b06a7b406a9fc696033e5e0c:
     Patch:
       - [ be32, 0x000e0c10, 0x60000000 ]
 
+PPU-eb633143c2ad46e28e8b2d2374b0a331168c2c66:
+  "Infinite Health":
+    Games:
+      "Wolfenstein":
+        BLUS30298: [ 01.02 ]
+    Author: "bungholio"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0052315C, 0x3C007F80 ]
+      - [ be32, 0x00523160, 0x901F00D8 ]
+      - [ be32, 0x00523164, 0x901F00DC ]
+      - [ be32, 0x00EF7B80, 0x3C0078F0 ]
+      - [ be32, 0x00EF7B84, 0x901B00D8 ]
+      - [ be32, 0x00EF7B88, 0x901B00DC ]
+      - [ be32, 0x00EF7B8C, 0x48000020 ]
+      - [ be32, 0x00EF7BAC, 0xC1BB00D8 ]
+      - [ be32, 0x00EF7BB0, 0x4B62486C ]
+      - [ be32, 0x0051C418, 0x489DB768 ]
+
 PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
   "60 FPS":
     Games:
