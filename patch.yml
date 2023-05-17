@@ -6893,14 +6893,14 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00479CD8, 0x60000000 ]
+      - [ be32, 0x00479cd8, 0x60000000 ]
   "Infinite Ammo":
     Games: *uc3_119title
     Author: "CodeUnique3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006E4284, 0x60000000 ]
+      - [ be32, 0x006e4284, 0x60000000 ]
 Anchors:
   uc3beta100_title: &uc3beta100_title
     "Uncharted 3: Drake's Deception Multiplayer Beta":
@@ -15261,16 +15261,16 @@ PPU-eb633143c2ad46e28e8b2d2374b0a331168c2c66:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0052315C, 0x3C007F80 ]
-      - [ be32, 0x00523160, 0x901F00D8 ]
-      - [ be32, 0x00523164, 0x901F00DC ]
-      - [ be32, 0x00EF7B80, 0x3C0078F0 ]
-      - [ be32, 0x00EF7B84, 0x901B00D8 ]
-      - [ be32, 0x00EF7B88, 0x901B00DC ]
-      - [ be32, 0x00EF7B8C, 0x48000020 ]
-      - [ be32, 0x00EF7BAC, 0xC1BB00D8 ]
-      - [ be32, 0x00EF7BB0, 0x4B62486C ]
-      - [ be32, 0x0051C418, 0x489DB768 ]
+      - [ be32, 0x0052315c, 0x3c007f80 ]
+      - [ be32, 0x00523160, 0x901f00d8 ]
+      - [ be32, 0x00523164, 0x901f00dc ]
+      - [ be32, 0x00ef7b80, 0x3c0078f0 ]
+      - [ be32, 0x00ef7b84, 0x901b00d8 ]
+      - [ be32, 0x00ef7b88, 0x901b00dc ]
+      - [ be32, 0x00ef7b8c, 0x48000020 ]
+      - [ be32, 0x00ef7bac, 0xc1bb00d8 ]
+      - [ be32, 0x00ef7bb0, 0x4b62486c ]
+      - [ be32, 0x0051c418, 0x489db768 ]
 
 PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
   "60 FPS":
