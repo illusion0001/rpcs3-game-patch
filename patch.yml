@@ -5737,7 +5737,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0086E0D8, 0x396B0000 ]
+      - [ be32, 0x0086e0d8, 0x396b0000 ]
   "Infinite Health":
     Games:
       "Uncharted 2: Among Thieves":
@@ -5750,10 +5750,10 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00AEA8E0, 0x80030030 ]
-      - [ be32, 0x00AEA8E4, 0x9003002C ]
-      - [ be32, 0x00AEA8E8, 0x4E800020 ]
-      - [ be32, 0x0009F658, 0x48A4B289 ]
+      - [ be32, 0x00aea8e0, 0x80030030 ]
+      - [ be32, 0x00aea8e4, 0x9003002c ]
+      - [ be32, 0x00aea8e8, 0x4e800020 ]
+      - [ be32, 0x0009f658, 0x48a4b289 ]
 
 PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
   "60 FPS":
