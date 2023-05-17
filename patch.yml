@@ -4748,19 +4748,19 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006B1D94, 0x60000000 ]
+      - [ be32, 0x006b1d94, 0x60000000 ]
   "Infinite Health":
     Games: *tlou111_title
     Author: "Medo, Randy97Killa"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007CAF50, 0x486C0D24 ]
-      - [ be32, 0x00E8BC74, 0x3A20008C ]
-      - [ be32, 0x00E8BC78, 0x923F0030 ]
-      - [ be32, 0x00E8BC7C, 0x923F0038 ]
-      - [ be32, 0x00E8BC80, 0x923F0044 ]
-      - [ be32, 0x00E8BC84, 0x4B93F2D0 ]
+      - [ be32, 0x007caf50, 0x486c0d24 ]
+      - [ be32, 0x00e8bc74, 0x3a20008c ]
+      - [ be32, 0x00e8bc78, 0x923f0030 ]
+      - [ be32, 0x00e8bc7c, 0x923f0038 ]
+      - [ be32, 0x00e8bc80, 0x923f0044 ]
+      - [ be32, 0x00e8bc84, 0x4b93f2d0 ]
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes
@@ -8669,7 +8669,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002AC77C, 0x60000000 ]
+      - [ be32, 0x002ac77c, 0x60000000 ]
   "Infinite Ammo":
     Games:
       "Uncharted: Drake's Fortune":
@@ -8679,7 +8679,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x005D14D8, 0x39290000 ]
+      - [ be32, 0x005d14d8, 0x39290000 ]
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
   "Disable Motion Blur":
