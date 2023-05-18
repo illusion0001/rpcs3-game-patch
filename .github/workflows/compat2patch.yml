@@ -12,7 +12,8 @@ jobs:
   build:
     if: |
       github.repository == 'illusion0001/rpcs3-game-patch' &&
-      github.event_name == 'schedule'
+      github.event_name == 'schedule' ||
+      github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
