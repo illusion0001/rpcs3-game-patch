@@ -8649,6 +8649,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
     Notes:
@@ -8659,6 +8660,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
     Notes:
@@ -8669,6 +8671,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
@@ -8679,6 +8682,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "illusion"
     Notes: *uc1_debugmenu_notes2
@@ -8695,6 +8699,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "Hiei-YYH"
     Notes:
@@ -8705,6 +8710,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games:
       "Uncharted: Drake's Fortune":
         BCES00065: [ 01.01 ]
+        BCJS30015: [ 01.01 ]
         BCUS98103: [ 01.10 ]
     Author: "Hiei-YYH"
     Notes:
