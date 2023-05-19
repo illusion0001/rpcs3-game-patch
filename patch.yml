@@ -12622,14 +12622,13 @@ Anchors:
 
   SPU_MLAA_01: &SPU_MLAA_01
     - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
-  #  - [ be32, 0x0000349c, 0x40800017 ] # il r23 0 # Causes blackscreen
 
   SPU_MLAA_02: &SPU_MLAA_02
-    - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
+    - [ load, *SPU_MLAA_01 ]
     - [ be32, 0x0000349c, 0x40800017 ] # il r23 0
 
   SPU_MLAA_03: &SPU_MLAA_03
-    - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
+    - [ load, *SPU_MLAA_01 ]
     - [ be32, 0x000034a4, 0x40800017 ] # il r23 0
 
   SPU_MLAA_04: &SPU_MLAA_04
