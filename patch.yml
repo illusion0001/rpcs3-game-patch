@@ -3327,18 +3327,25 @@ PPU-fadb0af6fb7bd0113e88fb9af3eb78fe3be05d08:
       - [ be16, 0x0032ff0e, 0x126f ] # level load (high bits)
       - [ bef64, 0x006a1938, 0.001 ] # init/level load
 
+Anchors:
+  ratchet_all4one_unlockfps_notes: &ratchet_all4one_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency."
+
+  ratchet_all4one_100_unlockfps: &ratchet_all4one_100_unlockfps
+    - [ be16, 0x0031105a, 0x3a83 ] # level load (low bits)
+    - [ be16, 0x00311066, 0x126f ] # level load (high bits)
+    - [ bef64, 0x0072c140, 0.001 ] # init/level load
+
 PPU-6b996df3949d05b2e6dc23b1dfdf9dd6d01d8c38:
   "Unlock FPS":
     Games:
       "Ratchet & Clank: All 4 One":
         NPEA00356: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_all4one_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0031105a, 0x3a83 ] # level load (low bits)
-      - [ be16, 0x00311066, 0x126f ] # level load (high bits)
-      - [ bef64, 0x0072c140, 0.001 ] # init/level load
+      - [ load, *ratchet_all4one_100_unlockfps ]
 
 PPU-5fd631b4c6903c20ef2dedae06469beb880935d3:
   "Unlock FPS":
@@ -3347,7 +3354,7 @@ PPU-5fd631b4c6903c20ef2dedae06469beb880935d3:
         NPEA00356: [ 01.03 ]
         NPUA80695: [ 01.03 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_all4one_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0031a186, 0x3a83 ] # level load (low bits)
@@ -3360,12 +3367,10 @@ PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
       "Ratchet & Clank: All 4 One":
         NPUA80695: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_all4one_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0031105a, 0x3a83 ] # level load (low bits)
-      - [ be16, 0x00311066, 0x126f ] # level load (high bits)
-      - [ bef64, 0x0072c140, 0.001 ] # init/level load
+      - [ load, *ratchet_all4one_100_unlockfps ]
 
 Anchors:
   gowa_mlaa_notes: &gowa_mlaa_notes
@@ -7826,6 +7831,9 @@ Anchors:
   sk82_fisheye: &sk82_fisheye
     - [ be32, 0x00460434, 0x388000013 ]
 
+  sk82_219widescreen_notes: &sk82_219widescreen_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements may be stretched."
+
   sk82_219widescreen: &sk82_219widescreen
     - [ be32, 0x01311760, 0x4002f1bd ]
 
@@ -7838,7 +7846,7 @@ PPU-c5d2fd31933f88313956774b84346d242979eba6:
       "Skate 2":
         BLUS30253: [ 01.02 ]
     Author: "tuukkas"
-    Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *sk82_219widescreen_notes
     Patch Version: 1.0
     Patch:
       - [ load, *sk82_219widescreen ]
@@ -7867,7 +7875,7 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
       "Skate 2":
         BLES00461: [ 01.02 ]
     Author: "tuukkas"
-    Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work."
+    Notes: *sk82_219widescreen_notes
     Patch Version: 1.0
     Patch:
       - [ load, *sk82_219widescreen ]
