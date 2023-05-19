@@ -3106,6 +3106,10 @@ PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
     Patch:
       - [ bef32, 0x00855040, 0.001 ]
 
+Anchors:
+  ratchet_acit_skipintro_notes: &ratchet_acit_skipintro_notes
+    "The main menu doesn't play music the first time it's opened."
+
 PPU-301488b15ab0e31e7c5b284da437c5047eabd025:
   "Unlock FPS":
     Games:
@@ -3200,7 +3204,7 @@ PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
       "Ratchet & Clank Future: A Crack in Time":
         NPEA00453: [ 01.20 ]
     Author: "illusion"
-    Notes: "The main menu doesn't play music the first time that you see it."
+    Notes: *ratchet_acit_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c99a8, 0x38600006 ]
@@ -3252,7 +3256,7 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
       "Ratchet & Clank Future: A Crack in Time":
         NPUA80966: [ 01.20 ]
     Author: "illusion"
-    Notes: "The main menu doesn't play music the first time that you see it."
+    Notes: *ratchet_acit_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004c8f50, 0x38600006 ]
