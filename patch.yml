@@ -766,6 +766,10 @@ PPU-4b0a5d3faf18ac22a12c3dca921f82e0c5170bb6: # recom.self
     Patch:
       - [ load, *kh15recom_60fps ]
 
+Anchors:
+  kh25_60fps_notes: &kh25_60fps_notes
+    "Doubles gravity, some stuff moves at double speed."
+
 PPU-f18bcdcc6d74a25383d72074e1646352ab53e9d2: # kingdom2.self
   "60 FPS":
     Games:
@@ -773,7 +777,7 @@ PPU-f18bcdcc6d74a25383d72074e1646352ab53e9d2: # kingdom2.self
         BLES02070: [ All ]
         BLUS31460: [ All ]
     Author: "illusion, BlaGe" # https://forums.rpcs3.net/user-1272.html
-    Notes: "Doubles gravity, some stuff moves at double speed."
+    Notes: *kh25_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00076850, 0x38600000 ] # li r3, 0x0
@@ -785,7 +789,7 @@ PPU-6da0d4551c59eb596a1e04a5355e98163badf246: # BBS.self
         BLES02070: [ All ]
         BLUS31460: [ All ]
     Author: "illusion, BlaGe" # https://forums.rpcs3.net/user-1272.html
-    Notes: "Doubles gravity, some stuff moves at double speed."
+    Notes: *kh25_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00015aa4, 0x38600000 ] # li r3, 0x0
