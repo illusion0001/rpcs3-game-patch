@@ -3265,13 +3265,17 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
     Patch:
       - [ be32, 0x004c8f50, 0x38600006 ]
 
+Anchors:
+  ratchet_nexus_unlockfps_notes: &ratchet_nexus_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency."
+
 PPU-1155df736bedc95424c866d84a20766a4115774d:
   "Unlock FPS":
     Games:
       "Ratchet & Clank: Into the Nexus":
         NPUA80908: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_nexus_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032efc2, 0x3a83 ] # level load (low bits)
@@ -3285,7 +3289,7 @@ PPU-ed460e668a491f5e39f6547f3a24c2f20e2cb39b:
         BCES01908: [ 01.00 ]
         BCES01949: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_nexus_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032f002, 0x3a83 ] # level load (low bits)
@@ -3298,7 +3302,7 @@ PPU-d9c555a5fea145a24920bc4e63056bf35e1c6a14:
       "Ratchet & Clank: Nexus":
         NPEA00457: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_nexus_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032efc2, 0x3a83 ] # level load (low bits)
@@ -3316,7 +3320,7 @@ PPU-fadb0af6fb7bd0113e88fb9af3eb78fe3be05d08:
         BCES01949: [ 01.01 ]
         NPEA00457: [ 01.01 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_nexus_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032ff02, 0x3a83 ] # level load (low bits)
