@@ -14718,13 +14718,17 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
       - [ be16, 0x00050cb4, 0x9107 ]
       - [ be16, 0x00050d50, 0x9907 ]
 
+Anchors:
+  ratchet_ffa_unlockfps_notes: &ratchet_ffa_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency."
+
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   "Unlock FPS":
     Games:
       "Ratchet & Clank: Full Frontal Assault":
         NPUA80642: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_ffa_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x003252b2, 0x3a83 ] # level load (low bits)
@@ -14737,7 +14741,7 @@ PPU-e45e4660a1cc27abac589853f026680900bec54c:
       "Ratchet & Clank: QForce":
         NPEA00378: [ 01.00 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_ffa_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00325362, 0x3a83 ] # level load (low bits)
@@ -14750,7 +14754,7 @@ PPU-fcbff915be00510f154438ad4ddf5f2aff1cbb44:
       "Ratchet & Clank: QForce":
         NPEA00378: [ 01.04 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_ffa_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032b02e, 0x3a83 ] # level load (low bits)
@@ -14767,7 +14771,7 @@ PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
         BCES01594: [ 01.05 ]
         NPEA00378: [ 01.05 ]
     Author: "illusion"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Notes: *ratchet_ffa_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032bca6, 0x3a83 ] # level load (low bits)
