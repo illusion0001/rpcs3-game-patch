@@ -5311,14 +5311,31 @@ Anchors:
   uc2_spulighting_notes: &uc2_spulighting_notes
     "Improves performance slightly by using GPU path for lighting.\nFixes lighting issues in Chapter 9 when shining the beams of light onto the statues."
 
+  uc2_disc100title: &uc2_disc100title
+    "Uncharted 2: Among Thieves":
+      BCES00509: [ 01.00 ]
+      BCES00727: [ 01.00 ]
+      BCES00757: [ 01.00 ]
+      BCJS30035: [ 01.00 ]
+
+  uc2_disc109title: &uc2_disc109title
+    "Uncharted 2: Among Thieves":
+      BCES00509: [ 01.09 ]
+      BCES00727: [ 01.09 ]
+      BCES00757: [ 01.09 ]
+      BCUS98123: [ 01.09 ]
+      BCJS30035: [ 01.09 ]
+
+  uc2_PSN110title: &uc2_PSN110title
+    "Uncharted 2: Among Thieves":
+      NPEA00364: [ 01.10 ]
+      NPEA00365: [ 01.10 ]
+      NPUA80698: [ 01.10 ]
+      NPHA80194: [ 01.10 ]
+
 PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
   "60 FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes: *uc2_60fps_notes
     Group: FPS
@@ -5326,12 +5343,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
     Patch:
       - [ load, *uc2_Disc_100_60FPS ]
   "Unlock FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes: *uc2_unlockedfps_notes
     Group: FPS
@@ -5339,96 +5351,56 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
     Patch:
       - [ load, *uc2_Disc_100_UnlockFPS ]
   "Disable SSAO":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_ssao ]
   "Disable Depth of Field":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_dof ]
   "Disable SPU Post-processing":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes: *uc2_spupost_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_post ]
   "Enable GPU Lighting":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes: *uc2_spulighting_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_light ]
   "Disable Mesh Trimming":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mesh ]
   "Disable Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mb ]
   "Disable Velocity Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_vmb ]
   "Debug Menu":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc2_debugmenu_notes
     Patch Version: 1.0
@@ -5436,12 +5408,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
       - [ be16, 0x00023c64, 0x419e ]
       - [ be32, 0x00062e10, 0x60000000 ] # Don't pause on Select button
   "Bug Fix: Quit to Menu Crash": # TODO: Port to PSN version
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "ZEROx, illusion"
     Notes: *uc2_quitcrashfix_notes
     Patch Version: 1.0
@@ -5454,12 +5421,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
       - [ be32, 0x0077f12c, 0xa01c04b4 ] # Default lhz
       - [ be32, 0x0077f130, 0x4e800020 ] # Return
   "Skip Intro":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.00 ]
-        BCES00727: [ 01.00 ]
-        BCES00757: [ 01.00 ]
-        BCJS30035: [ 01.00 ]
+    Games: *uc2_disc100title
     Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
@@ -5571,13 +5533,7 @@ PPU-9fe364d48b610e4b0a1c41d526bec9b1b2039c07:
 
 PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
   "60 FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes: *uc2_60fps_notes
     Group: FPS
@@ -5585,13 +5541,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
     Patch:
       - [ load, *uc2_Disc_109_60FPS ]
   "Unlock FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes: *uc2_unlockedfps_notes
     Group: FPS
@@ -5599,117 +5549,63 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
     Patch:
       - [ load, *uc2_Disc_109_UnlockFPS ]
   "Disable SSAO":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_ssao ]
   "Disable Depth of Field":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_dof ]
   "Disable SPU Post-processing":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes: *uc2_spupost_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_post ]
   "Enable GPU Lighting":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes: *uc2_spulighting_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_light ]
   "Disable Mesh Trimming":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_mesh ]
   "Disable Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_mb ]
   "Disable Velocity Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_vmb ]
   "Debug Menu":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "dron_3, HdHereidme"
     Notes: *uc2_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00023c0c, 0x419e ]
   "Bug Fix: Quit to Menu Crash": # TODO: port to PSN ver
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "ZEROx, illusion"
     Notes: *uc2_quitcrashfix_notes
     Patch Version: 1.0
@@ -5722,39 +5618,21 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
       - [ be32, 0x00b31114, 0xa01c04b4 ] # Default lhz
       - [ be32, 0x00b31118, 0x4e800020 ] # Return
   "Skip Intro":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00026e08, 0x48000e40 ]
   "Infinite Ammo":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0086e0d8, 0x396b0000 ]
   "Infinite Health":
-    Games:
-      "Uncharted 2: Among Thieves":
-        BCES00509: [ 01.09 ]
-        BCES00727: [ 01.09 ]
-        BCES00757: [ 01.09 ]
-        BCUS98123: [ 01.09 ]
-        BCJS30035: [ 01.09 ]
+    Games: *uc2_disc109title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
@@ -5766,12 +5644,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
 
 PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
   "60 FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes: *uc2_60fps_notes
     Group: FPS
@@ -5779,12 +5652,7 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
     Patch:
       - [ load, *uc2_PSN_60FPS ]
   "Unlock FPS":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes: *uc2_unlockedfps_notes
     Group: FPS
@@ -5792,108 +5660,63 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
     Patch:
       - [ load, *uc2_PSN_UnlockFPS ]
   "Disable SSAO":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_ssao ]
   "Disable Depth of Field":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_dof ]
   "Disable SPU Post-processing":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes: *uc2_spupost_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_post ]
   "Enable GPU Lighting":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes: *uc2_spulighting_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_light ]
   "Disable Mesh Trimming":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_mesh ]
   "Disable Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_mb ]
   "Disable Velocity Motion Blur":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_vmb ]
   "Debug Menu":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc2_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000244e0, 0x419e ]
   "Skip Intro":
-    Games:
-      "Uncharted 2: Among Thieves":
-        NPEA00364: [ 01.10 ]
-        NPEA00365: [ 01.10 ]
-        NPUA80698: [ 01.10 ]
-        NPHA80194: [ 01.10 ]
+    Games: *uc2_PSN110title
     Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
