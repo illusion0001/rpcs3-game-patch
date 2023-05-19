@@ -8418,37 +8418,58 @@ PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
       - [ be32, 0x00dee1b0, 0x3f100001 ] # Ingame 21:9 AR
 
 Anchors:
+  uc1_unlockdevkitmenus: &uc1_unlockdevkitmenus
+    - [ be16, 0x0007023c, 0x4800 ] # rendering
+    - [ be16, 0x00070300, 0x4800 ] # col
+    - [ be16, 0x000703c0, 0x4800 ] # game
+    - [ be16, 0x00070434, 0x4800 ] # inter background
+    - [ be16, 0x000708d4, 0x4800 ] # phys
+    - [ be16, 0x00071af0, 0x4800 ] #
+    - [ be16, 0x00071ed0, 0x4800 ] # particles
+
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc1_debugmenu_notes2: &uc1_debugmenu_notes2
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
 
+  uc1_disc100title: &uc1_disc100title
+    "Uncharted: Drake's Fortune":
+      BCES00065: [ 01.00 ]
+      BCUS98103: [ 01.00 ]
+
+  uc1_disc101title: &uc1_disc101title
+    "Uncharted: Drake's Fortune":
+      BCES00065: [ 01.01 ]
+      BCJS30015: [ 01.01 ]
+      BCUS98103: [ 01.10 ]
+
+  uc1_PSNalltitle: &uc1_PSNalltitle
+    "Uncharted: Drake's Fortune":
+      NPEA00363: [ All ]
+      NPUA80697: [ All ]
+      NPHA80193: [ All ]
+
+  uc1_internaltitle: &uc1_internaltitle
+    "Uncharted: Drake's Fortune":
+      TEST12345: [ 01.00 ]
+
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   "Disable Motion Blur":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.00 ]
-        BCUS98103: [ 01.00 ]
+    Games: *uc1_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a8, 0x995d ] # (mem address: 0x42974a)
   "Disable Depth of Field":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.00 ]
-        BCUS98103: [ 01.00 ]
+    Games: *uc1_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a0, 0x995d ] # (mem address: 0x42974c)
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.00 ]
-        BCUS98103: [ 01.00 ]
+    Games: *uc1_disc100title
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
@@ -8486,72 +8507,42 @@ PPU-4a7e0af86fbdf2280aed3d98479d04461e50e8cf:
 
 PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
   "Disable Motion Blur":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e5284, 0x995d ] # (mem address: 0xbb43da)
   "Disable Depth of Field":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b6ac, 0x409e ]
   "Unlock Devkit menus":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "illusion"
     Notes: *uc1_debugmenu_notes2
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0007023c, 0x4800 ] # rendering
-      - [ be16, 0x00070300, 0x4800 ] # col
-      - [ be16, 0x000703c0, 0x4800 ] # game
-      - [ be16, 0x00070434, 0x4800 ] # inter background
-      - [ be16, 0x000708d4, 0x4800 ] # phys
-      - [ be16, 0x00071af0, 0x4800 ] #
-      - [ be16, 0x00071ed0, 0x4800 ] # particles
+      - [ load, *uc1_unlockdevkitmenus ]
   "Infinite Health":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002ac77c, 0x60000000 ]
   "Infinite Ammo":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCES00065: [ 01.01 ]
-        BCJS30015: [ 01.01 ]
-        BCUS98103: [ 01.10 ]
+    Games: *uc1_disc101title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
@@ -8594,13 +8585,7 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Notes: *uc1_debugmenu_notes2
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0007023c, 0x4800 ] # rendering
-      - [ be16, 0x00070300, 0x4800 ] # col
-      - [ be16, 0x000703c0, 0x4800 ] # game
-      - [ be16, 0x00070434, 0x4800 ] # inter background
-      - [ be16, 0x000708d4, 0x4800 ] # phys
-      - [ be16, 0x00071af0, 0x4800 ] #
-      - [ be16, 0x00071ed0, 0x4800 ] # particles
+      - [ load, *uc1_unlockdevkitmenus ]
   "Infinite Health":
     Games:
       "Uncharted: Drake's Fortune":
@@ -8622,44 +8607,28 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
   "Disable Motion Blur":
-    Games:
-      "Uncharted: Drake's Fortune":
-        NPEA00363: [ All ]
-        NPUA80697: [ All ]
-        NPHA80193: [ All ]
+    Games: *uc1_PSNalltitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e5234, 0x995d ] # (mem address: 0xbb321a)
   "Disable Depth of Field":
-    Games:
-      "Uncharted: Drake's Fortune":
-        NPEA00363: [ All ]
-        NPUA80697: [ All ]
-        NPHA80193: [ All ]
+    Games: *uc1_PSNalltitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e522c, 0x995d ] # (mem address: 0xbb321c)
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        NPEA00363: [ All ]
-        NPUA80697: [ All ]
-        NPHA80193: [ All ]
+    Games: *uc1_PSNalltitle
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b5c4, 0x419e ] # has it's function branched out!
   "Bug Fix: Slow Init Times":
-    Games:
-      "Uncharted: Drake's Fortune":
-        NPEA00363: [ All ]
-        NPUA80697: [ All ]
-        NPHA80193: [ All ]
+    Games: *uc1_PSNalltitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8668,9 +8637,7 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
 
 PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        TEST12345: [ 01.00 ]
+    Games: *uc1_internaltitle
     Author: "illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
@@ -8680,9 +8647,7 @@ PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
 
 PPU-e6416a6e08fff80e71a78ac2b265bce980cedcb4:
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        TEST12345: [ 01.00 ]
+    Games: *uc1_internaltitle
     Author: "illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
@@ -8692,9 +8657,7 @@ PPU-e6416a6e08fff80e71a78ac2b265bce980cedcb4:
 
 PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        TEST12345: [ 01.00 ]
+    Games: *uc1_internaltitle
     Author: "illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
