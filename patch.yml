@@ -842,6 +842,15 @@ Anchors:
     # 0.35 seems good from my testing, feel free to change as you see fit.
   DOD3_Camera_H_Sens_Multiplier: &DOD3_Camera_H_Sens_Multiplier 0.35
 
+  DOD3_UnprotectFiles_Notes: &DOD3_UnprotectFiles_Notes
+    "Disables SHA-1 hash checking of the following files: "
+  DOD3_UnprotectFiles_US_Notes: &DOD3_UnprotectFiles_US_Notes
+    [ *DOD3_UnprotectFiles_Notes, "coalesced_int.bin, coalesced_fra.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_fra.xxx" ]
+  DOD3_UnprotectFiles_JP_Notes: &DOD3_UnprotectFiles_JP_Notes
+    [ *DOD3_UnprotectFiles_Notes, "coalesced_int.bin, coalesced_jpn.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_jpn.xxx" ]
+  DOD3_UnprotectFiles_AS_Notes: &DOD3_UnprotectFiles_AS_Notes
+    [ *DOD3_UnprotectFiles_Notes, "coalesced_int.bin, coalesced_chn.bin, coalesced_cze.bin, coalesced_deu.bin, coalesced_esm.bin, coalesced_esn.bin, coalesced_fra.bin, coalesced_hun.bin, coalesced_ita.bin, coalesced_jpn.bin, coalesced_kor.bin, coalesced_pol.bin, coalesced_ptb.bin, coalesced_rus.bin, coalesced_slo.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx" ]
+
 PPU-2b393f064786e5895d5a576621deb4c9107a8f0b:
   "Unlock FPS":
     Games:
@@ -886,7 +895,7 @@ PPU-f2f7f7ea0444353884bb715152147c3a29f4e790:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BLUS31197: [ 01.01 ]
     Author: "emoose"
-    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_fra.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_fra.xxx"
+    Notes: *DOD3_UnprotectFiles_US_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008c50b8, 0x30840000 ]
@@ -935,7 +944,7 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
       "Drakengard 3 (Drag-On Dragoon 3)":
         NPUB31251: [ 01.01 ]
     Author: "emoose"
-    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_fra.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_fra.xxx"
+    Notes: *DOD3_UnprotectFiles_US_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008c4398, 0x30840000 ]
@@ -957,7 +966,7 @@ PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
       "Drakengard 3 (Drag-On Dragoon 3)":
         NPEB01407: [ All ]
     Author: "Whatcookie, Asinine"
-    Notes: "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\", so the patch can't be separated. Need to also change Vblank frequency to 120Hz for 60 FPS or 240Hz for 120 FPS. Going over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+    Notes: [ "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\" so the patch can't be separated.\n", *DOD3_FPS_Notes ]
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ecf1c, 0.125 ] # 240 max FPS
@@ -1006,7 +1015,7 @@ PPU-c09c496514f6dc591434575b04eb7c003826c11d:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BLJM61043: [ 01.04 ]
     Author: "emoose"
-    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_jpn.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver_loc_int.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx, cdevsounddriver_loc_jpn.xxx"
+    Notes: *DOD3_UnprotectFiles_JP_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008c5310, 0x30840000 ]
@@ -1044,7 +1053,7 @@ PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
       "Drakengard 3 (Drag-On Dragoon 3)":
         BCAS20311: [ 01.02 ]
     Author: "emoose"
-    Notes: "Disables SHA-1 hash checking of the following files: coalesced_int.bin, coalesced_chn.bin, coalesced_cze.bin, coalesced_deu.bin, coalesced_esm.bin, coalesced_esn.bin, coalesced_fra.bin, coalesced_hun.bin, coalesced_ita.bin, coalesced_jpn.bin, coalesced_kor.bin, coalesced_pol.bin, coalesced_ptb.bin, coalesced_rus.bin, coalesced_slo.bin, core.xxx, engine.xxx, gfxui.xxx, ipdrv.xxx, gameframework.xxx, onlinesubsystempc.xxx, cdevsounddriver.xxx, sqexsead.xxx, sqex03game.xxx, startup.xxx"
+    Notes: *DOD3_UnprotectFiles_AS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008c5178, 0x30840000 ]
