@@ -2510,12 +2510,29 @@ Anchors:
   RDR_FPS_Notes: &RDR_FPS_Notes
     "Allows the framerate to exceed 65. Still need to set vblank to unlock framerate."
 
+  rdr_goty100title: &rdr_goty100title
+    "Red Dead Redemption GOTY Edition":
+      BLES01294: [ 01.00 ]
+      BLUS30758: [ 01.00 ]
+
+  rdr_goty101title: &rdr_goty101title
+    "Red Dead Redemption GOTY Edition":
+      BLES01294: [ 01.01 ]
+      BLUS30758: [ 01.01 ]
+
+  rdr_disc100title: &rdr_disc100title
+    "Red Dead Redemption":
+      BLUS30418: [ 01.00 ]
+      BLES00680: [ 01.00 ]
+
+  rdr_psn100title: &rdr_psn100title
+    "Red Dead Redemption":
+      NPUB30638: [ 01.00 ]
+      NPEB00833: [ 01.00 ]
+
 PPU-8a18a0314cade28526874128b253acd98863b83d:
   "Aspect Ratio":
-    Games:
-      "Red Dead Redemption":
-        NPUB30638: [ 01.00 ]
-        NPEB00833: [ 01.00 ]
+    Games: *rdr_psn100title
     Author: "Esppiral, Victoria"
     Notes: *RDR_AR_Notes
     Configurable Values: *RDR_AR_Configurable_Values
@@ -2524,30 +2541,21 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
       - [ bef32, 0x00474f24, "Aspect Ratio" ]
       - [ bef32, 0x000954b8, "Aspect Ratio" ]
   "Disable Motion Blur":
-    Games:
-      "Red Dead Redemption":
-        NPUB30638: [ 01.00 ]
-        NPEB00833: [ 01.00 ]
+    Games: *rdr_psn100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x004cbb1b, 0x00 ]
   "Unlock FPS":
-    Games:
-      "Red Dead Redemption":
-        NPUB30638: [ 01.00 ]
-        NPEB00833: [ 01.00 ]
+    Games: *rdr_psn100title
     Author: "Whatcookie"
     Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025ed14, 0x386003e8 ]
   "Skip Intro":
-    Games:
-      "Red Dead Redemption":
-        NPUB30638: [ 01.00 ]
-        NPEB00833: [ 01.00 ]
+    Games: *rdr_psn100title
     Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
@@ -2556,10 +2564,7 @@ PPU-8a18a0314cade28526874128b253acd98863b83d:
 
 PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
   "Aspect Ratio":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
-        BLUS30758: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "vStar925"
     Notes: *RDR_AR_Notes
     Configurable Values: *RDR_AR_Configurable_Values
@@ -2568,48 +2573,35 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ bef32, 0x00095f18, "Aspect Ratio" ]
       - [ bef32, 0x00475234, "Aspect Ratio" ]
   "Unlock FPS":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
-        BLUS30758: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "Whatcookie, illusion"
     Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0025f98c, 0x386003e8 ]
   "Skip Intro":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
-        BLUS30758: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00458300, 0x480001a0 ]
   "Disable Motion Blur":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
-        BLUS30758: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004cc078, 0x38600000 ]
   "Infinite Ammo":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001e533c, 0x60000000 ]
   "Infinite Health":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
@@ -2619,9 +2611,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x00059974, 0x907c0014 ]
       - [ be32, 0x00059978, 0x4800004c ]
   "Infinite Dead Eye":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
@@ -2629,9 +2619,7 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
       - [ be32, 0x0005a284, 0xc0260394 ]
       - [ be32, 0x0005a288, 0xd0260390 ]
   "Infinite Horse Stamina":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.00 ]
+    Games: *rdr_goty100title
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
@@ -2641,30 +2629,21 @@ PPU-cb1117efb6af95a8ea5bdcc64b9704ea28c07399:
 
 PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
   "Unlock FPS":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.01 ]
-        BLUS30758: [ 01.01 ]
+    Games: *rdr_goty101title
     Author: "Whatcookie, illusion"
     Notes: *RDR_FPS_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00260b3c, 0x386003e8 ]
   "Disable Motion Blur":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.01 ]
-        BLUS30758: [ 01.01 ]
+    Games: *rdr_goty101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004a7ed8, 0x38600000 ]
   "Skip Intro":
-    Games:
-      "Red Dead Redemption GOTY Edition":
-        BLES01294: [ 01.01 ]
-        BLUS30758: [ 01.01 ]
+    Games: *rdr_goty101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -2673,30 +2652,21 @@ PPU-950f2a3e4ca3a76fbee60386f7e489fb39bb6710:
 
 PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
   "Infinite Ammo":
-    Games:
-      "Red Dead Redemption":
-        BLUS30418: [ 01.00 ]
-        BLES00680: [ 01.00 ]
+    Games: *rdr_disc100title
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001dbb98, 0x60000000 ]
   "Infinite Horse Energy":
-    Games:
-      "Red Dead Redemption":
-        BLUS30418: [ 01.00 ]
-        BLES00680: [ 01.00 ]
+    Games: *rdr_disc100title
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00930e48, 0x60000000 ]
   "Skip Intro":
-    Games:
-      "Red Dead Redemption":
-        BLUS30418: [ 01.00 ]
-        BLES00680: [ 01.00 ]
+    Games: *rdr_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
