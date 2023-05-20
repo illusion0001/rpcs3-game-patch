@@ -9389,24 +9389,27 @@ PPU-ec7c75bef42758b1823ce0b2835935992ae72e8f:
     Patch:
       - [ bef32, 0x00cd01ac, 0.00833334 ]
 
+Anchors:
+  kz1_60fps_notes: &kz1_60fps_notes
+    "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
+
+  kz1_EU100title: &kz1_EU100title
+    "Killzone":
+      BCES01743: [ 01.00 ]
+      NPEA00418: [ 01.00 ]
+
 PPU-70ad975e7fbb5bb57bb2159a16ec895cbccd3b4e:
   "Extended FOV":
-    Games:
-      "Killzone":
-        NPEA00418: [ 01.00 ]
-        BCES01743: [ 01.00 ]
+    Games: *kz1_EU100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x005e7f6c, 0.65 ] # static float in memory
   "60 FPS":
-    Games:
-      "Killzone":
-        NPEA00418: [ 01.00 ]
-        BCES01743: [ 01.00 ]
+    Games: *kz1_EU100title
     Author: "ZEROx, illusion"
-    Notes: "Version 2.0 no longer requires 200% clock scale, reset to default before using this updated patch."
+    Notes: *kz1_60fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x002125a4, 0x3ca03f00 ] # same method as asasega patch
@@ -9428,7 +9431,7 @@ PPU-0bb16b9f48bfea44a892110beec812664e84539f:
       "Killzone":
         NPUA80856: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes: "Version 2.0 no longer requires 200% clock scale. Reset to default before using this updated patch."
+    Notes: *kz1_60fps_notes
     Patch Version: 2.0
     Patch:
       - [ be32, 0x002125f4, 0x3ca03f00 ] # same method as asasega patch
@@ -9538,32 +9541,33 @@ Anchors:
   kz3_infammo_notes: &kz3_infammo_notes
     "Infinite ammo and grenades."
 
+  kz3_disc100title: &kz3_disc100title
+    "Killzone 3":
+      BCES01007: [ 01.00 ]
+      BCUS98234: [ 01.00 ]
+
+  kz3_disc114title: &kz3_disc114title
+    "Killzone 3":
+      BCES01007: [ 01.14 ]
+      BCUS98234: [ 01.14 ]
+
 PPU-ae204e2198c9a051a44a69913c48f6591b811082:
   "Extended FOV":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.00 ]
-        BCUS98234: [ 01.00 ]
+    Games: *kz3_disc100title
     Author: "illusion"
     Notes: *kz3_fov_notes
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x01327e54, 0.85 ] # static float in memory
   "Disable MLAA(Post-processing On SPU)": # Gfx.Post.MLAA PostMLAASPU
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.00 ]
-        BCUS98234: [ 01.00 ]
+    Games: *kz3_disc100title
     Author: "illusion"
     Notes: *kz3_mlaa_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001be008, 0x38a00000 ] # li r5 0x0
   "Infinite Ammo":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.00 ]
-        BCUS98234: [ 01.00 ]
+    Games: *kz3_disc100title
     Author: "Aphelion"
     Notes: *kz3_infammo_notes
     Patch Version: 1.0
@@ -9571,10 +9575,7 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
       - [ be32, 0x0073d598, 0x60000000 ]
       - [ be32, 0x006b0110, 0x60000000 ]
   "Debug Menu":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.00 ]
-        BCUS98234: [ 01.00 ]
+    Games: *kz3_disc100title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
@@ -9584,10 +9585,7 @@ PPU-ae204e2198c9a051a44a69913c48f6591b811082:
 
 PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
   "Extended FOV":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.14 ]
-        BCUS98234: [ 01.14 ]
+    Games: *kz3_disc114title
     Author: "illusion"
     Notes: *kz3_fov_notes
     Patch Version: 1.0
@@ -9595,10 +9593,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ bef32, 0x0139bdf0, 0.85 ] # static float in memory // viewmodel
       - [ bef32, 0x0139beec, 0.85 ] # static float in memory // camera
   "Disable MLAA (Post-processing on SPU)": # Gfx.Post.MLAA PostMLAASPU
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.14 ]
-        BCUS98234: [ 01.14 ]
+    Games: *kz3_disc114title
     Author: "illusion"
     Notes: *kz3_mlaa_notes
     Patch Version: 1.0
@@ -9606,10 +9601,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ be32, 0x001c95a8, 0x38a00000 ] # li r5 0x0
       - [ be16, 0x00202128, 0x4800 ]
   "Infinite Ammo":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.14 ]
-        BCUS98234: [ 01.14 ]
+    Games: *kz3_disc114title
     Author: "Aphelion"
     Notes: *kz3_infammo_notes
     Patch Version: 1.0
@@ -9617,10 +9609,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ be32, 0x00753018, 0x60000000 ]
       - [ be32, 0x006c5250, 0x60000000 ]
   "Skip Intro":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.14 ]
-        BCUS98234: [ 01.14 ]
+    Games: *kz3_disc114title
     Author: "illusion, ZEROx"
     Notes:
     Patch Version: 1.0
@@ -9642,10 +9631,7 @@ PPU-4836b8e74c47919f50b030ee6b47d96bc7305387:
       - [ be32, 0x00fb1288, 0x38a00000 ]
       - [ be32, 0x00fb128c, 0x4e800020 ]
   "Debug Menu":
-    Games:
-      "Killzone 3":
-        BCES01007: [ 01.14 ]
-        BCUS98234: [ 01.14 ]
+    Games: *kz3_disc114title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
