@@ -5334,6 +5334,7 @@ Anchors:
       BCES00727: [ 01.00 ]
       BCES00757: [ 01.00 ]
       BCJS30035: [ 01.00 ]
+      BCAS20097: [ 01.00 ]
 
   uc2_disc109title: &uc2_disc109title
     "Uncharted 2: Among Thieves":
@@ -5342,6 +5343,7 @@ Anchors:
       BCES00757: [ 01.09 ]
       BCUS98123: [ 01.09 ]
       BCJS30035: [ 01.09 ]
+      BCAS20097: [ 01.09 ]
 
   uc2_PSN110title: &uc2_PSN110title
     "Uncharted 2: Among Thieves":
