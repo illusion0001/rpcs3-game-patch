@@ -453,29 +453,39 @@ Anchors:
   FreeCam_Notes: &FreeCam_Notes
     "Activate and cycle through modes with X + L3. Advance frames in time stop mode with Cross. L2/R2 to move down/up, L1/R1 to slow down/speed up movement."
 
+  des_US100title: &des_US100title
+    "Demon's Souls":
+      BLUS30443: [ 01.00 ]
+
+  des_EU100title: &des_EU100title
+    "Demon's Souls":
+      BLES00932: [ 01.00 ]
+
+  des_AS104title: &des_AS104title
+    "Demon's Souls":
+      BCAS20071: [ 01.04 ]
+
+  des_USDemo101title: &des_USDemo101title
+    "Demon's Souls Trade Demo":
+      BLUD80018: [ 01.01 ]
+
 PPU-83681f6110d33442329073b72b8dc88a2f677172:
   "Unlock FPS":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "Whatcookie, Gibbed"
     Notes: *DeS_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *BLUS30443_FpsUnlock ]
   "Disable Dynamic Exposure":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
     Patch Version: 1.1
     Patch:
       - [ be16, 0x00025edc, 0x981f ]
   "Skip Intro Videos":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "GalCiv"
     Notes:
     Patch Version: 1.0
@@ -483,9 +493,7 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
       - [ be32, 0x008eef78, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008eef7c, 0x901c0100 ]
   "Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
     Configurable Values: *DeS_AR_Configurable_Values
@@ -494,18 +502,14 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
       - [ bef32, 0x018cefbc, "Aspect Ratio" ]
       - [ bef32, 0x0190433c, "Aspect Ratio" ]
   "Disable Motion Blur":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00217e7c, 0x41 ]
   "Enable FreeCam":
-    Games:
-      "Demon's Souls":
-        BLUS30443: [ 01.00 ]
+    Games: *des_US100title
     Author: "horkrux"
     Notes: *FreeCam_Notes
     Patch Version: 1.0
@@ -514,27 +518,21 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
 
 PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
   "Unlock FPS":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "Whatcookie, Gibbed"
     Notes: *DeS_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *BLES00932_FpsUnlock ]
   "Disable Dynamic Exposure":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
     Patch Version: 1.1
     Patch:
       - [ be16, 0x00026ac4, 0x981f ]
   "Skip Intro Videos":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "GalCiv"
     Notes:
     Patch Version: 1.0
@@ -542,9 +540,7 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
       - [ be32, 0x008f0928, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008f092c, 0x901c0100 ]
   "Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
     Configurable Values: *DeS_AR_Configurable_Values
@@ -553,18 +549,14 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
       - [ bef32, 0x018cf13c, "Aspect Ratio" ]
       - [ bef32, 0x01904494, "Aspect Ratio" ]
   "Disable Motion Blur":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00218d04, 0x41 ]
   "Enable FreeCam":
-    Games:
-      "Demon's Souls":
-        BLES00932: [ 01.00 ]
+    Games: *des_EU100title
     Author: "horkrux"
     Notes: *FreeCam_Notes
     Patch Version: 1.0
@@ -573,27 +565,21 @@ PPU-5446a2645880eefa75f7e374abd6b7818511e2ef:
 
 PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
   "Unlock FPS":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "Whatcookie, Gibbed, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *BCAS20071_FpsUnlock ]
   "Disable Dynamic Exposure":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_DDE_Notes
     Patch Version: 1.1
     Patch:
       - [ be16, 0x0002414c, 0x981f ]
   "Skip Intro Videos":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "GalCiv, KokutouKiritsugu port to BCAS20071"
     Notes:
     Patch Version: 1.0
@@ -601,9 +587,7 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
       - [ be32, 0x008efecc, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008efed0, 0x901c0100 ]
   "Aspect Ratio":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "Whatcookie, KokutouKiritsugu port to BCAS20071"
     Notes: *DeS_AR_Notes
     Configurable Values: *DeS_AR_Configurable_Values
@@ -612,18 +596,14 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
       - [ bef32, 0x018cee14, "Aspect Ratio" ]
       - [ bef32, 0x0190430c, "Aspect Ratio" ]
   "Disable Motion Blur":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "illusion, KokutouKiritsugu port to BCAS20071"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00215f54, 0x41 ]
   "Enable FreeCam":
-    Games:
-      "Demon's Souls":
-        BCAS20071: [ 01.04 ]
+    Games: *des_AS104title
     Author: "horkrux"
     Notes: *FreeCam_Notes
     Patch Version: 1.0
@@ -632,27 +612,21 @@ PPU-9403fe1678487def5d7f3c380b4c4fb275035378:
 
 PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
   "Unlock FPS":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "Whatcookie, Gibbed"
     Notes: *DeS_FPS_Notes
     Patch Version: 2.1
     Patch:
       - [ load, *BLUS30443_FpsUnlock ]
   "Disable Dynamic Exposure":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "Whatcookie"
     Notes: *DeS_DDE_Notes
     Patch Version: 1.1
     Patch:
       - [ be16, 0x00025edc, 0x981f ]
   "Skip Intro Videos":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "GalCiv"
     Notes:
     Patch Version: 1.0
@@ -660,9 +634,7 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
       - [ be32, 0x008eef78, 0x38000003 ] # Intro logos skip
       - [ be32, 0x008eef7c, 0x901c0100 ]
   "Aspect Ratio":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "Whatcookie"
     Notes: *DeS_AR_Notes
     Configurable Values: *DeS_AR_Configurable_Values
@@ -671,18 +643,14 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
       - [ bef32, 0x018cefbc, "Aspect Ratio" ]
       - [ bef32, 0x0190433c, "Aspect Ratio" ]
   "Disable Motion Blur":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00217e7c, 0x41 ]
   "Enable FreeCam":
-    Games:
-      "Demon's Souls Trade Demo":
-        BLUD80018: [ 01.01 ]
+    Games: *des_USDemo101title
     Author: "horkrux"
     Notes: *FreeCam_Notes
     Patch Version: 1.0
