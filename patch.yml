@@ -7097,31 +7097,30 @@ PPU-faf46906b362bc8d484de5b91f593bef2e5e0110:
     Patch:
       - [ be32, 0x000f6364, 0x60000000 ]
 
+Anchors:
+  lbp_130title: &lbp_130title
+    "LittleBigPlanet":
+      BCES00141: [ 01.30 ]
+      BCES00611: [ 01.30 ]
+      BCUS98148: [ 01.30 ]
+      BCUS98208: [ 01.30 ]
+      BCJS30018: [ 01.30 ]
+      BCAS20058: [ 01.30 ]
+      BCAS20078: [ 01.30 ]
+      NPEA00241: [ 01.30 ]
+      NPUA80472: [ 01.30 ]
+      NPJA00052: [ 01.30 ]
+
 PPU-545c1abbf1c562d60fca7435401f020beab76b53:
   "Create Mode":
-    Games:
-      "LittleBigPlanet":
-        NPUA80472: [ 01.30 ]
-        BCUS98208: [ 01.30 ]
-        BCES00611: [ 01.30 ]
+    Games: *lbp_130title
     Author: "Zhaxxy, Aphelion"
     Notes: "Enables create mode permanently in all levels until deactivated."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0001877c, 0x38e00001 ]
   "Beacon Custom Server":
-    Games:
-      "LittleBigPlanet":
-        NPUA80472: [ 01.30 ]
-        NPEA00241: [ 01.30 ]
-        NPJA00052: [ 01.30 ]
-        BCUS98148: [ 01.30 ]
-        BCUS98208: [ 01.30 ]
-        BCES00141: [ 01.30 ]
-        BCES00611: [ 01.30 ]
-        BCAS20058: [ 01.30 ]
-        BCAS20078: [ 01.30 ]
-        BCJS30018: [ 01.30 ]
+    Games: *lbp_130title
     Author: "uh wot"
     Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
     Patch Version: 1.0
@@ -7130,18 +7129,7 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
       - [ utf8, 0x00767cf8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
       - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
   "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet":
-        NPUA80472: [ 01.30 ]
-        NPEA00241: [ 01.30 ]
-        NPJA00052: [ 01.30 ]
-        BCUS98148: [ 01.30 ]
-        BCUS98208: [ 01.30 ]
-        BCES00141: [ 01.30 ]
-        BCES00611: [ 01.30 ]
-        BCAS20058: [ 01.30 ]
-        BCAS20078: [ 01.30 ]
-        BCJS30018: [ 01.30 ]
+    Games: *lbp_130title
     Author: "Toyo"
     Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
     Patch Version: 1.0
