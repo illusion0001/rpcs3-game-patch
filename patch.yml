@@ -14316,13 +14316,21 @@ PPU-98cd3afcfa5471523c8840f583c60017696fb998:
     Patch:
       - [ be32, 0x00915b6c, 0x60000000 ]
 
+Anchors:
+  inFam1_PSNalltitle: &Infam1_PSNalltitle
+    "inFamous":
+      NPUA80480: [ All ]
+      NPEA00252: [ All ]
+      NPHA80103: [ All ]
+
+  inFam1_EUdiscalltitle: &Infam1_EUdiscalltitle
+    "inFamous":
+      BCES00591: [ All ]
+      BCES00609: [ All ]
+
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "All powers unlocked":
-    Games:
-      "inFamous":
-        NPUA80480: [ All ]
-        NPEA00252: [ All ]
-        NPHA80103: [ All ]
+    Games: *Infam1_PSNalltitle
     Author: "Scirvir"
     Notes:
     Patch Version: 1.0
@@ -14332,10 +14340,7 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
-    Games:
-      "inFamous":
-        BCES00591: [ All ]
-        BCES00609: [ All ]
+    Games: *Infam1_EUdiscalltitle
     Author: "Scirvir"
     Notes:
     Patch Version: 1.0
