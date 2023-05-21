@@ -1882,6 +1882,17 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x4c6bb8, 0x60000000 ]
+  "Souls Never Decrease":
+    Games:
+      "Dark Souls II":
+        BLET50006: [ All ]
+    Author: "FlexBy"
+    Notes: "Doesn't affect lost after death\nNeeds testing for other merchants"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x32d7dc, 0x60000000 ] # hag melentia on buy
+      - [ be32, 0x656f94, 0x60000000 ] # level up
+      - [ be32, 0x446084, 0x60000000 ] # darksign
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
