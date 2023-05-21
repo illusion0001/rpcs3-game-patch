@@ -1862,6 +1862,15 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
+  "Keep Souls After Death":
+    Games:
+      "Dark Souls II":
+        BLET50006: [ All ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x4c6bb8, 0x60000000 ]
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
