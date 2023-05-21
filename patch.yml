@@ -1852,6 +1852,17 @@ Anchors:
     - [ be32, 0x01998b14, 0x01a329c8 ]
     - [ be32, 0x01998b18, 0x01a32d20 ]
 
+PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
+  "Keep Souls After Death":
+    Games:
+      "Dark Souls II":
+        BLJM61113: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x6622b4, 0x60000000 ]
+
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Bypass Network Requirement":
     Games:
