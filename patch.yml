@@ -1376,56 +1376,56 @@ Anchors:
     - [ be32, 0x0011ae68, 0x38a00000 ] # li r5, 0
     - [ be32, 0x003ba270, 0x38a00000 ] # li r5, 0
 
+  asuraW_EUtitle: &asuraW_EUtitle
+    "Asura's Wrath":
+      BLES01227: [ All ]
+
+  asuraW_UStitle: &asuraW_UStitle
+    "Asura's Wrath":
+      BLUS30721: [ All ]
+
+  asuraW_JPtitle: &asuraW_JPtitle
+    "Asura's Wrath":
+      BLJM60409: [ All ]
+
 PPU-83096111daff850cc92b637aec1780c4079e1c58:
   "Unlock FPS":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "Whatcookie"
     Notes: *ASURA_FPS_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
   "Developer Menu":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "dron_3"
     Notes: *ASURA_DEV_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
   "Disable Ambient Occlusion":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_AO ]
   "Disable Bloom":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_BLOOM ]
   "Disable Depth of Field":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DoF ]
   "Disable Motion Blur":
-    Games:
-      "Asura's Wrath":
-        BLUS30721: [ All ]
+    Games: *asuraW_UStitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
@@ -1434,54 +1434,86 @@ PPU-83096111daff850cc92b637aec1780c4079e1c58:
 
 PPU-69f53b470d81ea961c1c2ff264ade6ab8077d2a1:
   "Unlock FPS":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
     Author: "Whatcookie, Mew21"
     Notes: *ASURA_FPS_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_FPS ]
   "Developer Menu":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
     Author: "dron_3"
     Notes: *ASURA_DEV_notes
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DEV ]
   "Disable Ambient Occlusion":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_AO ]
   "Disable Bloom":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_BLOOM ]
   "Disable Depth of Field":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *ASURA_DoF ]
   "Disable Motion Blur":
-    Games:
-      "Asura's Wrath":
-        BLES01227: [ All ]
+    Games: *asuraW_EUtitle
+    Author: "boma"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_MB ]
+
+PPU-6585c59c9d46eb1aaab617dce0406dc0004388fe:
+  "Unlock FPS":
+    Games: *asuraW_JPtitle
+    Author: "Whatcookie, Mew21"
+    Notes: *ASURA_FPS_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_FPS ]
+  "Developer Menu":
+    Games: *asuraW_JPtitle
+    Author: "dron_3"
+    Notes: *ASURA_DEV_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_DEV ]
+  "Disable Ambient Occlusion":
+    Games: *asuraW_JPtitle
+    Author: "boma"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_AO ]
+  "Disable Bloom":
+    Games: *asuraW_JPtitle
+    Author: "boma"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_BLOOM ]
+  "Disable Depth of Field":
+    Games: *asuraW_JPtitle
+    Author: "boma"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *ASURA_DoF ]
+  "Disable Motion Blur":
+    Games: *asuraW_JPtitle
     Author: "boma"
     Notes:
     Patch Version: 1.0
