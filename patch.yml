@@ -1887,7 +1887,7 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
       "Dark Souls II":
         BLET50006: [ All ]
     Author: "FlexBy"
-    Notes: "Doesn't affect lost after death\nNeeds testing for other merchants"
+    Notes: "Doesn't affect loss after death\nNeeds testing for other merchants"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x32d7dc, 0x60000000 ] # hag melentia on buy
