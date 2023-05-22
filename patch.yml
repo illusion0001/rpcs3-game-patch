@@ -14807,6 +14807,17 @@ PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
       - [ be32, 0x011178d0, 0x3c888889 ]
       - [ be32, 0x011178d4, 0x3c888889 ]
 
+PPU-3f8da13ffc1c9c8a99b71af47ebb3f830c45693d:
+  "Developer menu":
+    Games:
+      "Syndicate":
+        BLUS30804: [ 01.00 ]
+    Author: "dron_3"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005f6f74, 0x38600001 ]
+
 Anchors:
   skyrim_titleid: &skyrim_titleid
     "The Elder Scrolls V: Skyrim":
