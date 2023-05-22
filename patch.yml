@@ -1778,6 +1778,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
     Games:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
+        BLUS31201: [ 01.00 ]
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
@@ -1795,6 +1796,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
     Games:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
+        BLUS31201: [ 01.00 ]
     Author: "ZEROx"
     Notes: "Fixes square artifacts on particles."
     Patch Version: 1.0
@@ -1804,6 +1806,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
     Games:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
+        BLUS31201: [ 01.00 ]
     Author: "ZEROx"
     Notes: "Disable overall blur effect, small speed improvement."
     Patch Version: 1.0
@@ -1822,6 +1825,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
     Games:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
+        BLUS31201: [ 01.00 ]
     Author: "ZEROx"
     Notes: "Fixes half-screen bugs. Great speed improvement."
     Patch Version: 1.0
@@ -9282,6 +9286,16 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
+PPU-41a7d047c573c78c0307506c9d1b52d15a66e4f5:
+  "Extended FOV":
+    Games:
+      "Infamous 2":
+        BCUS98125: [ All ]
+    Author: "illusion"
+    Patch Version: 1.2
+    Notes:
+    Patch:
+      - [ bef32, 0x96DE14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 Anchors:
   haze_fps_notes: &haze_fps_notes
