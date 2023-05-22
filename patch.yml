@@ -1888,11 +1888,26 @@ Anchors:
     - [ be32, 0x01998b14, 0x01a329c8 ]
     - [ be32, 0x01998b18, 0x01a32d20 ]
 
+  DS2_JP100title: &DS2_JP100title
+    "Dark Souls II":
+      BLJM61113: [ 01.00 ]
+      NPJB00555: [ 01.00 ]
+
+  DS2beta_EUtitle: &DS2beta_EUtitle
+    "Dark Souls II Network Test":
+      BLET50006: [ All ]
+
+  DS2beta_UStitle: &DS2beta_UStitle
+    "Dark Souls II Network Test":
+      NPUB90979: [ All ]
+
+  DS2beta_JPtitle: &DS2beta_JPtitle
+    "Dark Souls II Network Test":
+      NPJB90625: [ All ]
+
 PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Keep Souls After Death":
-    Games:
-      "Dark Souls II":
-        BLJM61113: [ 01.00 ]
+    Games: *DS2_JP100title
     Author: "FlexBy"
     Notes: 
     Patch Version: 1.0
@@ -1901,27 +1916,21 @@ PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
 
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Bypass Network Requirement":
-    Games:
-      "Dark Souls II":
-        BLET50006: [ All ]
+    Games: *DS2beta_EUtitle
     Author: "DriftItem"
     Notes: *DS2_Net_Notes
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
   "Keep Souls After Death":
-    Games:
-      "Dark Souls II":
-        BLET50006: [ All ]
+    Games: *DS2beta_EUtitle
     Author: "FlexBy"
     Notes: 
     Patch Version: 1.0
     Patch:
       - [ be32, 0x4c6bb8, 0x60000000 ]
   "Souls Never Decrease":
-    Games:
-      "Dark Souls II":
-        BLET50006: [ All ]
+    Games: *DS2beta_EUtitle
     Author: "FlexBy"
     Notes: "Doesn't affect loss after death\nNeeds testing for other merchants"
     Patch Version: 1.0
@@ -1932,9 +1941,7 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
-    Games:
-      "Dark Souls II":
-        NPUB90979: [ All ]
+    Games: *DS2beta_UStitle
     Author: "DriftItem"
     Notes: *DS2_Net_Notes
     Patch Version: 1.0
@@ -1943,9 +1950,7 @@ PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
 
 PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
   "Bypass Network Requirement":
-    Games:
-      "Dark Souls II":
-        NPJB90625: [ All ]
+    Games: *DS2beta_JPtitle
     Author: "DriftItem"
     Notes: *DS2_Net_Notes
     Patch Version: 1.0
