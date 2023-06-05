@@ -13046,12 +13046,22 @@ Anchors:
   armyoftwotdc_speedup_notes: &armyoftwotdc_speedup_notes
     "Compromises visuals for extra performance."
 
+  armyoftwotdc_101title: &armyoftwotdc_101title
+    "Army of TWO The Devil's Cartel":
+      BLES01763: [ 01.01 ]
+      BLUS31069: [ 01.01 ]
+      NPEB01216: [ 01.01 ]
+      NPEB01217: [ 01.01 ]
+      NPUB30987: [ 01.01 ]
+
+  armyoftwotdc_demotitle: &armyoftwotdc_demotitle
+    "Army of TWO The Devil's Cartel Demo":
+      NPEB90470: [ 01.00 ]
+      NPUB90862: [ 01.00 ]
+
 PPU-17a273d69dad20980377e405809f7d888b6c6dce:
   "Disable MLAA":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -13059,10 +13069,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
       - [ be32, 0x00512f94, 0x38600000 ] # Ps3EdgeMlaaEnable
       - [ be32, 0x016de8f0, 0x98bf0186 ] # prevent crashing if 83 is disabled first, swapped store byte.
   "Disable Bloom":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -13070,10 +13077,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
       - [ be32, 0x016de8f0, 0x98bf0186 ] # duplicate from mlaa patch in case of using without mlaa patch
       - [ be32, 0x016de8fc, 0x98bf0183 ] # bloom/bubble blur, this won't crash anymore. requires 86 to be loaded with 0!
   "Speedup":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "ZEROx, illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
@@ -13081,30 +13085,21 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
       - [ be16, 0x01732b48, 0x991f ]
       - [ be16, 0x01732b54, 0x991f ]
   "Blocky depth fix":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732a60, 0x991f ]
   "Disable Dynamic Lights":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b58, 0x991f ]
   "Disable Dynamic Spotlights":
-    Games:
-      "Army of TWO The Devil's Cartel Demo":
-        NPEB90470: [ 01.00 ]
-        NPUB90862: [ 01.00 ]
+    Games: *armyoftwotdc_demotitle
     Author: "illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
@@ -13113,12 +13108,7 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
 
 PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
   "Disable MLAA":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -13126,24 +13116,14 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
       - [ be32, 0x004e51a4, 0x38600000 ] # Ps3EdgeMlaaEnable
       - [ be32, 0x01701bf0, 0x98bf0186 ] # prevent crashing if 83 is disabled first, swapped store byte.
   "Disable Bloom":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x01701bfc, 0x98bf0183 ] # bloom/bubble blur, this won't crash anymore. requires 86 to be loaded with 0!
   "Speedup":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "ZEROx, illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
@@ -13151,36 +13131,21 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
       - [ be16, 0x01755bc8, 0x991f ]
       - [ be16, 0x01755bd4, 0x991f ]
   "Blocky depth fix":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755ae0, 0x991f ]
   "Disable Dynamic Lights":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755bd8, 0x991f ]
   "Disable Dynamic Spotlights":
-    Games:
-      "Army of TWO The Devil's Cartel":
-        NPEB01217: [ 01.01 ]
-        NPUB30987: [ 01.01 ]
-        BLES01763: [ 01.01 ]
-        BLUS31069: [ 01.01 ]
+    Games: *armyoftwotdc_101title
     Author: "illusion"
     Notes: *armyoftwotdc_speedup_notes
     Patch Version: 1.0
