@@ -3385,17 +3385,29 @@ Anchors:
   gowa_mlaa_notes: &gowa_mlaa_notes
     "Allows for the use of Resolution Scaling in this title.\nSet Resolution Scale Threshold to 1x1 for proper scaling of effects."
 
+  gowa_104_title: &gowa_104_title
+    "God of War: Ascension":
+      BCES01741: [ 01.04 ]
+      BCES01742: [ 01.04 ]
+      BCUS98232: [ 01.04 ]
+      BCAS25016: [ 01.04 ]
+      NPEA00445: [ 01.04 ]
+      NPUA80918: [ 01.04 ]
+      NPHA80258: [ 01.04 ]
+
+  gowa_112_title: &gowa_112_title
+    "God of War: Ascension":
+      BCES01741: [ 01.04 ]
+      BCES01742: [ 01.04 ]
+      BCUS98232: [ 01.04 ]
+      BCAS25016: [ 01.04 ]
+      NPEA00445: [ 01.04 ]
+      NPUA80918: [ 01.04 ]
+      NPHA80258: [ 01.04 ]
+
 PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
   "Disable MLAA":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.04 ]
-        BCES01742: [ 01.04 ]
-        BCUS98232: [ 01.04 ]
-        BCAS25016: [ 01.04 ]
-        NPEA00445: [ 01.04 ]
-        NPUA80918: [ 01.04 ]
-        NPHA80258: [ 01.04 ]
+    Games: *gowa_104_title
     Author: "illusion, ZEROx"
     Notes: *gowa_mlaa_notes
     Patch Version: 1.0
@@ -3404,45 +3416,21 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
       - [ be32, 0x00390724, 0x60000000 ]
       - [ be32, 0x00390754, 0x60000000 ]
   "Disable Depth of Field":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.04 ]
-        BCES01742: [ 01.04 ]
-        BCUS98232: [ 01.04 ]
-        BCAS25016: [ 01.04 ]
-        NPEA00445: [ 01.04 ]
-        NPUA80918: [ 01.04 ]
-        NPHA80258: [ 01.04 ]
+    Games: *gowa_104_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004342bc, 0x38a00000 ]
   "Disable Motion Blur":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.04 ]
-        BCES01742: [ 01.04 ]
-        BCUS98232: [ 01.04 ]
-        NPEA00445: [ 01.04 ]
-        NPUA80918: [ 01.04 ]
-        NPHA80258: [ 01.04 ]
-        BCAS25016: [ 01.04 ]
+    Games: *gowa_104_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00437810, 0x38a00000 ]
   "Skip intro":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.04 ]
-        BCES01742: [ 01.04 ]
-        BCUS98232: [ 01.04 ]
-        BCAS25016: [ 01.04 ]
-        NPEA00445: [ 01.04 ]
-        NPUA80918: [ 01.04 ]
-        NPHA80258: [ 01.04 ]
+    Games: *gowa_104_title
     Author: "Illusion, ZEROx"
     Notes: "Skips SCE intros up to first video\n2.0 Skips intro video."
     Patch Version: 2.0
@@ -3460,15 +3448,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
       - [ be32, 0x00412014, 0x38600040 ] # X button
       - [ be32, 0x00412018, 0x4e800020 ] # Return
   "Unlock FPS":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.04 ]
-        BCES01742: [ 01.04 ]
-        BCUS98232: [ 01.04 ]
-        BCAS25016: [ 01.04 ]
-        NPEA00445: [ 01.04 ]
-        NPUA80918: [ 01.04 ]
-        NPHA80258: [ 01.04 ]
+    Games: *gowa_104_title
     Author: "ZEROx, illusion"
     Notes: "Unlocks internal timestep calculation. Increase vblank to match your desired framerate."
     Patch Version: 2.0
@@ -3484,15 +3464,7 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
 
 PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
   "Disable MLAA":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.12 ]
-        BCES01742: [ 01.12 ]
-        BCUS98232: [ 01.12 ]
-        BCAS25016: [ 01.12 ]
-        NPEA00445: [ 01.12 ]
-        NPUA80918: [ 01.12 ]
-        NPHA80258: [ 01.12 ]
+    Games: *gowa_112_title
     Author: "illusion, ZEROx"
     Notes: *gowa_mlaa_notes
     Patch Version: 1.0
@@ -3501,30 +3473,14 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
       - [ be32, 0x00397754, 0x60000000 ]
       - [ be32, 0x00397784, 0x60000000 ]
   "Disable Depth of Field":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.12 ]
-        BCES01742: [ 01.12 ]
-        BCUS98232: [ 01.12 ]
-        BCAS25016: [ 01.12 ]
-        NPEA00445: [ 01.12 ]
-        NPUA80918: [ 01.12 ]
-        NPHA80258: [ 01.12 ]
+    Games: *gowa_112_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0043bcbc, 0x38a00000 ]
   "Disable Motion Blur":
-    Games:
-      "God of War: Ascension":
-        BCES01741: [ 01.12 ]
-        BCES01742: [ 01.12 ]
-        BCUS98232: [ 01.12 ]
-        BCAS25016: [ 01.12 ]
-        NPEA00445: [ 01.12 ]
-        NPUA80918: [ 01.12 ]
-        NPHA80258: [ 01.12 ]
+    Games: *gowa_112_title
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
