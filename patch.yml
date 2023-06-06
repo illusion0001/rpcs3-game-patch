@@ -3397,13 +3397,13 @@ Anchors:
 
   gowa_112_title: &gowa_112_title
     "God of War: Ascension":
-      BCES01741: [ 01.04 ]
-      BCES01742: [ 01.04 ]
-      BCUS98232: [ 01.04 ]
-      BCAS25016: [ 01.04 ]
-      NPEA00445: [ 01.04 ]
-      NPUA80918: [ 01.04 ]
-      NPHA80258: [ 01.04 ]
+      BCES01741: [ 01.12 ]
+      BCES01742: [ 01.12 ]
+      BCUS98232: [ 01.12 ]
+      BCAS25016: [ 01.12 ]
+      NPEA00445: [ 01.12 ]
+      NPUA80918: [ 01.12 ]
+      NPHA80258: [ 01.12 ]
 
 PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
   "Disable MLAA":
@@ -15010,7 +15010,7 @@ PPU-9a6d7c2cba6d2966f2f0425ff6851588e86c15a9:
   "Disable MLAA":
     Games:
       "Tokyo Jungle":
-        NPUA80523: [ 01.01 ]
+        NPEA00275: [ 01.01 ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
