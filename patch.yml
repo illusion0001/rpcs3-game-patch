@@ -14451,44 +14451,34 @@ PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
     Patch:
       - [ be32, 0x006beb38, 0x7ce6292d ]
 
+Anchors:
+
+  moond_100_title: &moond_100_title
+    "Moon Diver":
+      NPEB00375: [ 01.00 ]
+      NPUB30345: [ 01.00 ]
+      NPJB00100: [ 01.00 ]
+      NPEB90290: [ 01.00 ]
+      NPUB90511: [ 01.00 ]
+      NPJB90309: [ 01.00 ]
+
 PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
   "Unlock All Chapters":
-    Games:
-      "Moon Diver":
-        NPEB00375: [ 01.00 ]
-        NPUB30345: [ 01.00 ]
-        NPJB00100: [ 01.00 ]
-        NPEB90290: [ 01.00 ]
-        NPUB90511: [ 01.00 ]
-        NPJB90309: [ 01.00 ]
+    Games: *moond_100_title
     Author: "GuitarMan"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00043e24, 0x7c831b78 ]
   "Unlock All Characters":
-    Games:
-      "Moon Diver":
-        NPEB00375: [ 01.00 ]
-        NPUB30345: [ 01.00 ]
-        NPJB00100: [ 01.00 ]
-        NPEB90290: [ 01.00 ]
-        NPUB90511: [ 01.00 ]
-        NPJB90309: [ 01.00 ]
+    Games: *moond_100_title
     Author: "GuitarMan"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000a2968, 0x30630000 ]
   "Unlock All Skills":
-    Games:
-      "Moon Diver":
-        NPEB00375: [ 01.00 ]
-        NPUB30345: [ 01.00 ]
-        NPJB00100: [ 01.00 ]
-        NPEB90290: [ 01.00 ]
-        NPUB90511: [ 01.00 ]
-        NPJB90309: [ 01.00 ]
+    Games: *moond_100_title
     Author: "GuitarMan"
     Notes:
     Patch Version: 1.0
