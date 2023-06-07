@@ -13306,14 +13306,17 @@ PPU-3760b7d673fc130e13295fa5071164537880adad:
       - [ be32, 0x006a3fd0, 0xec3f07f2 ]
       - [ be32, 0x006a3fd4, 0xec210072 ]
 
+Anchors:
+  border2v115_title: &border2v115_title
+    "Borderlands 2":
+      BLUS30982: [ 01.15 ]
+      BLES01684: [ 01.15 ]
+      NPEB01144: [ 01.15 ]
+      NPUB30898: [ 01.15 ]
+
 PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
   "God Mode":
-    Games:
-      "Borderlands 2":
-        BLUS30982: [ 01.15 ]
-        BLES01684: [ 01.15 ]
-        NPEB01144: [ 01.15 ]
-        NPUB30898: [ 01.15 ]
+    Games: *border2v115_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
@@ -13321,24 +13324,14 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
       - [ be32, 0x001afa04, 0x79200fa4 ]
       - [ be32, 0x001afa0c, 0x7800f846 ]
   "Infinite Ammo":
-    Games:
-      "Borderlands 2":
-        BLUS30982: [ 01.15 ]
-        BLES01684: [ 01.15 ]
-        NPEB01144: [ 01.15 ]
-        NPUB30898: [ 01.15 ]
+    Games: *border2v115_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007d3a18, 0x60000000 ]
   "Max Cash":
-    Games:
-      "Borderlands 2":
-        BLUS30982: [ 01.15 ]
-        BLES01684: [ 01.15 ]
-        NPEB01144: [ 01.15 ]
-        NPUB30898: [ 01.15 ]
+    Games: *border2v115_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
@@ -13347,12 +13340,7 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
       - [ be32, 0x00678508, 0x3c600600 ]
       - [ be32, 0x0067850c, 0x906b0014 ]
   "Max Experience on Gain":
-    Games:
-      "Borderlands 2":
-        BLUS30982: [ 01.15 ]
-        BLES01684: [ 01.15 ]
-        NPEB01144: [ 01.15 ]
-        NPUB30898: [ 01.15 ]
+    Games: *border2v115_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
