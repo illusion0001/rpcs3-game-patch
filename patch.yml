@@ -13257,38 +13257,31 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Patch:
       - [ be32, 0x00702bcc, 0x60000000 ]
 
+Anchors:
+  border1v107_title: &border1v107_title
+    "Borderlands":
+      BLUS30386: [ 01.07 ]
+      BLES00697: [ 01.07 ]
+      NPEB00458: [ 01.07 ]
+      NPUB30413: [ 01.07 ]
+
 PPU-3760b7d673fc130e13295fa5071164537880adad:
   "Infinite Ammo":
-    Games:
-      "Borderlands":
-        BLUS30386: [ 01.07 ]
-        NPUB30413: [ 01.07 ]
-        BLES00697: [ 01.07 ]
-        NPEB00458: [ 01.07 ]
+    Games: *border1v107_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00630d60, 0x60000000 ]
   "Max Cash":
-    Games:
-      "Borderlands":
-        BLUS30386: [ 01.07 ]
-        NPUB30413: [ 01.07 ]
-        BLES00697: [ 01.07 ]
-        NPEB00458: [ 01.07 ]
+    Games: *border1v107_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005d5c28, 0x976302b8 ]
   "Demigod Mode":
-    Games:
-      "Borderlands":
-        BLUS30386: [ 01.07 ]
-        NPUB30413: [ 01.07 ]
-        BLES00697: [ 01.07 ]
-        NPEB00458: [ 01.07 ]
+    Games: *border1v107_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
@@ -13298,24 +13291,14 @@ PPU-3760b7d673fc130e13295fa5071164537880adad:
       - [ be32, 0x0064fc90, 0x64008000 ]
       - [ be32, 0x0064fc94, 0x90030905 ]
   "Max Experience on Gain":
-    Games:
-      "Borderlands":
-        BLUS30386: [ 01.07 ]
-        NPUB30413: [ 01.07 ]
-        BLES00697: [ 01.07 ]
-        NPEB00458: [ 01.07 ]
+    Games: *border1v107_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005f2220, 0x3c007000 ]
   "Max Weapon Damage":
-    Games:
-      "Borderlands":
-        BLUS30386: [ 01.07 ]
-        NPUB30413: [ 01.07 ]
-        BLES00697: [ 01.07 ]
-        NPEB00458: [ 01.07 ]
+    Games: *border1v107_title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
