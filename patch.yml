@@ -9371,7 +9371,7 @@ PPU-41a7d047c573c78c0307506c9d1b52d15a66e4f5:
     Patch Version: 1.2
     Notes:
     Patch:
-      - [ bef32, 0x96DE14, 0.65 ] # the floats are static but game settings will need "li" instead.
+      - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 Anchors:
   haze_fps_notes: &haze_fps_notes
