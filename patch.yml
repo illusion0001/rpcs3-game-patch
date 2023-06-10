@@ -1900,24 +1900,24 @@ PPU-efd8e00902c586ebf88f5c97dcbdfe27bdce3bcc:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x66128c, 0x60000000 ]
+      - [ be32, 0x0066128c, 0x60000000 ]
   "Souls Never Decrease":
     Games: *DS2_100title
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x85f388, 0x60000000 ] # level up
-      - [ be32, 0x85e600, 0x60000000 ] # darksign, merchants
+      - [ be32, 0x0085f388, 0x60000000 ] # level up
+      - [ be32, 0x0085e600, 0x60000000 ] # darksign, merchants
 
 PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Keep Souls After Death":
     Games: *DS2_JP100title
     Author: "FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x6622b4, 0x60000000 ]
+      - [ be32, 0x006622b4, 0x60000000 ]
 
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Bypass Network Requirement":
@@ -1930,19 +1930,19 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Keep Souls After Death":
     Games: *DS2beta_EUtitle
     Author: "FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x4c6bb8, 0x60000000 ]
+      - [ be32, 0x004c6bb8, 0x60000000 ]
   "Souls Never Decrease":
     Games: *DS2beta_EUtitle
     Author: "FlexBy"
-    Notes: "Doesn't affect loss after death\nNeeds testing for other merchants"
+    Notes: "Doesn't affect loss after death.\nNeeds testing for other merchants."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x32d7dc, 0x60000000 ] # hag melentia on buy
-      - [ be32, 0x656f94, 0x60000000 ] # level up
-      - [ be32, 0x446084, 0x60000000 ] # darksign
+      - [ be32, 0x0032d7dc, 0x60000000 ] # hag melentia on buy
+      - [ be32, 0x00656f94, 0x60000000 ] # level up
+      - [ be32, 0x00446084, 0x60000000 ] # darksign
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
