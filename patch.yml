@@ -13063,6 +13063,17 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01732b5c, 0x991f ]
+  "60 FPS":
+    Games: *armyoftwotdc_demotitle
+    Author: "ZEROx, illusion"
+    Notes: "Set VBlank to 120"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x016adafe, 0x4270 ]
+      - [ be32, 0x0013bf28, 0x3bc0003c ]
+      - [ be16, 0x01c54a50, 0x3f91 ] 
+      - [ be16, 0x01c54a58, 0x404e ]
+      - [ be16, 0x01c54a60, 0x3f91 ]
 
 PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
   "Disable MLAA":
@@ -13109,6 +13120,17 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x01755bdc, 0x991f ]
+  "60 FPS":
+    Games: *armyoftwotdc_101title
+    Author: "ZEROx, illusion"
+    Notes: "Set VBlank to 120"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x016e209e, 0x4270 ]
+      - [ be32, 0x00140c28, 0x3bc0003c ]
+      - [ be16, 0x01c854b8, 0x3f91 ]
+      - [ be16, 0x01c854c0, 0x404e ]
+      - [ be16, 0x01c854c8, 0x3f91 ]
 
 PPU-e8d5bbb306b85186133e090b79a5c0fd5d11ccfb: # siren cursed
   "60 FPS":
