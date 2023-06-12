@@ -8956,6 +8956,15 @@ Anchors:
     "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
   blackoutvenue_force_notes: &blackoutvenue_force_notes
     "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
+  DJ_Hero2FPS_Val: &DJ_Hero2FPS_Val
+    "Min timestep":
+      Type: double_enum
+      Value: &120_value 0.0083333333
+      Allowed Values:
+        "120": *120_value
+        "144": 0.0069444444
+        "165": 0.0060606061
+        "240": 0.0041666667
 
 PPU-1369b92d59b3727ea77257795263de460e621823:
   "Unlock Pitch Black Out Venue":
@@ -9024,6 +9033,32 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
     Patch:
       - [ be32, 0x007b37cc, 0x51756179 ]
       - [ be32, 0x007b37d0, 0x32360000 ]
+
+PPU-bccea158f89820de105a87541c9252052538a5fb:
+  "Timestep Modifier":
+    Games:
+      "DJ Hero 2":
+        BLES00896: [ 01.01 ]
+    Configurable Values: *DJ_Hero2FPS_Val
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ bef64, 0x00020030, "Min timestep" ]
+      # if update rate 30fps
+      - [ bef64, 0x00020038, "Min timestep" ]
+
+PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
+  "Timestep Modifier":
+    Games:
+      "DJ Hero 2":
+        BLUS30526: [ 01.01 ]
+    Configurable Values: *DJ_Hero2FPS_Val
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ bef64, 0x00020030, "Min timestep" ]
+      # if update rate 30fps
+      - [ bef64, 0x00020038, "Min timestep" ]
 
 Anchors:
   genji_dotb_60fps_notes: &genji_dotb_60fps_notes
