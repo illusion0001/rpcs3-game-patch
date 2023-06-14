@@ -6991,7 +6991,7 @@ Anchors:
     "Press Select+R1 to activate in main menu."
 
 PPU-6ac472e1f334f54ec4753cde9e8e1515bfab4d17:
-  "Disable Motion Blur":
+  "Develop Settings":
     Games:
       "Gran Turismo 6":
         BCUS98296: [ 01.22 ]
@@ -7002,7 +7002,7 @@ PPU-6ac472e1f334f54ec4753cde9e8e1515bfab4d17:
       - [ load, *gt6_devlop_122 ]
 
 PPU-638ef307e2b35d593f599efec0dc0c37059a984b:
-  "Disable Motion Blur":
+  "Develop Settings":
     Games:
       "Gran Turismo 6":
         BCES01893: [ 01.22 ]
@@ -7013,7 +7013,7 @@ PPU-638ef307e2b35d593f599efec0dc0c37059a984b:
       - [ load, *gt6_devlop_122 ]
 
 PPU-80f0d67b29d3d17ac885a309a3fc4cd8dcf50658:
-  "Disable Motion Blur":
+  "Develop Settings":
     Games:
       "Gran Turismo 6":
         NPEA00502: [ 01.22 ]
@@ -7024,7 +7024,7 @@ PPU-80f0d67b29d3d17ac885a309a3fc4cd8dcf50658:
       - [ load, *gt6_devlop_122 ]
 
 PPU-4213aba5ed17f7e3cd3f299fa44d9d9acef0ba18:
-  "Disable Motion Blur":
+  "Develop Settings":
     Games:
       "Gran Turismo 6":
         NPUA81049: [ 01.22 ]
@@ -7035,7 +7035,7 @@ PPU-4213aba5ed17f7e3cd3f299fa44d9d9acef0ba18:
       - [ load, *gt6_devlop_122 ]
 
 PPU-6a7de7fdfd7e7cbd1031bf28a7104b29c308136c:
-  "Disable Motion Blur":
+  "Develop Settings":
     Games:
       "Gran Turismo 6":
         NPHA80269: [ 01.22 ]
