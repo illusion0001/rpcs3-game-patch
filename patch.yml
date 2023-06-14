@@ -7034,6 +7034,17 @@ PPU-4213aba5ed17f7e3cd3f299fa44d9d9acef0ba18:
     Patch:
       - [ load, *gt6_devlop_122 ]
 
+PPU-6a7de7fdfd7e7cbd1031bf28a7104b29c308136c:
+  "Disable Motion Blur":
+    Games:
+      "Gran Turismo 6":
+        NPHA80269: [ 01.22 ]
+    Author: "Nenkai (OpenAdhoc), illusion"
+    Notes: *gt6_devlop_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *gt6_devlop_122 ]
+
 Anchors:
   gthd_ar_notes: &gthd_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings."
