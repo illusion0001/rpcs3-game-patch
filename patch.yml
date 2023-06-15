@@ -7810,7 +7810,6 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
     Games:
       "Tales of Xillia 2":
         BLES01962: [ All ]
-        NPEB01858: [ All ]
     Author: "NeXoGone"
     Notes: *tox2_ar_notes
     Group: AR
@@ -7820,7 +7819,6 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
   "32:9 Aspect Ratio":
     Games:
       "Tales of Xillia 2":
-        NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "NeXoGone"
     Notes: *tox2_ar_notes
@@ -7831,7 +7829,6 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
   "Field of View":
     Games:
       "Tales of Xillia 2":
-        NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "NeXoGone"
     Notes: *tox2_fov_notes
@@ -7843,7 +7840,6 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
     Games:
       "Tales of Xillia 2":
         BLES01962: [ All ]
-        NPEB01858: [ All ]
     Author: "NeXoGone"
     Notes:
     Patch Version: 1.0
@@ -7852,7 +7848,6 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
   "60 FPS":
     Games:
       "Tales of Xillia 2":
-        NPEB01858: [ All ]
         BLES01962: [ All ]
     Author: "Aphelion"
     Notes: *tox2_fps_notes
@@ -7863,6 +7858,64 @@ PPU-a7d11f549ba784d539148688ef512a6a1907e63e:
     Games:
       "Tales of Xillia 2":
         BLES01962: [ All ]
+    Author: "Aphelion"
+    Notes: *tox2_hp_notes
+    Patch Version: 1.1
+    Patch:
+      - [ load, *tox2_hp ]
+
+PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
+  "21:9 Aspect Ratio":
+    Games:
+      "Tales of Xillia 2":
+        NPEB01858: [ All ]
+    Author: "NeXoGone"
+    Notes: *tox2_ar_notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox2_eu_ar_21_9 ]
+  "32:9 Aspect Ratio":
+    Games:
+      "Tales of Xillia 2":
+        NPEB01858: [ All ]
+    Author: "NeXoGone"
+    Notes: *tox2_ar_notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox2_eu_ar_32_9 ]
+  "Field of View":
+    Games:
+      "Tales of Xillia 2":
+        NPEB01858: [ All ]
+    Author: "NeXoGone"
+    Notes: *tox2_fov_notes
+    Configurable Values: *tox2_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox2_eu_fov ]
+  "Full Brightness":
+    Games:
+      "Tales of Xillia 2":
+        NPEB01858: [ All ]
+    Author: "NeXoGone"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *tox2_eu_brightness ]
+  "60 FPS":
+    Games:
+      "Tales of Xillia 2":
+        NPEB01858: [ All ]
+    Author: "Aphelion"
+    Notes: *tox2_fps_notes
+    Patch Version: 1.1
+    Patch:
+      - [ load, *tox2_eu_fps ]
+  "Infinite Health":
+    Games:
+      "Tales of Xillia 2":
         NPEB01858: [ All ]
     Author: "Aphelion"
     Notes: *tox2_hp_notes
