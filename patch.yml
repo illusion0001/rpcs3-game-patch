@@ -14945,6 +14945,24 @@ PPU-ed6f26aa6f0b494a9af4f67261fc27b2343da9e1:
     Patch:
       - [ byte, 0x00023c37, 2 ]
 
+PPU-49aa433a899d78438decde97c4e1b79a473148a1:
+  "True 16:9":
+    Games:
+      "Sonic the Fighters":
+        NPUB30927: [ 01.00 ]
+    Author: "illusion, Margen67"
+    Notes: "\"Screen Size\" must be set to Full in the game settings. UI Elements will be stretched.\nPillar/letterboxed or stretched 4:3 is the normal aspect ratio without the patch."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002797bc, 0x4807fbc4 ] # b 0x002f9380
+      - [ be32, 0x002f9380, 0x3c0042d2 ] # lis r0,0x42d2
+      - [ be32, 0x002f9384, 0x60008000 ] # ori r0,r0,0x8000
+      - [ be32, 0x002f9388, 0x900300ec ] # stw r0,0xec(r3)
+      - [ be32, 0x002f938c, 0xd04300f0 ] # stfs f2,0xf0(r3)
+      - [ be32, 0x002f9390, 0x38000001 ] # li r0,0x1
+      - [ be32, 0x002f9394, 0x980300ac ] # stb r0,0xac(r3)
+      - [ be32, 0x002f9398, 0x4e800020 ] # blr
+
 PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
   "60 FPS":
     Games:
