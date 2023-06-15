@@ -15101,6 +15101,17 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
     Patch:
       - [ be32, 0x001d8e9c, 0xc0230004 ]
 
+PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
+  "Skip save warning on startup":
+    Games:
+      "The Orange Box":
+        BLES00153: [ 01.10 ]
+    Author: "Margen67"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0008fa30, 0x4e800020 ]
+
 PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
   "60 FPS":
     Games:
