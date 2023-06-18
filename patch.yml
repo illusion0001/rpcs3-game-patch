@@ -1938,6 +1938,22 @@ PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
     Patch Version: 1.0
     Patch:
       - [ load, *DS2_USEU_Net ]
+  "Keep Souls After Death":
+    Games: *DS2beta_UStitle
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004c6a98, 0x60000000 ]
+  "Souls Never Decrease":
+    Games: *DS2beta_UStitle
+    Author: "FlexBy"
+    Notes: "Doesn't affect loss after death.\nNeeds testing for other merchants."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0032d6bc, 0x60000000 ] # hag melentia on buy
+      - [ be32, 0x00656e4c, 0x60000000 ] # level up
+      - [ be32, 0x00445f64, 0x60000000 ] # darksign
 
 PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
   "Bypass Network Requirement":
