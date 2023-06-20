@@ -8998,15 +8998,18 @@ Anchors:
     "Unlocks a stage venue called \"Pitch Black Out\", which has a completely black background. Useful for getting more performance on lower-spec PCs."
   blackoutvenue_force_notes: &blackoutvenue_force_notes
     "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
+  timestep_force_notes: &timestep_force_notes
+    "Patches the timestep values so the game can properly run at a higher FPS. The \"VBlank Frequency\" setting must be changed accordingly. Pitch Black Out patch reccomended for anything higher than 120 FPS. WIP, rewinds will trigger early at higher FPS."
   DJ_Hero2FPS_Val: &DJ_Hero2FPS_Val
     "Min timestep":
       Type: double_enum
       Value: &120_value 0.0083333333
       Allowed Values:
-        "120": *120_value
-        "144": 0.0069444444
-        "165": 0.0060606061
-        "240": 0.0041666667
+        "120 FPS": *120_value
+        "240 FPS": 0.0041666667
+        "360 FPS": 0.0020833333
+        "480 FPS": 0.0013888889
+        "600 FPS": 0.0010416667
 
 PPU-1369b92d59b3727ea77257795263de460e621823:
   "Unlock Pitch Black Out Venue":
@@ -9083,11 +9086,15 @@ PPU-bccea158f89820de105a87541c9252052538a5fb:
         BLES00896: [ 01.01 ]
     Configurable Values: *DJ_Hero2FPS_Val
     Author: "illusion"
+    Notes: *timestep_force_notes
     Patch Version: 1.0
     Patch:
       - [ bef64, 0x00020030, "Min timestep" ]
       # if update rate 30fps
       - [ bef64, 0x00020038, "Min timestep" ]
+      #fix rewinds
+      - [ bef32, 0x002414ac, "Min timestep" ]
+      
 
 PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
   "Timestep Modifier":
@@ -9095,12 +9102,15 @@ PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
       "DJ Hero 2":
         BLUS30526: [ 01.01 ]
     Configurable Values: *DJ_Hero2FPS_Val
-    Author: "illusion"
+    Author: "illusion & Crafty"
+    Notes: *timestep_force_notes
     Patch Version: 1.0
     Patch:
       - [ bef64, 0x00020030, "Min timestep" ]
       # if update rate 30fps
       - [ bef64, 0x00020038, "Min timestep" ]
+      # fix rewinds
+      - [ bef32, 0x0024182c, "Min timestep" ]
 
 Anchors:
   genji_dotb_60fps_notes: &genji_dotb_60fps_notes
