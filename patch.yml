@@ -1887,6 +1887,13 @@ PPU-efd8e00902c586ebf88f5c97dcbdfe27bdce3bcc:
     Patch:
       - [ be32, 0x0085f388, 0x60000000 ] # level up
       - [ be32, 0x0085e600, 0x60000000 ] # darksign, merchant
+  "Infinite Stamina":
+    Games: *DS2_100title
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007c4108, 0x60000000 ]
 
 PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Keep Souls After Death":
