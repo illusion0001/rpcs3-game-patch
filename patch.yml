@@ -8239,12 +8239,45 @@ Anchors:
   sotc_60fps_notes: &sotc_60fps_notes
     "Allows 60 FPS without changing Vblank."
 
+  ico_psn100title: &ico_psn100title
+    "ICO":
+      NPEA00279: [ 01.00 ]
+      NPUA80676: [ 01.00 ]
+
+  ico_disc100title: &ico_disc100title
+    "ICO":
+      BCES01097: [ 01.00 ]
+      BCUS98259: [ 01.00 ]
+
+  ico_101title: &ico_101title
+    "ICO":
+      BCES01097: [ 01.01 ]
+      BCES01115: [ 01.01 ]
+      BCUS98259: [ 01.01 ]
+      NPEA00279: [ 01.01 ]
+      NPUA80676: [ 01.01 ]
+
+  sotc_psn100title: &sotc_psn100title
+    "Shadow of the Colossus":
+      NPEA00279: [ 01.00 ]
+      NPUA80676: [ 01.00 ]
+
+  sotc_disc100title: &sotc_disc100title
+    "Shadow of the Colossus":
+      BCES01097: [ 01.00 ]
+      BCUS98259: [ 01.00 ]
+
+  sotc_101title: &sotc_101title
+    "Shadow of the Colossus":
+      BCES01097: [ 01.01 ]
+      BCES01115: [ 01.01 ]
+      BCUS98259: [ 01.01 ]
+      NPEA00279: [ 01.01 ]
+      NPUA80676: [ 01.01 ]
+
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
   "Disable MLAA":
-    Games:
-      "ICO":
-        NPEA00279: [ 01.00 ]
-        NPUA80676: [ 01.00 ]
+    Games: *ico_psn100title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8254,20 +8287,14 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
       - [ be32, 0x00476d9c, 0x40800017 ] # il r23 0x0
 # Memory Patches
   "Disable Blur":
-    Games:
-      "ICO":
-        NPEA00279: [ 01.00 ]
-        NPUA80676: [ 01.00 ]
+    Games: *ico_psn100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x004d20cb, 0x00 ]
   "Disable All Post-processing":
-    Games:
-      "ICO":
-        NPEA00279: [ 01.00 ]
-        NPUA80676: [ 01.00 ]
+    Games: *ico_psn100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8276,10 +8303,7 @@ PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
 
 PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
   "Disable MLAA":
-    Games:
-      "ICO":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *ico_disc100title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8289,20 +8313,14 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
       - [ be32, 0x0047621c, 0x40800017 ] # il r23 0x0
 # Memory Patches
   "Disable Blur":
-    Games:
-      "ICO":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *ico_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x004d203b, 0x00 ]
   "Disable All Post-processing":
-    Games:
-      "ICO":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *ico_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8311,13 +8329,7 @@ PPU-9a604c56796a32bf86ff037b682b0a744eb6a0dd: # ICO.self
 
 PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
   "Disable MLAA":
-    Games:
-      "ICO":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00279: [ 01.01 ]
-        NPUA80676: [ 01.01 ]
+    Games: *ico_101title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8326,13 +8338,7 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
       - [ be32, 0x00477d74, 0x40800003 ] # il r3 0x0
       - [ be32, 0x0047801c, 0x40800017 ] # il r23 0x0
   "Restore debug printf":
-    Games:
-      "ICO":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00279: [ 01.01 ]
-        NPUA80676: [ 01.01 ]
+    Games: *ico_101title
     Author: "illusion"
     Notes: "Warning: Log Spam!"
     Patch Version: 1.0
@@ -8340,26 +8346,14 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
       - [ be32, 0x00015e50, 0x480ecd20 ] # b 0x00102b70
 # Memory Patches
   "Disable Blur":
-    Games:
-      "ICO":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00279: [ 01.01 ]
-        NPUA80676: [ 01.01 ]
+    Games: *ico_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x004e215b, 0x00 ]
   "Disable All Post-processing":
-    Games:
-      "ICO":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00279: [ 01.01 ]
-        NPUA80676: [ 01.01 ]
+    Games: *ico_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8368,20 +8362,14 @@ PPU-20445ff41192238543f15e956926d03f93d23878: # ICO.self 1.01
 
 PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
   "Disable Bloom":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *sotc_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00209d88, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *sotc_disc100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8389,10 +8377,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
       - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219360, 0x38000000 ] # li r0 0x0
   "Disable MLAA":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *sotc_disc100title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8402,10 +8387,7 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
       - [ be32, 0x006f861c, 0x40800017 ] # il r23 0x0
 # Memory Patches
   "Extended FOV":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.00 ]
-        BCUS98259: [ 01.00 ]
+    Games: *sotc_disc100title
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
     Patch Version: 1.0
@@ -8414,30 +8396,21 @@ PPU-07500788ed015ad425938fbde3b857487b38397b: # shadow.self 1.00
 
 PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
   "Enable Full Pixel Mode":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "Margen67"
     Notes: *sotc_full_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00316827, 2 ]
   "Disable Bloom":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0020a338, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8445,10 +8418,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
       - [ be32, 0x0021951c, 0x38000000 ] # li r0 0x0
       - [ be32, 0x00219910, 0x38000000 ] # li r0 0x0
   "Disable MLAA":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8457,10 +8427,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
       - [ be32, 0x006f8af4, 0x40800003 ] # il r3 0
       - [ be32, 0x006f8d9c, 0x40800017 ] # il r23 0
   "60 FPS":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "Margen67"
     Notes: *sotc_60fps_notes
     Patch Version: 1.0
@@ -8468,10 +8435,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
       - [ byte, 0x0031f677, 1 ]
 # Memory Patches
   "Extended FOV":
-    Games:
-      "Shadow of the Colossus":
-        NPEA00280: [ 01.00 ]
-        NPUA80677: [ 01.00 ]
+    Games: *sotc_psn100title
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
     Patch Version: 1.0
@@ -8480,39 +8444,21 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
 
 PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
   "Enable Full Pixel Mode":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "Margen67"
     Notes: *sotc_full_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x003298b7, 2 ]
   "Disable Bloom":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0020ab50, 0x38000000 ] # li r0 0x0
   "Disable Motion Blur":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -8520,13 +8466,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
       - [ be32, 0x0021a2e4, 0x38000000 ] # li r0 0x0
       - [ be32, 0x0021a128, 0x38000000 ] # li r0 0x0
   "Disable MLAA":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "illusion"
     Notes: *ico_mlaa_notes
     Patch Version: 1.0
@@ -8535,13 +8475,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
       - [ be32, 0x006f96f4, 0x40800003 ] # il r3 0x0
       - [ be32, 0x006f999c, 0x40800017 ] # il r23 0x0
   "60 FPS":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "Margen67"
     Notes: *sotc_60fps_notes
     Patch Version: 1.0
@@ -8549,13 +8483,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
       - [ byte, 0x00332707, 1 ]
 # Memory Patches
   "Extended FOV":
-    Games:
-      "Shadow of the Colossus":
-        BCES01097: [ 01.01 ]
-        BCES01115: [ 01.01 ]
-        BCUS98259: [ 01.01 ]
-        NPEA00280: [ 01.01 ]
-        NPUA80677: [ 01.01 ]
+    Games: *sotc_101title
     Author: "illusion"
     Notes: *sotc_extended_fov_notes
     Patch Version: 1.0
