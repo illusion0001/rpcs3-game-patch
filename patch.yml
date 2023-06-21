@@ -14891,10 +14891,12 @@ PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
       - [ be32, 0x00a4220c, 0x38600001 ]
 
 PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
-  "Dev Menu":
+  "Developer Menu":
     Games:
       "Sniper: Ghost Warrior":
+        BLES01281: [ 01.01 ]
         BLES01286: [ 01.01 ]
+        BLUS30796: [ 01.01 ]
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
