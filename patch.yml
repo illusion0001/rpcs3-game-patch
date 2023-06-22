@@ -1943,6 +1943,13 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005cf048, 0x60000000 ]
+  "Max Souls":
+    Games: *DS2beta_EUtitle
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006572e8, 0x3B9AC9FF ]
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
