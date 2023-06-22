@@ -1893,14 +1893,14 @@ PPU-efd8e00902c586ebf88f5c97dcbdfe27bdce3bcc:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0085fd1c, 0x60000000 ]
+      - [ be32, 0x007c4108, 0x60000000 ]
   "Max Souls":
     Games: *DS2_100title
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007c4108, 0x3B9AC9FF ]
+      - [ be32, 0x0085fd1c, 0x3B9AC9FF ]
 
 PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Keep Souls After Death":
