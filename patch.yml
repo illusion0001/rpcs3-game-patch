@@ -9064,7 +9064,6 @@ PPU-bccea158f89820de105a87541c9252052538a5fb:
       - [ bef64, 0x00020038, "Min timestep" ]
       #fix rewinds
       - [ bef32, 0x002414ac, "Min timestep" ]
-      
 
 PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
   "Timestep Modifier":
@@ -9072,7 +9071,7 @@ PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
       "DJ Hero 2":
         BLUS30526: [ 01.01 ]
     Configurable Values: *DJ_Hero2FPS_Val
-    Author: "illusion & Crafty"
+    Author: "illusion, Crafty"
     Notes: *timestep_force_notes
     Patch Version: 1.0
     Patch:
