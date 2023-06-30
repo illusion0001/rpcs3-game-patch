@@ -14349,6 +14349,16 @@ PPU-17e5fb03b4175948179339a71a8edde05b1d626b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0074043c, 0x4b8eef00 ]
+  "Debug Menu":
+    Games:
+      "Fight Night Champion":
+        BLUS30608: [ 01.02 ]
+        BLES01039: [ 01.02 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005ae0c0, 0x38600000 ]
+      - [ be32, 0x005ae048, 0x38600001 ]
 
 PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
   "Variable FPS":
