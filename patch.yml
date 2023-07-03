@@ -14979,7 +14979,7 @@ Anchors:
     "Allows you and enemies to shout without a resting period. Becomes Never shout again for all characters on screen that are in a resting period."
 
   skyrim_60fps_notes: &skyrim_60fps_notes
-    "Camera speeds up while having 60+ FPS."
+    "Camera sensitivity gets increased while having 60+ FPS."
 
   skyrim_trainerlvlup_notes: &skyrim_trainerlvlup_notes
     "Removes 5 per level limit."
@@ -15063,6 +15063,17 @@ PPU-ce80647b91654477032788d990641cde6412a74f:
     Patch Version: 1.2
     Patch:
       - [ be32, 0x001d8e9c, 0xc0230004 ]
+
+PPU-4c4a3b2aaaba32152ef940610bd8079bb85d8086:
+  "60 FPS":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLAS50546: [ 01.09 ]
+    Author: "illusion, FlexBy"
+    Notes: *skyrim_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008ede14, 0xf8051c60 ]
 
 PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
   "Skip save warning on startup":
