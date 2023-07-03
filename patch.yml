@@ -13283,6 +13283,10 @@ PPU-835dc9b413a3f538ddb52f24382b93e3fad5164d:
     Patch:
       - [ bef32, 0x0096c6a4, "Aspect Ratio" ]
 
+Anchors:
+  fallout3_Ufps_notes: &fallout3_Ufps_notes
+    "Set the framelimiter to 60, as things will break over 60 FPS."
+
 PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
   "Infinite Ammo & Consumables":
     Games:
@@ -13335,10 +13339,21 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
     Author: "Aphelion, illusion"
-    Notes: "Set the framelimiter to 60, as things will break over 60 FPS."
+    Notes: *fallout3_Ufps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00702bcc, 0x60000000 ]
+
+PPU-499ef508be74e55261bf810e07271147e424cfd0:
+  "60 FPS":
+    Games:
+      "Fallout 3 GOTY":
+        BLES00737: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *fallout3_Ufps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00702cfc, 0x60000000 ]
 
 Anchors:
   border1v107_title: &border1v107_title
