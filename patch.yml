@@ -11972,6 +11972,17 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
       - [ be32, 0x00aaec4c, 0x60000000 ]
       - [ be32, 0x00682100, 0x60000000 ]
 
+PPU-ceb470d5ff22280afed8e29ff86f8cd0633f4cea:
+  "Unlock FPS":
+    Games:
+      "The Elder Scrolls IV: Oblivion GOTY":
+        BLJS10034: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a3cd18, 0x60000000 ]
+
 PPU-439101d29241fc675adf90b9b997373fd404d179:
   "Unlock FPS":
     Games:
