@@ -14283,9 +14283,10 @@ PPU-ec6d9414990cb8ad0adb282f5d16a1af4cb3f956:
       - [ load, *BTS_disc_v100_debugmenu ]
 
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
-  "Dev Menu":
+  "Developer Menu":
     Games:
       "Call of Juarez: Gunslinger":
+        NPEB01214: [ 01.02 ]
         NPUB31079: [ 01.02 ]
     Author: "dron_3"
     Notes:
