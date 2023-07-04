@@ -11994,6 +11994,17 @@ PPU-613a96da9623ccbcf57eabb9495af3af2e46cb8c:
     Patch:
       - [ be32, 0x00aafa94, 0x60000000 ]
 
+PPU-f574a7d5dc1a6d8665b4a8f5278c17791af46f70:
+  "Unlock FPS":
+    Games:
+      "The Elder Scrolls IV: Oblivion":
+        BLJM60032: [ 01.03 ]
+    Author: "FlexBy"
+    Notes: *oblivion_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00aefd8c, 0x60000000 ]
+
 Anchors:
   UT3_FPS_Notes: &UT3_FPS_Notes
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
