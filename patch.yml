@@ -11954,19 +11954,34 @@ PPU-2f6778a8e97be84833e47ef273ff10cc2bd6809e:
       - [ be32, 0x005839d4, 0x3f99999a ] # Zoom+ (21:9)
       - [ be32, 0x0057ef84, 0x3f400000 ] # Vert+ (21:9)
 
+Anchors:
+  oblivion_fps_notes: &oblivion_fps_notes
+    "Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the framerate."
+
 PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
   "Unlock FPS":
     Games:
-      "The Elder Scrolls IV: Oblivion":
+      "The Elder Scrolls IV: Oblivion GOTY":
         BLUS30087: [ 01.00 ]
         BLES00163: [ 01.00 ]
     Author: "Whatcookie"
-    Notes: "Completely unlocks FPS and doesn't require any special settings. Use Framelimit or VSync option to cap the framerate."
+    Notes: *oblivion_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00aaed04, 0x60000000 ]
       - [ be32, 0x00aaec4c, 0x60000000 ]
       - [ be32, 0x00682100, 0x60000000 ]
+
+PPU-439101d29241fc675adf90b9b997373fd404d179:
+  "Unlock FPS":
+    Games:
+      "The Elder Scrolls IV: Oblivion":
+        BLUS30007: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *oblivion_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00aac734, 0x60000000 ]
 
 Anchors:
   UT3_FPS_Notes: &UT3_FPS_Notes
