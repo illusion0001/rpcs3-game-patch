@@ -13758,6 +13758,17 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Patch:
       - [ be32, 0x000170cc, 0x60000000 ]
 
+PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
+  "60 FPS":
+    Games:
+      "Fallout New Vegas: Ultimate Edition":
+        BLES01475: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *falloutNV_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00975070, 0x60000000 ]
+
 Anchors:
   dantesinferno_ar_notes: &dantesinferno_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
