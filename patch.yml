@@ -14932,6 +14932,26 @@ PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
     Patch:
       - [ be32, 0x00a4220c, 0x38600001 ]
 
+PPU-2f4038f42107d475048cc0f80dd21971d31eac09:
+  "60 FPS":
+    Games:
+      "Silent Hill: Homecoming":
+        BLES00307: [ 01.00 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0005a6bc, 0x38000001 ]
+  "No Film Grain":
+    Games:
+      "Silent Hill: Homecoming":
+        BLES00307: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a42424, 0x38600001 ]
+
 PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
   "Developer Menu":
     Games:
