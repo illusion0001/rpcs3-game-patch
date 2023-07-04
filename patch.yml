@@ -13209,17 +13209,33 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
       - [ be16, 0x01c854c0, 0x404e ]
       - [ be16, 0x01c854c8, 0x3f91 ]
 
+Anchors:
+  sirenbc_60fps_notes: &sirenbc_60fps_notes
+    "May break above 60 FPS. Accelerates the turns of the character by 2 times. Speeds up the game by 2 times in splitscreen."
+
 PPU-e8d5bbb306b85186133e090b79a5c0fd5d11ccfb: # siren cursed
   "60 FPS":
     Games:
       "Siren Blood Curse":
         NPEA00095: [ 01.00 ]
     Author: "Esppiral, illusion"
-    Notes: "May break above 60 FPS. Accelerates the turns of the character by 2 times. Speeds up the game by 2 times in splitscreen."
+    Notes: *sirenbc_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00022d90, 0x60000000 ] # startup
       - [ be32, 0x00022980, 0x60000000 ] # splitscreen
+
+PPU-63351b8a10593b134ccfa1272d310e52254c2a92:
+  "60 FPS":
+    Games:
+      "Siren Blood Curse":
+        NPUA80136: [ 01.00 ]
+    Author: "Esppiral, illusion, FlexBy"
+    Notes: *sirenbc_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00022d70, 0x60000000 ]
+      - [ be32, 0x00022960, 0x60000000 ]
 
 Anchors:
   ratchet_trilogy_ar_notes: &ratchet_trilogy_ar_notes
