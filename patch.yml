@@ -13391,6 +13391,8 @@ PPU-499ef508be74e55261bf810e07271147e424cfd0:
     Games:
       "Fallout 3 GOTY Edition":
         BLES00737: [ 01.01 ]
+      "Fallout 3":
+        BLES00335: [ 01.61 ]
     Author: "FlexBy"
     Notes: *fallout3_60fps_notes
     Patch Version: 1.0
@@ -13402,6 +13404,7 @@ PPU-ba9dbb848fd6307475aa956beaef09281199f459:
     Games:
       "Fallout 3":
         BLES00398: [ 01.00 ]
+        BLES00335: [ 01.00 ]
     Author: "FlexBy"
     Notes: *fallout3_60fps_notes
     Patch Version: 1.0
