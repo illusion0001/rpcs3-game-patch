@@ -13422,6 +13422,17 @@ PPU-14b6b0db50937ac4c1232c029e9c79434dc639bb:
     Patch:
       - [ be32, 0x007ae2cc, 0x60000000 ]
 
+PPU-d62a28e0d514aee88442e6d0bd3c412e53166ab9:
+  "60 FPS":
+    Games:
+      "Fallout 3":
+        BLJS10040: [ 01.02 ]
+    Author: "FlexBy"
+    Notes: *fallout3_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007b251c, 0x60000000 ]
+
 Anchors:
   border1v107_title: &border1v107_title
     "Borderlands":
