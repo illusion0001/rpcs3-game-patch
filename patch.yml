@@ -8285,6 +8285,7 @@ Anchors:
     "ICO":
       NPEA00279: [ 01.00 ]
       NPUA80676: [ 01.00 ]
+      NPUA80677: [ 01.00 ]
 
   ico_disc100title: &ico_disc100title
     "ICO":
@@ -8298,11 +8299,13 @@ Anchors:
       BCUS98259: [ 01.01 ]
       NPEA00279: [ 01.01 ]
       NPUA80676: [ 01.01 ]
+      NPUA80677: [ 01.01 ]
 
   sotc_psn100title: &sotc_psn100title
     "Shadow of the Colossus":
       NPEA00279: [ 01.00 ]
       NPUA80676: [ 01.00 ]
+      NPUA80677: [ 01.00 ]
 
   sotc_disc100title: &sotc_disc100title
     "Shadow of the Colossus":
@@ -8316,6 +8319,7 @@ Anchors:
       BCUS98259: [ 01.01 ]
       NPEA00279: [ 01.01 ]
       NPUA80676: [ 01.01 ]
+      NPUA80677: [ 01.01 ]
 
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
   "Disable MLAA":
