@@ -13269,7 +13269,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
   "60 FPS":
     Games: *armyoftwotdc_101title
     Author: "ZEROx, illusion"
-    Notes: "Set VBlank to 120"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x016e209e, 0x4270 ]
@@ -13277,6 +13277,7 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
       - [ be16, 0x01c854b8, 0x3f91 ]
       - [ be16, 0x01c854c0, 0x404e ]
       - [ be16, 0x01c854c8, 0x3f91 ]
+      - [ be32, 0x004e9c44, 0x3ba00001 ]
 
 Anchors:
   sirenbc_60fps_notes: &sirenbc_60fps_notes
