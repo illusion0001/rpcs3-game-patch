@@ -893,6 +893,15 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ececc, 0.125 ] # 240 max FPS
+  "Unlock FPS (No User Input)":
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPUB31251: [ 01.01 ]
+    Author: "illusion"
+    Notes: "Does not require user to change vblank settings.\nGoing over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002ca140, 0x38800000 ]
   "Increase Horizontal Camera Sensitivity":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
@@ -920,6 +929,29 @@ PPU-9c04f427625a0064282432e4edfefe9e0956c303:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008c4398, 0x30840000 ]
+  "Debug Boot Menu":
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPUB31251: [ 01.01 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x015f88fc, "/SQEX03GAME/COOKEDPS3/DEBUGTITLE.XXX\0" ]
+      - [ be32, 0x008e4394, 0x48c973c0 ]
+      - [ be32, 0x0157b754, 0x88ba0016 ]
+      - [ be32, 0x0157b758, 0x2c050054 ]
+      - [ be32, 0x0157b75c, 0x40820028 ]
+      - [ be32, 0x0157b760, 0x88ba001a ]
+      - [ be32, 0x0157b764, 0x2c050045 ]
+      - [ be32, 0x0157b768, 0x4082001c ]
+      - [ be32, 0x0157b76c, 0x88ba001c ]
+      - [ be32, 0x0157b770, 0x2c050058 ]
+      - [ be32, 0x0157b774, 0x40820010 ]
+      - [ be32, 0x0157b778, 0x3ca0015f ]
+      - [ be32, 0x0157b77c, 0x60a588fc ]
+      - [ be32, 0x0157b780, 0x48000008 ]
+      - [ be32, 0x0157b784, 0x7f45d378 ]
+      - [ be32, 0x0157b788, 0x4b368c10 ]
 
 PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
   "Unlock FPS":
