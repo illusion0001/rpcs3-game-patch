@@ -972,6 +972,15 @@ PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002ca140, 0x38800000 ]
+  "Unprotect game files":
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPEB01407: [ All ]
+    Author: "emoose"
+    Notes: *DOD3_UnprotectFiles_US_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008c4398, 0x38800000 ]
 
 PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
   "Unlock FPS (For Delisted Ver)":
