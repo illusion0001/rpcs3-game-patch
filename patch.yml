@@ -4413,6 +4413,10 @@ Anchors:
   tlou_mlaa_notes: &tlou_mlaa_notes
     "Allows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work."
 
+  tloulb100_title: &tloulb100_title
+    "The Last of Us Left Behind":
+      NPUA81175: [ 01.00 ]
+
   tlou100_title: &tlou100_title
     "The Last of Us":
       BCES01584: [ 01.00 ]
@@ -4825,6 +4829,103 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x00e8bc7c, 0x923f0038 ]
       - [ be32, 0x00e8bc80, 0x923f0044 ]
       - [ be32, 0x00e8bc84, 0x4b93f2d0 ]
+
+PPU-9e5c67eaf69077c591b7c503bed2b48617643134:
+  "Debug Menu":
+    Games: *tloulb100_title
+    Author: "dron_3, HdHereidme, FlexBy"
+    Notes: *tlou_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a92d94, 0x38000001 ]
+      - [ be32, 0x00a92d98, 0x980b2db0 ]
+  "Unlock FPS":
+    Games: *tloulb100_title
+    Author: "illusion, FlexBy"
+    Notes: *tlou_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00039d1c, 0x38a00000 ]
+  "Skip Intro":
+    Games: *tloulb100_title
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0003ddb0, 0x4800 ]
+  "Speedboost":
+    Games: *tloulb100_title
+    Author: "ZEROx, illusion, FlexBy"
+    Notes: *tlou_speed_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaa93c, 0x9383 ]
+  "Disable SSAO":
+    Games: *tloulb100_title
+    Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaa6f0, 0x9b83 ]
+  "Disable Motion Blur":
+    Games: *tloulb100_title
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0096b1e8, 0x480000e0 ]
+  "Disable Mesh trimming":
+    Games: *tloulb100_title
+    Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00951d2c, 0x9809 ]
+  "Disable in-built MLAA":
+    Games: *tloulb100_title
+    Author: "Whatcookie, illusion, ZEROx, FlexBy"
+    Notes: *tlou_mlaa_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaa794, 0x9b83 ]
+  "Disable Depth of Field":
+    Games: *tloulb100_title
+    Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaa760, 0x9b83 ]
+  "Depth border fix":
+    Games: *tloulb100_title
+    Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaaa2c, 0x9b83 ]
+  "Disable Bloom":
+    Games: *tloulb100_title
+    Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      #- [ be32, 0x00aa9ba0, 0x38000003 ]
+      - [ be32, 0x0096c5a0, 0xc0090990 ]
+      - [ be32, 0x0096c5ac, 0xc1890990 ]
+      - [ be32, 0x0096c634, 0xc0090990 ]
+  "Disable Camera Shake":
+    Games: *tloulb100_title
+    Author: "illusion, FlexBy"
+    Notes: *tlou_nocamshake_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00994988, 0x997d ]
+  "Infinite flashlight battery":
+    Games: *tloulb100_title
+    Author: "bungholio, ZEROx, FlexBy"
+    Notes: *tlou_infiniteflashlight_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006ad230, 0x60000000 ]
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes
