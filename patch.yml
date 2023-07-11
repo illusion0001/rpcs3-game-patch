@@ -963,6 +963,15 @@ PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008eceec, 0.125 ] # 240 max FPS
+  "Unlock FPS (No User Input)":
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPEB01407: [ All ]
+    Author: "illusion"
+    Notes: "Does not require user to change vblank settings.\nGoing over 120 FPS is possible, but you will break physics a bit (lowering jump height) and make it impossible to lock-on to enemies when flying on the dragon."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002ca140, 0x38800000 ]
 
 PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
   "Unlock FPS (For Delisted Ver)":
