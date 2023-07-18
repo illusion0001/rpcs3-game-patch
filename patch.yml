@@ -14154,6 +14154,15 @@ PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_demo_fps ]
+PPU-52c55a2495130940baf49afb06a134175131b73b:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company Demo":
+        NPEB90073: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_demo_fps ]
 
 PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
   "60 FPS":
