@@ -4945,6 +4945,26 @@ PPU-9e5c67eaf69077c591b7c503bed2b48617643134:
     Patch:
       - [ be32, 0x006ad230, 0x60000000 ]
 
+PPU-e71d82fa70d09b7df9493f0336717dd9a4977216:
+  "Disable in-built MLAA":
+    Games:
+      "The Last of Us Demo":
+        NPUA70257: [ 01.00 ]
+    Author: "Whatcookie, illusion, ZEROx, FlexBy"
+    Notes: *tlou_mlaa_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00a7a164, 0x9b83 ]
+  "Unlock FPS":
+    Games:
+      "The Last of Us Demo":
+        NPUA70257: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes: *tlou_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00036848, 0x38a00000 ]
+
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings. The interface will be stretched and cutscenes will use the standard field of view."
