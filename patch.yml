@@ -14161,6 +14161,8 @@ Anchors:
     - [ be32, 0x00010b6c, 0x3c004270 ]
     - [ be32, 0x0004794c, 0x38800001 ]
     - [ be32, 0x00047338, 0x38000000 ] # remove vblank requirement
+# 41 f0 00 00 00 00 00 01 00 00 00 40 00 00 00 04 FF FF FF FF BF 80 00 00 01 00 01 01 00 00 00 01 00 01 01 01 01 00 01 01
+#                                                                                                        ^
 
   bfbc_full_v120_fps: &bfbc_full_v120_fps
     - [ be32, 0x00010bd0, 0x3c004270 ]
