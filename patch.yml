@@ -14161,12 +14161,11 @@ Anchors:
     - [ be32, 0x00010b6c, 0x3c004270 ]
     - [ be32, 0x0004794c, 0x38800001 ]
     - [ be32, 0x00047338, 0x38000000 ] # remove vblank requirement
-# 41 f0 00 00 00 00 00 01 00 00 00 40 00 00 00 04 FF FF FF FF BF 80 00 00 01 00 01 01 00 00 00 01 00 01 01 01 01 00 01 01
-#                                                                                                        ^
 
   bfbc_full_v120_fps: &bfbc_full_v120_fps
     - [ be32, 0x00010bd0, 0x3c004270 ]
     - [ be32, 0x0004864c, 0x38800001 ]
+    - [ be32, 0x00048038, 0x38000000 ] # remove vblank requirement
 
 PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
   "60 FPS":
@@ -14228,6 +14227,7 @@ PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
     Patch:
       - [ be32, 0x00010bd0, 0x3c004270 ]
       - [ be32, 0x0004855c, 0x38800001 ]
+      - [ be32, 0x00047f48, 0x38000000 ]
 
 Anchors:
   bf4120_title: &bf4120_title
