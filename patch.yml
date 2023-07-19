@@ -4434,6 +4434,7 @@ Anchors:
   tloulb100_title: &tloulb100_title
     "The Last of Us Left Behind":
       NPUA81175: [ 01.00 ]
+      NPEA00521: [ 01.00 ]
 
   tlou100_title: &tlou100_title
     "The Last of Us":
