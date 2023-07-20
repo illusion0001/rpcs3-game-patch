@@ -15828,6 +15828,35 @@ PPU-8aaf3d8c1d18650967013d128f848327a91b5fe0:
     Patch:
       - [ be32, 0x0003bcb0, 0x38000000 ]
 
+Anchors:
+    wet_ar_notes: &wet_ar_notes
+      "Changes the aspect ratio, remember to enable \"Stretch To Display Area\""
+    wet_ar_configurable_values: &wet_ar_configurable_values
+      "Aspect Ratio":
+        Type: double_enum
+        Value: &32_9_value 3.555555555555556
+        Allowed Values:
+          "32:9": *32_9_value
+          "21:9 (3840x1600)": 2.4
+          "21:9 (3440x1440)": 2.388888888888889
+          "21:9 (2560x1080)": 2.37037037037037
+          "16:10": 1.6
+          "4:3": 1.333333333333333
+          "5:4": 1.25
+
+PPU-0f2d26bd793596ce336a74f645fcb8f1441f9041:
+  "Aspect Ratio":
+    Games:
+      "WET":
+        BLUS30403: [ 01.00 ]
+    Author: "Virjoinga"
+    Patch Version: 1.0
+    Group: ""
+    Notes: *wet_ar_notes
+    Configurable Values: *wet_ar_configurable_values
+    Patch:
+      - [ bef32, 0x013310DC, "Aspect Ratio" ]
+
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   "60 FPS":
     Games:
