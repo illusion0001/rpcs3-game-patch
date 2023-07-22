@@ -14207,12 +14207,16 @@ Anchors:
   bfbc_full_v120_devmenu: &bfbc_full_v120_devmenu
     - [ be32, 0x013a3840, 0x000000f1 ]
 
+  bfbc_fps_notes: &bfbc_fps_notes
+    "Patch works fine for Single-player mode, in Multi-player mode gamespeed is doubled."
+
 PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
   "60 FPS":
     Games:
       "Battlefield: Bad Company Demo":
         NPUB90070: [ 01.00 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_demo_fps ]
@@ -14221,6 +14225,7 @@ PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
       "Battlefield: Bad Company Demo":
         NPUB90070: [ 01.00 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_demo_devmenu ]
@@ -14231,6 +14236,7 @@ PPU-52c55a2495130940baf49afb06a134175131b73b:
       "Battlefield: Bad Company Demo":
         NPEB90073: [ 01.00 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_demo_fps ]
@@ -14239,6 +14245,7 @@ PPU-52c55a2495130940baf49afb06a134175131b73b:
       "Battlefield: Bad Company Demo":
         NPEB90073: [ 01.00 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_demo_devmenu ]
@@ -14249,7 +14256,7 @@ PPU-4c3bd27c0a7af517b03322d1826735ae17088826:
       "Battlefield: Bad Company Demo":
         NPJB90112: [ 01.00 ]
     Author: "illusion, FlexBy"
-    Notes:
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00010b6c, 0x3c004270 ]
@@ -14271,6 +14278,7 @@ PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
       "Battlefield: Bad Company":
         BLUS30118: [ 01.20 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_fps ]
@@ -14279,6 +14287,7 @@ PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
       "Battlefield: Bad Company":
         BLUS30118: [ 01.20 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_devmenu ]
@@ -14289,6 +14298,7 @@ PPU-6b45e01ffabee0118e0acdbc71995b8f1f5385d2:
       "Battlefield: Bad Company":
         BLES00259: [ 01.20 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_fps ]
@@ -14297,6 +14307,7 @@ PPU-6b45e01ffabee0118e0acdbc71995b8f1f5385d2:
       "Battlefield: Bad Company":
         BLES00259: [ 01.20 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_devmenu ]
@@ -14307,6 +14318,7 @@ PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
       "Battlefield: Bad Company":
         BLES00261: [ 01.20 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_fps ]
@@ -14315,6 +14327,7 @@ PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
       "Battlefield: Bad Company":
         BLES00261: [ 01.20 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_devmenu ]
@@ -14325,6 +14338,7 @@ PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
       "Battlefield: Bad Company":
         BLJM60071: [ 01.20 ]
     Author: "illusion"
+    Notes: *bfbc_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00010bd0, 0x3c004270 ]
@@ -14335,6 +14349,7 @@ PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
       "Battlefield: Bad Company":
         BLJM60071: [ 01.20 ]
     Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_devmenu ]
