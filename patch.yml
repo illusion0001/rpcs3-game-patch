@@ -14243,6 +14243,28 @@ PPU-52c55a2495130940baf49afb06a134175131b73b:
     Patch:
       - [ load, *bfbc_demo_devmenu ]
 
+PPU-4c3bd27c0a7af517b03322d1826735ae17088826:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company Demo":
+        NPJB90112: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00010b6c, 0x3c004270 ]
+      - [ be32, 0x00047824, 0x38800001 ]
+      - [ be32, 0x00047218, 0x3ba00000 ]
+  "Dev Menu":
+    Games:
+      "Battlefield: Bad Company Demo":
+        NPJB90112: [ 01.00 ]
+    Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_demo_devmenu ]
+
 PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
   "60 FPS":
     Games:
