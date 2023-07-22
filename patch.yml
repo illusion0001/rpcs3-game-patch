@@ -2538,6 +2538,20 @@ Anchors:
     "Midnight Club: Los Angeles":
       BLES00652: [ 01.06 ]
       BLUS30442: [ 01.06 ]
+  mcla_ar_notes: &mcla_ar_notes
+      "Changes the aspect ratio, remember to enable \"Stretch To Display Area\""
+  mcla_ar_configurable_values: &mcla_ar_configurable_values
+      "Aspect Ratio":
+        Type: double_enum
+        Value: &32_9_value 3.555555555555556
+        Allowed Values:
+          "32:9": *32_9_value
+          "21:9 (3840x1600)": 2.4
+          "21:9 (3440x1440)": 2.388888888888889
+          "21:9 (2560x1080)": 2.37037037037037
+          "16:10": 1.6
+          "4:3": 1.333333333333333
+          "5:4": 1.25
 
 PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
   "Enable Deltatime":
@@ -2563,6 +2577,17 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b2410, 0x48000038 ]
+  "Aspect Ratio":
+    Games:
+      "Midnight Club: Los Angeles":
+        NPUB30471: [ 01.00 ]
+    Author: "Virjoinga"
+    Patch Version: 1.0
+    Group: ""
+    Notes: *mcla_ar_notes
+    Configurable Values: *mcla_ar_configurable_values
+    Patch:
+      - [ bef32, 0x00B410AC, "Aspect Ratio" ]
 
 PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
   "Enable Deltatime":
