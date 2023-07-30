@@ -6546,6 +6546,16 @@ Anchors:
       BCES01692: [ 01.00 ]
       BCUS98233: [ 01.00 ]
 
+  uc3beta100_title: &uc3beta100_title
+    "Uncharted 3: Drake's Deception Multiplayer Beta":
+      NPUA70153: [ 01.00 ]
+      BCET70034: [ 01.00 ]
+
+  uc3beta104_title: &uc3beta104_title
+    "Uncharted 3: Drake's Deception Multiplayer Beta":
+      NPUA70153: [ 01.04 ]
+      BCET70034: [ 01.04 ]
+
 PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Unlock FPS":
     Games: *uc3_100title
@@ -6963,16 +6973,6 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006e4284, 0x60000000 ]
-Anchors:
-  uc3beta100_title: &uc3beta100_title
-    "Uncharted 3: Drake's Deception Multiplayer Beta":
-      NPUA70153: [ 01.00 ]
-      BCET70034: [ 01.00 ]
-
-  uc3beta104_title: &uc3beta104_title
-    "Uncharted 3: Drake's Deception Multiplayer Beta":
-      NPUA70153: [ 01.04 ]
-      BCET70034: [ 01.04 ]
 
 PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
   "Bug Fix: Crash on Entering LAN MP Menu":
