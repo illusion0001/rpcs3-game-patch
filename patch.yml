@@ -14027,7 +14027,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0033DA44, 0x60000000 ]
+      - [ be32, 0x0033da44, 0x60000000 ]
   "Pickpocketing Never Fails":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14038,7 +14038,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0031DAD4, 0x60000000 ]
+      - [ be32, 0x0031dad4, 0x60000000 ]
   "Any Password Will Hack a Computer":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14049,7 +14049,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00333A58, 0x63C50000 ] # mr r5, r30
+      - [ be32, 0x00333a58, 0x63c50000 ] # mr r5, r30
   "Stealing Has No Effect":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14060,7 +14060,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes: NPCs will not notice you stealing even if they are watching you and you will not lose karma.
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00181FF8, 0x4800 ] # b 0x1824BC
+      - [ be16, 0x00181ff8, 0x4800 ] # b 0x1824BC
   "Bypass Casino Bans":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14071,9 +14071,9 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes: This only works for 3 casinos on the Strip, the Vikki and Vance and Atomic Wrangler use a script to detect the ban.
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0035215C, 0x4800 ] # b 0x352210 Blackjack
-      - [ be16, 0x003598DC, 0x4800 ] # b 0x359990 Roulette
-      - [ be16, 0x00125268, 0x4800 ] # b 0x1252E4 Slots
+      - [ be16, 0x0035215c, 0x4800 ] # b 0x352210 Blackjack
+      - [ be16, 0x003598dc, 0x4800 ] # b 0x359990 Roulette
+      - [ be16, 0x00125268, 0x4800 ] # b 0x1252e4 Slots
   "Super Duper Lucky Slots":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14084,10 +14084,10 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes: This will cause the slot machine to always pay out as if you hit a 777, although it will never actually show the 777 on the machine.
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001266CC, 0x4800011C ] # b 0x1267E8 Branch to the 100x win scenario.
-      - [ be32, 0x001268EC, 0x60000000 ] # Fall through to the winning message block.
-      - [ be32, 0x001268F8, 0x60000000 ] # Force the "You feel lucky" message. (OhohohoOHdatslapsmeondaknee)
-      - [ be32, 0x00126200, 0x4800006C ] # b 0x126268 Branch to the Play GAMESlotsWinJackpot sound scenario.
+      - [ be32, 0x001266cc, 0x4800011c ] # b 0x1267E8 Branch to the 100x win scenario.
+      - [ be32, 0x001268ec, 0x60000000 ] # Fall through to the winning message block.
+      - [ be32, 0x001268f8, 0x60000000 ] # Force the "You feel lucky" message. (OhohohoOHdatslapsmeondaknee)
+      - [ be32, 0x00126200, 0x4800006c ] # b 0x126268 Branch to the Play GAMESlotsWinJackpot sound scenario.
   "Perfect V.A.T.S. Aiming":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -14098,7 +14098,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x000928D5, 0x61 ] # f3 register
+      - [ byte, 0x000928d5, 0x61 ] # f3 register
 
 PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
   "60 FPS":
@@ -14963,9 +14963,10 @@ PPU-a55beada9c3d3f474c7c0ac86874bf30d7fe412d:
         BLUS30755: [ 01.00 ]
         BLUS30755: [ 01.02 ]
     Author: "gir489"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00060040, 0x3800FFFF ] # li r0, -1
+      - [ be32, 0x00060040, 0x3800ffff ] # li r0, -1
 
 PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
   "60 FPS":
