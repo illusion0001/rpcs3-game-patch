@@ -15984,7 +15984,7 @@ PPU-8aaf3d8c1d18650967013d128f848327a91b5fe0:
 
 Anchors:
     wet_ar_notes: &wet_ar_notes
-      "Changes the aspect ratio, remember to enable \"Stretch To Display Area\""
+      "Requires \"Stretch To Display Area\" checked in the GPU settings."
     wet_ar_configurable_values: &wet_ar_configurable_values
       "Aspect Ratio":
         Type: double_enum
@@ -16005,11 +16005,10 @@ PPU-0f2d26bd793596ce336a74f645fcb8f1441f9041:
         BLUS30403: [ 01.00 ]
     Author: "Virjoinga"
     Patch Version: 1.0
-    Group: ""
     Notes: *wet_ar_notes
     Configurable Values: *wet_ar_configurable_values
     Patch:
-      - [ bef32, 0x013310DC, "Aspect Ratio" ]
+      - [ bef32, 0x013310dc, "Aspect Ratio" ]
 
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   "60 FPS":
