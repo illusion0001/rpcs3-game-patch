@@ -1921,6 +1921,9 @@ Anchors:
     "Dark Souls II Network Test":
       NPJB90625: [ All ]
 
+  DS2_SoulsNeverDecrease_notes: &DS2_SoulsNeverDecrease_notes
+    "Doesn't affect loss after death.\nNeeds testing for other merchants."
+
 PPU-efd8e00902c586ebf88f5c97dcbdfe27bdce3bcc:
   "Keep Souls After Death":
     Games: *DS2_100title
@@ -1950,7 +1953,7 @@ PPU-efd8e00902c586ebf88f5c97dcbdfe27bdce3bcc:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0085fd1c, 0x3B9AC9FF ]
+      - [ be32, 0x0085fd1c, 0x3b9ac9ff ]
 
 PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Keep Souls After Death":
@@ -1963,7 +1966,7 @@ PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
   "Souls Never Decrease":
     Games: *DS2_JP100title
     Author: "FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00861ce8, 0x60000000 ] # level up
@@ -1981,7 +1984,7 @@ PPU-a5b0abb782d787d81e65f954f3f1d1147d26a2dd:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0086267c, 0x3B9AC9FF ]
+      - [ be32, 0x0086267c, 0x3b9ac9ff ]
 
 PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Bypass Network Requirement":
@@ -2001,7 +2004,7 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
   "Souls Never Decrease":
     Games: *DS2beta_EUtitle
     Author: "FlexBy"
-    Notes: "Doesn't affect loss after death.\nNeeds testing for other merchants."
+    Notes: *DS2_SoulsNeverDecrease_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0032d7dc, 0x60000000 ] # hag melentia on buy
@@ -2020,7 +2023,7 @@ PPU-4909c02cae0f37fab78a5642a3e9ba9aff45b5b0:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x006572e8, 0x3B9AC9FF ]
+      - [ be32, 0x006572e8, 0x3b9ac9ff ]
 
 PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Bypass Network Requirement":
@@ -2040,7 +2043,7 @@ PPU-377ee65d27e19d824b8d4700b86b3f18fb787fb3:
   "Souls Never Decrease":
     Games: *DS2beta_UStitle
     Author: "FlexBy"
-    Notes: "Doesn't affect loss after death.\nNeeds testing for other merchants."
+    Notes: *DS2_SoulsNeverDecrease_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0032d6bc, 0x60000000 ] # hag melentia on buy
