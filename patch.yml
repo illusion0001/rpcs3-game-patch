@@ -1603,7 +1603,7 @@ PPU-023ff768c205b6a7b819005c6eccf5c099ca3e04:
   "1280x720 Resolution":
     Games: *LegoStarWarsTheCompleteSaga_titleID
     Author: "illusion"
-    Notes:
+    Notes: "Original resolution is 1280x768."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x004a75f2, 1280 ]
