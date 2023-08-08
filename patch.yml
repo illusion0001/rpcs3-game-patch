@@ -7318,6 +7318,17 @@ PPU-6a7de7fdfd7e7cbd1031bf28a7104b29c308136c:
     Patch:
       - [ load, *gt6_devlop_122 ]
 
+PPU-43e618448eed82aa96856338d072f1e4978c36a8:
+  "Develop Settings":
+    Games:
+      "Gran Turismo 6":
+        NPJA00113: [ 01.22 ]
+    Author: "Nenkai (OpenAdhoc), illusion"
+    Notes: *gt6_devlop_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *gt6_devlop_122 ]
+
 Anchors:
   gthd_ar_notes: &gthd_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings."
