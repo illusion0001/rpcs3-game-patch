@@ -16018,6 +16018,11 @@ PPU-0f2d26bd793596ce336a74f645fcb8f1441f9041:
     Patch:
       - [ bef32, 0x013310dc, "Aspect Ratio" ]
 
+Anchors:
+  godfather_60fps: &godfather_60fps
+    - [ byte, 0x0002343b, 0x01 ] # FPS mode 1
+    - [ bef32, 0x10060170, 60 ] # Max FPS
+
 PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
   "60 FPS":
     Games:
@@ -16031,8 +16036,7 @@ PPU-4c79de253c0d2167b0ea9d03884f27d83db03fad:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 1 ] # FPS mode 1
-      - [ bef32, 0x10060170, 60 ] # Max FPS
+      - [ load, *godfather_60fps ]
 PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
   "60 FPS":
     Games:
@@ -16042,8 +16046,7 @@ PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0002343b, 1 ] # FPS mode 1
-      - [ bef32, 0x10060170, 60 ] # Max FPS
+      - [ load, *godfather_60fps ]
 
 PPU-7f72fca497cb710939e9ad13c412c78a1ff72438:
   "Debug Menu":
