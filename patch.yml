@@ -2188,7 +2188,7 @@ PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
       "Skate":
         BLES00124: [ 01.00 ]
     Author: "tuukkas"
-    Notes: "Users need to enable the \"Stretch to Display Area\" option in RPCS3 for this patch to work. HUD will be stretched."
+    Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x010a34d4, 0x4002f1bd ]
