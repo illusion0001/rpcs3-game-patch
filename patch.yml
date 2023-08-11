@@ -3036,6 +3036,8 @@ PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
 Anchors:
   rftod_instagib_notes: &rftod_instagib_notes
     "Everything dies in one hit."
+  rftod_resolution_notes: &rftod_resolution_notes
+    "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
 
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
   "Infinite Ammo":
@@ -3173,7 +3175,7 @@ PPU-ec77eaf73a4f55d1c4ece532c3be6db0011e49ca:
       "Ratchet & Clank Future: Tools of Destruction":
         NPEA00452: [ All ]
     Author: "Margen67, Rib"
-    Notes: "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
+    Notes: *rftod_resolution_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00536f8a, 1280 ]
@@ -3194,7 +3196,7 @@ PPU-16506d9d5bf692d615645accd24bca1ee1f8f9a6:
       "Ratchet and Clank Future: Tools of Destruction":
         NPUA80965: [ 01.00 ]
     Author: "Margen67"
-    Notes: "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
+    Notes: *rftod_resolution_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x005372aa, 1280 ]
