@@ -2137,7 +2137,7 @@ PPU-93aed31e80e0a91e11fdcff1b83d42c235bc3548:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 1 ]          # 60 FPS
+      - [ byte, 0x004c4383, 0x01 ]       # 60 FPS
       - [ be32, 0x00162228, 0x60000000 ] # No reset
       - [ be32, 0x001633e8, 0x60000000 ] # Pause fix
 
@@ -2150,7 +2150,7 @@ PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x004c4383, 1 ]          # 60 FPS
+      - [ byte, 0x004c4383, 0x01 ]       # 60 FPS
       - [ be32, 0x001622dc, 0x60000000 ] # No reset
       - [ be32, 0x0016349c, 0x60000000 ] # Pause fix
 
