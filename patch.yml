@@ -9191,7 +9191,7 @@ Anchors:
   blackoutvenue_force_notes: &blackoutvenue_force_notes
     "Replaces the demo's \"London\" venue with the \"Pitch Black Out\" venue, which has a completely black background. Useful for getting more performance on lower-spec PCs."
   timestep_force_notes: &timestep_force_notes
-    "Patches the timestep values so the game can properly run at a higher FPS. The \"VBlank Frequency\" setting must be changed accordingly. Pitch Black Out patch reccomended for anything higher than 120 FPS. WIP, rewinds will trigger early at higher FPS."
+    "Patches the timestep values so the game can properly run at a higher FPS. The \"VBlank Frequency\" setting must be changed accordingly. Pitch Black Out patch recommended for anything higher than 120 FPS. WIP, rewinds will trigger early at higher FPS."
   DJ_Hero2FPS_Val: &DJ_Hero2FPS_Val
     "Min timestep":
       Type: double_enum
@@ -9224,6 +9224,20 @@ PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0086f718, 0x58585858 ]
+  "Timestep Modifier":
+    Games:
+      "DJ Hero 2":
+        BLUS30526: [ 01.01 ]
+    Configurable Values: *DJ_Hero2FPS_Val
+    Author: "illusion, Crafty"
+    Notes: *timestep_force_notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef64, 0x00020030, "Min timestep" ]
+      # if update rate 30fps
+      - [ bef64, 0x00020038, "Min timestep" ]
+      # fix rewinds
+      - [ bef32, 0x0024182c, "Min timestep" ]
 
 PPU-b70a9965638aa43c4edec58683cf0f2dfed8071b:
   "Unlock Pitch Black Out Venue":
@@ -9246,6 +9260,20 @@ PPU-bccea158f89820de105a87541c9252052538a5fb:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0086f2d8, 0x58585858 ]
+  "Timestep Modifier":
+    Games:
+      "DJ Hero 2":
+        BLES00896: [ 01.01 ]
+    Configurable Values: *DJ_Hero2FPS_Val
+    Author: "illusion"
+    Notes: *timestep_force_notes
+    Patch Version: 1.0
+    Patch:
+      - [ bef64, 0x00020030, "Min timestep" ]
+      # if update rate 30fps
+      - [ bef64, 0x00020038, "Min timestep" ]
+      #fix rewinds
+      - [ bef32, 0x002414ac, "Min timestep" ]
 
 PPU-530aadd4c93166a0ca0d3acbe963a09f7926b878:
   "Force Pitch Black Out Venue":
@@ -9270,38 +9298,6 @@ PPU-13887eb1bfe4ad2564cb7b9583e8e957a860c04a:
     Patch:
       - [ be32, 0x007b37cc, 0x51756179 ]
       - [ be32, 0x007b37d0, 0x32360000 ]
-
-PPU-bccea158f89820de105a87541c9252052538a5fb:
-  "Timestep Modifier":
-    Games:
-      "DJ Hero 2":
-        BLES00896: [ 01.01 ]
-    Configurable Values: *DJ_Hero2FPS_Val
-    Author: "illusion"
-    Notes: *timestep_force_notes
-    Patch Version: 1.0
-    Patch:
-      - [ bef64, 0x00020030, "Min timestep" ]
-      # if update rate 30fps
-      - [ bef64, 0x00020038, "Min timestep" ]
-      #fix rewinds
-      - [ bef32, 0x002414ac, "Min timestep" ]
-
-PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
-  "Timestep Modifier":
-    Games:
-      "DJ Hero 2":
-        BLUS30526: [ 01.01 ]
-    Configurable Values: *DJ_Hero2FPS_Val
-    Author: "illusion, Crafty"
-    Notes: *timestep_force_notes
-    Patch Version: 1.0
-    Patch:
-      - [ bef64, 0x00020030, "Min timestep" ]
-      # if update rate 30fps
-      - [ bef64, 0x00020038, "Min timestep" ]
-      # fix rewinds
-      - [ bef32, 0x0024182c, "Min timestep" ]
 
 Anchors:
   genji_dotb_60fps_notes: &genji_dotb_60fps_notes
