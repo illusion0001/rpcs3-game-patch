@@ -6553,11 +6553,13 @@ Anchors:
   uc3beta100_title: &uc3beta100_title
     "Uncharted 3: Drake's Deception Multiplayer Beta":
       NPUA70153: [ 01.00 ]
+      NPHA80158: [ 01.00 ]
       BCET70034: [ 01.00 ]
 
   uc3beta104_title: &uc3beta104_title
     "Uncharted 3: Drake's Deception Multiplayer Beta":
       NPUA70153: [ 01.04 ]
+      NPHA80158: [ 01.04 ]
       BCET70034: [ 01.04 ]
 
 PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
