@@ -7202,6 +7202,27 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0093a960, 0x9b830081 ]
+  "Disable Bloom":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a1e8, 0x39000003 ]
+  "Disable Depth of Field":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a944, 0x9b83007a ]
+  "Disable SSAO":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a8c0, 0x9b830057 ]
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
