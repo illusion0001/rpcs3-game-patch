@@ -7181,6 +7181,27 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
     Patch:
       - [ be32, 0x0093a85c, 0x48000040 ]
       - [ be32, 0x0093a860, 0x3b6000da ]
+  "Depth Buffer Viewport":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093abcc, 0x9b6302f9 ]
+  "Depth Border Fix":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093ac0c, 0x9b83031d ]
+  "Performance (WCB)":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a960, 0x9b830081 ]
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
