@@ -6562,6 +6562,10 @@ Anchors:
       NPHA80158: [ 01.04 ]
       BCET70034: [ 01.04 ]
 
+  uc3_kioskdemo: &uc3_kioskdemo
+    "Uncharted 3: Drake's Deception Demo":
+      NPUA70183: [ 01.00 ]
+
 PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Unlock FPS":
     Games: *uc3_100title
@@ -7153,6 +7157,37 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x008978cc, 0x9103 ] # spu lighting        = 2
+
+PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
+  "Enable GPU Lighting":
+    Games: *uc3_kioskdemo
+    Author: "illusion, ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093ac18, 0x90e303ec ]
+  "Disable in-built MLAA":
+    Games: *uc3_kioskdemo
+    Author: "Whatcookie, ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0093a980, 0x9b83 ]
+  "Unlock FPS":
+    Games: *uc3_kioskdemo
+    Author: "superepic31, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a85c, 0x48000040 ]
+      - [ be32, 0x0093a860, 0x3b6000da ]
+  "Disable Motion Blur":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a85c, 0x480000c4 ]
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
