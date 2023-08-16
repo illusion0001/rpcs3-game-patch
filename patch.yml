@@ -12938,6 +12938,268 @@ PPU-9940a863ed7bf977c5a15cff5eec8d0649a8552f:
     Patch:
       - [ be32, 0x0042c1ec, 0x60000000 ]
 
+Anchors:
+  modnation_111_us: &modnation_111_us
+    "ModNation™ Racers":
+      NPUA80535: [ 01.11 ]
+  modnation_111_eu: &modnation_111_eu
+    "ModNation™ Racers":
+      NPEA00291: [ 01.11 ]
+  modnation_110_eu: &modnation_110_eu
+    "ModNation™ Racers":
+      NPEA00291: [ 01.10 ]
+  modnation_109_eu: &modnation_109_eu
+    "ModNation™ Racers":
+      NPEA00291: [ 01.09 ]
+  modnation_beta: &modnation_beta
+    "ModNation Racers Beta":
+      NPUA70074: [ 01.00 ]
+  modnation_closed_beta: &modnation_closed_beta
+    "ModNation™ Racers Beta":
+      BCET70020: [ 01.00 ]
+  modnation_res_notes: &modnation_res_notes
+    "Normally when driving fast enough the resolution becomes 1024x600."
+  modnation_res: &modnation_res
+    - [ be16, 0x0137e642, 1280 ]
+    - [ be16, 0x0137e646, 720 ]
+  modnation_res_beta: &modnation_res_beta
+    - [ be16, 0x00dc6192, 1280 ]
+    - [ be16, 0x00dc6196, 720 ]
+  modnation_fov_notes: &modnation_fov_notes
+    "Increases FOV to match 16:9. Only for aspect ratios wider than 16:9."
+  modnation_fov_configurable_values: &modnation_fov_configurable_values
+    "FOV (Aspect Ratio)":
+      Type: double_enum
+      Value: &32_9_value 1.3755
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 1.178
+        "21:9 (3440x1440)": 1.1755
+        "21:9 (2560x1080)": 1.1725
+  modnation_fov: &modnation_fov
+    - [ be32, 0x00555e04, 0x60000000 ]
+    - [ be32, 0x00555f30, 0x60000000 ]
+    - [ be32, 0x00555f7c, 0x60000000 ]
+    - [ be32, 0x00555ff4, 0x60000000 ]
+    - [ be32, 0x00556038, 0x60000000 ]
+    - [ be32, 0x005560a8, 0x60000000 ]
+    - [ bef32, 0x0137e6fc, "FOV (Aspect Ratio)" ]
+  modnation_fov_beta: &modnation_fov_beta
+    - [ bef32, 0x00dc61e8, "FOV (Aspect Ratio)" ]
+  modnation_ar_notes: &modnation_ar_notes
+    "Requires \"Hor+ FOV\" patch for wider than 16:9 and \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
+  modnation_ar_configurable_values: &modnation_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+  modnation_ar: &modnation_ar
+    - [ be32, 0x00555e0c, 0x60000000 ]
+    - [ be32, 0x00555f9c, 0x60000000 ]
+    - [ be32, 0x00556050, 0x60000000 ]
+    - [ be32, 0x005560b8, 0x60000000 ]
+    - [ bef32, 0x0137e6ec, "Aspect Ratio" ]
+  modnation_ar_beta: &modnation_ar_beta
+    - [ bef32, 0x00dc61d8, "Aspect Ratio" ]
+
+PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_us
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
+  "Aspect Ratio":
+    Games: *modnation_111_us
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_ar ]
+  "Hor+ FOV":
+    Games: *modnation_111_us
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_fov ]
+
+PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_eu
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
+  "Aspect Ratio":
+    Games: *modnation_111_eu
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_ar ]
+  "Hor+ FOV":
+    Games: *modnation_111_eu
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_fov ]
+
+PPU-8666a1d09c0f973ba0887e9c665431e3497a59b6:
+  "Always 1280x720 Resolution":
+    Games: *modnation_110_eu
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
+  "Aspect Ratio":
+    Games: *modnation_110_eu
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_ar ]
+  "Hor+ FOV":
+    Games: *modnation_110_eu
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_fov ]
+
+PPU-4e133d417a93105b41fa0f3c2030f83a8ea6da59:
+  "Always 1280x720 Resolution":
+    Games: *modnation_109_eu
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0135abc2, 1280 ]
+      - [ be16, 0x0135abc6, 720 ]
+  "Aspect Ratio":
+    Games: *modnation_109_eu
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00555e40, 0x60000000 ]
+      - [ be32, 0x00555d8c, 0x60000000 ]
+      - [ be32, 0x00555ea8, 0x60000000 ]
+      - [ be32, 0x00555bfc, 0x60000000 ]
+      - [ bef32, 0x0135ac6c, "Aspect Ratio" ]
+  "Hor+ FOV":
+    Games: *modnation_109_eu
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00555d6c, 0x60000000 ]
+      - [ be32, 0x00555e28, 0x60000000 ]
+      - [ be32, 0x00555d20, 0x60000000 ]
+      - [ be32, 0x00555de4, 0x60000000 ]
+      - [ be32, 0x00555bf4, 0x60000000 ]
+      - [ be32, 0x00555e98, 0x60000000 ]
+      - [ bef32, 0x0135ac7c, "FOV (Aspect Ratio)" ]
+
+PPU-44b6c5194c7a5222eb632adde77420fcaf557de3:
+  "Always 1280x720 Resolution":
+    Games: *modnation_closed_beta
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res_beta ]
+  "Aspect Ratio":
+    Games: *modnation_closed_beta
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004807f8, 0x60000000 ]
+      - [ be32, 0x00480a00, 0x60000000 ]
+      - [ be32, 0x0048088c, 0x60000000 ]
+      - [ be32, 0x00480994, 0x60000000 ]
+      - [ load, *modnation_ar_beta ]
+  "Hor+ FOV":
+    Games: *modnation_closed_beta
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0048081c, 0x60000000 ]
+      - [ be32, 0x0048087c, 0x60000000 ]
+      - [ be32, 0x00480984, 0x60000000 ]
+      - [ be32, 0x004809e8, 0x60000000 ]
+      - [ load, *modnation_fov_beta ]
+  "No beta watermark":
+    Games: *modnation_closed_beta
+    Author: "Margen67"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0041ddf4, 0x4280 ]
+
+PPU-2f4e1dcfe8172b85278271be5aea9dfcdadb8eff:
+  "Always 1280x720 Resolution":
+    Games: *modnation_beta
+    Author: "Margen67"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res_beta ]
+  "Aspect Ratio":
+    Games: *modnation_beta
+    Author: "Margen67"
+    Notes: *modnation_ar_notes
+    Configurable Values: *modnation_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0047fc20, 0x60000000 ]
+      - [ be32, 0x0047fe28, 0x60000000 ]
+      - [ be32, 0x0047fcb4, 0x60000000 ]
+      - [ be32, 0x0047fdbc, 0x60000000 ]
+      - [ load, *modnation_ar_beta ]
+  "Hor+ FOV":
+    Games: *modnation_beta
+    Author: "Margen67"
+    Notes: *modnation_fov_notes
+    Configurable Values: *modnation_fov_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0047fc44, 0x60000000 ]
+      - [ be32, 0x0047fdac, 0x60000000 ]
+      - [ be32, 0x0047fca4, 0x60000000 ]
+      - [ be32, 0x0047fe10, 0x60000000 ]
+      - [ load, *modnation_fov_beta ]
+  "No beta watermark":
+    Games: *modnation_beta
+    Author: "Margen67"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0041d3bc, 0x4280 ]
+
 PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
   "Unlock FPS":
     Games:
