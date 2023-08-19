@@ -11931,6 +11931,16 @@ PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
     Patch Version: 1.0
     Patch:
       - [ load, *SonicAdventure_FullScreen ]
+  "Force Japanese Voices":
+    Games:
+      "Sonic Adventure":
+        NPUB30249: [ All ]
+        NPEB00304: [ All ]
+    Author: "Margen67"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x007f4432, "JP" ]
 
 Anchors:
   su_1280x720_notes: &su_1280x720_notes
