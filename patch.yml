@@ -11911,25 +11911,26 @@ PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
       - [ load, *sly4_mlaa_US ]
 
 Anchors:
-  SA_169: &SA_169
-    - [ be32, 0x05043f18, 0x3f400000 ]
+  SonicAdventure_FullScreen: &SonicAdventure_FullScreen
     - [ be32, 0x00909260, 0x009b1604 ]
     - [ be32, 0x0090e5b0, 0x40a00000 ]
     - [ be32, 0x00909270, 0x40400000 ]
     - [ be32, 0x00909274, 0xc0400000 ]
     - [ be32, 0x00909278, 0xbf400000 ]
+    - [ bef32, 0x05043f18, 0.75 ]
+    - [ be32, 0x006d0220, 0x60000000 ]
 
 PPU-5fc2b4ea8ae9cd7a4247f28dc6af65ca1a6a9fa4:
-  "16:9 Aspect Ratio":
+  "Full Screen":
     Games:
       "Sonic Adventure":
         NPUB30249: [ All ]
         NPEB00304: [ All ]
-    Author: "Esppiral"
-    Notes: "This game originally rendered at 11:9 aspect ratio (880x720). With this patch it will render at a resolution of 16:9 aspect ratio (1280x720)."
+    Author: "Esppiral, Margen67"
+    Notes: "Removes the borders and makes the game take up the entire screen without stretching. Transitions are still 4:3. Breaks some startup screens."
     Patch Version: 1.0
     Patch:
-      - [ load, *SA_169 ]
+      - [ load, *SonicAdventure_FullScreen ]
 
 Anchors:
   su_1280x720_notes: &su_1280x720_notes
