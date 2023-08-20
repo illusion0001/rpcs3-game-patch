@@ -2581,9 +2581,7 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
     Patch:
       - [ be32, 0x002b2410, 0x48000038 ]
   "Aspect Ratio":
-    Games:
-      "Midnight Club: Los Angeles":
-        NPUB30471: [ 01.00 ]
+    Games: *mclaPSN_100_title
     Author: "Virjoinga"
     Patch Version: 1.0
     Notes: *mcla_ar_notes
