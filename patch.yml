@@ -14161,6 +14161,19 @@ PPU-caef4935039b5cd5fb68999ae67aeff688f3a863:
     Patch:
       - [ be16, 0x0003569e, 1280 ]
 
+PPU-b583595a7095fcf9b064b4985333fcc296212b85:
+  "1280x720 Resolution":
+    Games:
+      "Toy Story 3":
+        NPUB30555: [ 01.01 ]
+        NPEB00656: [ 01.01 ]
+    Author: "Margen67"
+    Notes: "Original resolution is 1152x640."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x001fed2a, 1280 ]
+      - [ be16, 0x001fed2e, 720 ]
+
 PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
   "Infinite Ammo":
     Games:
