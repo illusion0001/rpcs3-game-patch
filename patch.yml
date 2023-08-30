@@ -13016,22 +13016,22 @@ PPU-9940a863ed7bf977c5a15cff5eec8d0649a8552f:
 
 Anchors:
   modnation_111_us: &modnation_111_us
-    "ModNation™ Racers":
+    "ModNation Racers":
       NPUA80535: [ 01.11 ]
   modnation_111_eu: &modnation_111_eu
-    "ModNation™ Racers":
+    "ModNation Racers":
       NPEA00291: [ 01.11 ]
   modnation_110_eu: &modnation_110_eu
-    "ModNation™ Racers":
+    "ModNation Racers":
       NPEA00291: [ 01.10 ]
   modnation_109_eu: &modnation_109_eu
-    "ModNation™ Racers":
+    "ModNation Racers":
       NPEA00291: [ 01.09 ]
   modnation_beta: &modnation_beta
     "ModNation Racers Beta":
       NPUA70074: [ 01.00 ]
   modnation_closed_beta: &modnation_closed_beta
-    "ModNation™ Racers Beta":
+    "ModNation Racers Beta":
       BCET70020: [ 01.00 ]
   modnation_res_notes: &modnation_res_notes
     "Normally when driving fast enough the resolution becomes 1024x600."
