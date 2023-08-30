@@ -15297,15 +15297,18 @@ PPU-17e5fb03b4175948179339a71a8edde05b1d626b:
       - [ be32, 0x005ae0c0, 0x38600000 ]
       - [ be32, 0x005ae048, 0x38600001 ]
 
+Anchors:
+  fuse_titles: &fuse_titles
+    "Fuse":
+      NPUB30874: [ 01.00 ]
+      BLUS31040: [ 01.00 ]
+      BLES01724: [ 01.00 ]
+
 PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
   "Variable FPS":
-    Games:
-      "Fuse":
-        NPUB30874: [ 01.00 ]
-        BLUS31040: [ 01.00 ]
-        BLES01724: [ 01.00 ]
+    Games: *fuse_titles
     Author: "illusion"
-    Notes: "Allows up to 1000 FPS\nwithout affecting game speed.\nChange vblank to match your monitor refresh rate if you are going above 60 FPS."
+    Notes: "Allows up to 1000 FPS without affecting game speed.\nChange vblank to go above 60 FPS."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005e4c28, 0x38800001 ]
@@ -15313,6 +15316,14 @@ PPU-6fee162e203f4d987915b182a30a1dc8856248b6:
       - [ be32, 0x00615944, 0xc024000c ] # store as double
       - [ be32, 0x005e4b54, 0x3cc03a83 ]
       - [ be32, 0x005e4b58, 0x60c6126f ]
+  "1280x720 Resolution":
+    Games: *fuse_titles
+    Author: "Margen67"
+    Notes: "Original resolution is 1152x704."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x005ec4b2, 1280 ]
+      - [ be16, 0x005ec4b6, 720 ]
 
 PPU-a55beada9c3d3f474c7c0ac86874bf30d7fe412d:
   "Infinite Ammo":
