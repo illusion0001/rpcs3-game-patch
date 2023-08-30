@@ -13438,6 +13438,17 @@ SPU-df5b1c3353cc36bb2f0fb59197d849bb99c3fecd: # SPUNAME: 'PS3_Release/edgepost-m
     Patch:
       - [ load, *SPU_MLAA_02 ]
 
+SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nHandball 17\nKillAllZombies\nWWE 2k17" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_06 ]
+
 SPU-9c270732b4276ec71df9a5255d5d8a63267de645: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
   "Disable SPU MLAA":
     Games:
@@ -13559,17 +13570,6 @@ SPU-77ce25dab2a5ca1d96038cc3dc57c50c705ce38c: # SPUNAME: 'Z:/output/USint6/SPUML
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_05 ]
-
-SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
-  "Disable SPU MLAA - Yakuza 0, Yakuza Kiwami":
-    Games:
-      All:
-        All: [ All ]
-    Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nHandball 17\nKillAllZombies\nWWE 2k17" ]
-    Patch Version: 1.5
-    Patch:
-      - [ load, *SPU_MLAA_06 ]
 
 SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
   "Disable SPU MLAA - Twisted Metal":
