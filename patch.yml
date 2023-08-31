@@ -15462,38 +15462,38 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
       - [ be32, 0x00013300, 0x60000000 ]
 
 Anchors:
-  metalgear_risingrevengeance_disc_eu_titles: &metalgear_risingrevengeance_disc_eu_titles
+  mgrr_disc_eu_titles: &mgrr_disc_eu_titles
     "Metal Gear Rising: Revengeance":
       BLES01750: [ 01.00 ]
 
-  metalgear_risingrevengeance_psn_eu_titles: &metalgear_risingrevengeance_psn_eu_titles
+  mgrr_psn_eu_titles: &mgrr_psn_eu_titles
     "Metal Gear Rising: Revengeance":
       NPEB01228: [ 01.00 ]
 
 PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
   "1-Hit Kills":
-    Games: *metalgear_risingrevengeance_disc_eu_titles
+    Games: *mgrr_disc_eu_titles
     Author: "CodeUnique3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004a25d4, 0x38800000 ]
   "Infinite Health":
-    Games: *metalgear_risingrevengeance_disc_eu_titles
+    Games: *mgrr_disc_eu_titles
     Author: "CodeUnique3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0063f36c, 0x38a00000 ]
   "Max FC on Gain":
-    Games: *metalgear_risingrevengeance_disc_eu_titles
+    Games: *mgrr_disc_eu_titles
     Author: "CodeUnique3"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005edff8, 0xd0230004 ]
   "Max BP on Gain":
-    Games: *metalgear_risingrevengeance_disc_eu_titles
+    Games: *mgrr_disc_eu_titles
     Author: "CodeUnique3"
     Notes:
     Patch Version: 1.0
@@ -15502,21 +15502,21 @@ PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
 
 PPU-d944608b757f50c6207f4147db21df0f8f05e65e:
   "Infinite Health":
-    Games: *metalgear_risingrevengeance_psn_eu_titles
+    Games: *mgrr_psn_eu_titles
     Author: "CodeUnique3, FlexBy"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0063f6dc, 0x38a00000 ]
   "Max FC on Gain":
-    Games: *metalgear_risingrevengeance_psn_eu_titles
+    Games: *mgrr_psn_eu_titles
     Author: "CodeUnique3, FlexBy"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005ee368, 0xd0230004 ]
   "Max BP on Gain":
-    Games: *metalgear_risingrevengeance_psn_eu_titles
+    Games: *mgrr_psn_eu_titles
     Author: "CodeUnique3, FlexBy"
     Notes:
     Patch Version: 1.0
