@@ -15673,6 +15673,23 @@ PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
     Patch:
       - [ be32, 0x0009381c, 0x60000000 ]
 
+Anchors:
+  puppeteerPSN_60_FPS: &puppeteerPSN_60_FPS
+    - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
+    - [ bef32, 0x00084690, 1 ] # Avoid double game speed
+
+  puppeteerPSN_MLAA: &puppeteerPSN_MLAA
+    - [ be16, 0x00050c84, 0x9107 ]
+    - [ be16, 0x00050d20, 0x9907 ]
+
+  puppeteer_disc_60_FPS: &puppeteer_disc_60_FPS
+    - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
+    - [ bef32, 0x00083df8, 1 ] # Avoid double game speed
+
+  puppeteer_disc_MLAA: &puppeteer_disc_MLAA
+    - [ be16, 0x000504d4, 0x9107 ]
+    - [ be16, 0x00050570, 0x9907 ]
+
 PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
   "60 FPS":
     Games:
@@ -15682,8 +15699,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00084690, 1 ]         # Avoid double game speed
+      - [ load, *puppeteerPSN_60_FPS ]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15692,8 +15708,7 @@ PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00050c84, 0x9107 ]
-      - [ be16, 0x00050d20, 0x9907 ]
+      - [ load, *puppeteerPSN_MLAA ]
 
 PPU-d245f5e6784b3b7bbeec69adf9e9e6a112ef7058:
   "60 FPS":
@@ -15704,8 +15719,7 @@ PPU-d245f5e6784b3b7bbeec69adf9e9e6a112ef7058:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00084690, 1 ]         # Avoid double game speed
+     - [ load, *puppeteerPSN_60_FPS ]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15714,8 +15728,7 @@ PPU-d245f5e6784b3b7bbeec69adf9e9e6a112ef7058:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00050c84, 0x9107 ]
-      - [ be16, 0x00050d20, 0x9907 ]
+      - [ load, *puppeteerPSN_MLAA ]
 
 PPU-fd8fae56d54da45220633541e5d55a371dfc4002:
   "60 FPS":
@@ -15726,8 +15739,7 @@ PPU-fd8fae56d54da45220633541e5d55a371dfc4002:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00084690, 1 ]         # Avoid double game speed
+     - [ load, *puppeteerPSN_60_FPS ]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15736,8 +15748,7 @@ PPU-fd8fae56d54da45220633541e5d55a371dfc4002:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00050c84, 0x9107 ]
-      - [ be16, 0x00050d20, 0x9907 ]
+      - [ load, *puppeteerPSN_MLAA ]
 
 PPU-a35283e496aaade410bce3883e61041aac08de7f:
   "60 FPS":
@@ -15748,8 +15759,7 @@ PPU-a35283e496aaade410bce3883e61041aac08de7f:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00083df8, 1 ]         # Avoid double game speed
+      - [ load, *puppeteer_disc_60_FPS]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15758,8 +15768,7 @@ PPU-a35283e496aaade410bce3883e61041aac08de7f:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x000504d4, 0x9107 ]
-      - [ be16, 0x00050570, 0x9907 ]
+      - [ load, *puppeteer_disc_MLAA ]
 
 PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
   "60 FPS":
@@ -15770,8 +15779,7 @@ PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00083df8, 1 ]         # Avoid double game speed
+      - [ load, *puppeteer_disc_60_FPS]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15780,8 +15788,7 @@ PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x000504d4, 0x9107 ]
-      - [ be16, 0x00050570, 0x9907 ]
+      - [ load, *puppeteer_disc_MLAA ]
 
 PPU-7b04ebca68e72a66b86043b9a1d30ad5d561f3c8:
   "60 FPS":
@@ -15792,8 +15799,7 @@ PPU-7b04ebca68e72a66b86043b9a1d30ad5d561f3c8:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
-      - [ bef32, 0x00083df8, 1 ]         # Avoid double game speed
+      - [ load, *puppeteer_disc_60_FPS]
   "Disable MLAA":
     Games:
       "Puppeteer":
@@ -15802,8 +15808,7 @@ PPU-7b04ebca68e72a66b86043b9a1d30ad5d561f3c8:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x000504d4, 0x9107 ]
-      - [ be16, 0x00050570, 0x9907 ]
+      - [ load, *puppeteer_disc_MLAA ]
 
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
   "60 FPS":
