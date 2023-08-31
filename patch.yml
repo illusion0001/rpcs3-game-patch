@@ -15674,147 +15674,149 @@ PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
       - [ be32, 0x0009381c, 0x60000000 ]
 
 Anchors:
-  puppeteerPSN_60_FPS: &puppeteerPSN_60_FPS
+  puppeteer_psn_us_titles: &puppeteer_psn_us_titles
+    "Puppeteer":
+      NPUA80959: [ 01.00 ]
+
+  puppeteer_psn_eu_titles: &puppeteer_psn_eu_titles
+    "Puppeteer":
+      NPEA00439: [ 01.00 ]
+
+  puppeteer_psn_jp_titles: &puppeteer_psn_jp_titles
+    "Puppeteer":
+      NPJA00098: [ 01.00 ]
+
+  puppeteer_psn_60fps: &puppeteer_psn_60fps
     - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
     - [ bef32, 0x00084690, 1 ] # Avoid double game speed
 
-  puppeteerPSN_MLAA: &puppeteerPSN_MLAA
+  puppeteer_psn_mlaa: &puppeteer_psn_mlaa
     - [ be16, 0x00050c84, 0x9107 ]
     - [ be16, 0x00050d20, 0x9907 ]
 
-  puppeteer_disc_60_FPS: &puppeteer_disc_60_FPS
+  puppeteer_disc_jp_titles: &puppeteer_disc_jp_titles
+    "Puppeteer":
+      BCJS30078: [ 01.00 ]
+
+  puppeteer_disc_eu_titles: &puppeteer_psn_eu_titles
+    "Puppeteer":
+      BCES00935: [ 01.00 ]
+
+  puppeteer_disc_us_titles: &puppeteer_disc_us_titles
+    "Puppeteer":
+      BCUS98227: [ 01.00 ]
+
+  puppeteer_disc_60fps: &puppeteer_disc_60fps
     - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
     - [ bef32, 0x00083df8, 1 ] # Avoid double game speed
 
-  puppeteer_disc_MLAA: &puppeteer_disc_MLAA
+  puppeteer_disc_mlaa: &puppeteer_disc_mlaa
     - [ be16, 0x000504d4, 0x9107 ]
     - [ be16, 0x00050570, 0x9907 ]
 
+  puppeteer_demo_eu_titles: &puppeteer_demo_eu_titles
+    "Puppeteer: Demo version":
+      NPEA90125: [ 01.00 ]
+
 PPU-72bca3e03b4433e16b0b485d4ab685d3d4c63845:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        NPUA80959: [ 01.00 ]
+    Games: *puppeteer_psn_us_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteerPSN_60_FPS ]
+      - [ load, *puppeteer_psn_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        NPUA80959: [ 01.00 ]
+    Games: *puppeteer_psn_us_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteerPSN_MLAA ]
+      - [ load, *puppeteer_psn_mlaa ]
 
 PPU-d245f5e6784b3b7bbeec69adf9e9e6a112ef7058:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        NPEA00439: [ 01.00 ]
+    Games: *puppeteer_psn_eu_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-     - [ load, *puppeteerPSN_60_FPS ]
+     - [ load, *puppeteer_psn_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        NPEA00439: [ 01.00 ]
+    Games: *puppeteer_psn_eu_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteerPSN_MLAA ]
+      - [ load, *puppeteer_psn_mlaa ]
 
 PPU-fd8fae56d54da45220633541e5d55a371dfc4002:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        NPJA00098: [ 01.00 ]
+    Games: *puppeteer_psn_jp_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-     - [ load, *puppeteerPSN_60_FPS ]
+     - [ load, *puppeteer_psn_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        NPJA00098: [ 01.00 ]
+    Games: *puppeteer_psn_jp_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteerPSN_MLAA ]
+      - [ load, *puppeteer_psn_mlaa ]
 
 PPU-a35283e496aaade410bce3883e61041aac08de7f:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        BCJS30078: [ 01.00 ]
+    Games: *puppeteer_disc_jp_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_60_FPS]
+      - [ load, *puppeteer_disc_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        BCJS30078: [ 01.00 ]
+    Games: *puppeteer_disc_jp_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_MLAA ]
+      - [ load, *puppeteer_disc_mlaa ]
 
 PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        BCES00935: [ 01.00 ]
+    Games: *puppeteer_psn_eu_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_60_FPS]
+      - [ load, *puppeteer_disc_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        BCES00935: [ 01.00 ]
+    Games: *puppeteer_psn_eu_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_MLAA ]
+      - [ load, *puppeteer_disc_mlaa ]
 
 PPU-7b04ebca68e72a66b86043b9a1d30ad5d561f3c8:
   "60 FPS":
-    Games:
-      "Puppeteer":
-        BCUS98227: [ 01.00 ]
+    Games: *puppeteer_disc_us_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_60_FPS]
+      - [ load, *puppeteer_disc_60fps ]
   "Disable MLAA":
-    Games:
-      "Puppeteer":
-        BCUS98227: [ 01.00 ]
+    Games: *puppeteer_disc_us_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ load, *puppeteer_disc_MLAA ]
+      - [ load, *puppeteer_disc_mlaa ]
 
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
   "60 FPS":
-    Games:
-      "Puppeteer: Demo version":
-        NPEA90125: [ 01.00 ]
+    Games: *puppeteer_demo_eu_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
@@ -15822,9 +15824,7 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
       - [ be32, 0x00042f9c, 0x38800001 ] # 60 FPS
       - [ bef32, 0x00083f78, 1 ]         # Avoid double game speed
   "Disable MLAA":
-    Games:
-      "Puppeteer: Demo version":
-        NPEA90125: [ 01.00 ]
+    Games: *puppeteer_demo_eu_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
