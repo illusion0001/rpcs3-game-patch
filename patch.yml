@@ -15522,12 +15522,12 @@ PPU-d944608b757f50c6207f4147db21df0f8f05e65e:
       - [ be32, 0x006beea8, 0x7ce6292d ]
 
 Anchors:
-
   moond_100_title: &moond_100_title
     "Moon Diver":
       NPEB00375: [ 01.00 ]
       NPUB30345: [ 01.00 ]
       NPJB00100: [ 01.00 ]
+    "Moon Diver Demo":
       NPEB90290: [ 01.00 ]
       NPUB90511: [ 01.00 ]
       NPJB90309: [ 01.00 ]
