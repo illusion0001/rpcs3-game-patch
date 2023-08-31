@@ -14761,25 +14761,33 @@ PPU-2845afa9e4dc56df06a61f2e51463468e9a557c7:
       - [ be32, 0x008d2e94, 0x38800001 ] # vsync flip rate 60hz // unlimited freeze at SE screen
 
 Anchors:
-  SSX_Resolution_Notes: &SSX_Resolution_Notes
+  ssx_disc_us_100_titles: &ssx_disc_us_100_titles
+    "SSX":
+      BLUS30849: [ 01.00 ]
+  ssx_disc_us_103_titles: &ssx_disc_us_103_titles
+    "SSX":
+      BLUS30849: [ 01.03 ]
+  ssx_psn_titles: &ssx_psn_titles
+    "SSX":
+      NPEB01121: [ 01.02 ]
+      NPJB00240: [ 01.03 ]
+      NPUB30892: [ 01.03 ]
+
+  ssx_resolution_notes: &ssx_resolution_notes
     "Native resolution is 1120x584."
 
 PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
   "60 FPS":
-    Games:
-      "SSX":
-        BLUS30849: [ 01.00 ]
+    Games: *ssx_disc_us_100_titles
     Author: "Margen67"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007427d0, 0x4e800020 ] # blr, cellGcmSetFlipMode case switch
   "1280x720 Resolution":
-    Games:
-      "SSX":
-        BLUS30849: [ 01.00 ]
+    Games: *ssx_disc_us_100_titles
     Author: "Margen67"
-    Notes: *SSX_Resolution_Notes
+    Notes: *ssx_resolution_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00b625ce, 1280 ]
@@ -14787,20 +14795,16 @@ PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
 
 PPU-3c592821a982e587b06e8b026ece13897eab826f:
   "60 FPS":
-    Games:
-      "SSX":
-        BLUS30849: [ 01.03 ]
+    Games: *ssx_disc_us_103_titles
     Author: "Margen67"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0075b870, 0x4e800020 ] # blr, cellGcmSetFlipMode case switch
   "1280x720 Resolution":
-    Games:
-      "SSX":
-        BLUS30849: [ 01.03 ]
+    Games: *ssx_disc_us_103_titles
     Author: "Margen67"
-    Notes: *SSX_Resolution_Notes
+    Notes: *ssx_resolution_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00b83f8e, 1280 ]
@@ -14808,24 +14812,16 @@ PPU-3c592821a982e587b06e8b026ece13897eab826f:
 
 PPU-e9844aeece4ed8abaffc9ee5966e0750f5747308:
   "60 FPS":
-    Games:
-      "SSX":
-        NPEB01121: [ 01.02 ]
-        NPJB00240: [ 01.03 ]
-        NPUB30892: [ 01.03 ]
+    Games: *ssx_psn_titles
     Author: "Margen67"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0075ba00, 0x4e800020 ] # blr, cellGcmSetFlipMode case switch
   "1280x720 Resolution":
-    Games:
-      "SSX":
-        NPEB01121: [ 01.02 ]
-        NPJB00240: [ 01.03 ]
-        NPUB30892: [ 01.03 ]
+    Games: *ssx_psn_titles
     Author: "Margen67"
-    Notes: *SSX_Resolution_Notes
+    Notes: *ssx_resolution_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00b8422e, 1280 ]
