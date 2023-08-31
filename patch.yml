@@ -9741,29 +9741,31 @@ Anchors:
   haze_hp: &haze_hp
     - [ be32, 0x0005328c, 0x60000000 ]
 
+  haze_disc_us_titles: &haze_disc_us_titles
+    "Haze":
+      BLUS30094: [ 01.36 ]
+
+  haze_disc_eu_titles: &haze_disc_eu_titles
+    "Haze":
+      BLES00157: [ 01.36 ]
+
 PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
   "Unlock FPS":
-    Games:
-      "Haze":
-        BLUS30094: [ 01.36 ]
+    Games: *haze_disc_us_titles
     Author: "illusion"
     Notes: *haze_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *haze_fps ]
   "Infinite Ammo":
-    Games:
-      "Haze":
-        BLUS30094: [ 01.36 ]
+    Games: *haze_disc_us_titles
     Author: "Aphelion"
     Notes: *haze_ammo_notes
     Patch Version: 1.0
     Patch:
       - [ load, *haze_ammo ]
   "Infinite Health":
-    Games:
-      "Haze":
-        BLUS30094: [ 01.36 ]
+    Games: *haze_disc_us_titles
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
@@ -9772,27 +9774,21 @@ PPU-b39773da362cfd02e0d498ccc9e3b1f310d6d5e7:
 
 PPU-e6714887d07308d64b93b86fb585a37ec08c538f:
   "Unlock FPS":
-    Games:
-      "Haze":
-        BLES00157: [ 01.36 ]
+    Games: *haze_disc_eu_titles
     Author: "illusion"
     Notes: *haze_fps_notes
     Patch Version: 1.0
     Patch:
       - [ load, *haze_fps ]
   "Infinite Ammo":
-    Games:
-      "Haze":
-        BLES00157: [ 01.36 ]
+    Games: *haze_disc_eu_titles
     Author: "Aphelion"
     Notes: *haze_ammo_notes
     Patch Version: 1.0
     Patch:
       - [ load, *haze_ammo ]
   "Infinite Health":
-    Games:
-      "Haze":
-        BLES00157: [ 01.36 ]
+    Games: *haze_disc_eu_titles
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
