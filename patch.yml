@@ -15696,7 +15696,7 @@ Anchors:
     "Puppeteer":
       BCJS30078: [ 01.00 ]
 
-  puppeteer_disc_eu_titles: &puppeteer_psn_eu_titles
+  puppeteer_disc_eu_titles: &puppeteer_disc_eu_titles
     "Puppeteer":
       BCES00935: [ 01.00 ]
 
@@ -15782,14 +15782,14 @@ PPU-a35283e496aaade410bce3883e61041aac08de7f:
 
 PPU-db9cef9215ebe29a73ca63ef69481de39f112b16:
   "60 FPS":
-    Games: *puppeteer_psn_eu_titles
+    Games: *puppeteer_disc_eu_titles
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ load, *puppeteer_disc_60fps ]
   "Disable MLAA":
-    Games: *puppeteer_psn_eu_titles
+    Games: *puppeteer_disc_eu_titles
     Author: "illusion"
     Notes:
     Patch Version: 1.0
