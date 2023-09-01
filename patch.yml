@@ -13390,8 +13390,9 @@ SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-m
         NPUA80959: [ All ]
         NPJA00098: [ All ]
         NPHA80250: [ All ]
-        NPEA90125: [ All ]
+      "Puppeteer: Demo version":
         NPJA90254: [ All ]
+        NPEA90125: [ All ]
     Author: "Whatcookie"
     Notes: *SPU_MLAA_Notes
     Group: SPUMLAA
