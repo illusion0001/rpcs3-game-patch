@@ -15674,15 +15674,15 @@ PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
 Anchors:
   puppeteer_psn_us_titles: &puppeteer_psn_us_titles
     "Puppeteer":
-      NPUA80959: [ 01.00 ]
+      NPUA80959: [ All ]
 
   puppeteer_psn_eu_titles: &puppeteer_psn_eu_titles
     "Puppeteer":
-      NPEA00439: [ 01.00 ]
+      NPEA00439: [ All ]
 
   puppeteer_psn_jp_titles: &puppeteer_psn_jp_titles
     "Puppeteer":
-      NPJA00098: [ 01.00 ]
+      NPJA00098: [ All ]
 
   puppeteer_psn_60fps: &puppeteer_psn_60fps
     - [ be32, 0x000431dc, 0x38800001 ] # 60 FPS
@@ -15694,15 +15694,15 @@ Anchors:
 
   puppeteer_disc_jp_titles: &puppeteer_disc_jp_titles
     "Puppeteer":
-      BCJS30078: [ 01.00 ]
+      BCJS30078: [ All ]
 
   puppeteer_disc_eu_titles: &puppeteer_disc_eu_titles
     "Puppeteer":
-      BCES00935: [ 01.00 ]
+      BCES00935: [ All ]
 
   puppeteer_disc_us_titles: &puppeteer_disc_us_titles
     "Puppeteer":
-      BCUS98227: [ 01.00 ]
+      BCUS98227: [ All ]
 
   puppeteer_disc_60fps: &puppeteer_disc_60fps
     - [ be32, 0x00042a2c, 0x38800001 ] # 60 FPS
@@ -15817,7 +15817,7 @@ PPU-6128299b57af7439d897966bae85f2e133cd7dc3:
   "60 FPS":
     Games:
       "Puppeteer":
-        BCAS20281: [ 01.00 ]
+        BCAS20281: [ All ]
     Author: "ZEROx, illusion"
     Notes:
     Patch Version: 1.0
@@ -15826,7 +15826,7 @@ PPU-6128299b57af7439d897966bae85f2e133cd7dc3:
   "Disable MLAA":
     Games:
       "Puppeteer":
-        BCAS20281: [ 01.00 ]
+        BCAS20281: [ All ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
