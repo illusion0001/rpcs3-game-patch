@@ -15812,6 +15812,27 @@ PPU-7b04ebca68e72a66b86043b9a1d30ad5d561f3c8:
     Patch:
       - [ load, *puppeteer_disc_mlaa ]
 
+
+PPU-6128299b57af7439d897966bae85f2e133cd7dc3:
+  "60 FPS":
+    Games:
+      "Puppeteer":
+        BCAS20281: [ 01.00 ]
+    Author: "ZEROx, illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *puppeteer_disc_60fps ]
+  "Disable MLAA":
+    Games:
+      "Puppeteer":
+        BCAS20281: [ 01.00 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *puppeteer_disc_mlaa ]
+
 PPU-6bb3fcddb5a54466743452c64407c76739955825:
   "60 FPS":
     Games: *puppeteer_demo_eu_titles
