@@ -13764,8 +13764,8 @@ PPU-17a273d69dad20980377e405809f7d888b6c6dce:
     Patch:
       - [ be16, 0x016adafe, 0x4270 ]
       - [ be32, 0x0013bf28, 0x3bc0003c ]
-      - [ bef64, 0x01c54a50, 0.0166666666666667 ] 
-      - [ bef64, 0x01c54a58, 30.0 ]
+      - [ bef64, 0x01c54a50, 0.0166666666666667 ]
+      - [ bef64, 0x01c54a58, 30 ]
       - [ bef64, 0x01c54a60, 0.0166666666666667 ]
 
 PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
@@ -13819,12 +13819,12 @@ PPU-d8376f500c89feb12500754ba0ec1483c4aeb5da:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16,  0x016e209e, 0x4270 ]
-      - [ be32,  0x00140c28, 0x3bc0003c ]
+      - [ be16, 0x016e209e, 0x4270 ]
+      - [ be32, 0x00140c28, 0x3bc0003c ]
       - [ bef64, 0x01c854b8, 0.0166666666666667 ]
-      - [ bef64, 0x01c854c0, 30.0 ]
+      - [ bef64, 0x01c854c0, 30 ]
       - [ bef64, 0x01c854c8, 0.0166666666666667 ]
-      - [ be32,  0x004e9c44, 0x3ba00001 ] # Remove vblank hack requirement
+      - [ be32, 0x004e9c44, 0x3ba00001 ] # Remove vblank hack requirement
 
 Anchors:
   sirenbc_60fps_notes: &sirenbc_60fps_notes
