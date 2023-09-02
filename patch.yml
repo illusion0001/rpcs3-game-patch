@@ -2824,6 +2824,17 @@ PPU-90a087f8c40920044c59fa402edf9e416cdd9187:
     Patch:
       - [ be32, 0x00444de0, 0x480001a0 ]
 
+PPU-a8ceabaebce0e8087c0d2e10384c3b2cedf51764:
+  "Unlock FPS":
+    Games:
+      "Red Dead Redemption":
+        BLJM60265: [ 01.00 ]
+    Author: "Whatcookie, FlexBy"
+    Notes: *RDR_FPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00252f44, 0x386003e8 ]
+
 Anchors:
   MirrorsEdge_UnlockFPS_Notes: &MirrorsEdge_UnlockFPS_Notes
     "Removes the ~62 FPS limit. Maximum framerate is half the Vblank frequency."
