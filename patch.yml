@@ -14354,7 +14354,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
       "Fallout New Vegas: Ultimate Edition":
         BLUS30888: [ 01.00 ]
     Author: "Aphelion"
-    Notes: "<b>Picking up some objects such as blueprints will freeze the game. Best used temporarily to duplicate the items you want.</b><br><br>Affects many items in the game, not just ammo and consumables. While this patch is enabled, affected items can't be removed from your inventory, and dropping them will duplicate them. Items can be sold for caps, but they do not leave your inventory."
+    Notes: "<b>Picking up some objects such as blueprints will freeze the game. Best used temporarily to duplicate the items you want.</b>\n\nAffects many items in the game, not just ammo and consumables. While this patch is enabled, affected items can't be removed from your inventory, and dropping them will duplicate them. Items can be sold for caps, but they do not leave your inventory."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0045bb6c, 0x60000000 ]
