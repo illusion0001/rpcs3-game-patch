@@ -7501,6 +7501,15 @@ Anchors:
       NPUA80472: [ 01.30 ]
       NPJA00052: [ 01.30 ]
 
+  lbp_server_url_beacon: &lbp_server_url_beacon
+    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp_server_url_infinite: &lbp_server_url_infinite
+    "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp_server_crash_bypass: &lbp_server_crash_bypass
+    - [ byte, 0x0074b368, 0x00 ] # crash bypass in sceNpCommerce2 function, remove this once it's fixed in rpcs3
+
 PPU-545c1abbf1c562d60fca7435401f020beab76b53:
   "Create Mode":
     Games: *lbp_130title
@@ -7515,18 +7524,18 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00767c40, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00767cf8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
-      - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
+      - [ utf8, 0x00767c40, *lbp_server_url_beacon ] # https server url
+      - [ utf8, 0x00767cf8, *lbp_server_url_beacon ] # http server url
+      - [ load, *lbp_server_crash_bypass ]
   "Infinite Custom Server":
     Games: *lbp_130title
-    Author: "Toyo"
-    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Author: "Toyo, uh wot"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00767c40, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00767cf8, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
-      - [ byte, 0x0074b368, 0x00 ] # crash bypass on sceNpCommerce2 function, remove this once it's fixed on rpcs3
+      - [ utf8, 0x00767c40, *lbp_server_url_infinite ] # https server url
+      - [ utf8, 0x00767cf8, *lbp_server_url_infinite ] # http server url
+      - [ load, *lbp_server_crash_bypass ]
 
 Anchors:
   lbp3_126title: &lbp3_126title
