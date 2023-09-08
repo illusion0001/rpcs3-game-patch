@@ -1709,6 +1709,49 @@ PPU-6f69ee207208d55faacb75a3aac6a9ce2aa290b7:
     Patch:
       - [ load, *LC_BLOOM ]
 
+PPU-1974e83c5c7b4fae6f2c270e62f7dfaece5a731b:
+  "Unlock FPS":
+    Games:
+      "Lollipop Chainsaw":
+        NPJB00273: [ All ]
+    Author: "Whatcookie, FlexBy"
+    Notes: *LC_FPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00932e24, 0x60000000 ]
+      - [ be32, 0x00932e84, 0x60000000 ]
+      - [ be32, 0x00932e88, 0x60000000 ]
+  "Disable Image Grain":
+    Games:
+      "Lollipop Chainsaw":
+        NPJB00273: [ All ]
+    Author: "boma, FlexBy"
+    Notes:
+    Patch Version: 2.0
+    Patch:
+    - [ be32, 0x00408940, 0x4800007c ] # b 0x40870c
+  "Disable Low-Resolution Depth of Field":
+    Games:
+      "Lollipop Chainsaw":
+        NPJB00273: [ All ]
+    Author: "boma, FlexBy"
+    Notes: *LC_DOF_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0016c484, 0x38a00000 ] # li r5 0
+      - [ be32, 0x0032721c, 0x38a00000 ] # li r5 0
+      - [ be32, 0x00408748, 0x38a00000 ] # li r5 0
+  "Disable Bloom":
+    Games:
+      "Lollipop Chainsaw":
+        NPJB00273: [ All ]
+    Author: "boma, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0016c478, 0x38c00000 ] # li r6 0
+      - [ be32, 0x0040873c, 0x38c00000 ] # li r6 0
+
 PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   "Disable Color Correction":
     Games:
