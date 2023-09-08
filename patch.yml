@@ -13304,6 +13304,15 @@ PPU-2f4e1dcfe8172b85278271be5aea9dfcdadb8eff:
       - [ be16, 0x0041d3bc, 0x4280 ]
 
 Anchors:
+  SHD_unlockfps_notes: &SHD_unlockfps_notes
+    "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+
+  SHD_DOF_notes: &SHD_DOF_notes
+    "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect color-grading and will reduce bloom intensity because those effects share the same shader pipeline with DoF. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
+
+  SHD_MLAA_notes: &SHD_MLAA_notes
+    "Removes both Morphological Anti-Aliasing (MLAA) and Fast Approximate Anti-Aliasing (FXAA), post-process AA solutions that significantly impact image definition and sharpness. Particularly useful when using resolution upscaling."
+
   SHD_titles: &SHD_titles
     "Silent Hill Downpour":
       BLES01446: [ 01.01 ]
@@ -13313,14 +13322,14 @@ PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
   "Unlock FPS":
     Games: *SHD_titles
     Author: "illusion"
-    Notes: "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
+    Notes: *SHD_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002a1250, 0x60000000 ]
   "Disable Low-Resolution Depth of Field":
     Games: *SHD_titles
     Author: "boma"
-    Notes: "Disables the DoF effect which doesn't correctly scale with resolution upscaling. This patch may slightly affect color-grading and will reduce bloom intensity because those effects share the same shader pipeline with DoF. Additionally, 16x Anisotropic Filtering can now be forced via custom config without causing issues."
+    Notes: *SHD_DOF_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000fa828, 0x38a00000 ] # li r5, 0x0
@@ -13329,13 +13338,47 @@ PPU-11f50d10f4626cdd59837e2fe44b701a9d9bfeac: # SHGAME.SELF
   "Disable MLAA & FXAA":
     Games: *SHD_titles
     Author: "boma"
-    Notes: "Removes both Morphological Anti-Aliasing (MLAA) and Fast Approximate Anti-Aliasing (FXAA), post-process AA solutions that significantly impact image definition and sharpness. Particularly useful when using resolution upscaling."
+    Notes: *SHD_MLAA_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x00771673, 0x64 ] # cmpwi r3 0x64
       - [ byte, 0x00771674, 0x41 ] # beq
       - [ be32, 0x0077167c, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
       - [ be32, 0x0076efb4, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
+
+PPU-aa5570c4d54fb575f39e4a0067e837056473f4e0: # SHGAME.SELF
+  "Unlock FPS":
+    Games:
+      "Silent Hill Downpour":
+        BLJM60391: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes: *SHD_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002a1020, 0x60000000 ]
+  "Disable Low-Resolution Depth of Field":
+    Games:
+      "Silent Hill Downpour":
+        BLJM60391: [ 01.00 ]
+    Author: "boma, FlexBy"
+    Notes: *SHD_DOF_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000fa828, 0x38a00000 ] # li r5, 0x0
+      - [ be32, 0x00270a30, 0x38a00000 ] # li r5, 0x0
+      - [ be32, 0x003108f8, 0x38a00000 ] # li r5, 0x0
+  "Disable MLAA & FXAA":
+    Games:
+      "Silent Hill Downpour":
+        BLJM60391: [ 01.00 ]
+    Author: "boma, FlexBy"
+    Notes: *SHD_MLAA_notes
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00771723, 0x64 ] # cmpwi r3 0x64
+      - [ byte, 0x00771724, 0x41 ] # beq
+      - [ be32, 0x0077172c, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
+      - [ be32, 0x0076f064, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
 
 Anchors:
   SPU_MLAA_Notes: &SPU_MLAA_Notes
