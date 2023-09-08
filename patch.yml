@@ -16111,6 +16111,8 @@ PPU-49aa433a899d78438decde97c4e1b79a473148a1:
     Games:
       "Sonic the Fighters":
         NPUB30927: [ 01.00 ]
+        NPEB01162: [ 01.00 ]
+        NPJB00250: [ 01.00 ]
     Author: "illusion, Margen67"
     Notes: "\"Screen Size\" must be set to Full in the game settings. UI Elements will be stretched.\nPillar/letterboxed or stretched 4:3 is the normal aspect ratio without the patch."
     Patch Version: 1.0
