@@ -1253,27 +1253,6 @@ PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
       - [ be64, 0x000593c0, 0x807f000cfc20f890 ]
 
 Anchors:
-  lbp2_ar_notes: &lbp2_ar_notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings."
-  lbp2_ar_configurable_values: &lbp2_ar_configurable_values
-    "Aspect Ratio":
-      Type: double_enum
-      Value: &32_9_value 3.555555555555556
-      Allowed Values:
-        "32:9": *32_9_value
-        "21:9 (3840x1600)": 2.4
-        "21:9 (3440x1440)": 2.388888888888889
-        "21:9 (2560x1080)": 2.37037037037037
-        "16:10": 1.6
-        "4:3": 1.333333333333333
-        "5:4": 1.25
-
-  lbp2_121title: &lbp2_121title
-    "LittleBigPlanet 2":
-      BCES00850: [ 01.21 ]
-      BCES01693: [ 01.21 ]
-      NPUA80662: [ 01.21 ]
-
   lbp2_133title: &lbp2_133title
     "LittleBigPlanet 2":
       BCES00850: [ 01.33 ]
@@ -1290,6 +1269,32 @@ Anchors:
       NPEA00324: [ 01.33 ]
       NPEA00437: [ 01.33 ]
       NPUA80662: [ 01.33 ]
+  lbp2_121title: &lbp2_121title
+    "LittleBigPlanet 2":
+      BCES00850: [ 01.21 ]
+      BCES01693: [ 01.21 ]
+      NPUA80662: [ 01.21 ]
+
+  lbp2_ar_notes: &lbp2_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  lbp2_ar_configurable_values: &lbp2_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
+  lbp2_server_url_beacon: &lbp2_server_url_beacon
+    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp2_server_url_infinite: &lbp2_server_url_infinite
+    "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
 
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   "Aspect Ratio":
@@ -1310,19 +1315,19 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   "Beacon Custom Server":
     Games: *lbp2_133title
     Author: "uh wot"
-    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00c51b68, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00c51c08, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ utf8, 0x00c51b68, *lbp2_server_url_beacon ] # https server url
+      - [ utf8, 0x00c51c08, *lbp2_server_url_beacon ] # http server url
   "Infinite Custom Server":
     Games: *lbp2_133title
-    Author: "Toyo"
-    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Author: "Toyo, uh wot"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00c51b68, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00c51c08, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ utf8, 0x00c51b68, *lbp2_server_url_infinite ] # https server url
+      - [ utf8, 0x00c51c08, *lbp2_server_url_infinite ] # http server url
 
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
