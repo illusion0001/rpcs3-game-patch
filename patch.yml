@@ -8952,6 +8952,30 @@ PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
       - [ be32, 0x00dee1b0, 0x3f100001 ] # Ingame 21:9 AR
 
 Anchors:
+  uc1_disc100title: &uc1_disc100title
+    "Uncharted: Drake's Fortune":
+      BCES00065: [ 01.00 ]
+      BCUS98103: [ 01.00 ]
+  uc1_disc100asiatitle: &uc1_disc100asiatitle
+    "Uncharted: Drake's Fortune":
+      BCAS20024: [ 01.00 ]
+  uc1_disc101title: &uc1_disc101title
+    "Uncharted: Drake's Fortune":
+      BCES00065: [ 01.01 ]
+      BCJS30015: [ 01.01 ]
+      BCUS98103: [ 01.10 ]
+  uc1_disc101asiatitle: &uc1_disc101asiatitle
+    "Uncharted: Drake's Fortune":
+      BCAS20024: [ 01.01 ]
+  uc1_PSNalltitle: &uc1_PSNalltitle
+    "Uncharted: Drake's Fortune":
+      NPEA00363: [ All ]
+      NPUA80697: [ All ]
+      NPHA80193: [ All ]
+  uc1_internaltitle: &uc1_internaltitle
+    "Uncharted: Drake's Fortune":
+      TEST12345: [ 01.00 ]
+
   uc1_unlockdevkitmenus: &uc1_unlockdevkitmenus
     - [ be16, 0x0007023c, 0x4800 ] # rendering
     - [ be16, 0x00070300, 0x4800 ] # col
@@ -8965,27 +8989,6 @@ Anchors:
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc1_debugmenu_notes2: &uc1_debugmenu_notes2
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
-
-  uc1_disc100title: &uc1_disc100title
-    "Uncharted: Drake's Fortune":
-      BCES00065: [ 01.00 ]
-      BCUS98103: [ 01.00 ]
-
-  uc1_disc101title: &uc1_disc101title
-    "Uncharted: Drake's Fortune":
-      BCES00065: [ 01.01 ]
-      BCJS30015: [ 01.01 ]
-      BCUS98103: [ 01.10 ]
-
-  uc1_PSNalltitle: &uc1_PSNalltitle
-    "Uncharted: Drake's Fortune":
-      NPEA00363: [ All ]
-      NPUA80697: [ All ]
-      NPHA80193: [ All ]
-
-  uc1_internaltitle: &uc1_internaltitle
-    "Uncharted: Drake's Fortune":
-      TEST12345: [ 01.00 ]
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   "Disable Motion Blur":
@@ -9012,27 +9015,21 @@ PPU-8007056e52279bea26c15669d1ee08c2df321d00:
 
 PPU-4a7e0af86fbdf2280aed3d98479d04461e50e8cf:
   "Disable Motion Blur":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.00 ]
+    Games: *uc1_disc100asiatitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a8, 0x995d ] # (mem address: 0x42974a)
   "Disable Depth of Field":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.00 ]
+    Games: *uc1_disc100asiatitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000ec2a0, 0x995d ] # (mem address: 0x42974c)
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.00 ]
+    Games: *uc1_disc100asiatitle
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
@@ -9085,54 +9082,42 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e5284, 0x995d ] # (mem address: 0xbb43da)
   "Disable Depth of Field":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
   "Debug Menu":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b6ac, 0x409e ]
   "Unlock Devkit menus":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "illusion"
     Notes: *uc1_debugmenu_notes2
     Patch Version: 1.0
     Patch:
       - [ load, *uc1_unlockdevkitmenus ]
   "Infinite Health":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002ac77c, 0x60000000 ]
   "Infinite Ammo":
-    Games:
-      "Uncharted: Drake's Fortune":
-        BCAS20024: [ 01.01 ]
+    Games: *uc1_disc101asiatitle
     Author: "Hiei-YYH"
     Notes:
     Patch Version: 1.0
