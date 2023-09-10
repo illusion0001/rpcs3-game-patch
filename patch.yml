@@ -7651,6 +7651,12 @@ Anchors:
       NPUA81116: [ 01.26 ]
       NPHA80277: [ 01.26 ]
 
+  lbp3_server_url_beacon: &lbp3_server_url_beacon
+    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp3_server_url_infinite: &lbp3_server_url_infinite
+    "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
+
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Create Mode":
     Games: *lbp3_126title
@@ -7662,23 +7668,23 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Beacon Custom Server":
     Games: *lbp3_126title
     Author: "uh wot"
-    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00d9e4c4, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00d9e53c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # presence server url
-      - [ utf8, 0x00d9e58c, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # live server url
-      - [ utf8, 0x00d9e5d8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ utf8, 0x00d9e4c4, *lbp3_server_url_beacon ] # https server url
+      - [ utf8, 0x00d9e53c, *lbp3_server_url_beacon ] # presence server url
+      - [ utf8, 0x00d9e58c, *lbp3_server_url_beacon ] # live server url
+      - [ utf8, 0x00d9e5d8, *lbp3_server_url_beacon ] # http server url
   "Infinite Custom Server":
     Games: *lbp3_126title
-    Author: "Toyo"
-    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team. \nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i) \n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication. \n\nThanks to @uh wot for locating the addresses."
+    Author: "Toyo, uh wot"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00d9e4c4, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
-      - [ utf8, 0x00d9e53c, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # presence server url
-      - [ utf8, 0x00d9e58c, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # live server url
-      - [ utf8, 0x00d9e5d8, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ utf8, 0x00d9e4c4, *lbp3_server_url_infinite ] # https server url
+      - [ utf8, 0x00d9e53c, *lbp3_server_url_infinite ] # presence server url
+      - [ utf8, 0x00d9e58c, *lbp3_server_url_infinite ] # live server url
+      - [ utf8, 0x00d9e5d8, *lbp3_server_url_infinite ] # http server url
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
