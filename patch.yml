@@ -7428,6 +7428,26 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
       - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
 
+  "Allow Running Unpacked":
+    Games:
+      "Gran Turismo 5":
+        BCES00569: [ 02.11 ]
+    Author: "Nenkai"
+    Patch Version: 1.0
+    Notes: "Allows running the game unpacked for modding purposes.
+    Requires extracted game files in 'USRDIR/direct' as GT.VOL then PDIPFS contents on-top."
+    Patch:
+      - [ be32, 0x000120a0, 0x386004A0 ] # Adjust sizeof(PDIPS3::FileDevicePFSGameData) to sizeof(PDIPS3::FileDeviceCellFS) for new
+      - [ be32, 0x000120d8, 0x3888E308 ] # Adjust parameters PDIPS3::FileDeviceGameData(device, param1, param2, param3)
+      - [ be32, 0x000120dc, 0x38A8E330 ] # Change pointer to a vtable name
+      - [ be32, 0x000120e0, 0x7D064378 ] # Change pointer to a vtable name
+      - [ be32, 0x00a73160, 0x48004ED5 ] # Rectify pointer offset to device list field
+      - [ be32, 0x00a7316c, 0x941D0498 ] # Change PDIPS3::FileDevicePFSGameData device to PDIPS3::FileDeviceCellFS
+      - [ utf8, 0x013dde10, /dev_hdd0\0 ] # param_1
+      - [ be16, 0x013dde19, 0x0000 ] # Null terminate
+      - [ utf8, 0x013dde38, /game/BCES00569/USRDIR/direct ] # param_2
+      - [ be16, 0x013dde55, 0x0000 ] # Null terminate
+
 Anchors:
   gt6_devlop_122: &gt6_devlop_122
     - [ be32, 0x0081715c, 0x38600001 ]
