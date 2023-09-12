@@ -8871,7 +8871,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
     Notes: *sotc_full_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00316827, 2 ]
+      - [ byte, 0x00316827, 0x02 ]
   "Disable Bloom":
     Games: *sotc_psn100title
     Author: "illusion"
@@ -8902,7 +8902,7 @@ PPU-4a1a2300cf31f269d76406d095f2babaa47ae8d3: # shadow eboot.bin
     Notes: *sotc_60fps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x0031f677, 1 ]
+      - [ byte, 0x0031f677, 0x01 ]
 # Memory Patches
   "Extended FOV":
     Games: *sotc_psn100title
@@ -8919,7 +8919,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
     Notes: *sotc_full_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x003298b7, 2 ]
+      - [ byte, 0x003298b7, 0x02 ]
   "Disable Bloom":
     Games: *sotc_101title
     Author: "illusion"
@@ -8950,7 +8950,7 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
     Notes: *sotc_60fps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00332707, 1 ]
+      - [ byte, 0x00332707, 0x01 ]
 # Memory Patches
   "Extended FOV":
     Games: *sotc_101title
