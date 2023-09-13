@@ -8696,54 +8696,44 @@ PPU-4a50b03c15c25dccbcf231c6ec4cea7fda8287bc:
       - [ bef32, 0x0072bf80, "FPS" ] # Absorb Glow Framerate Fix
 
 Anchors:
+  ico_sotc_psn100serials: &ico_sotc_psn100serials
+    NPEA00279: [ 01.00 ]
+    NPUA80676: [ 01.00 ]
+    NPUA80677: [ 01.00 ]
+  ico_sotc_disc100serials: &ico_sotc_disc100serials
+    BCES01097: [ 01.00 ]
+    BCUS98259: [ 01.00 ]
+  ico_sotc_101serials: &ico_sotc_101serials
+    BCES01097: [ 01.01 ]
+    BCES01115: [ 01.01 ]
+    BCUS98259: [ 01.01 ]
+    NPEA00279: [ 01.01 ]
+    NPUA80676: [ 01.01 ]
+    NPUA80677: [ 01.01 ]
+
+  ico_psn100title: &ico_psn100title
+    "ICO": *ico_sotc_psn100serials
+  ico_disc100title: &ico_disc100title
+    "ICO": *ico_sotc_disc100serials
+  ico_101title: &ico_101title
+    "ICO": *ico_sotc_101serials
+
+  sotc_psn100title: &sotc_psn100title
+    "Shadow of the Colossus": *ico_sotc_psn100serials
+  sotc_disc100title: &sotc_disc100title
+    "Shadow of the Colossus": *ico_sotc_disc100serials
+  sotc_101title: &sotc_101title
+    "Shadow of the Colossus": *ico_sotc_101serials
+
   ico_mlaa_notes: &ico_mlaa_notes
     "Allows for the use of Resolution Scaling in the title and improves performance."
+
   sotc_extended_fov_notes: &sotc_extended_fov_notes
     "Camera may zoom out during cinematic change."
   sotc_full_notes: &sotc_full_notes
     "Enables Full Pixel Mode on start so you don't have to change it in the options. Disables black borders/overscan."
   sotc_60fps_notes: &sotc_60fps_notes
     "Allows 60 FPS without changing Vblank."
-
-  ico_psn100title: &ico_psn100title
-    "ICO":
-      NPEA00279: [ 01.00 ]
-      NPUA80676: [ 01.00 ]
-      NPUA80677: [ 01.00 ]
-
-  ico_disc100title: &ico_disc100title
-    "ICO":
-      BCES01097: [ 01.00 ]
-      BCUS98259: [ 01.00 ]
-
-  ico_101title: &ico_101title
-    "ICO":
-      BCES01097: [ 01.01 ]
-      BCES01115: [ 01.01 ]
-      BCUS98259: [ 01.01 ]
-      NPEA00279: [ 01.01 ]
-      NPUA80676: [ 01.01 ]
-      NPUA80677: [ 01.01 ]
-
-  sotc_psn100title: &sotc_psn100title
-    "Shadow of the Colossus":
-      NPEA00279: [ 01.00 ]
-      NPUA80676: [ 01.00 ]
-      NPUA80677: [ 01.00 ]
-
-  sotc_disc100title: &sotc_disc100title
-    "Shadow of the Colossus":
-      BCES01097: [ 01.00 ]
-      BCUS98259: [ 01.00 ]
-
-  sotc_101title: &sotc_101title
-    "Shadow of the Colossus":
-      BCES01097: [ 01.01 ]
-      BCES01115: [ 01.01 ]
-      BCUS98259: [ 01.01 ]
-      NPEA00279: [ 01.01 ]
-      NPUA80676: [ 01.01 ]
-      NPUA80677: [ 01.01 ]
 
 PPU-1b40cda726a12a28393206edcd63252df76ca39c: # ICO eboot.bin
   "Disable MLAA":
