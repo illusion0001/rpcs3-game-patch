@@ -1933,6 +1933,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
         BLUS31201: [ 01.00 ]
+        NPUB31252: [ 01.00 ]
     Author: "ZEROx"
     Notes:
     Patch Version: 1.0
@@ -1951,6 +1952,7 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       "Need for Speed Rivals":
         BLES01894: [ 01.00 ]
         BLUS31201: [ 01.00 ]
+        NPUB31252: [ 01.00 ]
     Author: "ZEROx"
     Notes: "Disable overall blur effect, small speed improvement."
     Patch Version: 1.0
