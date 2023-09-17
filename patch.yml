@@ -15707,6 +15707,17 @@ PPU-d944608b757f50c6207f4147db21df0f8f05e65e:
     Patch:
       - [ be32, 0x006beea8, 0x7ce6292d ]
 
+PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
+  "Infinite Health":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        NPEB01228: [ 01.04 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a82844, 0x38a00000 ]
+
 Anchors:
   moond_100_title: &moond_100_title
     "Moon Diver":
