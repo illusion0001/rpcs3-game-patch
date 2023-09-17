@@ -15717,6 +15717,25 @@ PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a82844, 0x38a00000 ]
+  "No Stun":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        NPEB01228: [ 01.04 ]
+    Author: "bungholio, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a3bf9c, 0x48000020 ]
+      - [ be32, 0x00a72930, 0x48000044 ]
+  "Can Always Use Ripper Mode":
+    Games:
+      "Metal Gear Rising: Revengeance":
+        NPEB01228: [ 01.04 ]
+    Author: "bungholio, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a33fd8, 0x38600001 ]
 
 Anchors:
   moond_100_title: &moond_100_title
