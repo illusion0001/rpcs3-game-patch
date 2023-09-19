@@ -13415,6 +13415,17 @@ PPU-1d6e69213f25e5c4aeca823b8b6942b55e660392:
     Patch:
       - [ load, *infinite_patch ]
 
+PPU-7cd3660cf7c89791e1436b0a52de886ad4d3eb4a:
+  "Infinite Custom Server":
+    Games:
+      "LittleBigPlanet Karting":
+        BCES01423: [ 01.21 ]
+    Author: "Toyo, k7x1e, uh wot"
+    Notes: *infinite_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *infinite_patch ]
+
 PPU-3786b2a3161aa099e40ac0917e5e0e4ce570446f:
   "Infinite Custom Server":
     Games:
@@ -13446,7 +13457,7 @@ PPU-6ddd32ae96c9fc68d1f849f965cb60ba1af1eafb:
     Notes: *infinite_notes
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x011aad80, "lbpk.lnfinite.site\0" ] # http server url, the versions BCES01423, BCAS20205, BCUS99089, BCJS30085 left, unknown PPU
+      - [ utf8, 0x011aad80, "lbpk.lnfinite.site\0" ] # http server url, the versions BCAS20205, BCUS99089, BCJS30085 left, unknown PPU
 
 Anchors:
   SHD_unlockfps_notes: &SHD_unlockfps_notes
