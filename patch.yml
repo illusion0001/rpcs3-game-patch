@@ -14231,12 +14231,28 @@ PPU-499ef508be74e55261bf810e07271147e424cfd0:
       "Fallout 3 GOTY Edition":
         BLES00737: [ 01.01 ]
       "Fallout 3":
+        BLES00334: [ 01.61 ]
         BLES00335: [ 01.61 ]
+        BLES00337: [ 01.61 ]
     Author: "FlexBy"
     Notes: *fallout3_60fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00702cfc, 0x60000000 ]
+
+PPU-08089ec0ec46d594e8d3d0a8b465acc169591deb:
+  "60 FPS":
+    Games:
+      "Fallout 3":
+        BLES00333: [ 01.61 ]
+        BLES00336: [ 01.61 ]
+        BLES00399: [ 01.61 ]
+        BLUS30185: [ 01.61 ]
+    Author: "FlexBy"
+    Notes: *fallout3_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00702bac, 0x60000000 ]
 
 PPU-ba9dbb848fd6307475aa956beaef09281199f459:
   "60 FPS":
@@ -14249,6 +14265,28 @@ PPU-ba9dbb848fd6307475aa956beaef09281199f459:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007acf0c, 0x60000000 ]
+
+PPU-a021e45a42df11016a0bc39dbb260924d334abcb:
+  "60 FPS":
+    Games:
+      "Fallout 3 GOTY Edition":
+        BLUS30455: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *fallout3_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00702e1c, 0x60000000 ]
+
+PPU-4cb8b80cad908bd0e6f22bb5dd97aca9ad10e572:
+  "60 FPS":
+    Games:
+      "Fallout 3":
+        BLUS30234: [ 01.61 ]
+    Author: "FlexBy"
+    Notes: *fallout3_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00702cfc, 0x60000000 ]
 
 PPU-14b6b0db50937ac4c1232c029e9c79434dc639bb:
   "60 FPS":
@@ -14271,17 +14309,6 @@ PPU-d62a28e0d514aee88442e6d0bd3c412e53166ab9:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007b251c, 0x60000000 ]
-
-PPU-a021e45a42df11016a0bc39dbb260924d334abcb:
-  "60 FPS":
-    Games:
-      "Fallout 3 GOTY Edition":
-        BLUS30455: [ 01.01 ]
-    Author: "FlexBy"
-    Notes: *fallout3_60fps_notes
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00702e1c, 0x60000000 ]
 
 Anchors:
   border1v107_title: &border1v107_title
