@@ -14167,6 +14167,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion"
     Notes: "Best used with the Infinite Carry Weight Patch; affects many items in the game, not just ammo and consumables. While this patch is enabled, affected items can't be removed from your inventory, and dropping them will duplicate them. Items can be sold for caps, but they do not leave your inventory."
     Patch Version: 1.1
@@ -14177,6 +14178,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion"
     Notes: "Essentially permanent if you save with this patch enabled - adds over 1 billion caps to your inventory which will remain after the patch is disabled."
     Patch Version: 1.0
@@ -14186,6 +14188,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion"
     Notes: "Using weapons and armor does not affect their condition. Repairing items brings them to perfect condition."
     Patch Version: 1.0
@@ -14195,6 +14198,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion"
     Notes: "Press square to instantly reload single-shot weapons like the Missile Launcher and Fat Man."
     Patch Version: 1.0
@@ -14204,6 +14208,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
@@ -14213,6 +14218,7 @@ PPU-ef1de7a2b91566a4b0e2acc177a6c2f1cecdfd7e:
     Games:
       "Fallout 3 GOTY Edition":
         BLUS30451: [ 01.00 ]
+        BLUS30455: [ 01.00 ]
     Author: "Aphelion, illusion"
     Notes: *fallout3_60fps_notes
     Patch Version: 1.0
