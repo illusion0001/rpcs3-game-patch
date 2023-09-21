@@ -14272,6 +14272,17 @@ PPU-d62a28e0d514aee88442e6d0bd3c412e53166ab9:
     Patch:
       - [ be32, 0x007b251c, 0x60000000 ]
 
+PPU-a021e45a42df11016a0bc39dbb260924d334abcb:
+  "60 FPS":
+    Games:
+      "Fallout 3 GOTY Edition":
+        BLUS30455: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *fallout3_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00702e1c, 0x60000000 ]
+
 Anchors:
   border1v107_title: &border1v107_title
     "Borderlands":
