@@ -14739,6 +14739,66 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Patch:
       - [ byte, 0x000928d5, 0x61 ] # f3 register
 
+PPU-d01110afee86aa2861be1f5f23cb330c88555598:
+  "60 FPS":
+    Games:
+      "Fallout New Vegas":
+        BLUS30500: [ 01.06 ]
+        BLUS30626: [ 01.06 ]
+        BLUS30627: [ 01.06 ]
+        BLES00901: [ 01.06 ]
+        BLES00902: [ 01.06 ]
+        BLES00903: [ 01.06 ]
+        BLES00904: [ 01.06 ]
+        BLES00905: [ 01.06 ]
+        BLES01057: [ 01.06 ]
+    Author: "FlexBy"
+    Notes: *falloutNV_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0098ef1c, 0x60000000 ]
+
+PPU-ac336a37080898ca29e486d4a835e5faef00ce1d:
+  "60 FPS":
+    Games:
+      "Fallout New Vegas":
+        BLUS30500: [ 01.07 ]
+        BLUS30626: [ 01.07 ]
+        BLUS30627: [ 01.07 ]
+        BLES00901: [ 01.07 ]
+        BLES00902: [ 01.07 ]
+        BLES00903: [ 01.07 ]
+        BLES00904: [ 01.07 ]
+        BLES00905: [ 01.07 ]
+        BLES01057: [ 01.07 ]
+    Author: "FlexBy"
+    Notes: *falloutNV_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0098ef1c, 0x60000000 ]
+
+PPU-3c4c7e49b9c45fec037214c28b0b00d01caf6ea5:
+  "60 FPS":
+    Games:
+      "Fallout New Vegas":
+        BLUS30500: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *falloutNV_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x009794fc, 0x60000000 ]
+
+PPU-fdcd04ef929deeb2cf5024635d9803407f667bc4:
+  "60 FPS":
+    Games:
+      "Fallout New Vegas":
+        BLJM60282: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *falloutNV_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0098e8ec, 0x60000000 ]
+
 Anchors:
   dantesinferno_ar_notes: &dantesinferno_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements are stretched."
