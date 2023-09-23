@@ -16599,6 +16599,29 @@ PPU-5ca4dd04162bc51987b2613d21961a6db6816870:
     Patch:
       - [ be32, 0x008edee4, 0xf8051c60 ]
 
+PPU-5055e0288f6c75fd8341b3c6b4b4223fd417e82d:
+  "60 FPS":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLES01329: [ 02.00 ]
+    Author: "illusion, FlexBy"
+    Notes: *skyrim_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008f8bc8, 0xf8051c60 ]
+
+PPU-336bdd5d924742e981105232d0cbaf7c035a1517:
+  "60 FPS":
+    Games:
+      "The Elder Scrolls V: Skyrim":
+        BLES01329: [ 02.05 ]
+        BLES01330: [ 02.05 ]
+    Author: "illusion, FlexBy"
+    Notes: *skyrim_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008dfe40, 0xf8051c60 ]
+
 PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
   "Skip save warning on startup":
     Games:
