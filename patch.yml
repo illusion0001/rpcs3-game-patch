@@ -7325,6 +7325,28 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0093a8c0, 0x9b830057 ]
+  "Disable Motion Blur":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007719ec, 0x480000c4 ]
+  "Disable Mesh Trimming":
+    Games: *uc3_kioskdemo
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0073ea7c, 0x980b0004 ]
+  "Debug Menu":
+    Games: *uc3_kioskdemo
+    Author: "dron_3,HdHereidme, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0072f5c0, 0x38000001 ]
+      - [ be32, 0x0072f5c4, 0x980B2163 ]
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
