@@ -5104,6 +5104,16 @@ PPU-e71d82fa70d09b7df9493f0336717dd9a4977216:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00036848, 0x38a00000 ]
+  "Debug Menu":
+    Games:
+      "The Last of Us Demo":
+        NPUA70257: [ 01.00 ]
+    Author: "dron_3, HdHereidme, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a46720, 0x38000001 ]
+      - [ be32, 0x00a46724, 0x980b2db0 ]
 
 Anchors:
   MGS4_Widescreen_Notes: &MGS4_Widescreen_Notes
