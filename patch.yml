@@ -3032,6 +3032,22 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f830, 0x00 ]
+PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
+  "GTA:OG Custom Server":
+    Games: *gta5_JP123title
+    Author: "logan, Byrom, FlexBy"
+    Notes: "GTA:OG - GTA Online server revival project"
+    Patch Version: 1.3
+    Patch:
+      - [ utf8, 0x01851328, "http://\0" ] 
+      - [ utf8, 0x0184f95c, "http://\0" ] 
+      - [ utf8, 0x01850d1c, "ros.gtao.gg\0" ] 
+      - [ byte, 0x00d4d9cf, 0x00 ] 
+      - [ be16, 0x012de6e6, 0x03 ] 
+      - [ be32, 0x012d1480, 0x38600001 ] 
+      - [ be32, 0x012d1484, 0x4E800020 ] 
+      - [ be32, 0x00d2e8a0, 0x39200001 ]
+      - [ be32, 0x00d2e8b0, 0x38C0001B ]
 
 PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
   "60 FPS":
