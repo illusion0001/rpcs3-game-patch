@@ -3032,7 +3032,6 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f830, 0x00 ]
-PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
   "GTA:OG Custom Server":
     Games: *gta5_JP123title
     Author: "logan, Byrom, FlexBy"
