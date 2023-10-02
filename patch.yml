@@ -4856,6 +4856,22 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch Version: 2.0
     Patch:
       - [ load, *tlou111_db ]
+  "WCB/WDB Performance fix":
+    Games: *tlou111_title
+    Author: "ZEROx"
+    Notes: "Disables Depth Buffer Reload, reduces performance penalty using WCB/WDB."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00aaa030, 0x9b83 ] # Speedup 1571ad8 (WCB)
+      - [ be32, 0x00a974f4, 0x4bfd4ef1 ] #Call
+      - [ be32, 0x00a6c3e4, 0x3c600142 ] #r3 = 0x1420000
+      - [ be32, 0x00a6c3e8, 0xa0639ef4 ] #lhz r3,0x9ef4(r3)
+      - [ be32, 0x00a6c3ec, 0x2f83080c ] #r3 vs 0x80c
+      - [ be32, 0x00a6c3f0, 0x419e000c ] #beq
+      - [ be32, 0x00a6c3f4, 0xc1a9038c ] #f13 original load
+      - [ be32, 0x00a6c3f8, 0x48000008 ]
+      - [ be32, 0x00a6c3fc, 0xc1be8100 ] #f13 == f0
+      - [ be32, 0x00a6c400, 0x4e800020 ] #ret
   "Speedboost":
     Games: *tlou111_title
     Author: "ZEROx, illusion"
@@ -9168,6 +9184,13 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005d14d8, 0x39290000 ]
+  "WCB Performance & Z-fighting fix":
+    Games: *uc1_disc101title
+    Author: "ZEROx"
+    Notes: "Disables Reload Depth Cull Buffer, restores performance after enabling WCB/WDB, especially using higher resolutions, fixes flickering surfaces."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000e52a0, 0x981d ]
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
