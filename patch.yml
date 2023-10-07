@@ -5677,7 +5677,7 @@ Anchors:
     - [ be16, 0x0072d394, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f9bfd0)
 
   uc2_PSN_ref: &uc2_PSN_ref
-    - [ be32, 0x00071b0c, 0x38000001 ] #REflections
+    - [ be32, 0x00071b0c, 0x38000001 ] #Reflections
     - [ be32, 0x00786508, 0x3a400001 ] #Heat waves
 
   uc2_PSN_mb: &uc2_PSN_mb
