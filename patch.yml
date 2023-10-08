@@ -5615,8 +5615,8 @@ Anchors:
     - [ be32, 0x0077f970, 0x3a400001 ] #Heat waves
 
   uc2_Disc_100_mb: &uc2_Disc_100_mb
-    - [ be16, 0x000c93c0, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9b64f)
-    - [ be32, 0x00067f84, 0x38000001 ] # Enable explosion blur
+    - [ byte, 0x0075a7e4, 0x41 ] #Motion blur                                (mem address: 0x0e9b64f)
+    - [ byte, 0x0075b454, 0x40 ]
 
   uc2_Disc_100_vmb: &uc2_Disc_100_vmb
     - [ be16, 0x000c961c, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9b894)
@@ -5649,8 +5649,8 @@ Anchors:
     - [ be32, 0x0077e1e8, 0x3a400001 ] #Heat waves
 
   uc2_Disc_109_mb: &uc2_Disc_109_mb
-    - [ be16, 0x000c2860, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9c24f)
-    - [ be32, 0x00065f14, 0x38000001 ] # Enable explosion blur
+    - [ byte, 0x00758ff4, 0x41 ] #Motion blur                                (mem address: 0x0e9c24f)
+    - [ byte, 0x00759c64, 0x40 ]
 
   uc2_Disc_109_vmb: &uc2_Disc_109_vmb
     - [ be16, 0x000c2ac0, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9c494)
@@ -5683,8 +5683,8 @@ Anchors:
     - [ be32, 0x00786508, 0x3a400001 ] #Heat waves
 
   uc2_PSN_mb: &uc2_PSN_mb
-    - [ be16, 0x000c2d28, 0x9b83 ] # Disable Motion blur                     (mem address: 0x0e9c24f)
-    - [ be32, 0x0006f12c, 0x38000001 ] # Enable explosion blur
+    - [ byte, 0x00758f74, 0x41 ] #Motion blur                                (mem address: 0x0e9c24f)
+    - [ byte, 0x00759be4, 0x40 ]
 
   uc2_PSN_vmb: &uc2_PSN_vmb
     - [ be16, 0x000c2f88, 0x9b83 ] # Disable Velocity motion blur            (mem address: 0x0e9c494)
