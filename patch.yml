@@ -15928,6 +15928,23 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
     Patch:
       - [ be32, 0x00013300, 0x60000000 ]
 
+PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
+  "Openspy.net Patch":
+    Games:
+      "Marvel Ultimate Alliance":
+        BLUS30010: [ 01.00 ]
+    Author: "Ninetime"
+    Patch Version: 0.0
+    Group: ""
+    Notes: "Updates references from gamespy.com to openspy.net"
+    Patch:
+      - [ utf8, 0x10024925, openspy.net ]
+      - [ utf8, 0x100250d1, openspy.net ]
+      - [ utf8, 0x10025190, openspy.net ]
+      - [ utf8, 0x100251a8, openspy.net ]
+      - [ utf8, 0x100251d2, openspy.net ]
+      - [ utf8, 0x10025818, openspy.net ]
+
 Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
     "Metal Gear Rising: Revengeance":
