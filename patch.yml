@@ -9318,6 +9318,17 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch:
       - [ be16, 0x0004b5d4, 0x409e ]
 
+PPU-66cf2ffcfb251ec0b2a1d261fe97d30a3acab015:
+  "Debug Menu":
+    Games:
+      "Uncharted: Drake's Fortune Demo":
+        NPEA90018: [ 01.00 ]
+    Author: "dron_3, HdHereidme, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0004e62c, 0x409e ]
+
 PPU-a7d8f9e0a9d338dadeeff7e82d38066463da56b2:
   "Debug Menu":
     Games: *uc1_internaltitle
