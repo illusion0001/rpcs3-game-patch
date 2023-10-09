@@ -6492,6 +6492,10 @@ Anchors:
   uc3_119_mb: &uc3_119_mb
     - [ be32, 0x0078b0e4, 0x480000c4 ] # Disable motion blur
 
+  uc3_119_zcull: &uc3_119_zcull
+    - [ be32, 0x0078c7d0, 0x3a800001 ] #Heat waves
+    - [ byte, 0x0078c7f3, 0x0 ] #Disable broken blur effect
+
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
   #    1 = Bloom
@@ -6734,6 +6738,9 @@ Anchors:
 
   uc3_camshake_notes: &uc3_camshake_notes
     "Disables Camera Shake during gameplay.\nIn-Game-Cinematics are unaffected."
+
+  uc3_zcull_notes: &uc3_zcull_notes
+    "Enables rendering of Heat Wave effect under Approximate ZCull, normally works with Precise ZCull only, but Precise ZCull has a big speed impact"
 
   uc3_119title: &uc3_119title
     "Uncharted 3: Drake's Deception":
@@ -7098,6 +7105,13 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_speed ]
+  "Heat waves Approximate ZCull fix":
+    Games: *uc3_119title
+    Author: "ZEROx"
+    Notes: *uc3_zcull_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc3_119_zcull ]
   "Depth Buffer Viewport":
     Games: *uc3_119title
     Author: "ZEROx, illusion"
