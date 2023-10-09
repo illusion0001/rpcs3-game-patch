@@ -16132,6 +16132,66 @@ PPU-fdb7654ca4841bce76aa659936ec1e176d463749:
     Patch:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
+PPU-fb31e0129048429ab673de2555c75da329760af7:
+  "Disable MLAA":
+    Games:
+      "Motorstorm: RC":
+        NPJA00077: [ 01.01 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001990ac, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
+  "Unlock FPS":
+    Games:
+      "Motorstorm: RC":
+        NPJA00077: [ 01.01 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000bd9d8, 0x38800001 ] # li r4,0x1 // deltatime
+      - [ be32, 0x000bd9f8, 0x38800000 ] # li r4,0x0 // flipmode
+  "Disable Dynamic Resolution Scaling":
+    Games:
+      "Motorstorm: RC":
+        NPJA00077: [ 01.01 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001aa350, 0x4e800020 ] # blr
+
+PPU-9d5d9b6d775a7046cae292b7f56126034a5da095:
+  "Disable MLAA":
+    Games:
+      "Motorstorm: RC":
+        NPHA80190: [ 01.02 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001990ac, 0x9a83e858 ] # stb r20,-0x17a8(r3) // mlaa
+  "Unlock FPS":
+    Games:
+      "Motorstorm: RC":
+        NPHA80190: [ 01.02 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000bd9d8, 0x38800001 ] # li r4,0x1 // deltatime
+      - [ be32, 0x000bd9f8, 0x38800000 ] # li r4,0x0 // flipmode
+  "Disable Dynamic Resolution Scaling":
+    Games:
+      "Motorstorm: RC":
+        NPHA80190: [ 01.02 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001aa350, 0x4e800020 ] # blr
+
 PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
   "1280x720 Resolution":
     Games:
