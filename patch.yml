@@ -10241,6 +10241,26 @@ PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
     Patch:
       - [ be32, 0x00b336f4, 0x38600001 ]
 
+PPU-6a6b3ca124e4b5554f341669010a370a4a5c33db:
+  "Debug Menu":
+    Games:
+      "Killzone 2 Beta":
+        BCET00006: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b1d754, 0x38600001 ]
+  "Disable Post Processing on SPU":
+    Games:
+      "Killzone 2 Beta":
+        BCET00006: [ 01.00 ]
+    Author: "ZEROx, illusion, FlexBy"
+    Notes: *kz2_spu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a467c4, 0x8a840089 ]
+
 Anchors:
   kz3_fov_notes: &kz3_fov_notes
     "Bound to cause issues, needs further testing."
