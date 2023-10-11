@@ -9146,6 +9146,8 @@ Anchors:
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc1_debugmenu_notes2: &uc1_debugmenu_notes2
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
+  uc1_zfightingfix_notes: &uc1_zfightingfix_notes
+    "Disables Reload Depth Cull Buffer, restores performance after enabling WCB/WDB, especially using higher resolutions, fixes flickering surfaces."
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   "Disable Motion Blur":
@@ -9239,7 +9241,7 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
   "WCB Performance & Z-fighting fix":
     Games: *uc1_disc101title
     Author: "ZEROx"
-    Notes: "Disables Reload Depth Cull Buffer, restores performance after enabling WCB/WDB, especially using higher resolutions, fixes flickering surfaces."
+    Notes: *uc1_zfightingfix_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e52a0, 0x981d ]
@@ -9287,6 +9289,13 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005d14d8, 0x39290000 ]
+  "WCB Performance & Z-fighting fix":
+    Games: *uc1_disc101asiatitle
+    Author: "ZEROx"
+    Notes: *uc1_zfightingfix_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000e52a0, 0x981d ]
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
   "Disable Motion Blur":
