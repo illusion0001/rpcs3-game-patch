@@ -14608,13 +14608,15 @@ PPU-d62a28e0d514aee88442e6d0bd3c412e53166ab9:
 PPU-04c957554ee00d5f164fb98fd90520a23ec2bf04:
   "60 FPS":
     Games:
+      "Fallout 3 GOTY Edition":
+        BLJS10068: [ 01.01 ]
       "Fallout 3":
         BLJS10069: [ 01.01 ]
     Author: "FlexBy"
     Notes: *fallout3_60fps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007b5bf4, 0x60000000 ]
+      - [ be32, 0x007b5c30, 0x60000000 ]
 
 Anchors:
   border1v107_title: &border1v107_title
