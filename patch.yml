@@ -16599,6 +16599,26 @@ PPU-6bb3fcddb5a54466743452c64407c76739955825:
       - [ be16, 0x00050cb4, 0x9107 ]
       - [ be16, 0x00050d50, 0x9907 ]
 
+PPU-763f80de93cc5525a558dd31828d8a055e605de5:
+  "Infinite Health":
+    Games:
+      "Rambo: The Video Game":
+        BLES01963: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001eb384, 0x60000000 ]
+  "Infinite Ammo":
+    Games:
+      "Rambo: The Video Game":
+        BLES01963: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0018201c, 0x60000000 ]
+
 Anchors:
   ratchet_ffa_unlockfps_notes: &ratchet_ffa_unlockfps_notes
     "Maximum framerate with the patch is half the Vblank frequency."
