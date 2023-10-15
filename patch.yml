@@ -2634,6 +2634,11 @@ Anchors:
     "Midnight Club: Los Angeles Complete Edition":
       BLES00652: [ 01.06 ]
       BLUS30442: [ 01.06 ]
+
+  mcladisc_106_title: &mcladisc_106_title
+    "Midnight Club: Los Angeles":
+      BLES00362: [ 01.06 ]
+      BLUS30190: [ 01.06 ]
   mcla_ar_notes: &mcla_ar_notes
       "Requires \"Stretch To Display Area\" checked in the GPU settings."
   mcla_ar_configurable_values: &mcla_ar_configurable_values
@@ -2706,6 +2711,39 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
+
+PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
+  "Enable Deltatime":
+    Games: *mcladisc_106_title
+    Author: "illusion, FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004c5e58, 0x60000000 ]
+      - [ be32, 0x004c5e78, 0x48000084 ]
+      - [ be32, 0x004c4b44, 0x386003e8 ]
+  "Disable Motion Blur":
+    Games: *mcladisc_106_title
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005106c0, 0x38600000 ]
+  "Skip Intro":
+    Games: *mcladisc_106_title
+    Author: "illusion, FlexBy"
+    Notes: *mcla_deltatime_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002b3100, 0x48000038 ]
+  "Aspect Ratio":
+    Games: *mcladisc_106_title
+    Author: "Virjoinga, FlexBy"
+    Patch Version: 1.0
+    Notes: *mcla_ar_notes
+    Configurable Values: *mcla_ar_configurable_values
+    Patch:
+      - [ bef32, 0x00b4108c, "Aspect Ratio" ]
 
 Anchors:
   gta4_fps_notes: &gta4_fps_notes
