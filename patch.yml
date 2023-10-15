@@ -2626,12 +2626,12 @@ Anchors:
     "Run at any FPS with proper game speed. Increase VBlank for 30+ FPS."
 
   mclaPSN_100_title: &mclaPSN_100_title
-    "Midnight Club: Los Angeles":
+    "Midnight Club: Los Angeles Complete Edition":
       NPEB00546: [ 01.00 ]
       NPUB30471: [ 01.00 ]
 
-  mcladisc_106_title: &mcladisc_106_title
-    "Midnight Club: Los Angeles":
+  mclacedisc_106_title: &mclacedisc_106_title
+    "Midnight Club: Los Angeles Complete Edition":
       BLES00652: [ 01.06 ]
       BLUS30442: [ 01.06 ]
   mcla_ar_notes: &mcla_ar_notes
@@ -2684,7 +2684,7 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
 
 PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
   "Enable Deltatime":
-    Games: *mcladisc_106_title
+    Games: *mclacedisc_106_title
     Author: "illusion"
     Notes: *mcla_deltatime_notes
     Patch Version: 1.0
@@ -2693,14 +2693,14 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
       - [ be32, 0x004c5fe0, 0x48000084 ]
       - [ be32, 0x004c4cac, 0x386003e8 ]
   "Disable Motion Blur":
-    Games: *mcladisc_106_title
+    Games: *mclacedisc_106_title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005109d0, 0x38600000 ]
   "Skip Intro":
-    Games: *mcladisc_106_title
+    Games: *mclacedisc_106_title
     Author: "illusion"
     Notes:
     Patch Version: 1.0
