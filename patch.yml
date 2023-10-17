@@ -16176,8 +16176,6 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00013300, 0x60000000 ]
-
-PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Openspy.net Patch":
     Games:
       "Marvel Ultimate Alliance":
