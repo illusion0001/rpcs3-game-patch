@@ -16684,7 +16684,7 @@ PPU-763f80de93cc5525a558dd31828d8a055e605de5:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x0060f750, "SETTINGS_HIGH" ]
+      - [ utf8, 0x0060f750, "SETTINGS_HIGH" ] # USRDIR\data\quality_settings.lua
   "Infinite Health":
     Games:
       "Rambo: The Video Game":
@@ -16722,7 +16722,7 @@ PPU-2b5fc7bc96dadad04a3445bd0ebfec53ae61e6c2:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x0060f890, "SETTINGS_HIGH" ]
+      - [ utf8, 0x0060f890, "SETTINGS_HIGH" ] # USRDIR\data\quality_settings.lua
   "Infinite Health":
     Games:
       "Rambo: The Video Game":
