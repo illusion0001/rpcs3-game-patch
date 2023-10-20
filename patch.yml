@@ -16694,6 +16694,15 @@ PPU-763f80de93cc5525a558dd31828d8a055e605de5:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0018201c, 0x60000000 ]
+  "Infinite Grenades":
+    Games:
+      "Rambo: The Video Game":
+        BLES01963: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00176624, 0x60000000 ]
 
 Anchors:
   ratchet_ffa_unlockfps_notes: &ratchet_ffa_unlockfps_notes
