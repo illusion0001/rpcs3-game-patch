@@ -16083,6 +16083,28 @@ PPU-24a5b7e528b1c6f40905e1ae656a2152914202a5:
     Patch:
       - [ be32, 0x001173dc, 0x60000000 ]
 
+PPU-e4632b32edcceeb4d241b3f3d8541c70658f5ab1:
+  "Infinite Health":
+    Games:
+      "Heavy Fire: Shattered Spear":
+        BLUS31000: [ 01.00 ]
+    Author: "jgduff1"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000d0f70, 0x7c84f814 ]
+      - [ be32, 0x000d0f74, 0x91830000 ]
+  "Infinite Ammo":
+    Games:
+      "Heavy Fire: Shattered Spear":
+        BLUS31000: [ 01.00 ]
+    Author: "jgduff1"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00119420, 0x30840000 ]
+      - [ be32, 0x00119424, 0x909C0018 ]
+
 Anchors:
   HR_debugmenu_notes: &HR_debugmenu_notes
     "L3 = Opens Debug Menu\nL1/R1 = Change pages"
