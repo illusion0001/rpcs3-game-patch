@@ -16062,6 +16062,17 @@ PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
     Patch:
       - [ be32, 0x0066b764, 0x38800001 ]
 
+PPU-03fcde41027f6df8f203d00d064638eac725c736:
+  "Infinite Ammo":
+    Games:
+      "Heavy Fire: Afghanistan":
+        NPUB30916: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000db780, 0x60000000 ]
+
 PPU-24a5b7e528b1c6f40905e1ae656a2152914202a5:
   "Infinite Health":
     Games:
