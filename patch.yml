@@ -15941,6 +15941,17 @@ PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
     Patch:
       - [ be32, 0x00956bc0, 0x40820010 ]
 
+PPU-588663e46e01d78322f7560598d1a0213323c4dc:
+  "Infinite Ammo":
+    Games:
+      "Earth Defense Force 2025":
+        NPEB01336: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0036d904, 0x60000000 ]
+
 Anchors:
   EOTTW_debugmenu_notes: &EOTTW_debugmenu_notes
     "Select + Start = Brings Menu\nL3 + R3 = Debug Camera"
