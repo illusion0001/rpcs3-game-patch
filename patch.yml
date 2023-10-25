@@ -15951,6 +15951,63 @@ PPU-588663e46e01d78322f7560598d1a0213323c4dc:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0036d904, 0x60000000 ]
+  "Infinite Health":
+    Games:
+      "Earth Defense Force 2025":
+        NPEB01336: [ 01.00 ]
+    Author: "Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00fd050c, 0x3c004516 ]
+      - [ be32, 0x00fd0510, 0x90170008 ]
+      - [ be32, 0x00fd0514, 0x9017000c ]
+      - [ be32, 0x00fd0518, 0x4e800020 ]
+      - [ be32, 0x0034c6c0, 0x48c83e4d ]
+  "Infinite Energy":
+    Games:
+      "Earth Defense Force 2025":
+        NPEB01336: [ 01.00 ]
+    Author: "Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013807c, 0xc03c0014 ]
+      - [ be32, 0x00138080, 0xd03c0018 ]
+
+PPU-cb6805a941b76cd3b479c61bb2fa387b72b7bb0f:
+  "Infinite Ammo":
+    Games:
+      "Earth Defense Force 2025":
+        NPUB31164: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0036d904, 0x60000000 ]
+  "Infinite Health":
+    Games:
+      "Earth Defense Force 2025":
+        NPUB31164: [ 01.00 ]
+    Author: "Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00fd050c, 0x3c004516 ]
+      - [ be32, 0x00fd0510, 0x90170008 ]
+      - [ be32, 0x00fd0514, 0x9017000c ]
+      - [ be32, 0x00fd0518, 0x4e800020 ]
+      - [ be32, 0x0034c6c0, 0x48c83e4d ]
+  "Infinite Energy":
+    Games:
+      "Earth Defense Force 2025":
+        NPUB31164: [ 01.00 ]
+    Author: "Randy97Killa"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013807c, 0xc03c0014 ]
+      - [ be32, 0x00138080, 0xd03c0018 ]
 
 Anchors:
   EOTTW_debugmenu_notes: &EOTTW_debugmenu_notes
