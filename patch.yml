@@ -1316,6 +1316,7 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Games: *lbp2_133title
     Author: "uh wot"
     Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00c51b68, *lbp2_server_url_beacon ] # https server url
@@ -1324,6 +1325,7 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Games: *lbp2_133title
     Author: "Toyo, uh wot"
     Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00c51b68, *lbp2_server_url_infinite ] # https server url
@@ -7870,6 +7872,7 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Games: *lbp_130title
     Author: "uh wot"
     Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00767c40, *lbp_server_url_beacon ] # https server url
@@ -7879,6 +7882,7 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Games: *lbp_130title
     Author: "Toyo, uh wot"
     Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00767c40, *lbp_server_url_infinite ] # https server url
@@ -7915,6 +7919,7 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Games: *lbp3_126title
     Author: "uh wot"
     Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00d9e4c4, *lbp3_server_url_beacon ] # https server url
@@ -7925,6 +7930,7 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Games: *lbp3_126title
     Author: "Toyo, uh wot"
     Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00d9e4c4, *lbp3_server_url_infinite ] # https server url
@@ -13785,6 +13791,7 @@ PPU-1d6e69213f25e5c4aeca823b8b6942b55e660392:
         BCES01422: [ 01.21 ]
     Author: "Toyo, k7x1e, uh wot"
     Notes: *infinite_notes
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ load, *infinite_patch ]
@@ -13796,6 +13803,7 @@ PPU-7cd3660cf7c89791e1436b0a52de886ad4d3eb4a:
         BCES01423: [ 01.21 ]
     Author: "Toyo, k7x1e, uh wot"
     Notes: *infinite_notes
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ load, *infinite_patch ]
@@ -13807,6 +13815,7 @@ PPU-3786b2a3161aa099e40ac0917e5e0e4ce570446f:
         BCUS98254: [ 01.21 ]
     Author: "Toyo, k7x1e, uh wot"
     Notes: *infinite_notes
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ load, *infinite_patch ]
@@ -13818,6 +13827,7 @@ PPU-ec3deec5674552221e6b0013a19c15b5ef147c0e:
         NPEA00421: [ 01.21 ]
     Author: "Toyo, k7x1e, uh wot"
     Notes: *infinite_notes
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ load, *infinite_patch ]
@@ -13829,6 +13839,7 @@ PPU-6ddd32ae96c9fc68d1f849f965cb60ba1af1eafb:
         NPUA80848: [ 01.20 ]
     Author: "Toyo, k7x1e, uh wot"
     Notes: *infinite_notes
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x011aad80, "lbpk.lnfinite.site\0" ] # http server url, the versions BCAS20205, BCUS99089, BCJS30085 left, unknown PPU
