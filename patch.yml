@@ -17313,6 +17313,17 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x005b4ebf, 0x01 ]
+  "Invincibility":
+    Games:
+      "The Simpsons Game":
+        BLES00142: [ 01.00 ]
+        BLES00146: [ 01.00 ]
+        BLUS30065: [ 01.00 ]
+    Author: "Jonathan44062"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00285028, 0x38600001 ]
 
 Anchors:
   TokyoJungleMLAAPSN: &TokyoJungleMLAAPSN
