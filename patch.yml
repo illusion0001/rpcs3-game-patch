@@ -3117,6 +3117,7 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
     Games: *gta5_JP123title
     Author: "logan, Byrom, FlexBy"
     Notes: "GTA:OG - GTA Online server revival project"
+    Group: CustomServer
     Patch Version: 1.3
     Patch:
       - [ utf8, 0x01851328, "http://\0" ] 
@@ -3164,6 +3165,7 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
     Games: *gta5_US127title
     Author: "logan, Byrom"
     Notes: "GTA:OG - GTA Online server revival project"
+    Group: CustomServer
     Patch Version: 1.3
     Patch:
       - [ utf8, 0x0186BFA8, "http://\0" ] 
@@ -3211,6 +3213,7 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
     Games: *gta5_EU127title
     Author: "logan, Byrom"
     Notes: "GTA:OG - GTA Online server revival project"
+    Group: CustomServer
     Patch Version: 1.3
     Patch:
       - [ utf8, 0x018512A8, "http://\0" ] 
