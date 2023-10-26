@@ -15301,8 +15301,13 @@ Anchors:
   bfbc_full_v120_filmgrain: &bfbc_full_v120_filmgrain
     - [ be32, 0x014b2ae8, 0x60000000 ]
 
+  bfbc_full_v120_skipintro: &bfbc_full_v120_skipintro
+    - [ be32, 0x013d3600, 0x60000000 ]
+
   bfbc_fps_notes: &bfbc_fps_notes
     "Patch works fine for Single-player mode, in Multi-player mode gamespeed is doubled."
+  bfbc_skipintro_notes: &bfbc_skipintro_notes
+    "Breaks menu background video."
 
 PPU-7aa8dc113c7068f4372f239cb9b7cc2c92d9c057:
   "60 FPS":
@@ -15394,6 +15399,15 @@ PPU-ad211ac5bcbddc69bf3ad9a897c7777bf65dd64e:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_filmgrain ]
+  "Skip Intro":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30118: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *bfbc_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_skipintro ]
 
 PPU-6b45e01ffabee0118e0acdbc71995b8f1f5385d2:
   "60 FPS":
@@ -15423,6 +15437,15 @@ PPU-6b45e01ffabee0118e0acdbc71995b8f1f5385d2:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_filmgrain ]
+  "Skip Intro":
+    Games:
+      "Battlefield: Bad Company":
+        BLES00259: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *bfbc_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_skipintro ]
 
 PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
   "60 FPS":
@@ -15452,6 +15475,15 @@ PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_filmgrain ]
+  "Skip Intro":
+    Games:
+      "Battlefield: Bad Company":
+        BLES00261: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *bfbc_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_skipintro ]
 
 PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
   "60 FPS":
