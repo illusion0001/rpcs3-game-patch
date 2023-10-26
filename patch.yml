@@ -15873,6 +15873,17 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        NPEB00724: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01202c60, 0x60000000 ]
+
 Anchors:
   BTS_debugmenu_notes: &debugmenunotesBTS
     "L3 = Opens Debug Menu\nL1/R1 = Change pages\nOnly tested on BCUS98298."
