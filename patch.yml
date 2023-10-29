@@ -6346,6 +6346,28 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
     Patch:
       - [ be16, 0x00097a18, 0x98c3 ] # Demo doesn't have check. FPS text is disabled by default + DECR infinite loading
 
+PPU-01d36e8241041ebf13e7ba819590f487303bb4cc:
+  "Debug Menu":
+    Games:
+      "Uncharted 2: Among Thieves Closed Beta":
+        BCET70015: [ 01.00 ]
+    Author: "dron_3, HdHereidme, FlexBy"
+    Notes: *uc2_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000243d4, 0x419e ]
+      
+PPU-73a099fedff40805b586273265a52e7e037b6bdf:
+  "Debug Menu":
+    Games:
+      "Uncharted 2: Among Thieves Public Beta":
+        BCET70015: [ 01.00 ]
+    Author: "dron_3, HdHereidme, FlexBy"
+    Notes: *uc2_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00023c1c, 0x419e ]
+
 Anchors:
   uc3_100_FPS: &uc3_100_FPS
     - [ be32, 0x0093b348, 0x90e30034 ] # FPS
