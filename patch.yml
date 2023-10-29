@@ -2277,6 +2277,18 @@ PPU-3101bddb805923d3b32be8e64b986bb6b60581bb:
     Patch:
       - [ be32, 0x0116cb84, 0x38600000 ]
 
+PPU-c42d84baf809614023bae43461f51c62cf4c1ac5:
+  "Debug Menu":
+    Games:
+      "DmC Devil May Cry":
+        BLJM60502: [ 01.01 ]
+        NPJB00278: [ 01.01 ]
+    Author: "dron_3, FlexBy"
+    Notes: *dmcdmc_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0116c984, 0x38600000 ]
+
 PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
   "21:9 Aspect Ratio":
     Games:
