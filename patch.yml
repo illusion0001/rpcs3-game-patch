@@ -7658,7 +7658,6 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
       - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
       - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
-
   "Allow Running Unpacked":
     Games:
       "Gran Turismo 5":
