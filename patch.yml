@@ -6864,6 +6864,11 @@ Anchors:
       NPHA80158: [ 01.04 ]
       BCET70034: [ 01.04 ]
 
+  uc3_subway: &uc3_subway
+    "Uncharted 3: Drake's Deception Multiplayer":
+      BCET70043: [ 01.00 ]
+      NPUA70180: [ 01.00 ]
+
   uc3_kioskdemo: &uc3_kioskdemo
     "Uncharted 3: Drake's Deception Demo":
       NPUA70183: [ 01.00 ]
@@ -7549,7 +7554,7 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
   "Debug Menu":
     Games: *uc3_kioskdemo
     Author: "dron_3,HdHereidme, FlexBy"
-    Notes:
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0072f5c0, 0x38000001 ]
@@ -7557,11 +7562,9 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
 
 PPU-f986a163b81248b801709f0c5bb427c090b40dc7:
   "Debug Menu":
-    Games:
-      "Uncharted 3: Drake's Deception Multiplayer":
-        BCET70043: [ 01.00 ]
+    Games: *uc3_subway
     Author: "dron_3, HdHereidme, FlexBy"
-    Notes:
+    Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007312bc, 0x38000001 ]
