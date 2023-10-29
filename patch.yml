@@ -9470,7 +9470,7 @@ PPU-66cf2ffcfb251ec0b2a1d261fe97d30a3acab015:
         NPEA90018: [ 01.00 ]
         NPJA90063: [ 01.00 ]
     Author: "dron_3, HdHereidme, illusion, FlexBy"
-    Notes:
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004e62c, 0x409e ]
@@ -9481,7 +9481,7 @@ PPU-d2c6152f5a7684d2e0af34c8241662073cc7b834:
       "Uncharted: Drake's Fortune Demo":
         NPUA98103: [ 02.00 ]
     Author: "dron_3, HdHereidme, illusion, FlexBy"
-    Notes:
+    Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004e61c, 0x409e ]
