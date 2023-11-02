@@ -16476,7 +16476,7 @@ PPU-45d06382c197f53b92377cf64785818e9ad7b85a:
       "Killer is Dead":
         NPEB01370: [ 01.00 ]
     Author: "FlexBy"
-    Notes:
+    Notes: "Some elements speed is tied to FPS"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00950f20, 0x60000000 ]
