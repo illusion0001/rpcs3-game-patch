@@ -12179,6 +12179,29 @@ PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
     Patch:
       - [ bef32, 0x006b6390, 0.7 ]
 
+PPU-a08a187d78dd68ebc15b4c6c34335ea55d8dc0f7: # game.self Updated
+  "Unlock FPS":
+    Games:
+      "Resistance: Fall of Man (Updated)":
+        BCUS98107: [ 01.00 ]
+        BCES00001: [ 01.00 ]
+    Author: "Whatcookie, FlexBy"
+    Notes: *r1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001e6f68, 0x60000000 ]
+      - [ bef32, 0x00688f00, 0.00416666 ] # set minimum timestep size
+  "Extended FOV":
+    Games:
+      "Resistance: Fall of Man (Updated)":
+        BCUS98107: [ 01.00 ]
+        BCES00001: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x006c6c3c, 0.7 ]
+
 PPU-82555e0b1aaaa6c62ae8f23057e38d1006b7c19c: # game.self
   "Unlock FPS":
     Games:
