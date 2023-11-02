@@ -16470,6 +16470,19 @@ PPU-18f780e2743421f51061ffccc74e6658b3d806eb:
     Patch:
       - [ be32, 0x004087a8, 0x38600000 ]
 
+PPU-45d06382c197f53b92377cf64785818e9ad7b85a:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        NPEB01370: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00950f20, 0x60000000 ]
+      - [ be32, 0x00950f80, 0x60000000 ]
+      - [ be32, 0x00950f84, 0x60000000 ]
+
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
     Games:
