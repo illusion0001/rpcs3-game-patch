@@ -16889,6 +16889,30 @@ PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
     Patch:
       - [ be32, 0x0009381c, 0x60000000 ]
 
+PPU-258ac2ba1ae25c2e6e330fcb8979cb6fe878b9d2:
+  "Debug Menu":
+    Games:
+      "Prototype":
+        NPUB30389: [ 02.00 ]
+    Author: "dron_3"
+    Notes: "Press SELECT in Pause Menu"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x010bae04, 0x52454c45 ]
+      - [ be32, 0x010bae08, 0x41534500 ]
+
+PPU-a5d824beed8564ebf5b19e09f94c7610c067295e:
+  "Debug Menu":
+    Games:
+      "Prototype 2":
+        NPUB30801: [ 01.00 ]
+    Author: "dron_3"
+    Notes: "Press L3 or R3 on Map Screen"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00cc22e4, 0x52454c45 ]
+      - [ be32, 0x00cc22e8, 0x41534500 ]
+
 Anchors:
   puppeteer_psn_us_titles: &puppeteer_psn_us_titles
     "Puppeteer":
