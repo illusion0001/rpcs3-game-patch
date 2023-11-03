@@ -16489,6 +16489,11 @@ Anchors:
     - [ be32, 0x00950f70, 0x60000000 ]
     - [ be32, 0x00950f74, 0x60000000 ]
 
+  kid_fpsAS: &kid_fpsAS
+    - [ be32, 0x009913b8, 0x60000000 ]
+    - [ be32, 0x00991418, 0x60000000 ]
+    - [ be32, 0x0099141c, 0x60000000 ]
+
 PPU-45d06382c197f53b92377cf64785818e9ad7b85a:
   "Unlock FPS":
     Games:
@@ -16543,6 +16548,17 @@ PPU-59016237142d3ea6caeaca5f62852105dc320fd0:
     Patch Version: 1.0
     Patch:
       - [ load, *kid_fpsJP ]
+
+PPU-414babec8910f142628daeb43cefe28e619d27ee:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        BCAS20292: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *kid_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *kid_fpsAS ]
 
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
