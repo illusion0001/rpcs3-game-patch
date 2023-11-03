@@ -16470,18 +16470,79 @@ PPU-18f780e2743421f51061ffccc74e6658b3d806eb:
     Patch:
       - [ be32, 0x004087a8, 0x38600000 ]
 
+Anchors:
+  kid_fps_notes: &kid_fps_notes
+    "Some elements speed is tied to FPS."
+
+  kid_fpsEU: &kid_fpsEU
+    - [ be32, 0x00950f20, 0x60000000 ]
+    - [ be32, 0x00950f80, 0x60000000 ]
+    - [ be32, 0x00950f84, 0x60000000 ]
+
+  kid_fpsUS: &kid_fpsUS
+    - [ be32, 0x00950ef0, 0x60000000 ]
+    - [ be32, 0x00950f50, 0x60000000 ]
+    - [ be32, 0x00950f54, 0x60000000 ]
+
+  kid_fpsJP: &kid_fpsJP
+    - [ be32, 0x00950f10, 0x60000000 ]
+    - [ be32, 0x00950f70, 0x60000000 ]
+    - [ be32, 0x00950f74, 0x60000000 ]
+
 PPU-45d06382c197f53b92377cf64785818e9ad7b85a:
   "Unlock FPS":
     Games:
       "Killer is Dead":
         NPEB01370: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Some elements speed is tied to FPS"
+    Notes: *kid_fps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00950f20, 0x60000000 ]
-      - [ be32, 0x00950f80, 0x60000000 ]
-      - [ be32, 0x00950f84, 0x60000000 ]
+      - [ load, *kid_fpsEU ]
+
+PPU-5cd0ef555dba279e3314161d06c142b7a4e0c6af:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        NPUB31188: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *kid_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *kid_fpsUS ]
+
+PPU-289ab841b113be9f04ed76fd7f594b9bc41aaabb:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        BLES01856: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *kid_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *kid_fpsEU ]
+
+PPU-0f0489773fce71d506bc1d1024f398fb21065a12:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        BLUS31186: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *kid_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *kid_fpsUS ]
+
+PPU-59016237142d3ea6caeaca5f62852105dc320fd0:
+  "Unlock FPS":
+    Games:
+      "Killer is Dead":
+        BLJS10215: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *kid_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *kid_fpsJP ]
 
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
