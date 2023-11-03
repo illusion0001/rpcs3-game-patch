@@ -16894,7 +16894,7 @@ PPU-258ac2ba1ae25c2e6e330fcb8979cb6fe878b9d2:
     Games:
       "Prototype":
         NPUB30389: [ 02.00 ]
-    Author: "dron_3"
+    Author: "dron_3, FlexBy"
     Notes: "Press SELECT in Pause Menu"
     Patch Version: 1.0
     Patch:
@@ -16906,7 +16906,7 @@ PPU-a5d824beed8564ebf5b19e09f94c7610c067295e:
     Games:
       "Prototype 2":
         NPUB30801: [ 01.00 ]
-    Author: "dron_3"
+    Author: "dron_3, FlexBy"
     Notes: "Press L3 or R3 on Map Screen"
     Patch Version: 1.0
     Patch:
