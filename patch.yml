@@ -16259,6 +16259,17 @@ PPU-17e5fb03b4175948179339a71a8edde05b1d626b:
       - [ be32, 0x005ae0c0, 0x38600000 ]
       - [ be32, 0x005ae048, 0x38600001 ]
 
+PPU-afa4136447c25cb9c57487bb8c964b84ce960204:
+  "Unlock FPS":
+    Games:
+      "Fight Night Champion":
+        NPEB00730: [ 01.02 ]
+    Author: "illusion, FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00752788, 0x4e800020 ]
+      - [ bef32, 0x001401d4, 1000.0 ]
+
 Anchors:
   fuse_titles: &fuse_titles
     "Fuse":
