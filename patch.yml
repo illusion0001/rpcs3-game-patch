@@ -16889,7 +16889,8 @@ PPU-edea73dbe476dabd4ba7170169184ae3968e6321:
     Patch:
       - [ be32, 0x0009381c, 0x60000000 ]
 
-prototype1_debug_notes: &prototype1_debug_notes
+Anchors:
+  prototype1_debug_notes: &prototype1_debug_notes
     "Press SELECT in Pause Menu."
 
 PPU-258ac2ba1ae25c2e6e330fcb8979cb6fe878b9d2:
@@ -16904,7 +16905,7 @@ PPU-258ac2ba1ae25c2e6e330fcb8979cb6fe878b9d2:
       - [ be32, 0x010bae04, 0x52454c45 ]
       - [ be32, 0x010bae08, 0x41534500 ]
 
-PPU-258ac2ba1ae25c2e6e330fcb8979cb6fe878b9d2:
+PPU-f1f27b74ed9ec9fd2a4769aa020a21cf67775bc2:
   "Debug Menu":
     Games:
       "Prototype":
@@ -16928,17 +16929,47 @@ PPU-30b4f543be1ab4183d61ba6430be511320d0052b:
       - [ be32, 0x010b57e4, 0x52454c45 ]
       - [ be32, 0x010b57e8, 0x41534500 ]
 
+Anchors:
+  proto2_debug_notes: &proto2_debug_notes
+    "Press L3 or R3 on Map Screen."
+
+  proto2_debug_disc: &proto2_debug_disc
+    - [ be32, 0x00cc24e4, 0x52454c45 ]
+    - [ be32, 0x00cc24e8, 0x41534500 ]
+
 PPU-a5d824beed8564ebf5b19e09f94c7610c067295e:
   "Debug Menu":
     Games:
       "Prototype 2":
         NPUB30801: [ 01.00 ]
     Author: "dron_3, FlexBy"
-    Notes: "Press L3 or R3 on Map Screen"
+    Notes: *proto2_debug_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00cc22e4, 0x52454c45 ]
       - [ be32, 0x00cc22e8, 0x41534500 ]
+
+PPU-d4fa1c0793eee29ed365a68716e092b0eadae85a:
+  "Debug Menu":
+    Games:
+      "Prototype 2":
+        BLUS30756: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes: *proto2_debug_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *proto2_debug_disc ]
+
+PPU-5998c62186c45f4c29984af67df305136357b4cb:
+  "Debug Menu":
+    Games:
+      "Prototype 2":
+        BLES01534: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes: *proto2_debug_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *proto2_debug_disc ]
 
 Anchors:
   puppeteer_psn_us_titles: &puppeteer_psn_us_titles
