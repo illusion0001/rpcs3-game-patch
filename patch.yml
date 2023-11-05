@@ -10636,6 +10636,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
       "Motorstorm Update 3.1 (Complete Edition)":
         BCES00006: [ All ]
         BCJS30019: [ All ]
+        BCUS98137: [ All ]
     Author: "illusion, ZEROx"
     Notes: *ms_fps_notes
     Patch Version: 2.0
@@ -10648,6 +10649,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
       "Motorstorm Update 3.1 (Complete Edition)":
         BCES00006: [ All ]
         BCJS30019: [ All ]
+        BCUS98137: [ All ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -10658,6 +10660,7 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
       "Motorstorm Update 3.1 (Complete Edition)":
         BCES00006: [ All ]
         BCJS30019: [ All ]
+        BCUS98137: [ All ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -10670,6 +10673,8 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
     Games:
       "Motorstorm Update 3.1 (Complete Edition)":
         BCES00006: [ All ]
+        BCUS98137: [ All ]
+        BCJS30019: [ All ]
     Author: "Scirvir"
     Notes: "Campaign only. Doesn't work on DLC or online."
     Patch Version: 1.0
