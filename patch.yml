@@ -16126,6 +16126,7 @@ PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
     Notes: "Needs more testing"
     Patch Version: 1.0
     Patch:
+      - [ be32, 0x00f5a6c4, 0x60000000 ]
       - [ be32, 0x00f5a6d8, 0x60000000 ]
   "Infinite Health":
     Games:
@@ -16145,7 +16146,19 @@ PPU-ec112cfa3c2dae2ea6295d0e091bed942d550ff7:
     Author: "FlexBy"
     Patch Version: 1.0
     Patch:
+      - [ be32, 0x00f5aab4, 0x60000000 ]
       - [ be32, 0x00f5aac8, 0x60000000 ]
+
+PPU-adc95646dc0dc85e69b669d437ca160d604f81a0:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma Demo":
+        NPEB90366: [ 01.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00dd4cc0, 0x60000000 ]
+      - [ be32, 0x00dd4cac, 0x60000000 ]
 
 PPU-588663e46e01d78322f7560598d1a0213323c4dc:
   "Infinite Ammo":
