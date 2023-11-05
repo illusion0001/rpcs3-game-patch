@@ -16143,11 +16143,50 @@ PPU-ec112cfa3c2dae2ea6295d0e091bed942d550ff7:
     Games:
       "Dragon's Dogma: Dark Arisen":
         BLES01794: [ 01.02 ]
+        BLUS31155: [ 01.02 ]
+        BLJM61012: [ 01.02 ]
     Author: "FlexBy"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f5aab4, 0x60000000 ]
       - [ be32, 0x00f5aac8, 0x60000000 ]
+
+PPU-81d844f449c7145f458823338ddbc77628a0f2e1:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma: Dark Arisen":
+        NPEB01268: [ 01.02 ]
+        NPUB31117: [ 01.02 ]
+        NPJB00335: [ 01.02 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00c355d4, 0x60000000 ]
+      - [ be32, 0x00c355e0, 0x60000000 ]
+
+PPU-6aef809b5a3d40948a5b99bd4c6e864edb5fe4f9:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma":
+        BLES01356: [ 01.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00ee28b4, 0x60000000 ]
+      - [ be32, 0x00ee28c8, 0x60000000 ]
+
+PPU-4857369088641f59416100d16b640c744a8b595e:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma":
+        BLES01356: [ 01.05 ]
+        BLUS30720: [ 01.05 ]
+        BLJM60379: [ 01.05 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00ef0c74, 0x60000000 ]
+      - [ be32, 0x00ef0c88, 0x60000000 ]
 
 PPU-adc95646dc0dc85e69b669d437ca160d604f81a0:
   "Unlock FPS":
