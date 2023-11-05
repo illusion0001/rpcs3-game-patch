@@ -16118,6 +16118,15 @@ PPU-f693265f620e64208e76cc2388d10df1d7b60c95:
       - [ be32, 0x00732b94, 0x3ba00001 ]
 
 PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma: Dark Arisen":
+        BLES01794: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Needs more testing"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f5a6d8, 0x60000000 ]
   "Infinite Health":
     Games:
       "Dragon's Dogma: Dark Arisen":
