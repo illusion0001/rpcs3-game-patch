@@ -16199,16 +16199,50 @@ PPU-adc95646dc0dc85e69b669d437ca160d604f81a0:
       - [ be32, 0x00dd4cc0, 0x60000000 ]
       - [ be32, 0x00dd4cac, 0x60000000 ]
 
+PPU-b741847e3e310822eb7f2f691f856d92183b77a7:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma Demo":
+        NPUB90614: [ 01.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00dd46ec, 0x60000000 ]
+      - [ be32, 0x00dd4700, 0x60000000 ]
+
 PPU-93d2bc023fd8f76624315906876039d3cc562026:
   "Unlock FPS":
     Games:
       "Dragon's Dogma Adventure Demo":
         NPEB90439: [ 01.00 ]
+        NPJB90524: [ 01.00 ]
     Author: "FlexBy"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f27c2c, 0x60000000 ]
       - [ be32, 0x00f27c40, 0x60000000 ]
+
+PPU-541ea5f3ebee9185055d81ecd8d1f173e0d45714:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma Adventure Demo":
+        NPUB90813: [ 01.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f27b5c, 0x60000000 ]
+      - [ be32, 0x00f27b70, 0x60000000 ]
+
+PPU-93d2bc023fd8f76624315906876039d3cc562026:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma: Dark Arisen Adventure Demo":
+        NPJB90581: [ 01.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f08684, 0x60000000 ]
+      - [ be32, 0x00f08698, 0x60000000 ]
 
 PPU-588663e46e01d78322f7560598d1a0213323c4dc:
   "Infinite Ammo":
