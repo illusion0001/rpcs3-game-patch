@@ -10578,6 +10578,15 @@ PPU-c28a92c751f6c6ffae0f354c7329ee599912baac:
     Patch Version: 1.0
     Patch:
       - [ load, *kz3demo_mlaa ]
+  "Debug Menu":
+    Games:
+      "Killzone 3 Demo":
+        NPUA70133: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e61a24, 0x74727565 ]
 
 PPU-238ec433d9577dcb54fe61efaada1c744b713722:
   "Disable MLAA (Post-processing on SPU)":
