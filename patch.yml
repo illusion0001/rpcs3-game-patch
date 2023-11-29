@@ -2690,6 +2690,8 @@ PPU-0604e637a841bdd85ac770d76281bdca18ac61f4: # OGRE2.self
 Anchors:
   mcla_deltatime_notes: &mcla_deltatime_notes
     "Run at any FPS with proper game speed. Increase VBlank for 30+ FPS."
+  mcla_online_notes: &mcla_online_notes
+    "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
 
   mclaPSN_100_title: &mclaPSN_100_title
     "Midnight Club: Los Angeles Complete Edition":
@@ -2752,6 +2754,27 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
     Configurable Values: *mcla_ar_configurable_values
     Patch:
       - [ bef32, 0x00b410ac, "Aspect Ratio" ]
+  "Openspy Online":
+    Games: *mclaPSN_100_title
+    Author: "FlexBy"
+    Notes: *mcla_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a26c77, "openspy.net" ]
+      - [ utf8, 0x00a270a0, "openspy.net" ]
+      - [ utf8, 0x00a270e7, "openspy.net" ]
+      - [ utf8, 0x00a27310, "openspy.net" ]
+      - [ utf8, 0x00a27612, "openspy.net" ]
+      - [ utf8, 0x00a27630, "openspy.net" ]
+      - [ utf8, 0x00a27648, "openspy.net" ]
+      - [ utf8, 0x00a27660, "openspy.net" ]
+      - [ utf8, 0x00a27bcd, "openspy.net" ]
+      - [ utf8, 0x00a28bd0, "openspy.net" ]
+      - [ utf8, 0x00a28c0e, "openspy.net" ]
+      - [ utf8, 0x00bc9f25, "openspy.net" ]
+      - [ utf8, 0x00bca06d, "openspy.net" ]
+      - [ utf8, 0x00a26c60, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x009d1a70, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
   "Enable Deltatime":
@@ -2777,6 +2800,27 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
+  "Openspy Online":
+    Games: *mclacedisc_106_title
+    Author: "FlexBy"
+    Notes: *mcla_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a278c7, "openspy.net" ]
+      - [ utf8, 0x00a27cf0, "openspy.net" ]
+      - [ utf8, 0x00a27d37, "openspy.net" ]
+      - [ utf8, 0x00a27f60, "openspy.net" ]
+      - [ utf8, 0x00a28262, "openspy.net" ]
+      - [ utf8, 0x00a28280, "openspy.net" ]
+      - [ utf8, 0x00a28298, "openspy.net" ]
+      - [ utf8, 0x00a282b0, "openspy.net" ]
+      - [ utf8, 0x00a2881d, "openspy.net" ]
+      - [ utf8, 0x00a29820, "openspy.net" ]
+      - [ utf8, 0x00a2985e, "openspy.net" ]
+      - [ utf8, 0x00bc9ea5, "openspy.net" ]
+      - [ utf8, 0x00bc9fed, "openspy.net" ]
+      - [ utf8, 0x00a278b0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x009d2730, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
   "Enable Deltatime":
