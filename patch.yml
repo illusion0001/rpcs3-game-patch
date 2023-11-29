@@ -16905,6 +16905,31 @@ PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
     Patch:
       - [ be32, 0x00a33fd8, 0x38600001 ]
 
+PPU-069afd5bd7f8cb83c2962ea1575da8b3be6c7e57:
+  "Openspy Online":
+    Games:
+      "Monster Madness Grave Danger Demo":
+        NPEB90076: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x014d72f5, "openspy.net" ]
+      - [ utf8, 0x014d7624, "openspy.net" ]
+      - [ utf8, 0x014d76a4, "openspy.net" ]
+      - [ utf8, 0x014d77d2, "openspy.net" ]
+      - [ utf8, 0x014d7b98, "openspy.net" ]
+      - [ utf8, 0x014d7bf7, "openspy.net" ]
+      - [ utf8, 0x014d8858, "openspy.net" ]
+      - [ utf8, 0x014d9020, "openspy.net" ]
+      - [ utf8, 0x014d9038, "openspy.net" ]
+      - [ utf8, 0x014d9050, "openspy.net" ]
+      - [ utf8, 0x014d9226, "openspy.net" ]
+      - [ utf8, 0x0171699d, "openspy.net" ]
+      - [ utf8, 0x01716af5, "openspy.net" ]
+      - [ utf8, 0x014d59f0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x0145dd68, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   moond_100_title: &moond_100_title
     "Moon Diver":
