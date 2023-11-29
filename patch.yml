@@ -2165,6 +2165,47 @@ PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001740e8, 0x4800 ]
+  "Openspy.net patch":
+    Games:
+      "50 Cent: Blood on The Sand":
+        BLUS30256: [ All ]
+        BLES00472: [ All ]
+    Author: "FlexBy, Ninetime"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch:
+      - [ utf8, 0x120e613a, "openspy.net" ]
+      - [ utf8, 0x1530a10a, "openspy.net" ]
+      - [ utf8, 0x1538d1bd, "openspy.net" ]
+      - [ utf8, 0x01657a56, "openspy.net" ]
+      - [ utf8, 0x11c14991, "openspy.net" ]
+      - [ utf8, 0x01a9c5e4, "openspy.net" ]
+      - [ utf8, 0x01a9e612, "openspy.net" ]
+      - [ utf8, 0x01a9c5be, "openspy.net" ]
+      - [ utf8, 0x01a1d3e9, "openspy.net" ]
+      - [ utf8, 0x15390392, "openspy.net" ]
+      - [ utf8, 0x01657a57, "openspy.net" ]
+      - [ utf8, 0x01659935, "openspy.net" ]
+      - [ utf8, 0x01659e20, "openspy.net" ]
+      - [ utf8, 0x01659e38, "openspy.net" ]
+      - [ utf8, 0x01659e50, "openspy.net" ]
+      - [ utf8, 0x01659fe4, "openspy.net" ]
+      - [ utf8, 0x0165a064, "openspy.net" ]
+      - [ utf8, 0x0165a19a, "openspy.net" ]
+      - [ utf8, 0x0165a560, "openspy.net" ]
+      - [ utf8, 0x0165a5bf, "openspy.net" ]
+      - [ utf8, 0x0165b2a0, "openspy.net" ]
+      - [ utf8, 0x0165b2de, "openspy.net" ]
+      - [ utf8, 0x01a1d3ea, "openspy.net" ]
+      - [ utf8, 0x01a1e4d5, "openspy.net" ]
+      - [ utf8, 0x01a1e62d, "openspy.net" ]
+      - [ utf8, 0x01a21a31, "openspy.net" ]
+      - [ utf8, 0x01a9c5be, "openspy.net" ]
+      - [ utf8, 0x01a9c5e4, "openspy.net" ]
+      - [ utf8, 0x01a9e542, "openspy.net" ]
+      - [ utf8, 0x016577b0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+      - [ utf8, 0x01657a40, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
 
 Anchors:
   aot40d_fps_notes: &aot40d_fps_notes
