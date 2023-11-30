@@ -2800,6 +2800,14 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
+  "Aspect Ratio":
+    Games: *mclacedisc_106_title
+    Author: "Virjoinga"
+    Patch Version: 1.0
+    Notes: *mcla_ar_notes
+    Configurable Values: *mcla_ar_configurable_values
+    Patch:
+      - [ bef32, 0x00b4109c, "Aspect Ratio" ]
 
 PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
   "Enable Deltatime":
