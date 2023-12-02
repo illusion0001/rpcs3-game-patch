@@ -17802,6 +17802,37 @@ PPU-df822d7d47de09c5672201db8cc633009037f54f: # RESIDENT EVIL CODE: Veronica X (
     Patch:
       - [ be32, 0x001afccc, 0x38600000 ]
 
+PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
+  "Openspy Online":
+    Games:
+      "SBK X Superbike World Championship":
+        BLES00774 : [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00ec4d5d, "openspy.net" ]
+      - [ utf8, 0x00ec4d78, "openspy.net" ]
+      - [ utf8, 0x00ec4d90, "openspy.net" ]
+      - [ utf8, 0x00ec4da8, "openspy.net" ]
+      - [ utf8, 0x00ec4dc2, "openspy.net" ]
+      - [ utf8, 0x00ec4e05, "openspy.net" ]
+      - [ utf8, 0x00ec5276, "openspy.net" ]
+      - [ utf8, 0x00ec562c, "openspy.net" ]
+      - [ utf8, 0x00ec565c, "openspy.net" ]
+      - [ utf8, 0x00ec5674, "openspy.net" ]
+      - [ utf8, 0x00ec568c, "openspy.net" ]
+      - [ utf8, 0x00ec56c7, "openspy.net" ]
+      - [ utf8, 0x00ec5733, "openspy.net" ]
+      - [ utf8, 0x00ec593b, "openspy.net" ]
+      - [ utf8, 0x00ec7f94, "openspy.net" ]
+      - [ utf8, 0x00ec8000, "openspy.net" ]
+      - [ utf8, 0x00ec8412, "openspy.net" ]
+      - [ utf8, 0x00f82759, "openspy.net" ]
+      - [ utf8, 0x00f828ad, "openspy.net" ]
+      - [ utf8, 0x00ec7be8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x00ec7ade, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
   "60 FPS":
     Games:
