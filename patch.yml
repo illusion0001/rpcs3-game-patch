@@ -16605,6 +16605,64 @@ PPU-e1b5c427c088ebc38721296a222a6fd73bc514a8:
     Patch:
       - [ load, *fairytale_onlinepatch ]
 
+Anchors:
+  fatalinertia_onlinepatch_notes: &fatalinertia_onlinepatch_notes
+    "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+
+PPU-6990c66f91d5802a7867f001920e2907bf1b34e6:
+  "Openspy Online":
+    Games:
+      "Fatal Inertia EX":
+        NPEB00024 : [ 01.03 ]
+    Author: "FlexBy"
+    Notes: *fatalinertia_onlinepatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x019e3d6f, "openspy.net" ]
+      - [ utf8, 0x019e3db6, "openspy.net" ]
+      - [ utf8, 0x019e613d, "openspy.net" ]
+      - [ utf8, 0x019e6478, "openspy.net" ]
+      - [ utf8, 0x019e6490, "openspy.net" ]
+      - [ utf8, 0x019e64a8, "openspy.net" ]
+      - [ utf8, 0x019e66d2, "openspy.net" ]
+      - [ utf8, 0x019e6a80, "openspy.net" ]
+      - [ utf8, 0x019e82c8, "openspy.net" ]
+      - [ utf8, 0x019e8327, "openspy.net" ]
+      - [ utf8, 0x019e928e, "openspy.net" ]
+      - [ utf8, 0x019e9ed4, "openspy.net" ]
+      - [ utf8, 0x019e9f54, "openspy.net" ]
+      - [ utf8, 0x01cd94d5, "openspy.net" ]
+      - [ utf8, 0x01cd961d, "openspy.net" ]
+      - [ utf8, 0x019e9820, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x019e9590, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+      
+PPU-6f9ea6e1539089a807cfb2f5ee9c04d8d209576a:
+  "Openspy Online":
+    Games:
+      "Fatal Inertia EX":
+        NPUB30023 : [ 01.02 ]
+    Author: "FlexBy"
+    Notes: *fatalinertia_onlinepatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x01cc949d, "openspy.net" ]
+      - [ utf8, 0x01cc9355, "openspy.net" ]
+      - [ utf8, 0x019e5d8c, "openspy.net" ]
+      - [ utf8, 0x019e5d0c, "openspy.net" ]
+      - [ utf8, 0x019e50c6, "openspy.net" ]
+      - [ utf8, 0x019e415f, "openspy.net" ]
+      - [ utf8, 0x019e4100, "openspy.net" ]
+      - [ utf8, 0x019e28b8, "openspy.net" ]
+      - [ utf8, 0x019e250a, "openspy.net" ]
+      - [ utf8, 0x019e22e0, "openspy.net" ]
+      - [ utf8, 0x019e22c8, "openspy.net" ]
+      - [ utf8, 0x019e22b0, "openspy.net" ]
+      - [ utf8, 0x019e1f75, "openspy.net" ]
+      - [ utf8, 0x019dfc46, "openspy.net" ]
+      - [ utf8, 0x019dfbff, "openspy.net" ]
+      - [ utf8, 0x019e5658, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x019e53c8, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-17e5fb03b4175948179339a71a8edde05b1d626b:
   "Unlock FPS":
     Games:
