@@ -16747,6 +16747,40 @@ PPU-a55beada9c3d3f474c7c0ac86874bf30d7fe412d:
     Patch:
       - [ be32, 0x00060040, 0x3800ffff ] # li r0, -1
 
+PPU-6025d7dd93c1c395cbcf06806f4b04eb0f875047:
+  "Openspy Online":
+    Games:
+      "Hail to the Chimp":
+        BLUS30153 : [ 01.02 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x01513065, "openspy.net" ]
+      - [ utf8, 0x01513082, "openspy.net" ]
+      - [ utf8, 0x01513097, "openspy.net" ]
+      - [ utf8, 0x015130ad, "openspy.net" ]
+      - [ utf8, 0x015130c5, "openspy.net" ]
+      - [ utf8, 0x015130e0, "openspy.net" ]
+      - [ utf8, 0x0151312f, "openspy.net" ]
+      - [ utf8, 0x0151319f, "openspy.net" ]
+      - [ utf8, 0x015131e6, "openspy.net" ]
+      - [ utf8, 0x015158b5, "openspy.net" ]
+      - [ utf8, 0x01515dfa, "openspy.net" ]
+      - [ utf8, 0x015161a8, "openspy.net" ]
+      - [ utf8, 0x015179f0, "openspy.net" ]
+      - [ utf8, 0x01517a4f, "openspy.net" ]
+      - [ utf8, 0x015189b6, "openspy.net" ]
+      - [ utf8, 0x01519370, "openspy.net" ]
+      - [ utf8, 0x01519388, "openspy.net" ]
+      - [ utf8, 0x015193a0, "openspy.net" ]
+      - [ utf8, 0x01519664, "openspy.net" ]
+      - [ utf8, 0x015196e4, "openspy.net" ]
+      - [ utf8, 0x017b7b45, "openspy.net" ]
+      - [ utf8, 0x017b7c8d, "openspy.net" ]
+      - [ utf8, 0x01518f48, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x01518cb8, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-27c0293b51385f3fbea2bf1a4e2f8c79f55a058e:
   "60 FPS":
     Games:
