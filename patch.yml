@@ -2760,7 +2760,6 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
     Notes: *mcla_online_notes
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00a26c77, "openspy.net" ]
       - [ utf8, 0x00a270a0, "openspy.net" ]
       - [ utf8, 0x00a270e7, "openspy.net" ]
       - [ utf8, 0x00a27310, "openspy.net" ]
@@ -2808,6 +2807,26 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
     Configurable Values: *mcla_ar_configurable_values
     Patch:
       - [ bef32, 0x00b4109c, "Aspect Ratio" ]
+  "Openspy Online":
+    Games: *mclacedisc_106_title
+    Author: "FlexBy"
+    Notes: *mcla_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a28140, "openspy.net" ]
+      - [ utf8, 0x00a28187, "openspy.net" ]
+      - [ utf8, 0x00a283b0, "openspy.net" ]
+      - [ utf8, 0x00a286b2, "openspy.net" ]
+      - [ utf8, 0x00a286d0, "openspy.net" ]
+      - [ utf8, 0x00a286e8, "openspy.net" ]
+      - [ utf8, 0x00a28700, "openspy.net" ]
+      - [ utf8, 0x00a28c6d, "openspy.net" ]
+      - [ utf8, 0x00a29c70, "openspy.net" ]
+      - [ utf8, 0x00a29cae, "openspy.net" ]
+      - [ utf8, 0x00bc9f25, "openspy.net" ]
+      - [ utf8, 0x00bca06d, "openspy.net" ]
+      - [ utf8, 0x00a27d00, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x009d2a90, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
   "Enable Deltatime":
@@ -2847,7 +2866,6 @@ PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
     Notes: *mcla_online_notes
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00a278c7, "openspy.net" ]
       - [ utf8, 0x00a27cf0, "openspy.net" ]
       - [ utf8, 0x00a27d37, "openspy.net" ]
       - [ utf8, 0x00a27f60, "openspy.net" ]
@@ -2903,6 +2921,28 @@ PPU-60ec03e6257d5b53e93ed7f0caf45141a78ff633:
     Configurable Values: *mcla_ar_configurable_values
     Patch:
       - [ bef32, 0x00b410d4, "Aspect Ratio" ]
+  "Openspy Online":
+    Games:
+      "Midnight Club: Los Angeles":
+        BLJS10046: [ 01.04 ]
+    Author: "FlexBy"
+    Notes: *mcla_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a26e20, "openspy.net" ]
+      - [ utf8, 0x00a26e67, "openspy.net" ]
+      - [ utf8, 0x00a27090, "openspy.net" ]
+      - [ utf8, 0x00a27392, "openspy.net" ]
+      - [ utf8, 0x00a273b0, "openspy.net" ]
+      - [ utf8, 0x00a273c8, "openspy.net" ]
+      - [ utf8, 0x00a273e0, "openspy.net" ]
+      - [ utf8, 0x00a2794d, "openspy.net" ]
+      - [ utf8, 0x00a28950, "openspy.net" ]
+      - [ utf8, 0x00a2898e, "openspy.net" ]
+      - [ utf8, 0x00bc9e25, "openspy.net" ]
+      - [ utf8, 0x00bc9f6d, "openspy.net" ]
+      - [ utf8, 0x00a269e0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x009d21f0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 Anchors:
   gta4_fps_notes: &gta4_fps_notes
