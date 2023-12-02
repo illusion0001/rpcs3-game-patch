@@ -16561,6 +16561,32 @@ PPU-8109b840ad2f8e171be946ed6a79e308b9c733f1:
     Patch:
       - [ be32, 0x0150bb34, 0x38600000 ]
 
+PPU-89205f22d731f29080694f55bba3823b4a935026:
+  "Openspy Online":
+    Games:
+      "Fairytale Fights":
+        BLES00696 : [ 01.03 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x01a3c9c5, "openspy.net" ]
+      - [ utf8, 0x01a3c86d, "openspy.net" ]
+      - [ utf8, 0x01736f26, "openspy.net" ]
+      - [ utf8, 0x01736ee8, "openspy.net" ]
+      - [ utf8, 0x01736217, "openspy.net" ]
+      - [ utf8, 0x01735dba, "openspy.net" ]
+      - [ utf8, 0x01735c5c, "openspy.net" ]
+      - [ utf8, 0x01735bdc, "openspy.net" ]
+      - [ utf8, 0x01735a48, "openspy.net" ]
+      - [ utf8, 0x01735a30, "openspy.net" ]
+      - [ utf8, 0x01735a18, "openspy.net" ]
+      - [ utf8, 0x01735585, "openspy.net" ]
+      - [ utf8, 0x01733326, "openspy.net" ]
+      - [ utf8, 0x017332df, "openspy.net" ]
+      - [ utf8, 0x01733690, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x01733400, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-17e5fb03b4175948179339a71a8edde05b1d626b:
   "Unlock FPS":
     Games:
