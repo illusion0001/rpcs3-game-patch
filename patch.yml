@@ -10505,6 +10505,15 @@ PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demo_spu ]
+  "Debug Menu":
+    Games:
+      "Killzone 2 Demo":
+        NPEA90034: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b19d5c, 0x38600001 ]
 
 PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
   "Extended FOV":
@@ -10525,6 +10534,15 @@ PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
     Patch Version: 1.0
     Patch:
       - [ load, *kz2demo_spu ]
+  "Debug Menu":
+    Games:
+      "Killzone 2 Demo":
+        NPUA70034: [ 01.00 ]
+    Author: "dron_3, FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b19d5c, 0x38600001 ]
 
 PPU-3a4e272eff128f7fa40bf722961a0c6de81bfc5a:
   "Extended FOV":
