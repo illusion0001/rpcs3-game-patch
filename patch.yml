@@ -2207,6 +2207,31 @@ PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
       - [ utf8, 0x016577b0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
       - [ utf8, 0x01657a40, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
 
+PPU-9f0ef86c4c6de3793c0d7312de9095ecb02ffd4d:
+  "Openspy Online":
+    Games:
+      "50 Cent: Blood on The Sand":
+        BLJS10056 : [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x0252db9d, "openspy.net" ]
+      - [ utf8, 0x0252decc, "openspy.net" ]
+      - [ utf8, 0x0252df4c, "openspy.net" ]
+      - [ utf8, 0x0252e07a, "openspy.net" ]
+      - [ utf8, 0x0252e440, "openspy.net" ]
+      - [ utf8, 0x0252e49f, "openspy.net" ]
+      - [ utf8, 0x0252f100, "openspy.net" ]
+      - [ utf8, 0x0252f8c8, "openspy.net" ]
+      - [ utf8, 0x0252f8e0, "openspy.net" ]
+      - [ utf8, 0x0252f8f8, "openspy.net" ]
+      - [ utf8, 0x0252fabe, "openspy.net" ]
+      - [ utf8, 0x0292890d, "openspy.net" ]
+      - [ utf8, 0x02928a65, "openspy.net" ]
+      - [ utf8, 0x0252c2a0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x02496db0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   aot40d_fps_notes: &aot40d_fps_notes
     "Maximum framerate with the patch is half the Vblank frequency."
