@@ -17007,6 +17007,17 @@ PPU-891a67a5b923b8900a41f9ecb737769a66e44d55:
     Patch:
       - [ be32, 0x0035d3e4, 0x38600000 ]
 
+PPU-64f6b26f9400dae11dd90fc63c1a94e975b52b6e:
+  "60 FPS":
+    Games:
+      "Just Cause 2":
+        BLJM60232: [ 01.02 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0040d320, 0x38600000 ]
+
 Anchors:
   kid_fps_notes: &kid_fps_notes
     "Some elements speed is tied to FPS."
