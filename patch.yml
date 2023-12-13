@@ -17881,6 +17881,18 @@ PPU-df822d7d47de09c5672201db8cc633009037f54f: # RESIDENT EVIL CODE: Veronica X (
     Patch:
       - [ be32, 0x001afccc, 0x38600000 ]
 
+PPU-46eeb0ddb1a94aa133b472325bfdd094b7c7f2c1:
+  "Unlock FPS":
+    Games:
+      "Resident Evil Revelations Demo":
+        NPEB90478: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b4bb70, 0x60000000 ]
+      - [ be32, 0x00b4bb84, 0x60000000 ]
+
 PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
   "Openspy Online":
     Games:
