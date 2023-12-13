@@ -14517,12 +14517,12 @@ SPU-77ce25dab2a5ca1d96038cc3dc57c50c705ce38c: # SPUNAME: 'Z:/output/USint6/SPUML
       - [ load, *SPU_MLAA_05 ]
 
 SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
-  "Disable SPU MLAA - Twisted Metal":
+  "Disable SPU MLAA - Twisted Metal, Resident Evil: Operation Raccoon City":
     Games:
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nTwisted Metal" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nTwisted Metal\nResident Evil: Operation Raccoon City" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_06 ]
