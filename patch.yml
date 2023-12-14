@@ -17863,8 +17863,9 @@ PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
 PPU-1ffa6b11961fe83613cbd7055b757c1877e2e8b6:
   "Unlock FPS":
     Games:
-      "Resident Evil":
+      "Resident Evil (BioHazard)":
         NPEB02076: [ 01.00 ]
+        NPUB31552: [ 01.00 ]
     Author: "FlexBy"
     Notes: "Cutscenes speed is affected."
     Patch Version: 1.0
@@ -17875,7 +17876,7 @@ PPU-1ffa6b11961fe83613cbd7055b757c1877e2e8b6:
 PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
   "Unlock FPS":
     Games:
-      "Resident Evil 0":
+      "Resident Evil 0 (BioHazard 0)":
         NPEB02226: [ 01.00 ]
     Author: "FlexBy"
     Notes: "Cutscenes speed is affected."
@@ -17883,6 +17884,19 @@ PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
     Patch:
       - [ be32, 0x007d35ac, 0x60000000 ]
       - [ be32, 0x007d35c0, 0x60000000 ]
+
+PPU-1c17ceefd7d33372d1eb73d26afd149186950114:
+  "Unlock FPS":
+    Games:
+      "Resident Evil 0 (BioHazard 0)":
+        NPUB31689: [ 01.00 ]
+        NPJB00726: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Cutscenes speed is affected."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007d34cc, 0x60000000 ]
+      - [ be32, 0x007d34e0, 0x60000000 ]
 
 PPU-5b1fe8f0b8eab817078b6db007de327653bc65dc: # BIOHAZARD CODE: Veronica 完全版 (JP)
   "Remove Door Animations":
