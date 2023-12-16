@@ -18048,6 +18048,18 @@ PPU-46eeb0ddb1a94aa133b472325bfdd094b7c7f2c1:
       - [ be32, 0x00b4bb70, 0x60000000 ]
       - [ be32, 0x00b4bb84, 0x60000000 ]
 
+PPU-4c226eb3070b34abf224f7563762111596209884:
+  "Unlock FPS":
+    Games:
+      "Rogue Warrior":
+        BLES00582: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is the Vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00330d44, 0x60000000 ] # 006c07a0 memory
+      - [ be32, 0x0033d468, 0x60000000 ]
+
 PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
   "Openspy Online":
     Games:
