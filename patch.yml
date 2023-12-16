@@ -16241,6 +16241,17 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
       - [ be32, 0x0004cd24, 0xfc000028 ]
       - [ be32, 0x0005b7d0, 0xfc000028 ]
 
+PPU-b7d282d79e16c88e2307c270406f73bb36d8edab:
+  "Unlock FPS":
+    Games:
+      "3D DOT GAME HEROES":
+        BLES00875: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. "
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002a6ac, 0x60000000 ]
+
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "Skip Intro":
     Games:
