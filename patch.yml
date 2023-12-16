@@ -9430,16 +9430,51 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
     Patch:
       - [ bef32, 0x007328dc, 1.5 ]
 
+MGSHD_AR_Configurable_Values: &MGSHD_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
-  "21:9 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "Metal Gear Solid 2: Sons of Liberty - HD Edition":
         NPEB00685: [ All ]
     Author: "Esppiral"
     Notes:
+    Configurable Values: *MGSHD_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00dee1b0, 0x3f100001 ] # Ingame 21:9 AR
+      - [ bef32, 0x00dee1b0, "Aspect Ratio" ]
+
+PPU-487c61a94764c8917da8cad9c8d661260d97d7c9:
+  "50 FPS":
+    Games:
+      "Metal Gear Solid 3: Snake Eater - HD Edition":
+        BLUS30847: [ 01.00 ]
+    Author: "TriggerHappy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00bb8c94, 0x38600001 ]
+      - [ be32, 0x00bb8c98, 0x4e800020 ]
+  "30 FPS":
+    Games:
+      "Metal Gear Solid 3: Snake Eater - HD Edition":
+        BLUS30847: [ 01.00 ]
+    Author: "TriggerHappy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00bb85a4, 0x3860000a ]
 
 Anchors:
   uc1_disc100title: &uc1_disc100title
