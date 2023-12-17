@@ -16278,6 +16278,17 @@ PPU-db42d5c3edaa63c31c07f22da5a5cd993eff2f62:
     Patch:
       - [ be32, 0x002a6c4, 0x60000000 ]
 
+PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
+  "Unlock FPS":
+    Games:
+      "3D DOT GAME HEROES Trade Demo":
+        BLUD80019: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *3DDGH_FPS_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002a6ac, 0x60000000 ]
+
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "Skip Intro":
     Games:
