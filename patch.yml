@@ -16571,6 +16571,17 @@ PPU-76cb5eb050cabfbc21e40668be9e8b5b3b9d37d3:
       - [ be32, 0x00f08684, 0x60000000 ]
       - [ be32, 0x00f08698, 0x60000000 ]
 
+PPU-59a33bedc708ebfb7905fb35b207313711705579:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma Preview":
+        BLES01356: [ 10.00 ]
+    Author: "FlexBy"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f3a85c, 0x60000000 ]
+      - [ be32, 0x00f3a870, 0x60000000 ]
+
 PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
   "Openspy Online":
     Games:
