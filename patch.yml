@@ -1558,6 +1558,28 @@ PPU-6585c59c9d46eb1aaab617dce0406dc0004388fe:
     Patch:
       - [ load, *ASURA_MB ]
 
+PPU-4e9a32794deb72bef3985b9cf16e58a82fcea8f7:
+  "Unlock FPS":
+    Games:
+      "ASURA'S WRATH Preview":
+        BLES01227: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008ec4b0, 0x60000000 ]
+      - [ be32, 0x008ec510, 0x60000000 ]
+      - [ be32, 0x008ec514, 0x60000000 ]
+  "Boot to title screen":
+    Games:
+      "ASURA'S WRATH Preview":
+        BLES01227: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01534eec, 0x38600000 ]
+
 Anchors:
   JoJoEoH_FPS: &JoJoEoH_FPS
     - [ bef32, 0x0236fef0, 0.5 ] # Match timer rate
