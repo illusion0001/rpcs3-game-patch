@@ -18082,6 +18082,18 @@ PPU-5c0ac77b1169e0cb232548b83f638015b0b3979b:
       - [ be32, 0x00ce4eb4, 0x60000000 ]
       - [ be32, 0x00ce4ec0, 0x60000000 ]
 
+PPU-091faaec5b2f609620744e254b9032e4a3b0f600:
+  "Unlock FPS":
+    Games:
+      "Resident Evil 5 Preview":
+        BHPE00000: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00d1762c, 0x60000000 ]
+      - [ be32, 0x00d17638, 0x60000000 ]
+
 PPU-5b1fe8f0b8eab817078b6db007de327653bc65dc: # BIOHAZARD CODE: Veronica 完全版 (JP)
   "Remove Door Animations":
     Games:
