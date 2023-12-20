@@ -7126,6 +7126,10 @@ Anchors:
     "Uncharted 3: Drake's Deception Demo":
       NPUA70183: [ 01.00 ]
 
+  uc3_USpreview: &uc3_USpreview
+    "Uncharted 3: Drake's Deception Preview":
+      BCUS98233: [ 01.00 ]
+
 PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Unlock FPS":
     Games: *uc3_100title
@@ -7822,6 +7826,94 @@ PPU-f986a163b81248b801709f0c5bb427c090b40dc7:
     Patch:
       - [ be32, 0x007312bc, 0x38000001 ]
       - [ be32, 0x007312c0, 0x980B2163 ]
+
+PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
+  "Debug Menu":
+    Games: *uc3_USpreview
+    Author: "dron_3, HdHereidme, FlexBy"
+    Notes: *uc3_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0072ee5c, 0x38000001 ]
+      - [ be32, 0x0072ee60, 0x980B2163 ]
+  "Enable GPU Lighting":
+    Games: *uc3_USpreview
+    Author: "illusion, ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a8c4, 0x90e303ec ]
+  "Disable in-built MLAA":
+    Games: *uc3_USpreview
+    Author: "Whatcookie, ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0093a62c, 0x9b83 ]
+  "Unlock FPS":
+    Games: *uc3_USpreview
+    Author: "superepic31, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a508, 0x48000040 ]
+      - [ be32, 0x0093a50c, 0x3b6000da ]  
+  "Depth Buffer Viewport":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a878, 0x9b6302f9 ]
+  "Depth Border Fix":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a8b8, 0x9b83031d ]
+  "Performance (WCB)":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes: *uc3_wcbperformance_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a60c, 0x9b830081 ]
+  "Disable Bloom":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00939e94, 0x39000003 ]
+  "Disable Depth of Field":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a5f0, 0x9b83007a ]
+  "Disable SSAO":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0093a56c, 0x9b830057 ]
+  "Disable Motion Blur":
+    Games: *uc3_USpreview
+    Author: "ZEROx, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00771284, 0x480000c4 ]
+  "Disable Mesh Trimming":
+    Games: *uc3_USpreview
+    Author: "ZEROx, illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0073e318, 0x980b0004 ]
 
 Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
