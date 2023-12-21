@@ -3445,13 +3445,43 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
     Patch:
       - [ byte, 0x016808e0, 0x00 ]
 
+Anchors:
+ sr2_online_notes: &sr2_online_notes
+    "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+
+PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
+  "Openspy Online":
+    Games:
+      "Saint's Row 2":
+        BLES00373: [ 01.30 ]
+    Author: "FlexBy"
+    Notes: *sr2_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d9f055, "openspy.net" ] 
+      - [ utf8, 0x00da0b30, "openspy.net" ] 
+      - [ utf8, 0x00da0b48, "openspy.net" ]
+      - [ utf8, 0x00da0b60, "openspy.net" ]
+      - [ utf8, 0x00da0c82, "openspy.net" ]
+      - [ utf8, 0x00da0f18, "openspy.net" ]
+      - [ utf8, 0x00da0fb7, "openspy.net" ]
+      - [ utf8, 0x00da2000, "openspy.net" ]
+      - [ utf8, 0x00da230f, "openspy.net" ]
+      - [ utf8, 0x00da553c, "openspy.net" ]
+      - [ utf8, 0x00da564c, "openspy.net" ]
+      - [ utf8, 0x00da7656, "openspy.net" ]
+      - [ utf8, 0x00f52de5, "openspy.net" ]
+      - [ utf8, 0x00f52f2d, "openspy.net" ]
+      - [ utf8, 0x00da22f8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x00da2120, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-44fbbc24d8e4560b51d724963a89c4e3309fa44f:
   "Openspy Online":
     Games:
       "Saint's Row 2":
         NPEB00637: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Notes: *sr2_online_notes
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00d9e4d5, "openspy.net" ] 
@@ -16403,6 +16433,39 @@ PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
     Patch:
       - [ be32, 0x002a6ac, 0x60000000 ]
 
+Anchors:
+  bf3_109_title: &bf3_109_title
+    "Battlefield 3":
+      BLES01275: [ 01.09 ]
+
+PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
+  "Green Artefacts fix":
+    Games: *bf3_109_title
+    Author: "ZEROx"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x012bc140, 0x9b1f ]
+  "60 fps":
+    Games: *bf3_109_title
+    Author: "ZEROx"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00012fcb, 0x3c ]
+      - [ byte, 0x00013007, 0x3c ]
+      - [ be32, 0x00272f58, 0x38a00000 ]
+      - [ be32, 0x007d9a98, 0x4ba99501 ] #Call
+      - [ be32, 0x00272f98, 0x3cc041f0 ] #r6 = 0x41f00000
+      - [ be32, 0x00272f9c, 0x7f833000 ] #cmpw cr7,r3,r6
+      - [ be32, 0x00272fa0, 0x419e0008 ] #beq cr7
+      - [ be32, 0x00272fa4, 0x90640000 ] #stw r3,0x0(r4)
+      - [ be32, 0x00272fa8, 0x4e800020 ] #ret
+      - [ be16, 0x0127cf26, 0x4270 ]
+      - [ be16, 0x017d3f88, 0x3f91 ]
+      - [ be16, 0x017d3f90, 0x404e ]
+      - [ be16, 0x017d3f98, 0x3f91 ]
+
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "Skip Intro":
     Games:
@@ -17369,6 +17432,8 @@ Anchors:
   mgrr_psn_eu_titles: &mgrr_psn_eu_titles
     "Metal Gear Rising: Revengeance":
       NPEB01228: [ 01.00 ]
+  mgrr_godmode_notes: &mgrr_godmode_notes
+    "Don't enable it for first fight with Sam or you will get soft-locked."
 
 PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
   "1-Hit Kills":
@@ -17381,7 +17446,7 @@ PPU-15011f960541d24709d0f5691708e8ebbd7e01d2:
   "Infinite Health":
     Games: *mgrr_disc_eu_titles
     Author: "CodeUnique3"
-    Notes:
+    Notes: *mgrr_godmode_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0063f36c, 0x38a00000 ]
@@ -17404,7 +17469,7 @@ PPU-d944608b757f50c6207f4147db21df0f8f05e65e:
   "Infinite Health":
     Games: *mgrr_psn_eu_titles
     Author: "CodeUnique3, FlexBy"
-    Notes:
+    Notes: *mgrr_godmode_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0063f6dc, 0x38a00000 ]
@@ -17429,20 +17494,10 @@ PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
       "Metal Gear Rising: Revengeance":
         NPEB01228: [ 01.04 ]
     Author: "FlexBy"
-    Notes:
+    Notes: *mgrr_godmode_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a82844, 0x38a00000 ]
-  "No Stun":
-    Games:
-      "Metal Gear Rising: Revengeance":
-        NPEB01228: [ 01.04 ]
-    Author: "bungholio, FlexBy"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00a3bf9c, 0x48000020 ]
-      - [ be32, 0x00a72930, 0x48000044 ]
   "Can Always Use Ripper Mode":
     Games:
       "Metal Gear Rising: Revengeance":
