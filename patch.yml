@@ -16591,6 +16591,9 @@ PPU-aa19cb14cdbc500656b0ef0cfe572efe40977011:
     Games:
       "Deadpool":
         NPUB31069: [ 01.00 ]
+        NPEB01243: [ 01.00 ]
+        BLUS31146: [ 01.00 ]
+        BLES01789: [ 01.00 ]
     Author: "FlexBy"
     Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
