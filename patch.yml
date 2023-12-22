@@ -16053,6 +16053,19 @@ PPU-f7ff4ca5d07f753244f290dc5e54907948e03613:
       - [ be16, 0x01487934, 0x98bf ]
       - [ be16, 0x01487938, 0x98bf ]
 
+PPU-482f5eaeff7aaa7fb90dbeafcbff4483280e358e:
+  "Unlock FPS":
+    Games:
+      "Painkiller Hell & Damnation":
+        NPEB01390: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008e6b54, 0x60000000 ]
+      - [ be32, 0x008e6bb4, 0x60000000 ]
+      - [ be32, 0x008e6bb8, 0x60000000 ]
+
 PPU-2845afa9e4dc56df06a61f2e51463468e9a557c7:
   "60 FPS":
     Games:
