@@ -18338,6 +18338,19 @@ PPU-4c226eb3070b34abf224f7563762111596209884:
       - [ be32, 0x00330d44, 0x60000000 ] # 006c07a0 memory
       - [ be32, 0x0033d468, 0x60000000 ]
 
+PPU-e3a3a4cef5c6e04bdc3e94207b1d9ab1312df5ea:
+  "Unlock FPS":
+    Games:
+      "Sanctum 2":
+        NPEB01374: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS. "
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008de6b4, 0x60000000 ]
+      - [ be32, 0x008de714, 0x60000000 ]
+      - [ be32, 0x008de718, 0x60000000 ]
+
 PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
   "Openspy Online":
     Games:
