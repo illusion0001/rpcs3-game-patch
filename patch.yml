@@ -18767,6 +18767,16 @@ PPU-4c896694c84b7013a24e8b3d7038b3e6e4934d3a:
     Patch:
       - [ be32, 0x003838fc, 0x38600001 ]
 
+PPU-b0b1d7267608ee6ed8c797b9588a5d53bbe50736:
+  "60 FPS":
+    Games:
+      "時と永遠〜トキトワ〜 (Toki to Eien Tokitowa)":
+        BLJS10181: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00364ebc, 0x38600001 ]
+
 Anchors:
   TokyoJungleMLAAPSN: &TokyoJungleMLAAPSN
     - [ be32, 0x00018d64, 0x60000000 ]
