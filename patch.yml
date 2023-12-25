@@ -18756,6 +18756,17 @@ PPU-e9aaed0f182d2505da70e1b9ec8741ca843fe0dd:
       - [ be32, 0x009cd9b8, 0x60000000 ] # tr logo
       - [ be32, 0x009cd9a0, 0x60000000 ] # dolby logo
 
+PPU-4c896694c84b7013a24e8b3d7038b3e6e4934d3a:
+  "60 FPS":
+    Games:
+      "Time and Eternity":
+        BLUS31173: [ 01.00 ]
+        BLES01848: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003838fc, 0x38600001 ]
+
 Anchors:
   TokyoJungleMLAAPSN: &TokyoJungleMLAAPSN
     - [ be32, 0x00018d64, 0x60000000 ]
