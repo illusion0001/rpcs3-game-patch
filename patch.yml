@@ -1086,6 +1086,19 @@ Anchors:
   gow_hd_16_9_notes: &gow_hd_16_9_notes
     "Like the PS2 releases, the remastered versions of the first two games handle 16:9 aspect ratio by cropping out 25% of the vertical viewport instead of expanding the horizontal FOV. This patch fixes it and makes the game render in proper 16:9."
 
+GOWHD_AR_Configurable_Values: &GOWHD_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333334
+        "5:4": 1.25
+
 PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
   "4:3 Aspect Ratio":
     Games:
@@ -1093,9 +1106,10 @@ PPU-514690b33c4900c9a3ed0cf8ae8b836e8209fb1e:
         NPUA80490: [ 01.00 ]
     Author: "boma"
     Notes: *gow_hd_4_3_notes
+    Configurable Values: *GOWHD_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x004ff9ec, 1.333333334 ]
+      - [ bef32, 0x004ff9ec, "Aspect Ratio" ]
 
 PPU-31e32090ea333902dbf322c24487bab7e8c8d0d1:
   "4:3 Aspect Ratio":
@@ -1104,9 +1118,10 @@ PPU-31e32090ea333902dbf322c24487bab7e8c8d0d1:
         NPUA80491: [ 01.00 ]
     Author: "boma"
     Notes: *gow_hd_4_3_notes
+    Configurable Values: *GOWHD_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x0053ee4c, 1.333333334 ]
+      - [ bef32, 0x0053ee4c, "Aspect Ratio" ]
 
 PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
   "True widescreen":
@@ -1114,6 +1129,7 @@ PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
       "God of War: HD":
         BCUS98229: [ 01.01 ]
         NPUA80490: [ 01.01 ]
+        NPHA80104: [ 01.01 ]
     Author: "Garasuhato"
     Notes: *gow_hd_16_9_notes
     Patch Version: 1.0
@@ -1121,21 +1137,24 @@ PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
       - [ be64, 0x001958d0, 0x38800000ffc00890 ]
       - [ be64, 0x001958d8, 0xfc20f89048092135 ]
       - [ be64, 0x001958e0, 0xc002daa4ec210032 ]
-  "4:3 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "God of War: HD":
         BCUS98229: [ 01.01 ]
         NPUA80490: [ 01.01 ]
+        NPHA80104: [ 01.01 ]
     Author: "boma"
     Notes: *gow_hd_4_3_notes
+    Configurable Values: *GOWHD_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x004ffa44, 1.333333334 ]
+      - [ bef32, 0x004ffa44, "Aspect Ratio" ]
   "Skip any videos with X button":
     Games:
       "God of War: HD":
         BCUS98229: [ 01.01 ]
         NPUA80490: [ 01.01 ]
+        NPHA80104: [ 01.01 ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
@@ -1148,6 +1167,7 @@ PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
       "God of War: II HD":
         BCUS98229: [ 01.01 ]
         NPUA80491: [ 01.01 ]
+        NPHA80105: [ 01.01 ]
     Author: "Garasuhato"
     Notes: *gow_hd_16_9_notes
     Patch Version: 1.0
@@ -1155,21 +1175,24 @@ PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
       - [ be32, 0x000593e4, 0xfca00890 ]
       - [ be64, 0x000593e8, 0xfcc0e890807f000c ]
       - [ be32, 0x001958f0, 0xfc20f890 ]
-  "4:3 Aspect Ratio":
+  "Aspect Ratio":
     Games:
       "God of War: II HD":
         BCUS98229: [ 01.01 ]
         NPUA80491: [ 01.01 ]
+        NPHA80105: [ 01.01 ]
     Author: "boma"
     Notes: *gow_hd_4_3_notes
+    Configurable Values: *GOWHD_AR_Configurable_Values
     Patch Version: 1.0
     Patch:
-      - [ bef32, 0x0053eecc, 1.333333334 ]
+      - [ bef32, 0x0053eecc, "Aspect Ratio" ]
   "Skip any videos with X button":
     Games:
       "God of War: II HD":
         BCUS98229: [ 01.01 ]
         NPUA80491: [ 01.01 ]
+        NPHA80105: [ 01.01 ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
