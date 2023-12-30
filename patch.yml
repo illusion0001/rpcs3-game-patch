@@ -1413,6 +1413,17 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
     Patch:
       - [ be32, 0x00181118, 0x60000000 ]
 
+PPU-1627fd89c57bb2bddc5a41eb1a066b3db356f60d:
+  "Unlock FPS":
+    Games:
+      "Kamen Rider Battride War Genesis":
+        NPJB00758: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Cutscenes will not play with FPS higher than 60."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0018ae24, 0x60000000 ] # 300c07604 memory
+
 Anchors:
   ASURA_FPS_notes: &ASURA_FPS_notes
     "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's possible to play through the game at 60 FPS if you are good at button mashing, but 120 FPS and higher are unplayable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
