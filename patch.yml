@@ -1421,6 +1421,7 @@ PPU-1627fd89c57bb2bddc5a41eb1a066b3db356f60d:
   "Unlock FPS":
     Games:
       "Kamen Rider Battride War Genesis":
+        BLJS10319: [ 01.00 ]
         NPJB00758: [ 01.00 ]
     Author: "FlexBy"
     Notes: *KRBWG_FPS_notes
@@ -1432,6 +1433,7 @@ PPU-d233c0f2401087a45c3e69a90dbfb0836cd4d87d:
   "Unlock FPS":
     Games:
       "Kamen Rider Battride War Genesis":
+        BLJS10319: [ 01.04 ]
         NPJB00758: [ 01.04 ]
     Author: "FlexBy"
     Notes: *KRBWG_FPS_notes
@@ -1439,11 +1441,22 @@ PPU-d233c0f2401087a45c3e69a90dbfb0836cd4d87d:
     Patch:
       - [ be32, 0x0018e964, 0x60000000 ]
 
+PPU-adc2e9d939defe6f9ae997c620041c5209692173:
+  "Unlock FPS":
+    Games:
+      "Kamen Rider Battride War Genesis Memorial TV Sound Edition":
+        BLJS10324: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *KRBWG_FPS_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0018df54, 0x60000000 ]
+
 PPU-b1188c0e10fac40e006d51e0ff1aa5fafc3a0699:
   "Unlock FPS":
     Games:
-      "Kamen Rider Battride War Genesis":
-        BLJS10324 : [ 01.04 ]
+      "Kamen Rider Battride War Genesis Memorial TV Sound Edition":
+        BLJS10324: [ 01.04 ]
     Author: "FlexBy"
     Notes: *KRBWG_FPS_notes
     Patch Version: 1.0
