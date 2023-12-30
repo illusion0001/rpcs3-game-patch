@@ -1424,6 +1424,17 @@ PPU-a67cd2065525414f3bdcd334e6561e728e700a57:
     Patch:
       - [ be32, 0x001b5ef4, 0x60000000 ] # 3006fca34 memory
 
+PPU-5eba48a374b39b9e91f65c09b26ad45ce1a060eb:
+  "Unlock FPS":
+    Games:
+      "Kamen Rider: Battride War Premium TV Sound Edition":
+        BLJS10219: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Cutscenes will not play with FPS higher than 60. Camera sensitivity gets slower at higher FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001b74ac, 0x60000000 ]
+
 Anchors:
   KRBWG_FPS_notes_notes: &KRBWG_FPS_notes
     "Cutscenes will not play with FPS higher than 60. Camera sensitivity gets slower at higher FPS."
