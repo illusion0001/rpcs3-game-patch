@@ -16595,13 +16595,6 @@ Anchors:
       BLES01275: [ 01.09 ]
 
 PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
-  "Green Artefacts fix":
-    Games: *bf3_109_title
-    Author: "ZEROx"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be16, 0x012bc140, 0x9b1f ]
   "60 fps":
     Games: *bf3_109_title
     Author: "ZEROx"
