@@ -6948,6 +6948,7 @@ Anchors:
   uc3_119_mlaa: &uc3_119_mlaa
     - [ be32, 0x0064df28, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0096eaa0, 0x9b83 ]     # store 0
+    - [ be32, 0x0073c214, 0x60000000 ] # mp crash fix (test)
    # - [ be32, 0x0073a1d8, 0x480009ac ] # unconditonally branch to disable MLAA
     # Beginning of new blooom code
     - [ be16, 0x0078c3aa, 0x1530 ]
