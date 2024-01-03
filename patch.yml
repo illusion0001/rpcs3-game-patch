@@ -1710,6 +1710,33 @@ PPU-4e9a32794deb72bef3985b9cf16e58a82fcea8f7:
     Patch:
       - [ be32, 0x01534eec, 0x38600000 ]
 
+PPU-10752b875de334735d16c0606bf2805feba25497:
+  "OpenSpy Online":
+    Games:
+      "Brothers in Arms: Hell's Highway":
+        BLES00319: [ 01.00 ]
+    Author: "FridiNaTor"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch:
+      - [ utf8, 0x0186a8dd, "openspy.net" ]
+      - [ utf8, 0x0186abf8, "openspy.net" ]
+      - [ utf8, 0x0186ac10, "openspy.net" ]
+      - [ utf8, 0x0186ac28, "openspy.net" ]
+      - [ utf8, 0x0186acca, "openspy.net" ]
+      - [ utf8, 0x0186b090, "openspy.net" ]
+      - [ utf8, 0x0186bd50, "openspy.net" ]
+      - [ utf8, 0x01b84fa5, "openspy.net" ]
+      - [ utf8, 0x01b85105, "openspy.net" ]
+      - [ utf8, 0x0186678f, "openspy.net" ]
+      - [ utf8, 0x0186b0ef, "openspy.net" ]
+      - [ utf8, 0x0186c73e, "openspy.net" ]
+      - [ utf8, 0x01b865a5, "openspy.net" ]
+      - [ utf8, 0x01b8688c, "openspy.net" ]
+      - [ utf8, 0x01868fd8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x017bcb90, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   JoJoEoH_FPS: &JoJoEoH_FPS
     - [ bef32, 0x0236fef0, 0.5 ] # Match timer rate
