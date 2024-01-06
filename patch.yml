@@ -3663,6 +3663,7 @@ PPU-342cfff6572ba74b4f4a55b454fa07e172577aa9:
     Games:
       "Batman Arkham City GOTY":
         BLES01587: [ 01.00 ]
+        BLUS30978: [ 01.00 ]
     Author: "dron_3"
     Notes: "Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)"
     Patch Version: 1.0
