@@ -3422,6 +3422,28 @@ PPU-19449ce904fff4a8b8f610b60461481f8a8bbd7b:
     Patch:
       - [ load, *MirrorsEdge_UnlockFPS_PSN ]
 
+PPU-5075ef52fa2217b98ab1f0dd00ff457d85979b91:
+  "Unlock FPS":
+    Games:
+      "Mirror's Edge":
+        BLKS20094: [ 01.02 ]
+    Author: "illusion, FlexBy"
+    Notes: *MirrorsEdge_UnlockFPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00eb1a38, 0x60000000 ]
+      
+PPU-12f343d8a2f44e8dcce5a22e46e59b4b6c89d97b:
+  "Unlock FPS":
+    Games:
+      "Mirror's Edge":
+        BLJM60104: [ 01.02 ]
+    Author: "illusion, FlexBy"
+    Notes: *MirrorsEdge_UnlockFPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00eb1b40, 0x60000000 ]
+
 Anchors:
   gta5_60fps_notes: &gta5_60fps_notes
     "Allows the game to run at 60 FPS when the VBlank frequency is set to 120 Hz.\n\n※ While this patch does set the frame limit to be half of the VBlank frequency, the game will not actually run any higher than 62 FPS except during the legal/copyright notice screen that is shown at boot."
