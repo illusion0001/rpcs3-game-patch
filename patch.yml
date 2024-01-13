@@ -8130,6 +8130,21 @@ Anchors:
   gt5_unlockfps_notes: &gt5_unlockfps_notes
     "Cutscenes rendered in the game's engine are sped up."
 
+  GT5_AR_Notes: &GT5_AR_Notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will stay at 16:9. Sometimes text doesnt show up."
+  GT5_AR_Configurable_values: &GT5_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-5eb226d8430cf943cca1344fcf0c76db15aaaeb7:
   "Extended FOV":
     Games:
@@ -8203,6 +8218,17 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
       - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
       - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
       - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
+  "Aspect Ratio":
+    Games:
+      "Gran Turismo 5":
+        BCUS98114: [ 02.11 ]
+    Author: "Shy_Doge"
+    Configurable Values: *GT5_AR_Configurable_Values
+    Patch Version: 1.0
+    Notes: *GT5_AR_Notes
+    Patch:
+      - [ bef32, 0x014941d0, "Aspect Ratio" ]
+      - [ bef32, 0x0148ef40, "Aspect Ratio" ]
 
 PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
   "Unlock FPS":
@@ -8248,36 +8274,6 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ be16, 0x013dde19, 0x0000 ] # Null terminate
       - [ utf8, 0x013dde38, /game/BCES00569/USRDIR/direct ] # param_2
       - [ be16, 0x013dde55, 0x0000 ] # Null terminate
-
-Anchors:
-  GT5_AR_Notes: &GT5_AR_Notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will stay at 16:9. Sometimes text doesnt show up."
-  GT5_AR_Configurable_values: &GT5_AR_Configurable_Values
-    "Aspect Ratio":
-      Type: double_enum
-      Value: &32_9_value 3.555555555555556
-      Allowed Values:
-        "32:9": *32_9_value
-        "21:9 (3840x1600)": 2.4
-        "21:9 (3440x1440)": 2.388888888888889
-        "21:9 (2560x1080)": 2.37037037037037
-        "16:10": 1.6
-        "4:3": 1.333333333333333
-        "5:4": 1.25
-
-PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
-  "Custom Aspect Ratio":
-    Games:
-      "Gran Turismo 5":
-        BCUS98114: [ 02.11 ]
-    Author: "Shy_Doge"
-    Configurable Values: *GT5_AR_Configurable_Values
-    Patch Version: 1.0
-    Group: ""
-    Notes: *GT5_AR_Notes
-    Patch:
-      - [ bef32, 0x014941d0, "Aspect Ratio" ]
-      - [ bef32, 0x0148ef40, "Aspect Ratio" ]
 
 Anchors:
   gt6_devlop_122: &gt6_devlop_122
