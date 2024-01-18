@@ -18837,6 +18837,19 @@ PPU-cc96d5ee9c63d01a2be28bc251777650184a9999:
     Patch:
       - [ be32, 0x005f6f74, 0x38600001 ]
 
+PPU-cae78b97db380c30e81b865584303c31a56930b8:
+  "Unlock FPS":
+    Games:
+      "Teenage Mutant Ninja Turtles: Out of the Shadows":
+        NPEB01425: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0091e3c4, 0x60000000 ]
+      - [ be32, 0x0091e424, 0x60000000 ]
+      - [ be32, 0x0091e428, 0x60000000 ]
+
 Anchors:
   skyrim_titleid: &skyrim_titleid
     "The Elder Scrolls V: Skyrim":
