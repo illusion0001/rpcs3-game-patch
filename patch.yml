@@ -18788,6 +18788,19 @@ PPU-49aa433a899d78438decde97c4e1b79a473148a1:
       - [ be32, 0x002f9394, 0x980300ac ] # stb r0,0xac(r3)
       - [ be32, 0x002f9398, 0x4e800020 ] # blr
 
+PPU-b67e07a140a8378f61e94bc73b33b18e676c8121:
+  "Unlock FPS":
+    Games:
+      "Sorcery":
+        NPUA80796: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00766d28, 0x60000000 ]
+      - [ be32, 0x00766d7c, 0x60000000 ]
+      - [ be32, 0x00766d80, 0x60000000 ]
+
 PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
   "60 FPS":
     Games:
