@@ -7641,7 +7641,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
       - [ load, *uc3_119_FPS ]
   "Disable in-built MLAA":
     Games: *uc3_119title
-    Author: "Whatcookie, ZEROx"
+    Author: "Whatcookie, ZEROx, illusion"
     Notes: *uc3_mlaa_notes
     Patch Version: 3.0
     Patch:
