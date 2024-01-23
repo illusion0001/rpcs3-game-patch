@@ -7302,7 +7302,7 @@ Anchors:
     "L3 + Start = Dev Menu\nL3 + Select = Quick Menu\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
 
   uc3_mlaa_notes: &uc3_mlaa_notes
-    "Allows for the use of Resolution Scaling in the title and improves performance.\nVersion 2.0 Fixes high levels of bloom in some areas. (1.10 and 1.19 Only)"
+    "Allows for the use of Resolution Scaling in the title and improves performance.\nVersion 2.0 Fixes high levels of bloom in some areas. (1.10 and 1.19 Only)\nVersion 3.0 Fixes Crash in some multiplayer levels. (1.19 Only)"
 
   uc3_wcbperformance_notes: &uc3_wcbperformance_notes
     "Enable this patch if you are using \"Write Color Buffers\" to restore performance."
@@ -7643,7 +7643,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Games: *uc3_119title
     Author: "Whatcookie, ZEROx"
     Notes: *uc3_mlaa_notes
-    Patch Version: 2.0
+    Patch Version: 3.0
     Patch:
       - [ load, *uc3_119_mlaa ]
   "Disable Motion Blur":
