@@ -17811,6 +17811,36 @@ PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
     Patch:
       - [ be32, 0x00a33fd8, 0x38600001 ]
 
+Anchors:
+  minecraft_fov_notes: &minecraft_fov_notes "Increases the FOV from the default 70. Also affects viewmodels. FOV is decreased when in water."
+
+PPU-544fcc57bf587323d6347b6b695f73f99f76ec55:
+  "90 FOV":
+    Games:
+      "Minecraft":
+        NPEB01899: [ 01.00 ]
+        NPUB31419: [ 01.00 ]
+    Author: "Margen67"
+    Notes: *minecraft_fov_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0012f82a, 0x42b4 ]
+
+PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
+  "90 FOV":
+    Games:
+      "Minecraft":
+        NPEB01899: [ 01.84 ]
+        NPJB00549: [ 01.84 ]
+        NPUB31419: [ 01.84 ]
+        BLUS31426: [ 01.84 ]
+        BLES01976: [ 01.84 ]
+    Author: "Margen67"
+    Notes: *minecraft_fov_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00a940fe, 0x42b4 ]
+
 PPU-069afd5bd7f8cb83c2962ea1575da8b3be6c7e57:
   "Openspy Online":
     Games:
