@@ -19353,6 +19353,30 @@ PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
       - [ be32, 0x007a91d0, 0x3c888889 ]
       - [ be32, 0x002142d4, 0x38000001 ]
 
+PPU-16d92d4b3a73bc5c99ae17d054069106a5a163ad:
+  "Openspy Online":
+    Games:
+      "High Stakes on the Vegas Strip: Poker Edition":
+        NPEB00009: [ 02.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00306808, "openspy.net" ]
+      - [ utf8, 0x0030756d, "openspy.net" ]
+      - [ utf8, 0x00308df8, "openspy.net" ]
+      - [ utf8, 0x00308e10, "openspy.net" ]
+      - [ utf8, 0x00308e28, "openspy.net" ]
+      - [ utf8, 0x00308f42, "openspy.net" ]
+      - [ utf8, 0x00309238, "openspy.net" ]
+      - [ utf8, 0x00309774, "openspy.net" ]
+      - [ utf8, 0x0030983c, "openspy.net" ]
+      - [ utf8, 0x00377835, "openspy.net" ]
+      - [ utf8, 0x0037797d, "openspy.net" ]
+      - [ utf8, 0x00377c12, "openspy.net" ]
+      - [ utf8, 0x00309970, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x002f1728, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-cf8528c5a94d26438e19d8e4272b85cd1671088c:
   "Disable MLAA":
     Games:
