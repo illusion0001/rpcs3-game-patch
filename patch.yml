@@ -16889,6 +16889,8 @@ PPU-ac58999f254e8d9dc817426c8c84b068ee8caaea:
         BLES01857: [ 01.24 ]
         BLUS31181: [ 01.24 ]
         BCJS35001: [ 01.24 ]
+        NPEB02021: [ 01.24 ]
+        NPUB31202: [ 01.24 ]
     Author: "cohaereo"
     Notes: "Necessary for the game to connect to unofficial signon servers."
     Patch Version: 0.1
