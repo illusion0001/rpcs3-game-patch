@@ -18836,6 +18836,18 @@ PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
       - [ utf8, 0x00ec7be8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x00ec7ade, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+PPU-f89b6fc155bf75951c41f50e251c2c0629979966:
+  "Unlock FPS":
+    Games:
+      "戦国BASARA 真田幸村伝 (Sengoku Basara: Sanada Yukimura-Den)":
+        NPJB00805: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e3d544, 0x60000000 ]
+      - [ be32, 0x00e3d558, 0x60000000 ]
+
 PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
   "60 FPS":
     Games:
