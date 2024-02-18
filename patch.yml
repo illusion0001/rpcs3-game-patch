@@ -12919,7 +12919,7 @@ PPU-82555e0b1aaaa6c62ae8f23057e38d1006b7c19c: # game.self
 PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
   "Unlock FPS":
     Games:
-      "Sengoku Basara 4: Sumeragi":
+      "戦国BASARA4 皇 (Sengoku Basara 4: Sumeragi)":
         BLJM61248: [ 01.02 ]
     Author: "Whatcookie"
     Notes: "The game is locked to 60 FPS by default. This patch completely removes the framelimiter, and doesn't need any special settings."
@@ -12927,6 +12927,30 @@ PPU-533d9f764374a5174b4e3c2834e742c4184d7211:
     Patch:
       - [ be32, 0x00e23160, 0x3860001e ] # li r3, 1e
       - [ be32, 0x00e23178, 0x60000000 ] # nop
+
+PPU-a16e6df2faaf035fb375ce5e61a0e872cf03bfb9:
+  "Unlock FPS":
+    Games:
+      "戦国BASARA4 皇 (Sengoku Basara 4: Sumeragi)":
+        NPJB00688: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e20184, 0x60000000 ]
+      - [ be32, 0x00e20198, 0x60000000 ]
+
+PPU-120c0bb1328b0b74f9c176e22ecdda83296f210f:
+  "Unlock FPS":
+    Games:
+      "戦国BASARA4 皇 (Sengoku Basara 4: Sumeragi)":
+        NPJB00688: [ 01.02 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e21c64, 0x60000000 ]
+      - [ be32, 0x00e21c78, 0x60000000 ]
 
 Anchors:
   ShadowsoftheDamned_FPS_notes: &ShadowsoftheDamned_FPS_notes
