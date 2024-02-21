@@ -16753,9 +16753,10 @@ Anchors:
   bf3_109_title: &bf3_109_title
     "Battlefield 3":
       BLES01275: [ 01.09 ]
+      BLUS30762: [ 01.09 ]
 
 PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
-  "60 fps":
+  "60 FPS":
     Games: *bf3_109_title
     Author: "ZEROx"
     Notes:
