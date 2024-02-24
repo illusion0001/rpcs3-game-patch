@@ -15289,6 +15289,18 @@ PPU-ccc559bb969d8a52d00597b7ecc5e76e552c2cb6:
     Patch:
       - [ bef32, 0x004df144, "Aspect Ratio" ]
 
+PPU-ca24b3c7b5db4bf8e8b9699fc1cbca8341855556:
+  "R&C 1: Aspect Ratio":
+    Games:
+      "The Ratchet & Clank Trilogy":
+        NPEA00385: [ All ]
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
+    Patch Version: 1.2
+    Patch:
+      - [ bef32, 0x004df144, "Aspect Ratio" ]
+
 PPU-f3eccbf6ccf5e2aa99f352b612069e7a20198d68:
   "R&C 1: Aspect Ratio":
     Games:
@@ -15306,6 +15318,18 @@ PPU-2489bccdbafacc6ec3a36aa68ae3dcbe7e9e2d6c:
     Games:
       "The Ratchet & Clank Trilogy":
         BCES01503: [ All ]
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
+    Patch Version: 1.2
+    Patch:
+      - [ bef32, 0x010b2574, "Aspect Ratio" ]
+
+PPU-1ae9ce11ee33169d01ea18f0b91f0d844e63396f:
+  "R&C 2: Aspect Ratio":
+    Games:
+      "The Ratchet & Clank Trilogy":
+        NPEA00386: [ All ]
     Author: "Juhn, Victoria"
     Notes: *ratchet_trilogy_ar_notes
     Configurable Values: *ratchet_trilogy_ar_configurable_values
@@ -15336,6 +15360,18 @@ PPU-2b534405de98e28b1368947c8f14d9a386bc53de:
     Patch Version: 1.2
     Patch:
       - [ bef32, 0x0096f544, "Aspect Ratio" ]
+
+PPU-25754a689f16c96ab071a738b8e46e4e2e12b327:
+  "R&C 3: Aspect Ratio":
+    Games:
+      "The Ratchet & Clank Trilogy":
+        NPEA00387: [ All ]
+    Author: "Juhn, Victoria"
+    Notes: *ratchet_trilogy_ar_notes
+    Configurable Values: *ratchet_trilogy_ar_configurable_values
+    Patch Version: 1.2
+    Patch:
+      - [ bef32, 0x0096f0d4, "Aspect Ratio" ]
 
 PPU-835dc9b413a3f538ddb52f24382b93e3fad5164d:
   "R&C 3: Aspect Ratio":
