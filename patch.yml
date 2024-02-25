@@ -15089,12 +15089,12 @@ SPU-a129a01a270246c85df18eee0e959ef4263b6510: # SPUNAME: 'C:\dev\CW_br2_move_fin
       - [ load, *SPU_MLAA_09 ]
 
 SPU-702d0205a89d445d15dc0f96548546c4e2e7a59f: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
-  "Disable SPU MLAA - LittleBigPlanet 2, LittleBigPlanet 3":
+  "Disable SPU MLAA - LittleBigPlanet 2, LittleBigPlanet 3, LittleBigPlanet Hub":
     Games:
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2\nLittleBigPlanet 3" ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2\nLittleBigPlanet 3\nLittleBigPlanet Hub" ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_10 ]
