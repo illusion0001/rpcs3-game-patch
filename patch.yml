@@ -1313,11 +1313,19 @@ Anchors:
         "4:3": 1.333333333333333
         "5:4": 1.25
 
+  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
+  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
+  lbp2_custom_digest: &lbp2_custom_digest
+    "CustomServerDigest"
+
   lbp2_server_url_beacon: &lbp2_server_url_beacon
     "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
 
   lbp2_server_url_infinite: &lbp2_server_url_infinite
     "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp2_server_url_lbr: &lbp2_server_url_lbr
+    "http://lbp.littlebigrefresh.com:2095/lbp\0"
 
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   "Aspect Ratio":
@@ -1353,6 +1361,17 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch:
       - [ utf8, 0x00c51b68, *lbp2_server_url_infinite ] # https server url
       - [ utf8, 0x00c51c08, *lbp2_server_url_infinite ] # http server url
+  "LittleBigRefresh Custom Server":
+    Games: *lbp2_133title
+    Author: "jvyden (via Refresher)"
+    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00c51b68, *lbp2_server_url_lbr ]
+      - [ utf8, 0x00c51c08, *lbp2_server_url_lbr ]
+      - [ utf8, 0x00c361d0, *lbp2_custom_digest ] # Digest key
+
 
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
