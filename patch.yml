@@ -1372,7 +1372,6 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
       - [ utf8, 0x00c51c08, *lbp2_server_url_lbr ]
       - [ utf8, 0x00c361d0, *lbp2_custom_digest ] # Digest key
 
-
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
     Games: *lbp2_121title
