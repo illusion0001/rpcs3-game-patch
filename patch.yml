@@ -17536,6 +17536,7 @@ PPU-afa4136447c25cb9c57487bb8c964b84ce960204:
 Anchors:
   fuse_titles: &fuse_titles
     "Fuse":
+      NPEB01112: [ 01.00 ]
       NPUB30874: [ 01.00 ]
       BLUS31040: [ 01.00 ]
       BLES01724: [ 01.00 ]
