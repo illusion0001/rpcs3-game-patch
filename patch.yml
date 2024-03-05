@@ -19890,3 +19890,53 @@ PPU-e0d1cb983c09ccdad4cb91335287bfd47e6afb44:
       - [ be32, 0x007f5a9c, 0x60000000 ]
       - [ be32, 0x007f5aa0, 0x60000000 ]
 
+Anchors:
+ LBPH_AR_Configurable_Values: &LBPH_AR_Configurable_Values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+ 
+PPU-18cc71253bf487257baff903ad2fecb599741669:
+  "Aspect Ratio":
+    Games:
+      "LittleBigPlanet Hub Internal Beta":
+        BCET70055: [ 01.25 ]
+    Author: "FlexBy"
+    Notes:
+    Configurable Values: *LBPH_AR_Configurable_Values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00cc06c4, "Aspect Ratio" ]
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet Hub Internal Beta":
+        BCET70055: [ 01.25 ]
+    Author: "FlexBy, uh wot"
+    Notes:
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00b744c0, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https #flexby
+      - [ utf8, 0x00b749e8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http
+      - [ utf8, 0x00bd0168, "!?/*hjk7duOZ1f@daX" ] # digest key #uh wot
+  "Infinite Custom Server":
+    Games:
+      "LittleBigPlanet Hub Internal Beta":
+        BCET70055: [ 01.25 ]
+    Author: "Toyo, uh wot"
+    Notes: "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication.\n\nThanks to @uh wot for locating the addresses."
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00b749e8, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # https server url
+      - [ utf8, 0x00b744c0, "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0" ] # http server url
+      - [ utf8, 0x00bd0168, "!?/*hjk7duOZ1f@daX" ]
+
