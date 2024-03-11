@@ -8284,6 +8284,17 @@ PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
       - [ be32, 0x0073e318, 0x980b0004 ]
 
 Anchors:
+
+  gt5_v211_fps: &gt5_v211_fps
+    - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
+    - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
+    #- [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
+
+  gt5_v217_fps: &gt5_v217_fps
+    - [ byte, 0x001855cb, 0x00 ] # Unlock FPS ingame
+    - [ byte, 0x001855d7, 0x00 ] # Unlock FPS ingame
+    #- [ be32, 0x00861948, 0x38800000 ] # Unlock FPS in menu
+
   gt5_unlockfps_notes: &gt5_unlockfps_notes
     "Cutscenes rendered in the game's engine are sped up."
 
@@ -8350,19 +8361,6 @@ PPU-ef552ab6594271862d9c6ab62e982c92380ad6cd:
     Patch:
       - [ be32, 0x00a0f640, 0x38800000 ] # 1.12 eboot (1.13 doesn't have elf)
 
-PPU-223cc85fc80a6667fae775c7c02f7f65e6b2871f:
-  "Unlock FPS":
-    Games:
-      "Gran Turismo 5":
-        BCES00569: [ 02.17 ]
-    Author: "ZEROx"
-    Notes: *gt5_unlockfps_notes
-    Patch Version: 1.0
-    Patch:
-      - [ byte, 0x001855cb, 0x00 ] # Unlock FPS ingame
-      - [ byte, 0x001855d7, 0x00 ] # Unlock FPS ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
-
 PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
   "Unlock FPS":
     Games:
@@ -8372,9 +8370,7 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
-      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
+      - [ load, *gt5_v211_fps ]
   "Aspect Ratio":
     Games:
       "Gran Turismo 5":
@@ -8386,19 +8382,16 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
     Patch:
       - [ bef32, 0x014941d0, "Aspect Ratio" ]
       - [ bef32, 0x0148ef40, "Aspect Ratio" ]
-
-PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
-  "Unlock FPS":
+  "irekej Custom Server":
     Games:
       "Gran Turismo 5":
-        BCUS98114: [ 02.17 ]
-    Author: "ZEROx"
-    Notes: *gt5_unlockfps_notes
+        BCUS98114: [ 02.11 ]
+    Author: "FlexBy"
+    Notes:
+    Group: CustomServer
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
-      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
+      - [ utf8, 0x013dec30, "http://5.61.32.177\0" ] # https://gt5.ps3.online.us.gran-turismo.com
 
 PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
   "Unlock FPS":
@@ -8409,9 +8402,7 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
     Notes: *gt5_unlockfps_notes
     Patch Version: 1.0
     Patch:
-      - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
-      - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
-      - [ be32, 0x0085f804, 0x38800000 ] # Unlock FPS in menu
+      - [ load, *gt5_v211_fps ]
   "Allow Running Unpacked":
     Games:
       "Gran Turismo 5":
@@ -8431,6 +8422,49 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       - [ be16, 0x013dde19, 0x0000 ] # Null terminate
       - [ utf8, 0x013dde38, /game/BCES00569/USRDIR/direct ] # param_2
       - [ be16, 0x013dde55, 0x0000 ] # Null terminate
+  "Aspect Ratio":
+    Games:
+      "Gran Turismo 5":
+        BCES00569: [ 02.11 ]
+    Author: "Shy_Doge, FlexBy"
+    Configurable Values: *GT5_AR_Configurable_Values
+    Patch Version: 1.0
+    Notes: *GT5_AR_Notes
+    Patch:
+      - [ bef32, 0x01494170, "Aspect Ratio" ]
+      - [ bef32, 0x0148eee0, "Aspect Ratio" ]
+  "irekej Custom Server":
+    Games:
+      "Gran Turismo 5":
+        BCES00569: [ 02.11 ]
+    Author: "FlexBy"
+    Notes:
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x013debb0, "http://5.61.32.177\0" ] # https://gt5.ps3.online.uk.gran-turismo.com
+
+PPU-223cc85fc80a6667fae775c7c02f7f65e6b2871f:
+  "Unlock FPS":
+    Games:
+      "Gran Turismo 5":
+        BCES00569: [ 02.17 ]
+    Author: "ZEROx"
+    Notes: *gt5_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *gt5_v217_fps ]
+
+PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
+  "Unlock FPS":
+    Games:
+      "Gran Turismo 5":
+        BCUS98114: [ 02.17 ]
+    Author: "ZEROx"
+    Notes: *gt5_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *gt5_v217_fps ]
 
 Anchors:
   gt6_devlop_122: &gt6_devlop_122
