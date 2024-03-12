@@ -9998,6 +9998,18 @@ PPU-79c9f5ae14fe84851dca7bfe33f58bee3367730b:
     Patch:
       - [ bef32, 0x00dee1b0, "Aspect Ratio" ]
 
+PPU-17ca4b1c4aee1da8b6c35b9ef9caf495410c838f:
+  "Aspect Ratio":
+    Games:
+      "Metal Gear Solid 2: Sons of Liberty - HD Edition":
+        NPUB30609: [ All ]
+    Author: "Esppiral, FlexBy"
+    Notes:
+    Configurable Values: *MGSHD_AR_Configurable_Values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00dee140, "Aspect Ratio" ]
+
 PPU-487c61a94764c8917da8cad9c8d661260d97d7c9:
   "50 FPS":
     Games:
