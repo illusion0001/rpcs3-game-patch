@@ -8493,6 +8493,15 @@ PPU-638ef307e2b35d593f599efec0dc0c37059a984b:
     Patch Version: 1.0
     Patch:
       - [ load, *gt6_devlop_122 ]
+  "irekej Custom Server":
+    Games:
+      "Gran Turismo 6":
+        BCES01893: [ 01.22 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x0163ef98, "http://5.61.32.177\0" ] # https://gt6.ps3.online.sce%c.gran-turismo.com
 
 PPU-80f0d67b29d3d17ac885a309a3fc4cd8dcf50658:
   "Develop Settings":
