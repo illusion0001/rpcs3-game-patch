@@ -2701,8 +2701,6 @@ PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
       - [ be32, 0x00d69588, 0xc80b13fc ]
 
 Anchors:
-  gow3_fps_notes: &gow3_fps_notes
-    "WARNING: Causes physics issues with harpies, you will need to disable this patch to get past some sections of the game.\n\nUnlocks internal timestep calculation and fixes IGC timing issues at 60 FPS and above. Increase vblank to match your desired framerate."
 
   gow3_mlaa_notes: &gow3_mlaa_notes
     "Allows for the use of Resolution Scaling in the title.\nSet Resolution Scale Threshold to 1x1 or some effects will break.\n2.0 Slightly improves performance when using resolution scaling in some cases."
