@@ -11598,6 +11598,9 @@ Anchors:
   ms2_svo_notes: &ms2_svo_notes
     "Patches out SVO, meaning you no longer need to quit the game after every online race on PSORG (https://discord.gg/GdX4V44CJd), nor must you delete the SVO chunk from your save file/delete your save data."
 
+  ms2_shad_notes: &ms2_shad_notes
+    "~20% performance improvement but makes the game look worse."
+
   ms2_disc100title: &ms2_disc100title
     "MotorStorm: Pacific Rift (MotorStorm 2)":
       BCES00129: [ 01.00 ]
@@ -11641,6 +11644,13 @@ PPU-34984cacd60f2ee2a380157a009122698d470056:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0035fdec, 0x38600000 ] # li r3 0x0
+  "Disable Shadows":
+    Games: *ms2_disc100title
+    Author: "regal."
+    Notes: *ms2_shad_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00e31300, "\x00" ] # data/%s/%s.trg
 
 PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
   "60 FPS":
@@ -11678,6 +11688,13 @@ PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
     Patch Version: 1.1
     Patch:
       - [ byte, 0x00d410bb, 0x00 ]
+  "Disable Shadows":
+    Games: *ms2_disc103title
+    Author: "regal."
+    Notes: *ms2_shad_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d5bfa0, "\x00" ] # data/%s/%s.trg
 
 PPU-f62bdccfbca93730c2fcd484f65ead6f3c7878be:
   "60 FPS":
