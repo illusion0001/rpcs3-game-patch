@@ -3562,22 +3562,6 @@ PPU-e2d0208186c8a9456d5eb143bb695ec356b195a0:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f830, 0x00 ]
-  "GTA:OG Custom Server":
-    Games: *gta5_JP123title
-    Author: "logan, Byrom, FlexBy"
-    Notes: "GTA:OG - GTA Online server revival project"
-    Group: CustomServer
-    Patch Version: 1.3
-    Patch:
-      - [ utf8, 0x01851328, "http://\0" ] 
-      - [ utf8, 0x0184f95c, "http://\0" ] 
-      - [ utf8, 0x01850d1c, "ros.gtao.gg\0" ] 
-      - [ byte, 0x00d4d9cf, 0x00 ] 
-      - [ be16, 0x012de6e6, 0x03 ] 
-      - [ be32, 0x012d1480, 0x38600001 ] 
-      - [ be32, 0x012d1484, 0x4E800020 ] 
-      - [ be32, 0x00d2e8a0, 0x39200001 ]
-      - [ be32, 0x00d2e8b0, 0x38C0001B ]
 
 PPU-7b0b0796c3ac6b1274a290bd74c87c48fb459e69:
   "60 FPS":
@@ -3610,22 +3594,6 @@ PPU-33546066628b10ec09f08a3c29c15611f9e65493:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0182a4b0, 0x00 ]
-  "GTA:OG Custom Server":
-    Games: *gta5_US127title
-    Author: "logan, Byrom"
-    Notes: "GTA:OG - GTA Online server revival project"
-    Group: CustomServer
-    Patch Version: 1.3
-    Patch:
-      - [ utf8, 0x0186BFA8, "http://\0" ] 
-      - [ utf8, 0x0186A5DC, "http://\0" ]       
-      - [ utf8, 0x0186B99C, "ros.gtao.gg\0" ] 
-      - [ byte, 0x00D5DBA7, 0x00 ] 
-      - [ be16, 0x012F6466, 0x03 ] 
-      - [ be32, 0x012E9100, 0x38600001 ] 
-      - [ be32, 0x012E9104, 0x4E800020 ] 
-      - [ be32, 0x00D3EA40, 0x39200001 ]
-      - [ be32, 0x00D3EA50, 0x38C0001B ]
 
 PPU-51eaefa466f3e26a4108f825e9b0856ee079aa2b:
   "60 FPS":
@@ -3658,22 +3626,6 @@ PPU-70a481398fc3e934446bc53c8e888d92cbcc62be:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x0180f7b0, 0x00 ]
-  "GTA:OG Custom Server":
-    Games: *gta5_EU127title
-    Author: "logan, Byrom"
-    Notes: "GTA:OG - GTA Online server revival project"
-    Group: CustomServer
-    Patch Version: 1.3
-    Patch:
-      - [ utf8, 0x018512A8, "http://\0" ] 
-      - [ utf8, 0x0184F8DC, "http://\0" ] 
-      - [ utf8, 0x01850C9C, "ros.gtao.gg\0" ] 
-      - [ byte, 0x00D4DA3F, 0x00 ] 
-      - [ be16, 0x012DE786, 0x03 ] 
-      - [ be32, 0x012D1520, 0x38600001 ] 
-      - [ be32, 0x012D1524, 0x4E800020 ] 
-      - [ be32, 0x00D2E910, 0x39200001 ] 
-      - [ be32, 0x00D2E920, 0x38C0001B ] 
 
 PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
   "60 FPS":
@@ -11601,6 +11553,9 @@ Anchors:
   ms2_shad_notes: &ms2_shad_notes
     "~20% performance improvement but makes the game look worse."
 
+  ms2_crwdnoise_notes: &ms2_crwdnoise_notes
+    "Disables the crowd noises that can be heard in the menus."
+
   ms2_disc100title: &ms2_disc100title
     "MotorStorm: Pacific Rift (MotorStorm 2)":
       BCES00129: [ 01.00 ]
@@ -11654,7 +11609,7 @@ PPU-34984cacd60f2ee2a380157a009122698d470056:
   "Disable Crowd Noises":
     Games: *ms2_disc100title
     Author: regal.
-    Notes: Disables the crowd noises that can be heard in the menus.
+    Notes: *ms2_crwdnoise_notes
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00dff908, "\x00" ] # audio/crowd0%d
@@ -11705,7 +11660,7 @@ PPU-a1f33132af387c49d452e64fcb0704cb06b6d084:
   "Disable Crowd Noises":
     Games: *ms2_disc103title
     Author: regal.
-    Notes: Disables the crowd noises that can be heard in the menus.
+    Notes: *ms2_crwdnoise_notes
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x00d27d28, "\x00" ] # audio/crowd0%d
