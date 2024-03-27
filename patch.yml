@@ -17008,34 +17008,47 @@ PPU-ec6d9414990cb8ad0adb282f5d16a1af4cb3f956:
     Patch:
       - [ load, *BTS_disc_v100_debugmenu ]
 
+Anchors:
+  blight_openspyonline: &blight_openspyonline
+    - [ utf8, 0x01a4a117, "openspy.net" ]
+    - [ utf8, 0x01a4a15e, "openspy.net" ]
+    - [ utf8, 0x01a66e7e, "openspy.net" ]
+    - [ utf8, 0x01a66ece, "openspy.net" ]
+    - [ utf8, 0x01a670c8, "openspy.net" ]
+    - [ utf8, 0x01a670e0, "openspy.net" ]
+    - [ utf8, 0x01a670f8, "openspy.net" ]
+    - [ utf8, 0x01a67645, "openspy.net" ]
+    - [ utf8, 0x01a676da, "openspy.net" ]
+    - [ utf8, 0x01a68737, "openspy.net" ]
+    - [ utf8, 0x01a68be8, "openspy.net" ]
+    - [ utf8, 0x01a69adc, "openspy.net" ]
+    - [ utf8, 0x01a69b5c, "openspy.net" ]
+    - [ utf8, 0x01a69d49, "openspy.net" ]
+    - [ utf8, 0x01deceb5, "openspy.net" ]
+    - [ utf8, 0x01decef5, "openspy.net" ]
+    - [ utf8, 0x01a687e0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+    - [ utf8, 0x01986fa0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
+  blight_100title: &blight_100title
+    "Blacklight: Tango Down":
+      NPEB00365: [ 01.00 ]
+      NPUB30224: [ 01.00 ]
+
 PPU-9d84d0b2f526213d80b79228a15c521801011807:
   "Openspy Online":
-    Games:
-      "Blacklight: Tango Down":
-        NPEB00365: [ 01.00 ]
-        NPUB30224: [ 01.00 ]
+    Games: *blight_100title
     Author: "FlexBy"
-    Notes:
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x01a4a117, "openspy.net" ]
-      - [ utf8, 0x01a4a15e, "openspy.net" ]
-      - [ utf8, 0x01a66e7e, "openspy.net" ]
-      - [ utf8, 0x01a66ece, "openspy.net" ]
-      - [ utf8, 0x01a670c8, "openspy.net" ]
-      - [ utf8, 0x01a670e0, "openspy.net" ]
-      - [ utf8, 0x01a670f8, "openspy.net" ]
-      - [ utf8, 0x01a67645, "openspy.net" ]
-      - [ utf8, 0x01a676da, "openspy.net" ]
-      - [ utf8, 0x01a68737, "openspy.net" ]
-      - [ utf8, 0x01a68be8, "openspy.net" ]
-      - [ utf8, 0x01a69adc, "openspy.net" ]
-      - [ utf8, 0x01a69b5c, "openspy.net" ]
-      - [ utf8, 0x01a69d49, "openspy.net" ]
-      - [ utf8, 0x01deceb5, "openspy.net" ]
-      - [ utf8, 0x01decef5, "openspy.net" ]
-      - [ utf8, 0x01a687e0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
-      - [ utf8, 0x01986fa0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+      - [ load, *blight_openspyonline ]
+  "Unlock FPS":
+    Games: *blight_100title
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00531990, 0x60000000 ]
 
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
   "Developer Menu":
