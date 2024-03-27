@@ -19563,6 +19563,17 @@ PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
     Patch:
       - [ be32, 0x0008fa30, 0x4e800020 ]
 
+PPU-7645ca368c9abe2ecbb919ae2049b99be1913491:
+  "Unlock FPS":
+    Games:
+      "The Punisher: No Mercy":
+        NPEB00098: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00ce2b90, 0x60000000 ]
+
 PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
   "60 FPS":
     Games:
