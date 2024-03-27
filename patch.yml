@@ -18918,7 +18918,7 @@ PPU-1656535f9f43b65a3623f85db15c8ea88907dcdd:
       - [ be32, 0x00c2726c, 0x60000000 ]
       - [ be32, 0x00c27278, 0x60000000 ]
 
-PPU-091f777fa6b19cf25ac4490bd01104abd190ced4:
+PPU-a9b0ce57ebd318bd02879751067ceca83b508dd1:
   "Unlock FPS":
     Games:
       "Resident Evil 5 Gold Edition (BioHazard 5 Gold Edition)":
@@ -18930,7 +18930,7 @@ PPU-091f777fa6b19cf25ac4490bd01104abd190ced4:
       - [ be32, 0x00c27cac, 0x60000000 ]
       - [ be32, 0x00c27cb8, 0x60000000 ]
 
-PPU-a9b0ce57ebd318bd02879751067ceca83b508dd1:
+PPU-091f777fa6b19cf25ac4490bd01104abd190ced4:
   "Unlock FPS":
     Games:
       "Resident Evil 5 Gold Edition (BioHazard 5 Gold Edition)":
