@@ -18056,6 +18056,48 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
       - [ utf8, 0x10025818, "openspy.net" ]
 
 Anchors:
+  meffect3_unlockfps_109: &meffect3_unlockfps_109
+    - [ be32, 0x002a9928, 0x60000000 ]
+
+  meffect3_unlockfps_notes: &meffect3_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 58 FPS."
+
+PPU-8642d38e1ad2d36beeda071aad226384f742c239:
+  "Unlock FPS":
+    Games:
+      "Mass Effect 3":
+        NPEB00865: [ 01.09 ]
+        NPUB30710: [ 01.10 ]
+    Author: "FlexBy"
+    Notes: *meffect3_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *meffect3_unlockfps_109 ]
+
+PPU-6644a506138a075bcb77d44afce4f5e9c37260c3:
+  "Unlock FPS":
+    Games:
+      "Mass Effect 3":
+        BLES01462: [ 01.09 ]
+        BLUS30853: [ 01.10 ]
+    Author: "FlexBy"
+    Notes: *meffect3_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *meffect3_unlockfps_109 ]
+
+PPU-87b65547be9e5efe8f540cbda75dfb9a21698a8b:
+  "Unlock FPS":
+    Games:
+      "Mass Effect 3 Demo":
+        NPEB90387: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *meffect3_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002a6e40, 0x60000000 ]
+
+Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
     "Metal Gear Rising: Revengeance":
       BLES01750: [ 01.00 ]
