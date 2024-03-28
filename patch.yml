@@ -3999,6 +3999,9 @@ Anchors:
   ratchet_acit_skipintro_notes: &ratchet_acit_skipintro_notes
     "The main menu doesn't play music the first time it's opened."
 
+  ratchet_acit_720p_notes: &ratchet_acit_720p_notes
+    "Original resolution is 960x704. Game still requires Anti Aliasing set to Auto. Some things are still rendered at half resolution."
+
 PPU-301488b15ab0e31e7c5b284da437c5047eabd025:
   "Unlock FPS":
     Games:
@@ -4033,6 +4036,51 @@ PPU-a3ed375ea1044d5abe734a4aa3a740f7673a4274:
     Patch Version: 1.2
     Patch:
       - [ be32, 0x00467ed0, 0xd03d0008 ]
+
+PPU-d4c05d9af92fcedd667375d06ae698fdb51557db:
+  "Unlock FPS":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00511: [ 01.20 ]
+        BCES00748: [ 01.20 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00ca2428, 0.001 ] # Max FPS
+      - [ bef32, 0x00ca4098, 0.001 ] # Min gamespeed
+      - [ bef32, 0x00c9428c, 0.001 ] # Min gamespeed
+  "Infinite Ammo":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00511: [ 01.20 ]
+        BCES00748: [ 01.20 ]
+    Author: "Aphelion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00467eb4, 0xd03d0008 ]
+  "Skip Intro Logos":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00511: [ 01.20 ]
+        BCES00748: [ 01.20 ]
+    Author: "illusion, FlexBy"
+    Notes: *ratchet_acit_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004c96a4, 0x38600006 ]
+  "1280x720 Resolution":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCES00511: [ 01.20 ]
+        BCES00748: [ 01.20 ]
+    Author: "Margen67, FlexBy"
+    Notes: *ratchet_acit_720p_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0032a772, 1280 ]
+      - [ be16, 0x0032a7a2, 720 ]
 
 PPU-0997e35d2b6738f5cecfda1d76380acca0828365:
   "Unlock FPS":
@@ -4077,6 +4125,25 @@ PPU-2811d9292fb4a664f9cf9050dabbe0cae6fd6a44:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00467d90, 0xd03d0008 ]
+  "Skip Intro Logos":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCUS98124: [ 01.20 ]
+    Author: "illusion, FlexBy"
+    Notes: *ratchet_acit_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004c95dc, 0x38600006 ]
+  "1280x720 Resolution":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        BCUS98124: [ 01.20 ]
+    Author: "Margen67, FlexBy"
+    Notes: *ratchet_acit_720p_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0032a662, 1280 ]
+      - [ be16, 0x0032a692, 720 ]
 
 PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
   "Infinite Ammo":
@@ -4108,6 +4175,16 @@ PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
       - [ bef32, 0x00ca2378, 0.001 ] # Max FPS
       - [ bef32, 0x00ca3ff8, 0.001 ] # Min gamespeed
       - [ bef32, 0x00c9420c, 0.001 ] # Min gamespeed
+  "1280x720 Resolution":
+    Games:
+      "Ratchet & Clank Future: A Crack in Time":
+        NPEA00453: [ 01.20 ]
+    Author: "Margen67"
+    Notes: *ratchet_acit_720p_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0032a7a6, 1280 ]
+      - [ be16, 0x0032a7a6, 720 ]
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   "1280x720 Resolution":
@@ -4115,7 +4192,7 @@ PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
       "Ratchet & Clank Future: A Crack in Time":
         NPUA80966: [ 01.20 ]
     Author: "Margen67"
-    Notes: "Original resolution is 960x704. Game still requires Anti Aliasing set to Auto. Some things are still rendered at half resolution."
+    Notes: *ratchet_acit_720p_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032a622, 1280 ]
