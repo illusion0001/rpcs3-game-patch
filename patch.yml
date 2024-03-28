@@ -2058,13 +2058,27 @@ PPU-9b8394d269924a9b8b27916d3052718d914ff5c2:
       - [ be32, 0x0016c6e8, 0x38c00000 ] # li r6 0
       - [ be32, 0x004089ac, 0x38c00000 ] # li r6 0
 
+Anchors:
+  warp_unlockfps_notes: &warp_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
 PPU-101ae75ceedf82104cd22e6062ce0cd0361aef09:
   "Unlock FPS":
     Games:
       "Warp":
         NPEB00636: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Notes: *warp_unlockfps_notes
+    Patch:
+      - [ be32, 0x00370af8, 0x60000000 ]
+
+PPU-69e05eeb40a122f61f1acfc5115b39108589c2ba:
+  "Unlock FPS":
+    Games:
+      "Warp":
+        NPUB30543: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *warp_unlockfps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00370af8, 0x60000000 ]
