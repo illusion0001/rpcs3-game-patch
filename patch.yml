@@ -2058,6 +2058,17 @@ PPU-9b8394d269924a9b8b27916d3052718d914ff5c2:
       - [ be32, 0x0016c6e8, 0x38c00000 ] # li r6 0
       - [ be32, 0x004089ac, 0x38c00000 ] # li r6 0
 
+PPU-101ae75ceedf82104cd22e6062ce0cd0361aef09:
+  "Unlock FPS":
+    Games:
+      "Warp":
+        NPEB00636: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00370af8, 0x60000000 ]
+
 PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   "Disable Color Correction":
     Games:
