@@ -17643,7 +17643,10 @@ PPU-340d91a3a46a13aa69ba82b3e371c899cb7a2e77:
       - [ utf8, 0x012b1c08, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 Anchors:
-  fairytale_onlinepatch: &fairytale_onlinepatch
+  fairytale_unlockfps_103: &fairytale_unlockfps_103
+    - [ be32, 0x003bcfe8, 0x60000000 ]
+
+  fairytale_onlinepatch_103: &fairytale_onlinepatch_103
     - [ utf8, 0x01a3c9c5, "openspy.net" ]
     - [ utf8, 0x01a3c86d, "openspy.net" ]
     - [ utf8, 0x01736f26, "openspy.net" ]
@@ -17664,6 +17667,9 @@ Anchors:
   fairytale_onlinepatch_notes: &fairytale_onlinepatch_notes
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
 
+  fairytale_unlockfps_notes: &fairytale_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
 PPU-89205f22d731f29080694f55bba3823b4a935026:
   "Openspy Online":
     Games:
@@ -17673,7 +17679,16 @@ PPU-89205f22d731f29080694f55bba3823b4a935026:
     Notes: *fairytale_onlinepatch_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *fairytale_onlinepatch ]
+      - [ load, *fairytale_onlinepatch_103 ]
+  "Unlock FPS":
+    Games:
+      "Fairytale Fights":
+        BLES00696: [ 01.03 ]
+    Author: "FlexBy"
+    Notes: *fairytale_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *fairytale_unlockfps_103 ]
 
 PPU-e1b5c427c088ebc38721296a222a6fd73bc514a8:
   "Openspy Online":
@@ -17684,7 +17699,16 @@ PPU-e1b5c427c088ebc38721296a222a6fd73bc514a8:
     Notes: *fairytale_onlinepatch_notes
     Patch Version: 1.0
     Patch:
-      - [ load, *fairytale_onlinepatch ]
+      - [ load, *fairytale_onlinepatch_103 ]
+  "Unlock FPS":
+    Games:
+      "Fairytale Fights":
+        BLUS30456: [ 01.03 ]
+    Author: "FlexBy"
+    Notes: *fairytale_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *fairytale_unlockfps_103 ]
 
 Anchors:
   fatalinertia_onlinepatch_notes: &fatalinertia_onlinepatch_notes
