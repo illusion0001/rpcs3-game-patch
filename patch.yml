@@ -1381,6 +1381,18 @@ PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
     Patch:
       - [ be32, 0x0014c6c4, 0x38000001 ]
 
+PPU-1d7a568ddaf6beb0dce106fa372d8205a231ef57:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet 2 Move Pack Beta":
+        BCET70035: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union. Makes the beta work again."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00b8c280, *lbp2_server_url_beacon ] # http
+      - [ utf8, 0x00b8c198, *lbp2_server_url_beacon ] # https
+
 PPU-e40082b6d07744ef29051a33353eb473396f5a91:
   "Unlock FPS":
     Games:
