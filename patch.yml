@@ -1393,6 +1393,30 @@ PPU-1d7a568ddaf6beb0dce106fa372d8205a231ef57:
       - [ utf8, 0x00b8c280, *lbp2_server_url_beacon ] # http
       - [ utf8, 0x00b8c198, *lbp2_server_url_beacon ] # https
 
+PPU-8752dc31a09672a37a44b2647d62a53536ef9fe1:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet 2 Beta":
+        NPUA70117: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00aa1318, *lbp2_server_url_beacon ] # https
+      - [ utf8, 0x00aa1268, *lbp2_server_url_beacon ] # http
+
+PPU-d12a008f6352e4784d364c983fa82da79164e5e7:
+  "Beacon Custom Server":
+    Games:
+      "LittleBigPlanet 2 Beta":
+        NPUA70117: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a97a28, *lbp2_server_url_beacon ] # https
+      - [ utf8, 0x00a97ad8, *lbp2_server_url_beacon ] # http
+
 PPU-e40082b6d07744ef29051a33353eb473396f5a91:
   "Unlock FPS":
     Games:
