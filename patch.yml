@@ -2325,6 +2325,17 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       - [ be32, 0x00139a5c, 0x38600001 ] # li r3,0x1
       - [ be32, 0x00139a60, 0x4e800020 ] # blr
 
+PPU-6aa282725f419f1dcc12aceb5e63a6948d7e55f3:
+  "Demo Never Expires":
+    Games:
+      "Need for Speed: The Run Demo":
+        NPUB90646: [ 01.00 ]
+        NPEB90355: [ 01.00 ]
+    Author: "illusion"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00636a58, 0x3ba00000 ]
+
 Anchors:
   DS2_Net_Notes: &DS2_Net_Notes
     "Restores the functionality of the network test client."
