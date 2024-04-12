@@ -19097,7 +19097,7 @@ PPU-2b5fc7bc96dadad04a3445bd0ebfec53ae61e6c2:
 
 Anchors:
   ratchet_ffa_unlockfps_notes: &ratchet_ffa_unlockfps_notes
-    "Maximum framerate with the patch is half the Vblank frequency."
+    "Maximum framerate with the patch is half the Vblank frequency.\n\nIncreasing the framerate causes the cutscene before levels to be black, but it can still be waited out, or skipped with Start+Cross."
 
 PPU-747008575f7585fc5e5449e0ff81ed0c5b3f0f69:
   "Unlock FPS":
