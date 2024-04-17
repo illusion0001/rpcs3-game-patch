@@ -17101,7 +17101,7 @@ PPU-b7d282d79e16c88e2307c270406f73bb36d8edab:
     Notes: *3DDGH_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002a6ac, 0x60000000 ]
+      - [ be32, 0x0002a6ac, 0x60000000 ]
 
 PPU-27a382cebfbaa5e5d271d746f84c683008662106:
   "Unlock FPS":
@@ -17112,7 +17112,7 @@ PPU-27a382cebfbaa5e5d271d746f84c683008662106:
     Notes: *3DDGH_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002a6ac, 0x60000000 ]
+      - [ be32, 0x0002a6ac, 0x60000000 ]
 
 PPU-db42d5c3edaa63c31c07f22da5a5cd993eff2f62:
   "Unlock FPS":
@@ -17123,7 +17123,7 @@ PPU-db42d5c3edaa63c31c07f22da5a5cd993eff2f62:
     Notes: *3DDGH_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002a6c4, 0x60000000 ]
+      - [ be32, 0x0002a6c4, 0x60000000 ]
 
 PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
   "Unlock FPS":
@@ -17134,7 +17134,7 @@ PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
     Notes: *3DDGH_FPS_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x002a6ac, 0x60000000 ]
+      - [ be32, 0x0002a6ac, 0x60000000 ]
 
 Anchors:
   bf3_109_title: &bf3_109_title
