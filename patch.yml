@@ -8313,12 +8313,12 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
       - [ be32, 0x0073ea7c, 0x980b0004 ]
   "Debug Menu":
     Games: *uc3_kioskdemo
-    Author: "dron_3,HdHereidme, FlexBy"
+    Author: "dron_3, HdHereidme, FlexBy"
     Notes: *uc3_debugmenu_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0072f5c0, 0x38000001 ]
-      - [ be32, 0x0072f5c4, 0x980B2163 ]
+      - [ be32, 0x0072f5c4, 0x980b2163 ]
 
 PPU-f986a163b81248b801709f0c5bb427c090b40dc7:
   "Debug Menu":
@@ -8328,7 +8328,7 @@ PPU-f986a163b81248b801709f0c5bb427c090b40dc7:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007312bc, 0x38000001 ]
-      - [ be32, 0x007312c0, 0x980B2163 ]
+      - [ be32, 0x007312c0, 0x980b2163 ]
 
 PPU-50ce7f4553ace724111440a399b02cbfd045a2b1:
   "Debug Menu":
@@ -8338,7 +8338,7 @@ PPU-50ce7f4553ace724111440a399b02cbfd045a2b1:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007313e0, 0x38000001 ]
-      - [ be32, 0x007313e4, 0x980B2163 ]
+      - [ be32, 0x007313e4, 0x980b2163 ]
 
 PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
   "Debug Menu":
@@ -8348,7 +8348,7 @@ PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0072ee5c, 0x38000001 ]
-      - [ be32, 0x0072ee60, 0x980B2163 ]
+      - [ be32, 0x0072ee60, 0x980b2163 ]
   "Enable GPU Lighting":
     Games: *uc3_USpreview
     Author: "illusion, ZEROx, FlexBy"
@@ -8370,7 +8370,7 @@ PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0093a508, 0x48000040 ]
-      - [ be32, 0x0093a50c, 0x3b6000da ]  
+      - [ be32, 0x0093a50c, 0x3b6000da ]
   "Depth Buffer Viewport":
     Games: *uc3_USpreview
     Author: "ZEROx, illusion, FlexBy"
