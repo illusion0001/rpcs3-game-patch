@@ -17995,7 +17995,7 @@ PPU-e4632b32edcceeb4d241b3f3d8541c70658f5ab1:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00119420, 0x30840000 ]
-      - [ be32, 0x00119424, 0x909C0018 ]
+      - [ be32, 0x00119424, 0x909c0018 ]
 
 Anchors:
   HR_debugmenu_notes: &HR_debugmenu_notes
