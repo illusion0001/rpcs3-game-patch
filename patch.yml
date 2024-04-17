@@ -3831,73 +3831,59 @@ PPU-342cfff6572ba74b4f4a55b454fa07e172577aa9:
       - [ be32, 0x00e36504, 0x38600000 ]
 
 Anchors:
-  Batman: &Batman
-    - [ be32, 0x0059F3BC, 0x38600080]
-    - [ be32, 0x0059F3C0, 0x907F02AC]
-    - [ be32, 0x0059F3C4, 0x60000000]
-  Batman2: &Batman2
-    - [ be32, 0x012D8D10, 0x38600000]
-    - [ be32, 0x012D8D14, 0x90650000]
-    - [ be32, 0x012D8D18, 0x4E800020]
-    - [ be32, 0x012D8D1C, 0x386713AC]
-    - [ be32, 0x012D8D20, 0x7C032800]
-    - [ be32, 0x012D8D24, 0x4182FFF4]
-    - [ be32, 0x012D8D28, 0x386713E0]
-    - [ be32, 0x012D8D2C, 0x7C032800]
-    - [ be32, 0x012D8D30, 0x4182FFE8]
-    - [ be32, 0x012D8D34, 0x3867140C]
-    - [ be32, 0x012D8D38, 0x7C032800]
-    - [ be32, 0x012D8D3C, 0x4082FFD4]
-    - [ be32, 0x012D8D40, 0x38600000]
-    - [ be32, 0x012D8D44, 0x906713AC]
-    - [ be32, 0x012D8D48, 0x906713E0]
-    - [ be32, 0x012D8D4C, 0x4BFFFFC8]
-    - [ be32, 0x000340F8, 0x492A4C24]
-  Batman3: &Batman3
-    - [ be32, 0x00F249F0, 0x38600000]
+  Batman_AO_106: &Batman_AO_106
+    "Batman: Arkham Origins":
+      BLUS31147: [ 01.06 ]
+      BLES01784: [ 01.06 ]
+  Batman_AO_InfiniteHealth: &Batman_AO_InfiniteHealth
+    - [ be32, 0x0059f3bc, 0x38600080 ]
+    - [ be32, 0x0059f3c0, 0x907f02ac ]
+    - [ be32, 0x0059f3c4, 0x60000000 ]
+  Batman_AO_ContinuousCombo: &Batman_AO_ContinuousCombo
+    - [ be32, 0x012d8d10, 0x38600000 ]
+    - [ be32, 0x012d8d14, 0x90650000 ]
+    - [ be32, 0x012d8d18, 0x4e800020 ]
+    - [ be32, 0x012d8d1c, 0x386713ac ]
+    - [ be32, 0x012d8d20, 0x7c032800 ]
+    - [ be32, 0x012d8d24, 0x4182fff4 ]
+    - [ be32, 0x012d8d28, 0x386713e0 ]
+    - [ be32, 0x012d8d2c, 0x7c032800 ]
+    - [ be32, 0x012d8d30, 0x4182ffe8 ]
+    - [ be32, 0x012d8d34, 0x3867140c ]
+    - [ be32, 0x012d8d38, 0x7c032800 ]
+    - [ be32, 0x012d8d3c, 0x4082ffd4 ]
+    - [ be32, 0x012d8d40, 0x38600000 ]
+    - [ be32, 0x012d8d44, 0x906713ac ]
+    - [ be32, 0x012d8d48, 0x906713e0 ]
+    - [ be32, 0x012d8d4c, 0x4bffffc8 ]
+    - [ be32, 0x000340f8, 0x492a4c24 ]
+  Batman_AO_DebugMenu_Notes: &Batman_AO_DebugMenu_Notes
+    "Press R1+START in-game to access the Debug Menu."
+  Batman_AO_DebugMenu: &Batman_AO_DebugMenu
+    - [ be32, 0x00f249f0, 0x38600000 ]
+
 PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
   "Infinite Health":
-    Games:
-      "Batman: Arkham Origins":
-        BLUS31147: [ 01.06 ]
-    Author: dron_3
-    Notes: 
-    Patch Version: 1.0
-    Patch:
-      - [ load, *Batman ]
-
-PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
-  "Continuous Combo":
-    Games:
-      "Batman: Arkham Origins":
-        BLUS31147: [ 01.06 ]
-    Author: dron_3
-    Notes: 
-    Patch Version: 1.0
-    Patch:
-      - [ load, *Batman2 ]
-
-PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
-  "Debug Menu 2":
-    Games:
-      "Batman: Arkham Origins":
-        BLUS31147: [ 01.06 ]
-    Author: dron_3
-    Notes: (R1 + Start)
-    Patch Version: 1.0 
-    Patch:
-      - [ load, *Batman3 ]
-
-PPU-35b43474e889783b7646e5cc1f457ebc28b7b796:
-  "Debug Menu":
-    Games:
-      "Batman Arkham Origins":
-        BLES01784: [ 01.06 ]
+    Games: *Batman_AO_106
     Author: "dron_3"
-    Notes: "Press R1+START in-game to access the Debug Menu (god mode, no clip, etc.)"
+    Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00f249f0, 0x38600000 ]
+      - [ load, *Batman_AO_InfiniteHealth ]
+  "Continuous Combo":
+    Games: *Batman_AO_106
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *Batman_AO_ContinuousCombo ]
+  "Debug Menu":
+    Games: *Batman_AO_106
+    Author: "dron_3"
+    Notes: *Batman_AO_DebugMenu_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *Batman_AO_DebugMenu ]
 
 Anchors:
   rftod_instagib_notes: &rftod_instagib_notes
