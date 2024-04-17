@@ -8429,7 +8429,6 @@ PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
       - [ be32, 0x0073e318, 0x980b0004 ]
 
 Anchors:
-
   gt5_v211_fps: &gt5_v211_fps
     - [ byte, 0x00185457, 0x00 ] # Unlock FPS ingame
     - [ byte, 0x00185463, 0x00 ] # Unlock FPS ingame
@@ -8444,7 +8443,7 @@ Anchors:
     "Cutscenes rendered in the game's engine are sped up."
 
   GT5_AR_Notes: &GT5_AR_Notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will stay at 16:9. Sometimes text doesnt show up."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will stay at 16:9. Sometimes text doesn't show up."
   GT5_AR_Configurable_values: &GT5_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
@@ -8557,12 +8556,12 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
     Notes: "Allows running the game unpacked for modding purposes.
     Requires extracted game files in 'USRDIR/direct' as GT.VOL then PDIPFS contents on-top."
     Patch:
-      - [ be32, 0x000120a0, 0x386004A0 ] # Adjust sizeof(PDIPS3::FileDevicePFSGameData) to sizeof(PDIPS3::FileDeviceCellFS) for new
-      - [ be32, 0x000120d8, 0x3888E308 ] # Adjust parameters PDIPS3::FileDeviceGameData(device, param1, param2, param3)
-      - [ be32, 0x000120dc, 0x38A8E330 ] # Change pointer to a vtable name
-      - [ be32, 0x000120e0, 0x7D064378 ] # Change pointer to a vtable name
-      - [ be32, 0x00a73160, 0x48004ED5 ] # Rectify pointer offset to device list field
-      - [ be32, 0x00a7316c, 0x941D0498 ] # Change PDIPS3::FileDevicePFSGameData device to PDIPS3::FileDeviceCellFS
+      - [ be32, 0x000120a0, 0x386004a0 ] # Adjust sizeof(PDIPS3::FileDevicePFSGameData) to sizeof(PDIPS3::FileDeviceCellFS) for new
+      - [ be32, 0x000120d8, 0x3888e308 ] # Adjust parameters PDIPS3::FileDeviceGameData(device, param1, param2, param3)
+      - [ be32, 0x000120dc, 0x38a8e330 ] # Change pointer to a vtable name
+      - [ be32, 0x000120e0, 0x7d064378 ] # Change pointer to a vtable name
+      - [ be32, 0x00a73160, 0x48004ed5 ] # Rectify pointer offset to device list field
+      - [ be32, 0x00a7316c, 0x941d0498 ] # Change PDIPS3::FileDevicePFSGameData device to PDIPS3::FileDeviceCellFS
       - [ utf8, 0x013dde10, /dev_hdd0\0 ] # param_1
       - [ be16, 0x013dde19, 0x0000 ] # Null terminate
       - [ utf8, 0x013dde38, /game/BCES00569/USRDIR/direct ] # param_2
