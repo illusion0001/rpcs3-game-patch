@@ -3288,7 +3288,7 @@ PPU-60ec03e6257d5b53e93ed7f0caf45141a78ff633:
       "Midnight Club: Los Angeles":
         BLJS10046: [ 01.04 ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00510150, 0x38600000 ]
