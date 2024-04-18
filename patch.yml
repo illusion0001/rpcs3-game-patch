@@ -17533,7 +17533,7 @@ PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x009e7da0, 0x60000000 ]
+      - [ be32, 0x0033b968, 0x60000000 ]
 
 PPU-25d214ecbfb831e9f2bba796da8982384ced83b4:
   "OpenSpy Online":
