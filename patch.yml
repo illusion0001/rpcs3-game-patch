@@ -17535,6 +17535,39 @@ PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
     Patch:
       - [ be32, 0x0033b968, 0x60000000 ]
 
+PPU-07563921a4e38747ffc7a05e7eeb84e1115ab916:
+  "Openspy Online":
+    Games:
+      "Dungeon Defenders":
+        NPEB00652: [ 01.03 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x013a8333, "openspy.net" ]
+      - [ utf8, 0x013a837a, "openspy.net" ]
+      - [ utf8, 0x013aa289, "openspy.net" ]
+      - [ utf8, 0x013aa658, "openspy.net" ]
+      - [ utf8, 0x013aa670, "openspy.net" ]
+      - [ utf8, 0x013aa688, "openspy.net" ]
+      - [ utf8, 0x013aa7fc, "openspy.net" ]
+      - [ utf8, 0x013aa886, "openspy.net" ]
+      - [ utf8, 0x013ab3ec, "openspy.net" ]
+      - [ utf8, 0x013ab41e, "openspy.net" ]
+      - [ utf8, 0x016adb51, "openspy.net" ]
+      - [ utf8, 0x016adb95, "openspy.net" ]
+      - [ utf8, 0x013a8544, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x013a843a, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+  "Unlock FPS":
+    Games:
+      "Dungeon Defenders":
+        NPEB00652: [ 01.03 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0033c6c8, 0x60000000 ]
+
 PPU-25d214ecbfb831e9f2bba796da8982384ced83b4:
   "OpenSpy Online":
     Games:
@@ -17558,6 +17591,15 @@ PPU-25d214ecbfb831e9f2bba796da8982384ced83b4:
       - [ utf8, 0x016adb8d, "openspy.net" ]
       - [ utf8, 0x013a9524, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x013a941a, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+  "Unlock FPS":
+    Games:
+      "Dungeon Defenders":
+        NPUB30251: [ 01.04 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0033cd90, 0x60000000 ]
 
 PPU-588663e46e01d78322f7560598d1a0213323c4dc:
   "Infinite Ammo":
