@@ -19220,13 +19220,17 @@ PPU-bf9bd8f3f76e3bc53cbec32434510ce738936224:
       - [ be32, 0x007d23b4, 0x60000000 ]
       - [ be32, 0x007d23c8, 0x60000000 ]
 
+Anchors:
+  residentevil0_fps_notes: &residentevil0_fps_notes
+    "Cutscene speed is affected."
+
 PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
   "Unlock FPS":
     Games:
       "Resident Evil 0 (BioHazard 0)":
         NPEB02226: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Cutscenes speed is affected."
+    Notes: *residentevil0_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007d35ac, 0x60000000 ]
@@ -19239,7 +19243,7 @@ PPU-1c17ceefd7d33372d1eb73d26afd149186950114:
         NPUB31689: [ 01.00 ]
         NPJB00726: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Cutscenes speed is affected."
+    Notes: *residentevil0_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007d34cc, 0x60000000 ]
@@ -19251,7 +19255,7 @@ PPU-0cfd47dd8d08216086672b22794d946416ac8640:
       "Resident Evil 0 (BioHazard 0)":
         BLJM61272: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Cutscenes speed is affected."
+    Notes: *residentevil0_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007d68ac, 0x60000000 ]
