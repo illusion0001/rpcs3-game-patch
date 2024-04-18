@@ -3775,8 +3775,8 @@ PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
     Notes: *sr2_online_notes
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00d9f055, "openspy.net" ] 
-      - [ utf8, 0x00da0b30, "openspy.net" ] 
+      - [ utf8, 0x00d9f055, "openspy.net" ]
+      - [ utf8, 0x00da0b30, "openspy.net" ]
       - [ utf8, 0x00da0b48, "openspy.net" ]
       - [ utf8, 0x00da0b60, "openspy.net" ]
       - [ utf8, 0x00da0c82, "openspy.net" ]
@@ -3801,8 +3801,8 @@ PPU-44fbbc24d8e4560b51d724963a89c4e3309fa44f:
     Notes: *sr2_online_notes
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x00d9e4d5, "openspy.net" ] 
-      - [ utf8, 0x00d9ffb0, "openspy.net" ] 
+      - [ utf8, 0x00d9e4d5, "openspy.net" ]
+      - [ utf8, 0x00d9ffb0, "openspy.net" ]
       - [ utf8, 0x00d9ffc8, "openspy.net" ]
       - [ utf8, 0x00d9ffe0, "openspy.net" ]
       - [ utf8, 0x00da0102, "openspy.net" ]
