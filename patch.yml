@@ -3618,7 +3618,7 @@ PPU-5075ef52fa2217b98ab1f0dd00ff457d85979b91:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00eb1a38, 0x60000000 ]
-      
+
 PPU-12f343d8a2f44e8dcce5a22e46e59b4b6c89d97b:
   "Unlock FPS":
     Games:
