@@ -7086,7 +7086,7 @@ PPU-01d36e8241041ebf13e7ba819590f487303bb4cc:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000243d4, 0x419e ]
-      
+
 PPU-73a099fedff40805b586273265a52e7e037b6bdf:
   "Debug Menu":
     Games:
@@ -11280,7 +11280,7 @@ PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
       "Killzone 2 Demo":
         NPEA90034: [ 01.00 ]
     Author: "dron_3, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00b19d5c, 0x38600001 ]
@@ -11309,7 +11309,7 @@ PPU-43e0fe2996338af9f1032b647af9436a081e09b0:
       "Killzone 2 Demo":
         NPUA70034: [ 01.00 ]
     Author: "dron_3, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00b19d5c, 0x38600001 ]
@@ -13773,7 +13773,7 @@ PPU-88b57d524597bbee38df3a452eb0e86c5e789f73:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB31204: [ All ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.3
     Patch:
       - [ load, *su_digital_all_dof ]
@@ -13782,7 +13782,7 @@ PPU-88b57d524597bbee38df3a452eb0e86c5e789f73:
       "Sonic Unleashed (Sonic World Adventure)":
         NPUB31204: [ All ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.3
     Patch:
       - [ load, *su_digital_all_mb ]
@@ -13830,7 +13830,7 @@ PPU-d0bf7a33f1763725609feaa87e0e4d18ab9e8acd:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB01347: [ All ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.3
     Patch:
       - [ load, *su_digital_all_dof ]
@@ -13839,7 +13839,7 @@ PPU-d0bf7a33f1763725609feaa87e0e4d18ab9e8acd:
       "Sonic Unleashed (Sonic World Adventure)":
         NPEB01347: [ All ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.3
     Patch:
       - [ load, *su_digital_all_mb ]
@@ -17828,7 +17828,7 @@ PPU-6990c66f91d5802a7867f001920e2907bf1b34e6:
       - [ utf8, 0x01cd961d, "openspy.net" ]
       - [ utf8, 0x019e9820, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x019e9590, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
-      
+
 PPU-6f9ea6e1539089a807cfb2f5ee9c04d8d209576a:
   "Openspy Online":
     Games:
