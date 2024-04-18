@@ -19971,7 +19971,7 @@ PPU-c32353303c5d0779f39fb497259e56bd0ea793e3:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0032e978, 0x60000000 ]
-      
+
 PPU-5e4a312f2ff7f2b4875691775d111250793d7553:
   "Unlock FPS":
     Games:
@@ -20414,7 +20414,7 @@ Anchors:
         "16:10": 1.6
         "4:3": 1.333333333333333
         "5:4": 1.25
- 
+
 PPU-18cc71253bf487257baff903ad2fecb599741669:
   "Aspect Ratio":
     Games:
