@@ -11546,7 +11546,7 @@ PPU-238ec433d9577dcb54fe61efaada1c744b713722:
     Patch:
       - [ be32, 0x001ae910, 0x38a00000 ]
       - [ be16, 0x001e86a8, 0x4800 ]
-      
+
 PPU-3764d5a10a24cec2db1a7bbfa3bbc692de47bbe0:
   "Disable MLAA (Post-processing on SPU)":
     Games:
