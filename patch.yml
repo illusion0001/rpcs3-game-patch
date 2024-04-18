@@ -5966,7 +5966,7 @@ PPU-f293e177971243b66bc3fd62621ce4b246726a4a:
       "The Last of Us Demo":
         NPHA80246: [ 01.00 ]
     Author: "Whatcookie, illusion, ZEROx, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00a7a164, 0x9b83 ]
@@ -5975,7 +5975,7 @@ PPU-f293e177971243b66bc3fd62621ce4b246726a4a:
       "The Last of Us Demo":
         NPHA80246: [ 01.00 ]
     Author: "illusion, FlexBy"
-    Notes: 
+    Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00036848, 0x38a00000 ]
