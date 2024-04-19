@@ -2671,7 +2671,7 @@ PPU-ba038bf4525e23b82c34247afc42f3ca2d2c473f:
       - [ be32, 0x000f8908, 0x60000000 ]
 
 Anchors:
- CTAXI_AR_Configurable_Values: &CTAXI_AR_Configurable_Values
+  CTAXI_AR_Configurable_Values: &CTAXI_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
       Value: &32_9_value 3.555555555555556
@@ -20412,7 +20412,7 @@ PPU-e0d1cb983c09ccdad4cb91335287bfd47e6afb44:
       - [ be32, 0x007f5aa0, 0x60000000 ]
 
 Anchors:
- LBPH_AR_Configurable_Values: &LBPH_AR_Configurable_Values
+  LBPH_AR_Configurable_Values: &LBPH_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
       Value: &32_9_value 3.555555555555556
