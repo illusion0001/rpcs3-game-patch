@@ -8557,8 +8557,7 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
         BCES00569: [ 02.11 ]
     Author: "Nenkai"
     Patch Version: 1.0
-    Notes: "Allows running the game unpacked for modding purposes.
-    Requires extracted game files in 'USRDIR/direct' as GT.VOL then PDIPFS contents on-top."
+    Notes: "Allows running the game unpacked for modding purposes.\nRequires extracted game files in 'USRDIR/direct' as GT.VOL then PDIPFS contents on-top."
     Patch:
       - [ be32, 0x000120a0, 0x386004a0 ] # Adjust sizeof(PDIPS3::FileDevicePFSGameData) to sizeof(PDIPS3::FileDeviceCellFS) for new
       - [ be32, 0x000120d8, 0x3888e308 ] # Adjust parameters PDIPS3::FileDeviceGameData(device, param1, param2, param3)
@@ -17141,12 +17140,12 @@ PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
       - [ byte, 0x00012fcb, 0x3c ]
       - [ byte, 0x00013007, 0x3c ]
       - [ be32, 0x00272f58, 0x38a00000 ]
-      - [ be32, 0x007d9a98, 0x4ba99501 ] #Call
-      - [ be32, 0x00272f98, 0x3cc041f0 ] #r6 = 0x41f00000
-      - [ be32, 0x00272f9c, 0x7f833000 ] #cmpw cr7,r3,r6
-      - [ be32, 0x00272fa0, 0x419e0008 ] #beq cr7
-      - [ be32, 0x00272fa4, 0x90640000 ] #stw r3,0x0(r4)
-      - [ be32, 0x00272fa8, 0x4e800020 ] #ret
+      - [ be32, 0x007d9a98, 0x4ba99501 ] # Call
+      - [ be32, 0x00272f98, 0x3cc041f0 ] # r6 = 0x41f00000
+      - [ be32, 0x00272f9c, 0x7f833000 ] # cmpw cr7,r3,r6
+      - [ be32, 0x00272fa0, 0x419e0008 ] # beq cr7
+      - [ be32, 0x00272fa4, 0x90640000 ] # stw r3,0x0(r4)
+      - [ be32, 0x00272fa8, 0x4e800020 ] # ret
       - [ be16, 0x0127cf26, 0x4270 ]
       - [ be16, 0x017d3f88, 0x3f91 ]
       - [ be16, 0x017d3f90, 0x404e ]
