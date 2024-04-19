@@ -3767,7 +3767,7 @@ PPU-e5f9e0a066e4170a3251451b7ecd9b1a55da7c57:
       - [ byte, 0x016808e0, 0x00 ]
 
 Anchors:
- sr2_online_notes: &sr2_online_notes
+  sr2_online_notes: &sr2_online_notes
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
 
 PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
@@ -16277,7 +16277,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes: "NPCs will not notice you stealing even if they are watching you and you will not lose karma."
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x00181ff8, 0x4800 ] # b 0x1824BC
+      - [ be16, 0x00181ff8, 0x4800 ] # b 0x1824bc
   "Bypass Casino Bans":
     Games:
       "Fallout New Vegas: Ultimate Edition":
@@ -16301,7 +16301,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Notes: "This will cause the slot machine to always pay out as if you hit a 777, although it will never actually show the 777 on the machine."
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x001266cc, 0x4800011c ] # b 0x1267E8 Branch to the 100x win scenario.
+      - [ be32, 0x001266cc, 0x4800011c ] # b 0x1267e8 Branch to the 100x win scenario.
       - [ be32, 0x001268ec, 0x60000000 ] # Fall through to the winning message block.
       - [ be32, 0x001268f8, 0x60000000 ] # Force the "You feel lucky" message. (OhohohoOHdatslapsmeondaknee)
       - [ be32, 0x00126200, 0x4800006c ] # b 0x126268 Branch to the Play GAMESlotsWinJackpot sound scenario.
