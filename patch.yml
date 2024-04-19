@@ -7121,10 +7121,10 @@ Anchors:
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
 
   uc3_100_post: &uc3_100_post
-    - [ be32, 0x0093acd4, 0x39000003 ] # Post-processing modes  (mem address: 0x1346D47)
+    - [ be32, 0x0093acd4, 0x39000003 ] # Post-processing modes  (mem address: 0x1346d47)
 
   uc3_100_mesh: &uc3_100_mesh
-    - [ be32, 0x0073f05c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12C3940)
+    - [ be32, 0x0073f05c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12c3940)
 
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine, // needs correction on subroutine
   #    r6  = 2
@@ -7135,13 +7135,13 @@ Anchors:
 
   uc3_100_ssao: &uc3_100_ssao
     - [ be32, 0x00635f8c, 0x60000000 ] # nop byte write on 00 57
-    - [ be32, 0x0093b3ac, 0x9b830057 ] # Disable SSAO           (mem address: 0x1346DBF)
+    - [ be32, 0x0093b3ac, 0x9b830057 ] # Disable SSAO           (mem address: 0x1346dbf)
 
   uc3_100_dof: &uc3_100_dof
-    - [ be32, 0x0093b430, 0x9b83007a ] # Disable Depth of Field (mem address: 0x1346DE2)
+    - [ be32, 0x0093b430, 0x9b83007a ] # Disable Depth of Field (mem address: 0x1346de2)
 
   uc3_100_speed: &uc3_100_speed
-    - [ be32, 0x0093b44c, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x1346DE9)
+    - [ be32, 0x0093b44c, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x1346de9)
 
   uc3_100_dbv: &uc3_100_dbv
     - [ be32, 0x0093b6b8, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1347061)
@@ -7252,10 +7252,10 @@ Anchors:
   #    5 = Bloom & Depth of Field & Tonemapping (Default)
 
   uc3_110_post: &uc3_110_post
-    - [ be32, 0x0094d0b8, 0x39000003 ] # Post-processing modes  (mem address: 0x1376F77)
+    - [ be32, 0x0094d0b8, 0x39000003 ] # Post-processing modes  (mem address: 0x1376f77)
 
   uc3_110_mesh: &uc3_110_mesh
-    - [ be32, 0x00747b0c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12D5A70)
+    - [ be32, 0x00747b0c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12d5a70)
 
   # Many settings below are enabled/disabled in sub_AA9E6C. In this subroutine, // needs correction on subroutine
   #    r6  = 2
@@ -7266,7 +7266,7 @@ Anchors:
 
   uc3_110_ssao: &uc3_110_ssao
     - [ be32, 0x0063e010, 0x60000000 ] # nop byte write on 00 57
-    - [ be32, 0x0094d790, 0x9b830057 ] # Disable SSAO           (mem address: 0x1376FEF)
+    - [ be32, 0x0094d790, 0x9b830057 ] # Disable SSAO           (mem address: 0x1376fef)
 
   uc3_110_dof: &uc3_110_dof
     - [ be32, 0x0094d814, 0x9b83007a ] # Disable Depth of Field (mem address: 0x1377012)
@@ -7278,7 +7278,7 @@ Anchors:
     - [ be32, 0x0094da9c, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1377291)
 
   uc3_110_dbf: &uc3_110_dbf
-    - [ be32, 0x0094dadc, 0x9b83031d ] # Depth border fix       (mem address: 0x13772B5)
+    - [ be32, 0x0094dadc, 0x9b83031d ] # Depth border fix       (mem address: 0x13772b5)
 
   uc3_110_db: &uc3_110_db
     - [ be32, 0x0063e00c, 0x60000000 ] # nop byte write on 03 ec
@@ -7334,8 +7334,8 @@ Anchors:
     - [ be32, 0x0078b0e4, 0x480000c4 ] # Disable motion blur
 
   uc3_119_zcull: &uc3_119_zcull
-    - [ be32, 0x0078c7d0, 0x3a800001 ] #Heat waves
-    - [ byte, 0x0078c7f3, 0x0 ] #Disable broken blur effect
+    - [ be32, 0x0078c7d0, 0x3a800001 ] # Heat waves
+    - [ byte, 0x0078c7f3, 0x00 ] # Disable broken blur effect
 
   # This patch cycles through various post-processing modes. Values accepted are:
   #    0 = None
@@ -7349,7 +7349,7 @@ Anchors:
     - [ be32, 0x0096e308, 0x39000003 ] # Post-processing modes  (mem address: 0x1386547)
 
   uc3_119_mesh: &uc3_119_mesh
-    - [ be32, 0x0075811c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12E0DF0)
+    - [ be32, 0x0075811c, 0x980b0004 ] # Disable mesh trimming  (mem address: 0x12e0df0)
 
   # Many settings below are enabled/disabled in sub_96E8CC. In this subroutine,
   #    r6  = 2
@@ -7360,13 +7360,13 @@ Anchors:
 
   uc3_119_ssao: &uc3_119_ssao
     - [ be32, 0x0064df24, 0x60000000 ] # nop byte write on 00 57
-    - [ be32, 0x0096e9e0, 0x9b830057 ] # Disable SSAO           (mem address: 0x13865BF)
+    - [ be32, 0x0096e9e0, 0x9b830057 ] # Disable SSAO           (mem address: 0x13865bf)
 
   uc3_119_dof: &uc3_119_dof
-    - [ be32, 0x0096ea64, 0x9b83007a ] # Disable Depth of Field (mem address: 0x13865E2)
+    - [ be32, 0x0096ea64, 0x9b83007a ] # Disable Depth of Field (mem address: 0x13865e2)
 
   uc3_119_speed: &uc3_119_speed
-    - [ be32, 0x0096ea80, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x13865E9)
+    - [ be32, 0x0096ea80, 0x9b830081 ] # Speedup (WCB)          (mem address: 0x13865e9)
 
   uc3_119_dbv: &uc3_119_dbv
     - [ be32, 0x0096ecec, 0x9b6302f9 ] # Depth buffer viewport  (mem address: 0x1386861)
