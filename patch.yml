@@ -16275,7 +16275,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
         BLES01475: [ 01.00 ]
         BLES01478: [ 01.00 ]
     Author: "gir489"
-    Notes: NPCs will not notice you stealing even if they are watching you and you will not lose karma.
+    Notes: "NPCs will not notice you stealing even if they are watching you and you will not lose karma."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00181ff8, 0x4800 ] # b 0x1824BC
@@ -16286,7 +16286,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
         BLES01475: [ 01.00 ]
         BLES01478: [ 01.00 ]
     Author: "gir489"
-    Notes: This only works for 3 casinos on the Strip, the Vikki and Vance and Atomic Wrangler use a script to detect the ban.
+    Notes: "This only works for 3 casinos on the Strip, the Vikki and Vance and Atomic Wrangler use a script to detect the ban."
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0035215c, 0x4800 ] # b 0x352210 Blackjack
@@ -16299,7 +16299,7 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
         BLES01475: [ 01.00 ]
         BLES01478: [ 01.00 ]
     Author: "gir489"
-    Notes: This will cause the slot machine to always pay out as if you hit a 777, although it will never actually show the 777 on the machine.
+    Notes: "This will cause the slot machine to always pay out as if you hit a 777, although it will never actually show the 777 on the machine."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001266cc, 0x4800011c ] # b 0x1267E8 Branch to the 100x win scenario.
