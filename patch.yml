@@ -5651,15 +5651,15 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00aaa030, 0x9b83 ] # Speedup 1571ad8 (WCB)
-      - [ be32, 0x00a974f4, 0x4bfd4ef1 ] #Call
-      - [ be32, 0x00a6c3e4, 0x3c600142 ] #r3 = 0x1420000
-      - [ be32, 0x00a6c3e8, 0xa0639ef4 ] #lhz r3,0x9ef4(r3)
-      - [ be32, 0x00a6c3ec, 0x2f83080c ] #r3 vs 0x80c
-      - [ be32, 0x00a6c3f0, 0x419e000c ] #beq
-      - [ be32, 0x00a6c3f4, 0xc1a9038c ] #f13 original load
+      - [ be32, 0x00a974f4, 0x4bfd4ef1 ] # Call
+      - [ be32, 0x00a6c3e4, 0x3c600142 ] # r3 = 0x1420000
+      - [ be32, 0x00a6c3e8, 0xa0639ef4 ] # lhz r3,0x9ef4(r3)
+      - [ be32, 0x00a6c3ec, 0x2f83080c ] # r3 vs 0x80c
+      - [ be32, 0x00a6c3f0, 0x419e000c ] # beq
+      - [ be32, 0x00a6c3f4, 0xc1a9038c ] # f13 original load
       - [ be32, 0x00a6c3f8, 0x48000008 ]
-      - [ be32, 0x00a6c3fc, 0xc1be8100 ] #f13 == f0
-      - [ be32, 0x00a6c400, 0x4e800020 ] #ret
+      - [ be32, 0x00a6c3fc, 0xc1be8100 ] # f13 == f0
+      - [ be32, 0x00a6c400, 0x4e800020 ] # ret
   "Speedboost":
     Games: *tlou111_title
     Author: "ZEROx, illusion"
@@ -6429,11 +6429,11 @@ Anchors:
     - [ be16, 0x0072ec3c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f995d0)
 
   uc2_Disc_100_ref: &uc2_Disc_100_ref
-    - [ be32, 0x0006a958, 0x38000001 ] #Reflections
-    - [ be32, 0x0077f970, 0x3a400001 ] #Heat waves
+    - [ be32, 0x0006a958, 0x38000001 ] # Reflections
+    - [ be32, 0x0077f970, 0x3a400001 ] # Heat waves
 
   uc2_Disc_100_mb: &uc2_Disc_100_mb
-    - [ byte, 0x0075a7e4, 0x41 ] #Motion blur                                (mem address: 0x0e9b64f)
+    - [ byte, 0x0075a7e4, 0x41 ] # Motion blur                               (mem address: 0x0e9b64f)
     - [ byte, 0x0075b454, 0x40 ]
 
   uc2_Disc_100_vmb: &uc2_Disc_100_vmb
@@ -6463,11 +6463,11 @@ Anchors:
     - [ be16, 0x0072d44c, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f9bfd0)
 
   uc2_Disc_109_ref: &uc2_Disc_109_ref
-    - [ be32, 0x000688f4, 0x38000001 ] #Reflections
-    - [ be32, 0x0077e1e8, 0x3a400001 ] #Heat waves
+    - [ be32, 0x000688f4, 0x38000001 ] # Reflections
+    - [ be32, 0x0077e1e8, 0x3a400001 ] # Heat waves
 
   uc2_Disc_109_mb: &uc2_Disc_109_mb
-    - [ byte, 0x00758ff4, 0x41 ] #Motion blur                                (mem address: 0x0e9c24f)
+    - [ byte, 0x00758ff4, 0x41 ] # Motion blur                               (mem address: 0x0e9c24f)
     - [ byte, 0x00759c64, 0x40 ]
 
   uc2_Disc_109_vmb: &uc2_Disc_109_vmb
@@ -6497,11 +6497,11 @@ Anchors:
     - [ be16, 0x0072d394, 0x9949 ] # Disable mesh trimming                   (mem address: 0x0f9bfd0)
 
   uc2_PSN_ref: &uc2_PSN_ref
-    - [ be32, 0x00071b0c, 0x38000001 ] #Reflections
-    - [ be32, 0x00786508, 0x3a400001 ] #Heat waves
+    - [ be32, 0x00071b0c, 0x38000001 ] # Reflections
+    - [ be32, 0x00786508, 0x3a400001 ] # Heat waves
 
   uc2_PSN_mb: &uc2_PSN_mb
-    - [ byte, 0x00758f74, 0x41 ] #Motion blur                                (mem address: 0x0e9c24f)
+    - [ byte, 0x00758f74, 0x41 ] # Motion blur                               (mem address: 0x0e9c24f)
     - [ byte, 0x00759be4, 0x40 ]
 
   uc2_PSN_vmb: &uc2_PSN_vmb
