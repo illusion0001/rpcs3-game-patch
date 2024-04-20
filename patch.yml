@@ -3773,9 +3773,9 @@ Anchors:
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
 
 PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
-      "Saint's Row 2":
+      "Saints Row 2":
         BLES00373: [ 01.30 ]
     Author: "FlexBy"
     Notes: *sr2_online_notes
@@ -3799,9 +3799,9 @@ PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
       - [ utf8, 0x00da2120, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 PPU-44fbbc24d8e4560b51d724963a89c4e3309fa44f:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
-      "Saint's Row 2":
+      "Saints Row 2":
         NPEB00637: [ 01.00 ]
     Author: "FlexBy"
     Notes: *sr2_online_notes
@@ -17713,7 +17713,7 @@ PPU-8109b840ad2f8e171be946ed6a79e308b9c733f1:
       - [ be32, 0x0150bb34, 0x38600000 ]
 
 PPU-340d91a3a46a13aa69ba82b3e371c899cb7a2e77:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "F.E.A.R. 2: Project Origin":
         BLES00464: [ 01.00 ]
