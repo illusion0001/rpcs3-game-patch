@@ -17765,7 +17765,7 @@ Anchors:
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
 
 PPU-89205f22d731f29080694f55bba3823b4a935026:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Fairytale Fights":
         BLES00696: [ 01.03 ]
@@ -17785,7 +17785,7 @@ PPU-89205f22d731f29080694f55bba3823b4a935026:
       - [ load, *fairytale_unlockfps_103 ]
 
 PPU-e1b5c427c088ebc38721296a222a6fd73bc514a8:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Fairytale Fights":
         BLUS30456: [ 01.03 ]
