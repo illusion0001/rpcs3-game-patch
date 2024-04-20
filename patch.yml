@@ -1795,7 +1795,7 @@ PPU-4e9a32794deb72bef3985b9cf16e58a82fcea8f7:
       - [ be32, 0x01534eec, 0x38600000 ]
 
 PPU-e29e8b61cb53d1d3a454e20ffc2cef12e9c0d371:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Bulletstorm":
         NPEB00622: [ 01.00 ]
@@ -17235,7 +17235,7 @@ Anchors:
       NPUB30224: [ 01.00 ]
 
 PPU-9d84d0b2f526213d80b79228a15c521801011807:
-  "Openspy Online":
+  "OpenSpy Online":
     Games: *blight_100title
     Author: "FlexBy"
     Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
