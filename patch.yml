@@ -3145,12 +3145,12 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
   "Aspect Ratio":
     Games: *mclaPSN_100_title
     Author: "Virjoinga"
-    Patch Version: 1.0
     Notes: *mcla_ar_notes
     Configurable Values: *mcla_ar_configurable_values
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x00b410ac, "Aspect Ratio" ]
-  "Openspy Online":
+  "OpenSpy Online":
     Games: *mclaPSN_100_title
     Author: "FlexBy"
     Notes: *mcla_online_notes
@@ -3198,12 +3198,12 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
   "Aspect Ratio":
     Games: *mclacedisc_106_title
     Author: "Virjoinga"
-    Patch Version: 1.0
     Notes: *mcla_ar_notes
     Configurable Values: *mcla_ar_configurable_values
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x00b4109c, "Aspect Ratio" ]
-  "Openspy Online":
+  "OpenSpy Online":
     Games: *mclacedisc_106_title
     Author: "FlexBy"
     Notes: *mcla_online_notes
@@ -3251,12 +3251,12 @@ PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
   "Aspect Ratio":
     Games: *mcladisc_106_title
     Author: "Virjoinga, FlexBy"
-    Patch Version: 1.0
     Notes: *mcla_ar_notes
     Configurable Values: *mcla_ar_configurable_values
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x00b4108c, "Aspect Ratio" ]
-  "Openspy Online":
+  "OpenSpy Online":
     Games: *mcladisc_106_title
     Author: "FlexBy"
     Notes: *mcla_online_notes
@@ -3312,12 +3312,12 @@ PPU-60ec03e6257d5b53e93ed7f0caf45141a78ff633:
       "Midnight Club: Los Angeles":
         BLJS10046: [ 01.04 ]
     Author: "Virjoinga, FlexBy"
-    Patch Version: 1.0
     Notes: *mcla_ar_notes
     Configurable Values: *mcla_ar_configurable_values
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x00b410d4, "Aspect Ratio" ]
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Midnight Club: Los Angeles":
         BLJS10046: [ 01.04 ]
@@ -8527,8 +8527,8 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
         BCUS98114: [ 02.11 ]
     Author: "Shy_Doge"
     Configurable Values: *GT5_AR_Configurable_Values
-    Patch Version: 1.0
     Notes: *GT5_AR_Notes
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x014941d0, "Aspect Ratio" ]
       - [ bef32, 0x0148ef40, "Aspect Ratio" ]
@@ -8558,8 +8558,8 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
       "Gran Turismo 5":
         BCES00569: [ 02.11 ]
     Author: "Nenkai"
-    Patch Version: 1.0
     Notes: "Allows running the game unpacked for modding purposes.\nRequires extracted game files in 'USRDIR/direct' as GT.VOL then PDIPFS contents on-top."
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x000120a0, 0x386004a0 ] # Adjust sizeof(PDIPS3::FileDevicePFSGameData) to sizeof(PDIPS3::FileDeviceCellFS) for new
       - [ be32, 0x000120d8, 0x3888e308 ] # Adjust parameters PDIPS3::FileDeviceGameData(device, param1, param2, param3)
@@ -8577,8 +8577,8 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
         BCES00569: [ 02.11 ]
     Author: "Shy_Doge, FlexBy"
     Configurable Values: *GT5_AR_Configurable_Values
-    Patch Version: 1.0
     Notes: *GT5_AR_Notes
+    Patch Version: 1.0
     Patch:
       - [ bef32, 0x01494170, "Aspect Ratio" ]
       - [ bef32, 0x0148eee0, "Aspect Ratio" ]
