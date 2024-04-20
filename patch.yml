@@ -2523,6 +2523,10 @@ PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
     Patch:
       - [ load, *DS2_JP_Net ]
 
+Anchors:
+  50cent_openspy_notes: &50cent_openspy_notes
+    "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+
 PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
   "Disable Motion Blur & DoF":
     Games:
@@ -2534,15 +2538,14 @@ PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001740e8, 0x4800 ]
-  "Openspy.net patch":
+  "OpenSpy Online":
     Games:
       "50 Cent: Blood on The Sand":
         BLUS30256: [ All ]
         BLES00472: [ All ]
     Author: "FlexBy, Ninetime"
+    Notes: *50cent_openspy_notes
     Patch Version: 1.0
-    Group: ""
-    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
     Patch:
       - [ utf8, 0x120e613a, "openspy.net" ]
       - [ utf8, 0x1530a10a, "openspy.net" ]
@@ -2577,12 +2580,12 @@ PPU-2a1dd4aa26898a97cdb8ff196c1698ceafc5d00a:
       - [ utf8, 0x01657a40, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
 
 PPU-9f0ef86c4c6de3793c0d7312de9095ecb02ffd4d:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "50 Cent: Blood on The Sand":
-        BLJS10056 : [ 01.00 ]
+        BLJS10056: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Notes: *50cent_openspy_notes
     Patch Version: 1.0
     Patch:
       - [ utf8, 0x0252db9d, "openspy.net" ]
