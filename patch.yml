@@ -18731,11 +18731,14 @@ PPU-6e6ba58008dd4c9642436fe6ee0e80e12bde5750:
       - [ utf8, 0x01937fd4, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x01937eca, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+Anchors:
+  neverdead_100: &neverdead_100
+    "NeverDead":
+      BLUS30654: [ 01.00 ]
+
 PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
   "1280x720 Resolution":
-    Games:
-      "NeverDead":
-        BLUS30654: [ 01.00 ]
+    Games: *neverdead_100
     Author: "Margen67"
     Notes: "Original resolution is 1120x630."
     Patch Version: 1.0
@@ -18747,9 +18750,7 @@ PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
       - [ be16, 0x003c9746, 1280 ]
       - [ be16, 0x003c9752, 720 ]
   "60 FPS":
-    Games:
-      "NeverDead":
-        BLUS30654: [ 01.00 ]
+    Games: *neverdead_100
     Author: "Margen67"
     Notes: "Goes slightly above 60 FPS."
     Patch Version: 1.0
