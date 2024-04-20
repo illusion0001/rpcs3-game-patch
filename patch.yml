@@ -1914,7 +1914,7 @@ PPU-023ff768c205b6a7b819005c6eccf5c099ca3e04:
 
 Anchors:
   LC_FPS_Notes: &LC_FPS_Notes
-   "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
 
   LC_FPS: &LC_FPS
     - [ be32, 0x00932f2c, 0x60000000 ]
@@ -7202,7 +7202,7 @@ Anchors:
   uc3_110_mlaa: &uc3_110_mlaa
     - [ be32, 0x0063e014, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0094d850, 0x9b83 ]     # store 0
-   # - [ be32, 0x00728cac, 0x480009ac ] # unconditonally branch to disable MLAA
+    #- [ be32, 0x00728cac, 0x480009ac ] # unconditonally branch to disable MLAA
     # Beginning of new blooom code
     - [ be16, 0x0077bd92, 0xfd40 ]
     - [ byte, 0x0077bdb7, 0xb0 ]
@@ -7292,7 +7292,7 @@ Anchors:
     - [ be32, 0x0064df28, 0x60000000 ] # nop byte write on 00 9c
     - [ be16, 0x0096eaa0, 0x9b83 ]     # store 0
     - [ be32, 0x0073c214, 0x60000000 ] # mp crash fix (test)
-   # - [ be32, 0x0073a1d8, 0x480009ac ] # unconditonally branch to disable MLAA
+    #- [ be32, 0x0073a1d8, 0x480009ac ] # unconditonally branch to disable MLAA
     # Beginning of new blooom code
     - [ be16, 0x0078c3aa, 0x1530 ]
     - [ byte, 0x0078c3cf, 0xb0 ]
