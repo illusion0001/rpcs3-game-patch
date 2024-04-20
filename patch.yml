@@ -17509,7 +17509,7 @@ PPU-59a33bedc708ebfb7905fb35b207313711705579:
       - [ be32, 0x00f3a870, 0x60000000 ]
 
 PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Dungeon Defenders":
         NPEB00652: [ 01.00 ]
@@ -17542,7 +17542,7 @@ PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
       - [ be32, 0x0033b968, 0x60000000 ]
 
 PPU-07563921a4e38747ffc7a05e7eeb84e1115ab916:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Dungeon Defenders":
         NPEB00652: [ 01.03 ]
@@ -17580,8 +17580,8 @@ PPU-25d214ecbfb831e9f2bba796da8982384ced83b4:
       "Dungeon Defenders":
         NPUB30251: [ 01.04 ]
     Author: "FridiNaTor"
-    Patch Version: 1.0
     Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
     Patch:
       - [ utf8, 0x013a9313, "openspy.net" ]
       - [ utf8, 0x013a935a, "openspy.net" ]
