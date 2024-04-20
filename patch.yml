@@ -1833,9 +1833,8 @@ PPU-10752b875de334735d16c0606bf2805feba25497:
       "Brothers in Arms: Hell's Highway":
         BLES00319: [ 01.00 ]
     Author: "FridiNaTor"
-    Patch Version: 1.0
-    Group: ""
     Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
     Patch:
       - [ utf8, 0x0186a8dd, "openspy.net" ]
       - [ utf8, 0x0186abf8, "openspy.net" ]
