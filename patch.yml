@@ -8738,7 +8738,7 @@ PPU-57abea58cae339a0ef9ed99374a0fe7f48b2f72d:
     Notes: *gthd_nohud_notes
     Patch Version: 1.0
     Patch:
-     # - [ be32, 0x009c3488, 0x00000001 ] # Menu HUD scale (never use this)
+      #- [ be32, 0x009c3488, 0x00000001 ] # Menu HUD scale (never use this)
       - [ be32, 0x009ba544, 0x00000000 ]
 
 PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
@@ -8770,7 +8770,7 @@ PPU-ad3a1ecff65a78f9a8380ff4f12960f499604bf4:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x009ba57c, 0x00000000 ]
-     # - [ be32, 0x009c34c8, 0x00000001 ] # Menu HUD scale, never use this
+      #- [ be32, 0x009c34c8, 0x00000001 ] # Menu HUD scale, never use this
 
 PPU-faf46906b362bc8d484de5b91f593bef2e5e0110:
   "Unlock FPS":
@@ -18939,7 +18939,7 @@ PPU-d245f5e6784b3b7bbeec69adf9e9e6a112ef7058:
     Notes:
     Patch Version: 1.0
     Patch:
-     - [ load, *puppeteer_psn_60fps ]
+      - [ load, *puppeteer_psn_60fps ]
   "Disable MLAA":
     Games: *puppeteer_psn_eu_titles
     Author: "illusion"
@@ -18955,7 +18955,7 @@ PPU-fd8fae56d54da45220633541e5d55a371dfc4002:
     Notes:
     Patch Version: 1.0
     Patch:
-     - [ load, *puppeteer_psn_60fps ]
+      - [ load, *puppeteer_psn_60fps ]
   "Disable MLAA":
     Games: *puppeteer_psn_jp_titles
     Author: "illusion"
