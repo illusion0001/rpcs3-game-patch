@@ -18523,7 +18523,7 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
       - [ be16, 0x00a970dc, 0x4280 ] # b
 
 PPU-069afd5bd7f8cb83c2962ea1575da8b3be6c7e57:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Monster Madness Grave Danger Demo":
         NPEB90076: [ 01.00 ]
@@ -18703,7 +18703,7 @@ PPU-9d5d9b6d775a7046cae292b7f56126034a5da095:
       - [ be32, 0x001aa350, 0x4e800020 ] # blr
 
 PPU-6e6ba58008dd4c9642436fe6ee0e80e12bde5750:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "MUD - FIM Motocross World Championship":
         NPEB00925: [ 01.00 ]
