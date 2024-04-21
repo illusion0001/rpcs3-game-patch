@@ -17809,7 +17809,7 @@ Anchors:
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
 
 PPU-6990c66f91d5802a7867f001920e2907bf1b34e6:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Fatal Inertia EX":
         NPEB00024 : [ 01.03 ]
@@ -17836,7 +17836,7 @@ PPU-6990c66f91d5802a7867f001920e2907bf1b34e6:
       - [ utf8, 0x019e9590, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 PPU-6f9ea6e1539089a807cfb2f5ee9c04d8d209576a:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Fatal Inertia EX":
         NPUB30023 : [ 01.02 ]
@@ -17948,7 +17948,7 @@ PPU-a55beada9c3d3f474c7c0ac86874bf30d7fe412d:
       - [ be32, 0x00060040, 0x3800ffff ] # li r0, -1
 
 PPU-6025d7dd93c1c395cbcf06806f4b04eb0f875047:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Hail to the Chimp":
         BLUS30153 : [ 01.02 ]
@@ -18072,7 +18072,7 @@ PPU-38638340e904d6ff86ea940082e1930fa842fa2f:
       - [ be32, 0x000c7fa0, 0x98090000 ]
 
 PPU-efbe18803e699a9b0841c5ae11134831cc013cb1:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "Homefront":
         NPEB00671: [ 01.00 ]
@@ -18307,7 +18307,7 @@ PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00013300, 0x60000000 ]
-  "Openspy.net Patch":
+  "OpenSpy Online":
     Games:
       "Marvel Ultimate Alliance":
         BLUS30010: [ 01.00 ]
