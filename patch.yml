@@ -18495,7 +18495,8 @@ Anchors:
       BLUS31426: [ 01.84 ]
       BLES01976: [ 01.84 ]
 
-  minecraft_fov_notes: &minecraft_fov_notes "Increases the FOV from the default 70. Also affects viewmodels. FOV is decreased when in water."
+  minecraft_fov_notes: &minecraft_fov_notes
+    "Increases the FOV from the default 70. Also affects viewmodels. FOV is decreased when in water."
 
 PPU-544fcc57bf587323d6347b6b695f73f99f76ec55:
   "90 FOV":
