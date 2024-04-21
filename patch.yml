@@ -17812,7 +17812,7 @@ PPU-6990c66f91d5802a7867f001920e2907bf1b34e6:
   "OpenSpy Online":
     Games:
       "Fatal Inertia EX":
-        NPEB00024 : [ 01.03 ]
+        NPEB00024: [ 01.03 ]
     Author: "FlexBy"
     Notes: *fatalinertia_onlinepatch_notes
     Patch Version: 1.0
@@ -17839,7 +17839,7 @@ PPU-6f9ea6e1539089a807cfb2f5ee9c04d8d209576a:
   "OpenSpy Online":
     Games:
       "Fatal Inertia EX":
-        NPUB30023 : [ 01.02 ]
+        NPUB30023: [ 01.02 ]
     Author: "FlexBy"
     Notes: *fatalinertia_onlinepatch_notes
     Patch Version: 1.0
@@ -17951,7 +17951,7 @@ PPU-6025d7dd93c1c395cbcf06806f4b04eb0f875047:
   "OpenSpy Online":
     Games:
       "Hail to the Chimp":
-        BLUS30153 : [ 01.02 ]
+        BLUS30153: [ 01.02 ]
     Author: "FlexBy"
     Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
     Patch Version: 1.0
@@ -19438,10 +19438,10 @@ PPU-e3a3a4cef5c6e04bdc3e94207b1d9ab1312df5ea:
       - [ be32, 0x008de718, 0x60000000 ]
 
 PPU-e96fe9d95b96355d4a1e8a26fb45c48576a0043e:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "SBK X Superbike World Championship":
-        BLES00774 : [ 01.00 ]
+        BLES00774: [ 01.00 ]
     Author: "FlexBy"
     Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
     Patch Version: 1.0
@@ -20273,7 +20273,7 @@ PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
       - [ be32, 0x002142d4, 0x38000001 ]
 
 PPU-16d92d4b3a73bc5c99ae17d054069106a5a163ad:
-  "Openspy Online":
+  "OpenSpy Online":
     Games:
       "High Stakes on the Vegas Strip: Poker Edition":
         NPEB00009: [ 02.01 ]
