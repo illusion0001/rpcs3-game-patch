@@ -1042,7 +1042,7 @@ PPU-c09c496514f6dc591434575b04eb7c003826c11d:
     Patch:
       - [ be32, 0x008c5310, 0x30840000 ]
 
-PPU-5eb979631fbbe531db5d20f0622dca5a8b64090e:
+PPU-ac64494f4ea31f8b0f82584c48916d30dad16300:
   "Unlock FPS":
     Games:
       "Drakengard 3 (Drag-On Dragoon 3)":
