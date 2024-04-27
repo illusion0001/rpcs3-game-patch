@@ -1000,7 +1000,7 @@ PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
       "Drakengard 3 (Drag-On Dragoon 3)":
         NPEB01407: [ All ]
     Author: "Whatcookie, Asinine"
-    Notes: [ *DOD3_FPS_Notes_Part1, "Required for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\" so the patch can't be separated.\n" ]
+    Notes: [ *DOD3_FPS_Notes_Part1, *DOD3_FPS_Notes_Part2, "\nRequired for old delisted versions of this gameID. There was a silent update to fix DLC issues. Both versions are listed as \"01.00\" so the patch can't be separated." ]
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x008ecf1c, 0.125 ] # 240 max FPS
