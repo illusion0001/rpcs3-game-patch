@@ -2711,6 +2711,17 @@ PPU-77794aa320de58a1666e1f494d1a88a0a6adc949:
       - [ be32, 0x00014168, 0x60000000 ]
       - [ bef32, 0x0038059c, "Aspect Ratio" ]
 
+PPU-5bcbd38ba85bc8642091e0ed6e5778b74c301d28:
+  "Unlock FPS":
+    Games:
+      "Dungeons & Dragons: Daggerdale":
+        NPEB00385: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00321380, 0x60000000 ]
+
 PPU-93aed31e80e0a91e11fdcff1b83d42c235bc3548:
   "60 FPS":
     Games:
