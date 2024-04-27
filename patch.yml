@@ -15470,6 +15470,15 @@ PPU-4050da6fa9d7eed65e7d748b03a6ba89023b90c3:
       - [ be32, 0x000d0a10, 0x60000000 ]
 
 PPU-2e4517a2dc5b9a3905dfb571d72ad5cc7e8ea8f1:
+  "Debug Menu":
+    Games:
+      "Batman: Arkham Asylum Demo":
+        NPEB90170: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *batmanAA_debugmenu_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01217298, 0x38600000 ]
   "Unlock FPS":
     Games:
       "Batman: Arkham Asylum Demo":
