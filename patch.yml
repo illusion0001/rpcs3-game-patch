@@ -1579,6 +1579,17 @@ PPU-b1188c0e10fac40e006d51e0ff1aa5fafc3a0699:
     Patch:
       - [ be32, 0x00191b3c, 0x60000000 ]
 
+PPU-719690daa66423444dc65cff5d111d3224c914dc:
+  "Unlock FPS":
+    Games:
+      "Alpha Protocol":
+        BLES00704: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000d78d48, 0x60000000 ]
+
 Anchors:
   ASURA_FPS_notes: &ASURA_FPS_notes
     "Maximum framerate with the patch is half the Vblank frequency. While most of the game works without any issue, some of the button mashing QTEs are tied to framerate. It's possible to play through the game at 60 FPS if you are good at button mashing, but 120 FPS and higher are unplayable in several missions. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 57 FPS."
@@ -17330,6 +17341,18 @@ PPU-2e7c33720155d05029ac9e8e25090e38fce458b6: # EBOOT_MP.BIN
     Patch:
       - [ be32, 0x002f1788, 0x60000000 ]
       - [ be32, 0x12c99e90, 0x453b8000 ] # memory, as long as it works right?
+
+PPU-78324d71c201beabe143ea2a2b4b6ab65db8c79c: # t5_ps3f.self
+  "Unlock FPS":
+    Games:
+      "Call of Duty: Black Ops (Singleplayer)":
+        BLES01031: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00647970, 0x60000000 ]
+      - [ be32, 0x01bf08a4, 0x453b8000 ]
 
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
   "Developer Menu":
