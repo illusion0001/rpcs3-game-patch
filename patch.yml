@@ -762,30 +762,6 @@ PPU-6da0d4551c59eb596a1e04a5355e98163badf246: # BBS.self
     Patch:
       - [ be32, 0x00015aa4, 0x38600000 ] # li r3, 0x0
 
-PPU-b8820496f8fd6f4b5e00798bde60b112daa7a606:
-  "Online fix":
-    Games:
-      "TEKKEN 5 DARK RESURRECTION ONLINE (Updated)":
-        NPUB30009: [ 01.00 ]
-    Author:
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00211024, 0x60000000 ]
-      - [ be32, 0x002110ec, 0x60000000 ]
-
-PPU-3b68a1ecc7531d1ae170fb00e2db03d17bffcd44:
-  "Online fix":
-    Games:
-      "TEKKEN 5 DARK RESURRECTION ONLINE":
-        NPUB30009: [ 01.00 ]
-    Author:
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x001fe724, 0x60000000 ]
-      - [ be32, 0x001fe7ec, 0x60000000 ]
-
 PPU-QoiFRPF8j00N996aQMthtWqEUG0Y:
   "P1 Infinite Health":
     Games:
