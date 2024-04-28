@@ -17307,6 +17307,30 @@ PPU-9d84d0b2f526213d80b79228a15c521801011807:
     Patch:
       - [ be32, 0x00531990, 0x60000000 ]
 
+PPU-dc0320a71151f24d72be25d34cd860d3092b074b: # EBOOT_SP.BIN
+  "Unlock FPS":
+    Games:
+      "Call of Duty 4: Modern Warfare (Singleplayer)":
+        BLUS30072: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002d6838, 0x60000000 ]
+      - [ be32, 0x11e81990, 0x453b8000 ] # memory, as long as it works right?
+      
+PPU-2e7c33720155d05029ac9e8e25090e38fce458b6: # EBOOT_MP.BIN
+  "Unlock FPS":
+    Games:
+      "Call of Duty 4: Modern Warfare (Multiplayer)":
+        BLUS30072: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002f1788, 0x60000000 ]
+      - [ be32, 0x12c99e90, 0x453b8000 ] # memory, as long as it works right?
+
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
   "Developer Menu":
     Games:
