@@ -17398,6 +17398,30 @@ PPU-11c5751dcf65fa70da7171c96d53e9bebc281ede: # mp.self 1.00
       - [ be32, 0x0055a574, 0x60000000 ]
       - [ be32, 0x031d9ed0, 0x453b8000 ] # memory
 
+PPU-a57a6ec21cefcf2274ac1ed7dd61711da9f85504: # sp.self 1.08
+  "Unlock FPS":
+    Games:
+      "Call of Duty: World at War (Singleplayer)":
+        BLES00457: [ 01.08 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005a8e3c, 0x60000000 ]
+      - [ be32, 0x02a947d0, 0x453b8000 ] # memory
+      
+PPU-f1c3d2c0290947f7fbfa0a36c7842e21e7392414: # mp.self 1.08
+  "Unlock FPS":
+    Games:
+      "Call of Duty: World at War (Multiplayer)":
+        BLES00457: [ 01.08 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0056ef6c, 0x60000000 ]
+      - [ be32, 0x030f1ed0, 0x453b8000 ] # memory
+
 PPU-55575baa2f88d9600f705434bd5de9aea92042da:
   "Developer Menu":
     Games:
