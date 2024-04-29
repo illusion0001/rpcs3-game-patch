@@ -8928,7 +8928,7 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements will be stretched."
 
   tox_jp_ar_21_9: &tox_jp_ar_21_9
     - [ bef32, 0x00c08714, 1680 ]    # HUD / GUI (Width)
@@ -9215,7 +9215,7 @@ PPU-62b0f370c487523166efb0d4b4a24e627acc3488:
 
 Anchors:
   tox2_ar_notes: &tox2_ar_notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements will be stretched."
 
   tox2_jp_v01_00_ar_21_9: &tox2_jp_v01_00_ar_21_9
     - [ bef32, 0x00e5c94c, 1680 ]    # HUD / GUI (Width)
