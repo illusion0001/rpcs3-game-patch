@@ -18279,6 +18279,17 @@ PPU-efbe18803e699a9b0841c5ae11134831cc013cb1:
       - [ utf8, 0x01a6259c, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x01a62492, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+PPU-2e587109b46972404e00e477ac5f68734dfbb7d7:
+  "Unlock FPS":
+    Games:
+      "Hyperdimension Neptunia mk2":
+        NPUB30799: [ All ]
+    Author: "RokkuDayo"
+    Notes: "Removes the 60 FPS cap.\nSpecial thanks to Whatcookie for showing how to find the sleeping instruction."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0025b088, 0x60000000 ]
+
 PPU-98cd3afcfa5471523c8840f583c60017696fb998:
   "Level Browser Menu":
     Games:
