@@ -1455,13 +1455,17 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
     Patch:
       - [ be32, 0x00181118, 0x60000000 ]
 
+Anchors:
+  papoandyo_fps_notes: &papoandyo_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
 PPU-cfd2f4022c5c8bd0ad4cf7c9ed85ab3d8da5afdb:
   "Unlock FPS":
     Games:
       "Papo & Yo":
         NPEB01109: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Notes: *papoandyo_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008af2f0, 0x60000000 ]
@@ -1474,7 +1478,7 @@ PPU-ad4fce77870e941b183938911cd3ba6bd091eddc:
       "Papo & Yo Demo":
         NPUB90869: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Notes: *papoandyo_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x008af2b0, 0x60000000 ]
