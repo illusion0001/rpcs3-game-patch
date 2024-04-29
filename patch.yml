@@ -13587,7 +13587,7 @@ Anchors:
     - [ be16, 0x0143919a, 1280 ]
 
   su_aspectratio_notes: &su_aspectratio_notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements will be stretched."
 
   su_aspectratio_configurable_values: &su_aspectratio_configurable_values
     "Aspect Ratio":
@@ -19713,7 +19713,7 @@ PPU-49aa433a899d78438decde97c4e1b79a473148a1:
         NPEB01162: [ 01.00 ]
         NPJB00250: [ 01.00 ]
     Author: "illusion, Margen67"
-    Notes: "\"Screen Size\" must be set to Full in the game settings. UI Elements will be stretched.\nPillar/letterboxed or stretched 4:3 is the normal aspect ratio without the patch."
+    Notes: "\"Screen Size\" must be set to Full in the game settings. UI elements will be stretched.\nPillar/letterboxed or stretched 4:3 is the normal aspect ratio without the patch."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002797bc, 0x4807fbc4 ] # b 0x002f9380
