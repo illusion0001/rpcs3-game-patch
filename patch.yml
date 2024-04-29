@@ -5429,7 +5429,7 @@ Anchors:
     "Fixes a bug where throwing an object at an Infected Severed Head causes a game crash."
 
   tlou_ar_notes: &tlou_ar_notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements will be stretched."
 
   tlou_fps_notes: &tlou_fps_notes
     "Unlocks FPS without any special settings.\nGame may crash above 500 FPS in loading screens."
@@ -8489,7 +8489,7 @@ Anchors:
     "Cutscenes rendered in the game's engine are sped up."
 
   GT5_AR_Notes: &GT5_AR_Notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will stay at 16:9. Sometimes text doesn't show up."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD elements stay at 16:9. Sometimes text doesn't show up."
   GT5_AR_Configurable_values: &GT5_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
