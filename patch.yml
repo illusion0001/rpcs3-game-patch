@@ -17336,7 +17336,7 @@ PPU-dc0320a71151f24d72be25d34cd860d3092b074b: # EBOOT_SP.BIN 1.00/1.40
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002d6838, 0x60000000 ]
-      - [ be32, 0x11e81990, 0x453b8000 ] # memory, as long as it works right?
+      - [ be32, 0x11e81990, 0x453b8000 ] # memory
       
 PPU-2e7c33720155d05029ac9e8e25090e38fce458b6: # EBOOT_MP.BIN 1.00
   "Unlock FPS":
