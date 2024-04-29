@@ -125,7 +125,7 @@ Anchors:
     "Can disable Write Color Buffers for 20% faster performance. Please note this patch gives a slightly darker tone to the game."
 
   DeS_AR_Notes: &DeS_AR_Notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI Elements will be stretched."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements will be stretched."
 
   DeS_AR_Configurable_Values: &DeS_AR_Configurable_Values
     "Aspect Ratio":
@@ -20534,7 +20534,7 @@ PPU-e0d1cb983c09ccdad4cb91335287bfd47e6afb44:
       "Yaiba: Ninja Gaiden Z":
         BLJM61163: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Maximum framerate with the patch is half the Vblank frequency. "
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007f5a48, 0x60000000 ]
