@@ -12397,7 +12397,7 @@ Anchors:
   p5_NoHudLite_Author: &p5_NoHudLite_Author
     "TGEnigma"
   p5_NoHudLite_Notes: &p5_NoHudLite_Notes
-    "Elements can disabled separately by adding/removing their respective lines from the patch."
+    "Elements can be disabled separately by adding/removing their respective lines from the patch."
   p5_NoHudLite_PatVer: &p5_NoHudLite_PatVer 1.0
   p5_NoHudLite: &p5_NoHudLite
     - [ be32, 0x000de4ec, 0x60000000 ] # mission list
