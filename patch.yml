@@ -17683,6 +17683,8 @@ PPU-59a33bedc708ebfb7905fb35b207313711705579:
 Anchors:
   dungeondefenders_openspy_notes: &dungeondefenders_openspy_notes
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+  dungeondefenders_fps_notes: &dungeondefenders_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS. "
 
 PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
   "OpenSpy Online":
@@ -17712,7 +17714,7 @@ PPU-9000e418b2842c1c1a9a46e0f58e96df99a248dc:
       "Dungeon Defenders":
         NPEB00652: [ 01.00 ]
     Author: "FlexBy"
-    Notes:
+    Notes: *dungeondefenders_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0033b968, 0x60000000 ]
@@ -17745,7 +17747,7 @@ PPU-07563921a4e38747ffc7a05e7eeb84e1115ab916:
       "Dungeon Defenders":
         NPEB00652: [ 01.03 ]
     Author: "FlexBy"
-    Notes:
+    Notes: *dungeondefenders_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0033c6c8, 0x60000000 ]
@@ -17778,7 +17780,7 @@ PPU-25d214ecbfb831e9f2bba796da8982384ced83b4:
       "Dungeon Defenders":
         NPUB30251: [ 01.04 ]
     Author: "FlexBy"
-    Notes:
+    Notes: *dungeondefenders_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0033cd90, 0x60000000 ]
