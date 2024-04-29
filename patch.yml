@@ -2246,7 +2246,7 @@ Anchors:
     - [ be32, 0x010d667c, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
 
   NieR_AR_Notes: &NieR_AR_Notes
-    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD Elements will be stretched and misplaced."
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD elements will be stretched and misplaced."
   NieR_AR_Configurable_values: &NieR_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
