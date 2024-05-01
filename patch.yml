@@ -6060,6 +6060,78 @@ Anchors:
   MGS4_FPS_Notes: &MGS4_FPS_Notes
     "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency."
 
+  MGS4_DisableFilters_Notes: &MGS4_DisableFilters_Notes
+    "Removes all viewport filters including color grading and the night vision goggles effect."
+
+  mgs4_us_disc200title: &mgs4_us_disc200title
+    "Metal Gear Solid 4: Guns of the Patriots":
+      BLUS30109: [ 02.00 ]
+  mgs4_eu_disc200title: &mgs4_eu_disc200title
+    "Metal Gear Solid 4: Guns of the Patriots":
+      BLES00246: [ 02.00 ]
+  mgs4_us_digital200title: &mgs4_us_digital200title
+    "Metal Gear Solid 4: Guns of the Patriots":
+      NPUB31633: [ 02.00 ]
+
+  mgs4_219AR_v200_disc: &mgs4_219AR_v200_disc
+    - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+    - [ be32, 0x003d4274, 0xbff0a3d7 ]
+    - [ be32, 0x000f1230, 0xc1be8040 ]
+    - [ be32, 0x003d4020, 0x3fa3126f ]
+
+  mgs4_219ARC_v200_disc: &mgs4_219ARC_v200_disc
+    - [ be32, 0x003d426c, 0x3ff0a3d7 ]
+    - [ be32, 0x003d4274, 0xbff0a3d7 ]
+    - [ be32, 0x000f1230, 0xc1be8040 ]
+    - [ be32, 0x000f1b6c, 0xc1be8040 ]
+    - [ be32, 0x003d4020, 0x3fa3126f ]
+
+  mgs4_329AR_v200_disc: &mgs4_329AR_v200_disc
+    - [ be32, 0x003d426c, 0x4039999a ]
+    - [ be32, 0x003d4274, 0xc039999a ]
+    - [ be32, 0x000f1230, 0xc1be8040 ]
+    - [ be32, 0x003d4020, 0x3f52b021 ]
+
+  mgs4_329ARC_v200_disc: &mgs4_329ARC_v200_disc
+    - [ be32, 0x003d426c, 0x4039999a ]
+    - [ be32, 0x003d4274, 0xc039999a ]
+    - [ be32, 0x000f1230, 0xc1be8040 ]
+    - [ be32, 0x000f1b6c, 0xc1be8040 ]
+    - [ be32, 0x003d4020, 0x3f52b021 ]
+
+  mgs4_maxcamo_v200_disc: &mgs4_maxcamo_v200_disc
+    - [ be32, 0x00076564, 0x38000064 ]
+    - [ be32, 0x00076568, 0x38600064 ]
+    - [ be32, 0x000765b4, 0x3ba00064 ]
+
+  mgs4_rstagequality_v200_disc: &mgs4_rstagequality_v200_disc
+    - [ be32, 0x000fa7ec, 0x4e800020 ]
+    - [ be32, 0x0010faec, 0x4e800020 ]
+
+  mgs4_dshadows_v200_disc: &mgs4_dshadows_v200_disc
+    - [ be32, 0x00132354, 0x4e800020 ]
+
+  mgs4_dfog_v200_disc: &mgs4_dfog_v200_disc
+    - [ be32, 0x000eaa08, 0x4e800020 ]
+
+  mgs4_dhud_v200_disc: &mgs4_dhud_v200_disc
+    - [ be32, 0x000f0410, 0x60000000 ]
+
+  mgs4_dspawnedeffects_v200_disc: &mgs4_dspawnedeffects_v200_disc
+    - [ be32, 0x0012bcfc, 0x2b8a0004 ]
+
+  mgs4_dfilters_v200_disc: &mgs4_dfilters_v200_disc
+    - [ be32, 0xf0458, 0x60000000 ]
+
+  mgs4_unlockfps_v200_disc: &mgs4_unlockfps_v200_disc
+    - [ be32, 0x000db720, 0x4e800020 ]
+
+  mgs4_infiniteammo_v200_disc: &mgs4_infiniteammo_v200_disc
+    - [ be32, 0x0008c578, 0x60000000 ]
+
+  mgs4_noreload_v200_disc: &mgs4_noreload_v200_disc
+    - [ be32, 0x0008c4dc, 0x7d004378 ]
+
 PPU-9712144d93487f0b62e39f55e175af783b58af72:
   "Disable shadows":
     Games:
@@ -6073,158 +6145,111 @@ PPU-9712144d93487f0b62e39f55e175af783b58af72:
 
 PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
   "21:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
-      - [ be32, 0x003d4274, 0xbff0a3d7 ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3fa3126f ]
+      - [ load, *mgs4_219AR_v200_disc ]
   "21:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
-      - [ be32, 0x003d4274, 0xbff0a3d7 ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x000f1b6c, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3fa3126f ]
+      - [ load, *mgs4_219ARC_v200_disc ]
   "32:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x4039999a ]
-      - [ be32, 0x003d4274, 0xc039999a ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3f52b021 ]
+      - [ load, *mgs4_329AR_v200_disc ]
   "32:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x4039999a ]
-      - [ be32, 0x003d4274, 0xc039999a ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x000f1b6c, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3f52b021 ]
+      - [ load, *mgs4_329ARC_v200_disc ]
   "Disable shadows":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Disableshadows_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00132354, 0x4e800020 ]
+      - [ load, *mgs4_dshadows_v200_disc ]
   "Remove fog":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Removefog_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000eaa08, 0x4e800020 ]
+      - [ load, *mgs4_dfog_v200_disc ]
   "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Reducestagequality_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000fa7ec, 0x4e800020 ]
-      - [ be32, 0x0010faec, 0x4e800020 ]
+      - [ load, *mgs4_rstagequality_v200_disc ]
   "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveHUD_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000f0410, 0x60000000 ]
+      - [ load, *mgs4_dhud_v200_disc ]
   "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveEffects_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0012bcfc, 0x2b8a0004 ]
+      - [ load, *mgs4_dspawnedeffects_v200_disc ]
   "Unlock FPS":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000db720, 0x4e800020 ]
+      - [ load, *mgs4_unlockfps_v200_disc ]
   "Infinite Ammo":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "games24.blog.fc2.com"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0008c578, 0x60000000 ]
+      - [ load, *mgs4_infiniteammo_v200_disc ]
   "No Reload":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "games24.blog.fc2.com"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0008c4dc, 0x7d004378 ]
+      - [ load, *mgs4_noreload_v200_disc ]
   "Max Camo":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: "dron_3"
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00076564, 0x38000064 ]
-      - [ be32, 0x00076568, 0x38600064 ]
-      - [ be32, 0x000765b4, 0x3ba00064 ]
+      - [ load, *mgs4_maxcamo_v200_disc ]
   "Disable Filters":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+    Games: *mgs4_us_disc200title
     Author: TriggerHappy
-    Notes: "Removes all viewport filters including color grading and the night vision goggles effect."
+    Notes: *MGS4_DisableFilters_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xf0458, 0x60000000 ]
+      - [ load, *mgs4_dfilters_v200_disc ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
@@ -6235,9 +6260,7 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000efaf0, 0xc1be8040 ]
       - [ be32, 0x003c3c90, 0x3fa3126f ]
   "21:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
@@ -6249,9 +6272,7 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000f042c, 0xc1be8040 ]
       - [ be32, 0x003c3c90, 0x3fa3126f ]
   "32:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
@@ -6262,9 +6283,7 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000efaf0, 0xc1be8040 ]
       - [ be32, 0x003c3c90, 0x3f52b021 ]
   "32:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
@@ -6276,27 +6295,21 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000f042c, 0xc1be8040 ]
       - [ be32, 0x003c3c90, 0x3f52b021 ]
   "Disable shadows":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Disableshadows_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00130bf4, 0x4e800020 ]
   "Remove fog":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Removefog_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000e92c8, 0x4e800020 ]
   "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_Reducestagequality_Notes
     Patch Version: 1.0
@@ -6304,27 +6317,21 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
       - [ be32, 0x000f90ac, 0x4e800020 ]
       - [ be32, 0x0010e3ac, 0x4e800020 ]
   "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveHUD_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000eecd0, 0x60000000 ]
   "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveEffects_Notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0012a59c, 0x2b8a0004 ]
   "Unlock FPS":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
+    Games: *mgs4_us_digital200title
     Author: "TriggerHappy"
     Notes: *MGS4_FPS_Notes
     Group: AR
@@ -6334,114 +6341,107 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
   "21:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
-      - [ be32, 0x003d4274, 0xbff0a3d7 ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3fa3126f ]
+      - [ load, *mgs4_219AR_v200_disc ]
   "21:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x3ff0a3d7 ]
-      - [ be32, 0x003d4274, 0xbff0a3d7 ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x000f1b6c, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3fa3126f ]
+      - [ load, *mgs4_219ARC_v200_disc ]
   "32:9 Aspect Ratio":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x4039999a ]
-      - [ be32, 0x003d4274, 0xc039999a ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3f52b021 ]
+      - [ load, *mgs4_329AR_v200_disc ]
   "32:9 Aspect Ratio (Cutscenes)":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x003d426c, 0x4039999a ]
-      - [ be32, 0x003d4274, 0xc039999a ]
-      - [ be32, 0x000f1230, 0xc1be8040 ]
-      - [ be32, 0x000f1b6c, 0xc1be8040 ]
-      - [ be32, 0x003d4020, 0x3f52b021 ]
+      - [ load, *mgs4_329ARC_v200_disc ]
   "Disable shadows":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Disableshadows_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00132354, 0x4e800020 ]
+      - [ load, *mgs4_dshadows_v200_disc ]
   "Remove fog":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Removefog_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000eaa08, 0x4e800020 ]
+      - [ load, *mgs4_dfog_v200_disc ]
   "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_Reducestagequality_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000fa7ec, 0x4e800020 ]
-      - [ be32, 0x0010faec, 0x4e800020 ]
+      - [ load, *mgs4_rstagequality_v200_disc ]
   "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveHUD_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000f0410, 0x60000000 ]
+      - [ load, *mgs4_dhud_v200_disc ]
   "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveEffects_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x0012bcfc, 0x2b8a0004 ]
+      - [ load, *mgs4_dspawnedeffects_v200_disc ]
   "Unlock FPS":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
+    Games: *mgs4_eu_disc200title
     Author: "TriggerHappy"
     Notes: *MGS4_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x000db720, 0x4e800020 ]
+      - [ load, *mgs4_unlockfps_v200_disc ]
+  "Infinite Ammo":
+    Games: *mgs4_eu_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_infiniteammo_v200_disc ]
+  "No Reload":
+    Games: *mgs4_eu_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_noreload_v200_disc ]
+  "Max Camo":
+    Games: *mgs4_eu_disc200title
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxcamo_v200_disc ]
+  "Disable Filters":
+    Games: *mgs4_eu_disc200title
+    Author: TriggerHappy
+    Notes: *MGS4_DisableFilters_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfilters_v200_disc ]
 
 OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
   "Disable snow effect":
