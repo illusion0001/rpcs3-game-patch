@@ -6210,6 +6210,15 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
       - [ be32, 0x00076564, 0x38000064 ]
       - [ be32, 0x00076568, 0x38600064 ]
       - [ be32, 0x000765b4, 0x3ba00064 ]
+  "Disable Filters":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Removes all viewport filters including color grading and the night vision goggles effect."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0xf0458, 0x60000000 ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
