@@ -6069,10 +6069,10 @@ Anchors:
   mgs4_eu_disc200title: &mgs4_eu_disc200title
     "Metal Gear Solid 4: Guns of the Patriots":
       BLES00246: [ 02.00 ]
-  mgs4_us_digital200title: &mgs4_us_digital200title
+  mgs4_us_psn200title: &mgs4_us_psn200title
     "Metal Gear Solid 4: Guns of the Patriots":
       NPUB31633: [ 02.00 ]
-  mgs4_eu_digital200title: &mgs4_eu_digital200title
+  mgs4_eu_psn200title: &mgs4_eu_psn200title
     "Metal Gear Solid 4: Guns of the Patriots":
       NPEB02182: [ 02.00 ]
 
@@ -6082,7 +6082,7 @@ Anchors:
     - [ be32, 0x000f1230, 0xc1be8040 ]
     - [ be32, 0x003d4020, 0x3fa3126f ]
 
-  mgs4_219AR_v200_digital: &mgs4_219AR_v200_digital
+  mgs4_219AR_v200_psn: &mgs4_219AR_v200_psn
     - [ be32, 0x003c3edc, 0x3ff0a3d7 ]
     - [ be32, 0x003c3ee4, 0xbff0a3d7 ]
     - [ be32, 0x000efaf0, 0xc1be8040 ]
@@ -6095,7 +6095,7 @@ Anchors:
     - [ be32, 0x000f1b6c, 0xc1be8040 ]
     - [ be32, 0x003d4020, 0x3fa3126f ]
 
-  mgs4_219ARC_v200_digital: &mgs4_219ARC_v200_digital
+  mgs4_219ARC_v200_psn: &mgs4_219ARC_v200_psn
     - [ be32, 0x003c3edc, 0x3ff0a3d7 ]
     - [ be32, 0x003c3ee4, 0xbff0a3d7 ]
     - [ be32, 0x000efaf0, 0xc1be8040 ]
@@ -6108,7 +6108,7 @@ Anchors:
     - [ be32, 0x000f1230, 0xc1be8040 ]
     - [ be32, 0x003d4020, 0x3f52b021 ]
 
-  mgs4_329AR_v200_digital: &mgs4_329AR_v200_digital
+  mgs4_329AR_v200_psn: &mgs4_329AR_v200_psn
     - [ be32, 0x003c3edc, 0x4039999a ]
     - [ be32, 0x003c3ee4, 0xc039999a ]
     - [ be32, 0x000efaf0, 0xc1be8040 ]
@@ -6121,7 +6121,7 @@ Anchors:
     - [ be32, 0x000f1b6c, 0xc1be8040 ]
     - [ be32, 0x003d4020, 0x3f52b021 ]
 
-  mgs4_329ARC_v200_digital: &mgs4_329ARC_v200_digital
+  mgs4_329ARC_v200_psn: &mgs4_329ARC_v200_psn
     - [ be32, 0x003c3edc, 0x4039999a ]
     - [ be32, 0x003c3ee4, 0xc039999a ]
     - [ be32, 0x000efaf0, 0xc1be8040 ]
@@ -6137,32 +6137,32 @@ Anchors:
     - [ be32, 0x000fa7ec, 0x4e800020 ]
     - [ be32, 0x0010faec, 0x4e800020 ]
 
-  mgs4_rstagequality_v200_digital: &mgs4_rstagequality_v200_digital
+  mgs4_rstagequality_v200_psn: &mgs4_rstagequality_v200_psn
     - [ be32, 0x000f90ac, 0x4e800020 ]
     - [ be32, 0x0010e3ac, 0x4e800020 ]
 
   mgs4_dshadows_v200_disc: &mgs4_dshadows_v200_disc
     - [ be32, 0x00132354, 0x4e800020 ]
 
-  mgs4_dshadows_v200_digital: &mgs4_dshadows_v200_digital
+  mgs4_dshadows_v200_psn: &mgs4_dshadows_v200_psn
     - [ be32, 0x00130bf4, 0x4e800020 ]
 
   mgs4_dfog_v200_disc: &mgs4_dfog_v200_disc
     - [ be32, 0x000eaa08, 0x4e800020 ]
 
-  mgs4_dfog_v200_digital: &mgs4_dfog_v200_digital
+  mgs4_dfog_v200_psn: &mgs4_dfog_v200_psn
     - [ be32, 0x000e92c8, 0x4e800020 ]
 
   mgs4_dhud_v200_disc: &mgs4_dhud_v200_disc
     - [ be32, 0x000f0410, 0x60000000 ]
 
-  mgs4_dhud_v200_digital: &mgs4_dhud_v200_digital
+  mgs4_dhud_v200_psn: &mgs4_dhud_v200_psn
     - [ be32, 0x000eecd0, 0x60000000 ]
 
   mgs4_dspawnedeffects_v200_disc: &mgs4_dspawnedeffects_v200_disc
     - [ be32, 0x0012bcfc, 0x2b8a0004 ]
 
-  mgs4_dspawnedeffects_v200_digital: &mgs4_dspawnedeffects_v200_digital
+  mgs4_dspawnedeffects_v200_psn: &mgs4_dspawnedeffects_v200_psn
     - [ be32, 0x0012a59c, 0x2b8a0004 ]
 
   mgs4_dfilters_v200_disc: &mgs4_dfilters_v200_disc
@@ -6171,7 +6171,7 @@ Anchors:
   mgs4_unlockfps_v200_disc: &mgs4_unlockfps_v200_disc
     - [ be32, 0x000db720, 0x4e800020 ]
 
-  mgs4_unlockfps_v200_digital: &mgs4_unlockfps_v200_digital
+  mgs4_unlockfps_v200_psn: &mgs4_unlockfps_v200_psn
     - [ be32, 0x000d9fe0, 0x4e800020 ]
 
   mgs4_infiniteammo_v200_disc: &mgs4_infiniteammo_v200_disc
@@ -6297,79 +6297,79 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_219AR_v200_digital ]
+      - [ load, *mgs4_219AR_v200_psn ]
   "21:9 Aspect Ratio (Cutscenes)":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_219ARC_v200_digital ]
+      - [ load, *mgs4_219ARC_v200_psn ]
   "32:9 Aspect Ratio":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_329AR_v200_digital ]
+      - [ load, *mgs4_329AR_v200_psn ]
   "32:9 Aspect Ratio (Cutscenes)":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_329ARC_v200_digital ]
+      - [ load, *mgs4_329ARC_v200_psn ]
   "Disable shadows":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Disableshadows_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dshadows_v200_digital ]
+      - [ load, *mgs4_dshadows_v200_psn ]
   "Remove fog":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Removefog_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dfog_v200_digital ]
+      - [ load, *mgs4_dfog_v200_psn ]
   "Reduce stage quality":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Reducestagequality_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_rstagequality_v200_digital ]
+      - [ load, *mgs4_rstagequality_v200_psn ]
   "Disable HUD":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveHUD_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dhud_v200_digital ]
+      - [ load, *mgs4_dhud_v200_psn ]
   "Disable spawned effects":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveEffects_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dspawnedeffects_v200_digital ]
+      - [ load, *mgs4_dspawnedeffects_v200_psn ]
   "Unlock FPS":
-    Games: *mgs4_us_digital200title
+    Games: *mgs4_us_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_unlockfps_v200_digital ]
+      - [ load, *mgs4_unlockfps_v200_psn ]
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
   "21:9 Aspect Ratio":
@@ -6477,79 +6477,79 @@ PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
 
 PPU-6886ae8f4270fe3fa4c7cf4299307044ad4ce989:
   "21:9 Aspect Ratio":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_219AR_v200_digital ]
+      - [ load, *mgs4_219AR_v200_psn ]
   "21:9 Aspect Ratio (Cutscenes)":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_219ARC_v200_digital ]
+      - [ load, *mgs4_219ARC_v200_psn ]
   "32:9 Aspect Ratio":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_Notes
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_329AR_v200_digital ]
+      - [ load, *mgs4_329AR_v200_psn ]
   "32:9 Aspect Ratio (Cutscenes)":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Widescreen_NotesEx
     Group: AR
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_329ARC_v200_digital ]
+      - [ load, *mgs4_329ARC_v200_psn ]
   "Disable shadows":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Disableshadows_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dshadows_v200_digital ]
+      - [ load, *mgs4_dshadows_v200_psn ]
   "Remove fog":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Removefog_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dfog_v200_digital ]
+      - [ load, *mgs4_dfog_v200_psn ]
   "Reduce stage quality":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_Reducestagequality_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_rstagequality_v200_digital ]
+      - [ load, *mgs4_rstagequality_v200_psn ]
   "Disable HUD":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveHUD_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dhud_v200_digital ]
+      - [ load, *mgs4_dhud_v200_psn ]
   "Disable spawned effects":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_RemoveEffects_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_dspawnedeffects_v200_digital ]
+      - [ load, *mgs4_dspawnedeffects_v200_psn ]
   "Unlock FPS":
-    Games: *mgs4_eu_digital200title
+    Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
     Notes: *MGS4_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *mgs4_unlockfps_v200_digital ]
+      - [ load, *mgs4_unlockfps_v200_psn ]
 
 OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
   "Disable snow effect":
