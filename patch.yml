@@ -18520,6 +18520,17 @@ PPU-2e587109b46972404e00e477ac5f68734dfbb7d7:
     Patch:
       - [ be32, 0x0025b088, 0x60000000 ]
 
+PPU-8469dbfc0e07e930e805e57861f7db38826f0021:
+  "Unlock FPS":
+    Games:
+      "Hyperdimension Neptunia Victory":
+        NPUB31389: [ 01.00 ]
+    Author: "RokkuDayo"
+    Notes: "Removes the 60 FPS cap.\nSet the framelimit to Off in the custom configuration for this to work properly."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004ab4a0, 0x60000000 ]
+
 PPU-98cd3afcfa5471523c8840f583c60017696fb998:
   "Level Browser Menu":
     Games:
