@@ -10288,6 +10288,35 @@ PPU-07b749cb166a9d6a924bb59428880e3836ab67c9: # shadow.self 1.01
     Patch:
       - [ bef32, 0x007328dc, 1.5 ]
 
+PPU-b6c244044dbd6fcee19bb9e0d82f434119524629:
+  "Ultrawide 21:9 (3440x1440)":
+    Games:
+      "Deadly Premonition: Director's Cut":
+        NPEB01352: [ 01.00 ]
+    Author: "faith"
+    Patch Version: 1.0
+    Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD will be stretched. Certain scenes may have visual bugs."
+    Group: AR
+    Patch:
+      - [ be32, 0x771c80, 0x4820d148 ] # jump to cave
+      - [ be32, 0x97ed98, 0x409e0048 ] # create code cave
+      - [ be32, 0x97edc8, 0x3f004018 ] # lis   r24,0x(high part)
+      - [ be32, 0x97edcc, 0x6318e38e ] # ori   r24,r24,0x(low part)
+      - [ be32, 0x97edd0, 0x93010070 ] # stw   r24,0x70(r1)
+      - [ be32, 0x97edd4, 0xc3e10070 ] # lfs   f31,0x70(r1)
+      - [ be32, 0x97edd8, 0xd3e30064 ] # stfs  f31,0x64(param_1)
+      - [ be32, 0x97eddc, 0x4bdf2ea8 ] # return
+  "Skip intro videos":
+    Games:
+      "Deadly Premonition: Director's Cut":
+        NPEB01352: [ 01.00 ]
+    Author: "faith"
+    Patch Version: 1.0
+    Notes: "Skips intro videos, goes to main menu immediately after controller notice"
+    Group:
+    Patch:
+      - [ be32, 0x5c4a7c, 0x38000000 ] # li r0, 0x0
+
 MGSHD_AR_Configurable_Values: &MGSHD_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
