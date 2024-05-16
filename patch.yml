@@ -6078,6 +6078,9 @@ Anchors:
   mgs4_eu_psn200title: &mgs4_eu_psn200title
     "Metal Gear Solid 4: Guns of the Patriots":
       NPEB02182: [ 02.00 ]
+  mgs4_jp_psn200title: &mgs4_jp_psn200title
+    "Metal Gear Solid 4: Guns of the Patriots":
+      NPJB00698: [ 02.00 ]
 
   mgs4_219AR_v200_disc: &mgs4_219AR_v200_disc
     - [ be32, 0x003d426c, 0x3ff0a3d7 ]
@@ -6136,6 +6139,11 @@ Anchors:
     - [ be32, 0x00076568, 0x38600064 ]
     - [ be32, 0x000765b4, 0x3ba00064 ]
 
+  mgs4_maxcamo_v200_psn: &mgs4_maxcamo_v200_psn
+    - [ be32, 0x0007489c, 0x38000064 ]
+    - [ be32, 0x000748a0, 0x38600064 ]
+    - [ be32, 0x000748ec, 0x3ba00064 ]
+
   mgs4_rstagequality_v200_disc: &mgs4_rstagequality_v200_disc
     - [ be32, 0x000fa7ec, 0x4e800020 ]
     - [ be32, 0x0010faec, 0x4e800020 ]
@@ -6169,7 +6177,10 @@ Anchors:
     - [ be32, 0x0012a59c, 0x2b8a0004 ]
 
   mgs4_dfilters_v200_disc: &mgs4_dfilters_v200_disc
-    - [ be32, 0xf0458, 0x60000000 ]
+    - [ be32, 0x000f0458, 0x60000000 ]
+
+  mgs4_dfilters_v200_psn: &mgs4_dfilters_v200_psn
+    - [ be32, 0x000eed18, 0x60000000 ]
 
   mgs4_unlockfps_v200_disc: &mgs4_unlockfps_v200_disc
     - [ be32, 0x000db720, 0x4e800020 ]
@@ -6180,8 +6191,14 @@ Anchors:
   mgs4_infiniteammo_v200_disc: &mgs4_infiniteammo_v200_disc
     - [ be32, 0x0008c578, 0x60000000 ]
 
+  mgs4_infiniteammo_v200_psn: &mgs4_infiniteammo_v200_psn
+    - [ be32, 0x0008a8b0, 0x60000000 ]
+
   mgs4_noreload_v200_disc: &mgs4_noreload_v200_disc
     - [ be32, 0x0008c4dc, 0x7d004378 ]
+
+  mgs4_noreload_v200_psn: &mgs4_noreload_v200_psn
+    - [ be32, 0x0008a814, 0x7d004378 ]
 
 PPU-9712144d93487f0b62e39f55e175af783b58af72:
   "Disable shadows":
@@ -6292,7 +6309,7 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
       - [ load, *mgs4_maxcamo_v200_disc ]
   "Disable Filters":
     Games: *mgs4_us_disc200title
-    Author: TriggerHappy
+    Author: "TriggerHappy"
     Notes: *MGS4_DisableFilters_Notes
     Patch Version: 1.0
     Patch:
@@ -6373,6 +6390,34 @@ PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_unlockfps_v200_psn ]
+  "Infinite Ammo":
+    Games: *mgs4_us_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_infiniteammo_v200_psn ]
+  "No Reload":
+    Games: *mgs4_us_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_noreload_v200_psn ]
+  "Max Camo":
+    Games: *mgs4_us_psn200title
+    Author: "dron_3, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxcamo_v200_psn ]
+  "Disable Filters":
+    Games: *mgs4_us_psn200title
+    Author: "TriggerHappy, FlexBy"
+    Notes: *MGS4_DisableFilters_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfilters_v200_psn ]
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
   "21:9 Aspect Ratio":
@@ -6553,6 +6598,34 @@ PPU-6886ae8f4270fe3fa4c7cf4299307044ad4ce989:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_unlockfps_v200_psn ]
+  "Infinite Ammo":
+    Games: *mgs4_eu_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_infiniteammo_v200_psn ]
+  "No Reload":
+    Games: *mgs4_eu_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_noreload_v200_psn ]
+  "Max Camo":
+    Games: *mgs4_eu_psn200title
+    Author: "dron_3, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxcamo_v200_psn ]
+  "Disable Filters":
+    Games: *mgs4_eu_psn200title
+    Author: "TriggerHappy, FlexBy"
+    Notes: *MGS4_DisableFilters_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfilters_v200_psn ]
 
 PPU-c19b3b57017488d9bd126a4b6cfba3566e0905fb:
   "21:9 Aspect Ratio":
@@ -6657,6 +6730,110 @@ PPU-c19b3b57017488d9bd126a4b6cfba3566e0905fb:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_dfilters_v200_disc ]
+
+PPU-2b65154021bb8c3b25616324975af795720c5f78:
+  "21:9 Aspect Ratio":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_Notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_219AR_v200_psn ]
+  "21:9 Aspect Ratio (Cutscenes)":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_NotesEx
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_219ARC_v200_psn ]
+  "32:9 Aspect Ratio":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_Notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_329AR_v200_psn ]
+  "32:9 Aspect Ratio (Cutscenes)":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_NotesEx
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_329ARC_v200_psn ]
+  "Disable shadows":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Disableshadows_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dshadows_v200_psn ]
+  "Remove fog":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Removefog_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfog_v200_psn ]
+  "Reduce stage quality":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Reducestagequality_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_rstagequality_v200_psn ]
+  "Disable HUD":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_RemoveHUD_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dhud_v200_psn ]
+  "Disable spawned effects":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_RemoveEffects_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dspawnedeffects_v200_psn ]
+  "Unlock FPS":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_FPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_unlockfps_v200_psn ]
+  "Infinite Ammo":
+    Games: *mgs4_jp_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_infiniteammo_v200_psn ]
+  "No Reload":
+    Games: *mgs4_jp_psn200title
+    Author: "games24.blog.fc2.com, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_noreload_v200_psn ]
+  "Max Camo":
+    Games: *mgs4_jp_psn200title
+    Author: "dron_3, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxcamo_v200_psn ]
+  "Disable Filters":
+    Games: *mgs4_jp_psn200title
+    Author: "TriggerHappy, FlexBy"
+    Notes: *MGS4_DisableFilters_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfilters_v200_psn ]
 
 OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
   "Disable snow effect":
