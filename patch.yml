@@ -6069,6 +6069,9 @@ Anchors:
   mgs4_eu_disc200title: &mgs4_eu_disc200title
     "Metal Gear Solid 4: Guns of the Patriots":
       BLES00246: [ 02.00 ]
+  mgs4_jp_disc200title: &mgs4_jp_disc200title
+    "Metal Gear Solid 4: Guns of the Patriots":
+      BLJM67001: [ 02.00 ]
   mgs4_us_psn200title: &mgs4_us_psn200title
     "Metal Gear Solid 4: Guns of the Patriots":
       NPUB31633: [ 02.00 ]
@@ -6550,6 +6553,110 @@ PPU-6886ae8f4270fe3fa4c7cf4299307044ad4ce989:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_unlockfps_v200_psn ]
+
+PPU-c19b3b57017488d9bd126a4b6cfba3566e0905fb:
+  "21:9 Aspect Ratio":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_Notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_219AR_v200_disc ]
+  "21:9 Aspect Ratio (Cutscenes)":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_NotesEx
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_219ARC_v200_disc ]
+  "32:9 Aspect Ratio":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_Notes
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_329AR_v200_disc ]
+  "32:9 Aspect Ratio (Cutscenes)":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Widescreen_NotesEx
+    Group: AR
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_329ARC_v200_disc ]
+  "Disable shadows":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Disableshadows_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dshadows_v200_disc ]
+  "Remove fog":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Removefog_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfog_v200_disc ]
+  "Reduce stage quality":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_Reducestagequality_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_rstagequality_v200_disc ]
+  "Disable HUD":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_RemoveHUD_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dhud_v200_disc ]
+  "Disable spawned effects":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_RemoveEffects_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dspawnedeffects_v200_disc ]
+  "Unlock FPS":
+    Games: *mgs4_jp_disc200title
+    Author: "TriggerHappy"
+    Notes: *MGS4_FPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_unlockfps_v200_disc ]
+  "Infinite Ammo":
+    Games: *mgs4_jp_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_infiniteammo_v200_disc ]
+  "No Reload":
+    Games: *mgs4_jp_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_noreload_v200_disc ]
+  "Max Camo":
+    Games: *mgs4_jp_disc200title
+    Author: "dron_3"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxcamo_v200_disc ]
+  "Disable Filters":
+    Games: *mgs4_jp_disc200title
+    Author: TriggerHappy
+    Notes: *MGS4_DisableFilters_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_dfilters_v200_disc ]
 
 OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
   "Disable snow effect":
