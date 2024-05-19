@@ -18341,11 +18341,45 @@ PPU-b64817bf5226821e325693c21b7072a9642f0801:
     Patch:
       - [ be32, 0x00271310, 0x60000000 ]
 
+PPU-ba50f5c028b533e4e923def39b9259a464b757b0:
+  "Unlock FPS":
+    Games:
+      "Dust 514":
+        NPEB00777: [ 05.01 ]
+    Author: "FlexBy"
+    Notes: *dust514_unlockfpspatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002814df, 0x60000000 ]
+
+PPU-6b11972fcc9870611b7800f2d3988454e1ff8c17:
+  "Unlock FPS":
+    Games:
+      "Dust 514":
+        NPEB00777: [ 05.12 ]
+    Author: "FlexBy"
+    Notes: *dust514_unlockfpspatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00271efc, 0x60000000 ]
+
+PPU-e5e39ab570a2753301e1b4ca7438a1548e842760:
+  "Unlock FPS":
+    Games:
+      "Dust 514":
+        NPEB00777: [ 05.13 ]
+    Author: "FlexBy"
+    Notes: *dust514_unlockfpspatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00271efc, 0x60000000 ]
+
 PPU-ae3f946dfcb103b782f73f1cc5f90587e652f439:
   "Unlock FPS":
     Games:
       "Dust 514":
         NPEB00777: [ 05.14 ]
+        NPEB00777: [ 05.15 ]
     Author: "FlexBy"
     Notes: *dust514_unlockfpspatch_notes
     Patch Version: 1.0
