@@ -18378,8 +18378,14 @@ PPU-ae3f946dfcb103b782f73f1cc5f90587e652f439:
   "Unlock FPS":
     Games:
       "Dust 514":
+        NPJB00313: [ 01.16 ]
+        NPJB00313: [ 01.17 ]
+        NPUB30643: [ 03.18 ]
+        NPUB30643: [ 03.19 ]
         NPEB00777: [ 05.14 ]
+        NPHB00520: [ 05.14 ]
         NPEB00777: [ 05.15 ]
+        NPHB00520: [ 05.15 ]
     Author: "FlexBy"
     Notes: *dust514_unlockfpspatch_notes
     Patch Version: 1.0
