@@ -18341,6 +18341,17 @@ PPU-b64817bf5226821e325693c21b7072a9642f0801:
     Patch:
       - [ be32, 0x00271310, 0x60000000 ]
 
+PPU-ae3f946dfcb103b782f73f1cc5f90587e652f439:
+  "Unlock FPS":
+    Games:
+      "Dust 514":
+        NPEB00777: [ 05.14 ]
+    Author: "FlexBy"
+    Notes: *dust514_unlockfpspatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00271efc, 0x60000000 ]
+
 PPU-588663e46e01d78322f7560598d1a0213323c4dc:
   "Infinite Ammo":
     Games:
