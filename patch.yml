@@ -18330,6 +18330,17 @@ Anchors:
   dust514_unlockfpspatch_notes: &dust514_unlockfpspatch_notes
     "Maximum framerate with the patch is half the Vblank frequency."
 
+PPU-f769dbfcfce5161a4afb15f49495a09376909a4e:
+  "Unlock FPS":
+    Games:
+      "Dust 514":
+        NPUB30643: [ 03.00 ]
+    Author: "FlexBy"
+    Notes: *dust514_unlockfpspatch_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00278038, 0x60000000 ]
+
 PPU-b64817bf5226821e325693c21b7072a9642f0801:
   "Unlock FPS":
     Games:
