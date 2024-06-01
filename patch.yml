@@ -17922,6 +17922,18 @@ PPU-7d2bde7162621321360f5fa570541c72e05013ff: # EBOOT_MP.self
       - [ be32, 0x002fafe0, 0x60000000 ]
       - [ be32, 0x12ca1290, 0x453b8000 ] # memory
 
+PPU-ae4813836fefc002f423e6ebc7ff6d008282f4f9: # default.self 1.00
+  "1280x720 Resolution":
+    Games:
+      "Call of Duty: Advanced Warfare (Singleplayer)":
+        BLES02077: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Original resolution is 1024x600. Might cause rendering bugs."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x008182be, 1280 ]
+      - [ be16, 0x008182c2, 720 ]
+
 PPU-78324d71c201beabe143ea2a2b4b6ab65db8c79c: # t5_ps3f.self
   "Unlock FPS":
     Games:
