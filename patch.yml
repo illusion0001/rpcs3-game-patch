@@ -5562,6 +5562,15 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
       - [ be32, 0x000325b8, 0x60000000 ] # nop write for ar float
       - [ bef32, 0x014aebd0, 0.42 ]      # ar float
       - [ bef32, 0x0128f2f4, 0.75 ]
+  "16:10 Aspect Ratio":
+    Games: *tlou100_title
+    Author: "mavethee"
+    Notes: *tlou_ar_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000325b8, 0x60000000 ]
+      - [ bef32, 0x014aebd0, 0.55 ]
+      - [ bef32, 0x0128f2f4, 0.7 ]
   "Unlock FPS":
     Games: *tlou100_title
     Author: "illusion"
@@ -5744,6 +5753,15 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x0003556c, 0x60000000 ] # nop write for ar float
       - [ bef32, 0x01558a50, 0.42 ]      # ar float
       - [ bef32, 0x012c1964, 0.75 ]
+  "16:10 Aspect Ratio":
+    Games: *tlou111_title
+    Author: "mavethee"
+    Notes: *tlou_ar_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0003556c, 0x60000000 ]
+      - [ bef32, 0x01558a50, 0.55 ]
+      - [ bef32, 0x012c1964, 0.7 ]
   "Unlock FPS":
     Games: *tlou111_title
     Author: "illusion"
@@ -11731,6 +11749,7 @@ Anchors:
       BCAS20066: [ 01.29 ]
       BCES00081: [ 01.29 ]
       BCUS98116: [ 01.29 ]
+      BCJS30032: [ 01.29 ]
 
 PPU-ca2a0b7e8d4fa7a0d4f3a16d6f2bea5d260e3c09:
   "Extended FOV":
