@@ -17946,6 +17946,30 @@ PPU-c5bfb7ce22e587ea94a21dea88fc6729f0754a6f: # t5_ps3f.self
       - [ be32, 0x00679988, 0x60000000 ]
       - [ be32, 0x01cc0424, 0x453b8000 ] # memory
 
+PPU-8e5f9b6eb28af7d3ba4f6b565287b9689045d070: # default.self 1.00
+  "1280x720 Resolution":
+    Games:
+      "Call of Duty: Ghosts (Singleplayer)":
+        BLES01945: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Original resolution is 896x600. Might cause rendering bugs."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x007b438e, 1280 ]
+      - [ be16, 0x007b4392, 720 ]
+
+PPU-a347f6287acbfaa15ba9af59e1dfed6a5cf47c23: # default.self 1.00
+  "1280x720 Resolution":
+    Games:
+      "Call of Duty: Modern Warfare 2 (Singleplayer)":
+        BLES00683: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Original resolution is 1024x600. Might cause rendering bugs."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x0071714a, 1280 ]
+      - [ be16, 0x0071714e, 720 ]
+
 PPU-9f96803487f5a18dc96d68e398d767fc8717effb: # sp.self 1.00
   "Unlock FPS":
     Games:
