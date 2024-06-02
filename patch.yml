@@ -17970,6 +17970,18 @@ PPU-8e5f9b6eb28af7d3ba4f6b565287b9689045d070: # default.self 1.00
       - [ be16, 0x007b438e, 1280 ]
       - [ be16, 0x007b4392, 720 ]
 
+PPU-ef0d788aa8ca2375017221fe1b261922bd41c3aa: # default.self 1.16
+  "1280x720 Resolution":
+    Games:
+      "Call of Duty: Ghosts (Singleplayer)":
+        BLES01945: [ 01.16 ]
+    Author: "FlexBy"
+    Notes: "Original resolution is 896x600. Might cause rendering bugs."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x007f5cc2, 1280 ]
+      - [ be16, 0x007f5cc6, 720 ]
+
 PPU-a347f6287acbfaa15ba9af59e1dfed6a5cf47c23: # default.self 1.00
   "1280x720 Resolution":
     Games:
