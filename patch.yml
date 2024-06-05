@@ -1455,6 +1455,17 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
     Patch:
       - [ be32, 0x00181118, 0x60000000 ]
 
+PPU-7d723460c40bd00fd359e1fc88d554e5185de037:
+  "Unlock FPS":
+    Games:
+      "Folklore":
+        BCKS10018: [ 01.00 ]
+    Author: "InsertKey"
+    Notes: *Folklore_FPS_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001820d0, 0x60000000 ]
+
 Anchors:
   papoandyo_fps_notes: &papoandyo_fps_notes
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
