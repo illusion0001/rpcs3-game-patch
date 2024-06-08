@@ -20972,6 +20972,43 @@ PPU-c69b266c1146881c8785e4fcbaa578a5c02d75e2:
     Patch:
       - [ be32, 0x0032ec68, 0x60000000 ]
 
+Anchors:
+  THP8_FPS_notes_notes: &THP8_FPS_notes_notes
+    "Removes the 30FPS lock, cutscenes work properly and physics too, set \"Frame limit\" to \"Off\" to increase the maximum framerate however physics become broken but cutscenes work."
+
+PPU-de89165d4428c218f9ade10050ea093f7bde9e8d:
+  "Unlock FPS":
+    Games:
+      "Tony Hawk's Project 8":
+        BLUS30011: [ All ]
+    Author: "fcanudo"
+    Patch Version: 1.0
+    Notes: *THP8_FPS_notes_notes
+    Patch:
+      - [ be32, 0x0056658c, 0x60000000 ]
+
+PPU-8e3dac62ddc476bb956fe2b2b2fde7d1232245da:
+  "Unlock FPS":
+    Games:
+      "Tony Hawk's Project 8":
+        BLJM60030: [ All ]
+    Author: "fcanudo"
+    Patch Version: 1.0
+    Notes: *THP8_FPS_notes_notes
+    Patch:
+      - [ be32, 0x00567028, 0x60000000 ]
+
+PPU-56ab7ebdcb5bd36aaae8564d45b3ecc5a9f0695d:
+  "Unlock FPS":
+    Games:
+      "Tony Hawk's Project 8":
+        BLES00014: [ All ]
+    Author: "fcanudo"
+    Patch Version: 1.0
+    Notes: *THP8_FPS_notes_notes
+    Patch:
+      - [ be32, 0x00567450, 0x60000000 ]
+
 PPU-c15ca5b52f71ad0fa0a727eb289a2f95aa1ba217:
   "Unlock FPS":
     Games:
