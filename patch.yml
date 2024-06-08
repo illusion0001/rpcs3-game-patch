@@ -3951,8 +3951,8 @@ Anchors:
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
   "Infinite Ammo":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "Bungholio"
     Notes:
     Patch Version: 1.2
@@ -3960,8 +3960,8 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
       - [ be32, 0x00465e5c, 0xd03d0008 ]
   "Infinite Health":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "Aphelion"
     Notes:
     Patch Version: 1.0
@@ -3969,8 +3969,8 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
       - [ be32, 0x002470e4, 0x9fc30004 ]
   "Infinite Bolts":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "Bungholio"
     Notes:
     Patch Version: 1.2
@@ -3978,8 +3978,8 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
       - [ be32, 0x0023d834, 0x90cb041c ]
   "Infinite Raritanium":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "Bungholio"
     Notes:
     Patch Version: 1.2
@@ -3987,8 +3987,8 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
       - [ be32, 0x0023d864, 0x90cb0420 ]
   "Instagib Mode":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "Aphelion"
     Notes: *rftod_instagib_notes
     Patch Version: 1.0
@@ -3996,8 +3996,8 @@ PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
       - [ be32, 0x000bdd44, 0xd27c0004 ]
   "Unlock FPS":
     Games:
-      "Ratchet & Clank Future: Tools of Destruction":
-        BCUS98127: [ All ]
+      "Ratchet & Clank Future: Tools of Destruction (2.0)":
+        BCUS98127: [ 01.00 ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
