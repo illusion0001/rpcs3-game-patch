@@ -3948,7 +3948,7 @@ Anchors:
   rftod_resolution_notes: &rftod_resolution_notes
     "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
 
-PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c:
+PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
   "Infinite Ammo":
     Games:
       "Ratchet & Clank Future: Tools of Destruction":
