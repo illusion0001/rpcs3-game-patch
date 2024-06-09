@@ -3948,6 +3948,62 @@ Anchors:
   rftod_resolution_notes: &rftod_resolution_notes
     "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
 
+PPU-f67f3e99077ba256728ffa16800c75e006661158: # 1.00 game version
+  "Infinite Ammo":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "Bungholio, FlexBy"
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x00465be4, 0xd03d0008 ]
+  "Infinite Health":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "Aphelion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00247094, 0x9fc30004 ]
+  "Infinite Bolts":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "Bungholio, FlexBy"
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x0023d7e4, 0x90cb041c ]
+  "Infinite Raritanium":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "Bungholio, FlexBy"
+    Notes:
+    Patch Version: 1.2
+    Patch:
+      - [ be32, 0x0023d814, 0x90cb0420 ]
+  "Instagib Mode":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "Aphelion, FlexBy"
+    Notes: *rftod_instagib_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000bdd14, 0xd27c0004 ]
+  "Unlock FPS":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction (1.0)":
+        BCUS98127: [ 01.00 ]
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x008aa550, 0.001 ] # Max FPS
+
 PPU-c14042df6304d3e420a9917e6f8e5fc05cc38b4c: # 2.00 game version
   "Infinite Ammo":
     Games:
