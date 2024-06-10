@@ -21030,7 +21030,7 @@ PPU-c69b266c1146881c8785e4fcbaa578a5c02d75e2:
 
 Anchors:
   THP8_FPS_notes_notes: &THP8_FPS_notes_notes
-    "Removes the 30FPS lock, cutscenes work properly and physics too, set \"Frame limit\" to \"Off\" to increase the maximum framerate however physics become broken but cutscenes work."
+    "Removes the 30FPS lock in gameplay and cutscenes, with proper working physics, set \"Frame limit\" to \"Off\" to increase the maximum framerate however physics become broken"
 
 PPU-de89165d4428c218f9ade10050ea093f7bde9e8d:
   "Unlock FPS":
@@ -21038,10 +21038,11 @@ PPU-de89165d4428c218f9ade10050ea093f7bde9e8d:
       "Tony Hawk's Project 8":
         BLUS30011: [ All ]
     Author: "fcanudo"
-    Patch Version: 1.0
+    Patch Version: 1.1
     Notes: *THP8_FPS_notes_notes
     Patch:
       - [ be32, 0x0056658c, 0x60000000 ]
+      - [ be32, 0x005c1a40, 0x60000000 ]
 
 PPU-8e3dac62ddc476bb956fe2b2b2fde7d1232245da:
   "Unlock FPS":
@@ -21049,10 +21050,11 @@ PPU-8e3dac62ddc476bb956fe2b2b2fde7d1232245da:
       "Tony Hawk's Project 8":
         BLJM60030: [ All ]
     Author: "fcanudo"
-    Patch Version: 1.0
+    Patch Version: 1.1
     Notes: *THP8_FPS_notes_notes
     Patch:
       - [ be32, 0x00567028, 0x60000000 ]
+      - [ be32, 0x005c2678, 0x60000000 ]
 
 PPU-56ab7ebdcb5bd36aaae8564d45b3ecc5a9f0695d:
   "Unlock FPS":
@@ -21060,10 +21062,39 @@ PPU-56ab7ebdcb5bd36aaae8564d45b3ecc5a9f0695d:
       "Tony Hawk's Project 8":
         BLES00014: [ All ]
     Author: "fcanudo"
-    Patch Version: 1.0
+    Patch Version: 1.1
     Notes: *THP8_FPS_notes_notes
     Patch:
       - [ be32, 0x00567450, 0x60000000 ]
+      - [ be32, 0x005c28c8, 0x60000000 ]
+
+Anchors:
+  THPG_FPS_notes_notes: &THPG_FPS_notes_notes
+    "Removes the 30FPS lock, cutscenes work properly and physics too, it's not possible to go above 60FPS other than changing the vblank, if done so cutscenes and physics break."
+
+PPU-2068986df69c2907b1c6c4050236e92ad049cdc3:
+  "Unlock FPS":
+    Games:
+      "Tony Hawk's Proving Ground":
+        BLUS30071: [ All ]
+    Author: "fcanudo"
+    Patch Version: 1.0
+    Notes: *THPG_FPS_notes_notes
+    Patch:
+      - [ be32, 0x005a40b4, 0x60000000 ]
+      - [ be32, 0x00606138, 0x60000000 ]
+
+PPU-6dc0887c81ae3f883d20e17428f3cc89940543bf:
+  "Unlock FPS":
+    Games:
+      "Tony Hawk's Proving Ground":
+        BLES00130: [ All ]
+    Author: "fcanudo"
+    Patch Version: 1.0
+    Notes: *THPG_FPS_notes_notes
+    Patch:
+      - [ be32, 0x005a40b4, 0x60000000 ]
+      - [ be32, 0x00606138, 0x60000000 ]
 
 PPU-c15ca5b52f71ad0fa0a727eb289a2f95aa1ba217:
   "Unlock FPS":
