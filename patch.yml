@@ -17759,13 +17759,17 @@ PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
       - [ be16, 0x017d3f90, 0x404e ]
       - [ be16, 0x017d3f98, 0x3f91 ]
 
+Anchors:
+  bfbc2_fps_notes: &bfbc2_fps_notes
+    "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoot longer at lower FPS."
+
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "60 FPS":
     Games:
       "Battlefield Bad Company 2":
         NPEB00724: [ 01.05 ]
     Author: "FlexBy"
-    Notes:
+    Notes: *bfbc2_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f47eb0, 0x3cc04270 ]
