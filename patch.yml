@@ -20922,6 +20922,72 @@ PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
     Patch:
       - [ be32, 0x0008fa30, 0x4e800020 ]
 
+PPU-12b113060842a3b1c37b8326961cdec076d2a0f7: # HL2.SELF
+  "Unlock FPS":
+    Games:
+      "Half-Life 2":
+        BLES00153: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x00c471c4, 0x60000000 ] # 1033467C memory
+
+PPU-fb868689bfa86fcaaa4d73d1ea41970e69a38420: # EPISODIC.SELF & EP2.SELF
+  "Unlock FPS":
+    Games:
+      "Half-Life 2: Episodes":
+        BLES00153: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x011535dc, 0x60000000 ]
+
+PPU-6b9ef8f85065d62dc280b7a349a95a9567d9db33: # PORTAL.SELF
+  "Unlock FPS":
+    Games:
+      "Portal":
+        BLES00153: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x003a310c, 0x60000000 ] # 102EE874 memory
+
+PPU-c2a64315dd85e22cfcaa9e05748c7131bca40e48: # HL2.SELF
+  "Unlock FPS":
+    Games:
+      "Half-Life 2":
+        BLES00153: [ 01.10 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x00c477f4, 0x60000000 ]
+
+PPU-1d3b8ccf7be0b00da663235b508e49ae575204d8: # EPISODIC.SELF
+  "Unlock FPS":
+    Games:
+      "Half-Life 2: Episodes":
+        BLES00153: [ 01.10 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x01153c4c, 0x60000000 ]
+
+PPU-4cd0fcb2692dae3fbee0d7f05bc6bd9398354c6a: # PORTAL.SELF
+  "Unlock FPS":
+    Games:
+      "Portal":
+        BLES00153: [ 01.10 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x003a373c, 0x60000000 ]
+
 PPU-7645ca368c9abe2ecbb919ae2049b99be1913491:
   "Unlock FPS":
     Games:
