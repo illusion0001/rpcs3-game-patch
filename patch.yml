@@ -20960,6 +20960,7 @@ PPU-c2a64315dd85e22cfcaa9e05748c7131bca40e48: # HL2.SELF
     Games:
       "Half-Life 2":
         BLES00153: [ 01.10 ]
+        BLUS30055: [ 01.10 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
@@ -20971,6 +20972,7 @@ PPU-1d3b8ccf7be0b00da663235b508e49ae575204d8: # EPISODIC.SELF
     Games:
       "Half-Life 2: Episodes":
         BLES00153: [ 01.10 ]
+        BLUS30055: [ 01.10 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
@@ -20982,6 +20984,7 @@ PPU-4cd0fcb2692dae3fbee0d7f05bc6bd9398354c6a: # PORTAL.SELF
     Games:
       "Portal":
         BLES00153: [ 01.10 ]
+        BLUS30055: [ 01.10 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
