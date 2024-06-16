@@ -19594,6 +19594,31 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
     Patch:
       - [ be16, 0x00a970dc, 0x4280 ] # b
 
+PPU-565327e8098ac4e0cf0df7ca74d97332a7f26e2b:
+  "OpenSpy Online":
+    Games:
+      "Monster Madness Grave Danger":
+        BLES00255: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x014ca25d, "openspy.net" ]
+      - [ utf8, 0x014ca58c, "openspy.net" ]
+      - [ utf8, 0x014ca60c, "openspy.net" ]
+      - [ utf8, 0x014ca73a, "openspy.net" ]
+      - [ utf8, 0x014cab00, "openspy.net" ]
+      - [ utf8, 0x014cab5f, "openspy.net" ]
+      - [ utf8, 0x014cb7c0, "openspy.net" ]
+      - [ utf8, 0x014cbf88, "openspy.net" ]
+      - [ utf8, 0x014cbfa0, "openspy.net" ]
+      - [ utf8, 0x014cbfb8, "openspy.net" ]
+      - [ utf8, 0x014cc18e, "openspy.net" ]
+      - [ utf8, 0x0170699d, "openspy.net" ]
+      - [ utf8, 0x01706af5, "openspy.net" ]
+      - [ utf8, 0x014c8958, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x01450be8, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-069afd5bd7f8cb83c2962ea1575da8b3be6c7e57:
   "OpenSpy Online":
     Games:
