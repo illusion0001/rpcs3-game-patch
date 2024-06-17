@@ -20514,8 +20514,8 @@ PPU-03113012259d6e81365dc426ae5787f172921e1c:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007c0e70, 0x60000000 ]
-      - [ be32, 0x007c0e7c, 0x60000000 ]
+      - [ be32, 0x00b73910, 0x60000000 ]
+      - [ be32, 0x00b73924, 0x60000000 ]
 
 PPU-77a6b2ce9093b262e75992c025bb63a5f952daae:
   "Unlock FPS":
@@ -20526,8 +20526,8 @@ PPU-77a6b2ce9093b262e75992c025bb63a5f952daae:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x007c0e80, 0x60000000 ]
-      - [ be32, 0x007c0e8c, 0x60000000 ]
+      - [ be32, 0x00b73920, 0x60000000 ]
+      - [ be32, 0x00b73934, 0x60000000 ]
 
 PPU-46eeb0ddb1a94aa133b472325bfdd094b7c7f2c1:
   "Unlock FPS":
