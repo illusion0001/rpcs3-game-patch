@@ -17777,7 +17777,7 @@ Anchors:
     - [ be32, 0x0002446c, 0x60000000 ]
 
   bfbc2_fps_notes: &bfbc2_fps_notes
-    "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS."
+    "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS.\nDoesn't work in multiplayer."
 
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "60 FPS":
