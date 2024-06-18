@@ -19869,7 +19869,7 @@ PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
     Patch:
       - [ be32, 0x005261c8, 0x60000000 ]
 
-PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0:
+PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0: # materialsystem_ps3.sprx
   "Disable MLAA":
     Games:
       "Portal 2":
