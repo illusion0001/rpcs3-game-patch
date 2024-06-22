@@ -15907,7 +15907,7 @@ SPU-969cf3e9db75f52a6b41074ccbff74106b709854: # SPUNAME: 'objs/release/edgepost-
       All:
         All: [ All ]
     Author: "Whatcookie"
-    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nCarnival Island\nHelldivers\nEscape Dead Island\nI Am Alive\nRed Faction: Armageddon\nFarming Simulator\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nBeyond Good & Evil HD\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nCarnival Island\nHelldivers\nEscape Dead Island\nI Am Alive\nRed Faction: Armageddon\nFarming Simulator\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
     Patch Version: 1.5
     Patch:
       - [ load, *SPU_MLAA_07 ]
