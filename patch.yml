@@ -19600,6 +19600,14 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00a970dc, 0x4280 ] # b
+  "Any item in offhand":
+    Games: *minecraft_184
+    Author: "Bagieta"
+    Notes: "Allows to place any item in offhand."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0034ad50, 0x38600001 ] # li r3, 1
+      - [ be32, 0x0034ad54, 0x4e800020 ] # blr
 
 PPU-565327e8098ac4e0cf0df7ca74d97332a7f26e2b:
   "OpenSpy Online":
