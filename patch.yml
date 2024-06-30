@@ -16542,6 +16542,17 @@ PPU-3760b7d673fc130e13295fa5071164537880adad:
       - [ be32, 0x006a3fd0, 0xec3f07f2 ]
       - [ be32, 0x006a3fd4, 0xec210072 ]
 
+PPU-ca5a8abf389604437e5e6f38f9ac8c50ae525b56:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        NPEB00459: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bce34, 0x60000000 ]
+
 PPU-2e842b2ee620434777bcad37d795030f2c4f6062:
   "Unlock FPS":
     Games:
