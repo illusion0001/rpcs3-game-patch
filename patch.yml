@@ -16572,6 +16572,9 @@ Anchors:
       NPEB01144: [ 01.15 ]
       NPUB30898: [ 01.15 ]
 
+  border2_fps_notes: &border2_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
 PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
   "God Mode":
     Games: *border2v115_title
@@ -16604,6 +16607,24 @@ PPU-70ce632c4b8910f8f2d3eb5ed97ae29fae31d5f0:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x006a1348, 0x3c007000 ]
+  "Unlock FPS":
+    Games: *border2v115_title
+    Author: "FlexBy"
+    Notes: *border2_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001ef34c, 0x60000000 ]
+
+PPU-4858ad471e6477c1d67943746b4f89982724024b:
+  "Unlock FPS":
+    Games:
+      "Borderlands 2":
+        NPEB01144: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *border2_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001ed76c, 0x60000000 ]
 
 Anchors:
   Jak_Resolution_Notes: &Jak_Resolution_Notes
