@@ -1421,6 +1421,64 @@ PPU-e40082b6d07744ef29051a33353eb473396f5a91:
 Anchors:
   Folklore_FPS_Notes: &Folklore_FPS_Notes
     "Unlocks FPS during gameplay. Cloth physics break above 50 FPS despite the gameplay working."
+  folkloreESUS_100_nosixaxis: &folkloreESUS_100_nosixaxis
+    # .bPlayerPad::CheckCaptureFinish
+    - [ be32, 0x000f8698, 0x38600001 ]
+    - [ be32, 0x000f86c8, 0x38600001 ]
+    # UpdateAction_Timing
+    - [ be32, 0x00104664, 0x428006b0 ]
+    - [ be32, 0x00104d14, 0x817f010c ]
+    - [ be32, 0x00104d18, 0x42800018 ]
+    - [ be32, 0x00104d30, 0x396b0003 ]
+    - [ be32, 0x00104d34, 0x917f010c ]
+    # UpdateAction_Balance
+    - [ be32, 0x001034c4, 0x42800334 ]
+    - [ be32, 0x001037f8, 0x817e010c ]
+    - [ be32, 0x001037fc, 0x4280001c ]
+    - [ be32, 0x00103818, 0x396b0003 ]
+    - [ be32, 0x0010381c, 0x917e010c ]
+    # Beat_RegularDamage
+    - [ be32, 0x001026ac, 0x4280fe74 ]
+    - [ be32, 0x001025dc, 0x817e010c ]
+    - [ be32, 0x001025e0, 0x4280001c ]
+    - [ be32, 0x001025fc, 0x396b0003 ]
+    - [ be32, 0x00102600, 0x917e010c ]
+    # UpdateAction_SAD
+    - [ be32, 0x00103f34, 0x42800470 ]
+    - [ be32, 0x001043a4, 0x817e010c ]
+    - [ be32, 0x001043a8, 0x42800018 ]
+    - [ be32, 0x001043c0, 0x396b0003 ]
+    - [ be32, 0x001043c4, 0x917e010c ]
+  folkloreESUS_110_nosixaxis: &folkloreESUS_110_nosixaxis
+    # .bPlayerPad::CheckCaptureFinish
+    - [ be32, 0x000f88e8, 0x38600001 ]
+    - [ be32, 0x000f8918, 0x38600001 ]
+    # UpdateAction_Timing
+    - [ be32, 0x00104e2c, 0x428008f8 ]
+    - [ be32, 0x00105724, 0x817f0124 ]
+    - [ be32, 0x00105728, 0x42800018 ]
+    - [ be32, 0x00105740, 0x396b0003 ]
+    - [ be32, 0x00105744, 0x917f0124 ]
+    # UpdateAction_Balance
+    - [ be32, 0x00103e7c, 0x428000c4 ]
+    - [ be32, 0x00103f40, 0x817f0124 ]
+    - [ be32, 0x00103f44, 0x4280001c ]
+    - [ be32, 0x00103f60, 0x396b0003 ]
+    - [ be32, 0x00103f64, 0x917f0124 ]
+    # Beat_RegularDamage
+    - [ be32, 0x00102dac, 0x4280ff30 ]
+    - [ be32, 0x00102cdc, 0x817e0124 ]
+    - [ be32, 0x00102ce0, 0x4280001c ]
+    - [ be32, 0x00102cfc, 0x396b0003 ]
+    - [ be32, 0x00102d00, 0x917e0124 ]
+    # UpdateAction_SAD
+    - [ be32, 0x00104b84, 0x4280ff90 ]
+    - [ be32, 0x00104b14, 0x817e0124 ]
+    - [ be32, 0x00104b18, 0x42800018 ]
+    - [ be32, 0x00104b30, 0x396b0003 ]
+    - [ be32, 0x00104b34, 0x917e0124 ]
+  folklore_nosixaxis_notes: &folklore_nosixaxis_notes
+    "Allows gameplay on keyboard and controllers without motion sensors. Can't absorb multiple folk at once meaning lower XP gains."
 
 PPU-eb05d70d23d075ef6d9c81f7e7cf9bffc98c404c:
   "Unlock FPS":
@@ -1432,6 +1490,15 @@ PPU-eb05d70d23d075ef6d9c81f7e7cf9bffc98c404c:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00181354, 0x60000000 ]
+  "Autocomplete motion control sequences":
+    Games:
+      "Folklore":
+        BCUS98147: [ 01.00 ]
+    Author: "Scirvir"
+    Notes: *folklore_nosixaxis_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *folkloreESUS_100_nosixaxis ]
 
 PPU-9b16663fa1aa1dd62c2c6bfee4f333242dde4171:
   "Unlock FPS":
@@ -1443,6 +1510,15 @@ PPU-9b16663fa1aa1dd62c2c6bfee4f333242dde4171:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001823c0, 0x60000000 ]
+  "Autocomplete motion control sequences":
+    Games:
+      "Folklore":
+        BCUS98147: [ 01.10 ]
+    Author: "Scirvir"
+    Notes: *folklore_nosixaxis_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *folkloreESUS_110_nosixaxis ]
 
 PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
   "Unlock FPS":
@@ -1454,6 +1530,26 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00181118, 0x60000000 ]
+  "Skip motion control sequences":
+    Games:
+      "Folklore":
+        BCES00050: [ 01.00 ]
+    Author: "Scirvir"
+    Notes: *folklore_nosixaxis_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *folkloreESUS_100_nosixaxis ]
+
+PPU-bfad65ed0963e68cebafdf24d00201005ad3a17e:
+  "Autocomplete motion control sequences":
+    Games:
+      "Folklore":
+        BCES00050: [ 01.10 ]
+    Author: "Scirvir"
+    Notes: *folklore_nosixaxis_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *folkloreESUS_110_nosixaxis ]
 
 PPU-7d723460c40bd00fd359e1fc88d554e5185de037:
   "Unlock FPS":
@@ -1465,6 +1561,43 @@ PPU-7d723460c40bd00fd359e1fc88d554e5185de037:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001820d0, 0x60000000 ]
+
+PPU-53bbd55f666d64261074150bf9a5a7ab80ba6dea:
+  "Autocomplete motion control sequences":
+    Games:
+      "フォークスソウル -失われた伝承-":
+        BCJS30009: [ 01.10 ]
+    Author: "Scirvir"
+    Notes: *folklore_nosixaxis_notes
+    Patch Version: 1.0
+    Patch:
+    # .bPlayerPad::CheckCaptureFinish
+      - [ be32, 0x000f886c, 0x38600001 ]
+      - [ be32, 0x000f889c, 0x38600001 ]
+    # UpdateAction_Balance
+      - [ be32, 0x00103e00, 0x428000c4 ]
+      - [ be32, 0x00103ec4, 0x817f0124 ]
+      - [ be32, 0x00103ec8, 0x4280001c ]
+      - [ be32, 0x00103ee8, 0x396b0003 ]
+      - [ be32, 0x00103eec, 0x917f0124 ]
+    # UpdateAction_SAD
+      - [ be32, 0x00104b08, 0x42800384 ]
+      - [ be32, 0x00104a98, 0x817e0124 ]
+      - [ be32, 0x00104a8c, 0x42800018 ]
+      - [ be32, 0x00104ab8, 0x396b0003 ]
+      - [ be32, 0x00104abc, 0x917e0124 ]
+    # Beat_RegularDamage
+      - [ be32, 0x00102d30, 0x4280ff30 ]
+      - [ be32, 0x00102c60, 0x817e0124 ]
+      - [ be32, 0x00102c64, 0x4280001c ]
+      - [ be32, 0x00102c80, 0x396b0003 ]
+      - [ be32, 0x00102c84, 0x917e0124 ]
+    # UpdateAction_Timing
+      - [ be32, 0x00104db0, 0x428008f8 ]
+      - [ be32, 0x001056a8, 0x817f0124 ]
+      - [ be32, 0x001056ac, 0x42800018 ]
+      - [ be32, 0x001056c4, 0x396b0003 ]
+      - [ be32, 0x001056c8, 0x917f0124 ]
 
 Anchors:
   papoandyo_fps_notes: &papoandyo_fps_notes
@@ -16679,6 +16812,10 @@ PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
     Patch:
       - [ be32, 0x00aa1c20, 0x60000000 ]
 
+Anchors:
+  bordertps_fps_notes: &bordertps_fps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
 PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
   "God Mode":
     Games:
@@ -16719,6 +16856,28 @@ PPU-478ad4a2af14cadc8c1275dc7e5209fce95336e2:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0065fe4c, 0x3c007000 ]
+
+PPU-80613947be16e4d7c46e91b6526c81459f456501:
+  "Unlock FPS":
+    Games:
+      "Borderlands: The Pre-Sequel":
+        NPEB02061: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *bordertps_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bffec, 0x60000000 ]
+
+PPU-6e4f122b76c248c3944b04a71ef1a2288a174eab:
+  "Unlock FPS":
+    Games:
+      "Borderlands: The Pre-Sequel":
+        NPEB02061: [ 01.07 ]
+    Author: "FlexBy"
+    Notes: *bordertps_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bf91c, 0x60000000 ]
 
 Anchors:
   R3_FPS_Notes: &R3_FPS_Notes
