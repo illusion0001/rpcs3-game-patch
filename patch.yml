@@ -1737,7 +1737,7 @@ PPU-719690daa66423444dc65cff5d111d3224c914dc:
       "Alpha Protocol":
         BLES00704: [ 01.00 ]
     Author: "FlexBy"
-    Notes:
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000d78d48, 0x60000000 ]
