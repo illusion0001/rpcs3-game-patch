@@ -21813,7 +21813,7 @@ PPU-d6002ede44b3b68ed3e96d0aab9633784939b8ef:
       "Wangan Midnight":
         BLJM60028: [ 01.02 ]
     Author: "illusion"
-    Notes: "Videos play at double speed."
+    Notes: "Videos play at double speed and in-game timers clock twice as fast."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007a91d0, 0x3c888889 ]
