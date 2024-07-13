@@ -18327,6 +18327,14 @@ PPU-c5bfb7ce22e587ea94a21dea88fc6729f0754a6f: # t5_ps3f.self
     Games:
       "Call of Duty: Black Ops (Singleplayer)":
         BLES01031: [ 01.13 ]
+        BLES01032: [ 01.13 ]
+        BLES01033: [ 01.13 ]
+        BLES01034: [ 01.13 ]
+        BLES01036: [ 01.13 ]
+        BLES01105: [ 01.13 ]
+        BLUS30591: [ 01.13 ]
+        BLJM60286: [ 01.13 ]
+        BLJM60287: [ 01.13 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
