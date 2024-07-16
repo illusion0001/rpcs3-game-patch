@@ -19431,6 +19431,13 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x002d6448, 0x60000000 ]
       - [ byte, 0x002d6457, 0x7f ]
+  "(Experimental) Unstable Lighting":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Increases FPS by around 50% in certain parts by disabling some shadows and lighting. May cause glitches with some other effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00254b7c, 0x60000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -19441,6 +19448,13 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
+  "(Experimental) Unstable Lighting":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Increases FPS by around 50% in certain parts by disabling some shadows and lighting. May cause glitches with some other effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0025410c, 0x60000000 ]
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   "All powers unlocked":
@@ -19453,6 +19467,15 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
+  "(Experimental) Unstable Lighting":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Increases FPS by around 50% in certain parts by disabling some shadows and lighting. May cause glitches with some other effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0025410c, 0x60000000 ]
 
 PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
