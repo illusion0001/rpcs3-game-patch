@@ -19623,6 +19623,17 @@ PPU-414babec8910f142628daeb43cefe28e619d27ee:
     Patch:
       - [ load, *kid_fpsAS ]
 
+PPU-e97880add718a73c2ac6254d74e89dc7b43cb02b:
+  "60 FPS":
+    Games:
+      "Lost Dimension":
+        BLES02197: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Set Frame limit to 60"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00170cc8, 0x60000000 ]
+
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
     Games:
