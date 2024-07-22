@@ -4031,6 +4031,17 @@ PPU-342cfff6572ba74b4f4a55b454fa07e172577aa9:
     Patch:
       - [ be32, 0x00e36504, 0x38600000 ]
 
+PPU-51b2e261b4195fd5d4b645c2cdd46b0588825202:
+  "Unlock FPS":
+    Games:
+      "Batman: Arkham City Demo":
+        NPEB90405: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001b1d30, 0x60000000 ]
+
 Anchors:
   Batman_AO_106: &Batman_AO_106
     "Batman: Arkham Origins":
