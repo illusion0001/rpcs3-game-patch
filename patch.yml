@@ -2787,6 +2787,17 @@ PPU-66e68ab81cb8c107687e708170fd7f13cfdd641e:
       - [ be32, 0x003cc070, 0x60000000 ]
       - [ be32, 0x003cc080, 0x60000000 ]
 
+PPU-8dc2c858b13b0dd2051c2c43cfea6572a67216b1:
+  "SSL Patch":
+    Games:
+      "Army of TWO":
+        BLES00168: [ 01.01 ]
+    Author: ".Simbo"
+    Patch Version: 1.0
+    Notes: "Removes SSL validation for custom servers"
+    Patch:
+      - [ be32, 0x0173f2ec, 0x38000015 ]
+
 PPU-976896152cd756aed8ae7cfe8a6e91260bb21361:
   "Unlock FPS":
     Games:
