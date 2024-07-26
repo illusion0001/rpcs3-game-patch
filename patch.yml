@@ -10988,14 +10988,15 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x000e5284, 0x995d ] # (mem address: 0xbb43da)
-  "Disable Depth of Field":
-    Games: *uc1_disc101title
-    Author: "illusion"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
+      - [ be32, 0x000e527c, 0x60000000 ] # (mem address: 0xbb43d7)
+# DoF patch is wrong
+#  "Disable Depth of Field":
+#    Games: *uc1_disc101title
+#    Author: "illusion"
+#    Notes:
+#    Patch Version: 1.0
+#    Patch:
+#      - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
   "Debug Menu":
     Games: *uc1_disc101title
     Author: "dron_3, HdHereidme, illusion"
@@ -11039,14 +11040,15 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x000e5284, 0x995d ] # (mem address: 0xbb43da)
-  "Disable Depth of Field":
-    Games: *uc1_disc101asiatitle
-    Author: "illusion"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
+      - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43d7)
+# DoF patch is wrong
+#  "Disable Depth of Field":
+#    Games: *uc1_disc101asiatitle
+#    Author: "illusion"
+#    Notes:
+#    Patch Version: 1.0
+#    Patch:
+#      - [ be16, 0x000e527c, 0x995d ] # (mem address: 0xbb43dc)
   "Debug Menu":
     Games: *uc1_disc101asiatitle
     Author: "dron_3, HdHereidme, illusion"
