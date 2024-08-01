@@ -10384,7 +10384,7 @@ PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
         BCUS98120: [ 01.00 ]
         BCES00226: [ 01.00 ]
     Author: "illusion"
-    Notes:
+    Notes: "Breaks shadows, causing them to be misaligned as well as making them jump around when the player moves."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00de67e4, 0.7 ]
@@ -10408,7 +10408,7 @@ PPU-ee7a0a8f83814fd2570ac65e744951cf59264491:
         BCUS98120: [ 01.60 ]
         BCES00226: [ 01.60 ]
     Author: "illusion"
-    Notes:
+    Notes: "Breaks shadows, causing them to be misaligned as well as making them jump around when the player moves."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00df765c, 0.7 ]
@@ -10431,7 +10431,7 @@ PPU-bf22ce18fc3db486aae9c878afa5212b98b53495: # PSN
       "Resistance 2":
         NPEA00431: [ 01.00 ]
     Author: "illusion"
-    Notes:
+    Notes: "Breaks shadows, causing them to be misaligned as well as making them jump around when the player moves."
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00df78ec, 0.7 ]
