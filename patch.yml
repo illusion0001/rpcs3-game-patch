@@ -19463,6 +19463,20 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x00254b7c, 0x60000000 ]
       - [ be32, 0x00258d20, 0x60000000 ]
+  "(Experimental) Disable speed limit":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Forces the game to always play at a 100% speed. Increasing clocks scale allows to speed up the game. Might break physics, needs proper testing"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00079578, 0x60000000 ]
+  "Disable refraction/shifting effect":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00787330, 0x00000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -19481,6 +19495,20 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch:
       - [ be32, 0x0025410c, 0x60000000 ]
       - [ be32, 0x002582b0, 0x60000000 ]
+  "(Experimental) Disable speed limit":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Forces the game to always play at a 100% speed. Increasing clocks scale allows to speed up the game. Might break physics, needs proper testing"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00078b08, 0x60000000 ]
+  "Disable refraction/shifting effect":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007868c0, 0x00000000 ]
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   "All powers unlocked":
@@ -19503,6 +19531,24 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch:
       - [ be32, 0x0025410c, 0x60000000 ]
       - [ be32, 0x002582b0, 0x60000000 ]
+  "(Experimental) Disable speed limit":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Forces the game to always play at a 100% speed. Increasing clocks scale allows to speed up the game. Might break physics, needs proper testing"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00078b08, 0x60000000 ]
+  "Disable refraction/shifting effect":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007868c0, 0x00000000 ]
 
 PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
