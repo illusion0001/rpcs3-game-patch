@@ -13903,7 +13903,6 @@ PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
       "Resistance: Fall of Man":
         BCUS98107: [ 01.00 ]
         BCES00001: [ 01.00 ]
-        BCAS20003: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *r1_fps_notes
     Patch Version: 1.0
@@ -13915,7 +13914,6 @@ PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
       "Resistance: Fall of Man":
         BCUS98107: [ 01.00 ]
         BCES00001: [ 01.00 ]
-        BCAS20003: [ 01.00 ]
     Author: "illusion"
     Notes:
     Patch Version: 1.0
