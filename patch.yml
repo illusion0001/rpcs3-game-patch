@@ -10295,7 +10295,7 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
 
 Anchors:
   sk82_fisheye: &sk82_fisheye
-    - [ be32, 0x00460434, 0x388000013 ]
+    - [ be32, 0x00460434, 0x38800001 ]
 
   sk82_219widescreen_notes: &sk82_219widescreen_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings. Certain 2D elements may be stretched."
