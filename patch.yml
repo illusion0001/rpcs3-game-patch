@@ -6763,7 +6763,7 @@ PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
     Patch:
       - [ load, *mgs4_dfilters_v200_disc ]
 
-PPU-6886ae8f4270fe3fa4c7cf4299307044ad4ce989:
+PPU-347d16fbdb0a12f1083c0fb98343c4642d4641cb:
   "21:9 Aspect Ratio":
     Games: *mgs4_eu_psn200title
     Author: "TriggerHappy"
