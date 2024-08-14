@@ -19741,13 +19741,50 @@ PPU-414babec8910f142628daeb43cefe28e619d27ee:
     Patch:
       - [ load, *kid_fpsAS ]
 
+Anchors:
+  lostd_fps_notes: &lostd_fps_notes
+    "Set Frame limit to 60. Gamespeed is affected above 60 FPS."
+
 PPU-e97880add718a73c2ac6254d74e89dc7b43cb02b:
   "60 FPS":
     Games:
       "Lost Dimension":
         BLES02197: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Set Frame limit to 60"
+    Notes: *lostd_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00170cc8, 0x60000000 ]
+
+PPU-427ff8be3761618ff0b30d232f99a97012a63328:
+  "60 FPS":
+    Games:
+      "Lost Dimension":
+        BLUS31554: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *lostd_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00170cc8, 0x60000000 ]
+
+PPU-90fac48fae025222ecac429b898055467f40748f:
+  "60 FPS":
+    Games:
+      "Lost Dimension":
+        BLJM61166: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *lostd_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00171300, 0x60000000 ]
+
+PPU-a937df5db4e5d72d641c8d023d11949b4d6af05c:
+  "60 FPS":
+    Games:
+      "Lost Dimension":
+        BLJM61166: [ 01.02 ]
+    Author: "FlexBy"
+    Notes: *lostd_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00170cc8, 0x60000000 ]
