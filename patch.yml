@@ -19475,6 +19475,20 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00787330, 0x00000000 ]
+  "(Experimental) Unstable visual effects":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0022065C, 0x60000000 ]
+  "(Experimental) Disable visual effects":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Disables Visual Effects. Gives just a tiny bit more fps than the 'Unstable VFX' patch. Use only as the last resort."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00193B5C, 0x60000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -19507,6 +19521,21 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007868c0, 0x00000000 ]
+  "(Experimental) Unstable visual effects":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0021fbec, 0x60000000 ]
+  "(Experimental) Disable visual effects":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Disables Visual Effects. Gives just a tiny bit more fps than the 'Unstable VFX' patch. Use only as the last resort."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001930ec, 0x60000000 ]
+
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   "All powers unlocked":
@@ -19547,6 +19576,24 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007868c0, 0x00000000 ]
+  "(Experimental) Unstable visual effects":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0021fbec, 0x60000000 ]
+  "(Experimental) Disable visual effects":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Disables Visual Effects. Gives just a tiny bit more fps than the 'Unstable VFX' patch. Use only as the last resort."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001930ec, 0x60000000 ]
 
 PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
