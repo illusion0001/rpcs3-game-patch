@@ -10281,6 +10281,17 @@ PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
     Patch:
       - [ be32, 0x0031a804, 0x38000001 ]
 
+PPU-f696f96752deed23cbcb53c777ae2b837219dfe6:
+  "Disable MLAA":
+    Games:
+      "SoulCalibur V":
+        BLES01250: [ 01.00 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00304770, 0x38000001 ]
+
 PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
   "Disable MLAA":
     Games:
