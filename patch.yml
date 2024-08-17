@@ -19480,7 +19480,7 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "(Experimental) Disable speed limit":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game. \nMight break physics, needs proper testing"
+    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00079578, 0x60000000 ]
@@ -19534,7 +19534,7 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "(Experimental) Disable speed limit":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Forces the game to always play at a 100% speed. Increasing clocks scale allows to speed up the game. Might break physics, needs proper testing"
+    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00078b28, 0x60000000 ]
@@ -19555,7 +19555,7 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "(Experimental) Disable visual effects":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Disables Visual Effects. Gives just a tiny bit more fps than the 'Unstable VFX' patch. Use only as the last resort."
+    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00192f54, 0x60000000 ]
@@ -19595,7 +19595,7 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       "inFamous":
         BCUS98119: [ All ]
     Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game. \nMight break physics, needs proper testing"
+    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00078b08, 0x60000000 ]
