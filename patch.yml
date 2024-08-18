@@ -21473,7 +21473,7 @@ PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
         BLES00153: [ 01.10 ]
     Author: "Margen67, FlexBy"
     Notes:
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ be32, 0x0008fa30, 0x4e800020 ]
       - [ be32, 0x10030084, 0x00000000 ]
