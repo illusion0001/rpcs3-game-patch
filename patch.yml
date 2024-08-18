@@ -21466,16 +21466,18 @@ PPU-336bdd5d924742e981105232d0cbaf7c035a1517:
     Patch:
       - [ be32, 0x008dfe40, 0xf8051c60 ]
 
-PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c:
-  "Skip save warning on startup":
+PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
+  "Skip Intro":
     Games:
       "The Orange Box":
         BLES00153: [ 01.10 ]
-    Author: "Margen67"
+    Author: "Margen67, FlexBy"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0008fa30, 0x4e800020 ]
+      - [ be32, 0x10030084, 0x00000000 ]
+      - [ be32, 0x100010a8, 0x00000000 ]
 
 PPU-12b113060842a3b1c37b8326961cdec076d2a0f7: # HL2.SELF 1.00
   "Unlock FPS":
