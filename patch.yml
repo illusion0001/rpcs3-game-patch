@@ -18603,13 +18603,16 @@ PPU-f693265f620e64208e76cc2388d10df1d7b60c95:
     Patch:
       - [ be32, 0x00732b94, 0x3ba00001 ]
 
+ddogma_fps_notes: &ddogma_fps_notes
+    "Might slightly improve performance."
+
 PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
   "Unlock FPS":
     Games:
       "Dragon's Dogma: Dark Arisen":
         BLES01794: [ 01.00 ]
     Author: "FlexBy"
-    Notes: "Needs more testing"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f5a6c4, 0x60000000 ]
@@ -18632,6 +18635,7 @@ PPU-ec112cfa3c2dae2ea6295d0e091bed942d550ff7:
         BLUS31155: [ 01.02 ]
         BLJM61012: [ 01.02 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f5aab4, 0x60000000 ]
@@ -18645,6 +18649,7 @@ PPU-81d844f449c7145f458823338ddbc77628a0f2e1:
         NPUB31117: [ 01.02 ]
         NPJB00335: [ 01.02 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00c355d4, 0x60000000 ]
@@ -18656,6 +18661,7 @@ PPU-6aef809b5a3d40948a5b99bd4c6e864edb5fe4f9:
       "Dragon's Dogma":
         BLES01356: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00ee28b4, 0x60000000 ]
@@ -18669,6 +18675,7 @@ PPU-4857369088641f59416100d16b640c744a8b595e:
         BLUS30720: [ 01.05 ]
         BLJM60379: [ 01.05 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00ef0c74, 0x60000000 ]
@@ -18680,6 +18687,7 @@ PPU-adc95646dc0dc85e69b669d437ca160d604f81a0:
       "Dragon's Dogma Demo":
         NPEB90366: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00dd4cc0, 0x60000000 ]
@@ -18691,6 +18699,7 @@ PPU-b741847e3e310822eb7f2f691f856d92183b77a7:
       "Dragon's Dogma Demo":
         NPUB90614: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00dd46ec, 0x60000000 ]
@@ -18703,6 +18712,7 @@ PPU-93d2bc023fd8f76624315906876039d3cc562026:
         NPEB90439: [ 01.00 ]
         NPJB90524: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f27c2c, 0x60000000 ]
@@ -18714,6 +18724,7 @@ PPU-541ea5f3ebee9185055d81ecd8d1f173e0d45714:
       "Dragon's Dogma Adventure Demo":
         NPUB90813: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f27b5c, 0x60000000 ]
@@ -18725,6 +18736,7 @@ PPU-76cb5eb050cabfbc21e40668be9e8b5b3b9d37d3:
       "Dragon's Dogma: Dark Arisen Adventure Demo":
         NPJB90581: [ 01.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f08684, 0x60000000 ]
@@ -18736,6 +18748,7 @@ PPU-59a33bedc708ebfb7905fb35b207313711705579:
       "Dragon's Dogma Preview":
         BLES01356: [ 10.00 ]
     Author: "FlexBy"
+    Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00f3a85c, 0x60000000 ]
@@ -20804,7 +20817,7 @@ PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
 
 Anchors:
   residentevil_fps_notes: &residentevil_fps_notes
-    "Cutscene speed is affected."
+    "Cutscene speed is affected. Slightly improves performance."
 
 PPU-1ffa6b11961fe83613cbd7055b757c1877e2e8b6:
   "Unlock FPS":
@@ -20845,7 +20858,7 @@ PPU-bf9bd8f3f76e3bc53cbec32434510ce738936224:
 
 Anchors:
   residentevil0_fps_notes: &residentevil0_fps_notes
-    "Cutscene speed is affected."
+    "Cutscene speed is affected. Slightly improves performance."
 
 PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
   "Unlock FPS":
