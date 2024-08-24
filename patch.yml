@@ -18603,7 +18603,8 @@ PPU-f693265f620e64208e76cc2388d10df1d7b60c95:
     Patch:
       - [ be32, 0x00732b94, 0x3ba00001 ]
 
-ddogma_fps_notes: &ddogma_fps_notes
+Anchors:
+  ddogma_fps_notes: &ddogma_fps_notes
     "Might slightly improve performance."
 
 PPU-c08ed2a14ae5f13bce19e10a4b97f0b558d51f13:
