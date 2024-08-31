@@ -19477,7 +19477,7 @@ Anchors:
 
   inFam1_EUdiscalltitle: &Infam1_EUdiscalltitle
     "inFamous":
-      BCES00220: [ All ]
+      BCES00220: [ 01.00 ]
       BCES00591: [ All ]
       BCES00609: [ All ]
       
@@ -19506,7 +19506,7 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x002d6448, 0x60000000 ]
       - [ byte, 0x002d6457, 0x7f ]
-  "(Experimental) Unstable Lighting":
+  "(Experimental) Unstable lighting":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
     Notes: *Infam1_unst_light_notes
@@ -19550,6 +19550,25 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785F04, "FOV" ]
+  "(Experimental) Unstable audio":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00283E50, 0x4e800020 ]
+      - [ be32, 0x0028B598, 0x4e800020 ]
+      - [ be32, 0x0028C760, 0x60000000 ]
+      - [ be32, 0x00504548, 0x4e800020 ]
+      - [ be32, 0x0050B2E0, 0x4e800020 ]
+      - [ be32, 0x0050F610, 0x4e800020 ]
+      - [ be32, 0x00510108, 0x60000000 ]
+      - [ be32, 0x005101C4, 0x60000000 ]
+      - [ be32, 0x00519440, 0x4e800020 ]
+      - [ be32, 0x0051A24C, 0x60000000 ]
+      - [ be32, 0x0051A370, 0x60000000 ]
+      - [ be32, 0x00551C60, 0x4e800020 ]
+      - [ be32, 0x0051A208, 0x60000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -19560,7 +19579,7 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
-  "(Experimental) Unstable Lighting":
+  "(Experimental) Unstable lighting":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
     Notes: *Infam1_unst_light_notes
@@ -19604,7 +19623,114 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007854dc, "FOV" ]
+  "(Experimental) Unstable audio":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002833e0, 0x4e800020 ]
+      - [ be32, 0x0028ab28, 0x4e800020 ]
+      - [ be32, 0x0028bcf0, 0x60000000 ]
+      - [ be32, 0x00503ad8, 0x4e800020 ]
+      - [ be32, 0x0050a870, 0x4e800020 ]
+      - [ be32, 0x0050eba0, 0x4e800020 ]
+      - [ be32, 0x0050f698, 0x60000000 ]
+      - [ be32, 0x0050f754, 0x60000000 ]
+      - [ be32, 0x005189d0, 0x4e800020 ]
+      - [ be32, 0x005197dc, 0x60000000 ]
+      - [ be32, 0x00519900, 0x60000000 ]
+      - [ be32, 0x005511f0, 0x4e800020 ]
+      - [ be32, 0x00519798, 0x60000000 ]
 
+PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
+  "All powers unlocked":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Scirvir"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002d5a00, 0x60000000 ]
+      - [ byte, 0x002d59bc, 0x7f ]
+  "(Experimental) Unstable lighting":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: *Infam1_unst_light_notes
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x00253f84, 0x60000000 ]
+      - [ be32, 0x00258128, 0x60000000 ]
+  "(Experimental) Disable speed limit":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00078b38, 0x60000000 ]
+  "Disable refraction/shifting effect":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00786910, 0x00000000 ]
+  "(Experimental) Unstable visual effects":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0021fa84, 0x60000000 ]
+  "(Experimental) Disable visual effects":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00192fa4, 0x60000000 ]
+  "Change FOV":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+    Configurable Values: *Infam1_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007854dc, "FOV" ]
+  "(Experimental) Unstable audio":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002833f8, 0x4e800020 ]
+      - [ be32, 0x0028ab40, 0x4e800020 ]
+      - [ be32, 0x0028bd08, 0x60000000 ]
+      - [ be32, 0x00503b40, 0x4e800020 ]
+      - [ be32, 0x0050a8d8, 0x4e800020 ]
+      - [ be32, 0x0050ec08, 0x4e800020 ]
+      - [ be32, 0x0050f700, 0x60000000 ]
+      - [ be32, 0x0050f7bc, 0x60000000 ]
+      - [ be32, 0x00518a38, 0x4e800020 ]
+      - [ be32, 0x00519844, 0x60000000 ]
+      - [ be32, 0x00519968, 0x60000000 ]
+      - [ be32, 0x00551258, 0x4e800020 ]
+      - [ be32, 0x00519800, 0x60000000 ]
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   "All powers unlocked":
@@ -19617,7 +19743,7 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch:
       - [ be32, 0x002d5948, 0x60000000 ]
       - [ byte, 0x002d5957, 0x7f ]
-  "(Experimental) Unstable Lighting":
+  "(Experimental) Unstable lighting":
     Games:
       "inFamous":
         BCUS98119: [ All ]
@@ -19673,6 +19799,27 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785494, "FOV" ]
+  "(Experimental) Unstable audio":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00283380, 0x4e800020 ]
+      - [ be32, 0x0028aad8, 0x4e800020 ]
+      - [ be32, 0x0028bca0, 0x60000000 ]
+      - [ be32, 0x00503bf0, 0x4e800020 ]
+      - [ be32, 0x0050a988, 0x4e800020 ]
+      - [ be32, 0x0050ecb8, 0x4e800020 ]
+      - [ be32, 0x0050f7b0, 0x60000000 ]
+      - [ be32, 0x0050f86c, 0x60000000 ]
+      - [ be32, 0x00518ae8, 0x4e800020 ]
+      - [ be32, 0x005198f4, 0x60000000 ]
+      - [ be32, 0x00519a18, 0x60000000 ]
+      - [ be32, 0x00551308, 0x4e800020 ]
+      - [ be32, 0x005198b0, 0x60000000 ]
 
 PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
