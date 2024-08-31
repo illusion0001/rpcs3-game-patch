@@ -19495,7 +19495,22 @@ Anchors:
          "Heavily increased FOV (0.6)": 1058642330
 
   inFam1_unst_light_notes: &Infam1_unst_light_notes
-    "Increases FPS by around 50% in certain parts by disabling some shadows and lighting. May cause glitches with some other effects."
+    "Increases FPS by around 50% in certain parts by disabling some shadows and lighting.\nDoesn't help much in sewer areas.\nMay cause glitches with some other effects."
+
+  inFam1_dis_refr: &Infam1_dis_refr
+    "Disables broken shifting/refracting effect."
+
+  inFam1_fov: &Infam1_fov
+    "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+
+  inFam1_unst_vfx: &Infam1_unst_vfx
+    "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+
+  inFam1_unst_audio: &Infam1_unst_audio
+    "Improves sound cackling by disabling some functions related to the audio.\nLightning sounds might be distorted.\nPlease, report any other side effects."
+
+  inFam1_disable_splim_notes: &Infam1_disable_splim_notes
+    "Disables the slow-down effect when having low FPS.\nIncreasing clocks scale allows to speed up the game."
 
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "All powers unlocked":
@@ -19506,6 +19521,13 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x002d6448, 0x60000000 ]
       - [ byte, 0x002d6457, 0x7f ]
+  "Disable speed limit":
+    Games: *Infam1_PSNalltitle
+    Author: "Hasster"
+    Notes: *Infam1_disable_splim_notes
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x007615d8, 0x3E19999A ]
   "(Experimental) Unstable lighting":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
@@ -19514,38 +19536,24 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch:
       - [ be32, 0x00254b7c, 0x60000000 ]
       - [ be32, 0x00258d20, 0x60000000 ]
-  "(Experimental) Disable speed limit":
-    Games: *Infam1_PSNalltitle
-    Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00079578, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
-    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Notes: *Infam1_dis_refr
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00787330, 0x00000000 ]
   "(Experimental) Unstable visual effects":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
-    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Notes: *Infam1_unst_vfx
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0022065C, 0x60000000 ]
-  "(Experimental) Disable visual effects":
-    Games: *Infam1_PSNalltitle
-    Author: "Hasster"
-    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00193B5C, 0x60000000 ]
   "Change FOV":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
-    Notes: "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+    Notes: *Infam1_fov
     Configurable Values: *Infam1_configurable_values
     Patch Version: 1.0
     Patch:
@@ -19553,7 +19561,7 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "(Experimental) Unstable audio":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
-    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Notes: *Infam1_unst_audio
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00283E50, 0x4e800020 ]
@@ -19579,6 +19587,13 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch:
       - [ be32, 0x002d59d8, 0x60000000 ]
       - [ byte, 0x002d59e7, 0x7f ]
+  "Disable speed limit":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Hasster"
+    Notes: *Infam1_disable_splim_notes
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x007615d8, 0x3E19999A ]
   "(Experimental) Unstable lighting":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
@@ -19587,38 +19602,24 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch:
       - [ be32, 0x00253f6c, 0x60000000 ]
       - [ be32, 0x00258110, 0x60000000 ]
-  "(Experimental) Disable speed limit":
-    Games: *Infam1_EUdiscalltitle
-    Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00078b28, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Notes: *Infam1_dis_refr
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00786910, 0x00000000 ]
   "(Experimental) Unstable visual effects":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Notes: *Infam1_unst_vfx
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0021fa64, 0x60000000 ]
-  "(Experimental) Disable visual effects":
-    Games: *Infam1_EUdiscalltitle
-    Author: "Hasster"
-    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00192f54, 0x60000000 ]
   "Change FOV":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+    Notes: *Infam1_fov
     Configurable Values: *Infam1_configurable_values
     Patch Version: 1.0
     Patch:
@@ -19626,7 +19627,7 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "(Experimental) Unstable audio":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
-    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Notes: *Infam1_unst_audio
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002833e0, 0x4e800020 ]
@@ -19654,6 +19655,15 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
     Patch:
       - [ be32, 0x002d5a00, 0x60000000 ]
       - [ byte, 0x002d59bc, 0x7f ]
+  "Disable speed limit":
+    Games:
+      "inFamous":
+        BCES00220: [ 01.02 ]
+    Author: "Hasster"
+    Notes: *Infam1_disable_splim_notes
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x007615d8, 0x3E19999A ]
   "(Experimental) Unstable lighting":
     Games:
       "inFamous":
@@ -19664,21 +19674,12 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
     Patch:
       - [ be32, 0x00253f84, 0x60000000 ]
       - [ be32, 0x00258128, 0x60000000 ]
-  "(Experimental) Disable speed limit":
-    Games:
-      "inFamous":
-        BCES00220: [ 01.02 ]
-    Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00078b38, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games:
       "inFamous":
         BCES00220: [ 01.02 ]
     Author: "Hasster"
-    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Notes: *Infam1_dis_refr
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00786910, 0x00000000 ]
@@ -19687,25 +19688,16 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
       "inFamous":
         BCES00220: [ 01.02 ]
     Author: "Hasster"
-    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Notes: *Infam1_unst_vfx
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0021fa84, 0x60000000 ]
-  "(Experimental) Disable visual effects":
-    Games:
-      "inFamous":
-        BCES00220: [ 01.02 ]
-    Author: "Hasster"
-    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00192fa4, 0x60000000 ]
   "Change FOV":
     Games:
       "inFamous":
         BCES00220: [ 01.02 ]
     Author: "Hasster"
-    Notes: "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+    Notes: *Infam1_fov
     Configurable Values: *Infam1_configurable_values
     Patch Version: 1.0
     Patch:
@@ -19715,7 +19707,7 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
       "inFamous":
         BCES00220: [ 01.02 ]
     Author: "Hasster"
-    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Notes: *Infam1_unst_audio
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002833f8, 0x4e800020 ]
@@ -19743,6 +19735,15 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch:
       - [ be32, 0x002d5948, 0x60000000 ]
       - [ byte, 0x002d5957, 0x7f ]
+  "Disable speed limit":
+    Games:
+      "inFamous":
+        BCUS98119: [ All ]
+    Author: "Hasster"
+    Notes: *Infam1_disable_splim_notes
+    Patch Version: 1.1
+    Patch:
+      - [ be32, 0x00761590, 0x3E19999A ] #default - 0.06, increased to 0.15, too high number = game start ignoring emulator's pause.
   "(Experimental) Unstable lighting":
     Games:
       "inFamous":
@@ -19753,21 +19754,12 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch:
       - [ be32, 0x0025410c, 0x60000000 ]
       - [ be32, 0x002582b0, 0x60000000 ]
-  "(Experimental) Disable speed limit":
-    Games:
-      "inFamous":
-        BCUS98119: [ All ]
-    Author: "Hasster"
-    Notes: "Forces the game to always play at full speed regardless of the FPS.\nIncreasing clocks scale allows to speed up the game.\nMight break physics, needs proper testing"
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00078b08, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games:
       "inFamous":
         BCUS98119: [ All ]
     Author: "Hasster"
-    Notes: "Disables broken shifting/refracting effect. I hope it won't break anything"
+    Notes: *Infam1_dis_refr
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007868c0, 0x00000000 ]
@@ -19776,25 +19768,16 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       "inFamous":
         BCUS98119: [ All ]
     Author: "Hasster"
-    Notes: "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
+    Notes: *Infam1_unst_vfx
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0021fbec, 0x60000000 ]
-  "(Experimental) Disable visual effects":
-    Games:
-      "inFamous":
-        BCUS98119: [ All ]
-    Author: "Hasster"
-    Notes: "Disables Visual Effects.\nGives just a tiny bit more fps than the 'Unstable VFX' patch.\nUse only as the last resort."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x001930ec, 0x60000000 ]
   "Change FOV":
     Games:
       "inFamous":
         BCUS98119: [ All ]
     Author: "Hasster"
-    Notes: "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
+    Notes: *Infam1_fov
     Configurable Values: *Infam1_configurable_values
     Patch Version: 1.0
     Patch:
@@ -19804,7 +19787,7 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
       "inFamous":
         BCUS98119: [ All ]
     Author: "Hasster"
-    Notes: "Improves sound cackling by disabling some functions related to the audio. Might break stuff.\nPlease, report any side effects."
+    Notes: *Infam1_unst_audio
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00283380, 0x4e800020 ]
