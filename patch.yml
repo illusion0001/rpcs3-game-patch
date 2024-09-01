@@ -4725,7 +4725,7 @@ PPU-c11efe379277a76cdea0f139a895981c39d1a0aa:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x002fead2, 0x3a83 ]
-      - [ be16, 0x002feadc, 0x126f ]
+      - [ be16, 0x002feade, 0x126f ]
       - [ bef64, 0x006f2378, 0.001 ]
 
 Anchors:
