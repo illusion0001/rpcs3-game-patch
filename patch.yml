@@ -4715,6 +4715,19 @@ PPU-4c819c69904784a56685c31df12f5d492bc0ed64:
     Patch:
       - [ load, *ratchet_all4one_103_unlockfps ]
 
+PPU-c11efe379277a76cdea0f139a895981c39d1a0aa:
+  "Unlock FPS":
+    Games:
+      "Ratchet & Clank: All 4 One Demo":
+        BCED01448: [ 01.00 ]
+    Author: "illusion"
+    Notes: *ratchet_all4one_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x002fead2, 0x3a83 ]
+      - [ be16, 0x002feadc, 0x126f ]
+      - [ bef64, 0x006f2378, 0.001 ]
+
 Anchors:
   gowa_mlaa_notes: &gowa_mlaa_notes
     "Allows for the use of Resolution Scaling in this title.\nSet Resolution Scale Threshold to 1x1 for proper scaling of effects."
