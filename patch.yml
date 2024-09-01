@@ -4678,7 +4678,6 @@ PPU-6b996df3949d05b2e6dc23b1dfdf9dd6d01d8c38:
     Patch:
       - [ load, *ratchet_all4one_100_unlockfps ]
 
-
 PPU-ba38ef01095996cc1c1ce19b7e8ad0ac31576931:
   "Unlock FPS":
     Games:
