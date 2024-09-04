@@ -4848,6 +4848,36 @@ PPU-93623f42f6f50bed58ca60927ed43beab749a2cd:
     Patch:
       - [ byte, 0x007dc0b7, 0x00 ]
 
+PPU-ea2fc413782cda9d615cd0d68b096bfe54c780be:
+  "Disable MLAA":
+    Games:
+      "God of War: Ascension Demo":
+        NPUA70244: [ 01.00 ]
+    Author: "illusion"
+    Notes: *gowa_mlaa_notes
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00776efb, 0x00 ]
+  "Disable Motion Blur":
+    Games:
+      "God of War: Ascension Demo":
+        NPUA70244: [ 01.00 ]
+    Author: "ZEROx"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00143a9c, 0x38a00000 ]
+  "Skip Intro":
+    Games:
+      "God of War: Ascension Demo":
+        NPUA70244: [ 01.00 ]
+    Author: "illusion, ZEROx"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x001a1927, 0x01 ]
+      - [ be16, 0x00024a6c, 0x4800 ]
+
 Anchors:
   # Since we only change store reg and branch, we don't need to patch last 2 bytes again.
   tlou100_mlaa: &tlou100_mlaa
