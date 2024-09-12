@@ -1263,6 +1263,28 @@ PPU-05408beac1c24af97899a302f13c2692dbf73bd2:
       - [ be64, 0x000593b8, 0xfca00890fcc0e890 ]
       - [ be64, 0x000593c0, 0x807f000cfc20f890 ]
 
+PPU-fe9438693b989edd1a04f973e156cf185e16d13d:
+  "Skip any videos with X button":
+    Games:
+      "God of War: II HD":
+        BLJM60200: [ 01.01 ]
+    Author: "hero"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x2C1C34, 0x38000001 ]
+
+PPU-7775c39a8eade714caca6c95cf07c9d9ca095047:
+  "Skip any videos with X button":
+    Games:
+      "God of War: HD":
+        BLJM60200: [ 01.01 ]
+    Author: "hero"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x1C70A4, 0x48000004 ]
+
 Anchors:
   lbp2_133title: &lbp2_133title
     "LittleBigPlanet 2":
