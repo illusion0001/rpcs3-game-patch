@@ -18001,6 +18001,7 @@ PPU-3675007cd4110c6e8c2c297e6dde41799e05198c:
     Games:
       "Sly 3: Honor Among Thieves":
         NPUA80665: [ 01.00 ]
+        NPEA00343: [ 01.00 ]
     Author: "VelocityRa"
     Notes: "Renders all objects, even ones that are far away."
     Patch Version: 2.2
