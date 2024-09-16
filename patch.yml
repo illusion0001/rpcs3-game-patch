@@ -17990,6 +17990,7 @@ PPU-d3a99698275b4203d42c7aeccc053299a5811804:
     Games:
       "Sly 2: Band of Thieves":
         NPEA00342: [ 01.00 ]
+        NPUA80664: [ 01.00 ]
     Author: "VelocityRa"
     Notes: "Skips the \"WARNING\" & Sanzaru logo intro/splash images."
     Patch Version: 2.2
