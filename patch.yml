@@ -20083,6 +20083,30 @@ PPU-a937df5db4e5d72d641c8d023d11949b4d6af05c:
     Patch:
       - [ be32, 0x00170cc8, 0x60000000 ]
 
+PPU-9d347c5f479995fd3510a3d266befde01fb47966:
+  "Unlock FPS":
+    Games:
+      "LOST PLANET 2":
+        MRTC00002: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01394bb8, 0x60000000 ]
+      - [ be32, 0x01394bc4, 0x60000000 ]
+
+PPU-fa74a09587b54ffd9ea096983ba9206ec55b0c42:
+  "Unlock FPS":
+    Games:
+      "LOST PLANET 2":
+        MRTC00002: [ 01.02 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x013dc518, 0x60000000 ]
+      - [ be32, 0x013dc524, 0x60000000 ]
+
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
     Games:
