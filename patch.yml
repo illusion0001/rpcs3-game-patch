@@ -6380,7 +6380,7 @@ Anchors:
     "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
 
   MGS4_FPS_Notes: &MGS4_FPS_Notes
-    "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency."
+    "Allows you to play the game at 60 FPS or higher without modifying the vblank frequency. Can improve performance."
 
   MGS4_DisableFilters_Notes: &MGS4_DisableFilters_Notes
     "Removes all viewport filters including color grading and the night vision goggles effect."
