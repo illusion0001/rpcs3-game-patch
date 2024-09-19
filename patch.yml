@@ -11274,6 +11274,21 @@ PPU-9b03ca582c605c2be22b8e1d573c02eb1fed0798:
       - [ be16, 0x0004db4c, 0x9bf1 ]
 
 Anchors:
+  alicemr_unlockfps_notes: &alicemr_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 58 FPS."
+
+PPU-2ce96496d48434427bd319eb88660bb89b51b9be:
+  "Unlock FPS":
+    Games:
+      "Alice: Madness Returns":
+        NPEB00625: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *alicemr_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0034ca98, 0x60000000 ]
+
+Anchors:
   DS1_100_FPS_Notes: &DS1_100_FPS_Notes
     "For people who would like to play the unpatched version of Dark Souls at decent framerates. Unpatched PC version is equivalent to 1.06 on consoles."
   DS1_109_FPS_Notes: &DS1_109_FPS_Notes
