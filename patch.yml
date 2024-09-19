@@ -2282,6 +2282,53 @@ PPU-9b8394d269924a9b8b27916d3052718d914ff5c2:
       - [ be32, 0x004089ac, 0x38c00000 ] # li r6 0
 
 Anchors:
+  luchalAAA_unlockfps_notes: &luchalAAA_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+
+PPU-78e66422e590ef265c411c1c4e51d88604394c23:
+  "Unlock FPS":
+    Games:
+      "Lucha Libre AAA: Héroes del Ring":
+        BLUS30640: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *luchalAAA_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00426528, 0x60000000 ]
+
+PPU-895dd1dbc8a4d46401b735c3a4bfac569c65edbd:
+  "Unlock FPS":
+    Games:
+      "Lucha Libre AAA: Héroes del Ring":
+        BLUS30640: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *luchalAAA_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00426618, 0x60000000 ]
+  "OpenSpy Online":
+    Games:
+      "Lucha Libre AAA: Héroes del Ring":
+        BLUS30640: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x0146ff6b, "openspy.net" ]
+      - [ utf8, 0x0146ffb2, "openspy.net" ]
+      - [ utf8, 0x01471cd9, "openspy.net" ]
+      - [ utf8, 0x014720cc, "openspy.net" ]
+      - [ utf8, 0x014720e4, "openspy.net" ]
+      - [ utf8, 0x014720fc, "openspy.net" ]
+      - [ utf8, 0x01472270, "openspy.net" ]
+      - [ utf8, 0x014722fa, "openspy.net" ]
+      - [ utf8, 0x01472c3c, "openspy.net" ]
+      - [ utf8, 0x0179ca95, "openspy.net" ]
+      - [ utf8, 0x0179cae5, "openspy.net" ]
+      - [ utf8, 0x01470374, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x0147026a, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
+Anchors:
   warp_unlockfps_notes: &warp_unlockfps_notes
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
 
