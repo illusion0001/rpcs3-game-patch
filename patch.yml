@@ -1753,6 +1753,17 @@ PPU-b1188c0e10fac40e006d51e0ff1aa5fafc3a0699:
     Patch:
       - [ be32, 0x00191b3c, 0x60000000 ]
 
+PPU-b1e59eaf823c7ed77022575740055f06cc605661:
+  "Unlock FPS":
+    Games:
+      "All Zombies Must Die!":
+        NPEB00316: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00346420, 0x60000000 ]
+
 PPU-719690daa66423444dc65cff5d111d3224c914dc:
   "Unlock FPS":
     Games:
@@ -11287,6 +11298,17 @@ PPU-2ce96496d48434427bd319eb88660bb89b51b9be:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0034ca98, 0x60000000 ]
+
+PPU-935581b04fc192eac3cd677f51bb3921e22c0e41:
+  "Unlock FPS":
+    Games:
+      "Alice: Madness Returns":
+        BLES01265: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *alicemr_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0034cad0, 0x60000000 ]
 
 Anchors:
   DS1_100_FPS_Notes: &DS1_100_FPS_Notes
