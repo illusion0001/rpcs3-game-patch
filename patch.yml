@@ -20730,6 +20730,17 @@ PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
     Patch:
       - [ be32, 0x005261c8, 0x60000000 ]
 
+PPU-9ee543aff769e702526f67713c776247929abeb3:
+  "Unlock FPS":
+    Games:
+      "Planet 51: The game":
+        BLES00584: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00c3c930, 0x60000000 ]
+
 PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0: # materialsystem_ps3.sprx
   "Disable MLAA":
     Games:
