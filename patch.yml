@@ -20138,6 +20138,11 @@ PPU-348ff1bbf4eb9595b4dbc9dc2358bc1db79dbe72:
     Games:
       "Lost Planet 3":
         BLES01685: [ 01.02 ]
+        BLUS31020: [ 01.02 ]
+        BLJM60490: [ 01.02 ]
+        NPEB01043: [ 01.02 ]
+        NPUB31125: [ 01.02 ]
+        NPJB00311: [ 01.02 ]
     Author: "FlexBy"
     Notes: *lostp3_unlockfps_notes
     Patch Version: 1.0
