@@ -17334,6 +17334,29 @@ PPU-43f93d8813c1ab40afc09dfa47c05c943d71334e:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x000928d5, 0x61 ] # f3 register
+  "Jump While Aiming":
+    Games:
+      "Fallout New Vegas: Ultimate Edition":
+        BLUS30888: [ 01.00 ]
+        BLES01475: [ 01.00 ]
+        BLES01478: [ 01.00 ]
+    Author: "lStewieAl"
+    Notes: "Allows jumping while aiming"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000442A8, 0x4800 ] # b 0x44324
+  "ActorCause Save Bloat Fix":
+    Games:
+      "Fallout New Vegas: Ultimate Edition":
+        BLUS30888: [ 01.00 ]
+        BLES01475: [ 01.00 ]
+        BLES01478: [ 01.00 ]
+    Author: "lStewieAl"
+    Notes: "Fixes an engine bug that saves an unused detecting actors list on all ActorCauses"
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x00439D08, 0x4800 ] # b 0x439D40
+      - [ be16, 0x00439718, 0x4800 ] # b 0x43974C
 
 PPU-d01110afee86aa2861be1f5f23cb330c88555598:
   "60 FPS":
