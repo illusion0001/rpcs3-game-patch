@@ -21684,6 +21684,28 @@ PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
       - [ be32, 0x011178d0, 0x3c888889 ]
       - [ be32, 0x011178d4, 0x3c888889 ]
 
+PPU-ef6211c404f5dc3730dac42900aff0661860e34c:
+  "Unlock FPS":
+    Games:
+      "Stranglehold":
+        BLES00144: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b9d904, 0x60000000 ]
+
+PPU-e858695881e5b51131342ccda7991c4134fa4aa0:
+  "Unlock FPS":
+    Games:
+      "Stranglehold":
+        BLES00144: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b9ff70, 0x60000000 ]
+
 PPU-3f8da13ffc1c9c8a99b71af47ebb3f830c45693d:
   "Developer menu":
     Games:
