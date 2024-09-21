@@ -19258,6 +19258,30 @@ PPU-340d91a3a46a13aa69ba82b3e371c899cb7a2e77:
       - [ utf8, 0x012cb4a0, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x012b1c08, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+PPU-c27d2465af2801994cd00cef88f83a043eca059d:
+  "OpenSpy Online":
+    Games:
+      "F.E.A.R. 2: Project Origin":
+        BLES00464: [ 01.03 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x012dad5d, "openspy.net" ]
+      - [ utf8, 0x012db100, "openspy.net" ]
+      - [ utf8, 0x012db118, "openspy.net" ]
+      - [ utf8, 0x012db130, "openspy.net" ]
+      - [ utf8, 0x012db29a, "openspy.net" ]
+      - [ utf8, 0x012db5a0, "openspy.net" ]
+      - [ utf8, 0x012db5ff, "openspy.net" ]
+      - [ utf8, 0x012dc260, "openspy.net" ]
+      - [ utf8, 0x012dee66, "openspy.net" ]
+      - [ utf8, 0x014fc8fd, "openspy.net" ]
+      - [ utf8, 0x014fca55, "openspy.net" ]
+      - [ utf8, 0x014fcad2, "openspy.net" ]
+      - [ utf8, 0x012d9458, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x012bfa88, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   fairytale_unlockfps_103: &fairytale_unlockfps_103
     - [ be32, 0x003bcfe8, 0x60000000 ]
