@@ -21608,7 +21608,7 @@ PPU-c423a041b450bd0b19e95958733a99c1b95e5b41:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00a41518, 0x38600001 ]
+      - [ be32, 0x00a415dc, 0x38600001 ]
 
 PPU-9b19fb66a4c30d586e4f98e04eab4730bdd4148e:
   "Developer Menu":
