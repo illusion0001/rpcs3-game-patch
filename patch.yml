@@ -2391,6 +2391,12 @@ PPU-69e05eeb40a122f61f1acfc5115b39108589c2ba:
       - [ utf8, 0x01a2fe80, "http://%s.api.openspy.net/AuthService/%s\0" ]
       - [ utf8, 0x01911908, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+Anchors:
+  nfsc_unlock_all: &nfsc_unlock_all
+    "Unlocks all unlockables such as vehicles in 'My Cars', vinyls etc."
+  nfsc_debug_menu: &nfsc_debug_menu
+    "Adds an option called \"CAR(DEBUG)\" to the main menu. Press Triangle to take selected car into freeroam."
+
 PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   "Disable Color Correction":
     Games:
@@ -2402,6 +2408,7 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
     Patch:
       - [ byte, 0x004e8b9b, 0x00 ]
   "Enable Car Debug":
+    Notes: *nfsc_debug_menu
     Games:
       "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
@@ -2410,6 +2417,37 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00663680, 0x60000000 ]
+
+PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
+  "Disable Color Correction":
+    Games:
+      "Need for Speed: Carbon":
+        BLES00020: [ 01.00 ]
+    Author: "xinerki"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x004EB5C7, 0x00 ]
+  "Enable Car Debug":
+    Notes: *nfsc_debug_menu
+    Games:
+      "Need for Speed: Carbon":
+        BLES00020: [ 01.00 ]
+    Author: "xinerki"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00666C94, 0x60000000 ]
+  "Unlock All Things":
+    Notes: *nfsc_unlock_all
+    Games:
+      "Need for Speed: Carbon":
+        BLES00020: [ 01.00 ]
+    Author: "xinerki"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x10188A90, 0x01 ]
 
 Anchors:
   NieR_FPS_Notes: &NieR_FPS_Notes
