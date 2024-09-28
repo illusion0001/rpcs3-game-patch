@@ -11094,6 +11094,7 @@ PPU-487c61a94764c8917da8cad9c8d661260d97d7c9:
         BLUS30847: [ 01.00 ]
     Author: "TriggerHappy"
     Notes:
+    Group: FPS
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00bb8c94, 0x38600001 ]
@@ -11104,17 +11105,30 @@ PPU-487c61a94764c8917da8cad9c8d661260d97d7c9:
         BLUS30847: [ 01.00 ]
     Author: "TriggerHappy"
     Notes:
+    Group: FPS
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00bb85a4, 0x3860000a ]
 
 PPU-5313b423023dbb6020247ceaf77a6557a9ace478:
+  "50 FPS":
+    Games:
+      "Metal Gear Solid 3: Snake Eater - HD Edition":
+        NPEB00684: [ 01.00 ]
+    Author: "TriggerHappy"
+    Notes:
+    Group: FPS
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00bcd518, 0x38600001 ]
+      - [ be32, 0x00bcd51c, 0x4e800020 ]
   "30 FPS":
     Games:
       "Metal Gear Solid 3: Snake Eater - HD Edition":
         NPEB00684: [ 01.00 ]
     Author: "TriggerHappy"
     Notes:
+    Group: FPS
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00bcce9c, 0x3860000a ]
