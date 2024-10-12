@@ -18244,6 +18244,21 @@ PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
     Patch:
       - [ be32, 0x0002a6ac, 0x60000000 ]
 
+PPU-fccf7c4880b7c580c8a15ad2beabd5da59ac0832:
+  "Skip intro":
+    Games:
+      "Assassin's Creed":
+        NPEB00393: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x10044de0, 0x60000000 ]
+      - [ be32, 0x10044dc8, 0x60000000 ]
+      - [ be32, 0x10044db0, 0x60000000 ]
+      - [ be32, 0x10044da0, 0x60000000 ]
+      - [ be32, 0x10044d88, 0x60000000 ]
+
 PPU-d6b889b6081c0d2942b38b8036809cd8aa7e83c7:
   "Redirect logs to tty":
     Games:
