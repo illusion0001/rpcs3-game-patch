@@ -17876,9 +17876,10 @@ Anchors:
   ssx_disc_us_100_titles: &ssx_disc_us_100_titles
     "SSX":
       BLUS30849: [ 01.00 ]
-  ssx_disc_us_103_titles: &ssx_disc_us_103_titles
+  ssx_disc_us_103_titles: &ssx_disc_updated_titles
     "SSX":
       BLUS30849: [ 01.03 ]
+      BLES01437: [ 01.02 ]
   ssx_psn_titles: &ssx_psn_titles
     "SSX":
       NPEB01121: [ 01.02 ]
@@ -17907,14 +17908,14 @@ PPU-7e54736a9aa0a195db2103129972ee0a9a9a4c39:
 
 PPU-3c592821a982e587b06e8b026ece13897eab826f:
   "60 FPS":
-    Games: *ssx_disc_us_103_titles
+    Games: *ssx_disc_updated_titles
     Author: "Margen67"
     Notes:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0075b870, 0x4e800020 ] # blr, cellGcmSetFlipMode case switch
   "1280x720 Resolution":
-    Games: *ssx_disc_us_103_titles
+    Games: *ssx_disc_updated_titles
     Author: "Margen67"
     Notes: *ssx_resolution_notes
     Patch Version: 1.0
