@@ -19801,20 +19801,11 @@ Anchors:
          "Increased FOV (0.8)": 1061997773
          "Heavily increased FOV (0.6)": 1058642330
 
-  inFam1_unst_light_notes: &Infam1_unst_light_notes
-    "Increases FPS by around 50% in certain parts by disabling some shadows and lighting.\nDoesn't help much in sewer areas.\nMay cause glitches with some other effects."
-
   inFam1_dis_refr: &Infam1_dis_refr
     "Disables broken shifting/refracting effect."
 
   inFam1_fov: &Infam1_fov
     "Field Of View.\nLower FOV = Less things to render = slightly higher fps"
-
-  inFam1_unst_vfx: &Infam1_unst_vfx
-    "Increases FPS by about 50% by partially breaking fire, lightning and (some) lighting effects."
-
-  inFam1_unst_audio: &Infam1_unst_audio
-    "Improves sound cackling by disabling some functions related to the audio.\nLightning sounds might be distorted.\nPlease, report any other side effects."
 
   inFam1_disable_splim_notes: &Infam1_disable_splim_notes
     "Disables the slow-down effect when having low FPS.\nIncreasing clocks scale allows to speed up the game."
@@ -19835,14 +19826,6 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.1
     Patch:
       - [ be32, 0x007615d8, 0x3E19999A ]
-  "(Experimental) Unstable lighting":
-    Games: *Infam1_PSNalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_light_notes
-    Patch Version: 1.1
-    Patch:
-      - [ be32, 0x00254b7c, 0x60000000 ]
-      - [ be32, 0x00258d20, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
@@ -19850,13 +19833,6 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00787330, 0x00000000 ]
-  "(Experimental) Unstable visual effects":
-    Games: *Infam1_PSNalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_vfx
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0022065C, 0x60000000 ]
   "Change FOV":
     Games: *Infam1_PSNalltitle
     Author: "Hasster"
@@ -19865,25 +19841,6 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785F04, "FOV" ]
-  "(Experimental) Unstable audio":
-    Games: *Infam1_PSNalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_audio
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00283E50, 0x4e800020 ]
-      - [ be32, 0x0028B598, 0x4e800020 ]
-      - [ be32, 0x0028C760, 0x60000000 ]
-      - [ be32, 0x00504548, 0x4e800020 ]
-      - [ be32, 0x0050B2E0, 0x4e800020 ]
-      - [ be32, 0x0050F610, 0x4e800020 ]
-      - [ be32, 0x00510108, 0x60000000 ]
-      - [ be32, 0x005101C4, 0x60000000 ]
-      - [ be32, 0x00519440, 0x4e800020 ]
-      - [ be32, 0x0051A24C, 0x60000000 ]
-      - [ be32, 0x0051A370, 0x60000000 ]
-      - [ be32, 0x00551C60, 0x4e800020 ]
-      - [ be32, 0x0051A208, 0x60000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -19901,14 +19858,6 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.1
     Patch:
       - [ be32, 0x007615d8, 0x3E19999A ]
-  "(Experimental) Unstable lighting":
-    Games: *Infam1_EUdiscalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_light_notes
-    Patch Version: 1.1
-    Patch:
-      - [ be32, 0x00253f6c, 0x60000000 ]
-      - [ be32, 0x00258110, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
@@ -19916,13 +19865,6 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00786910, 0x00000000 ]
-  "(Experimental) Unstable visual effects":
-    Games: *Infam1_EUdiscalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_vfx
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0021fa64, 0x60000000 ]
   "Change FOV":
     Games: *Infam1_EUdiscalltitle
     Author: "Hasster"
@@ -19931,25 +19873,6 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007854dc, "FOV" ]
-  "(Experimental) Unstable audio":
-    Games: *Infam1_EUdiscalltitle
-    Author: "Hasster"
-    Notes: *Infam1_unst_audio
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x002833e0, 0x4e800020 ]
-      - [ be32, 0x0028ab28, 0x4e800020 ]
-      - [ be32, 0x0028bcf0, 0x60000000 ]
-      - [ be32, 0x00503ad8, 0x4e800020 ]
-      - [ be32, 0x0050a870, 0x4e800020 ]
-      - [ be32, 0x0050eba0, 0x4e800020 ]
-      - [ be32, 0x0050f698, 0x60000000 ]
-      - [ be32, 0x0050f754, 0x60000000 ]
-      - [ be32, 0x005189d0, 0x4e800020 ]
-      - [ be32, 0x005197dc, 0x60000000 ]
-      - [ be32, 0x00519900, 0x60000000 ]
-      - [ be32, 0x005511f0, 0x4e800020 ]
-      - [ be32, 0x00519798, 0x60000000 ]
 
 PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
   "All powers unlocked":
@@ -19971,16 +19894,6 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
     Patch Version: 1.1
     Patch:
       - [ be32, 0x007615d8, 0x3E19999A ]
-  "(Experimental) Unstable lighting":
-    Games:
-      "inFamous":
-        BCES00220: [ 01.02 ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_light_notes
-    Patch Version: 1.1
-    Patch:
-      - [ be32, 0x00253f84, 0x60000000 ]
-      - [ be32, 0x00258128, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games:
       "inFamous":
@@ -19990,15 +19903,6 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00786910, 0x00000000 ]
-  "(Experimental) Unstable visual effects":
-    Games:
-      "inFamous":
-        BCES00220: [ 01.02 ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_vfx
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0021fa84, 0x60000000 ]
   "Change FOV":
     Games:
       "inFamous":
@@ -20009,27 +19913,6 @@ PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007854dc, "FOV" ]
-  "(Experimental) Unstable audio":
-    Games:
-      "inFamous":
-        BCES00220: [ 01.02 ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_audio
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x002833f8, 0x4e800020 ]
-      - [ be32, 0x0028ab40, 0x4e800020 ]
-      - [ be32, 0x0028bd08, 0x60000000 ]
-      - [ be32, 0x00503b40, 0x4e800020 ]
-      - [ be32, 0x0050a8d8, 0x4e800020 ]
-      - [ be32, 0x0050ec08, 0x4e800020 ]
-      - [ be32, 0x0050f700, 0x60000000 ]
-      - [ be32, 0x0050f7bc, 0x60000000 ]
-      - [ be32, 0x00518a38, 0x4e800020 ]
-      - [ be32, 0x00519844, 0x60000000 ]
-      - [ be32, 0x00519968, 0x60000000 ]
-      - [ be32, 0x00551258, 0x4e800020 ]
-      - [ be32, 0x00519800, 0x60000000 ]
 
 PPU-412a9bf323b4743de21658a286f71dbe82cad807:
   "All powers unlocked":
@@ -20051,16 +19934,6 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.1
     Patch:
       - [ be32, 0x00761590, 0x3E19999A ] #default - 0.06, increased to 0.15, too high number = game start ignoring emulator's pause.
-  "(Experimental) Unstable lighting":
-    Games:
-      "inFamous":
-        BCUS98119: [ All ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_light_notes
-    Patch Version: 1.1
-    Patch:
-      - [ be32, 0x0025410c, 0x60000000 ]
-      - [ be32, 0x002582b0, 0x60000000 ]
   "Disable refraction/shifting effect":
     Games:
       "inFamous":
@@ -20070,15 +19943,6 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007868c0, 0x00000000 ]
-  "(Experimental) Unstable visual effects":
-    Games:
-      "inFamous":
-        BCUS98119: [ All ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_vfx
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0021fbec, 0x60000000 ]
   "Change FOV":
     Games:
       "inFamous":
@@ -20089,27 +19953,6 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785494, "FOV" ]
-  "(Experimental) Unstable audio":
-    Games:
-      "inFamous":
-        BCUS98119: [ All ]
-    Author: "Hasster"
-    Notes: *Infam1_unst_audio
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x00283380, 0x4e800020 ]
-      - [ be32, 0x0028aad8, 0x4e800020 ]
-      - [ be32, 0x0028bca0, 0x60000000 ]
-      - [ be32, 0x00503bf0, 0x4e800020 ]
-      - [ be32, 0x0050a988, 0x4e800020 ]
-      - [ be32, 0x0050ecb8, 0x4e800020 ]
-      - [ be32, 0x0050f7b0, 0x60000000 ]
-      - [ be32, 0x0050f86c, 0x60000000 ]
-      - [ be32, 0x00518ae8, 0x4e800020 ]
-      - [ be32, 0x005198f4, 0x60000000 ]
-      - [ be32, 0x00519a18, 0x60000000 ]
-      - [ be32, 0x00551308, 0x4e800020 ]
-      - [ be32, 0x005198b0, 0x60000000 ]
 
 PPU-e27b1dd51632a8712d2bcab7184374fcb5b57ad8:
   "60 FPS":
