@@ -9670,12 +9670,20 @@ Anchors:
       NPEA00241: [ 01.30 ]
       NPUA80472: [ 01.30 ]
       NPJA00052: [ 01.30 ]
+  
+  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
+  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
+  lbp_custom_digest: &lbp_custom_digest
+    "CustomServerDigest"
 
   lbp_server_url_beacon: &lbp_server_url_beacon
     "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
 
   lbp_server_url_infinite: &lbp_server_url_infinite
     "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp_server_url_lbr: &lbp_server_url_lbr
+    "http://lbp.littlebigrefresh.com:2095/lbp\0"
 
 PPU-545c1abbf1c562d60fca7435401f020beab76b53:
   "Create Mode":
@@ -9703,6 +9711,16 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Patch:
       - [ utf8, 0x00767c40, *lbp_server_url_infinite ] # https server url
       - [ utf8, 0x00767cf8, *lbp_server_url_infinite ] # http server url
+  "LittleBigRefresh Custom Server":
+    Games: *lbp_130title
+    Author: "uh wot"
+    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00767c40, *lbp_server_url_lbr ] # https server url
+      - [ utf8, 0x00767cf8, *lbp_server_url_lbr ] # http server url
+      - [ utf8, 0x0079fbc0, *lbp_custom_digest ] # digest key
 
 Anchors:
   lbp3_126title: &lbp3_126title
@@ -9716,11 +9734,19 @@ Anchors:
       NPUA81116: [ 01.26 ]
       NPHA80277: [ 01.26 ]
 
+  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
+  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
+  lbp3_custom_digest: &lbp3_custom_digest
+    "CustomServerDigest"
+
   lbp3_server_url_beacon: &lbp3_server_url_beacon
     "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
 
   lbp3_server_url_infinite: &lbp3_server_url_infinite
     "http://lnfinite.site/LITTLEBIGPLANETPS3_XML\0"
+
+  lbp3_server_url_lbr: &lbp3_server_url_lbr
+    "http://lbp.littlebigrefresh.com:2095/lbp\0"
 
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Create Mode":
@@ -9752,6 +9778,18 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
       - [ utf8, 0x00d9e53c, *lbp3_server_url_infinite ] # presence server url
       - [ utf8, 0x00d9e58c, *lbp3_server_url_infinite ] # live server url
       - [ utf8, 0x00d9e5d8, *lbp3_server_url_infinite ] # http server url
+  "LittleBigRefresh Custom Server":
+    Games: *lbp3_126title
+    Author: "uh wot"
+    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
+    Group: CustomServer
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d9e4c4, *lbp3_server_url_lbr ] # https server url
+      - [ utf8, 0x00d9e53c, *lbp3_server_url_lbr ] # presence server url
+      - [ utf8, 0x00d9e58c, *lbp3_server_url_lbr ] # live server url
+      - [ utf8, 0x00d9e5d8, *lbp3_server_url_lbr ] # http server url
+      - [ utf8, 0x00d8bd08, *lbp3_custom_digest ] # digest key
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
