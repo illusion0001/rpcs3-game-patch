@@ -11211,6 +11211,8 @@ Anchors:
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
   uc1_zfightingfix_notes: &uc1_zfightingfix_notes
     "Disables Reload Depth Cull Buffer, restores performance after enabling WCB/WDB, especially using higher resolutions, fixes flickering surfaces."
+  uc1_fps_notes: &uc1_fps_notes
+    "Cutscenes speed is still affected, set Frame Limit to 60."
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
   "Disable Motion Blur":
@@ -11309,6 +11311,13 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e52a0, 0x981d ]
+  "Unlock FPS":
+    Games: *uc1_disc101title
+    Author: "FlexBy"
+    Notes: *uc1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00143810, 0x60000000 ]
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
@@ -11361,6 +11370,13 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x000e52a0, 0x981d ]
+  "Unlock FPS":
+    Games: *uc1_disc101asiatitle
+    Author: "FlexBy"
+    Notes: *uc1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00143810, 0x60000000 ]
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
   "Disable Motion Blur":
