@@ -11206,7 +11206,7 @@ Anchors:
     - [ be16, 0x00071ed0, 0x4800 ] # particles
 
   uc1_unlockfps_101_disc: &uc1_unlockfps_101_disc
-    - [ byte, 0x000e515f, 0x00 ] # 0 - unlock fps # 1 - 60 fps # 2 - 30 fps (mem address: 00BB4350)
+    - [ be32, 0x000e515c, 0x60000000 ] # (mem address: 00BB4350) # 0 - unlock fps # 1 - 60 fps # 2 - 30 fps 
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
