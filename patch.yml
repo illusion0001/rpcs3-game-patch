@@ -3414,6 +3414,8 @@ Anchors:
     "Run at any FPS with proper game speed. Increase VBlank for 30+ FPS."
   mcla_online_notes: &mcla_online_notes
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
+  mcla_skipintro_notes: &mcla_skipintro_notes
+    "Breaks ingame graphics."
 
   mclaPSN_100_title: &mclaPSN_100_title
     "Midnight Club: Los Angeles Complete Edition":
@@ -3464,7 +3466,7 @@ PPU-227161a77f7e40eed0ad08ecfd1133a10eca2854:
   "Skip Intro":
     Games: *mclaPSN_100_title
     Author: "illusion"
-    Notes:
+    Notes: *mcla_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b2410, 0x48000038 ]
@@ -3517,7 +3519,7 @@ PPU-9d8f7464991444526c6f9ca001dc1eb061fe367b:
   "Skip Intro":
     Games: *mclacedisc_106_title
     Author: "illusion"
-    Notes:
+    Notes: *mcla_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b31b0, 0x48000038 ]
@@ -3570,7 +3572,7 @@ PPU-e9ad80fbf54bf611f650b6be5ef0611c5373db9a:
   "Skip Intro":
     Games: *mcladisc_106_title
     Author: "illusion, FlexBy"
-    Notes:
+    Notes: *mcla_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b3100, 0x48000038 ]
@@ -3629,7 +3631,7 @@ PPU-60ec03e6257d5b53e93ed7f0caf45141a78ff633:
       "Midnight Club: Los Angeles":
         BLJS10046: [ 01.04 ]
     Author: "illusion, FlexBy"
-    Notes:
+    Notes: *mcla_skipintro_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002b5320, 0x48000038 ]
