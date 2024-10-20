@@ -11221,7 +11221,7 @@ Anchors:
 
   uc1_ddof_101_disc: &uc1_ddof_101_disc
     - [ be32, 0x000e5284, 0x60000000 ] # (mem address: 0xbb43dc)
-    - [ be32, 0x000e5288, 0x60000000 ]
+  #  - [ be32, 0x000e5288, 0x60000000 ]
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
@@ -11281,12 +11281,12 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Games: *uc1_disc101title
     Author: "illusion"
     Notes:
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ load, *uc1_mb_101_disc ]
   "Disable Depth of Field":
     Games: *uc1_disc101title
-    Author: "illusion, FlexBy"
+    Author: "illusion"
     Notes:
     Patch Version: 2.0
     Patch:
@@ -11339,12 +11339,12 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Games: *uc1_disc101asiatitle
     Author: "illusion"
     Notes:
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ load, *uc1_mb_101_disc ]
   "Disable Depth of Field":
     Games: *uc1_disc101asiatitle
-    Author: "illusion, FlexBy"
+    Author: "illusion"
     Notes:
     Patch Version: 2.0
     Patch:
