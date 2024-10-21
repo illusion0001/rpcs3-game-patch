@@ -11210,8 +11210,14 @@ Anchors:
   uc1_unlockfps_101_disc: &uc1_unlockfps_101_disc
     - [ be32, 0x000e515c, 0x60000000 ] # (mem address: 0x00bb4350) # 0 - unlock fps # 1 - 60 fps # 2 - 30 fps
 
+  uc1_unlockfps_all_psn: &uc1_unlockfps_all_psn
+    - [ be32, 0x000e510c, 0x60000000 ]
+
   uc1_debug_menu_101_disc: &uc1_debug_menu_101_disc
     - [ be16, 0x0004b6ac, 0x409e ]
+
+  uc1_debug_menu_101_disc: &uc1_debug_menu_all_psn
+    - [ be16, 0x0004b5c4, 0x419e ] # has it's function branched out!
 
   uc1_zfightingfix_101_disc: &uc1_zfightingfix_101_disc
     - [ be16, 0x000e52a0, 0x981d ]
@@ -11222,6 +11228,12 @@ Anchors:
   uc1_ddof_101_disc: &uc1_ddof_101_disc
     - [ be32, 0x000e5284, 0x60000000 ] # (mem address: 0xbb43dc)
   #  - [ be32, 0x000e5288, 0x60000000 ]
+
+  uc1_mb_101_disc: &uc1_mb_all_psn
+    - [ be32, 0x000e522c, 0x60000000 ] # (mem address: 0xbb321a)
+
+  uc1_ddof_101_disc: &uc1_ddof_all_psn
+    - [ be32, 0x000e5234, 0x60000000 ] # (mem address: 0xbb321c)
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
@@ -11393,27 +11405,27 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
       - [ load, *uc1_unlockfps_101_disc ]
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
-#  "Disable Motion Blur":
-#    Games: *uc1_PSNalltitle
-#    Author: "illusion"
-#    Notes:
-#    Patch Version: 1.0
-#    Patch:
-#      - [ be16, 0x000e5234, 0x995d ] # (mem address: 0xbb321a)
-#  "Disable Depth of Field":
-#    Games: *uc1_PSNalltitle
-#    Author: "illusion"
-#    Notes:
-#    Patch Version: 1.0
-#    Patch:
-#      - [ be16, 0x000e522c, 0x995d ] # (mem address: 0xbb321c)
+  "Disable Motion Blur":
+    Games: *uc1_PSNalltitle
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_mb_all_psn ]
+  "Disable Depth of Field":
+    Games: *uc1_PSNalltitle
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_ddof_all_psn]
   "Debug Menu":
     Games: *uc1_PSNalltitle
     Author: "dron_3, HdHereidme, illusion"
     Notes: *uc1_debugmenu_notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x0004b5c4, 0x419e ] # has it's function branched out!
+      - [ load, *uc1_debug_menu_all_psn ]
   "Bug Fix: Slow Init Times":
     Games: *uc1_PSNalltitle
     Author: "illusion"
@@ -11421,6 +11433,13 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b5d4, 0x409e ]
+  "Unlock FPS":
+    Games: *uc1_PSNalltitle
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_unlockfps_all_psn ]
 
 PPU-66cf2ffcfb251ec0b2a1d261fe97d30a3acab015:
   "Debug Menu":
