@@ -11216,11 +11216,14 @@ Anchors:
   uc1_debug_menu_101_disc: &uc1_debug_menu_101_disc
     - [ be16, 0x0004b6ac, 0x409e ]
 
-  uc1_debug_menu_101_disc: &uc1_debug_menu_all_psn
+  uc1_debug_menu_all_psn: &uc1_debug_menu_all_psn
     - [ be16, 0x0004b5c4, 0x419e ] # has it's function branched out!
 
   uc1_zfightingfix_101_disc: &uc1_zfightingfix_101_disc
     - [ be16, 0x000e52a0, 0x981d ]
+
+  uc1_zfightingfix_all_psn: &uc1_zfightingfix_all_psn
+    - [ be16, 0x000e5250, 0x981d ]
 
   uc1_mb_101_disc: &uc1_mb_101_disc
     - [ be32, 0x000e527c, 0x60000000 ] # (mem address: 0xbb43d7)
@@ -11229,10 +11232,10 @@ Anchors:
     - [ be32, 0x000e5284, 0x60000000 ] # (mem address: 0xbb43dc)
   #  - [ be32, 0x000e5288, 0x60000000 ]
 
-  uc1_mb_101_disc: &uc1_mb_all_psn
+  uc1_mb_all_psn: &uc1_mb_all_psn
     - [ be32, 0x000e522c, 0x60000000 ] # (mem address: 0xbb321a)
 
-  uc1_ddof_101_disc: &uc1_ddof_all_psn
+  uc1_ddof_all_psn: &uc1_ddof_all_psn
     - [ be32, 0x000e5234, 0x60000000 ] # (mem address: 0xbb321c)
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
@@ -11433,6 +11436,13 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0004b5d4, 0x409e ]
+  "WCB Performance & Z-fighting fix":
+    Games: *uc1_PSNalltitle
+    Author: "ZEROx"
+    Notes: *uc1_zfightingfix_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_zfightingfix_all_psn ]
   "Unlock FPS":
     Games: *uc1_PSNalltitle
     Author: "FlexBy"
