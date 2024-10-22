@@ -11208,10 +11208,10 @@ Anchors:
     - [ be16, 0x00071ed0, 0x4800 ] # particles
 
   uc1_unlockfps_101_disc: &uc1_unlockfps_101_disc
-    - [ be32, 0x000e515c, 0x60000000 ] # (mem address: 0x00bb4350) # 0 - unlock fps # 1 - 60 fps # 2 - 30 fps
+    - [ be16, 0x000e515c, 0x901d ] # (mem address: 0x00bb4350) # 0 - unlock fps # 1 - 60 fps # 2 - 30 fps
 
   uc1_unlockfps_all_psn: &uc1_unlockfps_all_psn
-    - [ be32, 0x000e510c, 0x60000000 ]
+    - [ be16, 0x000e510c, 0x901d ]
 
   uc1_debug_menu_101_disc: &uc1_debug_menu_101_disc
     - [ be16, 0x0004b6ac, 0x409e ]
@@ -11226,10 +11226,10 @@ Anchors:
     - [ be16, 0x000e5250, 0x981d ]
 
   uc1_mb_101_disc: &uc1_mb_101_disc
-    - [ be32, 0x000e527c, 0x60000000 ] # (mem address: 0xbb43d7)
+    - [ be16, 0x000e527c, 0x981d ] # (mem address: 0xbb43d7)
 
   uc1_ddof_101_disc: &uc1_ddof_101_disc
-    - [ be32, 0x000e5284, 0x60000000 ] # (mem address: 0xbb43dc)
+    - [ be16, 0x000e5284, 0x981d ] # (mem address: 0xbb43dc)
   #  - [ be32, 0x000e5288, 0x60000000 ]
 
   uc1_dlight_101_disc: &uc1_dlight_101_disc
@@ -11239,10 +11239,10 @@ Anchors:
     - [ be16, 0x000e524c, 0x981d ]
 
   uc1_mb_all_psn: &uc1_mb_all_psn
-    - [ be32, 0x000e522c, 0x60000000 ] # (mem address: 0xbb321a)
+    - [ be16, 0x000e522c, 0x981d ] # (mem address: 0xbb321a)
 
   uc1_ddof_all_psn: &uc1_ddof_all_psn
-    - [ be32, 0x000e5234, 0x60000000 ] # (mem address: 0xbb321c)
+    - [ be16, 0x000e5234, 0x981d ] # (mem address: 0xbb321c)
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
