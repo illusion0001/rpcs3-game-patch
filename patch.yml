@@ -11232,6 +11232,12 @@ Anchors:
     - [ be32, 0x000e5284, 0x60000000 ] # (mem address: 0xbb43dc)
   #  - [ be32, 0x000e5288, 0x60000000 ]
 
+  uc1_dlight_101_disc: &uc1_dlight_101_disc
+    - [ be16, 0x000e529c, 0x981d ] # (mem address: 0xbb43e0)
+
+  uc1_dlight_all_psn: &uc1_dlight_all_psn
+    - [ be16, 0x000e524c, 0x981d ]
+
   uc1_mb_all_psn: &uc1_mb_all_psn
     - [ be32, 0x000e522c, 0x60000000 ] # (mem address: 0xbb321a)
 
@@ -11244,6 +11250,8 @@ Anchors:
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
   uc1_zfightingfix_notes: &uc1_zfightingfix_notes
     "Disables Reload Depth Cull Buffer, restores performance after enabling WCB/WDB, especially using higher resolutions, fixes flickering surfaces."
+  uc1_dlight_notes: &uc1_dlight_notes
+    "Slightly improves performance at the cost of worse graphics."
 
 PPU-8007056e52279bea26c15669d1ee08c2df321d00:
 #  "Disable Motion Blur":
@@ -11348,6 +11356,13 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
     Patch Version: 2.0
     Patch:
       - [ load, *uc1_unlockfps_101_disc ]
+  "Disable Dynamic Lighting":
+    Games: *uc1_disc101title
+    Author: "FlexBy"
+    Notes: *uc1_dlight_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_dlight_101_disc ]
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
@@ -11406,6 +11421,13 @@ PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
     Patch Version: 2.0
     Patch:
       - [ load, *uc1_unlockfps_101_disc ]
+  "Disable Dynamic Lighting":
+    Games: *uc1_disc101asiatitle
+    Author: "FlexBy"
+    Notes: *uc1_dlight_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_dlight_101_disc ]
 
 PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
   "Disable Motion Blur":
@@ -11450,6 +11472,13 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch Version: 1.0
     Patch:
       - [ load, *uc1_unlockfps_all_psn ]
+  "Disable Dynamic Lighting":
+    Games: *uc1_PSNalltitle
+    Author: "FlexBy"
+    Notes: *uc1_dlight_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *uc1_dlight_all_psn ]
 
 PPU-66cf2ffcfb251ec0b2a1d261fe97d30a3acab015:
   "Debug Menu":
