@@ -1753,6 +1753,17 @@ PPU-b1188c0e10fac40e006d51e0ff1aa5fafc3a0699:
     Patch:
       - [ be32, 0x00191b3c, 0x60000000 ]
 
+PPU-cb9a58697797e5898d5fe478cf4d4f8a2b93be32:
+  "Unlock FPS":
+    Games:
+      "Alien Rage":
+        NPEB01088: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00349394, 0x60000000 ]
+
 PPU-b1e59eaf823c7ed77022575740055f06cc605661:
   "Unlock FPS":
     Games:
