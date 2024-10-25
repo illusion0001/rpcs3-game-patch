@@ -2803,6 +2803,17 @@ PPU-c0a65507d3e05da170b8dbde0729ce7ee40ef906:
     Patch:
       - [ load, *DS2_JP_Net ]
 
+PPU-335430b0f98f9dccde34df782904f00d23fdd99a:
+  "Unlock FPS":
+    Games:
+      "Dark Void Demo":
+        NPUB90296: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 58 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00269f28, 0x60000000 ]
+
 Anchors:
   50cent_openspy_notes: &50cent_openspy_notes
     "Updates references from gamespy.com to openspy.net. Allows to play multiplayer."
