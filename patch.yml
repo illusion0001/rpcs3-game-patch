@@ -3073,6 +3073,17 @@ PPU-49aef7eecc248bf85af210bdca336bce8c9272e4:
       - [ be32, 0x001622dc, 0x60000000 ] # No reset
       - [ be32, 0x0016349c, 0x60000000 ] # Pause fix
 
+PPU-6cc7119a6d93f10cf3c237987c541015d0290ad4:
+  "Unlock FPS":
+    Games:
+      "Doctor Who: The Eternity Clock":
+        NPUB30751: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0032c900, 0x60000000 ]
+
 Anchors:
   dmcdmc_debugmenu_notes: &dmcdmc_debugmenu_notes
     "SELECT+START = Brings menu.\nUsing the menu makes the screen red until a new map will be loaded."
