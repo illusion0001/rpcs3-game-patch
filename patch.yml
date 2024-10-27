@@ -22510,6 +22510,29 @@ PPU-c15ca5b52f71ad0fa0a727eb289a2f95aa1ba217:
     Patch:
       - [ be32, 0x002cc070, 0x60000000 ]
 
+PPU-6ce87977985acc3f114b29968939e035f806dc7c:
+  "Unlock FPS":
+    Games:
+      "Transformers: War for Cybertron":
+        BLUS30357: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00200de4, 0xc03f0bb8 ] # lfs f1, 0xbb8 (r31)
+
+PPU-54853538c1d5083369c46b16304ad8e51fdc77d3:
+  "Unlock FPS":
+    Games:
+      "Transformers: War for Cybertron":
+        BLUS30357: [ 01.01 ]
+        BLES00833: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0020099c, 0xc03f0bb8 ] # lfs f1, 0xbb8 (r31)
+
 PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
   "60 FPS":
     Games:
