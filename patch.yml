@@ -20679,6 +20679,14 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
     Patch:
       - [ be32, 0x0034ad50, 0x38600001 ] # li r3, 1
       - [ be32, 0x0034ad54, 0x4e800020 ] # blr
+  "Items Advanced Tooltip":
+    Games: *minecraft_184
+    Author: "Bagieta"
+    Patch Version: 1.0
+    Notes: "Enables Items advanced Tooltips"
+    Patch:
+      - [ be32, 0x00977198, 0x38600001 ] # li r3, 1
+      - [ be32, 0x0097719C, 0x4E800020 ] # blr
 
 PPU-565327e8098ac4e0cf0df7ca74d97332a7f26e2b:
   "OpenSpy Online":
