@@ -4514,6 +4514,10 @@ PPU-16506d9d5bf692d615645accd24bca1ee1f8f9a6:
       - [ be16, 0x005372aa, 1280 ]
       - [ be16, 0x005372b2, 704 ]
 
+Anchors:
+  rfqfb_resolution_notes: &rfqfb_resolution_notes
+    "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
+
 PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
   "Unlock FPS":
     Games:
@@ -4539,6 +4543,19 @@ PPU-f07f7086588a4ea86a28bd768f0cbe710f5b813b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0034e658, 0xd03d0008 ]
+  "1280x704 Resolution":
+    Games:
+      "Ratchet & Clank Future: Quest for Booty":
+        BCAS20052: [ All ]
+        BCES00301: [ All ]
+        NPEA00088: [ All ]
+        NPEA00106: [ All ]
+    Author: "Rib"
+    Notes: *rfqfb_resolution_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x003e84f2, 1280 ]
+      - [ be16, 0x003e850e, 704 ]
 
 PPU-1d9e99e1f091cfbdf1714d04e690d9cd816e2971:
   "Unlock FPS":
@@ -4740,7 +4757,7 @@ PPU-13aad40a243857b2b18b8ab2fa0669220fcd644e:
     Patch Version: 1.0
     Patch:
       - [ be16, 0x0032a7a6, 1280 ]
-      - [ be16, 0x0032a7a6, 720 ]
+      - [ be16, 0x0032a7d6, 720 ]
 
 PPU-139ccf98a8417bd91a222f3d61d6de0860b8c436:
   "1280x720 Resolution":
