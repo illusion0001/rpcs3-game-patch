@@ -14627,6 +14627,16 @@ PPU-fb1e9e9160613b89047715ce62f2da97201118d1:
     Patch Version: 1.0
     Patch:
       - [ load, *sly4_mlaa_EU ]
+  "Skip Intro":
+    Games:
+      "Sly Cooper: Thieves in Time":
+        NPEA00429: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00ae9a74, 0x60000000 ]
+      - [ be32, 0x00498840, 0x60000000 ]
 
 PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
   "Disable MLAA":
