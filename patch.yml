@@ -21802,6 +21802,28 @@ PPU-f89b6fc155bf75951c41f50e251c2c0629979966:
       - [ be32, 0x00e3d544, 0x60000000 ]
       - [ be32, 0x00e3d558, 0x60000000 ]
 
+PPU-9aed957ed218dec8c0eaa3cfc47efb40f16bbb9b:
+  "Unlock FPS":
+    Games:
+      "Serious Sam 3: BFE":
+        NPEB01318: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00622b68, 0x60000000 ]
+
+PPU-e6239716dcf0073e89daf296571da42da6937b9f:
+  "Unlock FPS":
+    Games:
+      "Serious Sam 3: BFE":
+        NPEB01318: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00622be0, 0x60000000 ]
+
 PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
   "60 FPS":
     Games:
