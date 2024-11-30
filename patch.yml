@@ -22399,6 +22399,24 @@ PPU-b0b1d7267608ee6ed8c797b9588a5d53bbe50736:
     Patch:
       - [ be32, 0x00364ebc, 0x38600001 ]
 
+PPU-54246d3cd421815744de78306800c65708727e73:
+  "OpenSpy Online":
+    Games:
+      "TimeShift":
+        BLES00159: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x1000537d, "openspy.net" ]
+      - [ utf8, 0x10005670, "openspy.net" ]
+      - [ utf8, 0x100056ba, "openspy.net" ]
+      - [ utf8, 0x10005850, "openspy.net" ]
+      - [ utf8, 0x10005868, "openspy.net" ]
+      - [ utf8, 0x10005880, "openspy.net" ]
+      - [ utf8, 0x10005d44, "openspy.net" ]
+      - [ utf8, 0x10005dc4, "openspy.net" ]
+
 Anchors:
   TokyoJungleMLAAPSN: &TokyoJungleMLAAPSN
     - [ be32, 0x00018d64, 0x60000000 ]
