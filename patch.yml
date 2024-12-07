@@ -21509,7 +21509,7 @@ PPU-bf9bd8f3f76e3bc53cbec32434510ce738936224:
 
 Anchors:
   residentevil0_fps_notes: &residentevil0_fps_notes
-    "Cutscene speed is affected. Slightly improves performance."
+    "Slightly improves performance."
 
 PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
   "Unlock FPS":
@@ -21518,10 +21518,9 @@ PPU-08816f4c41c2c351ab86d74f8be68fa1f35463e3:
         NPEB02226: [ 01.00 ]
     Author: "FlexBy"
     Notes: *residentevil0_fps_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x007d35ac, 0x60000000 ]
-      - [ be32, 0x007d35c0, 0x60000000 ]
+      - [ be32, 0x003c2790, 0x60000000 ]
 
 PPU-1c17ceefd7d33372d1eb73d26afd149186950114:
   "Unlock FPS":
@@ -21531,10 +21530,9 @@ PPU-1c17ceefd7d33372d1eb73d26afd149186950114:
         NPJB00726: [ 01.00 ]
     Author: "FlexBy"
     Notes: *residentevil0_fps_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x007d34cc, 0x60000000 ]
-      - [ be32, 0x007d34e0, 0x60000000 ]
+      - [ be32, 0x003c26b0, 0x60000000 ]
 
 PPU-0cfd47dd8d08216086672b22794d946416ac8640:
   "Unlock FPS":
@@ -21543,10 +21541,9 @@ PPU-0cfd47dd8d08216086672b22794d946416ac8640:
         BLJM61272: [ 01.00 ]
     Author: "FlexBy"
     Notes: *residentevil0_fps_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x007d68ac, 0x60000000 ]
-      - [ be32, 0x007d68c0, 0x60000000 ]
+      - [ be32, 0x003c34f0, 0x60000000 ]
 
 PPU-1656535f9f43b65a3623f85db15c8ea88907dcdd:
   "Unlock FPS":
