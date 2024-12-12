@@ -1546,7 +1546,7 @@ PPU-66404421d1f8ed7dd0b2898e1d015a44bf273bf8:
   "Unlock FPS":
     Games:
       "Folklore":
-        BCES00050: [ All ]
+        BCES00050: [ 01.00 ]
     Author: "Whatcookie"
     Notes: *Folklore_FPS_Notes
     Patch Version: 1.0
