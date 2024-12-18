@@ -9033,7 +9033,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Patch:
       - [ be32, 0x0096e788, 0x60000000 ]
       - [ be32, 0x0096e958, 0x60000000 ]
-      - [ bef32, 0x01386573, "Screen Type" ] # 1 = normal screen| 2 = horizontal screen| 3 = vertical screen| 4 = normal screen| 5 = 3d screen
+      - [ bef32, 0x01386573, "Screen Type" ] # 1 = normal screen # 2 = horizontal screen # 3 = vertical screen # 4 = normal screen # 5 = 3d screen
 
 PPU-e63051dc8ec0f9256f047f62a6abd0e955805419:
   "Bug Fix: Crash on Entering LAN MP Menu":
