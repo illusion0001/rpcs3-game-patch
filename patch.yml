@@ -19216,8 +19216,8 @@ PPU-81d844f449c7145f458823338ddbc77628a0f2e1:
     Notes: *ddogma_fps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00c355d4, 0x60000000 ]
-      - [ be32, 0x00c355e0, 0x60000000 ]
+      - [ be32, 0x00f584b4, 0x60000000 ]
+      - [ be32, 0x00f584c8, 0x60000000 ]
 
 PPU-6aef809b5a3d40948a5b99bd4c6e864edb5fe4f9:
   "Unlock FPS":
