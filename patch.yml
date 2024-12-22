@@ -19205,6 +19205,18 @@ PPU-ec112cfa3c2dae2ea6295d0e091bed942d550ff7:
       - [ be32, 0x00f5aab4, 0x60000000 ]
       - [ be32, 0x00f5aac8, 0x60000000 ]
 
+PPU-8be4f485f968b93ff712c670a4f5d89b8e4c6f3c:
+  "Unlock FPS":
+    Games:
+      "Dragon's Dogma: Dark Arisen":
+        NPUB31117: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *ddogma_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f580c4, 0x60000000 ]
+      - [ be32, 0x00f580d8, 0x60000000 ]
+
 PPU-81d844f449c7145f458823338ddbc77628a0f2e1:
   "Unlock FPS":
     Games:
