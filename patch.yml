@@ -18045,6 +18045,44 @@ PPU-4ce97e5717c82e5d38f29375c8853adb2f7b3b80:
     Patch:
       - [ be32, 0x013e3238, 0x60000000 ]
 
+PPU-b90983d28f1b1b00390341ea7167ec3067fea57a:
+  "60 FPS":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30121: [ 01.20 ]
+    Author: "illusion"
+    Notes: *bfbc_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_fps ]
+  "Dev Menu":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30121: [ 01.20 ]
+    Author: "Heico (BFBC2Toolkit), illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc_full_v120_devmenu ]
+  "No Film Grain":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30121: [ 01.20 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x014b1158, 0x60000000 ]
+  "Skip Intro":
+    Games:
+      "Battlefield: Bad Company":
+        BLUS30121: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *bfbc_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x013e3238, 0x60000000 ]
+
 PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
   "60 FPS":
     Games:
