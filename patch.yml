@@ -18104,6 +18104,24 @@ PPU-ef7e4c1262cbd95d7267ed6d75e981003850f5d6:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc_full_v120_devmenu ]
+  "No Film Grain":
+    Games:
+      "Battlefield: Bad Company":
+        BLJM60071: [ 01.20 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x014b1158, 0x60000000 ]
+  "Skip Intro":
+    Games:
+      "Battlefield: Bad Company":
+        BLJM60071: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *bfbc_skipintro_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x013e3238, 0x60000000 ]
 
 Anchors:
   bf4120_title: &bf4120_title
