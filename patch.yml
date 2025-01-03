@@ -665,7 +665,7 @@ Anchors:
     - [ be32, 0x000eb16c, 0x3fc00000 ] # Zoom+ 21:9
 
   kh15_60fps_notes: &kh15_60fps_notes
-    "May work with JP version with adjustments. May cause double cutscenes audio and/or video."
+    "May work with JP version with adjustments. May cause double cutscenes audio and/or video. May also cause some trinity cutscenes to loop as white screen."
   kh15_60fps: &kh15_60fps
     - [ be32, 0x00036870, 0x38600000 ] # li r3, 0x0
 
