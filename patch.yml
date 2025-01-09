@@ -1381,6 +1381,13 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
       - [ utf8, 0x00c51b68, *lbp2_server_url_lbr ]
       - [ utf8, 0x00c51c08, *lbp2_server_url_lbr ]
       - [ utf8, 0x00c361d0, *lbp2_custom_digest ] # Digest key
+  "Disable Score Bubble FX":
+    Games: *lbp2_133title
+    Author: "ennuo"
+    Notes: "Disables score bubble effects for extra performance."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002f4fb4, 0x4e800020 ]
 
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
@@ -9820,6 +9827,13 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
       - [ utf8, 0x00767c40, *lbp_server_url_lbr ] # https server url
       - [ utf8, 0x00767cf8, *lbp_server_url_lbr ] # http server url
       - [ utf8, 0x0079fbc0, *lbp_custom_digest ] # digest key
+  "Disable Score Bubble FX":
+    Games: *lbp_130title
+    Author: "ennuo"
+    Notes: "Disables score bubble effects for extra performance."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0017cef0, 0x4e800020 ]
 
 Anchors:
   lbp3_126title: &lbp3_126title
@@ -9889,6 +9903,13 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
       - [ utf8, 0x00d9e58c, *lbp3_server_url_lbr ] # live server url
       - [ utf8, 0x00d9e5d8, *lbp3_server_url_lbr ] # http server url
       - [ utf8, 0x00d8bd08, *lbp3_custom_digest ] # digest key
+  "Disable Score Bubble FX":
+    Games: *lbp3_126title
+    Author: "ennuo"
+    Notes: "Disables score bubble effects for extra performance."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00366570, 0x4e800020 ]
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
@@ -15948,6 +15969,12 @@ Anchors:
     - [ bef32, 0x0137e6ec, "Aspect Ratio" ]
   modnation_ar_beta: &modnation_ar_beta
     - [ bef32, 0x00dc61d8, "Aspect Ratio" ]
+  modnation_disable_cache_notes: &modnation_disable_cache_notes
+    "Disables caching textures for karts/mods to prevent texture issues, may cause slower loads"
+  modnation_disable_cache: &modnation_disable_cache
+    - [ byte, 0x0137ef12, 0 ] # byte, 0
+    - [ byte, 0x014f5178, 0 ] # byte, 0
+    - [ byte, 0x014f5179, 0 ] # byte, 0
 
 PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
   "Always 1280x720 Resolution":
@@ -15973,6 +16000,13 @@ PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
     Patch Version: 1.0
     Patch:
       - [ load, *modnation_fov ]
+  "Disable Customization Cache":
+    Games: *modnation_111_us
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
 
 PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
   "Always 1280x720 Resolution":
@@ -15998,6 +16032,46 @@ PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
     Patch Version: 1.0
     Patch:
       - [ load, *modnation_fov ]
+  "Disable Customization Cache":
+    Games: *modnation_111_eu
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
+
+PPU-d0e40a676132671ac1777a6a8b38ccd8627d789f:
+  "Disable Customization Cache":
+    Games:
+      "ModNation Racers":
+        BCUS98167: [ 01.11 ]
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
+
+PPU-d44b69554c35be2f5c08298a40b7115ac7471a30:
+  "Disable Customization Cache":
+    Games:
+      "ModNation Racers":
+        BCES00764: [ 01.11 ]
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
+
+PPU-a9fde3bf97dd0169b56676552394054e9e2b7b2d:
+  "Disable Customization Cache":
+    Games:
+      "ModNation Racers":
+        BCES00701: [ 01.11 ]
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
 
 PPU-8666a1d09c0f973ba0887e9c665431e3497a59b6:
   "Always 1280x720 Resolution":
