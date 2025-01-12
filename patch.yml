@@ -22516,6 +22516,16 @@ PPU-a4304e835c5dde6a2be32351a0db9d0e7600bc8c: # TF.SELF 1.10
     Patch Version: 1.0
     Patch:
     - [ be32, 0x009170d4, 0x60000000 ]
+  "Bypass SSL":
+    Games:
+      "Team Fortress 2":
+        BLES00153: [ 01.10 ]
+        BLUS30055: [ 01.10 ]
+    Author: "faith"
+    Notes: "Skip SSL certificate validation"
+    Patch Version: 1.0
+    Patch:
+    - [be32, 0x0165fcf8, 0x38000015]
 
 Anchors:
   tpnm_unlockfps_notes: &tpnm_unlockfps_notes
