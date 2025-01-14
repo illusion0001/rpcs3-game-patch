@@ -2440,9 +2440,8 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       "Need for Speed Carbon":
         BLUS30016: [ 01.00 ]
     Author: "opcode"
-    Patch Version: 1.0
-    Group: ""
     Notes: "Enables more verbose logging"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x006391cc, 0x60000000 ] # nop call that disables logger
   "Disable SSL":
@@ -2450,9 +2449,8 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       "Need for Speed Carbon":
         BLUS30016: [ 01.00 ]
     Author: "opcode"
-    Patch Version: 1.0
-    Group: ""
     Notes: "Disable SSL reverting to plaintext communication for custom servers"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00639204, 0x38800511 ]
 
@@ -2960,9 +2958,8 @@ PPU-97355e97c701cea87a0ed08bce085cac4949dade:
         BLUS30408: [ 01.00 ]
         BLES00659: [ 01.00 ]
     Author: "opcode"
-    Patch Version: 1.0
-    Group: ""
     Notes: "Enables more verbose logging"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00927bfc, 0x60000000 ] # nop call that disables logger
   "Disable SSL":
@@ -2971,9 +2968,8 @@ PPU-97355e97c701cea87a0ed08bce085cac4949dade:
         BLUS30408: [ 01.00 ]
         BLES00659: [ 01.00 ]
     Author: "opcode"
-    Patch Version: 1.0
-    Group: ""
     Notes: "Disable SSL reverting to plaintext communication for custom servers"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x16d4acc, 0x98dd0110 ]
 
@@ -2998,9 +2994,27 @@ PPU-8dc2c858b13b0dd2051c2c43cfea6572a67216b1:
         BLES00168: [ 01.01 ]
     Author: ".Simbo"
     Patch Version: 1.0
-    Notes: "Removes SSL validation for custom servers"
+    Notes: "Disable SSL certificate validation for custom servers"
     Patch:
       - [ be32, 0x0173f2ec, 0x38000015 ]
+  "Enable Log":
+    Games:
+      "Army of TWO":
+        BLES00168: [ 01.01 ]
+    Author: "opcode"
+    Notes: "Enables more verbose logging"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00edbba4, 0x60000000 ] # nop call that disables logger
+  "Disable SSL":
+    Games:
+      "Army of TWO":
+        BLES00168: [ 01.01 ]
+    Author: "opcode"
+    Notes: "Disable SSL reverting to plaintext communication for custom servers"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x015EFB64, 0x98C30110 ]
 
 PPU-976896152cd756aed8ae7cfe8a6e91260bb21361:
   "Unlock FPS":
