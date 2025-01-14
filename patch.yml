@@ -2435,6 +2435,26 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00663680, 0x60000000 ]
+  "Enable Log":
+    Games:
+      "Need for Speed Carbon":
+        BLUS30016: [ 01.00 ]
+    Author: "opcode"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Enables more verbose logging"
+    Patch:
+      - [ be32, 0x006391cc, 0x60000000 ] # nop call that disables logger
+  "Disable SSL":
+    Games:
+      "Need for Speed Carbon":
+        BLUS30016: [ 01.00 ]
+    Author: "opcode"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Disable SSL reverting to plaintext communication for custom servers"
+    Patch:
+      - [ be32, 0x00639204, 0x38800511 ]
 
 PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
   "Disable Color Correction":
@@ -2934,6 +2954,28 @@ PPU-97355e97c701cea87a0ed08bce085cac4949dade:
       - [ be32, 0x003c5f9c, 0x60000000 ]
       - [ be32, 0x003c6000, 0x60000000 ]
       - [ be32, 0x003c6010, 0x60000000 ]
+  "Enable Log":
+    Games:
+      "Army of TWO: The 40th Day":
+        BLUS30408: [ 01.00 ]
+        BLES00659: [ 01.00 ]
+    Author: "opcode"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Enables more verbose logging"
+    Patch:
+      - [ be32, 0x00927bfc, 0x60000000 ] # nop call that disables logger
+  "Disable SSL":
+    Games:
+      "Army of TWO: The 40th Day":
+        BLUS30408: [ 01.00 ]
+        BLES00659: [ 01.00 ]
+    Author: "opcode"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Disable SSL reverting to plaintext communication for custom servers"
+    Patch:
+      - [ be32, 0x16d4acc, 0x98dd0110 ]
 
 PPU-66e68ab81cb8c107687e708170fd7f13cfdd641e:
   "Unlock FPS":
