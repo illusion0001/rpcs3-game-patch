@@ -3053,6 +3053,18 @@ PPU-3a86a608b71f6a2b90ee0d52f4220fe9d1458b8a:
       - [ be32, 0x00cf66f0, 0x992b0000 ]
       - [ be32, 0x00cf66f8, 0x39200000 ]
 
+PPU-1bbb5252ccfd94638be32e1fee0863cea17f2121:
+  "60 FPS":
+    Games:
+      "Castle Crashers":
+        NPEB00293: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Set Frame Limit to 60"
+    Patch Version: 2.0
+    Patch:
+      - [ be32, 0x000956b4, 0x60000000 ]
+      - [ be32, 0x002b2044, 0x3c888889 ]
+
 PPU-ba038bf4525e23b82c34247afc42f3ca2d2c473f:
   "Unlock FPS":
     Games:
