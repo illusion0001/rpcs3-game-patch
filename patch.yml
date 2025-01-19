@@ -9859,6 +9859,21 @@ Anchors:
   lbp_server_url_lbr: &lbp_server_url_lbr
     "http://lbp.littlebigrefresh.com:2095/lbp\0"
 
+  lbp_ar_notes: &lbp_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  lbp_ar_configurable_values: &lbp_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
 PPU-545c1abbf1c562d60fca7435401f020beab76b53:
   "Create Mode":
     Games: *lbp_130title
@@ -9902,6 +9917,14 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0017cef0, 0x4e800020 ]
+  "Aspect Ratio":
+    Games: *lbp_130title
+    Author: "indianaliam1, slashiee"
+    Notes: *lbp_ar_notes
+    Configurable Values: *lbp_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x086e67c, "Aspect Ratio" ]
 
 Anchors:
   lbp3_126title: &lbp3_126title
