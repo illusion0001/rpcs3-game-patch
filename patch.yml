@@ -18794,8 +18794,13 @@ Anchors:
     - [ be32, 0x00f47670, 0x3c004270 ]
     - [ be32, 0x0002446c, 0x60000000 ]
 
+  bfbc2_disc_v105_pl: &bfbc2_disc_v105_pl
+    - [ be32, 0x001c0738, 0x38600007 ]
+
   bfbc2_fps_notes: &bfbc2_fps_notes
     "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS.\nDoesn't work in multiplayer."
+  bfbc2_pl_notes: &bfbc2_pl_notes
+    "Set Console Language to Russian."
 
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "60 FPS":
@@ -18828,6 +18833,15 @@ PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
       - [ be32, 0x007e980c, 0x60000000 ] # nop
       - [ be32, 0x007e9810, 0x7c832378 ] # or r3, r4, r4
       - [ be32, 0x007e9814, 0x48227619 ] # bl j__printf
+  "Polish Language":
+    Games:
+      "Battlefield Bad Company 2":
+        NPEB00724: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *bfbc2_pl_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00208b48, 0x38600007 ]
 
 PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
   "60 FPS":
@@ -18839,6 +18853,15 @@ PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_fps ]
+  "Polish Language":
+    Games:
+      "Battlefield Bad Company 2":
+        BLES00773: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *bfbc2_pl_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_pl ]
 
 PPU-b2e86c6b5376ee547745c7c88f5225d36b1b5b61:
   "60 FPS":
@@ -18850,6 +18873,15 @@ PPU-b2e86c6b5376ee547745c7c88f5225d36b1b5b61:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_fps ]
+  "Polish Language":
+    Games:
+      "Battlefield Bad Company 2":
+        BLES00779: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *bfbc2_pl_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_pl ]
 
 PPU-f3ac28053a7eb0ab988c5cb8d6953da37fb78bea:
   "60 FPS":
