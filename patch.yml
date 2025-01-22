@@ -18797,6 +18797,9 @@ Anchors:
   bfbc2_disc_v105_pl: &bfbc2_disc_v105_pl
     - [ be32, 0x001c0738, 0x38600007 ]
 
+  bfbc2_disc_v105_intro: &bfbc2_disc_v105_intro
+    - [ be32, 0x01222ea0, 0x60000000 ]
+
   bfbc2_fps_notes: &bfbc2_fps_notes
     "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS.\nDoesn't work in multiplayer."
   bfbc2_pl_notes: &bfbc2_pl_notes
@@ -18862,6 +18865,15 @@ PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_pl ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        BLES00773: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_intro ]
 
 PPU-b2e86c6b5376ee547745c7c88f5225d36b1b5b61:
   "60 FPS":
@@ -18882,6 +18894,15 @@ PPU-b2e86c6b5376ee547745c7c88f5225d36b1b5b61:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_pl ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        BLES00779: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_intro ]
 
 PPU-f3ac28053a7eb0ab988c5cb8d6953da37fb78bea:
   "60 FPS":
@@ -18893,6 +18914,15 @@ PPU-f3ac28053a7eb0ab988c5cb8d6953da37fb78bea:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_fps ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        BLJM60197: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_intro ]
 
 PPU-674b2b98b4d311a2e0f788f8c0d4865110aaf926:
   "60 FPS":
@@ -18904,6 +18934,15 @@ PPU-674b2b98b4d311a2e0f788f8c0d4865110aaf926:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_fps ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        BLUS30458: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_intro ]
 
 PPU-ac2ade76721b2f72d0c7e9b6889c662e7b9f4224:
   "60 FPS":
@@ -18915,6 +18954,15 @@ PPU-ac2ade76721b2f72d0c7e9b6889c662e7b9f4224:
     Patch Version: 1.0
     Patch:
       - [ load, *bfbc2_disc_v105_fps ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        BLUS30517: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_disc_v105_intro ]
 
 Anchors:
   BTS_debugmenu_notes: &debugmenunotesBTS
