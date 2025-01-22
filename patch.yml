@@ -21044,22 +21044,22 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
   "Items Advanced Tooltip":
     Games: *minecraft_184
     Author: "Bagieta"
-    Patch Version: 1.0
     Notes: "Enables Items advanced Tooltips"
+    Patch Version: 1.0
     Patch:
       - [ be32, 0x00977198, 0x38600001 ] # li r3, 1
-      - [ be32, 0x0097719C, 0x4E800020 ] # blr
+      - [ be32, 0x0097719c, 0x4e800020 ] # blr
   "Bigger Size world":
     Games: *minecraft_184
     Author: "Bagieta"
-    Patch Version: 1.0
     Notes: "Bigger world size (it's only 80 blocks difference but setting it to anything beyond 64 chunks makes Minecraft unplayable)"
+    Patch Version: 1.0
     Patch:
-      - [ be16, 0x133897F, 0x40 ]
-      - [ be32, 0x1DA730, 0x38600040 ]
-      - [ be32, 0x1DA734, 0x4E800020 ]
-      - [ be32, 0x3D567C, 0x38600040 ]
-      - [ be32, 0x3D5680, 0x4E800020 ]
+      - [ byte, 0x0133897f, 0x40 ]
+      - [ be32, 0x001da730, 0x38600040 ]
+      - [ be32, 0x001da734, 0x4e800020 ]
+      - [ be32, 0x003d567c, 0x38600040 ]
+      - [ be32, 0x003d5680, 0x4e800020 ]
 
 PPU-565327e8098ac4e0cf0df7ca74d97332a7f26e2b:
   "OpenSpy Online":
