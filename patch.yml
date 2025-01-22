@@ -21055,7 +21055,7 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
     Patch Version: 1.0
     Notes: "Bigger world size (it's only 80 blocks difference but setting it to anything beyond 64 chunks makes Minecraft unplayable)"
     Patch:
-      - [ be8, 0x133897F, 0x40 ]
+      - [ be16, 0x133897F, 0x40 ]
       - [ be32, 0x1DA730, 0x38600040 ]
       - [ be32, 0x1DA734, 0x4E800020 ]
       - [ be32, 0x3D567C, 0x38600040 ]
