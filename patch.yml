@@ -18795,6 +18795,7 @@ Anchors:
     - [ be32, 0x0002446c, 0x60000000 ]
 
   bfbc2_disc_v105_pl: &bfbc2_disc_v105_pl
+    - [ be32, 0x001c0614, 0x2c060010 ]
     - [ be32, 0x001c0738, 0x38600007 ]
 
   bfbc2_disc_v105_intro: &bfbc2_disc_v105_intro
@@ -18803,7 +18804,7 @@ Anchors:
   bfbc2_fps_notes: &bfbc2_fps_notes
     "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS.\nDoesn't work in multiplayer."
   bfbc2_pl_notes: &bfbc2_pl_notes
-    "Set Console Language to Russian."
+    "Set Console Language to Polish. Replaces Russian Language."
 
 PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
   "60 FPS":
@@ -18842,8 +18843,9 @@ PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
         NPEB00724: [ 01.05 ]
     Author: "FlexBy"
     Notes: *bfbc2_pl_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
+      - [ be32, 0x00208a24, 0x2c060010 ]
       - [ be32, 0x00208b48, 0x38600007 ]
 
 PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
@@ -18862,7 +18864,7 @@ PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
         BLES00773: [ 01.05 ]
     Author: "FlexBy"
     Notes: *bfbc2_pl_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ load, *bfbc2_disc_v105_pl ]
   "Skip Intro":
@@ -18891,7 +18893,7 @@ PPU-b2e86c6b5376ee547745c7c88f5225d36b1b5b61:
         BLES00779: [ 01.05 ]
     Author: "FlexBy"
     Notes: *bfbc2_pl_notes
-    Patch Version: 1.0
+    Patch Version: 2.0
     Patch:
       - [ load, *bfbc2_disc_v105_pl ]
   "Skip Intro":
