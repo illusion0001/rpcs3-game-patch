@@ -18791,7 +18791,7 @@ PPU-fbb251a511c29cb38f33da72675bdf041ceadf4e:
 
 Anchors:
   bfbc2_disc_v105_fps: &bfbc2_disc_v105_fps
-    - [ be32, 0x00f47670, 0x3c004270 ]
+    - [ be32, 0x00f47670, 0x3cc04270 ]
     - [ be32, 0x0002446c, 0x60000000 ]
 
   bfbc2_disc_v105_pl: &bfbc2_disc_v105_pl
