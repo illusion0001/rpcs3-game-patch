@@ -23470,6 +23470,7 @@ PPU-0f2d26bd793596ce336a74f645fcb8f1441f9041:
     Games:
       "WET":
         BLUS30403: [ 01.00 ]
+        BLES00707: [ 01.00 ]
     Author: "Virjoinga"
     Notes: *wet_ar_notes
     Configurable Values: *wet_ar_configurable_values
