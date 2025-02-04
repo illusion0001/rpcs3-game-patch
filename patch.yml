@@ -6784,6 +6784,9 @@ Anchors:
   mgs4_noreload_v200_psn: &mgs4_noreload_v200_psn
     - [ be32, 0x0008a814, 0x7d004378 ]
 
+  mgs4_maxdpgain_v200_disc: &mgs4_maxdpgain_v200_disc
+    - [ be64, 0x00089658, 0x3d2005f56129e0ff ]
+
 PPU-9712144d93487f0b62e39f55e175af783b58af72:
   "Disable shadows":
     Games:
@@ -6898,6 +6901,13 @@ PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_dfilters_v200_disc ]
+  "Max DP on Gain":
+    Games: *mgs4_us_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxdpgain_v200_disc ]
 
 PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
   "21:9 Aspect Ratio":
@@ -7106,6 +7116,13 @@ PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_dfilters_v200_disc ]
+  "Max DP on Gain":
+    Games: *mgs4_eu_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxdpgain_v200_disc ]
 
 PPU-347d16fbdb0a12f1083c0fb98343c4642d4641cb:
   "21:9 Aspect Ratio":
@@ -7314,6 +7331,13 @@ PPU-c19b3b57017488d9bd126a4b6cfba3566e0905fb:
     Patch Version: 1.0
     Patch:
       - [ load, *mgs4_dfilters_v200_disc ]
+  "Max DP on Gain":
+    Games: *mgs4_jp_disc200title
+    Author: "games24.blog.fc2.com"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *mgs4_maxdpgain_v200_disc ]
 
 PPU-2b65154021bb8c3b25616324975af795720c5f78:
   "21:9 Aspect Ratio":
