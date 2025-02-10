@@ -23227,6 +23227,15 @@ Anchors:
       BLJS10301: [ 01.01 ]
 
 PPU-fbf7ca2e5248cd47b06a7b406a9fc696033e5e0c:
+  "60 FPS":
+    Games: *ukiyo_disc_101
+    Author: "FlexBy"
+    Notes: "Set FPS Limit to 60. Some stuff is still 2x speed."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006bac64, 0x60000000 ]
+      - [ be32, 0x012a115c, 0x3c888889 ] # set gamespeed to 1/60
+      - [ bef32, 0x01297828, 15 ] # walking animation speed # default value is 30
   "Money Multiplier":
     Games: *ukiyo_disc_101
     Author: "games24.blog.fc2.com"
