@@ -23258,6 +23258,13 @@ PPU-fbf7ca2e5248cd47b06a7b406a9fc696033e5e0c:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x000e0c10, 0x60000000 ]
+  "Infinite Stamina":
+    Games: *ukiyo_disc_101
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00145d08, 0x60000000 ]
 
 PPU-0e774c4d110cbee22a4afc20197c99203f46800c:
   "60 FPS":
