@@ -3323,9 +3323,10 @@ Anchors:
 GOW3_AR_Configurable_Values: &GOW3_AR_Configurable_Values
     "Aspect Ratio":
       Type: double_enum
-      Value: &32_9_value 3.555555555555556
+      Value: &16_9_value 1.77777777778
       Allowed Values:
-        "32:9": *32_9_value
+        "16:9 (Default)": *16_9_value
+        "32:9": 3.555555555555556
         "21:9 (3840x1600)": 2.4
         "21:9 (3440x1440)": 2.388888888888889
         "21:9 (2560x1080)": 2.37037037037037
