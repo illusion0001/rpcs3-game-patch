@@ -17464,6 +17464,13 @@ PPU-3760b7d673fc130e13295fa5071164537880adad:
     Patch:
       - [ be32, 0x006a3fd0, 0xec3f07f2 ]
       - [ be32, 0x006a3fd4, 0xec210072 ]
+  "Unlock FPS":
+    Games: *border1v107_title
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bcde4, 0x60000000 ]
 
 PPU-ca5a8abf389604437e5e6f38f9ac8c50ae525b56:
   "Unlock FPS":
@@ -17481,11 +17488,79 @@ PPU-2e842b2ee620434777bcad37d795030f2c4f6062:
     Games:
       "Borderlands":
         NPEB00459: [ 01.07 ]
+        BLES00698: [ 01.07 ]
     Author: "FlexBy"
     Notes: *border1_fps_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001bcf04, 0x60000000 ]
+
+PPU-538a971fcb36639b545bf6e1ed0d3e64fec97c9b:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        NPEB00458: [ 01.05 ]
+        NPUB30413: [ 01.05 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bcd20, 0x60000000 ]
+
+PPU-f489955cef0621d25b2077337e251bb3d3be5e72:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        BLUS30386: [ 01.00 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001f7820, 0x60000000 ]
+
+PPU-0f9d6dc11c22f8b0dc2f0604738267b8f42e0201:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        BLES00697: [ 01.00 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001f7a14, 0x60000000 ]
+
+PPU-7534ebe5a44cccafc94171ab6a13dd6f2e1bf6d3:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        BLES00698: [ 01.00 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001f7b50, 0x60000000 ]
+
+PPU-63f13a9c49e7248da48b39b78587100508931fe9:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        BLJM60279: [ 01.00 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bcdac, 0x60000000 ]
+
+PPU-d32d283b4560339907569c6ce128480510d5deab:
+  "Unlock FPS":
+    Games:
+      "Borderlands":
+        BLJM60279: [ 01.04 ]
+    Author: "Synchrony"
+    Notes: *border1_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001bce78, 0x60000000 ]
 
 Anchors:
   border2v115_title: &border2v115_title
