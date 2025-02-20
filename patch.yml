@@ -18954,12 +18954,19 @@ Anchors:
     - [ be32, 0x00f47670, 0x3cc04270 ]
     - [ be32, 0x0002446c, 0x60000000 ]
 
+  bfbc2_digital_v105_fps: &bfbc2_digital_v105_fps
+    - [ be32, 0x00f47eb0, 0x3cc04270 ]
+    - [ be32, 0x000245fc, 0x60000000 ]
+
   bfbc2_disc_v105_pl: &bfbc2_disc_v105_pl
     - [ be32, 0x001c0614, 0x2c060010 ]
     - [ be32, 0x001c0738, 0x38600007 ]
 
   bfbc2_disc_v105_intro: &bfbc2_disc_v105_intro
     - [ be32, 0x01222ea0, 0x60000000 ]
+
+  bfbc2_digital_v105_intro: &bfbc2_digital_v105_intro
+    - [ be32, 0x01202c60, 0x60000000 ]
 
   bfbc2_fps_notes: &bfbc2_fps_notes
     "Known Issues:\nDelay after the reload is increased at lower FPS.\nGuns shoots longer at lower FPS.\nDoesn't work in multiplayer."
@@ -18975,8 +18982,7 @@ PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
     Notes: *bfbc2_fps_notes
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x00f47eb0, 0x3cc04270 ]
-      - [ be32, 0x000245fc, 0x60000000 ]
+      - [ load, *bfbc2_digital_v105_fps ]
   "Skip Intro":
     Games:
       "Battlefield Bad Company 2":
@@ -18985,7 +18991,7 @@ PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
     Notes:
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x01202c60, 0x60000000 ]
+      - [ load, *bfbc2_digital_v105_intro ]
   "Redirect logs to tty":
     Games:
       "Battlefield Bad Company 2":
@@ -19007,6 +19013,26 @@ PPU-a0e5fd11cb9d03eccd48e4edb02accc0c5be4bce:
     Patch:
       - [ be32, 0x00208a24, 0x2c060010 ]
       - [ be32, 0x00208b48, 0x38600007 ]
+
+PPU-1ccbe2fe6c1687f49ccd2436e0014c8c86365d83:
+  "60 FPS":
+    Games:
+      "Battlefield Bad Company 2":
+        NPUB30583: [ 01.05 ]
+    Author: "FlexBy"
+    Notes: *bfbc2_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_digital_v105_fps ]
+  "Skip Intro":
+    Games:
+      "Battlefield Bad Company 2":
+        NPUB30583: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ load, *bfbc2_digital_v105_intro ]
 
 PPU-60ba7685d4d8857640862e92b9e799c72da8e5fd:
   "60 FPS":
