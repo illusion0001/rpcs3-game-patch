@@ -18900,6 +18900,17 @@ PPU-276dafbbd5268abde8c29a68b1fbb660f36909d2:
     Patch:
       - [ be32, 0x0043cd48, 0x3c603c88 ] # mem: 35a41f5c
 
+PPU-fe37cb27c8e9c8090e86a5f214426f1fb2d39b6e:
+  "60 FPS":
+    Games:
+      "Anarchy reigns":
+        BLES01232: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Set VBlank to 120"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0043cbc8, 0x3c603c88 ]
+
 PPU-fccf7c4880b7c580c8a15ad2beabd5da59ac0832:
   "Skip intro":
     Games:
