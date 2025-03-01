@@ -7519,6 +7519,7 @@ Anchors:
 
   uc2_Disc_100_post: &uc2_Disc_100_post
     - [ be16, 0x000c93ec, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9b668)
+    - [ be16, 0x0077e8ae, 0x664c ] # Reduce Bloom in Post on GPU to 80%
 
   uc2_Disc_100_light: &uc2_Disc_100_light
     - [ be16, 0x000c962c, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9b964)
@@ -7553,6 +7554,7 @@ Anchors:
 
   uc2_Disc_109_post: &uc2_Disc_109_post
     - [ be16, 0x000c288c, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9c268)
+    - [ be16, 0x0077d126, 0x6694 ] # Reduce Bloom in Post on GPU to 80%
 
   uc2_Disc_109_light: &uc2_Disc_109_light
     - [ be16, 0x000c2ad0, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9c564)
@@ -7587,6 +7589,7 @@ Anchors:
 
   uc2_PSN_post: &uc2_PSN_post
     - [ be16, 0x000c2d54, 0x9b83 ] # Disable Post on SPU                     (mem address: 0x0e9c268)
+    - [ be16, 0x00785446, 0x6384 ] # Reduce Bloom in Post on GPU to 80%
 
   uc2_PSN_light: &uc2_PSN_light
     - [ be16, 0x000c2f98, 0x9b83 ] # Disable SPU lighting                    (mem address: 0x0e9c564)
