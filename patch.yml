@@ -3021,6 +3021,7 @@ PPU-f62dd8afff286da6c9ee4715ba292604f2addf4a:
     Games:
       "Army of TWO":
         BLES00168: [ 01.03 ]
+        BLUS30057: [ 01.03 ]
     Author: "FlexBy"
     Notes: "Set VBlank to 120. Gamespeed is still tied to FPS."
     Patch Version: 1.0
