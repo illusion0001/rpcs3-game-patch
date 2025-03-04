@@ -3016,6 +3016,17 @@ PPU-8dc2c858b13b0dd2051c2c43cfea6572a67216b1:
     Patch:
       - [ be32, 0x015EFB64, 0x98C30110 ]
 
+PPU-f62dd8afff286da6c9ee4715ba292604f2addf4a:
+  "60 FPS":
+    Games:
+      "Army of TWO":
+        BLES00168: [ 01.03 ]
+    Author: "FlexBy"
+    Notes: "Set VBlank to 120. Gamespeed is still tied to FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0193d5a8, 0x3c888889 ]
+
 PPU-976896152cd756aed8ae7cfe8a6e91260bb21361:
   "Unlock FPS":
     Games:
