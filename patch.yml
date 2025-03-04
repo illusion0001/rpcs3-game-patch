@@ -3027,6 +3027,16 @@ PPU-f62dd8afff286da6c9ee4715ba292604f2addf4a:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0193d5a8, 0x3c888889 ]
+  "Enable Log":
+    Games:
+      "Army of TWO":
+        BLES00168: [ 01.03 ]
+        BLUS30057: [ 01.03 ]
+    Author: "opcode"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f98cf4, 0x60000000 ]
 
 PPU-976896152cd756aed8ae7cfe8a6e91260bb21361:
   "Unlock FPS":
