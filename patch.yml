@@ -23113,7 +23113,7 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
         BLES00146: [ 01.00 ]
         BLUS30065: [ 01.00 ]
     Author: "illusion"
-    Notes:
+    Notes: "Known Issues:\nPlayer's might fall through the T-rex in the second mission.\nMarshmallow trampolines may not work as intended."
     Patch Version: 1.0
     Patch:
       - [ byte, 0x005b4ebf, 0x01 ]
