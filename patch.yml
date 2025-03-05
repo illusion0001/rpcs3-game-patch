@@ -3023,7 +3023,7 @@ PPU-f62dd8afff286da6c9ee4715ba292604f2addf4a:
         BLES00168: [ 01.03 ]
         BLUS30057: [ 01.03 ]
     Author: "FlexBy"
-    Notes: "Set VBlank to 120. Gamespeed is still tied to FPS."
+    Notes: "Allows for proper gamespeed at 60 FPS.\nSet VBlank to 120."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0193d5a8, 0x3c888889 ]
