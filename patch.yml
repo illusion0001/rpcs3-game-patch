@@ -22367,6 +22367,18 @@ PPU-091f777fa6b19cf25ac4490bd01104abd190ced4:
       - [ be32, 0x00c27cac, 0x60000000 ]
       - [ be32, 0x00c27cb8, 0x60000000 ]
 
+PPU-0988cb2564d83bdb160b24b3f1bce7f2544d40fa:
+  "Unlock FPS":
+    Games:
+      "Resident Evil 5 Gold Edition (BioHazard 5 Alternative Edition)":
+        BLJM60199: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00c27cc4, 0x60000000 ]
+      - [ be32, 0x00c27cd0, 0x60000000 ]
+
 PPU-99898486660374bdcd35c53669c1eed83294c718:
   "Unlock FPS":
     Games:
