@@ -23051,6 +23051,19 @@ PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
       - [ be32, 0x10030084, 0x00000000 ]
       - [ be32, 0x100010a8, 0x00000000 ]
 
+PPU-5a3915210fabc7e0fb6474be2293ef211e11adb6: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
+  "Skip Intro":
+    Games:
+      "The Orange Box":
+        BLES00172: [ 01.10 ]
+    Author: "Margen67, FlexBy"
+    Notes:
+    Patch Version: 2.0
+    Patch:
+      - [ be32, 0x0008fb68, 0x4e800020 ]
+      - [ be32, 0x100010c0, 0x00000000 ]
+      - [ be32, 0x100010f0, 0x00000000 ]
+
 PPU-12b113060842a3b1c37b8326961cdec076d2a0f7: # HL2.SELF 1.00
   "Unlock FPS":
     Games:
