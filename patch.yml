@@ -22367,6 +22367,30 @@ PPU-091f777fa6b19cf25ac4490bd01104abd190ced4:
       - [ be32, 0x00c27cac, 0x60000000 ]
       - [ be32, 0x00c27cb8, 0x60000000 ]
 
+PPU-99898486660374bdcd35c53669c1eed83294c718:
+  "Unlock FPS":
+    Games:
+      "Resident Evil 5 (BioHazard 5)":
+        BLES00485: [ 02.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00c27964, 0x60000000 ]
+      - [ be32, 0x00c27970, 0x60000000 ]
+
+PPU-c471d26455e17aa8bac7523d5df272934b723ae4:
+  "Unlock FPS":
+    Games:
+      "Resident Evil 5 (BioHazard 5)":
+        BLUS30270: [ 02.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00c27964, 0x60000000 ]
+      - [ be32, 0x00c27970, 0x60000000 ]
+
 PPU-5c0ac77b1169e0cb232548b83f638015b0b3979b:
   "Unlock FPS":
     Games:
