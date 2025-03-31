@@ -19446,6 +19446,28 @@ PPU-06f5e139a921135abc274fe6c016e84fd242c5cf: # EBOOT_SP.BIN 1.00/1.40
       - [ byte, 0x10026df0, 0x00 ]
       - [ byte, 0x10026e08, 0x00 ]
 
+PPU-8863ea895efe6d2174884f8791e72469eb82d348: # EBOOT_SP.BIN 1.00/1.40
+  "Unlock FPS":
+    Games:
+      "Call of Duty 4: Modern Warfare (Singleplayer)":
+        BLKS20048: [ All ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002d6a78, 0x60000000 ]
+      - [ be32, 0x11e81a90, 0x453b8000 ] # memory
+  "Skip Intro":
+    Games:
+      "Call of Duty 4: Modern Warfare (Singleplayer)":
+        BLKS20048: [ All ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x10026df0, 0x00 ]
+      - [ byte, 0x10026e08, 0x00 ]
+
 PPU-1ef63a154ec16352bce3c013c3a6055a6d55cfe5: # EBOOT_SP.BIN 1.00/1.40
   "Unlock FPS":
     Games:
@@ -19527,6 +19549,18 @@ PPU-88314d95eb1bd91e0e2aadade1ebb6da790e3b47: # EBOOT_MP.BIN 1.00
     Games:
       "Call of Duty 4: Modern Warfare (Multiplayer)":
         BLJS10013: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002f1c98, 0x60000000 ]
+      - [ be32, 0x12c99f10, 0x453b8000 ] # memory
+
+PPU-53a0c2265dc3ac779bfe21ef9c806a6cf84a4609: # EBOOT_MP.BIN 1.00
+  "Unlock FPS":
+    Games:
+      "Call of Duty 4: Modern Warfare (Multiplayer)":
+        BLKS20048: [ 01.00 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
