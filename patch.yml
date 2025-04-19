@@ -21822,6 +21822,10 @@ Anchors:
     "Portal 2":
       NPUB31077: [ 01.00 ]
 
+  portal2_US_digital_102: &portal2_US_digital_102
+    "Portal 2":
+      NPUB31077: [ 01.02 ]
+
 PRX-8iypkEj8Gc6WjyUGu68r0LfFsrwb-0: # materialsystem_ps3.sprx
   "Disable MLAA":
     Games: *portal2_US_digital_100
@@ -21846,6 +21850,31 @@ PRX-Yc1uYTbj71aRuvXa7npS6ZfSRE2u-0: # engine_ps3.sprx 1.00
     Patch Version: 1.0
     Patch:
       - [ be32, 0x004a023c, 0x60000000 ]
+
+PRX-QhxkMJz3z67mmKpuEmEAiwjVfmvz-0:
+  "Disable MLAA":
+    Games: *portal2_US_digital_102
+    Author: "illusion, FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00008bcc, 0x60000000 ]
+
+PRX-1hvJejUCVVhUC6QZ8iVMMEh9qYQQ-0:
+  "60 FPS":
+    Games: *portal2_US_digital_102
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00232cdc, 0x60000000 ]
+  "Skip Intro":
+    Games: *portal2_US_digital_102
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0050c008, 0x60000000 ]
 
 PPU-d8fe04c58a5a46feda0b6f2192613064ec996584:
   "Unlock FPS":
