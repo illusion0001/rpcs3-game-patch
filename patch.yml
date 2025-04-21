@@ -118,6 +118,45 @@ Anchors:
     - [ be32, 0x016c8b64, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
     - [ bef32, 0x016c8b68, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
 
+  BCJS30022_FpsUnlock: &BCJS30022_FpsUnlock
+  # Set 60 FPS with no frameskip
+  # by Gibbed, Hasster's port to BCJS30022
+    - [ be16, 0x000240d0, 0x981f ]
+  # delta time
+  # by Whatcookie
+    - [ be32, 0x00019794, 0x496af30d ] # jump to code cave
+  # get mftb
+    - [ be32, 0x016c8aa0, 0x7eac42e6 ] # mftb r21              // move from timebase register (clock)
+  # get mftb delta
+    - [ be32, 0x016c8aa4, 0x3ec00185 ] # lis r22,0x0185        // load high bits of address
+    - [ be32, 0x016c8aa8, 0x3ad62608 ] # addi r22,r22,0x2608   // load low bits of address
+    - [ be32, 0x016c8aac, 0x7e96a02a ] # ldx r20,r22,r20       // load previous frames mftb reading
+    - [ be32, 0x016c8ab0, 0xfab60000 ] # std r21,0x0(r22)      // store this frames mftb reading
+    - [ be32, 0x016c8ab4, 0x7e74a850 ] # subf r19,r21,r20      // subtract previous mftb reading from this mftb frames reading
+  # mftb delta to float
+    - [ be32, 0x016c8ab8, 0xfa760018 ] # std r19,0x18(r22)     // store mftb delta (to be loaded into FPR)
+    - [ be32, 0x016c8abc, 0xcbd60018 ] # lfd f30,0x18(r22)     // load mftb delta into FPR
+    - [ be32, 0x016c8ac0, 0xffc0f69c ] # fcfid f30,f30         // convert integer to double
+    - [ be32, 0x016c8ac4, 0xffc0f018 ] # frsp f30,f30          // round to single precision
+  # mftb delta to seconds
+    - [ be32, 0x016c8ac8, 0x3e40016c ] # r18,0x16c             // load high bits constants pointer
+    - [ be32, 0x016c8acc, 0x62528aa0 ] # ori r18,r18,0x8b10    // load low bits of constants pointer
+    - [ be32, 0x016c8ad0, 0xc3b20054 ] # lfs f29,0x54(r18)     // load timebase frequency constant
+    - [ be32, 0x016c8ad4, 0xc3920058 ] # lfs f28,0x58(r18)     // load maximum timestep size
+    - [ be32, 0x016c8ad8, 0xeffee824 ] # fdivs f31,f30,f29     // divide timebase delta by timebase frequency
+  # check timestep size
+    - [ be32, 0x016c8adc, 0xff9fe000 ] # fcmpu cr7,f31,f28     // compare current delta time to maximum timestep
+    - [ be32, 0x016c8ae0, 0x419c0008 ] # blt +0x08             // don't return the maximum timestep size
+  # set maximum timestep
+    - [ be32, 0x016c8ae4, 0xffe0e090 ] # fmr f31,f28           // move maximum timestep to be returned
+  # cleanup
+    - [ be32, 0x016c8ae8, 0x7e94a278 ] # xor r20,r20,r20       // zero r20
+    - [ be32, 0x016c8aec, 0x7e94a278 ] # xor r19,r19,r19       // zero r19
+    - [ be32, 0x016c8af0, 0x4e800020 ] # blr                   // return
+  # constants
+    - [ be32, 0x016c8af4, 0x4c989680 ] # timebase frequency as hexfloat (80mhz)
+    - [ bef32, 0x016c8af8, 0.05 ]      # maximum timestep size (50ms or 20 FPS)
+
   DeS_FPS_Notes: &DeS_FPS_Notes
     "Patch version 2.0 and above is not compatible with the settings used for the previous patch. Clocks scale and Vblank rate must be set to the defaults. Vblank rate can be modified to increase the framelimit beyond 60 FPS. However, it's not recommended as users may encounter physics issues."
 
@@ -469,6 +508,10 @@ Anchors:
     "Demon's Souls Trade Demo":
       BLUD80018: [ 01.01 ]
 
+  des_JP104title: &des_JP104title
+    "Demon's Souls":
+      BCJS30022: [ 01.04 ]
+
 PPU-83681f6110d33442329073b72b8dc88a2f677172:
   "Unlock FPS":
     Games: *des_US100title
@@ -656,6 +699,46 @@ PPU-f965a746d844cd0c572a7e8731b5b3b7a81f7bdd:
     Patch Version: 1.0
     Patch:
       - [ load, *BLUS30443_FreeCam ]
+
+PPU-68544b29e92609ccb2710f485ae7708e4cb35df1:
+  "Unlock FPS":
+    Games: *des_JP104title
+    Author: "Whatcookie, Gibbed"
+    Notes: *DeS_FPS_Notes
+    Patch Version: 2.1
+    Patch:
+      - [ load, *BCJS30022_FpsUnlock ]
+  "Disable Dynamic Exposure":
+    Games: *des_JP104title
+    Author: "Whatcookie"
+    Notes: *DeS_DDE_Notes
+    Patch Version: 1.1
+    Patch:
+      - [ be16, 0x000240d4, 0x981f ]
+  "Skip Intro Videos":
+    Games: *des_JP104title
+    Author: "GalCiv"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008efe54, 0x38000003 ] # Intro logos skip
+      - [ be32, 0x008efe58, 0x901c0100 ]
+  "Aspect Ratio":
+    Games: *des_JP104title
+    Author: "Whatcookie"
+    Notes: *DeS_AR_Notes
+    Configurable Values: *DeS_AR_Configurable_Values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x018cee14, "Aspect Ratio" ]
+      - [ bef32, 0x0190430c, "Aspect Ratio" ]
+  "Disable Motion Blur":
+    Games: *des_JP104title
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00215edc, 0x41 ]
 
 Anchors:
   kh15_ar_21_9_notes: &kh15_ar_21_9_notes
