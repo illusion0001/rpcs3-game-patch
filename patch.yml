@@ -12505,7 +12505,7 @@ PPU-092c43e2bcacccfe3cdc22b0ab8062b91d4e1cf9:
         BLUS31431: [ All ]
         NPUB31488: [ All ]
     Author: "Brolijah"
-    Notes: [ *HMPDF2_FPS_Notes, "\nMight work with NPUB31488 as well." ]
+    Notes: [ *HMPDF2_FPS_Notes ]
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
@@ -12515,8 +12515,9 @@ PPU-67e0e7c9b2a7a340c914a0d078e25aac1047e4d4:
     Games:
       "Hatsune Miku: Project Diva F 2nd":
         NPEB02013: [ All ]
+        BLES02029: [ All ]
     Author: "Brolijah"
-    Notes: [ *HMPDF2_FPS_Notes, "\nMight work with BLES02029 as well." ]
+    Notes: [ *HMPDF2_FPS_Notes ]
     Patch Version: 1.0
     Patch:
       - [ load, *HMPDF2_FPS_USEU ]
