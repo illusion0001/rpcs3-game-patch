@@ -1471,6 +1471,13 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002f4fb4, 0x4e800020 ]
+  "Disable Motion Blur":
+    Games: *lbp2_133title
+    Author: "Hasster"
+    Notes: "Disables Motion Blur. Doesn't affect performance.\nPlease report any issues."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0032897c, 0x4e800020 ]
 
 PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
   "Create Mode Everywhere":
