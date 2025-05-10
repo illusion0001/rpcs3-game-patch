@@ -3453,20 +3453,6 @@ Anchors:
       BCAS25003: [ 01.03 ]
       BCKS15003: [ 01.03 ]
 
-GOW3_AR_Configurable_Values: &GOW3_AR_Configurable_Values
-    "Aspect Ratio":
-      Type: double_enum
-      Value: &16_9_value 1.77777777778
-      Allowed Values:
-        "16:9 (Default)": *16_9_value
-        "32:9": 3.555555555555556
-        "21:9 (3840x1600)": 2.4
-        "21:9 (3440x1440)": 2.388888888888889
-        "21:9 (2560x1080)": 2.37037037037037
-        "16:10": 1.6
-        "4:3": 1.333333333333333
-        "5:4": 1.25
-
 PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
   "Skip any videos with X button":
     Games: *gow3_103_title
@@ -3549,16 +3535,6 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
       - [ be32, 0x003de180, 0x394a0020 ] # addi r10,r10,0x20 // branch to skip video function
       - [ be32, 0x003de184, 0x7d4803a6 ] # mtspr LR,r10
       - [ be32, 0x003de188, 0x4e800020 ] # blr
-  "Aspect Ratio":
-    Games: *gow3_103_title
-    Author: "FlexBy"
-    Notes:
-    Configurable Values: *GOW3_AR_Configurable_Values
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0026c950, 0x60000000 ]
-      - [ be32, 0x0026dfa8, 0x60000000 ]
-      - [ bef32, 0x00640a80, "Aspect Ratio" ]
 
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
   "Skip any videos with X button":
@@ -3626,20 +3602,6 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001e5468, 0x4800 ]
-
-PPU-cc23d46d671458b37f34e08b6e06d1751084a34e:
-  "Aspect Ratio":
-    Games:
-      "God of War 3 (God of War III)":
-        BCAS25003: [ 01.00 ]
-    Author: "FlexBy"
-    Notes:
-    Configurable Values: *GOW3_AR_Configurable_Values
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x0026c914, 0x60000000 ]
-      - [ be32, 0x0026df6c, 0x60000000 ]
-      - [ bef32, 0x00640a80, "Aspect Ratio" ]
 
 Anchors:
   Y1HD_ModSupport: &Y1HD_ModSupport
