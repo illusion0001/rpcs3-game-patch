@@ -15480,8 +15480,8 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b: # OBLIVION [BLUS30087] GOTY
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00aaed04, 0x60000000 ]
-      - [ be32, 0x00aaec4c, 0x60000000 ]
-      - [ be32, 0x00682100, 0x60000000 ]
+      #- [ be32, 0x00aaec4c, 0x60000000 ]
+      #- [ be32, 0x00682100, 0x60000000 ]
 
 PPU-ceb470d5ff22280afed8e29ff86f8cd0633f4cea:
   "Unlock FPS":
