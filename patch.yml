@@ -15503,6 +15503,7 @@ PPU-dd7337070bf5a57a46f74c243995009319e2748b:
       - [ be32, 0x014f10d4, 0x101914a0 ]
       - [ be32, 0x014f10d8, 0x101914a0 ]
       - [ be32, 0x014f10dc, 0x101914a0 ]
+      - [ be32, 0x0068de10, 0x2f800001 ] # auto save warning
 
 PPU-ceb470d5ff22280afed8e29ff86f8cd0633f4cea:
   "Unlock FPS":
