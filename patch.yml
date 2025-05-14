@@ -10171,6 +10171,14 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00366570, 0x4e800020 ]
+  "Disable Motion Blur":
+    Games: *lbp3_126title
+    Author: "Hasster"
+    Notes: "Disables Motion Blur. Shouldn't affect anything else."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0039c028, 0x60000000 ]
+      - [ be32, 0x0039c12c, 0x60000000 ]
 
 Anchors:
   tox_ar_notes: &tox_ar_notes
