@@ -11631,6 +11631,13 @@ Anchors:
   uc1_ddof_all_psn: &uc1_ddof_all_psn
     - [ be16, 0x000e5234, 0x981d ] # (mem address: 0xbb321c)
 
+  uc1_fadeout_configurable_values: &uc1_fadeout_configurable_values
+    "Distance":
+      Type: double_range
+      Value: 30
+      Min: 0.5
+      Max: 100
+
   uc1_debugmenu_notes: &uc1_debugmenu_notes
     "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
   uc1_debugmenu_notes2: &uc1_debugmenu_notes2
@@ -11763,6 +11770,16 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
       - [ be32, 0x0079ba7c, 0x38000001 ]      # li r0, 1               ; r0 = 1
       - [ be32, 0x0079ba80, 0x98030000 ]      # stb r0, 0(r3)          ; store byte to 0x8400D4
       - [ be32, 0x0079ba84, 0x4bf8b3b0 ]      # b 0x00726E34           ; return
+  "Enable Global Fadeout":
+    Games: *uc1_disc101title
+    Author: "FlexBy"
+    Notes: "Lowers/Increases Object Render Distance.\nHigher Values increase render distance.\nCan improve performance."
+    Configurable Values: *uc1_fadeout_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x000e53ec, 0x915d ] # (mem: 00bb44cc)
+      - [ be32, 0x000e53c8, 0x60000000 ]
+      - [ bef32, 0x00bb44d4, "Distance" ] # Fadeout End Distance
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
