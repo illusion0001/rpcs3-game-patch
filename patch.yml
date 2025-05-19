@@ -19939,6 +19939,25 @@ PPU-1f4ac52b4a75eae0be9c7e4e0922342cafba74da:
       - [ be32, 0x009292c0, 0x60000000 ]
       - [ be32, 0x009292c4, 0x60000000 ]
 
+PPU-c0ae1b3c0dd6676c510a261948f339ef5e41adfd:
+  "Openspy Online":
+    Games:
+      "Condemned 2: Bloodshot":
+        BLES00219: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x10019505, "openspy.net" ]
+      - [ utf8, 0x100196a0, "openspy.net" ]
+      - [ utf8, 0x100196b8, "openspy.net" ]
+      - [ utf8, 0x100196d0, "openspy.net" ]
+      - [ utf8, 0x100197fa, "openspy.net" ]
+      - [ utf8, 0x10019ae8, "openspy.net" ]
+      - [ utf8, 0x100c013d, "openspy.net" ]
+      - [ utf8, 0x100c0285, "openspy.net" ]
+      - [ utf8, 0x100c0302, "openspy.net" ]
+
 Anchors:
   contrast_unlockfps_notes: &contrast_unlockfps_notes
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 62 FPS."
