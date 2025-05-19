@@ -19415,7 +19415,7 @@ PPU-ac2ade76721b2f72d0c7e9b6889c662e7b9f4224:
     Patch:
       - [ load, *bfbc2_disc_v105_intro ]
 
-PPU-c69ee207d87934a66bf61056f3fc82c25eb6c2fd:
+PPU-c69ee207d87934a66bf61056f3fc82c25eb6c2fd: # NPWR00318
   "Openspy Online":
     Games:
       "Beijing 2008":
@@ -21923,6 +21923,33 @@ PPU-2148aebced6aef02fbe8bac15c4d4292017d517f:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0035bed0, 0x60000000 ]
+
+PPU-51041694dec760554ffa13dbfeba9f52a5379bdd: # NPWR00167
+  "Openspy Online":
+    Games:
+      "NBA Ballers: Chosen One":
+        BLUS30135: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x1008c2d5, "openspy.net" ]
+      - [ utf8, 0x1008e1c4, "openspy.net" ]
+      - [ utf8, 0x1008e234, "openspy.net" ]
+      - [ utf8, 0x1008f149, "openspy.net" ]
+      - [ utf8, 0x1008f19a, "openspy.net" ]
+      - [ utf8, 0x100b5249, "openspy.net" ]
+      - [ utf8, 0x100b5680, "openspy.net" ]
+      - [ utf8, 0x100b5698, "openspy.net" ]
+      - [ utf8, 0x100b56b0, "openspy.net" ]
+      - [ utf8, 0x100b57a9, "openspy.net" ]
+      - [ utf8, 0x100b594a, "openspy.net" ]
+      - [ utf8, 0x100b5c88, "openspy.net" ]
+      - [ utf8, 0x103b1085, "openspy.net" ]
+      - [ utf8, 0x103b11dd, "openspy.net" ]
+      - [ utf8, 0x103b3d8a, "openspy.net" ]
+      - [ utf8, 0x1008de00, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x1000ed18, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
 Anchors:
   neverdead_100: &neverdead_100
