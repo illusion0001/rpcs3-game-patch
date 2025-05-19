@@ -21746,6 +21746,34 @@ PPU-6a4b73e5f6892bb54e0c11c568f5ae4ec887f3b0:
       - [ be32, 0x000a3dd4, 0x7c842b78 ]
       - [ be32, 0x0009e704, 0x7c831b78 ]
 
+PPU-8d6a779351566fa3f379a875bdd722e8dac8284e:
+  "Openspy Online":
+    Games:
+      "Mortal Kombat vs. DC Universe":
+        NPUB30594: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: 
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x01512712, "openspy.net" ]
+      - [ utf8, 0x01512b79, "openspy.net" ]
+      - [ utf8, 0x01514b89, "openspy.net" ]
+      - [ utf8, 0x01535e55, "openspy.net" ]
+      - [ utf8, 0x01537e50, "openspy.net" ]
+      - [ utf8, 0x01537e68, "openspy.net" ]
+      - [ utf8, 0x01537e80, "openspy.net" ]
+      - [ utf8, 0x015380bc, "openspy.net" ]
+      - [ utf8, 0x0153813c, "openspy.net" ]
+      - [ utf8, 0x015382fa, "openspy.net" ]
+      - [ utf8, 0x01538528, "openspy.net" ]
+      - [ utf8, 0x018370ad, "openspy.net" ]
+      - [ utf8, 0x0183720d, "openspy.net" ]
+      - [ utf8, 0x01837259, "openspy.net" ]
+      - [ utf8, 0x018374f2, "openspy.net" ]
+      - [ utf8, 0x01837549, "openspy.net" ]
+      - [ utf8, 0x01538640, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x014e82b0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-db1d23f1a43f79ec37c12e8aaa1f6b034b20a237:
   "Disable MLAA":
     Games:
