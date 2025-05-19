@@ -19415,6 +19415,30 @@ PPU-ac2ade76721b2f72d0c7e9b6889c662e7b9f4224:
     Patch:
       - [ load, *bfbc2_disc_v105_intro ]
 
+PPU-c69ee207d87934a66bf61056f3fc82c25eb6c2fd:
+  "Openspy Online":
+    Games:
+      "Beijing 2008":
+        BLES00286: [ 01.20 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00bb3885, "openspy.net" ]
+      - [ utf8, 0x00bb39c1, "openspy.net" ]
+      - [ utf8, 0x00bb3eb9, "openspy.net" ]
+      - [ utf8, 0x00bb4042, "openspy.net" ]
+      - [ utf8, 0x00bb4280, "openspy.net" ]
+      - [ utf8, 0x00bb42b8, "openspy.net" ]
+      - [ utf8, 0x00bb42d0, "openspy.net" ]
+      - [ utf8, 0x00bb42e8, "openspy.net" ]
+      - [ utf8, 0x00bb5e10, "openspy.net" ]
+      - [ utf8, 0x00bb5eaf, "openspy.net" ]
+      - [ utf8, 0x00ce4235, "openspy.net" ]
+      - [ utf8, 0x00ce438d, "openspy.net" ]
+      - [ utf8, 0x00bb5ac8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x00b7a088, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   BTS_debugmenu_notes: &debugmenunotesBTS
     "L3 = Opens Debug Menu\nL1/R1 = Change pages\nOnly tested on BCUS98298."
