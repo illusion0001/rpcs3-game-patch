@@ -14999,6 +14999,20 @@ Anchors:
     - [ be32, 0x00531cb0, 0x38800000 ] # li r4 0x0
   sly4_mlaa_US: &sly4_mlaa_US
     - [ be32, 0x00531d40, 0x38800000 ] # li r4 0x0
+  sly4_ar_notes: &sly4_ar_notes
+      "Requires \"Stretch To Display Area\" checked in the GPU settings."
+  sly4_ar_configurable_values: &sly4_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
 
 PPU-5c741b00514f07966c2820d67f395d945a88d79d:
   "Disable MLAA":
@@ -15064,6 +15078,16 @@ PPU-cf7f5b0e93e0afb59e8f22fd040086ae554cdbad:
     Patch Version: 1.0
     Patch:
       - [ load, *sly4_mlaa_US ]
+  "Aspect Ratio":
+    Games:
+      "Sly Cooper: Thieves in Time":
+        NPUA80875: [ 01.00 ]
+    Author: "Virjoinga"
+    Notes: *sly4_ar_notes
+    Configurable Values: *sly4_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0050F59C, "Aspect Ratio" ]
 
 Anchors:
   SonicAdventure_FullScreen: &SonicAdventure_FullScreen
@@ -19968,6 +19992,62 @@ PPU-d8edc43468f59e453ec1404094e810e487591bfd:
       - [ be32, 0x00614e70, 0x38800001 ]
       - [ be32, 0x00614e74, 0x98830aad ]
       - [ be32, 0x00614e78, 0x60000000 ]
+
+Anchors:
+    cars_mnc_ar_notes: &cars_mnc_ar_notes
+      "Requires \"Stretch To Display Area\" checked in the GPU settings."
+    cars_mnc_ar_configurable_values: &cars_mnc_ar_configurable_values
+      "Aspect Ratio":
+        Type: double_enum
+        Value: &32_9_value 3.555555555555556
+        Allowed Values:
+          "32:9": *32_9_value
+          "21:9 (3840x1600)": 2.4
+          "21:9 (3440x1440)": 2.388888888888889
+          "21:9 (2560x1080)": 2.37037037037037
+          "16:10": 1.6
+          "4:3": 1.333333333333333
+          "5:4": 1.25
+
+PPU-6c15db5dc3868d140fb638fc586f38426513d2de:
+  "Aspect Ratio":
+    Games:
+      "Cars: Mater-National Championship":
+        BLUS30088: [ 01.01 ]
+    Author: "Virjoinga"
+    Notes: *cars_mnc_ar_notes
+    Configurable Values: *cars_mnc_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x00546A80, "Aspect Ratio" ]
+
+Anchors:
+    cars_ror_ar_notes: &cars_ror_ar_notes
+      "Requires \"Stretch To Display Area\" checked in the GPU settings."
+    cars_ror_ar_configurable_values: &cars_ror_ar_configurable_values
+      "Aspect Ratio":
+        Type: double_enum
+        Value: &32_9_value 3.555555555555556
+        Allowed Values:
+          "32:9": *32_9_value
+          "21:9 (3840x1600)": 2.4
+          "21:9 (3440x1440)": 2.388888888888889
+          "21:9 (2560x1080)": 2.37037037037037
+          "16:10": 1.6
+          "4:3": 1.333333333333333
+          "5:4": 1.25
+
+PPU-f80a88d6be7c30f1751d06023d984eab8169efcc:
+  "Aspect Ratio":
+    Games:
+      "Cars: Race-O-Rama":
+        BLUS30319: [ 01.00 ]
+    Author: "Virjoinga"
+    Notes: *cars_ror_ar_notes
+    Configurable Values: *cars_ror_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0070568C, "Aspect Ratio" ]
 
 PPU-1f4ac52b4a75eae0be9c7e4e0922342cafba74da:
   "Unlock FPS":
