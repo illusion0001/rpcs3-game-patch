@@ -21435,6 +21435,37 @@ PPU-37b6841852cf37fc1f3d2c7b005475b2d72ab24d:
     Patch:
       - [ byte, 0x0130d618, 0x00 ]
 
+PPU-434d8a22b239b506b0624d61192d4057d1ddf43e: # NPWR00492_00
+  "Unlock FPS":
+    Games:
+      "Legendary":
+        BLES00405: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0075f200, 0x60000000 ]
+  "Openspy Online":
+    Games:
+      "Legendary":
+        BLES00405: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x0192885d, "openspy.net" ]
+      - [ utf8, 0x01928d92, "openspy.net" ]
+      - [ utf8, 0x01929130, "openspy.net" ]
+      - [ utf8, 0x0192b3a8, "openspy.net" ]
+      - [ utf8, 0x0192b3c0, "openspy.net" ]
+      - [ utf8, 0x0192b3d8, "openspy.net" ]
+      - [ utf8, 0x0192b69c, "openspy.net" ]
+      - [ utf8, 0x0192b71c, "openspy.net" ]
+      - [ utf8, 0x01ce6b2d, "openspy.net" ]
+      - [ utf8, 0x01ce6c75, "openspy.net" ]
+      - [ utf8, 0x0192af98, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x0192ad08, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   lostd_fps_notes: &lostd_fps_notes
     "Set Frame limit to 60. Gamespeed is affected above 60 FPS."
