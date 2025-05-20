@@ -23047,6 +23047,32 @@ PPU-e6239716dcf0073e89daf296571da42da6937b9f:
     Patch:
       - [ be32, 0x00622be0, 0x60000000 ]
 
+PPU-1b6aed1259c8364f62bba2c66a650d2a81dc995f: # NPWR00195_00
+  "Openspy Online":
+    Games:
+      "Sid Meier's Civilization Revolution":
+        BLES00238: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x016e50a7, "openspy.net" ]
+      - [ utf8, 0x016e50ff, "openspy.net" ]
+      - [ utf8, 0x016e5140, "openspy.net" ]
+      - [ utf8, 0x016e518a, "openspy.net" ]
+      - [ utf8, 0x0174c755, "openspy.net" ]
+      - [ utf8, 0x0174dc70, "openspy.net" ]
+      - [ utf8, 0x0174dc88, "openspy.net" ]
+      - [ utf8, 0x0174dca0, "openspy.net" ]
+      - [ utf8, 0x0174dda9, "openspy.net" ]
+      - [ utf8, 0x0174e268, "openspy.net" ]
+      - [ utf8, 0x0174e3df, "openspy.net" ]
+      - [ utf8, 0x0174ec26, "openspy.net" ]
+      - [ utf8, 0x01970645, "openspy.net" ]
+      - [ utf8, 0x0197079d, "openspy.net" ]
+      - [ utf8, 0x0174f0f8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x0174ef50, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-da67f750c395556c1fce35ec62639eb95ca44a2d:
   "60 FPS":
     Games:
