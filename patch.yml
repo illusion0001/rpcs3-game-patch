@@ -9800,7 +9800,7 @@ PPU-d73f342bf28ee016ef3d0ccb309b1acb03d8ecce:
     Group: CustomServer
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x013dec30, "http://5.61.32.177\0" ] # https://gt5.ps3.online.us.gran-turismo.com
+      - [ utf8, 0x013dec30, "http://54.37.232.59\0" ] # https://gt5.ps3.online.us.gran-turismo.com
 
 PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
   "Unlock FPS":
@@ -9850,7 +9850,7 @@ PPU-7a5ee7bc2fef9566dd80e35893fe2c5571197726:
     Group: CustomServer
     Patch Version: 1.0
     Patch:
-      - [ utf8, 0x013debb0, "http://5.61.32.177\0" ] # https://gt5.ps3.online.uk.gran-turismo.com
+      - [ utf8, 0x013debb0, "http://54.37.232.59\0" ] # https://gt5.ps3.online.uk.gran-turismo.com
 
 PPU-223cc85fc80a6667fae775c7c02f7f65e6b2871f:
   "Unlock FPS":
