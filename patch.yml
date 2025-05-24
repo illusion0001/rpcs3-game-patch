@@ -21682,6 +21682,17 @@ PPU-87b65547be9e5efe8f540cbda75dfb9a21698a8b:
     Patch:
       - [ be32, 0x002a6e40, 0x60000000 ]
 
+PPU-205b154e801acbf1f0d96b5c5c5275ef9d4cac3f:
+  "Unlock FPS":
+    Games:
+      "Medal of Honor (Single-Player)":
+        BLUS30436: [ 01.02 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x010470e0, 0x60000000 ]
+
 Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
     "Metal Gear Rising: Revengeance":
