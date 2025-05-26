@@ -11830,6 +11830,13 @@ PPU-8363904e0b8fc276380a8f0e158dd81d7a9cefc5:
       - [ be16, 0x000e53ec, 0x915d ] # (mem: 00bb44cc)
       - [ be32, 0x000e53c8, 0x60000000 ]
       - [ bef32, 0x00bb44d4, "Distance" ] # Fadeout End Distance
+  "Skip Intro":
+    Games: *uc1_disc101title
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00746eb0, "playtest\0" ]
 
 PPU-4a5f4c5ae98f1b8b01294a267790adfa5e8b4501:
   "Disable Motion Blur":
@@ -11946,6 +11953,13 @@ PPU-3488cb6c2a7178978b5044b09c7c7ef8397440c0:
     Patch Version: 1.0
     Patch:
       - [ load, *uc1_dlight_all_psn ]
+  "Skip Intro":
+    Games: *uc1_PSNalltitle
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00746d50, "playtest\0" ]
 
 PPU-66cf2ffcfb251ec0b2a1d261fe97d30a3acab015:
   "Debug Menu":
