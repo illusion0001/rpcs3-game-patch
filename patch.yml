@@ -12672,6 +12672,17 @@ PPU-41a7d047c573c78c0307506c9d1b52d15a66e4f5:
     Patch:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
+PPU-cf11f1d21afe3ba5a6c8c2a8cf926ee2ad571f41:
+  "Skip UGC Tutorial":
+    Games:
+      "inFamous 2 UGC Beta":
+        NPUA70146: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x007827a8, 0x00000000 ]
+
 Anchors:
   haze_fps_notes: &haze_fps_notes
     "Needs testing above 60 FPS."
