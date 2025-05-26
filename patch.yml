@@ -12653,7 +12653,7 @@ PPU-311fcd98af6adc5e64e6a833eb959f43b0976193:
 PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
   "Extended FOV":
     Games:
-      "Infamous 2 Demo":
+      "inFamous 2 Demo":
         NPEA90095: [ All ]
     Author: "illusion"
     Notes:
@@ -12664,7 +12664,7 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
 PPU-41a7d047c573c78c0307506c9d1b52d15a66e4f5:
   "Extended FOV":
     Games:
-      "Infamous 2":
+      "inFamous 2":
         BCUS98125: [ All ]
     Author: "illusion"
     Notes:
