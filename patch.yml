@@ -5349,7 +5349,11 @@ PPU-8645cfa235c9980ff74b5e06388b29e97fdbbed9: # NPWR02973_00
     Games:
       "TEKKEN TAG TOURNAMENT 2":
         BLES01702: [ 01.03 ]
-        NPUB30899: [ 01.03 ]
+        BLJS10187: [ 01.03 ]
+        BLUS31002: [ 01.03 ]
+        NPEB01140: [ 01.01 ]
+        NPJB00236: [ 01.01 ]
+        NPUB30899: [ 01.01 ]
     Author: "FlexBy"
     Notes:
     Patch Version: 1.0
