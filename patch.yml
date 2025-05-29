@@ -1421,6 +1421,13 @@ Anchors:
     "http://lbp.littlebigrefresh.com:2095/lbp\0"
 
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
+  "Disable MLAA":
+    Games: *lbp2_133title
+    Author: "illusiony"
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00db8208, 0x00 ]
+      - [ be32, 0x00e3e114, 0x00000001 ]
   "Aspect Ratio":
     Games: *lbp2_133title
     Author: "slashiee"
