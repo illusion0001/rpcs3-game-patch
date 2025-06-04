@@ -22294,6 +22294,31 @@ PPU-9237d62716d77a3bfcbd1dae8cd17ea6d8d5977a:
     Patch:
       - [ be32, 0x005261c8, 0x60000000 ]
 
+PPU-0a1d4f333831bfa502e7255c3ebce9ff8d0fa2f9:
+  "Online Logs TTY":
+    Games:
+      "NHL 10":
+        BLES00567: [ 01.00 ]
+    Author: "Kaap0"
+    Notes: "Displays live Blaze logs in TTY"
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x00958840, 0x7C641B78] # mr r4, r3
+      - [be32, 0x00958844, 0x7C862378] # mr r6, r4
+      - [be32, 0x00958848, 0x38A00000] # li r5, 0
+      - [be32, 0x0095884C, 0x88E60000] # lbz r7, 0(r6)
+      - [be32, 0x00958850, 0x2C07000A] # cmpwi cr0,r7,0xa
+      - [be32, 0x00958854, 0x41820010] # beq cr0,0x958864
+      - [be32, 0x00958858, 0x38C60001] # addi r6,1(r6)
+      - [be32, 0x0095885C, 0x38A50001] # addi r5,1,(r5)
+      - [be32, 0x00958860, 0x4BFFFFEC] # b 0x95884c
+      - [be32, 0x00958864, 0x38A50001] # addi r5,1(r5)
+      - [be32, 0x00958868, 0x38600001] # li r3,1
+      - [be32, 0x0095886C, 0x38C00000] # li r6,0
+      - [be32, 0x00958870, 0x39600193] # li r11,0x193
+      - [be32, 0x00958874, 0x44000002] # sc
+      - [be32, 0x00958878, 0x4E800020] # blr
+
 PPU-9ee543aff769e702526f67713c776247929abeb3:
   "Unlock FPS":
     Games:
