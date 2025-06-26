@@ -17613,6 +17613,16 @@ PPU-835dc9b413a3f538ddb52f24382b93e3fad5164d:
     Patch:
       - [ bef32, 0x0096c6a4, "Aspect Ratio" ]
 
+PPU-8f729e902ad2c7ae0f7f4cbacbfaa17dcb080be9:
+  "Instantly Complete Infiltration Minigame":
+    Games:
+      "Ratchet & Clank 2: Going Commando":
+        BCUS98282: [ 01.00 ]
+    Author: "illusiony"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00e10f38, 0x38800005 ]
+
 Anchors:
   fallout3_60fps_notes: &fallout3_60fps_notes
     "Set the framelimiter to 60, as things will break over 60 FPS."
