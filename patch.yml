@@ -1061,6 +1061,15 @@ PPU-e1a44e5d3fb03a37f0445e92ed13abce8d6efdd4:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x0091a9bc, *DOD3_Camera_H_Sens_Multiplier ]
+  "Disable low-res Depth-of-Field":
+    Games:
+      "Drakengard 3 (Drag-On Dragoon 3)":
+        NPEB01407: [ All ]
+    Author: "emoose, AniLeo"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00a5399c, 0x38800000 ] # patch ASqex03GameRender::EnableDOF to override r4 param with 0
 
 PPU-60d4a7e2b5efa835e16f51de649c3e3b202e072e:
   "Unlock FPS (For Delisted Ver)":
