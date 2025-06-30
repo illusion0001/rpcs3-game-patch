@@ -3154,6 +3154,16 @@ PPU-66e68ab81cb8c107687e708170fd7f13cfdd641e:
       - [ be32, 0x003cc00c, 0x60000000 ]
       - [ be32, 0x003cc070, 0x60000000 ]
       - [ be32, 0x003cc080, 0x60000000 ]
+  "Enable Log":
+    Games:
+      "Army of TWO: The 40th Day":
+        BLUS30408: [ 01.03 ]
+        BLES00659: [ 01.02 ]
+    Author: "opcode, faith"
+    Notes: "Enables verbose logging."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0092e3c4, 0x60000000 ] # nop call that disables logger
 
 PPU-8dc2c858b13b0dd2051c2c43cfea6572a67216b1:
   "SSL Patch":
