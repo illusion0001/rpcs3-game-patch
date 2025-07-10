@@ -20812,6 +20812,8 @@ PPU-cb6805a941b76cd3b479c61bb2fa387b72b7bb0f:
 Anchors:
   EOTTW_debugmenu_notes: &EOTTW_debugmenu_notes
     "Select + Start = Brings Menu\nL3 + R3 = Debug Camera"
+  EOTTW_unlockfps_notes: &EOTTW_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
 
 PPU-1f2c7d41f5e0e842fe9ce2bba536f5f2306e5a5c:
   "Debug Menu":
@@ -20823,6 +20825,15 @@ PPU-1f2c7d41f5e0e842fe9ce2bba536f5f2306e5a5c:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x014fbf54, 0x38600000 ]
+  "Unlock FPS":
+    Games:
+      "Enslaved: Odyssey to the West":
+        BLES00989: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *EOTTW_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003124f8, 0x60000000 ]
 
 PPU-8475f1c335cc3c205dd5567269607a2f119f04c6:
   "Debug Menu":
@@ -20834,6 +20845,15 @@ PPU-8475f1c335cc3c205dd5567269607a2f119f04c6:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x014fbf54, 0x38600000 ]
+  "Unlock FPS":
+    Games:
+      "Enslaved: Odyssey to the West":
+        BLUS30558: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *EOTTW_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003124f8, 0x60000000 ]
 
 PPU-8109b840ad2f8e171be946ed6a79e308b9c733f1:
   "Debug Menu":
