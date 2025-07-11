@@ -6681,6 +6681,47 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
       - [ be32, 0x00e8bc7c, 0x923f0038 ]
       - [ be32, 0x00e8bc80, 0x923f0044 ]
       - [ be32, 0x00e8bc84, 0x4b93f2d0 ]
+  "Swap shoulder button / trigger controls":
+    Games: *tlou111_title
+    Author: "level3tjg"
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x009edd64, 0x4812d309] # bl 0x00b1b06c
+      - [be32, 0x00b1b06c, 0xe8410028] # ld r2,0x28(r1)
+      - [be32, 0x00b1b070, 0x2f830000] # cmpwi cr7,r3,0x0
+      - [be32, 0x00b1b074, 0x409e0080] # bne cr7,0x00b1b0f4
+      - [be32, 0x00b1b078, 0x2f840000] # cmpwi cr7,r4,0x0
+      - [be32, 0x00b1b07c, 0x419e0078] # beq cr7,0x00b1b0f4
+      - [be32, 0x00b1b080, 0x88a4000b] # lbz r5,0xb(r4)
+      - [be32, 0x00b1b084, 0x88c4000b] # lbz r6,0xb(r4)
+      - [be32, 0x00b1b088, 0x70a70001] # andi. r7,r5,0x1
+      - [be32, 0x00b1b08c, 0x2f870000] # cmpwi cr7,r7,0x0
+      - [be32, 0x00b1b090, 0x419e000c] # beq cr7,0x00b1b09c
+      - [be32, 0x00b1b094, 0x68c60001] # xori r6,r6,0x1
+      - [be32, 0x00b1b098, 0x60c60004] # ori r6,r6,0x4
+      - [be32, 0x00b1b09c, 0x70a70002] # andi. r7,r5,0x2
+      - [be32, 0x00b1b0a0, 0x2f870000] # cmpwi cr7,r7,0x0
+      - [be32, 0x00b1b0a4, 0x419e000c] # beq cr7,0x00b1b0b0
+      - [be32, 0x00b1b0a8, 0x68c60002] # xori r6,r6,0x2
+      - [be32, 0x00b1b0ac, 0x60c60008] # ori r6,r6,0x8
+      - [be32, 0x00b1b0b0, 0x39000000] # li r8,0x0
+      - [be32, 0x00b1b0b4, 0x70a70004] # andi. r7,r5,0x4
+      - [be32, 0x00b1b0b8, 0x2f870000] # cmpwi cr7,r7,0x0
+      - [be32, 0x00b1b0bc, 0x419e0010] # beq cr7,0x00b1b0cc
+      - [be32, 0x00b1b0c0, 0x68c60004] # xori r6,r6,0x4
+      - [be32, 0x00b1b0c4, 0x60c60001] # ori r6,r6,0x1
+      - [be32, 0x00b1b0c8, 0x390000ff] # li r8,0xff
+      - [be32, 0x00b1b0cc, 0x99040029] # stb r8,0x29(r4)
+      - [be32, 0x00b1b0d0, 0x39000000] # li r8,0x0
+      - [be32, 0x00b1b0d4, 0x70a70008] # andi. r7,r5,0x8
+      - [be32, 0x00b1b0d8, 0x2f870000] # cmpwi cr7,r7,0x0
+      - [be32, 0x00b1b0dc, 0x419e0010] # beq cr7,0x00b1b0ec
+      - [be32, 0x00b1b0e0, 0x68c60008] # xori r6,r6,0x8
+      - [be32, 0x00b1b0e4, 0x60c60002] # ori r6,r6,0x2
+      - [be32, 0x00b1b0e8, 0x390000ff] # li r8,0xff
+      - [be32, 0x00b1b0ec, 0x9904002b] # stb r8,0x2b(r4)
+      - [be32, 0x00b1b0f0, 0x98c4000b] # stb r6,0xb(r4)
+      - [be32, 0x00b1b0f4, 0x4e800020] # blr
 
 PPU-9e5c67eaf69077c591b7c503bed2b48617643134:
   "Debug Menu":
