@@ -3425,7 +3425,62 @@ PPU-abfef1fc79b9be0cbf4fd4b376280ef3a4fd37c5:
     Patch:
       - [ be32, 0x0015fe9c, 0x60000000 ]
 
+Anchors:
+  sk8_noblur_notes: &sk8_noblur_notes
+    "Removes blur."
+  sk8_noblur: &sk8_noblur
+      - [ be32, 0x00FFA900, 0x3C80D004 ]  # lis   r4, 0xD004
+      - [ be32, 0x00FFA904, 0x60844D94 ]  # ori   r4, r4, 0x4D94
+      - [ be32, 0x00FFA908, 0x5484003F ]  # rlwinm r4, r4, 0, 0, 31
+      - [ be32, 0x00FFA90C, 0x80A40000 ]  # lwz   r5, 0(r4)
+      - [ be32, 0x00FFA910, 0x38A50498 ]  # addi  r5, r5, 0x498
+      - [ be32, 0x00FFA914, 0x80C50000 ]  # lwz   r6, 0(r5)
+      - [ be32, 0x00FFA918, 0x2C060000 ]  # cmpwi r6, 0
+      - [ be32, 0x00FFA91C, 0x41820020 ]  # beq   0x00FFA938
+      - [ be32, 0x00FFA920, 0x80E60000 ]  # lwz   r7, 0(r6)
+      - [ be32, 0x00FFA924, 0x2C070000 ]  # cmpwi r7, 0
+      - [ be32, 0x00FFA928, 0x41820014 ]  # beq   0x00FFA938
+      - [ be32, 0x00FFA92C, 0x390703A8 ]  # addi  r8, r7, 0x3A8
+      - [ be32, 0x00FFA930, 0x89280000 ]  # lbz   r9, 0(r8)
+      - [ be32, 0x00FFA934, 0x39400000 ]  # li    r10, 0
+      - [ be32, 0x00FFA938, 0x99480000 ]  # stb   r10, 0(r8)
+      - [ be32, 0x00FFA93C, 0x4E800020 ]  # blr
+
+PPU-4cb1e99683e957b3153a876a9ebe7e3611559248:
+  "No Blur":
+    Games:
+      "Skate Demo":
+        NPEB90031: [ 01.00 ]
+    Author: "tuukkas"
+    Notes: *sk8_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk8_noblur ]
+      - [ be32, 0x0069C97C, 0x4895DF85 ]  # bl 0x00FFA900
+
+PPU-c00f2b02e71f7e9b04683958bda712d66af4be15:
+  "No Blur":
+    Games:
+      "Skate":
+        BLUS30059: [ 01.01 ]
+    Author: "tuukkas"
+    Notes: *sk8_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk8_noblur ]
+      - [ be32, 0x006A0B60, 0x48959DA1 ]  # bl 0x00FFA900
+
 PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
+  "No Blur":
+    Games:
+      "Skate":
+        BLES00124: [ 01.00 ]
+    Author: "tuukkas"
+    Notes: *sk8_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk8_noblur ]
+      - [ be32, 0x006A0B50, 0x48959DB1 ]  # bl 0x00FFA900
   "21:9 Aspect Ratio":
     Games:
       "Skate":
@@ -3451,8 +3506,29 @@ Anchors:
       BLUS30464: [ 01.05 ]
       BLES00760: [ 01.05 ]
       BLJM60296: [ 01.00 ]
+  sk83_noblur: &sk83_noblur
+      - [ be32, 0x0173E100, 0x3C80019A ]  # lis   r4, 0x19A
+      - [ be32, 0x0173E104, 0x38845A74 ]  # addi  r4, r4, 0x5A74
+      - [ be32, 0x0173E108, 0x80A40000 ]  # lwz   r5, 0(r4)
+      - [ be32, 0x0173E10C, 0x2C050000 ]  # cmpwi r5, 0
+      - [ be32, 0x0173E110, 0x41820018 ]  # beq   end
+      - [ be32, 0x0173E114, 0x80C50000 ]  # lwz   r6, 0(r5)
+      - [ be32, 0x0173E118, 0x2C060000 ]  # cmpwi r6, 0
+      - [ be32, 0x0173E11C, 0x4182000C ]  # beq   end
+      - [ be32, 0x0173E120, 0x38E60078 ]  # addi  r7, r6, 0x78
+      - [ be32, 0x0173E124, 0x39000000 ]  # li    r8, 0
+      - [ be32, 0x0173E128, 0x99070000 ]  # stb   r8, 0(r7)
+      - [ be32, 0x0173E12C, 0x4E800020 ]  # blr
 
 PPU-376469bd27d45a617b6d086894c07e4a00f86fde:
+  "No Blur":
+    Games: *skate3_105title
+    Author: "tuukkas"
+    Notes: "Removes blur."
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk83_noblur ]
+      - [ be32, 0x005F59A4, 0x4914875D ]  # bl 0x0173E100
   "21:9 Aspect Ratio":
     Games: *skate3_105title
     Author: "tuukkas"
@@ -11087,7 +11163,47 @@ Anchors:
   sk82_movies: &sk82_movies
     - [ be32, 0x001bd8c8, 0x60000000 ]
 
+  sk82_noblur_notes: &sk82_noblur_notes
+    "Removes blur."
+
+  sk82_noblur: &sk82_noblur
+      # fastuber
+      - [ be32, 0x0123DE00, 0x3C80382D ]  # lis   r4, 0x382D
+      - [ be32, 0x0123DE04, 0x388454A4 ]  # addi  r4, r4, 0x54A4
+      - [ be32, 0x0123DE08, 0x80A40000 ]  # lwz   r5, 0(r4)
+      - [ be32, 0x0123DE0C, 0x2C050000 ]  # cmpwi r5, 0
+      - [ be32, 0x0123DE10, 0x41820028 ]  # beq   visualfx
+      - [ be32, 0x0123DE14, 0x80C50000 ]  # lwz   r6, 0(r5)
+      - [ be32, 0x0123DE18, 0x2C060000 ]  # cmpwi r6, 0
+      - [ be32, 0x0123DE1C, 0x4182001C ]  # beq   visualfx
+      - [ be32, 0x0123DE20, 0x38E600B8 ]  # addi  r7, r6, 0xB8
+      - [ be32, 0x0123DE24, 0x39000000 ]  # li    r8, 0
+      - [ be32, 0x0123DE28, 0x99070000 ]  # stb   r8, 0(r7)
+      # visualfx
+      - [ be32, 0x0123DE2C, 0x3C80382D ]  # lis   r4, 0x382D
+      - [ be32, 0x0123DE30, 0x38845468 ]  # addi  r4, r4, 0x5468
+      - [ be32, 0x0123DE34, 0x80A40000 ]  # lwz   r5, 0(r4)
+      - [ be32, 0x0123DE38, 0x2C050000 ]  # cmpwi r5, 0
+      - [ be32, 0x0123DE3C, 0x41820010 ]  # beq   end
+      - [ be32, 0x0123DE40, 0x80C50000 ]  # lwz   r6, 0(r5)
+      - [ be32, 0x0123DE44, 0x2C060000 ]  # cmpwi r6, 0
+      - [ be32, 0x0123DE48, 0x41820008 ]  # beq   end
+      - [ be32, 0x0123DE4C, 0x38E60038 ]  # addi  r7, r6, 0x38
+      - [ be32, 0x0123DE50, 0x99070000 ]  # stb   r8, 0(r7)
+      # end
+      - [ be32, 0x0123DE54, 0x4E800020 ]  # blr
+
 PPU-c5d2fd31933f88313956774b84346d242979eba6:
+  "No Blur":
+    Games:
+      "Skate 2":
+        BLUS30253: [ 01.02 ]
+    Author: "tuukkas"
+    Notes: *sk82_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_noblur ]
+      - [ be32, 0x0041A884, 0x48E2357D ]  # bl 0x0123DE00
   "21:9 Aspect Ratio":
     Games:
       "Skate 2":
@@ -11117,6 +11233,16 @@ PPU-c5d2fd31933f88313956774b84346d242979eba6:
       - [ load, *sk82_movies ]
 
 PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
+  "No Blur":
+    Games:
+      "Skate 2":
+        BLES00461: [ 01.02 ]
+    Author: "tuukkas"
+    Notes: *sk82_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_noblur ]
+      - [ be32, 0x0041A884, 0x48E2357D ]  # bl 0x0123DE00
   "21:9 Aspect Ratio":
     Games:
       "Skate 2":
@@ -11144,6 +11270,30 @@ PPU-8fd7b704255420d0e9a6b337b6d1bcaae39ff569:
     Patch Version: 1.0
     Patch:
       - [ load, *sk82_movies ]
+
+PPU-772ad0ca7cd8f2255e52e56521a3f84df5cba251:
+  "No Blur":
+    Games:
+      "Skate 2":
+        BLUS30253: [ 01.00 ]
+    Author: "tuukkas"
+    Notes: *sk82_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_noblur ]
+      - [ be32, 0x00425458, 0x48E189A9 ]  # bl 0x0123DE00
+
+PPU-03e0b9a35f223ecad25a0e067eb2be34cf746bc2:
+  "No Blur":
+    Games:
+      "Skate 2":
+        BLES00461: [ 01.00 ]
+    Author: "tuukkas"
+    Notes: *sk82_noblur_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *sk82_noblur ]
+      - [ be32, 0x00424EBC, 0x48E18F45 ]  # bl 0x0123DE00
 
 PPU-08da3b601b335c5b09e6425b27fe00eacdad6e78:
   "Unlock FPS":
