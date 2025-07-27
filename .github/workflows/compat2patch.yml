@@ -8,9 +8,6 @@ on:
     - cron: '* * * * *'
   workflow_dispatch:
 
-env:
-  old_runs: 100
-
 jobs:
   build:
     if: |
@@ -19,6 +16,8 @@ jobs:
       github.event_name == 'push' ||
       github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    env:
+      old_runs: 100
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -46,9 +45,9 @@ jobs:
           else
             echo "Up-to-date!"
           fi
-      # https://github.com/NoName-exe/revanced/blob/cfb4138313c8900781447b905b868792de6175c0/.github/workflows/ci.yml#L36
       - name: Clear older ${{ env.old_runs }} runs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # https://github.com/NoName-exe/revanced/blob/cfb4138313c8900781447b905b868792de6175c0/.github/workflows/ci.yml#L36
           gh run list -L${{ env.old_runs }} --json databaseId -q '.[].databaseId' | tail -n+2 | xargs -IID gh api "repos/$GITHUB_REPOSITORY/actions/runs/ID" -X DELETE || :
