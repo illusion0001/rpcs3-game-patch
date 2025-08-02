@@ -22271,6 +22271,32 @@ PPU-348ff1bbf4eb9595b4dbc9dc2358bc1db79dbe72:
     Patch:
       - [ be32, 0x002ff5f0, 0x60000000 ]
 
+Anchors:
+  malicious_60fps_notes: &malicious_60fps_notes
+    "Allows for proper gamespeed at 60 FPS.\nSet VBlank to 120.\nSome stuff may still be 2x speed."
+
+PPU-c40a16e9e12d04ec17dad6cc2e2b4b5ef987819c:
+  "60 FPS":
+    Games:
+      "Malicious":
+        NPEA00366: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *malicious_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003aff38, 0x3c803c88 ] # (mem: 0x00f75a30)
+
+PPU-caa9b6502011befb6fe09c154f7ba17f67f86b76:
+  "60 FPS":
+    Games:
+      "Malicious":
+        NPEA00366: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *malicious_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x003b08a8, 0x3c803c88 ] # (mem: 0x00f75ab0)
+
 PPU-bc4b7b4c45dd73d59fcb54ad47143baf07c5521b:
   "Unlock FPS":
     Games:
