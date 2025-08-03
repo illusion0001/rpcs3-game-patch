@@ -20695,6 +20695,15 @@ PPU-50a806583e51a32db635cb14edb02841e2cd956d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00327d9c, 0x60000000 ]
+  "Disable Depth of Field":
+    Games:
+      "Contrast":
+        NPEB01861: [ 01.01 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0011b804, 0x3be00000 ] # (mem: 0x0103b4d0)
 
 PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
   "Developer Menu":
