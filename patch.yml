@@ -15110,47 +15110,82 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
     Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
-      - [ be32, 0x0055a3c0, 0x60000000 ]
+      - [ be32, 0x0055ae00, 0x60000000 ]
+  "Disable DLC Unlock Messages":
+    Games: *p5_Title_JP_103
+    Author: *p5_DLC_Author
+    Notes:
+    Patch Version: *p5_DLC_PatVer
+    Patch:
+      - [ be32, 0x00197948, 0x4e800020 ]
   "Disable Blur Filter":
     Games: *p5_Title_JP_103
     Author: *p5_DisableBlur_Author
     Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
-      - [ be32, 0x00febbaa, 0x9e001700 ]
-      - [ be32, 0x00febbae, 0xc801001d ]
-      - [ be32, 0x00febbb2, 0x00000000 ]
-      - [ be32, 0x00febbb6, 0x00000000 ]
-      - [ be32, 0x00febbba, 0x1e810100 ]
-      - [ be32, 0x00febbbe, 0xc800001d ]
-      - [ be32, 0x00febbc2, 0x00000000 ]
-      - [ be32, 0x00febbc6, 0x00000000 ]
+      - [ be32, 0x00febc0a, 0x9e001700 ]
+      - [ be32, 0x00febc0e, 0xc801001d ]
+      - [ be32, 0x00febc12, 0x00000000 ]
+      - [ be32, 0x00febc16, 0x00000000 ]
+      - [ be32, 0x00febc1a, 0x1e810100 ]
+      - [ be32, 0x00febc1e, 0xc800001d ]
+      - [ be32, 0x00febc22, 0x00000000 ]
+      - [ be32, 0x00febc26, 0x00000000 ]
+  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
+    Games: *p5_Title_JP_103
+    Author: *p5_DisableDistortion_Author
+    Notes:
+    Patch Version: *p5_DisableDistortion_PatVer
+    Patch:
+      - [ be32, 0x00fe07b8, 0x9e001700 ]
+      - [ be32, 0x00fe07bc, 0xc801001d ]
+      - [ be32, 0x00fe07c0, 0x00000000 ]
+      - [ be32, 0x00fe07c4, 0x00000000 ]
+      - [ be32, 0x00fe07c8, 0x1e810100 ]
+      - [ be32, 0x00fe07cc, 0xc800001d ]
+      - [ be32, 0x00fe07d0, 0x00000000 ]
+      - [ be32, 0x00fe07d4, 0x00000000 ]
+  "Disable Angry Distortion Filter (100% Alert)":
+    Games: *p5_Title_JP_103
+    Author: *p5_Disable100PctDistortion_Author
+    Notes:
+    Patch Version: *p5_Disable100PctDistortion_PatVer
+    Patch:
+      - [ be32, 0x00fe0b5c, 0x9e001700 ]
+      - [ be32, 0x00fe0b60, 0xc801001d ]
+      - [ be32, 0x00fe0b64, 0x00000000 ]
+      - [ be32, 0x00fe0b68, 0x00000000 ]
+      - [ be32, 0x00fe0b6c, 0x1e810100 ]
+      - [ be32, 0x00fe0b70, 0xc800001d ]
+      - [ be32, 0x00fe0b74, 0x00000000 ]
+      - [ be32, 0x00fe0b78, 0x00000000 ]
   "Custom Maximum Bullet Count":
     Games: *p5_Title_JP_103
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
-      - [ be16, 0x00d5c078, 0  ] # empty   - base start
-      - [ be16, 0x00d5c07a, 16 ] # joker   -- 16
-      - [ be16, 0x00d5c07c, 8  ] # ryuji   -- 8
-      - [ be16, 0x00d5c07e, 15 ] # morgana -- 15
-      - [ be16, 0x00d5c080, 36 ] # ann     -- 36
-      - [ be16, 0x00d5c082, 24 ] # yusuke  -- 24
-      - [ be16, 0x00d5c084, 12 ] # makoto  -- 12
-      - [ be16, 0x00d5c086, 6  ] # haru    -- 6
-      - [ be16, 0x00d5c088, 0  ] # futaba  -- 0
-      - [ be16, 0x00d5c08a, 12 ] # goro    -- 12
-      - [ be16, 0x00d5c08c, 0  ] # empty   - tower rank 5 start
-      - [ be16, 0x00d5c08e, 32 ] # joker   -- 32
-      - [ be16, 0x00d5c090, 16 ] # ryuji   -- 16
-      - [ be16, 0x00d5c092, 25 ] # morgana -- 25
-      - [ be16, 0x00d5c094, 60 ] # ann     -- 60
-      - [ be16, 0x00d5c096, 48 ] # yusuke  -- 48
-      - [ be16, 0x00d5c098, 24 ] # makoto  -- 24
-      - [ be16, 0x00d5c09a, 12 ] # haru    -- 12
-      - [ be16, 0x00d5c09c, 0  ] # futaba  -- 0
-      - [ be16, 0x00d5c09e, 24 ] # goro    -- 24
+      - [ be16, 0x00d5c0c8, 0  ] # empty   - base start
+      - [ be16, 0x00d5c0ca, 16 ] # joker   -- 16
+      - [ be16, 0x00d5c0cc, 8  ] # ryuji   -- 8
+      - [ be16, 0x00d5c0ce, 15 ] # morgana -- 15
+      - [ be16, 0x00d5c0d0, 36 ] # ann     -- 36
+      - [ be16, 0x00d5c0d2, 24 ] # yusuke  -- 24
+      - [ be16, 0x00d5c0d4, 12 ] # makoto  -- 12
+      - [ be16, 0x00d5c0d6, 6  ] # haru    -- 6
+      - [ be16, 0x00d5c0d8, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c0da, 12 ] # goro    -- 12
+      - [ be16, 0x00d5c0dc, 0  ] # empty   - tower rank 5 start
+      - [ be16, 0x00d5c0de, 32 ] # joker   -- 32
+      - [ be16, 0x00d5c0e0, 16 ] # ryuji   -- 16
+      - [ be16, 0x00d5c0e2, 25 ] # morgana -- 25
+      - [ be16, 0x00d5c0e4, 60 ] # ann     -- 60
+      - [ be16, 0x00d5c0e6, 48 ] # yusuke  -- 48
+      - [ be16, 0x00d5c0e8, 24 ] # makoto  -- 24
+      - [ be16, 0x00d5c0ea, 12 ] # haru    -- 12
+      - [ be16, 0x00d5c0ec, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c0ee, 24 ] # goro    -- 24
 
 Anchors:
   r1_fps_notes: &r1_fps_notes
