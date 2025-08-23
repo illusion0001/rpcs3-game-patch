@@ -10140,6 +10140,17 @@ PPU-a5e547ce3ce25092ac6cae85631f50ba5d9ea914:
     Patch:
       - [ load, *gt5_v217_fps ]
 
+PPU-66de81d02e578db05c7832efb55d8268a5ee6fa9:
+  "Unlock FPS":
+    Games:
+      "Gran Turismo 5":
+        BCJS30001: [ 02.17 ]
+    Author: "ZEROx"
+    Notes: *gt5_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *gt5_v217_fps ]
+
 Anchors:
   gt6_devlop_122: &gt6_devlop_122
     - [ be32, 0x0081715c, 0x38600001 ]
@@ -15044,246 +15055,102 @@ PPU-b8c34f774adb367761706a7f685d4f8d9d355426:
       - [ load, *p5_StopPartyPanel ]
 
 PPU-3b394da7912181d308bf08505009b3578521c756:
-  "Enable Mod Support":
-    Games: *p5_Title_JP_100
-    Author: *p5_ModSupport_Author
-    Notes: *p5_ModSupport_Notes
-    Patch Version: *p5_ModSupport_PatVer
-    Patch:
-      - [ load, *p5_ModSupport ]
   "Skip Intro Videos":
     Games: *p5_Title_JP_100
     Author: *p5_SkipIntro_Author
     Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
-      - [ load, *p5_SkipIntro ]
-  "60 FPS":
-    Games: *p5_Title_JP_100
-    Author: *p5_60FPS_Author
-    Notes: *p5_60FPS_Notes
-    Patch Version: *p5_60FPS_PatVer
-    Patch:
-      - [ load, *p5_60FPS ]
-  "Disable DLC Unlock Messages":
-    Games: *p5_Title_JP_100
-    Author: *p5_DLC_Author
-    Notes:
-    Patch Version: *p5_DLC_PatVer
-    Patch:
-      - [ load, *p5_DLC ]
+      - [ be32, 0x0055a3c0, 0x60000000 ]
   "Disable Blur Filter":
     Games: *p5_Title_JP_100
     Author: *p5_DisableBlur_Author
     Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
-      - [ load, *p5_DisableBlur ]
-  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
-    Games: *p5_Title_JP_100
-    Author: *p5_DisableDistortion_Author
-    Notes:
-    Patch Version: *p5_DisableDistortion_PatVer
-    Patch:
-      - [ load, *p5_DisableDistortion ]
-  "Disable Angry Distortion Filter (100% Alert)":
-    Games: *p5_Title_JP_100
-    Author: *p5_Disable100PctDistortion_Author
-    Notes:
-    Patch Version: *p5_Disable100PctDistortion_PatVer
-    Patch:
-      - [ load, *p5_Disable100PctDistortion ]
-  "Disable HUD Elements":
-    Games: *p5_Title_JP_100
-    Author: *p5_NoHudLite_Author
-    Notes: *p5_NoHudLite_Notes
-    Patch Version: *p5_NoHudLite_PatVer
-    Patch:
-      - [ load, *p5_NoHudLite ]
-  "Disable HUD Elements (Aggressive)":
-    Games: *p5_Title_JP_100
-    Author: *p5_NoHud_Author
-    Notes: *p5_NoHud_Notes
-    Patch Version: *p5_NoHud_PatVer
-    Patch:
-      - [ load, *p5_NoHud ]
-  "Encounter BGM In Order":
-    Games: *p5_Title_JP_100
-    Author: *p5_BgmOrder_Author
-    Notes: *p5_BgmOrder_Notes
-    Patch Version: *p5_BgmOrder_PatVer
-    Patch:
-      - [ load, *p5_BgmOrder ]
-  "Encounter BGM Random Order":
-    Games: *p5_Title_JP_100
-    Author: *p5_BgmRandom_Author
-    Notes: *p5_BgmRandom_Notes
-    Patch Version: *p5_BgmRandom_PatVer
-    Patch:
-      - [ load, *p5_BgmRandom ]
-  "Disable Navigator Battle Messages":
-    Games: *p5_Title_JP_100
-    Author: *p5_NaviLines_Author
-    Notes: *p5_NaviLines_Notes
-    Patch Version: *p5_NaviLines_PatVer
-    Patch:
-      - [ load, *p5_NaviLines ]
+      - [ be32, 0x00febbaa, 0x9e001700 ]
+      - [ be32, 0x00febbae, 0xc801001d ]
+      - [ be32, 0x00febbb2, 0x00000000 ]
+      - [ be32, 0x00febbb6, 0x00000000 ]
+      - [ be32, 0x00febbba, 0x1e810100 ]
+      - [ be32, 0x00febbbe, 0xc800001d ]
+      - [ be32, 0x00febbc2, 0x00000000 ]
+      - [ be32, 0x00febbc6, 0x00000000 ]
   "Custom Maximum Bullet Count":
     Games: *p5_Title_JP_100
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
-      - [ load, *p5_MaxBullet ]
-  "File Access Log":
-    Games: *p5_Title_JP_100
-    Author: *p5_FileAccessLog_Author
-    Notes: *p5_FileAccessLog_Notes
-    Patch Version: *p5_FileAccessLog_PatVer
-    Patch:
-      - [ load, *p5_FileAccessLog ]
-  "Fix Script Printing Functions":
-    Games: *p5_Title_JP_100
-    Author: *p5_FixScriptPrintingFunctions_Author
-    Notes: *p5_FixScriptPrintingFunctions_Notes
-    Patch Version: *p5_FixScriptPrintingFunctions_PatVer
-    Patch:
-      - [ load, *p5_FixScriptPrintingFunctions ]
-  "Replace Color d0d0d0":
-    Games: *p5_Title_JP_100
-    Author: *p5_d0d0d0_Author
-    Notes: *p5_d0d0d0_Notes
-    Patch Version: *p5_d0d0d0_PatVer
-    Patch:
-      - [ load, *p5_d0d0d0 ]
-  "Prevent Party Panel From Loading":
-    Games: *p5_Title_JP_100
-    Author: *p5_StopPartyPanel_Author
-    Notes: *p5_StopPartyPanel_Notes
-    Patch Version: *p5_StopPartyPanel_PatVer
-    Patch:
-      - [ load, *p5_StopPartyPanel ]
+      - [ be16, 0x00d5c078, 0  ] # empty   - base start
+      - [ be16, 0x00d5c07a, 16 ] # joker   -- 16
+      - [ be16, 0x00d5c07c, 8  ] # ryuji   -- 8
+      - [ be16, 0x00d5c07e, 15 ] # morgana -- 15
+      - [ be16, 0x00d5c080, 36 ] # ann     -- 36
+      - [ be16, 0x00d5c082, 24 ] # yusuke  -- 24
+      - [ be16, 0x00d5c084, 12 ] # makoto  -- 12
+      - [ be16, 0x00d5c086, 6  ] # haru    -- 6
+      - [ be16, 0x00d5c088, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c08a, 12 ] # goro    -- 12
+      - [ be16, 0x00d5c08c, 0  ] # empty   - tower rank 5 start
+      - [ be16, 0x00d5c08e, 32 ] # joker   -- 32
+      - [ be16, 0x00d5c090, 16 ] # ryuji   -- 16
+      - [ be16, 0x00d5c092, 25 ] # morgana -- 25
+      - [ be16, 0x00d5c094, 60 ] # ann     -- 60
+      - [ be16, 0x00d5c096, 48 ] # yusuke  -- 48
+      - [ be16, 0x00d5c098, 24 ] # makoto  -- 24
+      - [ be16, 0x00d5c09a, 12 ] # haru    -- 12
+      - [ be16, 0x00d5c09c, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c09e, 24 ] # goro    -- 24
 
 PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
-  "Enable Mod Support":
-    Games: *p5_Title_JP_103
-    Author: *p5_ModSupport_Author
-    Notes: *p5_ModSupport_Notes
-    Patch Version: *p5_ModSupport_PatVer
-    Patch:
-      - [ load, *p5_ModSupport ]
   "Skip Intro Videos":
     Games: *p5_Title_JP_103
     Author: *p5_SkipIntro_Author
     Notes:
     Patch Version: *p5_SkipIntro_PatVer
     Patch:
-      - [ load, *p5_SkipIntro ]
-  "60 FPS":
-    Games: *p5_Title_JP_103
-    Author: *p5_60FPS_Author
-    Notes: *p5_60FPS_Notes
-    Patch Version: *p5_60FPS_PatVer
-    Patch:
-      - [ load, *p5_60FPS ]
-  "Disable DLC Unlock Messages":
-    Games: *p5_Title_JP_103
-    Author: *p5_DLC_Author
-    Notes:
-    Patch Version: *p5_DLC_PatVer
-    Patch:
-      - [ load, *p5_DLC ]
+      - [ be32, 0x0055a3c0, 0x60000000 ]
   "Disable Blur Filter":
     Games: *p5_Title_JP_103
     Author: *p5_DisableBlur_Author
     Notes:
     Patch Version: *p5_DisableBlur_PatVer
     Patch:
-      - [ load, *p5_DisableBlur ]
-  "Disable Normal Distortion Filter (<=99% Alert & Velvet Room)":
-    Games: *p5_Title_JP_103
-    Author: *p5_DisableDistortion_Author
-    Notes:
-    Patch Version: *p5_DisableDistortion_PatVer
-    Patch:
-      - [ load, *p5_DisableDistortion ]
-  "Disable Angry Distortion Filter (100% Alert)":
-    Games: *p5_Title_JP_103
-    Author: *p5_Disable100PctDistortion_Author
-    Notes:
-    Patch Version: *p5_Disable100PctDistortion_PatVer
-    Patch:
-      - [ load, *p5_Disable100PctDistortion ]
-  "Disable HUD Elements":
-    Games: *p5_Title_JP_103
-    Author: *p5_NoHudLite_Author
-    Notes: *p5_NoHudLite_Notes
-    Patch Version: *p5_NoHudLite_PatVer
-    Patch:
-      - [ load, *p5_NoHudLite ]
-  "Disable HUD Elements (Aggressive)":
-    Games: *p5_Title_JP_103
-    Author: *p5_NoHud_Author
-    Notes: *p5_NoHud_Notes
-    Patch Version: *p5_NoHud_PatVer
-    Patch:
-      - [ load, *p5_NoHud ]
-  "Encounter BGM In Order":
-    Games: *p5_Title_JP_103
-    Author: *p5_BgmOrder_Author
-    Notes: *p5_BgmOrder_Notes
-    Patch Version: *p5_BgmOrder_PatVer
-    Patch:
-      - [ load, *p5_BgmOrder ]
-  "Encounter BGM Random Order":
-    Games: *p5_Title_JP_103
-    Author: *p5_BgmRandom_Author
-    Notes: *p5_BgmRandom_Notes
-    Patch Version: *p5_BgmRandom_PatVer
-    Patch:
-      - [ load, *p5_BgmRandom ]
-  "Disable Navigator Battle Messages":
-    Games: *p5_Title_JP_103
-    Author: *p5_NaviLines_Author
-    Notes: *p5_NaviLines_Notes
-    Patch Version: *p5_NaviLines_PatVer
-    Patch:
-      - [ load, *p5_NaviLines ]
+      - [ be32, 0x00febbaa, 0x9e001700 ]
+      - [ be32, 0x00febbae, 0xc801001d ]
+      - [ be32, 0x00febbb2, 0x00000000 ]
+      - [ be32, 0x00febbb6, 0x00000000 ]
+      - [ be32, 0x00febbba, 0x1e810100 ]
+      - [ be32, 0x00febbbe, 0xc800001d ]
+      - [ be32, 0x00febbc2, 0x00000000 ]
+      - [ be32, 0x00febbc6, 0x00000000 ]
   "Custom Maximum Bullet Count":
     Games: *p5_Title_JP_103
     Author: *p5_MaxBullet_Author
     Notes: *p5_MaxBullet_Notes
     Patch Version: *p5_MaxBullet_PatVer
     Patch:
-      - [ load, *p5_MaxBullet ]
-  "File Access Log":
-    Games: *p5_Title_JP_103
-    Author: *p5_FileAccessLog_Author
-    Notes: *p5_FileAccessLog_Notes
-    Patch Version: *p5_FileAccessLog_PatVer
-    Patch:
-      - [ load, *p5_FileAccessLog ]
-  "Fix Script Printing Functions":
-    Games: *p5_Title_JP_103
-    Author: *p5_FixScriptPrintingFunctions_Author
-    Notes: *p5_FixScriptPrintingFunctions_Notes
-    Patch Version: *p5_FixScriptPrintingFunctions_PatVer
-    Patch:
-      - [ load, *p5_FixScriptPrintingFunctions ]
-  "Replace Color d0d0d0":
-    Games: *p5_Title_JP_103
-    Author: *p5_d0d0d0_Author
-    Notes: *p5_d0d0d0_Notes
-    Patch Version: *p5_d0d0d0_PatVer
-    Patch:
-      - [ load, *p5_d0d0d0 ]
-  "Prevent Party Panel From Loading":
-    Games: *p5_Title_JP_103
-    Author: *p5_StopPartyPanel_Author
-    Notes: *p5_StopPartyPanel_Notes
-    Patch Version: *p5_StopPartyPanel_PatVer
-    Patch:
-      - [ load, *p5_StopPartyPanel ]
+      - [ be16, 0x00d5c078, 0  ] # empty   - base start
+      - [ be16, 0x00d5c07a, 16 ] # joker   -- 16
+      - [ be16, 0x00d5c07c, 8  ] # ryuji   -- 8
+      - [ be16, 0x00d5c07e, 15 ] # morgana -- 15
+      - [ be16, 0x00d5c080, 36 ] # ann     -- 36
+      - [ be16, 0x00d5c082, 24 ] # yusuke  -- 24
+      - [ be16, 0x00d5c084, 12 ] # makoto  -- 12
+      - [ be16, 0x00d5c086, 6  ] # haru    -- 6
+      - [ be16, 0x00d5c088, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c08a, 12 ] # goro    -- 12
+      - [ be16, 0x00d5c08c, 0  ] # empty   - tower rank 5 start
+      - [ be16, 0x00d5c08e, 32 ] # joker   -- 32
+      - [ be16, 0x00d5c090, 16 ] # ryuji   -- 16
+      - [ be16, 0x00d5c092, 25 ] # morgana -- 25
+      - [ be16, 0x00d5c094, 60 ] # ann     -- 60
+      - [ be16, 0x00d5c096, 48 ] # yusuke  -- 48
+      - [ be16, 0x00d5c098, 24 ] # makoto  -- 24
+      - [ be16, 0x00d5c09a, 12 ] # haru    -- 12
+      - [ be16, 0x00d5c09c, 0  ] # futaba  -- 0
+      - [ be16, 0x00d5c09e, 24 ] # goro    -- 24
 
 Anchors:
   r1_fps_notes: &r1_fps_notes
