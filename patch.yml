@@ -8791,8 +8791,8 @@ Anchors:
     - [ be32, 0x0094dae8, 0x90e303ec ] # Depth buffer = 2       (mem address: 0x1377387)
 
   uc3_119_FPS: &uc3_119_FPS
-    - [ be32, 0x0096e980, 0x3b6000da ] # FPS
-    - [ be32, 0x0096e97c, 0x48000040 ] # Unlock
+    - [ be32, 0x0096e97c, 0x93630014 ]
+    - [ be32, 0x0096e980, 0x93630018 ]
 
   uc3_119_mlaa: &uc3_119_mlaa
     - [ be32, 0x0064df28, 0x60000000 ] # nop byte write on 00 9c
@@ -9523,7 +9523,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
     Notes: *uc3_camshake_notes
     Patch Version: 1.0
     Patch:
-      - [ be16, 0x008242cc, 0x3800 ]
+      - [ be32, 0x008242cc, 0x38000001 ]
   "Enable LAN Mode":
     Games: *uc3_119title
     Author: "illusion, ZEROx, Skye"
