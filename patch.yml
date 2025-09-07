@@ -3265,6 +3265,42 @@ PPU-ba038bf4525e23b82c34247afc42f3ca2d2c473f:
     Patch:
       - [ be32, 0x000f8908, 0x60000000 ]
 
+PPU-3a61c4bde0e33fa74497aa2ad36c516ed2aa8ce4:
+  "Unlock FPS":
+    Games:
+      "CellFactor: Psychokinetic Wars":
+        NPEB00075: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 62 FPS."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00418ce0, 0x60000000 ]
+  "Openspy Online":
+    Games:
+      "CellFactor: Psychokinetic Wars":
+        NPEB00075: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x018fafa0, "openspy.net" ]
+      - [ utf8, 0x018faf88, "openspy.net" ]
+      - [ utf8, 0x018faf70, "openspy.net" ]
+      - [ utf8, 0x018fb134, "openspy.net" ]
+      - [ utf8, 0x018fb1b4, "openspy.net" ]
+      - [ utf8, 0x018fb70f, "openspy.net" ]
+      - [ utf8, 0x018f88cf, "openspy.net" ]
+      - [ utf8, 0x018fc41e, "openspy.net" ]
+      - [ utf8, 0x018f8916, "openspy.net" ]
+      - [ utf8, 0x01bbdb1d, "openspy.net" ]
+      - [ utf8, 0x01bbd9c5, "openspy.net" ]
+      - [ utf8, 0x018fb6b0, "openspy.net" ]
+      - [ utf8, 0x018fc3e0, "openspy.net" ]
+      - [ utf8, 0x018fb2ea, "openspy.net" ]
+      - [ utf8, 0x018faadd, "openspy.net" ]
+      - [ utf8, 0x018f8c20, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x018f8990, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   CTAXI_AR_Configurable_Values: &CTAXI_AR_Configurable_Values
     "Aspect Ratio":
