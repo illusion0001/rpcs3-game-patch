@@ -19666,74 +19666,65 @@ PPU-b1073f20b9fd664da46c6e666539da6626cb2e94:
       - [ be32, 0x0043cd48, 0x3c603c88 ]
 
 Anchors:
-  FixLeftLock: &FixLeftLock
-      - [ be32, 0x011FFFA8, 0x7D200026 ]
-      - [ be32, 0x011FFFAC, 0x2F9A0000 ]
-      - [ be32, 0x011FFFB0, 0x419E0014 ]
-      - [ be32, 0x011FFFB4, 0x817B0020 ]
-      - [ be32, 0x011FFFB8, 0x2F8B0000 ]
-      - [ be32, 0x011FFFBC, 0x409E0008 ]
-      - [ be32, 0x011FFFC0, 0x935B0020 ]
-      - [ be32, 0x011FFFC4, 0x935B0000 ]
-      - [ be32, 0x011FFFC8, 0x7D2FF120 ]
-      - [ be32, 0x011FFFD4, 0x7D200026 ]
-      - [ be32, 0x011FFFD8, 0x2F9A0000 ]
-      - [ be32, 0x011FFFDC, 0x409E0018 ]
-      - [ be32, 0x011FFFE0, 0x817BFFE0 ]
-      - [ be32, 0x011FFFE4, 0x2F8B0000 ]
-      - [ be32, 0x011FFFE8, 0x419E000C ]
-      - [ be32, 0x011FFFEC, 0x917B0000 ]
-      - [ be32, 0x011FFFF0, 0x48000008 ]
-      - [ be32, 0x011FFFF4, 0x935B0000 ]
-      - [ be32, 0x011FFFF8, 0x7D2FF120 ]
-  
+  FixLock: &FixLock
+#func1
+      - [ be32, 0x011FFFD8, 0x801F0010 ] #lwz r0, 0x10(r31)
+      - [ be32, 0x011FFFDC, 0x2F800000 ] #cmpwi cr7, r0, 0x0
+      - [ be32, 0x011FFFE0, 0x409E0008 ] #bne 0x11fffe8
+      - [ be32, 0x011FFFE4, 0x801F0030 ] #lwz r0, 0x30(r31)
+#func2
+      - [ be32, 0x011FFFEC, 0x801F0010 ] #lwz r0, 0x10(r31)
+      - [ be32, 0x011FFFF0, 0x2F800000 ] #cmpwi cr7, r0, 0x0
+      - [ be32, 0x011FFFF4, 0x409E0008 ] #bne 0x11ffffc
+      - [ be32, 0x011FFFF8, 0x801FFFF0 ] #lwz r0, -0x10(r31)
+
 PPU-c67c32700d8419d67b77a1ccfc88d05f37e41fc4:
-  "Fix Left Lock":
+  "Fix Lock Problem in PvP":
     Games:
       "ARMORED CORE for Answer":
         BLUS30187: [ All ]
     Author: "BEZEL"
-    Patch Version: 1.0
+    Patch Version: 1.2
     Group: ""
-    Notes: "This patch fixes an issue with left-hand weapon locking in PvP."
+    Notes: "This patch fixes a lock-on issue that occurs under certain conditions in PvP."
     Patch:
-      - [ load, *FixLeftLock ]
-      - [ be32, 0x00979428, 0x48886B80 ]
-      - [ be32, 0x011FFFCC, 0x4B779460 ]
-      - [ be32, 0x00979530, 0x48886AA4 ]
-      - [ be32, 0x011FFFFC, 0x4B779538 ]
+      - [ load, *FixLock ]
+      - [ be32, 0x00974F74, 0x4888B064 ] #b 0x11fffd8
+      - [ be32, 0x011FFFE8, 0x4B774F90 ] #b 0x974f78
+      - [ be32, 0x0097503C, 0x4888AFB0 ] #b 0x11fffec
+      - [ be32, 0x011FFFFC, 0x4B775044 ] #b 0x975040
 
 PPU-0bc5d0e97eebf1b3bf933f2e442acb20d3a1d969:
-  "Fix Left Lock":
+  "Fix Lock Problem in PvP":
     Games:
       "ARMORED CORE for Answer":
         BLJM60066: [ 01.35 ]
     Author: "BEZEL"
-    Patch Version: 1.0
+    Patch Version: 1.2
     Group: ""
-    Notes: "This patch fixes an issue with left-hand weapon locking in PvP."
+    Notes: "This patch fixes a lock-on issue that occurs under certain conditions in PvP."
     Patch:
-      - [ load, *FixLeftLock ]
-      - [ be32, 0x00979538, 0x48886A70 ]
-      - [ be32, 0x011FFFCC, 0x4B779570 ]
-      - [ be32, 0x00979640, 0x48886994 ]
-      - [ be32, 0x011FFFFC, 0x4B779648 ]
+      - [ load, *FixLock ]
+      - [ be32, 0x00975084, 0x4888AF54 ] #b 0x11fffd8
+      - [ be32, 0x011FFFE8, 0x4B7750A0 ] #b 0x975088
+      - [ be32, 0x0097514C, 0x4888AEA0 ] #b 0x11fffec
+      - [ be32, 0x011FFFFC, 0x4B775154 ] #b 0x975150
 
 PPU-321ccf1f115007f3260650828b3c01e7e40775d4:
-  "Fix Left Lock":
+  "Fix Lock Problem in PvP":
     Games:
       "ARMORED CORE for Answer":
         BLJM55005: [ All ]
     Author: "BEZEL"
-    Patch Version: 1.0
+    Patch Version: 1.2
     Group: ""
-    Notes: "This patch fixes an issue with left-hand weapon locking in PvP."
+    Notes: "This patch fixes a lock-on issue that occurs under certain conditions in PvP."
     Patch:
-      - [ load, *FixLeftLock ]
-      - [ be32, 0x00979708, 0x488868A0 ]
-      - [ be32, 0x011FFFCC, 0x4B779740 ]
-      - [ be32, 0x00979810, 0x488867C4 ]
-      - [ be32, 0x011FFFFC, 0x4B779818 ]
+      - [ load, *FixLock ]
+      - [ be32, 0x00975254, 0x4888AD84 ] #b 0x11fffd8
+      - [ be32, 0x011FFFE8, 0x4B775270 ] #b 0x975258
+      - [ be32, 0x0097531C, 0x4888ACD0 ] #b 0x11fffec
+      - [ be32, 0x011FFFFC, 0x4B775324 ] #b 0x975320
 
 PPU-fccf7c4880b7c580c8a15ad2beabd5da59ac0832:
   "Skip intro":
