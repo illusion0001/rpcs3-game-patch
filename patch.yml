@@ -23405,6 +23405,33 @@ PPU-a6cf430925b076125e5349a62dc6d646cb342a30:
       - [ be16, 0x0032bcb2, 0x126f ] # level load (high bits)
       - [ bef64, 0x007a53b0, 0.001 ] # init/level load
 
+PPU-bf7637a877ad4d903d8335900cca75f4f18989c8:
+  "Openspy Online":
+    Games:
+      "Red Baron Arcade":
+        NPEB00031: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00a5faf5, "openspy.net" ]
+      - [ utf8, 0x00a5fc4a, "openspy.net" ]
+      - [ utf8, 0x00a5fe60, "openspy.net" ]
+      - [ utf8, 0x00a624d0, "openspy.net" ]
+      - [ utf8, 0x00b5216d, "openspy.net" ]
+      - [ utf8, 0x00b522c5, "openspy.net" ]
+      - [ utf8, 0x00a6376e, "openspy.net" ]
+      - [ utf8, 0x00a6256f, "openspy.net" ]
+      - [ utf8, 0x00a618e4, "openspy.net" ]
+      - [ utf8, 0x00a61864, "openspy.net" ]
+      - [ utf8, 0x00a600f8, "openspy.net" ]
+      - [ utf8, 0x00a60110, "openspy.net" ]
+      - [ utf8, 0x00a60128, "openspy.net" ]
+      - [ utf8, 0x00a5ff79, "openspy.net" ]
+      - [ utf8, 0x00a634d1, "openspy.net" ]
+      - [ utf8, 0x00a61e90, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x009ef800, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 Anchors:
   residentevil_fps_notes: &residentevil_fps_notes
     "Cutscene speed is affected. Slightly improves performance."
