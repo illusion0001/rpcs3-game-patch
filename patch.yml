@@ -4680,6 +4680,31 @@ PPU-d69ada56bbfe3438a3a8df3f68da681de4c41068:
       - [ utf8, 0x00da22f8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
       - [ utf8, 0x00da2120, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
 
+PPU-05b281fb8f14d9aacbb6100215abeb15fc64a240:
+  "Openspy Online":
+    Games:
+      "Saints Row 2":
+        BLES00375: [ 01.20 ]
+    Author: "FlexBy"
+    Notes: *sr2_online_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x00d9ca25, "openspy.net" ]
+      - [ utf8, 0x00d9e652, "openspy.net" ]
+      - [ utf8, 0x00d9f9d0, "openspy.net" ]
+      - [ utf8, 0x00d9e8e8, "openspy.net" ]
+      - [ utf8, 0x00f52ce5, "openspy.net" ]
+      - [ utf8, 0x00f52e2d, "openspy.net" ]
+      - [ utf8, 0x00da5026, "openspy.net" ]
+      - [ utf8, 0x00d9e987, "openspy.net" ]
+      - [ utf8, 0x00da301c, "openspy.net" ]
+      - [ utf8, 0x00da2f0c, "openspy.net" ]
+      - [ utf8, 0x00d9e500, "openspy.net" ]
+      - [ utf8, 0x00d9e518, "openspy.net" ]
+      - [ utf8, 0x00d9e530, "openspy.net" ]
+      - [ utf8, 0x00d9fcc8, "http://%s.auth.pubsvs.openspy.net/AuthService/AuthService.asmx\0" ]
+      - [ utf8, 0x00d9faf0, "afb5818995b3708d0656a5bdd20760aee76537907625f6d23f40bf17029e56808d36966c0804e1d797e310fedd8c06e6c4121d963863d765811fc9baeb2315c9a6eaeb125fad694d9ea4d4a928f223d9f4514533f18a5432dd0435c5c6ac8e276cf29489cb5ac880f16b0d7832ee927d4e27d622d6a450cd1560d7fa882c6c13" ]
+
 PPU-44fbbc24d8e4560b51d724963a89c4e3309fa44f:
   "OpenSpy Online":
     Games:
