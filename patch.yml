@@ -1424,17 +1424,6 @@ Anchors:
         "4:3": 1.333333333333333
         "5:4": 1.25
 
-  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
-  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
-  lbp2_custom_digest: &lbp2_custom_digest
-    "CustomServerDigest"
-
-  lbp2_server_url_beacon: &lbp2_server_url_beacon
-    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
-
-  lbp2_server_url_lbr: &lbp2_server_url_lbr
-    "http://lbp.littlebigrefresh.com:2095/lbp\0"
-
 PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
   "Disable MLAA":
     Games: *lbp2_133title
@@ -1458,25 +1447,6 @@ PPU-a74423ca913fc18e46cfe926db1d48e41f9858a9:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00156f00, 0x38000001 ]
-  "Beacon Custom Server":
-    Games: *lbp2_133title
-    Author: "uh wot"
-    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00c51b68, *lbp2_server_url_beacon ] # https server url
-      - [ utf8, 0x00c51c08, *lbp2_server_url_beacon ] # http server url
-  "LittleBigRefresh Custom Server":
-    Games: *lbp2_133title
-    Author: "jvyden (via Refresher)"
-    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00c51b68, *lbp2_server_url_lbr ]
-      - [ utf8, 0x00c51c08, *lbp2_server_url_lbr ]
-      - [ utf8, 0x00c361d0, *lbp2_custom_digest ] # Digest key
   "Disable Score Bubble FX":
     Games: *lbp2_133title
     Author: "ennuo"
@@ -1500,42 +1470,6 @@ PPU-46682b51c3c5d570ba38c6a143480214aefc6217:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0014c6c4, 0x38000001 ]
-
-PPU-1d7a568ddaf6beb0dce106fa372d8205a231ef57:
-  "Beacon Custom Server":
-    Games:
-      "LittleBigPlanet 2 Move Pack Beta":
-        BCET70035: [ 01.00 ]
-    Author: "FlexBy"
-    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union. Makes the beta work again."
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00b8c280, *lbp2_server_url_beacon ] # http
-      - [ utf8, 0x00b8c198, *lbp2_server_url_beacon ] # https
-
-PPU-8752dc31a09672a37a44b2647d62a53536ef9fe1:
-  "Beacon Custom Server":
-    Games:
-      "LittleBigPlanet 2 Beta":
-        NPUA70117: [ 01.01 ]
-    Author: "FlexBy"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00aa1318, *lbp2_server_url_beacon ] # https
-      - [ utf8, 0x00aa1268, *lbp2_server_url_beacon ] # http
-
-PPU-d12a008f6352e4784d364c983fa82da79164e5e7:
-  "Beacon Custom Server":
-    Games:
-      "LittleBigPlanet 2 Beta":
-        NPUA70117: [ 01.00 ]
-    Author: "FlexBy"
-    Notes:
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00a97a28, *lbp2_server_url_beacon ] # https
-      - [ utf8, 0x00a97ad8, *lbp2_server_url_beacon ] # http
 
 PPU-e40082b6d07744ef29051a33353eb473396f5a91:
   "Unlock FPS":
@@ -10396,17 +10330,6 @@ Anchors:
       NPUA80472: [ 01.30 ]
       NPJA00052: [ 01.30 ]
   
-  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
-  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
-  lbp_custom_digest: &lbp_custom_digest
-    "CustomServerDigest"
-
-  lbp_server_url_beacon: &lbp_server_url_beacon
-    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
-
-  lbp_server_url_lbr: &lbp_server_url_lbr
-    "http://lbp.littlebigrefresh.com:2095/lbp\0"
-
   lbp_ar_notes: &lbp_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings."
   lbp_ar_configurable_values: &lbp_ar_configurable_values
@@ -10430,25 +10353,6 @@ PPU-545c1abbf1c562d60fca7435401f020beab76b53:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0001877c, 0x38e00001 ]
-  "Beacon Custom Server":
-    Games: *lbp_130title
-    Author: "uh wot"
-    Notes: "Patches server URL to point to Beacon, a custom server instance run by LBP Union."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00767c40, *lbp_server_url_beacon ] # https server url
-      - [ utf8, 0x00767cf8, *lbp_server_url_beacon ] # http server url
-  "LittleBigRefresh Custom Server":
-    Games: *lbp_130title
-    Author: "uh wot"
-    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00767c40, *lbp_server_url_lbr ] # https server url
-      - [ utf8, 0x00767cf8, *lbp_server_url_lbr ] # http server url
-      - [ utf8, 0x0079fbc0, *lbp_custom_digest ] # digest key
   "Disable Score Bubble FX":
     Games: *lbp_130title
     Author: "ennuo"
@@ -10484,17 +10388,6 @@ Anchors:
       NPUA81116: [ 01.26 ]
       NPHA80277: [ 01.26 ]
 
-  # Common digest key for servers implementing AutoDiscover's `usesCustomDigestKey` flag
-  # Ref: https://docs.littlebigrefresh.com/autodiscover-api#version-2
-  lbp3_custom_digest: &lbp3_custom_digest
-    "CustomServerDigest"
-
-  lbp3_server_url_beacon: &lbp3_server_url_beacon
-    "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0"
-
-  lbp3_server_url_lbr: &lbp3_server_url_lbr
-    "http://lbp.littlebigrefresh.com:2095/lbp\0"
-
 PPU-4ff9503c80ff356080c96f3828890906073b8e43:
   "Disable MLAA":
     Games: *lbp3_126title
@@ -10510,29 +10403,6 @@ PPU-4ff9503c80ff356080c96f3828890906073b8e43:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x001ed2ac, 0x41e00001 ]
-  "Beacon Custom Server":
-    Games: *lbp3_126title
-    Author: "uh wot"
-    Notes: "Patches server URL to point to Beacon, a custom server run by LBP Union."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00d9e4c4, *lbp3_server_url_beacon ] # https server url
-      - [ utf8, 0x00d9e53c, *lbp3_server_url_beacon ] # presence server url
-      - [ utf8, 0x00d9e58c, *lbp3_server_url_beacon ] # live server url
-      - [ utf8, 0x00d9e5d8, *lbp3_server_url_beacon ] # http server url
-  "LittleBigRefresh Custom Server":
-    Games: *lbp3_126title
-    Author: "uh wot"
-    Notes: "Connect to LittleBigRefresh, a second-generation custom server that focuses on quality of life features and improving user experience, with native support for mods and beta builds.\n\nThis server requires registration on the website at https://lbp.littlebigrefresh.com/register."
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00d9e4c4, *lbp3_server_url_lbr ] # https server url
-      - [ utf8, 0x00d9e53c, *lbp3_server_url_lbr ] # presence server url
-      - [ utf8, 0x00d9e58c, *lbp3_server_url_lbr ] # live server url
-      - [ utf8, 0x00d9e5d8, *lbp3_server_url_lbr ] # http server url
-      - [ utf8, 0x00d8bd08, *lbp3_custom_digest ] # digest key
   "Disable Score Bubble FX":
     Games: *lbp3_126title
     Author: "ennuo"
