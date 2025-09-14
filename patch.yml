@@ -16977,73 +16977,6 @@ PPU-2f4e1dcfe8172b85278271be5aea9dfcdadb8eff:
       - [ be16, 0x0041d3bc, 0x4280 ]
 
 Anchors:
-  infinite_notes: &infinite_notes
-    "Patches server URL to point to Infinite, a custom server run by the Infinite Team.\nCreate an account here: https://lnfinite.site/register \n(The first letter is a lowercase L, not a capital i)\n\nIf you have any crashes or connection issues, restart the game in RPCS3 after authentication."
-
-  infinite_patch: &infinite_patch
-    - [ utf8, 0x011ab160, "lbpk.lnfinite.site\0" ] # http server url
-
-PPU-1d6e69213f25e5c4aeca823b8b6942b55e660392:
-  "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet Karting":
-        BCES01422: [ 01.21 ]
-    Author: "Toyo, k7x1e, uh wot"
-    Notes: *infinite_notes
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ load, *infinite_patch ]
-
-PPU-7cd3660cf7c89791e1436b0a52de886ad4d3eb4a:
-  "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet Karting":
-        BCES01423: [ 01.21 ]
-    Author: "Toyo, k7x1e, uh wot"
-    Notes: *infinite_notes
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ load, *infinite_patch ]
-
-PPU-3786b2a3161aa099e40ac0917e5e0e4ce570446f:
-  "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet Karting":
-        BCUS98254: [ 01.21 ]
-    Author: "Toyo, k7x1e, uh wot"
-    Notes: *infinite_notes
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ load, *infinite_patch ]
-
-PPU-ec3deec5674552221e6b0013a19c15b5ef147c0e:
-  "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet Karting":
-        NPEA00421: [ 01.21 ]
-    Author: "Toyo, k7x1e, uh wot"
-    Notes: *infinite_notes
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ load, *infinite_patch ]
-
-PPU-6ddd32ae96c9fc68d1f849f965cb60ba1af1eafb:
-  "Infinite Custom Server":
-    Games:
-      "LittleBigPlanet Karting":
-        NPUA80848: [ 01.20 ]
-    Author: "Toyo, k7x1e, uh wot"
-    Notes: *infinite_notes
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x011aad80, "lbpk.lnfinite.site\0" ] # http server url, the versions BCAS20205, BCUS99089, BCJS30085 left, unknown PPU
-
-Anchors:
   SHD_unlockfps_notes: &SHD_unlockfps_notes
     "Removes 62 FPS limit.\nMaximum framerate with the patch is half the Vblank frequency."
 
@@ -25171,16 +25104,4 @@ PPU-18cc71253bf487257baff903ad2fecb599741669:
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00cc06c4, "Aspect Ratio" ]
-  "Beacon Custom Server":
-    Games:
-      "LittleBigPlanet Hub Internal Beta":
-        BCET70055: [ 01.25 ]
-    Author: "FlexBy, uh wot"
-    Notes:
-    Group: CustomServer
-    Patch Version: 1.0
-    Patch:
-      - [ utf8, 0x00b744c0, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # https #flexby
-      - [ utf8, 0x00b749e8, "http://lighthouse.lbpunion.com/LITTLEBIGPLANETPS3_XML\0" ] # http
-      - [ utf8, 0x00bd0168, "!?/*hjk7duOZ1f@daX" ] # digest key #uh wot
 
