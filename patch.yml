@@ -17494,6 +17494,17 @@ PPU-2e4517a2dc5b9a3905dfb571d72ad5cc7e8ea8f1:
     Patch:
       - [ be32, 0x000d12c8, 0x60000000 ]
 
+PPU-6e301a4e8d5178d5fbc2f26f0fddb15809be3b1d:
+  "Unlock FPS":
+    Games:
+      "Batman: Arkham Asylum Demo":
+        NPJB90221: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *batmanAA_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000d12c8, 0x60000000 ]
+
 PPU-e0b4d39e7f703d6569ece8002fb47bef17fdb50e:
   "Unlock FPS":
     Games:
