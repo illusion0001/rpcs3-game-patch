@@ -16763,7 +16763,7 @@ Anchors:
     - [be32, 0x00373df4, 0x9883004c]
     - [be32, 0x00373df8, 0x428000bc]
 
-PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
+PPU-246a2ff7348daf25ad6a5f26e617fcbd1a6aefed:
   "Always 1280x720 Resolution":
     Games: *modnation_111_us
     Author: "Margen67"
@@ -22808,6 +22808,42 @@ PPU-0a1d4f333831bfa502e7255c3ebce9ff8d0fa2f9:
     Patch:
       - [be32, 0x00f50964, 0x4E800020] #Login Skip (Skips creating OSDKSettings menus)
       - [be32, 0x007f67e8, 0x4E800020] #Roster Skip (Skips checking online roster validity)
+
+PPU-f2e9eaedc1ff01d4d8a0ab0470d4e2c0b0394ec3:
+  "ZamboniMultiplayerPatch":
+    Games:
+      "NHL 10":
+        BLES00567: [ 01.02 ]
+    Author: "Kaap0"
+    Notes: "Required to play Online for now. Might skip something very important..."
+    Patch Version: 1.0
+    Patch:
+        - [be32, 0x00f56704, 0x4E800020] #LOGIN SKIP! (Skips creating OSDKSettings menus)
+        - [be32, 0x007fbf18, 0x4E800020] #ROSTER SKIP! (Skips checking online roster validity)
+
+PPU-cdac20f66274ef626cd42e2d0ae95c2b992a2727:
+  "ZamboniMultiplayerPatch":
+    Games:
+      "NHL 10":
+        BLUS30345: [ 01.00 ]
+    Author: "Kaap0"
+    Notes: "Required to play Online for now. Might skip something very important..."
+    Patch Version: 1.0
+    Patch:
+        - [be32, 0x00f50964, 0x4E800020] #LOGIN SKIP! (Skips creating OSDKSettings menus)
+        - [be32, 0x007f67e8, 0x4E800020] #ROSTER SKIP! (Skips checking online roster validity)
+
+PPU-8850edff79c6063bfb6fe2884b53e28be11ddc92:
+  "ZamboniMultiplayerPatch":
+    Games:
+      "NHL 10":
+        BLUS30345: [ 01.02 ]
+    Author: "Kaap0"
+    Notes: "Required to play Online for now. Might skip something very important..."
+    Patch Version: 1.0
+    Patch:
+        - [be32, 0x00f56704, 0x4E800020] #LOGIN SKIP! (Skips creating OSDKSettings menus)
+        - [be32, 0x007fbf18, 0x4E800020] #ROSTER SKIP! (Skips checking online roster validity)
 
 PPU-9ee543aff769e702526f67713c776247929abeb3:
   "Unlock FPS":
