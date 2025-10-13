@@ -22798,6 +22798,16 @@ PPU-0a1d4f333831bfa502e7255c3ebce9ff8d0fa2f9:
       - [be32, 0x00958870, 0x39600193] # li r11,0x193
       - [be32, 0x00958874, 0x44000002] # sc
       - [be32, 0x00958878, 0x4E800020] # blr
+  "ZamboniMultiplayerPatch":
+    Games:
+      "NHL 10":
+        BLES00567: [ 01.00 ]
+    Author: "Kaap0"
+    Notes: "Required to play Online for now. Might skip something very important..."
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x00f50964, 0x4E800020] #Login Skip (Skips creating OSDKSettings menus)
+      - [be32, 0x007f67e8, 0x4E800020] #Roster Skip (Skips checking online roster validity)
 
 PPU-9ee543aff769e702526f67713c776247929abeb3:
   "Unlock FPS":
@@ -24796,7 +24806,7 @@ PPU-0e774c4d110cbee22a4afc20197c99203f46800c:
     Author: "Score"
     Patch Version: 1.0
     Group: ""
-    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page.e"
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page."
     Patch:
       - [be32, 0x0074F1B4, 0x80E40000]
       - [be32, 0x0074F1B8, 0x3D00007A]
@@ -24920,7 +24930,7 @@ PPU-33a28c181e111855d1b024650a313e85610d5d84:
     Author: "Score"
     Patch Version: 1.0
     Group: ""
-    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page.e"
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page."
     Patch:
       - [be32, 0x0074F1B4, 0x80E40000]
       - [be32, 0x0074F1B8, 0x3D00007A]
