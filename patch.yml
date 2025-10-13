@@ -16666,9 +16666,18 @@ Anchors:
   modnation_111_us: &modnation_111_us
     "ModNation Racers":
       NPUA80535: [ 01.11 ]
+  modnation_111_us_disc: &modnation_111_us_disc
+    "ModNation Racers":
+      BCUS98167: [ 01.11 ]
   modnation_111_eu: &modnation_111_eu
     "ModNation Racers":
       NPEA00291: [ 01.11 ]
+  modnation_111_eu_disc1: &modnation_111_eu_disc1
+    "ModNation Racers":
+      BCES00764: [ 01.11 ]
+  modnation_111_eu_disc2: &modnation_111_eu_disc2
+    "ModNation Racers":
+      BCES00701: [ 01.11 ]
   modnation_110_eu: &modnation_110_eu
     "ModNation Racers":
       NPEA00291: [ 01.10 ]
@@ -16738,6 +16747,21 @@ Anchors:
     - [ byte, 0x0137ef12, 0 ] # byte, 0
     - [ byte, 0x014f5178, 0 ] # byte, 0
     - [ byte, 0x014f5179, 0 ] # byte, 0
+  modnation_disable_track_budget_notes: &modnation_disable_track_budget_notes
+    "Disables prop budgets in track studio"
+  modnation_disable_track_budget: &modnation_disable_track_budget
+    - [be32, 0x00373f9c, 0x3c607fff]
+    - [be32, 0x00373fa0, 0x6063ffff]
+    - [be32, 0x00373fa4, 0x9061007c]
+    - [byte, 0x01479a71, 1]
+    - [be32, 0x003cb820, 0x9ba50014]
+  modnation_dev_categories_notes: &modnation_dev_categories_notes
+    "Turns on developer categories"
+  modnation_dev_categories: &modnation_dev_categories
+    - [be32, 0x0079ea28, 0x3be00000]
+    - [be32, 0x00373df0, 0x38800001]
+    - [be32, 0x00373df4, 0x9883004c]
+    - [be32, 0x00373df8, 0x428000bc]
 
 PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
   "Always 1280x720 Resolution":
@@ -16770,6 +16794,20 @@ PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
     Notes: *modnation_disable_cache_notes
     Patch:
       - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_us
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_us
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
   "Always 1280x720 Resolution":
@@ -16802,39 +16840,89 @@ PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
     Notes: *modnation_disable_cache_notes
     Patch:
       - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_eu
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_eu
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-d0e40a676132671ac1777a6a8b38ccd8627d789f:
   "Disable Customization Cache":
-    Games:
-      "ModNation Racers":
-        BCUS98167: [ 01.11 ]
+    Games: *modnation_111_us_disc
     Author: "ennuo"
     Patch Version: 1.0
     Notes: *modnation_disable_cache_notes
     Patch:
       - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_us_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_us_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-d44b69554c35be2f5c08298a40b7115ac7471a30:
   "Disable Customization Cache":
-    Games:
-      "ModNation Racers":
-        BCES00764: [ 01.11 ]
+    Games: *modnation_111_eu_disc1
     Author: "ennuo"
     Patch Version: 1.0
     Notes: *modnation_disable_cache_notes
     Patch:
       - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_eu_disc1
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_eu_disc1
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-a9fde3bf97dd0169b56676552394054e9e2b7b2d:
   "Disable Customization Cache":
-    Games:
-      "ModNation Racers":
-        BCES00701: [ 01.11 ]
+    Games: *modnation_111_eu_disc2
     Author: "ennuo"
     Patch Version: 1.0
     Notes: *modnation_disable_cache_notes
     Patch:
       - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_eu_disc2
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_eu_disc2
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-8666a1d09c0f973ba0887e9c665431e3497a59b6:
   "Always 1280x720 Resolution":
@@ -24701,6 +24789,27 @@ PPU-0e774c4d110cbee22a4afc20197c99203f46800c:
       - [be64, 0x00747EEC, 0xA0640000E9C10008]
       - [be64, 0x00747EF4, 0x382100104BCC20BC]
       - [be32, 0x00409FB0, 0x4833DEE4]
+  "Skip Intro Movie":
+    Games:
+      "Warhawk":
+        NPUA80077: [01.50]
+    Author: "Score"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page.e"
+    Patch:
+      - [be32, 0x0074F1B4, 0x80E40000]
+      - [be32, 0x0074F1B8, 0x3D00007A]
+      - [be32, 0x0074F1BC, 0x610892B8]
+      - [be32, 0x0074F1C0, 0x7C074000]
+      - [be32, 0x0074F1C4, 0x40820014]
+      - [be32, 0x0074F1C8, 0x3C800085]
+      - [be32, 0x0074F1CC, 0x6084B34C]
+      - [be32, 0x0074F1D0, 0x80840000]
+      - [be32, 0x0074F1D4, 0x8084F960]
+      - [be32, 0x0074F1D8, 0x80C1007C]
+      - [be32, 0x0074F1DC, 0x4BA7CDB8]
+      - [be32, 0x001CBF90, 0x48583224]
 
 PPU-8b103b01ea3f394a508efb140b1476da59a839a8:
   "60 FPS":
@@ -24742,6 +24851,27 @@ PPU-8b103b01ea3f394a508efb140b1476da59a839a8:
       - [be64, 0x00747EEC, 0xA0640000E9C10008]
       - [be64, 0x00747EF4, 0x382100104BCC212C]
       - [be32, 0x0040A020, 0x4833DE74]
+  "Skip Intro Movie":
+    Games:
+      "Warhawk":
+        NPEA00017: [01.50]
+    Author: "Score"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page."
+    Patch:
+      - [be32, 0x0074F234, 0x80E40000]
+      - [be32, 0x0074F238, 0x3D00007A]
+      - [be32, 0x0074F23C, 0x610892B8]
+      - [be32, 0x0074F240, 0x7C074000]
+      - [be32, 0x0074F244, 0x40820014]
+      - [be32, 0x0074F248, 0x3C800085]
+      - [be32, 0x0074F24C, 0x6084B34C]
+      - [be32, 0x0074F250, 0x80840000]
+      - [be32, 0x0074F254, 0x8084F960]
+      - [be32, 0x0074F258, 0x80C1007C]
+      - [be32, 0x0074F25C, 0x4BA7CDA8]
+      - [be32, 0x001CC000, 0x48583234]
 
 PPU-33a28c181e111855d1b024650a313e85610d5d84:
   "60 FPS":
@@ -24783,6 +24913,27 @@ PPU-33a28c181e111855d1b024650a313e85610d5d84:
       - [be64, 0x00747EEC, 0xA0640000E9C10008]
       - [be64, 0x00747EF4, 0x382100104BCC20BC]
       - [be32, 0x00409FB0, 0x4833DEE4]
+  "Skip Intro Movie":
+    Games:
+      "Warhawk":
+        BCUS98117: [01.50]
+    Author: "Score"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page.e"
+    Patch:
+      - [be32, 0x0074F1B4, 0x80E40000]
+      - [be32, 0x0074F1B8, 0x3D00007A]
+      - [be32, 0x0074F1BC, 0x610892B8]
+      - [be32, 0x0074F1C0, 0x7C074000]
+      - [be32, 0x0074F1C4, 0x40820014]
+      - [be32, 0x0074F1C8, 0x3C800085]
+      - [be32, 0x0074F1CC, 0x6084B34C]
+      - [be32, 0x0074F1D0, 0x80840000]
+      - [be32, 0x0074F1D4, 0x8084F960]
+      - [be32, 0x0074F1D8, 0x80C1007C]
+      - [be32, 0x0074F1DC, 0x4BA7CDB8]
+      - [be32, 0x001CBF90, 0x48583224]
 
 PPU-0eb6367a3c104c729305bec4d15ccb85147688bd:
   "60 FPS":
@@ -24824,6 +24975,27 @@ PPU-0eb6367a3c104c729305bec4d15ccb85147688bd:
       - [be64, 0x00747EEC, 0xA0640000E9C10008]
       - [be64, 0x00747EF4, 0x382100104BCC212C]
       - [be32, 0x0040A020, 0x4833DE74]
+  "Skip Intro Movie":
+    Games:
+      "Warhawk":
+        BCES00008: [01.50]
+    Author: "Score"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page."
+    Patch:
+      - [be32, 0x0074F234, 0x80E40000]
+      - [be32, 0x0074F238, 0x3D00007A]
+      - [be32, 0x0074F23C, 0x610892B8]
+      - [be32, 0x0074F240, 0x7C074000]
+      - [be32, 0x0074F244, 0x40820014]
+      - [be32, 0x0074F248, 0x3C800085]
+      - [be32, 0x0074F24C, 0x6084B34C]
+      - [be32, 0x0074F250, 0x80840000]
+      - [be32, 0x0074F254, 0x8084F960]
+      - [be32, 0x0074F258, 0x80C1007C]
+      - [be32, 0x0074F25C, 0x4BA7CDA8]
+      - [be32, 0x001CC000, 0x48583234]
 
 PPU-3f6269a9a2f732c90c0017c963fb52722e6b08a8:
   "60 FPS":
@@ -24865,6 +25037,27 @@ PPU-3f6269a9a2f732c90c0017c963fb52722e6b08a8:
       - [be64, 0x00747EEC, 0xA0640000E9C10008]
       - [be64, 0x00747EF4, 0x382100104BCC20CC]
       - [be32, 0x00409FC0, 0x4833DED4]
+  "Skip Intro Movie":
+    Games:
+      "Warhawk":
+        BCAS20015: [01.50]
+    Author: "Score"
+    Patch Version: 1.0
+    Group: ""
+    Notes: "Bypasses intro logos (THX, Incognito, Sony, Santa Monica) and jumps to the landing page."
+    Patch:
+      - [be32, 0x0074F1B4, 0x80E40000]
+      - [be32, 0x0074F1B8, 0x3D00007A]
+      - [be32, 0x0074F1BC, 0x610892B8]
+      - [be32, 0x0074F1C0, 0x7C074000]
+      - [be32, 0x0074F1C4, 0x40820014]
+      - [be32, 0x0074F1C8, 0x3C800085]
+      - [be32, 0x0074F1CC, 0x6084B34C]
+      - [be32, 0x0074F1D0, 0x80840000]
+      - [be32, 0x0074F1D4, 0x8084F960]
+      - [be32, 0x0074F1D8, 0x80C1007C]
+      - [be32, 0x0074F1DC, 0x4BA7CDC8]
+      - [be32, 0x001CBFA0, 0x48583214]
 
 PPU-294b89f56f3c2f0564fc1ec38084ea28c0ebac58:
   Formula One Championship Edition 60 fps:
