@@ -16763,7 +16763,7 @@ Anchors:
     - [be32, 0x00373df4, 0x9883004c]
     - [be32, 0x00373df8, 0x428000bc]
 
-PPU-246a2ff7348daf25ad6a5f26e617fcbd1a6aefed:
+PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
   "Always 1280x720 Resolution":
     Games: *modnation_111_us
     Author: "Margen67"
