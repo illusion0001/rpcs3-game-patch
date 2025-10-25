@@ -20455,6 +20455,34 @@ PPU-d8edc43468f59e453ec1404094e810e487591bfd:
       - [ be32, 0x00614e78, 0x60000000 ]
 
 Anchors:
+    cars2_ar_notes: &cars2_ar_notes
+      "Requires \"Stretch To Display Area\" checked in the GPU settings."
+    cars2_ar_configurable_values: &cars2_ar_configurable_values
+      "Aspect Ratio":
+        Type: double_enum
+        Value: &32_9_value 3.555555555555556
+        Allowed Values:
+          "32:9": *32_9_value
+          "21:9 (3840x1600)": 2.4
+          "21:9 (3440x1440)": 2.388888888888889
+          "21:9 (2560x1080)": 2.37037037037037
+          "16:10": 1.6
+          "4:3": 1.333333333333333
+          "5:4": 1.25
+
+PPU-44c0c405c0ead775344c16b30a6a5ef5154d8b19:
+  "Aspect Ratio":
+    Games:
+      "Cars 2: The Video Game":
+        NPUB30557: [ 01.00 ]
+    Author: Virjoinga
+    Notes: *cars2_ar_notes
+    Configurable Values: *cars2_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [bef32, 0x00d12f98, "Aspect Ratio"]
+
+Anchors:
     cars_mnc_ar_notes: &cars_mnc_ar_notes
       "Requires \"Stretch To Display Area\" checked in the GPU settings."
     cars_mnc_ar_configurable_values: &cars_mnc_ar_configurable_values
