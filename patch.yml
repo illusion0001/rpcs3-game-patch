@@ -21936,6 +21936,17 @@ PPU-69636e34bc388c9cd75e3a9fdefaadec112734fc:
     Patch:
       - [ be32, 0x00410b84, 0x60000000 ] # 300f1bf54 memory
 
+PPU-cbbc2eb14b369fc40262b21e27a9bb022bc6bfdd:
+  "Unlock FPS":
+    Games:
+      "Kamen Rider Summonride!":
+        BLJS10288: [ 01.05 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x004191fc, 0x60000000 ] # (mem: 00f3ccd4)
+
 Anchors:
   kid_fps_notes: &kid_fps_notes
     "Some elements speed is tied to FPS."
