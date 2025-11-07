@@ -16871,6 +16871,13 @@ PPU-52e882d71885483e3893eed97de4f7ed86aae5dd:
       - [ load, *modnation_dev_categories ]
 
 PPU-d0e40a676132671ac1777a6a8b38ccd8627d789f:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_us_disc
+    Author: "Margen67, Alexis"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
   "Disable Customization Cache":
     Games: *modnation_111_us_disc
     Author: "ennuo"
@@ -16894,6 +16901,13 @@ PPU-d0e40a676132671ac1777a6a8b38ccd8627d789f:
       - [ load, *modnation_dev_categories ]
 
 PPU-d44b69554c35be2f5c08298a40b7115ac7471a30:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_eu_disc1
+    Author: "Margen67, Alexis"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
   "Disable Customization Cache":
     Games: *modnation_111_eu_disc1
     Author: "ennuo"
@@ -16917,6 +16931,13 @@ PPU-d44b69554c35be2f5c08298a40b7115ac7471a30:
       - [ load, *modnation_dev_categories ]
 
 PPU-a9fde3bf97dd0169b56676552394054e9e2b7b2d:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_eu_disc2
+    Author: "Margen67, Alexis"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
   "Disable Customization Cache":
     Games: *modnation_111_eu_disc2
     Author: "ennuo"
