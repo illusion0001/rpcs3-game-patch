@@ -2706,6 +2706,18 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       - [ be32, 0x00139a5c, 0x38600001 ] # li r3,0x1
       - [ be32, 0x00139a60, 0x4e800020 ] # blr
 
+PPU-0418cc497820135102d57367433dea3e61162539:
+  "Skip Intro":
+    Games:
+      "Need for Speed SHIFT Demo":
+        NPJB90213: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x01300018, 0x00 ]
+      - [ byte, 0x01300030, 0x00 ]
+
 PPU-6aa282725f419f1dcc12aceb5e63a6948d7e55f3:
   "Demo Never Expires":
     Games:
