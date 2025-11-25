@@ -5568,6 +5568,12 @@ PPU-ea2fc413782cda9d615cd0d68b096bfe54c780be:
       - [ byte, 0x001a1927, 0x01 ]
       - [ be16, 0x00024a6c, 0x4800 ]
 
+Anchors:
+  ttt2_inputlag_notes: &ttt2_inputlag_notes
+    "Reduce the delay of your button presses by 2 frames in all offline modes. \nThis works by completely disabling the forced 'Input Delay' system listed in Practice Mode (online will still work)." #some other Bandai Namco fighting games are also affected, for TK7/SC6 the forced delay is 1F
+  ttt2_inputlag_mod: &ttt2_inputlag_mod
+    - [be32, 0x0001c310, 0x39200000] #OFF/5/4/3/2/1bars=2/2/5/8/11/14frames - same mod appears to work on every single version, so feel free to expand to more IDs if I missed any - AOB:20812300008148->20392000008148 
+
 PPU-8645cfa235c9980ff74b5e06388b29e97fdbbed9: # NPWR02973_00
   "Skip Auto-Save Warning":
     Games:
@@ -5583,6 +5589,77 @@ PPU-8645cfa235c9980ff74b5e06388b29e97fdbbed9: # NPWR02973_00
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0032a7a8, 0x2f830001 ]
+  "Reduce input lag":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        BLES01702: [ 01.03 ]
+        BLJS10187: [ 01.03 ]
+        BLUS31002: [ 01.03 ]
+        NPEB01140: [ 01.01 ]
+        NPJB00236: [ 01.01 ]
+        NPUB30899: [ 01.01 ]
+    Author: "WAZAAAAA"
+    Notes: *ttt2_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [load, *ttt2_inputlag_mod]
+
+PPU-e825391dba622ac9b28aff80f558bb44e4d81993:
+  "Skip Auto-Save Warning":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        BLES01702: [ 01.03 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0032a7a8, 0x2f830001 ]
+  "Reduce input lag":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        BLES01702: [ 01.03 ]
+    Author: "WAZAAAAA"
+    Notes: *ttt2_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [load, *ttt2_inputlag_mod]
+
+PPU-72226efe60453f6289698bf483278d55bc714bc2:
+  "Reduce input lag":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        BLES01702: [ 01.00 ]
+        BLJS10187: [ 01.00 ]
+        BLUS31002: [ 01.00 ]
+    Author: "WAZAAAAA"
+    Notes: *ttt2_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [load, *ttt2_inputlag_mod]
+
+PPU-99b51aded0915e3b23e40ab1aa33ec446d55a989:
+  "Reduce input lag":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        NPEB01140: [ 01.00 ]
+        NPJB00236: [ 01.00 ]
+        NPUB30899: [ 01.00 ]
+    Author: "WAZAAAAA"
+    Notes: *ttt2_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [load, *ttt2_inputlag_mod]
+
+PPU-9df8ce80cda30ebb4e574cc283bf40f0c5076ee4:
+  "Reduce input lag":
+    Games:
+      "TEKKEN TAG TOURNAMENT 2":
+        BLES01702: [ 01.01 ]
+    Author: "WAZAAAAA"
+    Notes: *ttt2_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [load, *ttt2_inputlag_mod]
 
 Anchors:
   # Since we only change store reg and branch, we don't need to patch last 2 bytes again.
