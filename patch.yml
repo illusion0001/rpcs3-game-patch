@@ -11200,6 +11200,10 @@ PPU-c83d91c3be29b1460777f8a5d7fa5a111b1237b0:
     Patch:
       - [ load, *tox2_hp ]
 
+Anchors:
+  sc5_inputlag_notes: &sc5_inputlag_notes
+    "Reduce the delay of your button presses by 2 frames in all offline modes. \nThis works by completely disabling the forced 'Practice with Frame Delay' system listed in Training (online will still work)." #OFF=2F ON=6F - AOB:7CE9002E812B03DC->38E00000812B03DC - known affected Bandai Namco fighting games are TTT2/SC5=2F TK7/SC6=1F
+
 PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
   "Disable MLAA":
     Games:
@@ -11211,6 +11215,17 @@ PPU-60c754823a1d0fef3eac5f98f25574cabc73232d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0031a804, 0x38000001 ]
+  "Reduce input lag":
+    Games:
+      "SoulCalibur V":
+        NPUB31195: [ 01.00 ]
+        NPEB01363: [ 01.00 ]
+        NPJB00381: [ 01.00 ]
+    Author: "WAZAAAAA"
+    Notes: *sc5_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x000c9d6c, 0x38e00000]
 
 PPU-f696f96752deed23cbcb53c777ae2b837219dfe6:
   "Disable MLAA":
@@ -11222,6 +11237,16 @@ PPU-f696f96752deed23cbcb53c777ae2b837219dfe6:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00304770, 0x38000001 ]
+  "Reduce input lag":
+    Games:
+      "SoulCalibur V":
+        BLES01250: [ 01.00 ]
+        BLJS10115: [ 01.00 ]
+    Author: "WAZAAAAA"
+    Notes: *sc5_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x000c94ec, 0x38e00000]
 
 PPU-aa798f32a1fda1c23a20066edb1c623c486d53cc:
   "Disable MLAA":
@@ -11233,6 +11258,15 @@ PPU-aa798f32a1fda1c23a20066edb1c623c486d53cc:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00304770, 0x38000001 ]
+  "Reduce input lag":
+    Games:
+      "SoulCalibur V":
+        BLUS30736: [ 01.00 ]
+    Author: "WAZAAAAA"
+    Notes: *sc5_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x000c94ec, 0x38e00000]
 
 PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
   "Disable MLAA":
@@ -11246,6 +11280,17 @@ PPU-f467fda1a4fba93deb535665c1a416b32a6c3c72:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0031dff0, 0x38000001 ]
+  "Reduce input lag":
+    Games:
+      "SoulCalibur V":
+        BLUS30736: [ 01.03 ]
+        BLES01250: [ 01.03 ]
+        BLJS10115: [ 01.03 ]
+    Author: "WAZAAAAA"
+    Notes: *sc5_inputlag_notes
+    Patch Version: 1.0
+    Patch:
+      - [be32, 0x000c7df0, 0x38e00000]
 
 Anchors:
   sk82_60fps_notes: &sk82_60fps_notes
