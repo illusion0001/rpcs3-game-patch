@@ -16780,6 +16780,12 @@ PPU-9940a863ed7bf977c5a15cff5eec8d0649a8552f:
       - [ be32, 0x0042c1ec, 0x60000000 ]
 
 Anchors:
+  modnation_111_asia_disc: &modnation_111_asia_disc
+    "ModNation Racers":
+      BCAS20105: [ 01.11 ]
+  modnation_111_jpn_disc: &modnation_111_jpn_disc
+    "ModNation Racers":
+      BCJS30041: [ 01.11 ]
   modnation_111_us: &modnation_111_us
     "ModNation Racers":
       NPUA80535: [ 01.11 ]
@@ -16879,6 +16885,66 @@ Anchors:
     - [be32, 0x00373df0, 0x38800001]
     - [be32, 0x00373df4, 0x9883004c]
     - [be32, 0x00373df8, 0x428000bc]
+    
+PPU-b66c7e77398bc06422afeeed75907bba3c2edb61:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_asia_disc
+    Author: "Margen67, Alexis"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
+  "Disable Customization Cache":
+    Games: *modnation_111_asia_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_asia_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_asia_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]    
+    
+PPU-6a4e5eb81b48a6c16a9fc1ffd962ae9d99617bd7:
+  "Always 1280x720 Resolution":
+    Games: *modnation_111_jpn_disc
+    Author: "Margen67, Alexis"
+    Notes: *modnation_res_notes
+    Patch Version: 1.0
+    Patch:
+      - [ load, *modnation_res ]
+  "Disable Customization Cache":
+    Games: *modnation_111_jpn_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_cache_notes
+    Patch:
+      - [ load, *modnation_disable_cache ]
+  "Disable Track Budget":
+    Games: *modnation_111_jpn_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_disable_track_budget_notes
+    Patch:
+      - [ load, *modnation_disable_track_budget ]
+  "Developer Categories":
+    Games: *modnation_111_jpn_disc
+    Author: "ennuo"
+    Patch Version: 1.0
+    Notes: *modnation_dev_categories_notes
+    Patch:
+      - [ load, *modnation_dev_categories ]
 
 PPU-7ebc891bb46b251f2ae7b7bb5c2d958511b0e84c:
   "Always 1280x720 Resolution":
