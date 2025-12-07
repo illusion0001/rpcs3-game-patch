@@ -22542,7 +22542,18 @@ PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
       - [be32, 0x00dec0c8, 0x3fe38e39] # set reference ratio to 1.77 to horizontal maintain scaling
       - [be32, 0x00dec0cc, 0x4018e38e] # set widescreen ratio to 21:9
       - [be32, 0x00663760, 0x409e00b0] # force square display branch
-      - [be32, 0x00663768, 0x38000003] # set widescreen flag?
+      - [be32, 0x00663768, 0x38000003] # set widescreen flag? 
+
+PPU-37b59d9b4761d45bfb38587ccf42fbe65c4fb1a4:
+  "Bypass SSL":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLUS30056: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Removes SSL certificate validation. Required for connecting to custom servers."
+    Patch:
+      - [be32, 0x00d247a8, 0x38000015]
 
 Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
@@ -23165,18 +23176,6 @@ PPU-f56d9caca2b30580ae3c9719ab82429ee941810f:
     Games:
       "NHL 11":
         BLES00984: [ 01.01 ]
-    Author: "Kaap0"
-    Notes: "Required to play Online for now. Might skip something very important..."
-    Patch Version: 1.0
-    Patch:
-      - [be32, 0x00ee4c18, 0x4E800020] #crash "fix" (Mupset)
-      - [be32, 0x00ee7ccc, 0x4E800020] #crash "fix" (Mupset)
-      - [be32, 0x0055db08, 0x4E800020] #Roster "fix"
-
-PPU-f56d9caca2b30580ae3c9719ab82429ee941810f:
-  "ZamboniMultiplayerPatch":
-    Games:
-      "NHL 11":
         BLUS30568: [ 01.02 ]
     Author: "Kaap0"
     Notes: "Required to play Online for now. Might skip something very important..."
