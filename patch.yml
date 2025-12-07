@@ -22521,6 +22521,29 @@ PPU-205b154e801acbf1f0d96b5c5c5275ef9d4cac3f:
     Patch:
       - [ be32, 0x010470e0, 0x60000000 ]
 
+PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
+  "Bypass SSL":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLES00323: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Removes SSL certificate validation. Required for connecting to custom servers."
+    Patch:
+      - [be32, 0x00d247a8, 0x38000015]
+  "Ultrawide 21:9 (3440x1440)":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLES00323: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD will be stretched. Certain scenes may have visual bugs."
+    Patch:
+      - [be32, 0x00dec0c8, 0x3fe38e39] # set reference ratio to 1.77 to horizontal maintain scaling
+      - [be32, 0x00dec0cc, 0x4018e38e] # set widescreen ratio to 21:9
+      - [be32, 0x00663760, 0x409e00b0] # force square display branch
+      - [be32, 0x00663768, 0x38000003] # set widescreen flag?
+
 Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
     "Metal Gear Rising: Revengeance":
