@@ -13730,6 +13730,8 @@ Anchors:
         "16:10": 1.6
         "4:3": 1.333333333333333
         "5:4": 1.25
+  ms_shad_notes: &ms_shad_notes
+    "~10% performance improvement but makes the game look worse."
 
 PPU-9f001199a7f23695cd41a2b25c1d0325da7565b5: # BCES00006
   "Unlock FPS":
@@ -13834,6 +13836,15 @@ PPU-ce27dc64b44242beebb44c097449dd035de18e8b: # 3.1 update
     Patch Version: 1.0
     Patch:
       - [ bef32, 0x00F3161C, "Aspect Ratio" ]
+  "Disable Shadows":
+    Games:
+      "Motorstorm Update 3.1 (Complete Edition)":
+        BCES00006: [ All ]
+    Author: regal.
+    Notes: *ms_shad_notes
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x10007c18, "\x00" ] # data/%s/%s.trg
 
 PPU-1658c7e4b1bfe52d6ec02443f8feed9b295ff9dc: # NPEA80017
   "Unlock FPS":
