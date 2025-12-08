@@ -22550,10 +22550,19 @@ PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
     Patch Version: 1.0
     Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD will be stretched. Certain scenes may have visual bugs."
     Patch:
-      - [be32, 0x00dec0c8, 0x3fe38e39] # set reference ratio to 1.77 to horizontal maintain scaling
+      - [be32, 0x00dec0c8, 0x3fe38e39] # set reference ratio to 1.77 to maintain horizontal scaling
       - [be32, 0x00dec0cc, 0x4018e38e] # set widescreen ratio to 21:9
       - [be32, 0x00663760, 0x409e00b0] # force square display branch
-      - [be32, 0x00663768, 0x38000003] # set widescreen flag? 
+      - [be32, 0x00663768, 0x38000003] # set widescreen flag?
+  "Skip Intro Videos":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLES00323: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes:
+    Patch:
+      - [byte, 0xdd9e58, 0x30]
 
 PPU-37b59d9b4761d45bfb38587ccf42fbe65c4fb1a4:
   "Bypass SSL":
