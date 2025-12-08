@@ -2706,6 +2706,31 @@ PPU-534e146dfb4206ec2ae9272e00ff73c7739451f8:
       - [ be32, 0x00139a5c, 0x38600001 ] # li r3,0x1
       - [ be32, 0x00139a60, 0x4e800020 ] # blr
 
+PPU-06698cd3cff1173e74938f60c5d00a06b69648ec:
+  "Skip Intro":
+    Games:
+      "Need for Speed: SHIFT":
+        BLJM60167: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x0144eb60, 0x00 ]
+      - [ byte, 0x014059f8, 0x00 ]
+
+PPU-4c6dcd958c46b9968dde32162623d74f8143dd6c:
+  "Skip Intro":
+    Games:
+      "Need for Speed: SHIFT":
+        BLJM60167: [ 01.04 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x0145a660, 0x00 ]
+      - [ byte, 0x014a6600, 0x00 ]
+      - [ byte, 0x0145a678, 0x00 ]
+
 PPU-0418cc497820135102d57367433dea3e61162539:
   "Skip Intro":
     Games:
