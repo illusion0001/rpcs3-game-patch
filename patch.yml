@@ -22588,6 +22588,15 @@ PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
     Notes:
     Patch:
       - [byte, 0xdd9e58, 0x30]
+  "30 FPS":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLES00323: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: Set framerate to fixed 30, prevents audio issues. Use this if you experience slowdowns or stuttering in multiplayer.
+    Patch:
+      - [utf8, 0xdd9fa7, 'Fixed 30"#']
 
 PPU-37b59d9b4761d45bfb38587ccf42fbe65c4fb1a4:
   "Bypass SSL":
