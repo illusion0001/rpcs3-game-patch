@@ -24598,6 +24598,17 @@ PPU-336bdd5d924742e981105232d0cbaf7c035a1517:
     Patch:
       - [ be32, 0x008dfe40, 0xf8051c60 ]
 
+PPU-81058f1cd6afdbf69749f7a0773bde36c4bbb296:
+  "Disable SSL":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLES00412: [01.00]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Disables SSL encryption for custom servers"
+    Patch:
+      - [be32, 0x002e170c, 0x9b7d0110]
+
 PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
   "Skip Intro":
     Games:
