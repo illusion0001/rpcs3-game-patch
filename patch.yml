@@ -19466,6 +19466,17 @@ PPU-e9844aeece4ed8abaffc9ee5966e0750f5747308:
       - [ be16, 0x00b8422e, 1280 ]
       - [ be16, 0x00b84232, 720 ]
 
+PPU-8899716ec46dc331634e2fbd969c81dadc785569:
+  "60 FPS":
+    Games:
+      "Tornado Outbreak":
+        BLES00695: [ All ]
+    Author: "larryeedwards"
+    Notes: "Set Framelimit to auto"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0058CE58, 0x3C805762 ]
+
 PPU-ae7633f0660f4386e11a3d727d54512d7990721b:
   "Unlock All Levels":
     Games:
