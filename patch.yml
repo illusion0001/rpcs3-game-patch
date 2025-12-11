@@ -17383,6 +17383,334 @@ PPU-aa5570c4d54fb575f39e4a0067e837056473f4e0: # SHGAME.SELF
       - [ be32, 0x0077172c, 0x38600000 ] # li r3, 0x0 # SHGame.GlobalPostProcessSettings.ForceFXAA
       - [ be32, 0x0076f064, 0x38600000 ] # li r3, 0x0 # Engine.MaterialPostProcess.MLAA
 
+Anchors:
+  SPU_MLAA_Notes: &SPU_MLAA_Notes
+    "Removes Morphological Anti-Aliasing, known as \"MLAA\", a form of post process anti-aliasing which is done using the CELL's SPUs instead of the RSX for extra performance."
+
+  SPU_MLAA_01: &SPU_MLAA_01
+    - [ be32, 0x000031f4, 0x40800003 ] # il r3 0
+
+  SPU_MLAA_02: &SPU_MLAA_02
+    - [ load, *SPU_MLAA_01 ]
+    - [ be32, 0x0000349c, 0x40800017 ] # il r23 0
+
+  SPU_MLAA_03: &SPU_MLAA_03
+    - [ load, *SPU_MLAA_01 ]
+    - [ be32, 0x000034a4, 0x40800017 ] # il r23 0
+
+  SPU_MLAA_04: &SPU_MLAA_04
+    - [ be32, 0x00005948, 0x40800094 ] # il r20 1
+    - [ be32, 0x0000690c, 0x40800027 ] # il r39 0
+
+  SPU_MLAA_05: &SPU_MLAA_05
+    - [ be32, 0x00004440, 0x40800002 ] # il r2 0
+    - [ be32, 0x000056c4, 0x4080008a ] # il r10 0
+
+  SPU_MLAA_06: &SPU_MLAA_06
+    - [ be32, 0x000033b0, 0x40800017 ] # il r23 0
+    - [ be32, 0x0000373c, 0x4080001f ] # il r31 0
+
+  SPU_MLAA_07: &SPU_MLAA_07
+    - [ be32, 0x0000325c, 0x40800003 ] # il r3 0
+    - [ be32, 0x00004c00, 0x40800091 ] # il r17 1
+
+  SPU_MLAA_08: &SPU_MLAA_08
+    - [ be32, 0x000036d4, 0x4080001d ] # il r29 0
+    - [ be32, 0x000033d0, 0x40800005 ] # il r5 0
+
+  SPU_MLAA_09: &SPU_MLAA_09
+    - [ be32, 0x00003744, 0x4080001e ] # il r30 0
+    - [ be32, 0x00003430, 0x40800006 ] # il r6 0
+
+  SPU_MLAA_10: &SPU_MLAA_10
+    - [ be32, 0x000036bc, 0x4080001c ] # il r28 0
+    - [ be32, 0x000033c0, 0x40800005 ] # il r5 0
+
+  SPU_MLAA_11: &SPU_MLAA_11
+    - [ be32, 0x00003344, 0x40800003 ] # il r3 0
+    - [ be32, 0x000037b4, 0x4020007f ] # spu nop
+
+SPU-5177cbc4bf45c8a0a6968c2a722da3a9e6cfb28b: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Prince of Persia series":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nPrince of Persia: The Sands of Time\nPrince of Persia: Warrior Within\nPrince of Persia: The Two Thrones" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_01 ]
+
+SPU-9001b44fd7278b5a6fa5385939fe928a0e549394: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA":
+    Games:
+      "Puppeteer":
+        BCES00935: [ All ]
+        BCUS98227: [ All ]
+        BCJS30078: [ All ]
+        BCAS20281: [ All ]
+        NPEA00439: [ All ]
+        NPUA80959: [ All ]
+        NPJA00098: [ All ]
+        NPHA80250: [ All ]
+      "Puppeteer: Demo version":
+        NPJA90254: [ All ]
+        NPEA90125: [ All ]
+    Author: "Whatcookie"
+    Notes: *SPU_MLAA_Notes
+    Group: SPUMLAA
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_01 ]
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nBinary Domain\nJourney\nOddworld: Stranger's Wrath HD\nTokyo Jungle\nSoulCalibur Lost Swords\nSoulCalibur V\nYakuza Ishin\nYakuza 5\nFerrari Racing Legends\nPool Nation\nPortal 2\nThe Ratchet & Clank Trilogy" ]
+    Group: SPUMLAA
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-931132fd48a40bce0bec28e21f760b1fc6ca4364: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nCaptain America: Super Soldier\nYakuza Dead Souls\nNeed for Speed Shift 2 Unleashed\nTransformers Dark of The Moon" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-7b5ea49122ec7f023d4a72452dc7a9208d9d6dbf: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA":
+    Games:
+      "Dragon Age 2 (Dragon Age II)":
+        BLES01084: [ All ]
+        BLUS30645: [ All ]
+        NPEB00569: [ All ]
+        NPUB30476: [ All ]
+    Author: "Whatcookie"
+    Notes: *SPU_MLAA_Notes
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-df5b1c3353cc36bb2f0fb59197d849bb99c3fecd: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMedieval Moves: Deadmund's Quest\nShadow of the Colossus\nSports Champions 2\n\nExtra note for Shadow of the Colossus:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-45f98378f0837fc6821f63576f65d47d10f9bbcb: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nYakuza 0\nYakuza Kiwami\nHandball 16\nHandball 17\nKillAllZombies\nWWE 2k17" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_06 ]
+
+SPU-9c270732b4276ec71df9a5255d5d8a63267de645: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA":
+    Games:
+      "WWE '12":
+        BLES01439: [ All ]
+        BLUS30841: [ All ]
+        BLJM60436: [ All ]
+    Author: "Whatcookie, dio"
+    Notes: *SPU_MLAA_Notes
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-6932af7adf79f31116fc28d71aae3e5e165d7f63: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - WWE '13, WWE 2K14":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie, Satan"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nWWE '13\nWWE 2K14" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-ac189d7f87091160a94e69803ac0cff0a8bb7813: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - ICO":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nICO\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_02 ]
+
+SPU-794795c449beef176d076816284849d266f55f99: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Macross 30":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMacross 30" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_03 ]
+
+SPU-e3780fe1dc8953f849ac844ec9688ff4da3ca3ae: # SPUNAME: 'u:\bin_ps3_SNC\edgepost_mlaa_ta'
+  "Disable SPU MLAA - Metro Last Light":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nMetro Last Light" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_03 ]
+
+SPU-530c255936b07b25467a58e24ceff5fd4e2960b7: # SPUNAME: 'mlaascanline.PS3_Release/mlaasca'
+  "Disable SPU MLAA":
+    Games:
+      "God of War 3 (God of War III)":
+        BCES00510: [ 01.00 ]
+        BCES00799: [ 01.00 ]
+        BCUS98111: [ 01.00 ]
+        BCJS37001: [ 01.00 ]
+        BCAS25003: [ 01.00 ]
+        BCKS15003: [ 01.00 ]
+    Author: "Whatcookie"
+    Notes: *SPU_MLAA_Notes
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_04 ]
+
+SPU-2239af4827b17317522bd6323c646b45b34ebf14: # SPUNAME: 'mlaascanline.PS3_Release/mlaasca'
+  "Disable SPU MLAA":
+    Games:
+      "God of War 3 (God of War III)":
+        BCES00510: [ 01.03 ]
+        BCES00799: [ 01.03 ]
+        BCUS98111: [ 01.03 ]
+        BCJS37001: [ 01.03 ]
+        BCAS25003: [ 01.03 ]
+        BCKS15003: [ 01.03 ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_04 ]
+
+SPU-7cd211ff1cbd33163eb0711440dccbb3c1dbcf6c: # SPUNAME: 'z:/export/jenkins/workspace/int6'
+  "Disable SPU MLAA - God of War: Ascension":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_05 ]
+
+SPU-1549476fe258150ff9f902229ffaed69a932a9c1: # SPUNAME: 'Z:/output/EURint6/SPUMLAATask/PS'
+  "Disable SPU MLAA - God of War: Ascension":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_05 ]
+
+SPU-77ce25dab2a5ca1d96038cc3dc57c50c705ce38c: # SPUNAME: 'Z:/output/USint6/SPUMLAATask/PS3'
+  "Disable SPU MLAA - God of War: Ascension":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie, kd-11"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nGod of War: Ascension" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_05 ]
+
+SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - Twisted Metal, Resident Evil: Operation Raccoon City":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nTwisted Metal\nResident Evil: Operation Raccoon City" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_06 ]
+
+SPU-969cf3e9db75f52a6b41074ccbff74106b709854: # SPUNAME: 'objs/release/edgepost-mlaa-task.' # NOTE: has asserts!
+  "Disable SPU MLAA - Multiple titles":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nAce Combat: Assault Horizon\nBeyond Good & Evil HD\nDmC Devil May Cry\nMotorStorm: Apocalypse\nMotorStorm RC\nPlayStation Move Heroes\nCarnival Island\nHelldivers\nEscape Dead Island\nI Am Alive\nRed Faction: Armageddon\nFarming Simulator\nSly Cooper: Thieves in Time\n\nExtra note for Sly Cooper: Thieves in Time:\nThis patch can be used alongside PPU based patch which allows for resolution scaling." ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_07 ]
+
+SPU-976d2128f08c362731413b75c934101b76c3d73b: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - LittleBigPlanet 2":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2 (early versions)" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_08 ]
+
+SPU-a129a01a270246c85df18eee0e959ef4263b6510: # SPUNAME: 'C:\dev\CW_br2_move_final-output\'
+  "Disable SPU MLAA - LittleBigPlanet 2":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2 (other early versions)" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_09 ]
+
+SPU-702d0205a89d445d15dc0f96548546c4e2e7a59f: # SPUNAME: 'PS3_Release/edgepost-mlaa-task.s'
+  "Disable SPU MLAA - LittleBigPlanet 2, LittleBigPlanet 3, LittleBigPlanet Hub":
+    Games:
+      All:
+        All: [ All ]
+    Author: "Whatcookie"
+    Notes: [ *SPU_MLAA_Notes, "\n\nKnown to affect:\nLittleBigPlanet 2\nLittleBigPlanet 3\nLittleBigPlanet Hub" ]
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_10 ]
+
+SPU-191fe1c92c8360992b3240348e70ea37d50812d4: # SPUNAME: 'E:\Alice2\Development\Intermedia'
+  "Disable SPU MLAA":
+    Games:
+      "Alice: Madness Returns":
+        BLES01265: [ All ]
+        BLUS30607: [ All ]
+        NPEB00625: [ All ]
+        NPUB30545: [ All ]
+    Author: "Whatcookie"
+    Notes: *SPU_MLAA_Notes
+    Patch Version: 1.5
+    Patch:
+      - [ load, *SPU_MLAA_11 ]
+
 PPU-7a8b0571c168093a30c04ad706040370a17c21b0:
   "Extended FOV":
     Games:
