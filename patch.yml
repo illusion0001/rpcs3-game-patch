@@ -18569,6 +18569,16 @@ PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00aa1c20, 0x60000000 ]
+  "Bypass the update check":
+    Games:
+      "Armored Core 4":
+        BLUS30027: [ 01.01 ]
+    Author: "BEZEL"
+    Patch Version: 1.0
+    Group:
+    Notes: "This patch resolves the PvP unplayability issue by disabling the update check."
+    Patch:
+      - [ be32, 0x00909EC0, 0x38600001 ] #li r3, 0x1
 
 Anchors:
   bordertps_fps_notes: &bordertps_fps_notes
@@ -22586,7 +22596,7 @@ PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
         BLES00323: [01.03]
     Author: "Faith"
     Patch Version: 1.0
-    Notes: "Removes SSL certificate validation. Required for connecting to custom servers."
+    Notes: "Removes SSL certificate validation."
     Patch:
       - [be32, 0x00d247a8, 0x38000015]
   "Ultrawide 21:9 (3440x1440)":
@@ -22627,7 +22637,7 @@ PPU-37b59d9b4761d45bfb38587ccf42fbe65c4fb1a4:
         BLUS30056: [01.03]
     Author: "Faith"
     Patch Version: 1.0
-    Notes: "Removes SSL certificate validation. Required for connecting to custom servers."
+    Notes: "Removes SSL certificate validation."
     Patch:
       - [be32, 0x00d247a8, 0x38000015]
 
