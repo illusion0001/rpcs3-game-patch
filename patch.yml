@@ -24713,6 +24713,38 @@ PPU-81058f1cd6afdbf69749f7a0773bde36c4bbb296:
       - [be32, 0x003544bc, 0x60000000] # Force-add joining player
       - [be32, 0x003545ec, 0x38a00001] # AllowPlayerEntryInternal(,allow=1)
       - [be32, 0x00852c50, 0x38c00000] # B-U-FriendsOnly=0
+  "MordorWide Patch":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLES00412: [ 01.00 ]
+    Author: "Johann Frei"
+    Notes: "Connect to MordorWide (https://mordorwi.de) custom servers, allowing cross-play with PC players"
+    Patch Version: 1.0
+    Patch:
+        # Disable SSL Verification
+      - [be32, 0x00380d9c, 0x38e00015]
+        # Change fesl.ea.com\x00 to mordorwi.de\x00 -> [bytes, 0x00b57fe0, 0x6d6f72646f7277692e646500]
+      - [be64, 0x00b57fe0, 0x6d6f72646f727769]
+      - [be32, 0x00b57fe8, 0x2e646500]
+        # Change .fesl\x00 to .mord\x00 -> [bytes, 0x00b566b0, 0x2e6d6f726400]
+      - [be32, 0x00b566b0, 0x2e6d6f72]
+      - [be16, 0x00b566b4, 0x6400]
+        # Change .ea.com\x00 to orwi.de\x00 -> [bytes, 0x00b566b8, 0x6f7277692e646500]
+      - [be64, 0x00b566b8, 0x6f7277692e646500]
+        # Change version from 245478916 (0x0ea1b604) to the PC counterpart 245478296 (0x0ea1b398) at 6 spots
+        # The value pairs are split into 0ea1 and b604 and are hard-coded into the instructions as immediate values.
+      - [be16, 0x0087efaa, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x0087efb6, 0xb398] # <- 2x instruction lines between the relevant instructions
+      - [be16, 0x0088012e, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x0088013e, 0xb398] # <- 3x instruction lines between the relevant instructions
+      - [be16, 0x0088023e, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x0088024e, 0xb398] # <- 3x instruction lines between the relevant instructions
+      - [be16, 0x0088bc3e, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x0088bc4e, 0xb398] # <- 3x instruction lines between the relevant instructions
+      - [be16, 0x008aca8e, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x008aca9a, 0xb398] # <- 2x instruction lines between the relevant instructions
+      - [be16, 0x008b05ee, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
+      - [be16, 0x008b05fa, 0xb398] # <- 2x instruction lines between the relevant instructions
 PPU-c6084c0eedd3ed1763f786efc79872641e518c9d:
   "Create public friends server":
     Games:
