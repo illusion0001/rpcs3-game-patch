@@ -24691,6 +24691,49 @@ PPU-81058f1cd6afdbf69749f7a0773bde36c4bbb296:
     Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings.\n\nFor optimal splitscreen experience, it's recommended to switch the display orientation to Vertical in the game's settings."
     Patch:
       - [be32, 0x00c1e980, 0x4018e38e]
+  "Redirect Plasma logs to tyy":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLES00412: [01.00]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes:
+    Patch:
+      - [be32, 0x002e9d24, 0x60000000]
+      - [be32, 0x002e9d28, 0x7c832378]
+      - [be32, 0x002e9d2c, 0x480d0e0d]
+  "Create public friends server":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLES00412: [01.00]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: Makes player hosted 'friends-only' game public, allowing anybody to join.
+    Patch:
+      - [be32, 0x003544bc, 0x60000000] # Force-add joining player
+      - [be32, 0x003545ec, 0x38a00001] # AllowPlayerEntryInternal(,allow=1)
+      - [be32, 0x00852c50, 0x38c00000] # B-U-FriendsOnly=0
+PPU-c6084c0eedd3ed1763f786efc79872641e518c9d:
+  "Create public friends server":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLUS30226: [01.00]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: Makes player hosted 'friends-only' game public, allowing anybody to join.
+    Patch:
+      - [be32, 0x003544bc, 0x60000000] # Force-add joining player
+      - [be32, 0x003545ec, 0x38a00001] # AllowPlayerEntryInternal(,allow=1)
+      - [be32, 0x00852ec8, 0x38c00000] # B-U-FriendsOnly=0
+  "Ultrawide 21:9 (3440x1440)":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLUS30226: [01.00]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings.\n\nFor optimal splitscreen experience, it's recommended to switch the display orientation to Vertical in the game's settings."
+    Patch:
+      - [be32, 0x00c1e978, 0x4018e38e]
 
 PPU-0e3b811c5b38bec743417c3b2b3a0741fe72d21c: # EBOOT.BIN/APP_CHOOSER.SELF 1.10
   "Skip Intro":
