@@ -18579,6 +18579,27 @@ PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
     Notes: "This patch resolves the PvP unplayability issue by disabling the update check."
     Patch:
       - [ be32, 0x00909EC0, 0x38600001 ] #li r3, 0x1
+  "Fix PvP volume loading":
+    Games:
+      "Armored Core 4":
+        BLUS30027: [ 01.01 ]
+    Author: "BEZEL"
+    Notes: "This patch fixes an issue where volume settings were not correctly applied when loading save data before a PvP match."
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x0073EA54, 0x2F800000409E0018 ] #cmpwi cr7, r0, 0x0 / bne cr7, 0x73ea70
+PPU-cd96ecb17388ccb07124fec4c64ea9f30e1eb2dc:
+  "Fix PvP volume loading":
+    Games:
+      "Armored Core 4":
+        BLJM60012: [ 01.05 ]
+        BLJM60062: [ 01.00 ]
+    Author: "BEZEL"
+    Patch Version: 1.0
+    Group:
+    Notes: "This patch fixes an issue where volume settings were not correctly applied when loading save data before a PvP match."
+    Patch:
+      - [ be64, 0x0039EE80, 0x2F800000409E001C ] #cmpwi cr7, r0, 0x0 / bne cr7, 0x39eea0
 
 Anchors:
   bordertps_fps_notes: &bordertps_fps_notes
@@ -22640,6 +22661,36 @@ PPU-37b59d9b4761d45bfb38587ccf42fbe65c4fb1a4:
     Notes: "Removes SSL certificate validation."
     Patch:
       - [be32, 0x00d247a8, 0x38000015]
+  "Ultrawide 21:9 (3440x1440)":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLUS30056: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD will be stretched. Certain scenes may have visual bugs."
+    Patch:
+      - [be32, 0x00dec0c8, 0x3fe38e39] # set reference ratio to 1.77 to maintain horizontal scaling
+      - [be32, 0x00dec0cc, 0x4018e38e] # set widescreen ratio to 21:9
+      - [be32, 0x00663760, 0x409e00b0] # force square display branch
+      - [be32, 0x00663768, 0x38000003] # set widescreen flag?
+  "Skip Intro Videos":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLUS30056: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes:
+    Patch:
+      - [byte, 0xdd9e58, 0x30]
+  "30 FPS":
+    Games:
+      "Mercenaries 2: World in Flames™":
+        BLUS30056: [01.03]
+    Author: "Faith"
+    Patch Version: 1.0
+    Notes: Set framerate to fixed 30, prevents audio issues. Use this if you experience slowdowns or stuttering in multiplayer.
+    Patch:
+      - [utf8, 0xdd9fa7, 'Fixed 30"#']
 
 Anchors:
   mgrr_disc_eu_titles: &mgrr_disc_eu_titles
