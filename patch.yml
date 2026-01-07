@@ -24801,6 +24801,16 @@ PPU-81058f1cd6afdbf69749f7a0773bde36c4bbb296:
       - [be16, 0x008aca9a, 0xb398] # <- 2x instruction lines between the relevant instructions
       - [be16, 0x008b05ee, 0x0ea1] # <- Not necessary as it is already set. Only for documentation purposes.
       - [be16, 0x008b05fa, 0xb398] # <- 2x instruction lines between the relevant instructions
+  "16 Players Coop Campaign Patch":
+    Games:
+      "Lord of the Rings: Conquest":
+        BLES00412: [ 01.00 ]
+    Author: "Johann Frei"
+    Notes: "Patch to increase the number of players to 16. Not tested with more than 4 players!"
+    Patch Version: 1.0
+    Patch:
+        # Set player to 16 (li r9 0x0002 -> li r9 0x0010)
+      - [be32, 0x00808c34, 0x39200010]
 PPU-c6084c0eedd3ed1763f786efc79872641e518c9d:
   "Create public friends server":
     Games:
