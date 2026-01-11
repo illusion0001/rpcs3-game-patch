@@ -22638,6 +22638,17 @@ PPU-205b154e801acbf1f0d96b5c5c5275ef9d4cac3f:
     Patch:
       - [ be32, 0x010470e0, 0x60000000 ]
 
+PPU-179c21b99e97c6a575236708c16f98066fcb8fc2:
+  "Disable Depth of Field":
+    Games:
+      "Megamind":
+        BLES00867: [ 01.00 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x001cfa4d, 0x6a ]
+
 PPU-d02498a9cc5a1df4ade6373d79eab1cdd9e09229:
   "Bypass SSL":
     Games:
