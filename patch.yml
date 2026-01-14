@@ -544,6 +544,54 @@ PPU-83681f6110d33442329073b72b8dc88a2f677172:
     Patch:
       - [ bef32, 0x018cefbc, "Aspect Ratio" ]
       - [ bef32, 0x0190433c, "Aspect Ratio" ]
+  "Aspect ratio (HUD/Menus) 32:9":
+    Games:
+      "Demon's Souls":
+        BLUS30443: [01.00]
+    Author: "Pierre"
+    Patch Version: 1.0
+    Group: "Aspect ratio (HUD/Menus)"
+    Notes: "Requires the \"Aspect Ratio\" patch to be enabled as well as the \"Stretch To Display Area\" checked in the GPU settings. Centers HUD/menus by offsetting the UI quad while using the wider UI width."
+    Patch:
+      - [be32, 0x018F0174, 0x44F00000]   # R = 1920.0f
+      - [be32, 0x00718CFC, 0x3D40C420]   # lis r10,0xC420  -> L = -640.0f
+      - [be32, 0x00718D68, 0x914B0000]   # stw r10,0(r11)
+  "Aspect ratio (HUD/Menus) 21:9 (3840x1600)":
+    Games:
+      "Demon's Souls":
+        BLUS30443: [01.00]
+    Author: "Pierre"
+    Patch Version: 1.0
+    Group: "Aspect ratio (HUD/Menus)"
+    Notes: "Requires the \"Aspect Ratio\" patch to be enabled as well as the \"Stretch To Display Area\" checked in the GPU settings. Centers HUD/menus by offsetting the UI quad while using the wider UI width."
+    Patch:
+      - [be32, 0x018F0174, 0x44BC0000]   # R = 1504.0f
+      - [be32, 0x00718CFC, 0x3D40C360]   # lis r10,0xC360  -> L = -224.0f
+      - [be32, 0x00718D68, 0x914B0000]   # stw r10,0(r11)
+  "Aspect ratio (HUD/Menus) 21:9 (3440x1440)":
+    Games:
+      "Demon's Souls":
+        BLUS30443: [01.00]
+    Author: "Pierre"
+    Patch Version: 1.0
+    Group: "Aspect ratio (HUD/Menus)"
+    Notes: "Requires the \"Aspect Ratio\" patch to be enabled as well as the \"Stretch To Display Area\" checked in the GPU settings. Centers HUD/menus by offsetting the UI quad while using the wider UI width."
+    Patch:
+      - [be32, 0x018F0174, 0x44BB8000]   # R = 1500.0f
+      - [be32, 0x00718CFC, 0x3D40C35C]   # lis r10,0xC35C  -> L = -220.0f
+      - [be32, 0x00718D68, 0x914B0000]   # stw r10,0(r11)
+  "Aspect ratio (HUD/Menus) 21:9 (2560x1080)":
+    Games:
+      "Demon's Souls":
+        BLUS30443: [01.00]
+    Author: "Pierre"
+    Patch Version: 1.0
+    Group: "Aspect ratio (HUD/Menus)"
+    Notes: "Requires the \"Aspect Ratio\" patch to be enabled as well as the \"Stretch To Display Area\" checked in the GPU settings. Centers HUD/menus by offsetting the UI quad while using the wider UI width."
+    Patch:
+      - [be32, 0x018F0174, 0x44BAAAAB]   # R = 1493.33337f
+      - [be32, 0x00718CFC, 0x3D40C355]   # lis r10,0xC355  -> L ≈ -213.0f (rounded)
+      - [be32, 0x00718D68, 0x914B0000]   # stw r10,0(r11)      
   "Disable Motion Blur":
     Games: *des_US100title
     Author: "illusion"
