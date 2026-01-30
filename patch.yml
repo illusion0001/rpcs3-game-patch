@@ -3659,6 +3659,15 @@ PPU-aa2202f2dd8cf47ef78a0ef4c1294892f1054b28:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x010A3774, 0x00000000 ]
+  "Allow movie skip":
+    Games:
+      "Skate":
+        BLES00124: [ 01.00 ]
+    Author: "faith"
+    Notes: Allows to skip intro movies
+    Patch Version: 1.0
+    Patch:
+      - [ utf8, 0x1002b3f8, "data/audio/vehicle.big\0"] # replace path with a file that always exists
 
 Anchors:
   skate3_105title: &skate3_105title
