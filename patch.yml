@@ -10302,6 +10302,17 @@ PPU-66de81d02e578db05c7832efb55d8268a5ee6fa9:
     Patch:
       - [ load, *gt5_v217_fps ]
 
+PPU-26c56a42dbc303893506c4b76b496780f204d329:
+  "irekej Custom Server":
+    Games:
+      "Gran Turismo 5":
+        BCJS30001: [ 02.11 ]
+    Author: "chmcl95"
+    Patch Version: 1.0
+    Notes: ""
+    Patch:
+      - [ utf8, 0x013debb0, "http://54.37.232.59\0" ] # https://gt5.ps3.online.jp.gran-turismo.com
+
 Anchors:
   gt6_devlop_122: &gt6_devlop_122
     - [ be32, 0x0081715c, 0x38600001 ]
