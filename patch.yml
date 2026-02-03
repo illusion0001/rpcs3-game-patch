@@ -5088,6 +5088,17 @@ PPU-16506d9d5bf692d615645accd24bca1ee1f8f9a6:
       - [ be16, 0x005372aa, 1280 ]
       - [ be16, 0x005372b2, 704 ]
 
+PPU-ca7cbfb1d60f564a4882b5190d08de65c9a3d5a9:
+  "Unlock FPS":
+    Games:
+      "Ratchet & Clank Future: Tools of Destruction Demo":
+        NPHA20002: [ 01.00 ]
+    Author: "illusion"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x008aa588, 0.001 ]
+
 Anchors:
   rfqfb_resolution_notes: &rfqfb_resolution_notes
     "Original resolution is 960x704. 1280x720 breaks rendering and requires more research."
