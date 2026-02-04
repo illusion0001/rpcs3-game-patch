@@ -22962,6 +22962,18 @@ PPU-cada3232afafb29325ffdd5d79a865fbf3ac0fc7:
       - [ be32, 0x003d567c, 0x38600040 ]
       - [ be32, 0x003d5680, 0x4e800020 ]
 
+PPU-a7c9503c6c6a4c5772fb2f721475ea0d7e4c430c:
+  "Online Patch":
+    Games:
+      "機動戦士ガンダム エクストリームバーサス フルブースト":
+        NPJB00512: [01.10]
+    Author: ""
+    Patch Version: 1.0
+    Group: ""
+    Notes: ""
+    Patch:
+      - [be32, 0x002212cc, 0x2c840099]
+
 PPU-565327e8098ac4e0cf0df7ca74d97332a7f26e2b:
   "OpenSpy Online":
     Games:
