@@ -20114,19 +20114,19 @@ PPU-40cab05bffe7a05eb82b607e09653e432c4e48a4:
       - [ be32, 0x00029bf0, 0x60000000 ]
 
 PPU-11c753d6e0dd75f571e961e4f9f6c6500b57e74a:
-  "Ace Combat Infinity Patch":
+  "Title Screen Bypass":
     Games:
       "ACE COMBAT INFINITY":
         NPEB01839: [02.11]
         NPUB31347: [02.11]
     Author: Optimus1200
     Patch:
-        # Main Menu bypass     
+        # Title screen bypass     
         - [ be32, 0x003ad5ec, 0x3b600000 ]
-        # Campaign All-You-Can-Play
+        # Unlimited Campaign Play
         - [ be32, 0x00110d80, 0x38600001 ]
         - [ be32, 0x00110cdc, 0x38600001 ]
-        # Unlock All Campaign Missions
+        # Unlock all Campaign missions
         - [ be32, 0x001274c0, 0x42800038 ]
         - [ be32, 0x0012750c, 0x60000000 ]
         - [ be32, 0x00127530, 0x38600008 ]
@@ -23363,6 +23363,32 @@ PPU-87b65547be9e5efe8f540cbda75dfb9a21698a8b:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x002a6e40, 0x60000000 ]
+
+Anchors:
+  mreboot_unlockfps_notes: &mreboot_unlockfps_notes
+    "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to 58 FPS."
+
+PPU-16711d8f6ebc7dd82de640b780ec92cb0fe57356:
+  "Unlock FPS":
+    Games:
+      "Master Reboot":
+        NPEB01964: [ 01.00 ]
+    Author: "FlexBy"
+    Notes: *mreboot_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00348248, 0x60000000 ]
+
+PPU-5b6d8d47403011dfc7aeb5ac1b147ea8a08b8379:
+  "Unlock FPS":
+    Games:
+      "Master Reboot":
+        NPEB01964: [ 01.01 ]
+    Author: "FlexBy"
+    Notes: *mreboot_unlockfps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00348208, 0x60000000 ]
 
 PPU-205b154e801acbf1f0d96b5c5c5275ef9d4cac3f:
   "Unlock FPS":
