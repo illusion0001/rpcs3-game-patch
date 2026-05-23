@@ -12419,7 +12419,7 @@ Anchors:
       Max: 100
 
   uc1_debugmenu_notes: &uc1_debugmenu_notes
-    "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly"
+    "Enable Debug Console (DECR) mode to unlock the full menu.\nL3 + Start = Dev Menu\nL3 + Select = Quick Menu (Use this to unlock others)\nL3 + Triangle = Debug Text\nL2 + R2 = Debug Fly\nR2 = Next Frame (While Paused)\nSelect = Pause\nSelect/Start/R2 = Next Frame (While Super Paused)"
   uc1_debugmenu_notes2: &uc1_debugmenu_notes2
     "Unlocks some devkit menu without DECR:\n Rendering\n Collision (needs working msgcon)\n Interactive Background\n Physics\n Particles"
   uc1_dlight_notes: &uc1_dlight_notes
@@ -23577,6 +23577,17 @@ PPU-fbed5d1b1dd40b43ebba9c5ec4812c9a44533165:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00a33fd8, 0x38600001 ]
+
+PPU-1196d23078c0c2e36cb8773ba9a7949b2ddc1963:
+  "Skip Intro":
+    Games:
+      "Metro: Last Light Complete Edition":
+        NPEB01955: [ 01.00 ]
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00f4fda8, 0x00000000 ]
 
 Anchors:
   minecraft_100: &minecraft_100
