@@ -13953,7 +13953,7 @@ PPU-3764d5a10a24cec2db1a7bbfa3bbc692de47bbe0:
 
 Anchors:
   ms_fps_notes: &ms_fps_notes
-    "Updated with a new version that has correct game speed above 15 FPS except for the countdown timer.\nIncrease Vblank above 60Hz to go above 60 FPS.\nIssues introduced in version 1.0 of the patch have been resolved."
+    "Impacts the player's vehicle physics (reduces grip).\nMaximum FPS corresponds to your VBlank Frequency, but higher values will reduce grip further.\nUpdated with a new version that has correct game speed above 15 FPS except for the countdown timer.\nIssues introduced in version 1.0 of the patch have been resolved.\n"
   ms_ar_notes: &ms_ar_notes
       "Requires \"Stretch To Display Area\" checked in the GPU settings."
   ms_ar_configurable_values: &ms_ar_configurable_values
