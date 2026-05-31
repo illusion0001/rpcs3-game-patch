@@ -26645,6 +26645,50 @@ PPU-3f6269a9a2f732c90c0017c963fb52722e6b08a8:
       - [be32, 0x0074F1DC, 0x4BA7CDC8]
       - [be32, 0x001CBFA0, 0x48583214]
 
+Anchors:
+  BCES00005_DeltaTimer: &BCES00005_DeltaTimer # Keeps track of time passed using mftb and updates the games internal "ticks passed" accordingly.                                Pseudo-code:    if (time start == 0) {
+    - [be32, 0x0, 0x812224C8] # lwz   r9, 0x24c8(r2)    0x10175F28 - memory address we use to store various things, for example a saved timestamp since we started counting.                    SetStartTime:
+    - [be32, 0x0, 0xE8890008] # ld    r4, 8(r9)         Load saved start time                                                                                                                       SetTimeStart();
+    - [be32, 0x0, 0x2F240000] # cmpdi cr6, r4, 0                                                                                                                                                    *old_timer++;
+    - [be32, 0x0, 0x409A0034] # bne   cr6, 0x40         if (start time == 0) {                                                                                                                  } else {
+    - [be32, 0x0, 0x7C8C42E6] # mftb  r4, 0x10c         Load current time #10                                                                                                                       const new_timer = CalcNewTick();
+    - [be32, 0x0, 0x2F040000] # cmpwi cr6, r4, 0                                                                                                                                                    if (new_timer - *old_timer > 10) {
+    - [be32, 0x0, 0x419AFFF8] # beq   cr6, 0x10                                                                                                                                                         goto SetStartTime;
+    - [be32, 0x0, 0x3C84FFEC] # addis r4, r4, 0xffec    Subtract 1328000 (timebase_freq / 60)                                                                                                       }
+    - [be32, 0x0, 0x3884BC80] # addi  r4, r4, 0xbc80    #20                                                                                                                                         *old_timer = new_timer;
+    - [be32, 0x0, 0xF8890008] # std   r4, 8(r9)         Save start time - 1 tick                                                                                                                }
+    - [be32, 0x0, 0x80A27638] # lwz   r5, 0x7638(r2)
+    - [be32, 0x0, 0x80850000] # lwz   r4, 0(r5)         Load current tick
+    - [be32, 0x0, 0x90890010] # stw   r4, 0x10(r9)      Save start tick #30
+    - [be32, 0x0, 0x38840001] # addi  r4, r4, 1
+    - [be32, 0x0, 0x90850000] # stw   r4, 0(r5)         Save tick + 1
+    - [be32, 0x0, 0x48000068] # b      0xa4             goto end }
+    - [be32, 0x0, 0x7C0C42E6] # mftb   r0, 0x10c        Load current time #40
+    - [be32, 0x0, 0x2F000000] # cmpwi  cr6, r0, 0
+    - [be32, 0x0, 0x419AFFF8] # beq    cr6, 0x40
+    - [be32, 0x0, 0x7C040050] # subf   r0, r4, r0       Subtract start time
+    - [be32, 0x0, 0xF801FFF0] # std    r0, -0x10(r1)    #50
+    - [be32, 0x0, 0xC801FFF0] # lfd    f0, -0x10(r1)
+    - [be32, 0x0, 0xFC00069C] # fcfid  f0, f0
+    - [be32, 0x0, 0x80A24EF0] # lwz    r5, 0x4ef0(r2)
+    - [be32, 0x0, 0xC1650000] # lfs    f11, 0(r5)       0x10C78FE4 #60
+    - [be32, 0x0, 0xFC0002F2] # fmul   f0, f0, f11      Divide by timebase
+    - [be32, 0x0, 0x80A2755C] # lwz    r5, 0x755c(r2)
+    - [be32, 0x0, 0xC1650000] # lfs    f11, 0(r5)       0x10061BB4
+    - [be32, 0x0, 0xFC0002F2] # fmul   f0, f0, f11      Multiply by ticks per second (60.24) #70
+    - [be32, 0x0, 0xFC00001E] # fctiwz f0, f0
+    - [be32, 0x0, 0x38A1FFF0] # addi   r5, r1, 0xfff0
+    - [be32, 0x0, 0x7C002FAE] # stfiwx f0, 0, r5
+    - [be32, 0x0, 0x8001FFF0] # lwz    r0, -0x10(r1)    Ticks since start tick #80
+    - [be32, 0x0, 0x80A90010] # lwz    r5, 0x10(r9)     Start tick
+    - [be32, 0x0, 0x7C002A14] # add    r0, r0, r5       New tick
+    - [be32, 0x0, 0x80A27638] # lwz    r5, 0x7638(r2)
+    - [be32, 0x0, 0x80850000] # lwz    r4, 0(r5)        Load current tick #90
+    - [be32, 0x0, 0x7C840050] # subf   r4, r4, r0       New tick - current tick
+    - [be32, 0x0, 0x2F04000A] # cmpwi  cr6, r4, 0xa
+    - [be32, 0x0, 0x4199FF74] # bgt    cr6, 0x10
+    - [be32, 0x0, 0x90050000] # stw    r0, 0(r5)        Save new tick #A0
+
 PPU-294b89f56f3c2f0564fc1ec38084ea28c0ebac58:
   "60 FPS":
     Games:
@@ -26655,6 +26699,50 @@ PPU-294b89f56f3c2f0564fc1ec38084ea28c0ebac58:
     Patch Version: 1.0
     Patch:
       - [be32, 0x10064298, 1]
+  "Delta time":
+    Games:
+      "Formula One Championship Edition":
+        BCES00005: [ 02.00 ]
+    Author: Juhn
+    Notes: Adjusts physics according to the fps. If the fps is lower than the original framerate target, the game slows down. By default this original framerate target is 30 fps, enable the 60 fps patch to increase the framerate target to 60 (only do this if you can keep above 60 fps steadily, otherwise there is no point to combine the 60 fps patch with this one). Increase the vblank rate to increase framerate cap accordingly, keeping the vblank rate at 60hz will render this patch useless. This patch does not limit the fps in menus, which can make them hard to navigate. Known issues are replay instability and slight changes to the engine simulation. This patch was developed thanks to a bounty set by Comanso, who also helped with testing.
+    Patch Version: 1.0
+    Patch:
+      - [calloc, 0x503560, 15] # Delta time physics         Hooks into some framerate code and calculates a new physics simulation step size (?).
+      - [be32, 0x0, 0x808297DC] # lwz  r4, -0x6824(r2)
+      - [be32, 0x0, 0xC0240000] # lfs  f1, 0(r4)            Load default tickrate (60.24 most of the time)
+      - [be32, 0x0, 0x8082CF14] # lwz   r4, -0x30ec(r2)
+      - [be32, 0x0, 0x80840000] # lwz   r4, 0(r4)
+      - [be32, 0x0, 0xF881FFF0] # std   r4, -0x10(r1)
+      - [be32, 0x0, 0xC941FFF0] # lfd   f10, -0x10(r1)      Load number of physics interations.
+      - [be32, 0x0, 0xFD40569C] # fcfid f10, f10
+      - [be32, 0x0, 0xFC215024] # fdiv f1, f1, f10          Divide framerate by number of physics iterations (2 most of the time), gives you a default target framerate (30.12 by default)
+      - [be32, 0x0, 0xFD8C0072] # fmul f12, f12, f1         Multiply by actual frametime i.e. divide by actual framerate. For example when running at 60 fps => 30 * (1 / 60) = 30 / 60 = 0.5
+      - [be32, 0x0, 0xC022ADA8] # lfs  f1, -0x5258(r2)      Load default physics step (0.0055555 most of the time)
+      - [be32, 0x0, 0xFD8C0072] # fmul f12, f12, f1         Multiply the framerate ratio by the default physics step to calculate a new physics step. In our example 0.5 * 0.0055555 = 0,0027778
+      - [be32, 0x0, 0xFF8C0800] # fcmpu cr7, f12, f1
+      - [be32, 0x0, 0x419D000C] # bgt   cr7, 0x43269C       If the new physics step is greater than the default physics step, then leave the current physics step in place. A greater physics step than around 0.006-0.007 results in the physics simulation breaking down.
+      - [be32, 0x0, 0x8082AD9C] # lwz  r4, -0x5264(r2)
+      - [be32, 0x0, 0xD1840000] # stfs f12, 0(r4)           Else save the new physics step.
+      - [calloc, 0x5FB184, 41] # Calculate tick (Quick race)    Overwrites the default tick increment code with our own delta time tick calculation.
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x62FFB4, 41] # Calculate tick (Time trial)
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x61AF08, 41] # Calculate tick (Grand prix)
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x5FB308, 41] # Calculate tick (Quick race)
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x6106F8, 41] # Calculate tick
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x61B1C8, 41] # Calculate tick (Grand prix)
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x61B21C, 41] # Calculate tick (Grand prix)
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x62785C, 41] # Calculate tick
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x627BA0, 41] # Calculate tick
+      - [load, *BCES00005_DeltaTimer]
+      - [calloc, 0x63734C, 41] # Calculate tick
+      - [load, *BCES00005_DeltaTimer]
 
 PPU-3329d1b543cca14156b439d3427a081b829241db:
   "60 FPS":
