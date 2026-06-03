@@ -12954,6 +12954,31 @@ Anchors:
         "360 FPS": 0.0020833333
         "480 FPS": 0.0013888889
         "600 FPS": 0.0010416667
+  fix_rewind_tolerance: &fix_rewind_tolerance
+    # Load current time step to f11
+    - [ be32, 0x0, 0x3d200002 ] # lis    r9,2
+    - [ be32, 0x0, 0x61290030 ] # ori    r9,r9,48
+    - [ be32, 0x0, 0xc9690000 ] # lfd    f11,0(r9)
+    # Load 1/60 to f0
+    - [ be32, 0x0, 0x39200000 ] # li     r9, 0
+    - [ be32, 0x0, 0x3d203f91 ] # lis    r9,16273
+    - [ be32, 0x0, 0x61291111 ] # ori    r9,r9,4369
+    - [ be32, 0x0, 0x91210030 ] # stw    r9,0x30(r1)
+    - [ be32, 0x0, 0x3d201111 ] # lis    r9,4369
+    - [ be32, 0x0, 0x61291111 ] # ori    r9,r9,4369
+    - [ be32, 0x0, 0x91210034 ] # stw    r9,0x34(r1)
+    - [ be32, 0x0, 0xc8010030 ] # lfd    f0,0x30(r1)
+    # Divide 1/60 with current timestep
+    - [ be32, 0x0, 0xfc005824 ] # fdiv   f0,f0,f11
+    - [ be32, 0x0, 0xfc000018 ] # frsp   f0,f0
+    # Multiply rewind tolerance frequency adjustment factor with the result
+    - [ be32, 0x0, 0xec210032 ] # fmuls  f1,f1,f0
+    - [ be32, 0x0, 0x3c8000a4 ] # lis    r4,0xa4
+  unlock_all_content_notes: &unlock_all_content_notes
+    "Unlocks all content without disabling high scores, progression or trophies."
+  unlock_content_patch: &unlock_content_patch
+    - [ be32, 0x0, 0x38600001 ] # li r3, 0x1
+    - [ be32, 0x0, 0x4E800020 ] # blr 
 
 PPU-1369b92d59b3727ea77257795263de460e621823:
   "Unlock Pitch Black Out Venue":
@@ -12988,8 +13013,37 @@ PPU-c779b7ecc73ebd460c15d70917db75fe69399aa1:
       - [ bef64, 0x00020030, "Min timestep" ]
       # if update rate 30fps
       - [ bef64, 0x00020038, "Min timestep" ]
-      # fix rewinds
-      - [ bef32, 0x0024182c, "Min timestep" ]
+      # fix oversensitive rewind
+      - [ calloc, 0x489600, 15 ]
+      - [ load, *fix_rewind_tolerance ]
+  "Unlock All Content":
+    Games:
+      "DJ Hero 2":
+        BLUS30526: [ 01.01 ]
+    Author: "Hatti"
+    Patch Version: 1.0
+    Notes: *unlock_all_content_notes
+    Patch:
+      - [ calloc, 0x66CC2C, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66D340, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66E500, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66E6E4, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C378, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C55C, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C740, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C924, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x811744, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x811E54, 2 ]
+      - [ load, *unlock_content_patch ]
 
 PPU-b70a9965638aa43c4edec58683cf0f2dfed8071b:
   "Unlock Pitch Black Out Venue":
@@ -13024,8 +13078,37 @@ PPU-bccea158f89820de105a87541c9252052538a5fb:
       - [ bef64, 0x00020030, "Min timestep" ]
       # if update rate 30fps
       - [ bef64, 0x00020038, "Min timestep" ]
-      #fix rewinds
-      - [ bef32, 0x002414ac, "Min timestep" ]
+      # fix oversensitive rewind
+      - [ calloc, 0x489280, 15 ]
+      - [ load, *fix_rewind_tolerance ]
+  "Unlock All Content":
+    Games:
+      "DJ Hero 2":
+        BLES00896: [ 01.01 ]
+    Author: "Hatti"
+    Patch Version: 1.0
+    Notes: *unlock_all_content_notes
+    Patch:
+      - [ calloc, 0x66C8AC, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66CFC0, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66E180, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x66E364, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80BFF8, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C1DC, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C3C0, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x80C5A4, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x8113C4, 2 ]
+      - [ load, *unlock_content_patch ]
+      - [ calloc, 0x811AD4, 2 ]
+      - [ load, *unlock_content_patch ]
 
 PPU-530aadd4c93166a0ca0d3acbe963a09f7926b878:
   "Force Pitch Black Out Venue":
