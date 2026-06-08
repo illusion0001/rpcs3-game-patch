@@ -25481,6 +25481,185 @@ PPU-0e747cbf4d807d363b085d983fff749c2c9cbdee:
       - [ be32, 0x011178d0, 0x3c888889 ]
       - [ be32, 0x011178d4, 0x3c888889 ]
 
+PPU-9b25445d515178534f4ca07dc26095d25301854e:
+  "Bypass Online Pass":
+    Games:
+      "Starhawk":
+        BCUS98181: [ 01.04 ]
+        BCJS30076: [ 01.04 ]
+        BCES00907: [ 01.04 ]
+    Author: "Score"
+    Notes: "Skips Starhawk's Online Pass / voucher prompt so you can connect to online multiplayer without redeeming a code."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x884B0C, 0x60000000 ]
+      - [ be32, 0x884B18, 0x38800000 ]
+      - [ be32, 0x884B1C, 0x38A00001 ]
+      - [ be32, 0x887320, 0x60000000 ]
+      - [ be32, 0x88732C, 0x38800000 ]
+      - [ be32, 0x887330, 0x38A00001 ]
+  "Unlock FPS":
+    Games:
+      "Starhawk":
+        BCUS98181: [ 01.04 ]
+        BCJS30076: [ 01.04 ]
+        BCES00907: [ 01.04 ]
+    Author: "Score"
+    Notes: "Removes the stock 40fps cap."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01014B88, 0x447A0000 ]
+  "Disable Motion Blur":
+    Games:
+      "Starhawk":
+        BCUS98181: [ 01.04 ]
+        BCJS30076: [ 01.04 ]
+        BCES00907: [ 01.04 ]
+    Author: "Score"
+    Notes: "Disables the camera motion blur for a sharper image."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006FEA44, 0x4E800020 ]
+  "Skip Legal Screens":
+    Games:
+      "Starhawk":
+        BCUS98181: [ 01.04 ]
+        BCJS30076: [ 01.04 ]
+        BCES00907: [ 01.04 ]
+    Author: "Score"
+    Notes: "Jumps straight past the startup legal and logo screens to the menu."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x010236D0, 0x0001 ]
+  "Fix Crash on Exit":
+    Games:
+      "Starhawk":
+        BCUS98181: [ 01.04 ]
+        BCJS30076: [ 01.04 ]
+        BCES00907: [ 01.04 ]
+    Author: "Score"
+    Notes: "Lets the game close cleanly instead of hanging the emulator when you quit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x009B988C, 0x4BFFFFA4 ]
+      - [ be32, 0x009B98A8, 0x4BFFFF88 ]
+
+PPU-e7e313b6cd0b5e9f2c1072f59fcd25164aa478f4:
+  "Bypass Online Pass":
+    Games:
+      "Starhawk":
+        NPUA80809: [ 01.00 ]
+        NPEA00411: [ 01.00 ]
+    Author: "Score"
+    Notes: "Skips Starhawk's Online Pass / voucher prompt so you can connect to online multiplayer without redeeming a code."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x885660, 0x60000000 ]
+      - [ be32, 0x88566C, 0x38800000 ]
+      - [ be32, 0x885670, 0x38A00001 ]
+      - [ be32, 0x887EA4, 0x60000000 ]
+      - [ be32, 0x887EB0, 0x38800000 ]
+      - [ be32, 0x887EB4, 0x38A00001 ]
+  "Unlock FPS":
+    Games:
+      "Starhawk":
+        NPUA80809: [ 01.00 ]
+        NPEA00411: [ 01.00 ]
+    Author: "Score"
+    Notes: "Removes the stock 40fps cap."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01014BC0, 0x447A0000 ]
+  "Disable Motion Blur":
+    Games:
+      "Starhawk":
+        NPUA80809: [ 01.00 ]
+        NPEA00411: [ 01.00 ]
+    Author: "Score"
+    Notes: "Disables the camera motion blur for a sharper image."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006FF3EC, 0x4E800020 ]
+  "Skip Legal Screens":
+    Games:
+      "Starhawk":
+        NPUA80809: [ 01.00 ]
+        NPEA00411: [ 01.00 ]
+    Author: "Score"
+    Notes: "Jumps straight past the startup legal and logo screens to the menu."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x01023750, 0x0001 ]
+  "Fix Crash on Exit":
+    Games:
+      "Starhawk":
+        NPUA80809: [ 01.00 ]
+        NPEA00411: [ 01.00 ]
+    Author: "Score"
+    Notes: "Lets the game close cleanly instead of hanging the emulator when you quit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x009BB49C, 0x4BFFFFA4 ]
+      - [ be32, 0x009BB4B8, 0x4BFFFF88 ]
+
+PPU-2242d37be406db2a8200a8259afd5b9ffe6db996:
+  "Bypass Online Pass":
+    Games:
+      "Starhawk":
+        NPUA80811: [ 01.00 ]
+        NPEA00382: [ 01.00 ]
+    Author: "Score"
+    Notes: "Skips Starhawk's Online Pass / voucher prompt so you can connect to online multiplayer without redeeming a code."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x8851D0, 0x60000000 ]
+      - [ be32, 0x8851DC, 0x38800000 ]
+      - [ be32, 0x8851E0, 0x38A00001 ]
+      - [ be32, 0x887A14, 0x60000000 ]
+      - [ be32, 0x887A20, 0x38800000 ]
+      - [ be32, 0x887A24, 0x38A00001 ]
+  "Unlock FPS":
+    Games:
+      "Starhawk":
+        NPUA80811: [ 01.00 ]
+        NPEA00382: [ 01.00 ]
+    Author: "Score"
+    Notes: "Removes the stock 40fps cap."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x01014BC0, 0x447A0000 ]
+  "Disable Motion Blur":
+    Games:
+      "Starhawk":
+        NPUA80811: [ 01.00 ]
+        NPEA00382: [ 01.00 ]
+    Author: "Score"
+    Notes: "Disables the camera motion blur for a sharper image."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x006FEF5C, 0x4E800020 ]
+  "Skip Legal Screens":
+    Games:
+      "Starhawk":
+        NPUA80811: [ 01.00 ]
+        NPEA00382: [ 01.00 ]
+    Author: "Score"
+    Notes: "Jumps straight past the startup legal and logo screens to the menu."
+    Patch Version: 1.0
+    Patch:
+      - [ be16, 0x01023750, 0x0001 ]
+  "Fix Crash on Exit":
+    Games:
+      "Starhawk":
+        NPUA80811: [ 01.00 ]
+        NPEA00382: [ 01.00 ]
+    Author: "Score"
+    Notes: "Lets the game close cleanly instead of hanging the emulator when you quit."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x009BB00C, 0x4BFFFFA4 ]
+      - [ be32, 0x009BB028, 0x4BFFFF88 ]
+
 PPU-ef6211c404f5dc3730dac42900aff0661860e34c:
   "Unlock FPS":
     Games:
