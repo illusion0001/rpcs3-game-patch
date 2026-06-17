@@ -10487,6 +10487,140 @@ PPU-43e618448eed82aa96856338d072f1e4978c36a8:
     Patch:
       - [ load, *gt6_devlop_122 ]
 
+
+PPU-455eb1752a4ec0f104df4f0703237c23b3217a2d:
+  "Looser Chase Camera":
+    Games:
+      "Gran Turismo 6":
+        NPEA00502: [ 01.05 ]
+    Author: "Edo"
+    Notes: "Tweaks the chase camera to be a little less static"
+    Configurable Values:
+      "Spring Damper":
+        Type: double_range
+        Value: 90.0
+        Min: 0.0
+        Max: 300.0
+      "Max Angle":
+        Type: double_range
+        Value: 35.0
+        Min: 0.0
+        Max: 100.0
+    Patch Version: 1.2
+    Patch:
+      - [be32, 0x002C7DCC, 0x60000000]
+      - [be32, 0x002C7DE4, 0x60000000] 
+      - [be32, 0x002C8598, 0x60000000]
+      - [be32, 0x002C85A4, 0x60000000]
+      - [be32, 0x01633BA0, 0x41F00000]
+      - [bef32, 0x01633BA4, "Spring Damper"]
+      - [be32, 0x01633BA8, 0x43480000]
+      - [be32, 0x01633BAC, 0x00000000]
+      - [be32, 0x01633BB0, 0x41200000]
+      - [bef32, 0x01633BB4, "Max Angle"]
+      - [be32, 0x01633BB8, 0x41A00000]
+      - [be32, 0x01633BBC, 0x00000000]
+
+
+PPU-638ef307e2b35d593f599efec0dc0c37059a984b:
+  "Looser Chase Camera":
+    Games:
+      "Gran Turismo 6":
+        BCES01893: [ 01.22 ]
+    Author: "Edo"
+    Notes: "Tweaks the chase camera to be a little less static. Vanilla values are 300/30"
+    Configurable Values:
+      "Spring Damper":
+        Type: double_range
+        Value: 90.0
+        Min: 0.0
+        Max: 300.0
+      "Max Angle":
+        Type: double_range
+        Value: 35.0
+        Min: 0.0
+        Max: 100.0
+    Patch Version: 1.2
+    Patch:
+      - [be32, 0x002F6B80, 0x60000000]
+      - [be32, 0x002F6B84, 0x60000000] 
+      - [be32, 0x002F71B0, 0x60000000]
+      - [be32, 0x002F71B8, 0x60000000]
+      - [be32, 0x016DDFF0, 0x41F00000]
+      - [bef32, 0x016DDFF4, "Spring Damper"]
+      - [be32, 0x016DDFF8, 0x43480000]
+      - [be32, 0x016DDFFC, 0x00000000]
+      - [be32, 0x016DE000, 0x41200000]
+      - [bef32, 0x016DE004, "Max Angle"]
+      - [be32, 0x016DE008, 0x41A00000]
+      - [be32, 0x016DE00C, 0x00000000]
+
+PPU-6ac472e1f334f54ec4753cde9e8e1515bfab4d17:
+  "Looser Chase Camera":
+    Games:
+      "Gran Turismo 6":
+        BCUS98296: [ 01.22 ]
+    Author: "Edo"
+    Notes: "Tweaks the chase camera to be a little less static. Vanilla values are 300/30"
+    Configurable Values:
+      "Spring Damper":
+        Type: double_range
+        Value: 90.0
+        Min: 0.0
+        Max: 300.0
+      "Max Angle":
+        Type: double_range
+        Value: 35.0
+        Min: 0.0
+        Max: 100.0
+    Patch Version: 1.2
+    Patch:
+      - [be32, 0x002F6B80, 0x60000000]
+      - [be32, 0x002F6B84, 0x60000000] 
+      - [be32, 0x002F71B0, 0x60000000]
+      - [be32, 0x002F71B8, 0x60000000]
+      - [be32, 0x016DDFF0, 0x41F00000]
+      - [bef32, 0x016DDFF4, "Spring Damper"]
+      - [be32, 0x016DDFF8, 0x43480000]
+      - [be32, 0x016DDFFC, 0x00000000]
+      - [be32, 0x016DE000, 0x41200000]
+      - [bef32, 0x016DE004, "Max Angle"]
+      - [be32, 0x016DE008, 0x41A00000]
+      - [be32, 0x016DE00C, 0x00000000]
+
+PPU-d93a41467fce046bfbfb9648faee9e4e7963518d:
+  "Looser Chase Camera":
+    Games:
+      "Gran Turismo 6":
+        BCUS98296: [ 01.05 ]
+    Author: "Edo"
+    Notes: "Tweaks the chase camera to be a little less static. Vanilla values are 300/30"
+    Configurable Values:
+      "Spring Damper":
+        Type: double_range
+        Value: 90.0
+        Min: 0.0
+        Max: 300.0
+      "Max Angle":
+        Type: double_range
+        Value: 35.0
+        Min: 0.0
+        Max: 100.0
+    Patch Version: 1.2
+    Patch:
+      - [be32, 0x002C7DCC, 0x60000000]
+      - [be32, 0x002C7DE4, 0x60000000] 
+      - [be32, 0x002C8598, 0x60000000]
+      - [be32, 0x002C85A4, 0x60000000]
+      - [be32, 0x01633BA0, 0x41F00000]
+      - [bef32, 0x01633BA4, "Spring Damper"]
+      - [be32, 0x01633BA8, 0x43480000]
+      - [be32, 0x01633BAC, 0x00000000]
+      - [be32, 0x01633BB0, 0x41200000]
+      - [bef32, 0x01633BB4, "Max Angle"]
+      - [be32, 0x01633BB8, 0x41A00000]
+      - [be32, 0x01633BBC, 0x00000000]
+
 Anchors:
   gthd_ar_notes: &gthd_ar_notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings."
@@ -18364,6 +18498,18 @@ PPU-63351b8a10593b134ccfa1272d310e52254c2a92:
     Patch:
       - [ be32, 0x00022d70, 0x60000000 ]
       - [ be32, 0x00022960, 0x60000000 ]
+
+PPU-416b112b3bfd5203bc5871e06d85dbc27dd11764:
+  "60 FPS":
+    Games:
+      "Siren Blood Curse":
+        BCES00294: [ 01.00 ]
+    Author: "Esppiral, illusion, surge4315"
+    Notes: *sirenbc_60fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00022988, 0x60000000 ]
+      - [ be32, 0x00022578, 0x60000000 ]
 
 Anchors:
   ratchet_trilogy_ar_notes: &ratchet_trilogy_ar_notes
