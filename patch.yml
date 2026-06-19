@@ -26282,7 +26282,7 @@ PPU-cfa4d1b380b8ebfa5acd59fa9378c50e3059865c:
         BLES00146: [ 01.00 ]
         BLUS30065: [ 01.00 ]
     Author: "illusion, tronuo"
-    Notes: 
+    Notes: Cutscenes in-engine still play at 30FPS.
     Patch Version: 1.1
     Patch:
       - [ byte, 0x005b4ebf, 0x01 ]
