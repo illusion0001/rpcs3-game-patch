@@ -24473,6 +24473,28 @@ PPU-04d55e4c1fd97c0b19d80ed39f302ca67aee7d25:
       - [be32, 0x0105b738, 0x4bfffe65] #Roster "fix"
       - [be32, 0x0020bc64, 0x48000115] #Tuner "fix"
 
+PPU-65d3cdcc32a699c43b02ccd1b4f78a55d0e28606:
+ "Unlock FPS":
+    Games:
+      "PAC-MAN™ and the Ghostly Adventures":
+        NPUB31290: [ 01.00 ]
+    Author: "Jao"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x00058B44, 0x38600001]
+
+PPU-9316a5603150cc230fb1ab7590423d60bb6c9796:
+  "Unlock FPS":
+    Games:
+      "PAC-MAN™ and the Ghostly Adventures 2":
+        NPUB31535: [ 01.00 ]
+    Author: "Jao"
+    Notes: ""
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00059ad4, 0x38600001 ]
+
 PPU-a8e5b11d3fdd988f4a66e638302ff267d3a495a2:
   "60 FPS":
     Games:
