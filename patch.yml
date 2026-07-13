@@ -25319,6 +25319,18 @@ PPU-46eeb0ddb1a94aa133b472325bfdd094b7c7f2c1:
       - [ be32, 0x00b4bb70, 0x60000000 ]
       - [ be32, 0x00b4bb84, 0x60000000 ]
 
+PPU-e3bc6eb731c01176f772591fb1a82b7d2e6dd74b:
+  "Unlock FPS":
+    Games:
+      "Resident Evil: Revelations":
+        NPEB01187: [ 01.01 ]
+    Author: "Jao"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00b732c0, 0x60000000 ]
+      - [ be32, 0x00b732d4, 0x60000000 ]
+
 PPU-90b8a54ae1e6c47727ce80b310d531a5a1386e1d:
   "Unlock FPS":
     Games:
