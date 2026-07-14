@@ -13501,13 +13501,6 @@ Anchors:
     - [ be16, 0x006af0fa, 0x0001 ]
     - [ be16, 0x006af11e, 0x0001 ]
 
-  HMPDF2_FPS_JP: &HMPDF2_FPS_JP
-    - [ bef32, 0x00041f40, 1 ]
-    - [ be16, 0x006a48f6, 0x0001 ]
-    - [ be16, 0x006a4916, 0x0001 ]
-    - [ be16, 0x006a493a, 0x0001 ]
-    - [ be16, 0x006a495e, 0x0001 ]
-
   HMPDF2_FPS_Notes: &HMPDF2_FPS_Notes
     "Patch accelerates some game effects by 2x, and breaks some effects completely. Does not affect playability."
 
@@ -13567,35 +13560,18 @@ PPU-c3291f5919ca147ac854de10f7436f4ad494233f:
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
     Patch:
-      - [ load, *HMPDF2_FPS_JP ]
-
-PPU-058cf39c07fd13f100c1f6dc40a0ead9bf3ad51b:
-  "60 FPS":
-    Games:
-      "Hatsune Miku: Project Diva F 2nd":
-        BLJM61079: [ 01.01 ]
-    Author: "Brolijah"
-    Notes: *HMPDF2_FPS_Notes
-    Patch Version: 1.0
-    Patch:
-      - [ load, *HMPDF2_FPS_JP ]
-
-PPU-8fc9f26ed77cc9237db0e6348dcf9d6c451b6220:
-  "60 FPS":
-    Games:
-      "Hatsune Miku: Project Diva F 2nd":
-        BLJM61079: [ 01.02 ]
-    Author: "Brolijah"
-    Notes: *HMPDF2_FPS_Notes
-    Patch Version: 1.0
-    Patch:
-      - [ load, *HMPDF2_FPS_JP ]
+      - [ bef32, 0x00041f40, 1 ]
+      - [ be16, 0x006a48f6, 0x0001 ]
+      - [ be16, 0x006a4916, 0x0001 ]
+      - [ be16, 0x006a493a, 0x0001 ]
+      - [ be16, 0x006a495e, 0x0001 ]
 
 PPU-311fcd98af6adc5e64e6a833eb959f43b0976193:
   "60 FPS":
     Games:
       "Hatsune Miku: Project Diva F 2nd":
-        NPJB00435: [ 01.02 ]
+        BLJM61079: [ 01.01 ]
+        NPJB00435: [ 01.01 ]
     Author: "Brolijah"
     Notes: *HMPDF2_FPS_Notes
     Patch Version: 1.0
@@ -16633,6 +16609,21 @@ PPU-7bf98dfa97ff84d8db49fcf198e2ecb9d9975ac6: # bin\s4_g.self
       - [ be32, 0x001ec298, 0x38c00000 ]
 
 Anchors:
+  ms3_ar_notes: &ms3_ar_notes
+    "Requires \"Stretch To Display Area\" checked in the GPU settings. UI elements are stretched."
+  ms3_ar_configurable_values: &ms3_ar_configurable_values
+    "Aspect Ratio":
+      Type: double_enum
+      Value: &32_9_value 3.555555555555556
+      Allowed Values:
+        "32:9": *32_9_value
+        "21:9 (3840x1600)": 2.4
+        "21:9 (3440x1440)": 2.388888888888889
+        "21:9 (2560x1080)": 2.37037037037037
+        "16:10": 1.6
+        "4:3": 1.333333333333333
+        "5:4": 1.25
+
   ms3_psn_dsr: &ms3_psn_dsr
     - [ be32, 0x00469cf0, 0x38600000 ] # li r3 0x0
 
@@ -16766,6 +16757,16 @@ PPU-c3a2c4075b9ff3c2b142c2df606bb1663c097d5b:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3_100_mlaa ]
+  "Ultrawide":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES00484: [ 01.00 ]
+    Author: "Scirvir"
+    Notes:
+    Configurable Values: *ms3_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x5f08b0, "Aspect Ratio" ]
 
 PPU-69a95ded717d716cdcd77ed0b51fa90bf1cb4fa3:
   "Skip Intro":
@@ -16952,6 +16953,16 @@ PPU-41644f9f5fda72efc62e7146620db9679969bff6:
     Patch Version: 1.0
     Patch:
       - [ load, *ms3_106_intro ]
+  "Ultrawide":
+    Games:
+      "Motorstorm: Apocalypse":
+        BCES00484: [ 01.06 ]
+    Author: "Scirvir"
+    Notes:
+    Configurable Values: *ms3_ar_configurable_values
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x5be68c, "Aspect Ratio" ]
 
 PPU-f5136a68b1293dd7341878005674f05ffa5ff16a:
   "Unlock FPS":
