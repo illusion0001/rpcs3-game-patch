@@ -2814,7 +2814,7 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       - [ be32, 0x00663680, 0x60000000 ]
   "Enable Log":
     Games:
-      "Need for Speed Carbon":
+      "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
     Author: "opcode"
     Notes: "Enables more verbose logging"
@@ -2833,13 +2833,22 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       - [ byte, 0x10188A90, 0x01 ]
   "Disable SSL":
     Games:
-      "Need for Speed Carbon":
+      "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
     Author: "opcode"
     Notes: "Disable SSL reverting to plaintext communication for custom servers"
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00639204, 0x38800511 ]
+  "Enable Collector's Edition":
+    Games:
+      "Need for Speed: Carbon":
+        BLUS30016: [ 01.00 ]
+    Author: "Nicknine"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x10188A8C, 0x01 ]
 
 PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
   "Disable Color Correction":
@@ -2871,6 +2880,15 @@ PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
     Patch Version: 1.0
     Patch:
       - [ byte, 0x10188A90, 0x01 ]
+  "Enable Collector's Edition":
+    Games:
+      "Need for Speed: Carbon":
+        BLES00020: [ 01.00 ]
+    Author: "Nicknine"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x10188A8C, 0x01 ]
 
 Anchors:
   NieR_FPS_Notes: &NieR_FPS_Notes
