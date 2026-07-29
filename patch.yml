@@ -2845,7 +2845,7 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
     Author: "Nicknine"
-    Notes:
+    Notes: Enables the ability to use the unreleased Collector's Edition content (adds new cars, tracks and challenges). New cars can only be used on a new save file.
     Patch Version: 1.0
     Patch:
       - [ byte, 0x10188A8C, 0x01 ]
@@ -2885,7 +2885,7 @@ PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
       "Need for Speed: Carbon":
         BLES00020: [ 01.00 ]
     Author: "Nicknine"
-    Notes:
+    Notes: Enables the ability to use the unreleased Collector's Edition content (adds new cars, tracks and challenges). New cars can only be used on a new save file.
     Patch Version: 1.0
     Patch:
       - [ byte, 0x10188A8C, 0x01 ]
