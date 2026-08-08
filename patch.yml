@@ -1400,284 +1400,311 @@ PPU-7775c39a8eade714caca6c95cf07c9d9ca095047:
       - [ be32, 0x1C70A4, 0x48000004 ]
 
 PPU-13e4d424f118d4305110d0218be9e8fa3fa27a87:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: II HD":
         BCES00791: [ 01.01 ]
         NPEA00256: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.2
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x002b8cd0, 0x482549b0 ] # b 0x0050d680
-      - [ be32, 0x0050d680, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x0050d684, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x0050d688, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x0050d68c, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x0050d690, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x0050d694, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x0050d698, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x0050d69c, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x0050d6a0, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x0050d6a4, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x0050d6a8, 0x419e0044 ] # beq cr7,0x0050d6ec
-      - [ be32, 0x0050d6ac, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x0050d6b0, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x0050d6b4, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x0050d6b8, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x0050d6bc, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x0050d6c0, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x0050d6c4, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x0050d6c8, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x0050d6cc, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x0050d6d0, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x0050d6d4, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x0050d6d8, 0xec005824 ] # fdivs f0,f0,f11
-      - [ be32, 0x0050d6dc, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6e0, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6e4, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6e8, 0x4bdab5ec ] # b 0x002b8cd4
-      - [ be32, 0x0050d6ec, 0xec1f0024 ] # fdivs f0,f31,f0
-      - [ be32, 0x0050d6f0, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6f4, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6f8, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6fc, 0x4bdab5d8 ] # b 0x002b8cd4
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x002b8cd0, 0x48254f78 ] # b 0x0050dc48            hook the fdivs -> big cave (alloc-scratch build)
+      - [ be32, 0x0050dc48, 0x3d800f00 ] # lis r12,0x0f00          scratch base = patch-ALLOCATED RW page 0x0f000000 (game can't stomp it)
+      - [ be32, 0x0050dc4c, 0x3d400067 ] # lis r10,0x67
+      - [ be32, 0x0050dc50, 0xa00a0bf2 ] # lhz r0,0x0bf2(r10)      r0 = C16 of frame counter [0x670bf0]
+      - [ be32, 0x0050dc54, 0xa14c0004 ] # lhz r10,4(r12)          r10 = last_C16 [0x0f000004]
+      - [ be32, 0x0050dc58, 0xa16c0006 ] # lhz r11,6(r12)          r11 = cached dec [0x0f000006]
+      - [ be32, 0x0050dc5c, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x0050dc60, 0x419e004c ] # beq cr7,0x0050dcac      same frame -> APPLY (cached dec)
+      - [ be32, 0x0050dc64, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x0050dc68, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x0050dc6c, 0x816c0000 ] # lwz r11,0(r12)          r11 = next_step_now [0x0f000000]
+      - [ be32, 0x0050dc70, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x0050dc74, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x0050dc78, 0x419d001c ] # bgt cr7,0x0050dc94      -> lag: resync + NATIVE dt (PS3-like delta compensation)
+      - [ be32, 0x0050dc7c, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x0050dc80, 0x419c0020 ] # blt cr7,0x0050dca0      no -> skip
+      - [ be32, 0x0050dc84, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x0050dc88, 0x914c0000 ] # stw r10,0(r12)
+      - [ be32, 0x0050dc8c, 0x39600001 ] # li r11,1                dec = 1 (feed PS3 dt)
+      - [ be32, 0x0050dc90, 0x48000014 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dc94, 0x906c0000 ] # stw r3,0(r12)           lag: resync
+      - [ be32, 0x0050dc98, 0x39600003 ] # li r11,3                dec = 3 (feed NATIVE dt this frame)
+      - [ be32, 0x0050dc9c, 0x48000008 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dca0, 0x39600000 ] # li r11,0                skip: dec = 0 (feed tiny)
+      - [ be32, 0x0050dca4, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x0050dca8, 0x916c0004 ] # stw r11,4(r12)
+      - [ be32, 0x0050dcac, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x0050dcb0, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x0050dcb4, 0xec1f0024 ] # fdivs f0,f31,f0         f0 = NATIVE dt (original instruction)
+      - [ be32, 0x0050dcb8, 0x419e0020 ] # beq cr7,0x0050dcd8      lag -> keep native dt
+      - [ be32, 0x0050dcbc, 0x3c003c88 ] # lis r0,0x3c88           build PS3 dt in REGS
+      - [ be32, 0x0050dcc0, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x0050dcc4, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x0050dcc8, 0xc001fff8 ] # lfs f0,-8(r1)           f0 = PS3 dt
+      - [ be32, 0x0050dccc, 0x4082000c ] # bne cr0,0x0050dcd8      step -> PS3 dt
+      - [ be32, 0x0050dcd0, 0xec000032 ] # fmuls f0,f0,f0          skip: const^2
+      - [ be32, 0x0050dcd4, 0xec000032 ] # fmuls f0,f0,f0          skip: const^4 (tiny, not 0)
+      - [ be32, 0x0050dcd8, 0x4bdaaffc ] # b 0x002b8cd4            native code writes frametime from f0
+      - [ alloc, 0x0f000003, 0x1000 ] # 4KB RW scratch page at 0x0f000000 (zeroized, VM-reserved; game can't stomp it)
 
 PPU-9cd8d28963ebc29b59c79819cb56f3d92e857a37:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: II HD":
         BCUS98229: [ 01.01 ]
         NPUA80491: [ 01.01 ]
         NPHA80105: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.2
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x002b7fb0, 0x482556d0 ] # b 0x0050d680
-      - [ be32, 0x0050d680, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x0050d684, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x0050d688, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x0050d68c, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x0050d690, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x0050d694, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x0050d698, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x0050d69c, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x0050d6a0, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x0050d6a4, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x0050d6a8, 0x419e0044 ] # beq cr7,0x0050d6ec
-      - [ be32, 0x0050d6ac, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x0050d6b0, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x0050d6b4, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x0050d6b8, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x0050d6bc, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x0050d6c0, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x0050d6c4, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x0050d6c8, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x0050d6cc, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x0050d6d0, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x0050d6d4, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x0050d6d8, 0xec005824 ] # fdivs f0,f0,f11
-      - [ be32, 0x0050d6dc, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6e0, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6e4, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6e8, 0x4bdaa8cc ] # b 0x002b7fb4
-      - [ be32, 0x0050d6ec, 0xec0b0024 ] # fdivs f0,f11,f0
-      - [ be32, 0x0050d6f0, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6f4, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6f8, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6fc, 0x4bdaa8b8 ] # b 0x002b7fb4
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x002b7fb0, 0x48255c98 ] # b 0x0050dc48            hook the fdivs -> big cave (split-store build)
+      - [ be32, 0x0050dc48, 0x3d800f00 ] # lis r12,0x0f00          scratch base = patch-ALLOCATED RW page 0x0f000000 (reserved in VM; game can't stomp, PPU can write)
+      - [ be32, 0x0050dc4c, 0x3d403307 ] # lis r10,0x3307
+      - [ be32, 0x0050dc50, 0xa00ab132 ] # lhz r0,-0x4ece(r10)     r0 = C16 of frame counter [0x3306b130] (ticks through loads)
+      - [ be32, 0x0050dc54, 0xa14c0004 ] # lhz r10,4(r12)          r10 = last_C16 [0x0f000004]
+      - [ be32, 0x0050dc58, 0xa16c0006 ] # lhz r11,6(r12)          r11 = cached dec [0x0f000006]
+      - [ be32, 0x0050dc5c, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x0050dc60, 0x419e004c ] # beq cr7,0x0050dcac      same frame -> APPLY (cached dec)
+      - [ be32, 0x0050dc64, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x0050dc68, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x0050dc6c, 0x816c0000 ] # lwz r11,0(r12)          r11 = next_step_now [0x0f000000]
+      - [ be32, 0x0050dc70, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x0050dc74, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x0050dc78, 0x419d001c ] # bgt cr7,0x0050dc94      -> lag: resync + NATIVE logic dt (PS3-like delta compensation)
+      - [ be32, 0x0050dc7c, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x0050dc80, 0x419c0020 ] # blt cr7,0x0050dca0      no -> skip
+      - [ be32, 0x0050dc84, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x0050dc88, 0x914c0000 ] # stw r10,0(r12)
+      - [ be32, 0x0050dc8c, 0x39600001 ] # li r11,1                dec = 1 (logic gets PS3 dt)
+      - [ be32, 0x0050dc90, 0x48000014 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dc94, 0x906c0000 ] # stw r3,0(r12)           lag: resync
+      - [ be32, 0x0050dc98, 0x39600003 ] # li r11,3                dec = 3 (logic gets NATIVE dt)
+      - [ be32, 0x0050dc9c, 0x48000008 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dca0, 0x39600000 ] # li r11,0                skip: dec = 0 (logic gets tiny)
+      - [ be32, 0x0050dca4, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x0050dca8, 0x916c0004 ] # stw r11,4(r12)
+      - [ be32, 0x0050dcac, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x0050dcb0, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x0050dcb4, 0xec0b0024 ] # fdivs f0,f11,f0         f0 = NATIVE dt (original instruction)
+      - [ be32, 0x0050dcb8, 0x419e0020 ] # beq cr7,0x0050dcd8      lag -> keep native dt
+      - [ be32, 0x0050dcbc, 0x3c003c88 ] # lis r0,0x3c88           build PS3 dt in REGS (be32 init into alloc page doesn't stick on this RPCS3 build)
+      - [ be32, 0x0050dcc0, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x0050dcc4, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x0050dcc8, 0xc001fff8 ] # lfs f0,-8(r1)           f0 = PS3 dt
+      - [ be32, 0x0050dccc, 0x4082000c ] # bne cr0,0x0050dcd8      step -> PS3 dt
+      - [ be32, 0x0050dcd0, 0xec000032 ] # fmuls f0,f0,f0          skip: const^2
+      - [ be32, 0x0050dcd4, 0xec000032 ] # fmuls f0,f0,f0          skip: const^4 (tiny, not 0)
+      - [ be32, 0x0050dcd8, 0x4bdaa2dc ] # b 0x002b7fb4            native tail stores f0 to BOTH [r8+8] and [r8+0xc] (EU-equivalent)
+      - [ alloc, 0x0f000003, 0x1000 ] # 4KB RW scratch page at 0x0f000000 (zeroized, VM-reserved: game can't stomp it; state only - const is built in regs)
 
 PPU-fe9438693b989edd1a04f973e156cf185e16d13d:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: II HD":
         BLJM60200: [ 01.01 ]
         NPJA00062: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.2
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x002b815c, 0x48255524 ] # b 0x0050d680
-      - [ be32, 0x0050d680, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x0050d684, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x0050d688, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x0050d68c, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x0050d690, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x0050d694, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x0050d698, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x0050d69c, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x0050d6a0, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x0050d6a4, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x0050d6a8, 0x419e0044 ] # beq cr7,0x0050d6ec
-      - [ be32, 0x0050d6ac, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x0050d6b0, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x0050d6b4, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x0050d6b8, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x0050d6bc, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x0050d6c0, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x0050d6c4, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x0050d6c8, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x0050d6cc, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x0050d6d0, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x0050d6d4, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x0050d6d8, 0xec005824 ] # fdivs f0,f0,f11
-      - [ be32, 0x0050d6dc, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6e0, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6e4, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6e8, 0x4bdaaa78 ] # b 0x002b8160
-      - [ be32, 0x0050d6ec, 0xec0b0024 ] # fdivs f0,f11,f0
-      - [ be32, 0x0050d6f0, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x0050d6f4, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x0050d6f8, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x0050d6fc, 0x4bdaaa64 ] # b 0x002b8160
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x002b815c, 0x48255aec ] # b 0x0050dc48            hook the fdivs -> big cave (split-store build)
+      - [ be32, 0x0050dc48, 0x3d800f00 ] # lis r12,0x0f00          scratch base = patch-ALLOCATED RW page 0x0f000000 (reserved in VM; game can't stomp, PPU can write)
+      - [ be32, 0x0050dc4c, 0x3d403307 ] # lis r10,0x3307
+      - [ be32, 0x0050dc50, 0xa00a9f0e ] # lhz r0,-0x60f2(r10)     r0 = C16 of frame counter [0x33069f0c] (ticks through loads)
+      - [ be32, 0x0050dc54, 0xa14c0004 ] # lhz r10,4(r12)          r10 = last_C16 [0x0f000004]
+      - [ be32, 0x0050dc58, 0xa16c0006 ] # lhz r11,6(r12)          r11 = cached dec [0x0f000006]
+      - [ be32, 0x0050dc5c, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x0050dc60, 0x419e004c ] # beq cr7,0x0050dcac      same frame -> APPLY (cached dec)
+      - [ be32, 0x0050dc64, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x0050dc68, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x0050dc6c, 0x816c0000 ] # lwz r11,0(r12)          r11 = next_step_now [0x0f000000]
+      - [ be32, 0x0050dc70, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x0050dc74, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x0050dc78, 0x419d001c ] # bgt cr7,0x0050dc94      -> lag: resync + NATIVE logic dt (PS3-like delta compensation)
+      - [ be32, 0x0050dc7c, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x0050dc80, 0x419c0020 ] # blt cr7,0x0050dca0      no -> skip
+      - [ be32, 0x0050dc84, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x0050dc88, 0x914c0000 ] # stw r10,0(r12)
+      - [ be32, 0x0050dc8c, 0x39600001 ] # li r11,1                dec = 1 (logic gets PS3 dt)
+      - [ be32, 0x0050dc90, 0x48000014 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dc94, 0x906c0000 ] # stw r3,0(r12)           lag: resync
+      - [ be32, 0x0050dc98, 0x39600003 ] # li r11,3                dec = 3 (logic gets NATIVE dt)
+      - [ be32, 0x0050dc9c, 0x48000008 ] # b 0x0050dca4            -> pack
+      - [ be32, 0x0050dca0, 0x39600000 ] # li r11,0                skip: dec = 0 (logic gets tiny)
+      - [ be32, 0x0050dca4, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x0050dca8, 0x916c0004 ] # stw r11,4(r12)
+      - [ be32, 0x0050dcac, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x0050dcb0, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x0050dcb4, 0xec0b0024 ] # fdivs f0,f11,f0         f0 = NATIVE dt (original instruction)
+      - [ be32, 0x0050dcb8, 0x419e0020 ] # beq cr7,0x0050dcd8      lag -> keep native dt
+      - [ be32, 0x0050dcbc, 0x3c003c88 ] # lis r0,0x3c88           build PS3 dt in REGS (be32 init into alloc page doesn't stick on this RPCS3 build)
+      - [ be32, 0x0050dcc0, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x0050dcc4, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x0050dcc8, 0xc001fff8 ] # lfs f0,-8(r1)           f0 = PS3 dt
+      - [ be32, 0x0050dccc, 0x4082000c ] # bne cr0,0x0050dcd8      step -> PS3 dt
+      - [ be32, 0x0050dcd0, 0xec000032 ] # fmuls f0,f0,f0          skip: const^2
+      - [ be32, 0x0050dcd4, 0xec000032 ] # fmuls f0,f0,f0          skip: const^4 (tiny, not 0)
+      - [ be32, 0x0050dcd8, 0x4bdaa488 ] # b 0x002b8160            native tail stores f0 to BOTH [r8+8] and [r8+0xc] (EU-equivalent)
+      - [ alloc, 0x0f000003, 0x1000 ] # 4KB RW scratch page at 0x0f000000 (zeroized, VM-reserved: game can't stomp it; state only - const is built in regs)
 
 PPU-e8e29268437430a42b01ccbdea814560150bc037:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: HD":
         BCES00791: [ 01.01 ]
         NPEA00255: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.3
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
-      - [ be32, 0x001b6f6c, 0x48315a20 ] # b 0x004cc98c
-      - [ be32, 0x004cc98c, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x004cc990, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x004cc994, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x004cc998, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x004cc99c, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x004cc9a0, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x004cc9a4, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x004cc9a8, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x004cc9ac, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x004cc9b0, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x004cc9b4, 0x419e004c ] # beq cr7,0x004cca00
-      - [ be32, 0x004cc9b8, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x004cc9bc, 0x2f801458 ] # cmpwi cr7,r0,0x1458
-      - [ be32, 0x004cc9c0, 0x419d0040 ] # bgt cr7,0x004cca00
-      - [ be32, 0x004cc9c4, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x004cc9c8, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x004cc9cc, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x004cc9d0, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x004cc9d4, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x004cc9d8, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x004cc9dc, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x004cc9e0, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x004cc9e4, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x004cc9e8, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x004cc9ec, 0xec005824 ] # fdivs f0,f0,f11
-      - [ be32, 0x004cc9f0, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cc9f4, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cc9f8, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cc9fc, 0x4bcea574 ] # b 0x001b6f70
-      - [ be32, 0x004cca00, 0xec1f0024 ] # fdivs f0,f31,f0
-      - [ be32, 0x004cca04, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cca08, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cca0c, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cca10, 0x4bcea560 ] # b 0x001b6f70
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x001b6f6c, 0x48315aec ] # b 0x004cca58            hook (cave moved: 0x004cc98c sat on a string table)
+      - [ be32, 0x004cca58, 0x3d8000ab ] # lis r12,0xab            scratch base (0x00aad000 = -0x3000(r12))
+      - [ be32, 0x004cca5c, 0x3d400064 ] # lis r10,0x64
+      - [ be32, 0x004cca60, 0xa00a4bea ] # lhz r0,0x4bea(r10)      r0 = C16 of frame counter [0x644be8]
+      - [ be32, 0x004cca64, 0xa14cd004 ] # lhz r10,-0x2ffc(r12)    r10 = last_C16 [0x00aad004]
+      - [ be32, 0x004cca68, 0xa16cd006 ] # lhz r11,-0x2ffa(r12)    r11 = cached dec [0x00aad006]
+      - [ be32, 0x004cca6c, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x004cca70, 0x419e004c ] # beq cr7,0x004ccabc      same frame -> APPLY (cached dec)
+      - [ be32, 0x004cca74, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x004cca78, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x004cca7c, 0x816cd000 ] # lwz r11,-0x3000(r12)    r11 = next_step_now [0x00aad000]
+      - [ be32, 0x004cca80, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x004cca84, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x004cca88, 0x419d001c ] # bgt cr7,0x004ccaa4      -> lag: resync + NATIVE dt (PS3-like delta compensation)
+      - [ be32, 0x004cca8c, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x004cca90, 0x419c0020 ] # blt cr7,0x004ccab0      no -> skip
+      - [ be32, 0x004cca94, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x004cca98, 0x914cd000 ] # stw r10,-0x3000(r12)
+      - [ be32, 0x004cca9c, 0x39600001 ] # li r11,1                dec = 1 (feed PS3 dt)
+      - [ be32, 0x004ccaa0, 0x48000014 ] # b 0x004ccab4            -> pack
+      - [ be32, 0x004ccaa4, 0x906cd000 ] # stw r3,-0x3000(r12)     lag: resync
+      - [ be32, 0x004ccaa8, 0x39600003 ] # li r11,3                dec = 3 (feed NATIVE dt this frame)
+      - [ be32, 0x004ccaac, 0x48000008 ] # b 0x004ccab4            -> pack
+      - [ be32, 0x004ccab0, 0x39600000 ] # li r11,0                skip: dec = 0 (feed tiny)
+      - [ be32, 0x004ccab4, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x004ccab8, 0x916cd004 ] # stw r11,-0x2ffc(r12)
+      - [ be32, 0x004ccabc, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x004ccac0, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x004ccac4, 0xec1f0024 ] # fdivs f0,f31,f0         f0 = NATIVE dt (original instruction)
+      - [ be32, 0x004ccac8, 0x419e0020 ] # beq cr7,0x004ccae8      lag -> keep native dt (compensates like PS3)
+      - [ be32, 0x004ccacc, 0xec000032 ] # fmuls f0,f0,f0          native^2
+      - [ be32, 0x004ccad0, 0xec000032 ] # fmuls f0,f0,f0          native^4 (epsilon GROWS during load stalls -> loads can't starve)
+      - [ be32, 0x004ccad4, 0x41820014 ] # beq cr0,0x004ccae8      skip -> keep native^4 (tiny)
+      - [ be32, 0x004ccad8, 0x3c003c88 ] # lis r0,0x3c88           step -> build PS3 dt
+      - [ be32, 0x004ccadc, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x004ccae0, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x004ccae4, 0xc001fff8 ] # lfs f0,-8(r1)           f0 = PS3 dt
+      - [ be32, 0x004ccae8, 0x4bcea488 ] # b 0x001b6f70            native fmuls/stfs write [0x10]=f0, [0x14]=f0*scales
+      - [ be32, 0x00aad000, 0x00000000 ] # next_step_now (timebase/512)
+      - [ be32, 0x00aad004, 0x00000000 ] # word2: last_C16<<16 | cached dec
 
 PPU-645f0573d7438e37ddd231377adf9c1205e8a040:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: HD":
         BCUS98229: [ 01.01 ]
         NPUA80490: [ 01.01 ]
         NPHA80104: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.3
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
       - [ be32, 0x001b5664, 0x48317328 ] # b 0x004cc98c
-      - [ be32, 0x004cc98c, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x004cc990, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x004cc994, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x004cc998, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x004cc99c, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x004cc9a0, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x004cc9a4, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x004cc9a8, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x004cc9ac, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x004cc9b0, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x004cc9b4, 0x419e0050 ] # beq cr7,0x004cca04
-      - [ be32, 0x004cc9b8, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x004cc9bc, 0x2f801458 ] # cmpwi cr7,r0,0x1458
-      - [ be32, 0x004cc9c0, 0x419d0044 ] # bgt cr7,0x004cca04
-      - [ be32, 0x004cc9c4, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x004cc9c8, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x004cc9cc, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x004cc9d0, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x004cc9d4, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x004cc9d8, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x004cc9dc, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x004cc9e0, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x004cc9e4, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x004cc9e8, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x004cc9ec, 0xed805824 ] # fdivs f12,f0,f11
-      - [ be32, 0x004cc9f0, 0xc0080018 ] # lfs f0,0x18(r8)
-      - [ be32, 0x004cc9f4, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cc9f8, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cc9fc, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cca00, 0x4bce8c68 ] # b 0x001b5668
-      - [ be32, 0x004cca04, 0xc0080018 ] # lfs f0,0x18(r8)
-      - [ be32, 0x004cca08, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cca0c, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cca10, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cca14, 0x4bce8c54 ] # b 0x001b5668
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x004cc98c, 0x3d8000ab ] # lis r12,0xab            scratch base (0x00aad000 = -0x3000(r12))
+      - [ be32, 0x004cc990, 0x3d400055 ] # lis r10,0x55
+      - [ be32, 0x004cc994, 0xa00ac3ea ] # lhz r0,0xc3ea(r10)      r0 = C16 of frame counter [0x54c3e8]
+      - [ be32, 0x004cc998, 0xa14cd004 ] # lhz r10,-0x2ffc(r12)    r10 = last_C16 [0x00aad004]
+      - [ be32, 0x004cc99c, 0xa16cd006 ] # lhz r11,-0x2ffa(r12)    r11 = cached dec [0x00aad006]
+      - [ be32, 0x004cc9a0, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x004cc9a4, 0x419e004c ] # beq cr7,0x004cc9f0      same frame -> APPLY (cached dec)
+      - [ be32, 0x004cc9a8, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x004cc9ac, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x004cc9b0, 0x816cd000 ] # lwz r11,-0x3000(r12)    r11 = next_step_now [0x00aad000]
+      - [ be32, 0x004cc9b4, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x004cc9b8, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x004cc9bc, 0x419d001c ] # bgt cr7,0x004cc9d8      -> lag: resync + NATIVE dt (PS3-like delta compensation)
+      - [ be32, 0x004cc9c0, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x004cc9c4, 0x419c0020 ] # blt cr7,0x004cc9e4      no -> skip
+      - [ be32, 0x004cc9c8, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x004cc9cc, 0x914cd000 ] # stw r10,-0x3000(r12)
+      - [ be32, 0x004cc9d0, 0x39600001 ] # li r11,1                dec = 1 (feed PS3 dt)
+      - [ be32, 0x004cc9d4, 0x48000014 ] # b 0x004cc9e8            -> pack
+      - [ be32, 0x004cc9d8, 0x906cd000 ] # stw r3,-0x3000(r12)     lag: resync
+      - [ be32, 0x004cc9dc, 0x39600003 ] # li r11,3                dec = 3 (keep NATIVE f12 this frame)
+      - [ be32, 0x004cc9e0, 0x48000008 ] # b 0x004cc9e8            -> pack
+      - [ be32, 0x004cc9e4, 0x39600000 ] # li r11,0                skip: dec = 0 (feed tiny)
+      - [ be32, 0x004cc9e8, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x004cc9ec, 0x916cd004 ] # stw r11,-0x2ffc(r12)
+      - [ be32, 0x004cc9f0, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x004cc9f4, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x004cc9f8, 0x419e0024 ] # beq cr7,0x004cca1c      lag -> keep NATIVE f12 (compensates like PS3)
+      - [ be32, 0x004cc9fc, 0x40820010 ] # bne cr0,0x004cca0c      step -> build PS3 dt
+      - [ be32, 0x004cca00, 0xed8c0332 ] # fmuls f12,f12,f12       skip: native^2
+      - [ be32, 0x004cca04, 0xed8c0332 ] # fmuls f12,f12,f12       skip: native^4 (grows during load stalls -> loads can't starve)
+      - [ be32, 0x004cca08, 0x48000014 ] # b 0x004cca1c            -> done
+      - [ be32, 0x004cca0c, 0x3c003c88 ] # lis r0,0x3c88           step: build PS3 dt
+      - [ be32, 0x004cca10, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x004cca14, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x004cca18, 0xc181fff8 ] # lfs f12,-8(r1)          f12 = PS3 dt
+      - [ be32, 0x004cca1c, 0xc0080018 ] # lfs f0,0x18(r8)         original instruction (all paths)
+      - [ be32, 0x004cca20, 0x4bce8c48 ] # b 0x001b5668            game uses f12 as frametime
+      - [ be32, 0x00aad000, 0x00000000 ] # next_step_now (timebase/512)
+      - [ be32, 0x00aad004, 0x00000000 ] # word2: last_C16<<16 | cached dec
 
 PPU-7775c39a8eade714caca6c95cf07c9d9ca095047:
-  "Dynamic frame time timing":
+  "Native PS3 Timing":
     Games:
       "God of War: HD":
         BLJM60200: [ 01.01 ]
         NPJA00061: [ 01.01 ]
     Author: "Dobrido"
-    Notes: "Fixes game speedup at 60fps and above."
-    Patch Version: 1.3
+    Notes: "Restores exact PS3 behavior: forces the PS3 NTSC frametime (1/59.94) and caps logic at 59.94 steps/s, fixing RPCS3 overspeed while keeping frame-precise physics intact. Requires 'Vblank NTSC Fixup' enabled."
+    Patch Version: 2.0
     Patch:
       - [ be32, 0x001b5f00, 0x48316a8c ] # b 0x004cc98c
-      - [ be32, 0x004cc98c, 0xf821ff81 ] # stdu r1,-0x80(r1)
-      - [ be32, 0x004cc990, 0x7d400026 ] # mfcr r10
-      - [ be32, 0x004cc994, 0xf9410058 ] # std r10,0x58(r1)
-      - [ be32, 0x004cc998, 0x7c6c42e6 ] # mftb r3
-      - [ be32, 0x004cc99c, 0x7863ba42 ] # srdi r3,r3,9
-      - [ be32, 0x004cc9a0, 0x3d8000aa ] # lis r12,0xaa
-      - [ be32, 0x004cc9a4, 0x618cd000 ] # ori r12,r12,0xd000
-      - [ be32, 0x004cc9a8, 0x816c0000 ] # lwz r11,0(r12)
-      - [ be32, 0x004cc9ac, 0x906c0000 ] # stw r3,0(r12)
-      - [ be32, 0x004cc9b0, 0x2f8b0000 ] # cmpwi cr7,r11,0
-      - [ be32, 0x004cc9b4, 0x419e0050 ] # beq cr7,0x004cca04
-      - [ be32, 0x004cc9b8, 0x7c0b1850 ] # subf r0,r11,r3
-      - [ be32, 0x004cc9bc, 0x2f801458 ] # cmpwi cr7,r0,0x1458
-      - [ be32, 0x004cc9c0, 0x419d0044 ] # bgt cr7,0x004cca04
-      - [ be32, 0x004cc9c4, 0xf8010060 ] # std r0,0x60(r1)
-      - [ be32, 0x004cc9c8, 0xc8010060 ] # lfd f0,0x60(r1)
-      - [ be32, 0x004cc9cc, 0xfc00069c ] # fcfid f0,f0
-      - [ be32, 0x004cc9d0, 0xfc000018 ] # frsp f0,f0
-      - [ be32, 0x004cc9d4, 0x3d600002 ] # lis r11,0x2
-      - [ be32, 0x004cc9d8, 0x616b625a ] # ori r11,r11,0x625a
-      - [ be32, 0x004cc9dc, 0xf9610068 ] # std r11,0x68(r1)
-      - [ be32, 0x004cc9e0, 0xc9610068 ] # lfd f11,0x68(r1)
-      - [ be32, 0x004cc9e4, 0xfd605e9c ] # fcfid f11,f11
-      - [ be32, 0x004cc9e8, 0xfd605818 ] # frsp f11,f11
-      - [ be32, 0x004cc9ec, 0xed805824 ] # fdivs f12,f0,f11
-      - [ be32, 0x004cc9f0, 0xc0080018 ] # lfs f0,0x18(r8)
-      - [ be32, 0x004cc9f4, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cc9f8, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cc9fc, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cca00, 0x4bce9504 ] # b 0x001b5f04
-      - [ be32, 0x004cca04, 0xc0080018 ] # lfs f0,0x18(r8)
-      - [ be32, 0x004cca08, 0xe9410058 ] # ld r10,0x58(r1)
-      - [ be32, 0x004cca0c, 0x7d4ff120 ] # mtcrf 0xff,r10
-      - [ be32, 0x004cca10, 0x38210080 ] # addi r1,r1,0x80
-      - [ be32, 0x004cca14, 0x4bce94f0 ] # b 0x001b5f04
-      - [ be32, 0x00aad000, 0x00000000 ] # previous timebase/512 sample
+      - [ be32, 0x004cc98c, 0x3d8000ab ] # lis r12,0xab            scratch base (0x00aad000 = -0x3000(r12))
+      - [ be32, 0x004cc990, 0x3d400059 ] # lis r10,0x59
+      - [ be32, 0x004cc994, 0xa00aca6a ] # lhz r0,0xca6a(r10)      r0 = C16 of frame counter [0x58ca68]
+      - [ be32, 0x004cc998, 0xa14cd004 ] # lhz r10,-0x2ffc(r12)    r10 = last_C16 [0x00aad004]
+      - [ be32, 0x004cc99c, 0xa16cd006 ] # lhz r11,-0x2ffa(r12)    r11 = cached dec [0x00aad006]
+      - [ be32, 0x004cc9a0, 0x7f805000 ] # cmpw cr7,r0,r10
+      - [ be32, 0x004cc9a4, 0x419e004c ] # beq cr7,0x004cc9f0      same frame -> APPLY (cached dec)
+      - [ be32, 0x004cc9a8, 0x7c6c42e6 ] # mftb r3                 (new frame)
+      - [ be32, 0x004cc9ac, 0x7863ba42 ] # srdi r3,r3,9            r3 = now/512
+      - [ be32, 0x004cc9b0, 0x816cd000 ] # lwz r11,-0x3000(r12)    r11 = next_step_now [0x00aad000]
+      - [ be32, 0x004cc9b4, 0x7d4b1850 ] # subf r10,r11,r3         elapsed = now - next_step_now
+      - [ be32, 0x004cc9b8, 0x2f8a0a32 ] # cmpwi cr7,r10,0xa32     lag threshold ~59.89fps: any slower frame -> native delta (kills slow-motion; raise toward 0xa80 if speed creeps at stable fps)
+      - [ be32, 0x004cc9bc, 0x419d001c ] # bgt cr7,0x004cc9d8      -> lag: resync + NATIVE dt (PS3-like delta compensation)
+      - [ be32, 0x004cc9c0, 0x2f8a0000 ] # cmpwi cr7,r10,0         step due?
+      - [ be32, 0x004cc9c4, 0x419c0020 ] # blt cr7,0x004cc9e4      no -> skip
+      - [ be32, 0x004cc9c8, 0x394b0a30 ] # addi r10,r11,0xa30      cap = 59.94 steps/s (calibrated - do not change; bigger=slower)
+      - [ be32, 0x004cc9cc, 0x914cd000 ] # stw r10,-0x3000(r12)
+      - [ be32, 0x004cc9d0, 0x39600001 ] # li r11,1                dec = 1 (feed PS3 dt)
+      - [ be32, 0x004cc9d4, 0x48000014 ] # b 0x004cc9e8            -> pack
+      - [ be32, 0x004cc9d8, 0x906cd000 ] # stw r3,-0x3000(r12)     lag: resync
+      - [ be32, 0x004cc9dc, 0x39600003 ] # li r11,3                dec = 3 (keep NATIVE f12 this frame)
+      - [ be32, 0x004cc9e0, 0x48000008 ] # b 0x004cc9e8            -> pack
+      - [ be32, 0x004cc9e4, 0x39600000 ] # li r11,0                skip: dec = 0 (feed tiny)
+      - [ be32, 0x004cc9e8, 0x500b801e ] # rlwimi r11,r0,16,0,15   word2 = C16<<16 | dec
+      - [ be32, 0x004cc9ec, 0x916cd004 ] # stw r11,-0x2ffc(r12)
+      - [ be32, 0x004cc9f0, 0x716b0003 ] # andi. r11,r11,3         (APPLY) dec = word2 & 3
+      - [ be32, 0x004cc9f4, 0x2f8b0003 ] # cmpwi cr7,r11,3         lag frame?
+      - [ be32, 0x004cc9f8, 0x419e0024 ] # beq cr7,0x004cca1c      lag -> keep NATIVE f12 (compensates like PS3)
+      - [ be32, 0x004cc9fc, 0x40820010 ] # bne cr0,0x004cca0c      step -> build PS3 dt
+      - [ be32, 0x004cca00, 0xed8c0332 ] # fmuls f12,f12,f12       skip: native^2
+      - [ be32, 0x004cca04, 0xed8c0332 ] # fmuls f12,f12,f12       skip: native^4 (grows during load stalls -> loads can't starve)
+      - [ be32, 0x004cca08, 0x48000014 ] # b 0x004cca1c            -> done
+      - [ be32, 0x004cca0c, 0x3c003c88 ] # lis r0,0x3c88           step: build PS3 dt
+      - [ be32, 0x004cca10, 0x6000ab85 ] # ori r0,r0,0xab85        0x3C88AB85 = 1/59.94
+      - [ be32, 0x004cca14, 0x9001fff8 ] # stw r0,-8(r1)           stack red zone
+      - [ be32, 0x004cca18, 0xc181fff8 ] # lfs f12,-8(r1)          f12 = PS3 dt
+      - [ be32, 0x004cca1c, 0xc0080018 ] # lfs f0,0x18(r8)         original instruction (all paths)
+      - [ be32, 0x004cca20, 0x4bce94e4 ] # b 0x001b5f04            game uses f12 as frametime
+      - [ be32, 0x00aad000, 0x00000000 ] # next_step_now (timebase/512)
+      - [ be32, 0x00aad004, 0x00000000 ] # word2: last_C16<<16 | cached dec
 
 Anchors:
   lbp2_133title: &lbp2_133title
