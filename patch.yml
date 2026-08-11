@@ -15752,6 +15752,59 @@ PPU-9da9b988693598fbe1e2d316d1e927c37ad666bc:
 Anchors:
   r1_fps_notes: &r1_fps_notes
     "Maximum framerate with the patch is half the Vblank frequency. Without the patch, adjusting Vblank frequency increases the maximum framerate up to about 33 FPS or 60 FPS depending on the scene."
+  r1_mp_fps_notes: &r1_mp_fps_notes
+    "Maximum framerate with this patch is the Vblank frequency, so 60 FPS at the default setting. The campaign is a separate executable with its own patch."
+
+PPU-dcbe447d3e9895444dd9f14925b6867ebf92beb6: # disc update
+  "60 FPS (menus + multiplayer)":
+    Games:
+      "Resistance: Fall of Man (Updated)":
+        BCUS98107: [ 01.00 ]
+        BCES00001: [ 01.00 ]
+        BCJS30003: [ 01.00 ]
+        BCAS20003: [ 01.00 ]
+    Author: "Score"
+    Notes: *r1_mp_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00041EC4, 0x2F800001 ]   # vblank mode guard
+      - [ be32, 0x00041ED4, 0x38600001 ]   # SetVBlankMode(1)
+      - [ be32, 0x00092900, 0x38600001 ]   # SetVBlankMode(1)
+      - [ bef32, 0x007CAF98, 0.016666667 ] # frame time
+      - [ bef32, 0x007C3940, 0.016666667 ] # frame time, reapplied on match start
+
+PPU-cb404d48be1763eb75feb28752083ade05a92ab6: # disc base
+  "60 FPS (menus + multiplayer)":
+    Games:
+      "Resistance: Fall of Man":
+        BCUS98107: [ 01.00 ]
+        BCES00001: [ 01.00 ]
+        BCJS30003: [ 01.00 ]
+        BCAS20003: [ 01.00 ]
+    Author: "Score"
+    Notes: *r1_mp_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0003F264, 0x2F800001 ]   # vblank mode guard
+      - [ be32, 0x0003F274, 0x38600001 ]   # SetVBlankMode(1)
+      - [ be32, 0x0008D680, 0x38600001 ]   # SetVBlankMode(1)
+      - [ bef32, 0x0073A3D8, 0.016666667 ] # frame time
+      - [ bef32, 0x00732F04, 0.016666667 ] # frame time, reapplied on match start
+
+PPU-8884db073ea00380f331d6486af9888aa9f60316: # digital
+  "60 FPS (menus + multiplayer)":
+    Games:
+      "Resistance: Fall of Man":
+        NPEA00430: [ 01.00 ]
+    Author: "Score"
+    Notes: *r1_mp_fps_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000401A0, 0x2F800001 ]   # vblank mode guard
+      - [ be32, 0x000401B0, 0x38600001 ]   # SetVBlankMode(1)
+      - [ be32, 0x00183128, 0x38600001 ]   # SetVBlankMode(1)
+      - [ bef32, 0x0083B6E0, 0.016666667 ] # frame time
+      - [ bef32, 0x00833254, 0.016666667 ] # frame time, reapplied on match start
 
 PPU-0cc2ddc637def2fe22b5e89563f773e4c0cae024: # game.self
   "Unlock FPS":
