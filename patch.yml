@@ -2818,6 +2818,39 @@ Anchors:
     "Unlocks all unlockables such as vehicles in 'My Cars', vinyls etc."
   nfsc_debug_menu: &nfsc_debug_menu
     "Adds an option called \"CAR(DEBUG)\" to the main menu. Press Triangle to take selected car into freeroam."
+  nfsc_ce_notes: &nfsc_ce_notes
+    "Enables the ability to use the unreleased Collector's Edition content (adds new cars, tracks and challenges). New cars can only be used on a new save file."
+  nfsc_dlc_notes: &nfsc_dlc_notes
+    "Unlocks Porsche 911 Turbo, Dodge Challenger R/T, Toyota Corolla GT-S, Infiniti G35, Ford Shelby GT500, Pagani Zonda F (officially only released for PC and X360 as DLC). 911 Turbo, Challenger and G35 are usable in Career mode, the other three are only usable in Quick Race mode."
+  nfsc_dlc_code: &nfsc_dlc_code
+    - [ be32, 0x0, 0x3D2001D2 ] # lis 9,0x01d2    // 0x01d28710 (997tt)
+    - [ be32, 0x0, 0x61298710 ] # ori 9,9,0x8710
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x41820054 ] # beq 0,0x60
+    - [ be32, 0x0, 0x3D208B80 ] # lis 9,0x8b80    // 0x8b80c5fc (challenger71)
+    - [ be32, 0x0, 0x6129C5FC ] # ori 9,9,0xc5fc
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x41820044 ] # beq 0,0x60
+    - [ be32, 0x0, 0x3D20E3BD ] # lis 9,0xe3bd    // 0xe3bde8cb (corolla)
+    - [ be32, 0x0, 0x6129E8CB ] # ori 9,9,0xe8cb
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x41820034 ] # beq 0,0x60
+    - [ be32, 0x0, 0x3D200001 ] # lis 9,0x0001    // 0x0001308e (g35)
+    - [ be32, 0x0, 0x6129308E ] # ori 9,9,0x308e
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x41820024 ] # beq 0,0x60
+    - [ be32, 0x0, 0x3D2060D6 ] # lis 9,0x60d6    // 0x60d6890e (mustangshlbyn)
+    - [ be32, 0x0, 0x6129890E ] # ori 9,9,0x890e
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x41820014 ] # beq 0,0x60
+    - [ be32, 0x0, 0x3D200689 ] # lis 9,0x0689    // 0x0689441b (zonda)
+    - [ be32, 0x0, 0x6129441B ] # ori 9,9,0x441b
+    - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
+    - [ be32, 0x0, 0x4082000C ] # bne 0,0x68
+    - [ be32, 0x0, 0x38600001 ] # li 3,1
+    - [ be32, 0x0, 0x4E800020 ] # blr
+    - [ be32, 0x0, 0x38600000 ] # li 3,0
+    - [ be32, 0x0, 0x4E800020 ] # blr
 
 PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
   "Disable Color Correction":
@@ -2872,10 +2905,20 @@ PPU-5295c6de0b3fd1b48517255ce710002c174b18f5:
       "Need for Speed: Carbon":
         BLUS30016: [ 01.00 ]
     Author: "Nicknine"
-    Notes: "Enables the ability to use the unreleased Collector's Edition content (adds new cars, tracks and challenges). New cars can only be used on a new save file."
+    Notes: *nfsc_ce_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x10188A8C, 0x01 ]
+  "Unlock DLC Cars":
+    Games:
+      "Need for Speed: Carbon":
+        BLUS30016: [ 01.00 ]
+    Author: "Nicknine"
+    Notes: *nfsc_dlc_notes
+    Patch Version: 1.0
+    Patch:
+      - [ calloc, 0x000FC0F0, 28 ]
+      - [ load, *nfsc_dlc_code ]
 
 PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
   "Disable Color Correction":
@@ -2912,7 +2955,7 @@ PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
       "Need for Speed: Carbon":
         BLES00020: [ 01.00 ]
     Author: "Nicknine"
-    Notes: "Enables the ability to use the unreleased Collector's Edition content (adds new cars, tracks and challenges). New cars can only be used on a new save file."
+    Notes: *nfsc_ce_notes
     Patch Version: 1.0
     Patch:
       - [ byte, 0x10188A8C, 0x01 ]
@@ -2921,38 +2964,11 @@ PPU-84caa321bd937ccf57e8fdbb4ede33d45e44eafa:
       "Need for Speed: Carbon":
         BLES00020: [ 01.00 ]
     Author: "Nicknine"
-    Notes: "Unlocks Porsche 911 Turbo, Dodge Challenger R/T, Toyota Corolla GT-S, Infiniti G35, Shelby GT500 '06, Pagani Zonda F (officially only released for PC and X360 as DLC). 911 Turbo, Challenger and G35 are usable in Career mode, the other three are only usable in Quick Race mode."
+    Notes: *nfsc_dlc_notes
     Patch Version: 1.0
     Patch:
       - [ calloc, 0x000FD234, 28 ]
-      - [ be32, 0x0, 0x3D2001D2 ] # lis 9,0x01d2    // 0x01d28710 (997tt)
-      - [ be32, 0x0, 0x61298710 ] # ori 9,9,0x8710
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x41820054 ] # beq 0,0x60
-      - [ be32, 0x0, 0x3D208B80 ] # lis 9,0x8b80    // 0x8b80c5fc (challenger71)
-      - [ be32, 0x0, 0x6129C5FC ] # ori 9,9,0xc5fc
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x41820044 ] # beq 0,0x60
-      - [ be32, 0x0, 0x3D20E3BD ] # lis 9,0xe3bd    // 0xe3bde8cb (corolla)
-      - [ be32, 0x0, 0x6129E8CB ] # ori 9,9,0xe8cb
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x41820034 ] # beq 0,0x60
-      - [ be32, 0x0, 0x3D200001 ] # lis 9,0x0001    // 0x0001308e (g35)
-      - [ be32, 0x0, 0x6129308E ] # ori 9,9,0x308e
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x41820024 ] # beq 0,0x60
-      - [ be32, 0x0, 0x3D2060D6 ] # lis 9,0x60d6    // 0x60d6890e (mustangshlbyn)
-      - [ be32, 0x0, 0x6129890E ] # ori 9,9,0x890e
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x41820014 ] # beq 0,0x60
-      - [ be32, 0x0, 0x3D200689 ] # lis 9,0x0689    // 0x0689441b (zonda)
-      - [ be32, 0x0, 0x6129441B ] # ori 9,9,0x441b
-      - [ be32, 0x0, 0x7C044800 ] # cmpw 0,4,9
-      - [ be32, 0x0, 0x4082000C ] # bne 0,0x68
-      - [ be32, 0x0, 0x38600001 ] # li 3,1
-      - [ be32, 0x0, 0x4E800020 ] # blr
-      - [ be32, 0x0, 0x38600000 ] # li 3,0
-      - [ be32, 0x0, 0x4E800020 ] # blr
+      - [ load, *nfsc_dlc_code ]
 
 Anchors:
   NieR_FPS_Notes: &NieR_FPS_Notes
