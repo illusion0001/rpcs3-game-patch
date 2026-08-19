@@ -21977,6 +21977,26 @@ PPU-50a806583e51a32db635cb14edb02841e2cd956d:
     Patch:
       - [ be32, 0x0011b804, 0x3be00000 ] # (mem: 0x0103b4d0)
 
+PPU-e062fad0bc42c7a27e3299b7b7edf6a3d2f3bf7a:
+  "Skip Intro":
+    Games:
+      "Crysis 3":
+        NPUB30757: [ 01.00 ]
+    Author: "Yahfz"
+    Notes: "Skips the intro movies"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x011c6934, 0x60000000 ]
+  "Unlock FPS":
+    Games:
+      "Crysis 3":
+        NPUB30757: [ 01.00 ]
+    Author: "Yahfz"
+    Notes: "Set vblank to your desired FPS"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x012b9474, 0x3bc00000 ]
+
 PPU-1b9f40bb5ccd04cce20d8a5fccedd0e42324f567:
   "Developer Menu":
     Games:
