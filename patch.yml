@@ -4272,6 +4272,14 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
       - [ be32, 0x003de184, 0x7d4803a6 ] # mtspr LR,r10
       - [ be32, 0x003de188, 0x4e800020 ] # blr
 
+  "Fix High-Resolution Mesh Seams":
+    Games: *gow3_103_title
+    Author: "Piaomiaojianhen, Ginnntoki, Thor"
+    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25003 01.03 at 200% and 250%; may reduce performance in geometry-heavy scenes."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00450830, 0x40800017 ]
+
 PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
   "Skip any videos with X button":
     Games: *gow3_100_title
@@ -4338,6 +4346,19 @@ PPU-4d5c51503a81a327c2a99427390a395b8dcb3767: # God of War 3 1.00
     Patch Version: 1.0
     Patch:
       - [ be16, 0x001e5468, 0x4800 ]
+
+PPU-ef855650c42efa8815599febd9fc8980a737287c:
+  "60 FPS":
+    Games:
+      "Yakuza 3":
+        BLJM60132: [ 01.08 ]
+    Author: "FlexBy"
+    Notes: "Some stuff will be 2x speed"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x005e9b78, 0x38c00001 ] # overall gameplay
+      - [ be32, 0x004a0ee0, 0xec21082a ] # cutscene subtitles
+      - [ be32, 0x004a0f04, 0xec21082a ]
 
 Anchors:
   Y1HD_ModSupport: &Y1HD_ModSupport
@@ -6036,6 +6057,15 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0043f210, 0x38a00000 ]
+  "Fix High-Resolution Mesh Seams":
+    Games: *gowa_112_title
+    Author: "Piaomiaojianhen, Ginnntoki, Thor"
+    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25016 01.12; the patch keeps signed-area, back-face, and later culling stages enabled."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00726A24, 0x40800004 ]
+      - [ be32, 0x00741074, 0x40800004 ]
+
 # Moved FPS 1.12 to canary. TODO: re-add when fixed.
 
 PPU-93623f42f6f50bed58ca60927ed43beab749a2cd:
@@ -20480,6 +20510,46 @@ PPU-27a382cebfbaa5e5d271d746f84c683008662106:
     Patch:
       - [ be32, 0x0002a6ac, 0x60000000 ]
       - [ be32, 0x00029bf0, 0x60000000 ]
+  "Disable Depth of Field":
+    Games:
+      "3D DOT GAME HEROES":
+        BLUS30490: [ 01.01 ]
+    Author: "darkfrogman"
+    Notes: "Disables the game's tilt-shift depth-of-field"
+    Patch Version: 1.0
+    Patch:
+      - [ byte, 0x00d47178, 0x30 ]
+      - [ byte, 0x00d47f20, 0x30 ]
+      - [ byte, 0x00d48cf7, 0x30 ]
+      - [ byte, 0x00d49b72, 0x30 ]
+      - [ byte, 0x00d4a959, 0x30 ]
+      - [ byte, 0x00d4b6ac, 0x30 ]
+      - [ byte, 0x00d4c408, 0x30 ]
+      - [ byte, 0x00d4d164, 0x30 ]
+      - [ byte, 0x00d4df21, 0x30 ]
+      - [ byte, 0x00d4eccf, 0x30 ]
+      - [ byte, 0x00d4fa75, 0x30 ]
+      - [ byte, 0x00d50821, 0x30 ]
+      - [ byte, 0x00d515c7, 0x30 ]
+      - [ byte, 0x00d523c7, 0x30 ]
+      - [ byte, 0x00d559e3, 0x30 ]
+      - [ byte, 0x00d567a7, 0x30 ]
+      - [ byte, 0x00d57566, 0x30 ]
+      - [ byte, 0x00d5832d, 0x30 ]
+      - [ byte, 0x00d590f2, 0x30 ]
+      - [ byte, 0x00d59eb4, 0x30 ]
+      - [ byte, 0x00d5af91, 0x30 ]
+      - [ byte, 0x00d5bed6, 0x30 ]
+      - [ byte, 0x00d5ce35, 0x30 ]
+      - [ byte, 0x00d5dc34, 0x30 ]
+      - [ byte, 0x00d5ea33, 0x30 ]
+      - [ byte, 0x00d5f837, 0x30 ]
+      - [ byte, 0x00d6063b, 0x30 ]
+      - [ byte, 0x00d61440, 0x30 ]
+      - [ byte, 0x00d6223e, 0x30 ]
+      - [ byte, 0x00d6303d, 0x30 ]
+      - [ byte, 0x00d63e41, 0x30 ]
+      - [ byte, 0x00d64c42, 0x30 ]
 
 PPU-db42d5c3edaa63c31c07f22da5a5cd993eff2f62:
   "Unlock FPS":
@@ -21738,6 +21808,15 @@ PPU-ef0d788aa8ca2375017221fe1b261922bd41c3aa: # default.self 1.16
     Patch:
       - [ be16, 0x007f5cc2, 1280 ]
       - [ be16, 0x007f5cc6, 720 ]
+  "Unlock FPS":
+    Games:
+      "Call of Duty: Ghosts (Singleplayer)":
+        BLES01945: [ 01.16 ]
+    Author: "FlexBy"
+    Notes: "Camera sensitivity is somewhat affected"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002e85bc, 0x60000000 ]
 
 PPU-a347f6287acbfaa15ba9af59e1dfed6a5cf47c23: # default.self 1.00
   "1280x720 Resolution":
