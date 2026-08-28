@@ -6000,6 +6000,14 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00437810, 0x38a00000 ]
+  "Fix High-Resolution Mesh Seams":
+    Games: *gowa_104_title
+    Author: "Piaomiaojianhen, Ginnntoki, Thor"
+    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25016 01.12; the patch keeps signed-area, back-face, and later culling stages enabled."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0071d424, 0x40800004 ]
+      - [ be32, 0x00737a74, 0x40800004 ]
   "Skip intro":
     Games: *gowa_104_title
     Author: "Illusion, ZEROx"
