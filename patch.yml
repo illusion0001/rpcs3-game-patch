@@ -4272,10 +4272,10 @@ PPU-19724fde16a5b111b7b4d2a065f5dccaf8e01962: # God of War 3 1.03
       - [ be32, 0x003de184, 0x7d4803a6 ] # mtspr LR,r10
       - [ be32, 0x003de188, 0x4e800020 ] # blr
 
-  "Fix High-Resolution Mesh Seams":
+  "Disable Mesh Trimming":
     Games: *gow3_103_title
     Author: "Piaomiaojianhen, Ginnntoki, Thor"
-    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25003 01.03 at 200% and 250%; may reduce performance in geometry-heavy scenes."
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports.\nValidated on BCAS25003 01.03 at 200% and 250%; may reduce performance in geometry-heavy scenes."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00450830, 0x40800017 ]
@@ -6000,10 +6000,10 @@ PPU-3a63ecc6e9b81a984d2fe0a481febc3e26b57810: # GOWA.SELF 1.04
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00437810, 0x38a00000 ]
-  "Fix High-Resolution Mesh Seams":
+  "Disable Mesh Trimming":
     Games: *gowa_104_title
     Author: "Piaomiaojianhen, Ginnntoki, Thor"
-    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25016 01.12; the patch keeps signed-area, back-face, and later culling stages enabled."
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports.\nValidated on BCAS25016 01.12 and BCES01741 01.04; the patch keeps signed-area, back-face, and later culling stages enabled."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0071d424, 0x40800004 ]
@@ -6065,10 +6065,10 @@ PPU-3a0b43e4a5f4bfea64f53612ee7c5d990f88129c: # GOWA.SELF 1.12
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0043f210, 0x38a00000 ]
-  "Fix High-Resolution Mesh Seams":
+  "Disable Mesh Trimming":
     Games: *gowa_112_title
     Author: "Piaomiaojianhen, Ginnntoki, Thor"
-    Notes: "Fixes white seams on distant character models when Resolution Scale is above 100%. Validated on BCAS25016 01.12; the patch keeps signed-area, back-face, and later culling stages enabled."
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports.\nValidated on BCAS25016 01.12 and BCES01741 01.04; the patch keeps signed-area, back-face, and later culling stages enabled."
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00726A24, 0x40800004 ]
@@ -7010,6 +7010,9 @@ Anchors:
   tlou_mlaa_notes: &tlou_mlaa_notes
     "Allows for the use of Resolution Scaling and improves performance.\nVersion 2.0 - Fixes crashes introduced in the original patch.\nVersion 3.0 - Fixes the Green Rain in more areas.\nVersion 4.0 - Fixes high levels of Bloom in some areas.\n\nKnown issues: Listen mode does not work."
 
+  tlou_mesh_notes: &tlou_mesh_notes
+    "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+
   tloulb100_title: &tloulb100_title
     "The Last of Us Left Behind":
       NPUA81175: [ 01.00 ]
@@ -7052,10 +7055,10 @@ PPU-9df60dc1aa5005a0c80e9066e4951dc0471553e6:
     Patch Version: 1.0
     Patch:
       - [ load, *tlou100_post ]
-  "Disable Mesh trimming":
+  "Disable Mesh Trimming":
     Games: *tlou100_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes:
+    Notes: *tlou_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tlou100_mesh ]
@@ -7220,10 +7223,10 @@ PPU-120fb71f7352d62521c639b0e99f960018c10a56:
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_post ]
-  "Disable Mesh trimming":
+  "Disable Mesh Trimming":
     Games: *tlou111_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn"
-    Notes:
+    Notes: *tlou_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *tlou111_mesh ]
@@ -7511,10 +7514,10 @@ PPU-9e5c67eaf69077c591b7c503bed2b48617643134:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0096b1e8, 0x480000e0 ]
-  "Disable Mesh trimming":
+  "Disable Mesh Trimming":
     Games: *tloulb100_title
     Author: "JohnHolmesII, ZEROx, illusion, Juhn, FlexBy"
-    Notes:
+    Notes: *tlou_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x00951d2c, 0x9809 ]
@@ -8602,6 +8605,8 @@ Anchors:
     "Completely unlocks the framerate."
   uc2_spulighting_notes: &uc2_spulighting_notes
     "Improves performance slightly by using GPU path for lighting.\nFixes lighting issues in Chapter 9 when shining the beams of light onto the statues."
+  uc2_mesh_notes: &uc2_mesh_notes
+    "Allows the game to render correctly at higher resolutions than what the PS3 supports."
 
   uc2_disc100title: &uc2_disc100title
     "Uncharted 2: Among Thieves":
@@ -8675,7 +8680,7 @@ PPU-7b8a70c24456205b776915643a2acacb6ef6ea56:
   "Disable Mesh Trimming":
     Games: *uc2_disc100title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc2_mesh_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_100_mesh ]
@@ -8784,7 +8789,7 @@ PPU-9fe364d48b610e4b0a1c41d526bec9b1b2039c07:
       "Uncharted 2: Among Thieves":
         BCUS98123: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc2_mesh_notes
     Patch Version: 1.2
     Patch:
       - [ be16, 0x0072ec54, 0x9949 ]
@@ -8873,7 +8878,7 @@ PPU-a3a5789c12711291dfe16a7d5d81c906d2b4c0c2:
   "Disable Mesh Trimming":
     Games: *uc2_disc109title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc2_mesh_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Disc_109_mesh ]
@@ -8984,7 +8989,7 @@ PPU-599461c6c88935ff0ed26ef20e649c8c38b7be9c:
   "Disable Mesh Trimming":
     Games: *uc2_PSN110title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc2_mesh_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_PSN_mesh ]
@@ -9079,7 +9084,7 @@ PPU-bfee77256ce53064051a6b0ec9d292e75284aad4:
       "Uncharted 2: Among Thieves Demo":
         NPEA90055: [ All ]
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc2_mesh_notes
     Patch Version: 1.2
     Patch:
       - [ load, *uc2_Demo_mesh ]
@@ -9571,6 +9576,9 @@ Anchors:
   uc3_coop_sp_notes: &uc3_coop_sp_notes
     "Issues are expected!\nEnable Debug Menu patch and while in-game, open Quick Menu, and select Player 2.\nKnown Issues:\nPlayer 2 doesn't have a playermodel.\nPlayer 2 cannot move in some levels."
 
+  uc3_mesh_notes: &uc3_mesh_notes
+    "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+
   uc3_119title: &uc3_119title
     "Uncharted 3: Drake's Deception":
       BCES01175: [ 01.19 ]
@@ -9650,7 +9658,7 @@ PPU-49c96996b6f3c0b32422375978c41e0c7ed95183:
   "Disable Mesh Trimming":
     Games: *uc3_100title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_100_mesh ]
@@ -9714,7 +9722,7 @@ PPU-48fa849dfeaef2f36ec042a576f29bda19ec1de0:
       "Uncharted 3: Drake's Deception":
         BCJS37004: [ 01.00 ]
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_JP_100_mesh ]
@@ -9780,7 +9788,7 @@ PPU-664fb0e4a94c62c15a6474841c202fb2bf80ce16:
   "Disable Mesh Trimming":
     Games: *uc3_110title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_110_mesh ]
@@ -9852,7 +9860,7 @@ PPU-02a88c3c6cd415b0bb81f1606bc743835881a4ba:
   "Disable Mesh Trimming":
     Games: *uc3_119title
     Author: "ZEROx, illusion"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ load, *uc3_119_mesh ]
@@ -10090,7 +10098,7 @@ PPU-9584776e7fca409ed410f8a713832267020d8ac3:
   "Disable Mesh Trimming":
     Games: *uc3beta104_title
     Author: "illusion, ZEROx"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ be16, 0x006b1cc0, 0x9949 ] # mesh trim           = 0
@@ -10170,7 +10178,7 @@ PPU-40958bda5885891f0a4eb69f2c87ed4942dfa5e7:
   "Disable Mesh Trimming":
     Games: *uc3_kioskdemo
     Author: "ZEROx, illusion, FlexBy"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0073ea7c, 0x980b0004 ]
@@ -10265,7 +10273,7 @@ PPU-0ff0b00602e5ffc67f32ab69840bbb2c7df735fe:
   "Disable Mesh Trimming":
     Games: *uc3_USpreview
     Author: "ZEROx, illusion, FlexBy"
-    Notes:
+    Notes: *uc3_mesh_notes
     Patch Version: 1.0
     Patch:
       - [ be32, 0x0073e318, 0x980b0004 ]
@@ -10282,7 +10290,7 @@ Anchors:
     #- [ be32, 0x00861948, 0x38800000 ] # Unlock FPS in menu
 
   gt5_unlockfps_notes: &gt5_unlockfps_notes
-    "Cutscenes rendered in the game's engine are sped up."
+    "Unlocks FPS ingame. To fix the flickering when enabling this patch, go to the ingame settings, Hardware tab, Display options and set Image Quality to \"Flicker Reduction\"."
 
   GT5_AR_Notes: &GT5_AR_Notes
     "Requires \"Stretch To Display Area\" checked in the GPU settings. HUD elements stay at 16:9. Sometimes text doesn't show up."
@@ -13821,13 +13829,13 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
 PPU-ad7bfe5eb63563703c893ab10930c35cf80e8d0e:
-  Disable mesh trimming:
+  Disable Mesh Trimming:
     Games:
       "inFamous 2":
         BCUS98125: [ "01.00" ]
     Author: "Yahfz"
     Patch Version: 1.0
-    Notes: "Disables mesh trimming"
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports."
     Patch:
       - [ be32, 0x00828d40, 0x4020007f ]
 
@@ -21484,6 +21492,18 @@ PPU-ec6d9414990cb8ad0adb282f5d16a1af4cb3f956:
     Patch:
       - [ load, *BTS_disc_v100_debugmenu ]
 
+PPU-5c056ddeafaa9c4d024fd264c7904b1950d2b3b9:
+  Disable Mesh Trimming:
+    Games:
+      "Beyond: Two Souls":
+        NPEA90127: [ All ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+    Patch:
+      - [ be32, 0x00f11fdc, 0x4020007f ]
+      - [ be32, 0x00f285a4, 0x4020007f ]
+
 Anchors:
   blight_openspyonline: &blight_openspyonline
     - [ utf8, 0x01a4a117, "openspy.net" ]
@@ -23232,6 +23252,9 @@ Anchors:
   inFam1_disable_splim_notes: &Infam1_disable_splim_notes
     "Disables the slow-down effect when having low FPS.\nIncreasing clocks scale allows to speed up the game."
 
+  inFam1_mesh_trim_notes: &inFam1_mesh_trim_notes
+    "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+
 PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
   "All powers unlocked":
     Games: *Infam1_PSNalltitle
@@ -23263,6 +23286,20 @@ PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x007855dc, "FOV" ]
+  "Disable Shadows":
+    Games: *Infam1_PSNalltitle
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00258548, 0x419e00f0 ]
+  Disable Mesh Trimming:
+    Games: *Infam1_PSNalltitle
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: *inFam1_mesh_trim_notes
+    Patch:
+      - [ be32, 0x006158a0, 0x35000000 ]
 
 PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
   "All powers unlocked":
@@ -23302,6 +23339,20 @@ PPU-d0c3e2a107c47d20d3316325ce6f75464a8f4f1d:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x005b5320, 0x00000000 ]
+  "Disable Shadows":
+    Games: *Infam1_EUdiscalltitle
+    Author: "FlexBy"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x002578a8, 0x419e00f0 ]
+  "Disable mesh trimming":
+    Games: *Infam1_EUdiscalltitle
+    Author: "Yahfz"
+    Notes: *inFam1_mesh_trim_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00614220, 0x35000000 ]
 
 PPU-4cf9e6e807b5f270164147ab8f4df3533c7ff1e8:
   "All powers unlocked":
@@ -23382,17 +23433,6 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785494, "FOV" ]
-
-PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
-  Disable mesh trimming:
-    Games:
-      "inFamous":
-        NPEA00252: [ All ]
-    Author: "Yahfz"
-    Patch Version: 1.0
-    Notes: "Disables the icemesh triangle trimming"
-    Patch:
-      - [ be32, 0x006158a0, 0x35000000 ]
 
 PPU-b2fd916ddb6214c6eb840ad64e6eccb3e5b50694:
   "Skip Intro":
@@ -24842,6 +24882,18 @@ PPU-9ee543aff769e702526f67713c776247929abeb3:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00c3c930, 0x60000000 ]
+
+PPU-fab73a76754e02239a531de17f0a14da672392a8:
+  Disable Mesh Trimming:
+    Games:
+      "PlayStation All-Stars Battle Royale":
+        BCUS98472: [ All ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+    Patch:
+      - [ be32, 0x00b75ff4, 0x4020007f ]
+      - [ be32, 0x00b81a34, 0x4020007f ]
 
 Anchors:
   portal2_US_digital_100: &portal2_US_digital_100
