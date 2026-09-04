@@ -13820,6 +13820,17 @@ PPU-52a747a6282ff38eebc356fb56afc09e07e020f0:
     Patch:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
 
+PPU-ad7bfe5eb63563703c893ab10930c35cf80e8d0e:
+  Disable mesh trimming:
+    Games:
+      "inFamous 2":
+        BCUS98125: [ "01.00" ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Disables mesh trimming"
+    Patch:
+      - [ be32, 0x00828d40, 0x4020007f ]
+
 Anchors:
   haze_fps_notes: &haze_fps_notes
     "Needs testing above 60 FPS."
@@ -23371,6 +23382,17 @@ PPU-412a9bf323b4743de21658a286f71dbe82cad807:
     Patch Version: 1.0
     Patch:
       - [ be32, 0x00785494, "FOV" ]
+
+PPU-1fb2d518fd8f29063f45344d1a83735c5094edec:
+  Disable mesh trimming:
+    Games:
+      "inFamous":
+        NPEA00252: [ All ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Disables the icemesh triangle trimming"
+    Patch:
+      - [ be32, 0x006158a0, 0x35000000 ]
 
 PPU-b2fd916ddb6214c6eb840ad64e6eccb3e5b50694:
   "Skip Intro":
