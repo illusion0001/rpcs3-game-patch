@@ -13748,6 +13748,9 @@ Anchors:
       BCES01144: [ 01.04 ]
       BCES01229: [ 01.04 ]
 
+  inf2_mesh_trim_notes: &inf2_mesh_trim_notes
+    "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+
 PPU-a1aa768f9221333cb1ecc48c5a857aac23c89878:
   "Skip Intro":
     Games:
@@ -13796,6 +13799,13 @@ PPU-41a7d047c573c78c0307506c9d1b52d15a66e4f5:
     Patch Version: 1.2
     Patch:
       - [ bef32, 0x0096de14, 0.65 ] # the floats are static but game settings will need "li" instead.
+  "Disable Mesh Trimming":
+    Games: *inf2_104title
+    Author: "Yahfz"
+    Notes: *inf2_mesh_trim_notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x008875c0, 0x4020007f ]
 
 PPU-cf11f1d21afe3ba5a6c8c2a8cf926ee2ad571f41:
   "Skip UGC Tutorial":
@@ -13835,7 +13845,7 @@ PPU-ad7bfe5eb63563703c893ab10930c35cf80e8d0e:
         BCUS98125: [ "01.00" ]
     Author: "Yahfz"
     Patch Version: 1.0
-    Notes: "Allows the game to render correctly at higher resolutions than what the PS3 supports."
+    Notes: *inf2_mesh_trim_notes
     Patch:
       - [ be32, 0x00828d40, 0x4020007f ]
 
