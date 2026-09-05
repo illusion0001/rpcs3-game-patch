@@ -21546,6 +21546,31 @@ PPU-9d84d0b2f526213d80b79228a15c521801011807:
     Patch:
       - [ be32, 0x00531990, 0x60000000 ]
 
+PPU-8c33a0bc919bfc9eca6f0f46e63790e3d42c3925:
+  Disable mesh trimming:
+    Games:
+      "Brutal Legend":
+        BLUS30330: [ "01.02" ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Disables mesh trimming"
+    Patch:
+      - [ be32, 0x011a4d64, 0x4020007f ]
+      - [ be32, 0x011b1334, 0x4020007f ]
+      - [ be32, 0x01208554, 0x4020007f ]
+      - [ be32, 0x012273c4, 0x4020007f ]
+
+PPU-c1701baaa053fa811968301a2749cbfb011c9930:
+  "Full 60FPS":
+    Games:
+      "Burnout Paradise":
+        BLUS30061: [ 01.90 ]
+    Author: "Alexis"
+    Notes: "Prevents the game from dropping to 30 FPS during garages, crashes, takedowns, and stunt jump cameras."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00831c78, 0x4800002c ]
+
 PPU-dc0320a71151f24d72be25d34cd860d3092b074b: # EBOOT_SP.BIN 1.00/1.40
   "Unlock FPS":
     Games:
@@ -27703,6 +27728,26 @@ PPU-b86a6fb6b4f5cf3572b3132391e5c4b02045d870:
     Patch Version: 1.0
     Patch:
       - [ load, *godfather_60fps ]
+
+PPU-b797ce3198ad4946aaef8bf32055faed30568b8b:
+  "Disable Movies":
+    Games:
+      "WALL-E":
+        BLUS30151: [ 01.00 ]
+    Author: "Alexis"
+    Notes: "Disables in-game movie playback. Will cause issues with FMVs in levels."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00164b84, 0x38000001 ]
+  "No Damage":
+    Games:
+      "WALL-E":
+        BLUS30151: [ 01.00 ]
+    Author: "Alexis"
+    Notes: "Prevents the player from taking damage with the exception of falling into pits, the introduction level, and water."
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x00164ad4, 0x38600001 ]
 
 PPU-7f72fca497cb710939e9ad13c412c78a1ff72438:
   "Debug Menu":
