@@ -20464,6 +20464,17 @@ PPU-3c5e08635d6768c273395b9c19e099b25050927b:
     Patch:
       - [ byte, 0x00520c17, 0x00 ]
 
+PPU-e4996b3dde924372f97b4f928771a2896aadf3b4:
+  Disable mesh trimming:
+    Games:
+      "Skylanders SWAP Force":
+        BLES01860: [ "01.01" ]
+    Author: "Yahfz"
+    Patch Version: 1.0
+    Notes: "Disables mesh trimming"
+    Patch:
+      - [ be32, 0x0128d708, 0x4020007f ]
+
 PPU-4954615ba4883e0799e933ee8619098b26830416:
   "Flat Lighting":
     Games:
